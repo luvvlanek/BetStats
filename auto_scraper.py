@@ -12,11 +12,19 @@ def run_scraper():
     try:
         result = subprocess.run(['python', 'scraper.py'], capture_output=False, timeout=3600)
         print(f"\n✅ Scraper zakończony (exit code: {result.returncode})")
+                # Auto push na GitHub
+        import subprocess as sp
+        try:
+            sp.run(['git', 'add', 'data.json', 'live.json'], cwd='C:\\Users\\abalc\\football-stats')
+            sp.run(['git', 'commit', '-m', 'auto update data'], cwd='C:\\Users\\abalc\\football-stats')
+            sp.run(['git', 'push'], cwd='C:\\Users\\abalc\\football-stats')
+            print("📤 Dane wysłane na GitHub → Vercel się zaktualizuje")
+        except:
+            print("⚠️ Nie udało się wysłać na GitHub")
     except subprocess.TimeoutExpired:
         print("\n⚠️ Scraper przekroczył 20 minut - anulowany")
     except Exception as e:
         print(f"\n❌ Błąd: {e}")
-
 def main():
     print(f"🤖 AUTO SCRAPER uruchomiony")
     print(f"⏰ Odpala scraper co {INTERVAL_MINUTES} minut")

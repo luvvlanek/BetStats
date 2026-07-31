@@ -3,7 +3,7 @@ from playwright.async_api import async_playwright
 import json
 import time
 
-LEAGUES = [
+LEAGUES =   [
     {"id": "ekstraklasa", "name": "Ekstraklasa", "flag": "🇵🇱",
      "fixtures_url": "https://www.flashscore.pl/pilka-nozna/polska/ekstraklasa/terminarz/",
      "standings_url": "https://www.flashscore.pl/pilka-nozna/polska/ekstraklasa/tabela/"},
@@ -25,6 +25,13 @@ LEAGUES = [
     {"id": "ligue-1", "name": "Ligue 1", "flag": "🇫🇷",
      "fixtures_url": "https://www.flashscore.pl/pilka-nozna/francja/ligue-1/terminarz/",
      "standings_url": "https://www.flashscore.pl/pilka-nozna/francja/ligue-1/tabela/"}
+    ATP_URLS = [
+    {"id": "atp", "name": "ATP", "flag": "🎾",
+     "url": "https://www.flashscore.pl/tenis/atp-singiel/montreal/"},
+    {"id": "wta", "name": "WTA", "flag": "🎾",
+     "url": "https://www.flashscore.pl/tenis/wta-singiel/toronto/"},
+]
+     "standings_url": ""
 ]
 
 CONCURRENT_TEAMS = 3
