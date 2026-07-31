@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a5f">
+    <title>BetStats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body { background: #efeeea; padding-top: 60px; transition: background 0.3s, color 0.3s; }
+        body.dark { background: #0f1419; color: #e5e7eb; }
+        body.dark .top-bar { background: #000; }
+        body.dark .stat-card { background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0)); border-color: rgba(255,255,255,0.1); }
+        body.dark .bg-white { background: #1a1f2e !important; color: #e5e7eb; }
+        body.dark .bg-gray-50 { background: #151a26 !important; }
+        body.dark .border-gray-200 { border-color: #2d3548 !important; }
+        body.dark .border-gray-300 { border-color: #2d3548 !important; }
+        body.dark .text-\[\#1e3a5f\] { color: #60a5fa !important; }
+        body.dark .text-gray-700 { color: #d1d5db !important; }
+        body.dark .text-gray-600 { color: #9ca3af !important; }
+        body.dark .text-gray-500 { color: #6b7280 !important; }
+        body.dark .bg-yellow-100 { background: #3b2f0a !important; }
+        body.dark .border-yellow-300 { border-color: #78591b !important; }
+        body.dark .text-yellow-800 { color: #fbbf24 !important; }
+        body.dark .league-card { background: #1a1f2e; border-color: #2d3548; }
+        body.dark .league-card:hover { border-color: #60a5fa; }
+        body.dark .bg-gray-100 { background: #151a26 !important; }
+        body.dark .hover\:bg-gray-100:hover { background: #1a1f2e !important; }
+        body.dark .hover\:bg-gray-50:hover { background: #151a26 !important; }
+        body.dark .bg-gray-200 { background: #2d3548 !important; }
+        body.dark .bg-red-50 { background: #3f1515 !important; }
+        body.dark .bg-green-50 { background: #0f2818 !important; }
+        body.dark .bg-yellow-50 { background: #3b2f0a !important; }
+        body.dark .bg-blue-50 { background: #0f1a3f !important; }
+        body.dark input, body.dark select { background: #1a1f2e; color: #e5e7eb; border-color: #2d3548; }
+        
+        .bar-fill { height: 3px; border-radius: 999px; transition: width 0.3s; }
+        .stat-card { background: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0)); border: 1px solid rgba(0,0,0,0.08); }
+        
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.95); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); } 50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); } }
+        @keyframes hot-shake { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-3deg); } 75% { transform: rotate(3deg); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        
+        .animate-fade-up { animation: fadeInUp 0.8s ease-out; }
+        .animate-fade-up-delay-1 { animation: fadeInUp 0.8s ease-out 0.2s both; }
+        .animate-fade-up-delay-2 { animation: fadeInUp 0.8s ease-out 0.4s both; }
+        .animate-fade-out { animation: fadeOut 0.4s ease-in forwards; }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out; }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-glow { animation: pulse-glow 2s infinite; }
+        .animate-hot { animation: hot-shake 1s infinite; display: inline-block; }
+        
+        .league-card { background: white; border: 2px solid #e5e5e5; transition: all 0.3s; cursor: pointer; opacity: 0; animation: slideInLeft 0.5s ease-out forwards; }
+        .league-card:hover { border-color: #1e3a5f; transform: translateY(-4px); box-shadow: 0 10px 25px rgba(30,58,95,0.15); }
+        .league-card:hover .league-arrow { transform: translateX(5px); color: #dc2626; }
+        .league-arrow { transition: all 0.3s; }
+        
+        .hot-match-badge { background: linear-gradient(45deg, #dc2626, #f59e0b, #dc2626); background-size: 200% 200%; animation: gradientShift 3s ease infinite; }
+        @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        
+        input[type="range"] { -webkit-appearance: none; height: 6px; background: #e5e7eb; border-radius: 3px; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; background: #1e3a5f; border-radius: 50%; cursor: pointer; }
+        
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.2s ease-out; }
+        .modal-overlay.hidden { display: none !important; }
+        .hidden { display: none !important; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 90; background: #1e3a5f; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        
+        .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.3); color: white; transition: all 0.2s; }
+        .btn-outline:hover { background: white; color: #1e3a5f; border-color: white; }
+        .btn-solid { background: #dc2626; color: white; transition: all 0.2s; }
+        .btn-solid:hover { background: white; color: #dc2626; }
+        
+        .bet-slip { position: fixed; bottom: 0; right: 0; z-index: 80; background: #1e3a5f; color: white; padding: 12px 20px; border-top-left-radius: 12px; box-shadow: -4px -4px 15px rgba(0,0,0,0.2); cursor: pointer; animation: slideInRight 0.3s ease-out; }
+        .bet-slip:hover { background: #dc2626; }
+        
+        .fav-star { cursor: pointer; transition: transform 0.2s; }
+        .fav-star:hover { transform: scale(1.3); }
+        
+        .install-prompt { position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 100; background: #1e3a5f; color: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 400px; margin: 0 auto; }
+    </style>
+</head>
+<body class="text-gray-800 font-sans min-h-screen">
+
+    <div class="top-bar px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3 cursor-pointer" onclick="backToSplash()">
+            <img src="logo.png" alt="BetStats" class="w-8 h-8 bg-white rounded p-0.5">
+            <span class="font-black text-sm tracking-wider hidden sm:inline">BET STATS</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <button onclick="openLive()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="Live mecze">
+    <span class="text-red-400">🔴</span> <span class="hidden sm:inline">LIVE</span>
+</button>
+<button onclick="openFinished()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="Zakończone mecze">
+    <span class="text-green-400">✅</span> <span class="hidden sm:inline">Zakończone</span>
+</button>
+        <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-lg w-10 h-10 rounded-lg flex items-center justify-center" title="Zmień motyw">🌙</button>
+            
+            <div id="auth-buttons" class="flex items-center gap-2">
+                <button onclick="openAuthModal('login')" class="btn-outline text-xs px-4 py-2 rounded-lg font-semibold">Zaloguj się</button>
+                <button onclick="openAuthModal('register')" class="btn-solid text-xs px-4 py-2 rounded-lg font-semibold">Zarejestruj się</button>
+            </div>
+            
+            <div id="user-buttons" class="hidden items-center gap-2">
+                <button onclick="openDashboard()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1">📊 <span class="hidden sm:inline">Dashboard</span></button>
+                <button onclick="openProfile()" id="profile-icon" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white">👤</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="bet-slip" class="bet-slip hidden" onclick="openBetSlip()">
+        🎫 Kupon: <span id="bet-slip-count">0</span> · Kurs: <span id="bet-slip-odds">0.00</span>
+    </div>
+
+    <div id="splash-screen" class="min-h-screen py-10 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-8xl mb-6 animate-float">⚡</div>
+            <h1 class="text-5xl md:text-6xl font-black text-[#1e3a5f] tracking-wider mb-2 animate-fade-up">BET STATS</h1>
+            <p class="text-lg md:text-xl italic text-red-600 font-semibold mb-10 animate-fade-up-delay-1">statystyki twoich ulubionych lig</p>
+            <div class="animate-fade-up-delay-2">
+                <h2 class="text-xl md:text-2xl font-bold text-[#1e3a5f] mb-6">Wybierz ligę</h2>
+                <div id="league-cards" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"></div>
+                
+                <div class="mt-8 flex justify-center gap-3 flex-wrap">
+                    <button onclick="openCompare()" class="px-5 py-3 bg-white border-2 border-[#1e3a5f] text-[#1e3a5f] font-semibold rounded-xl hover:bg-[#1e3a5f] hover:text-white transition">⚖️ Porównywarka</button>
+                    <button onclick="openFavorites()" class="px-5 py-3 bg-white border-2 border-yellow-500 text-yellow-600 font-semibold rounded-xl hover:bg-yellow-500 hover:text-white transition">⭐ Ulubione</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 mt-10 pb-4"><p>© 2026 BetStats · Hazard może uzależniać · 18+</p></div>
+    </div>
+
+    <div id="app" class="hidden">
+        <div class="max-w-6xl mx-auto p-4 md:p-8">
+            <div id="value-bets-section" class="mb-8"></div>
+
+            <div class="bg-yellow-100 border border-yellow-300 rounded-xl p-4 mb-6">
+                <div class="flex items-start gap-3">
+                    <span class="text-2xl">⚠️</span>
+                    <div class="text-sm">
+                        <div class="font-bold text-yellow-800 mb-1">Informacja o danych</div>
+                        <div class="text-gray-700">Aplikacja jest na początku sezonu. Dane w pełni funkcjonalne <b class="text-[#1e3a5f]">od 5. kolejki</b>.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <input type="text" id="search-input" placeholder="🔍 Wyszukaj drużynę..." class="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-sm focus:border-[#1e3a5f] outline-none" oninput="renderMatches()">
+            </div>
+
+            <div class="flex justify-between items-center mb-4 flex-wrap gap-3">
+                <h2 class="text-lg font-semibold flex items-center gap-2 text-[#1e3a5f]">
+                    📅 Nadchodzące mecze <span class="text-gray-500 text-sm" id="match-count"></span>
+                </h2>
+                <div class="flex gap-2 flex-wrap">
+                    <button onclick="toggleFavOnly()" id="fav-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2">⭐ Ulubione</button>
+                    <button onclick="toggleValueOnly()" id="value-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2">🔥 Value bety</button>
+                    <button onclick="toggleSettings()" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-[#1e3a5f] transition flex items-center gap-2">⚙️</button>
+                    <div class="relative">
+                        <button onclick="toggleDropdown()" id="dropdown-btn" class="px-4 py-2 bg-[#1e3a5f] text-white rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-red-600 transition">
+                            <span>🏆</span><span id="current-league">Wszystkie</span><span id="dropdown-arrow">▼</span>
+                        </button>
+                        <div id="dropdown-menu" class="hidden absolute right-0 mt-2 w-64 bg-white border border-gray-300 rounded-xl shadow-xl z-50 overflow-hidden">
+                            <button onclick="filterLeague('all')" class="w-full text-left px-4 py-3 hover:bg-gray-100 text-sm flex items-center gap-3 border-b border-gray-200">
+                                <span class="text-lg">🌍</span><span>Wszystkie ligi</span>
+                            </button>
+                            <div id="league-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settings-panel" class="hidden bg-white border border-gray-300 rounded-xl p-6 mb-6">
+                <h3 class="font-bold text-[#1e3a5f] mb-4">⚙️ Ustawienia progów value bet</h3>
+                <div id="threshold-controls"></div>
+                <button onclick="resetThresholds()" class="mt-4 text-xs text-red-600 hover:underline">↺ Przywróć domyślne</button>
+            </div>
+
+            <div id="matches" class="space-y-4"></div>
+
+            <footer class="mt-16 pt-8 border-t border-gray-300">
+                <div class="max-w-3xl mx-auto text-center text-xs text-gray-600 pb-6 space-y-3">
+                    <div class="flex items-center justify-center gap-2 text-sm">
+                        <img src="logo.png" alt="BetStats" class="w-8 h-8">
+                        <span class="font-bold text-[#1e3a5f] tracking-wider">BET STATS</span>
+                        <span class="bg-blue-600/20 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded border border-blue-600/30">BETA</span>
+                    </div>
+                    <p class="text-gray-600">Kompleksowe statystyki piłkarskie</p>
+                    <div class="pt-3 border-t border-gray-300 text-gray-500 text-[11px]">
+                        <p class="mb-2">© 2026 BetStats</p>
+                        <p class="text-gray-400">Hazard może uzależniać. 18+</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div id="value-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeValueModal()">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">🎯 Kalkulator Value Bet</h3>
+                <button onclick="closeValueModal()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <div class="text-xs text-gray-500 mb-1">Zakład</div>
+                <div id="modal-bet-type" class="font-bold text-[#1e3a5f] text-lg"></div>
+                <div id="modal-explanation" class="text-xs text-gray-500 mt-2"></div>
+                <div id="modal-threshold-selector" class="hidden mt-3"><div id="modal-threshold-buttons"></div></div>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-gray-500">Nasza szansa:</span>
+                    <span id="modal-our-prob" class="text-2xl font-black text-green-600"></span>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="text-sm font-semibold text-gray-700 mb-2 block">Kurs bukmachera:</label>
+                <input type="number" id="modal-odds-input" step="0.01" placeholder="np. 1.29" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-lg font-semibold focus:border-[#1e3a5f] outline-none" oninput="calculateModalValue()">
+            </div>
+            <div id="modal-result" class="hidden bg-gray-50 rounded-lg p-4 mb-4">
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between"><span class="text-gray-600">Kurs implikuje:</span><b id="modal-implied"></b></div>
+                    <div class="flex justify-between"><span class="text-gray-600">Przewaga:</span><b id="modal-edge"></b></div>
+                    <div class="border-t pt-2 mt-2"><div id="modal-verdict" class="text-center font-bold text-lg"></div></div>
+                </div>
+            </div>
+            <div id="place-bet-section" class="hidden mt-4 space-y-2">
+                <div class="p-4 bg-green-50 border-2 border-green-500 rounded-lg">
+                    <div class="font-bold text-green-800 mb-3">💰 Postaw zakład (solo)</div>
+                    <div class="flex gap-2 mb-2">
+                        <input type="number" id="stake-input" placeholder="Stawka (zł)" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                        <button onclick="placeBet()" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-green-700">➕ Dodaj</button>
+                    </div>
+                    <div id="bet-msg" class="text-[10px] text-gray-600">Musisz być zalogowany</div>
+                </div>
+                <button onclick="addToBetSlip()" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold">🎫 Dodaj do kuponu (AKO)</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="auth-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeAuthModal()">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="auth-title" class="font-bold text-lg text-[#1e3a5f]">🔐 Logowanie</h3>
+                <button onclick="closeAuthModal()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="space-y-3">
+                <input type="email" id="auth-email" placeholder="Email" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#1e3a5f] outline-none">
+                <input type="password" id="auth-password" placeholder="Hasło (min 6 znaków)" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#1e3a5f] outline-none">
+                <div id="auth-error" class="hidden text-red-600 text-sm bg-red-50 p-2 rounded"></div>
+                <button id="auth-submit" onclick="doAuth()" class="w-full bg-[#1e3a5f] hover:bg-red-600 text-white font-bold py-3 rounded-lg transition">Zaloguj</button>
+                <div class="text-center text-sm">
+                    <span id="auth-toggle-text">Nie masz konta?</span>
+                    <button onclick="toggleAuthMode()" class="text-red-600 font-bold ml-2 hover:underline" id="auth-toggle-btn">Zarejestruj się</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeProfile()">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">👤 Profil</h3>
+                <button onclick="closeProfile()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="text-center mb-4">
+                <div id="profile-avatar" class="w-20 h-20 mx-auto rounded-full bg-red-600 flex items-center justify-center text-white text-3xl font-bold mb-3">👤</div>
+                <div id="profile-email" class="font-bold text-[#1e3a5f]"></div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                <div class="text-xs text-gray-500 mb-1 text-center">Zysk / Strata</div>
+                <div id="profile-balance" class="text-3xl font-black text-center">0 zł</div>
+                <div id="profile-stats" class="text-xs text-center text-gray-500 mt-2">0 zakładów</div>
+            </div>
+            <button onclick="openDashboard(); closeProfile();" class="w-full bg-[#1e3a5f] hover:bg-red-600 text-white font-bold py-3 rounded-lg mb-2 transition">📊 Dashboard</button>
+            <button onclick="doLogout()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 rounded-lg transition">Wyloguj się</button>
+        </div>
+    </div>
+
+    <div id="dashboard-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeDashboard()">
+        <div class="bg-white rounded-2xl p-6 max-w-4xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">📊 Dashboard</h3>
+                <button onclick="closeDashboard()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-xs text-gray-500 mb-1">Zakłady</div><div id="dash-count" class="text-2xl font-black text-[#1e3a5f]">0</div></div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-xs text-gray-500 mb-1">Postawione</div><div id="dash-total-stake" class="text-2xl font-black text-[#1e3a5f]">0 zł</div></div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-xs text-gray-500 mb-1">Wygrane</div><div id="dash-total-win" class="text-2xl font-black text-green-600">0 zł</div></div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-xs text-gray-500 mb-1">Zysk / Strata</div><div id="dash-balance" class="text-2xl font-black">0 zł</div></div>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mb-6">
+                <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-3 text-center"><div class="text-xs text-gray-500">⏳ Oczekujące</div><div id="dash-pending" class="text-lg font-bold">0</div></div>
+                <div class="bg-green-50 border border-green-200 rounded-xl p-3 text-center"><div class="text-xs text-gray-500">✅ Wygrane</div><div id="dash-won" class="text-lg font-bold text-green-600">0</div></div>
+                <div class="bg-red-50 border border-red-200 rounded-xl p-3 text-center"><div class="text-xs text-gray-500">❌ Przegrane</div><div id="dash-lost" class="text-lg font-bold text-red-600">0</div></div>
+            </div>
+            <h4 class="font-bold text-[#1e3a5f] mb-3">📝 Historia zakładów</h4>
+            <div id="bets-list" class="space-y-2"></div>
+        </div>
+    </div>
+
+    <div id="bet-slip-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeBetSlip()">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">🎫 Kupon (AKO)</h3>
+                <button onclick="closeBetSlip()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div id="bet-slip-items" class="space-y-2 mb-4"></div>
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <div class="flex justify-between mb-2"><span class="text-gray-600">Łączny kurs:</span><b id="bet-slip-total-odds" class="text-[#1e3a5f]">0.00</b></div>
+                <div class="mb-3">
+                    <label class="text-sm font-semibold text-gray-700 mb-2 block">Stawka:</label>
+                    <input type="number" id="bet-slip-stake" placeholder="np. 100" class="w-full px-3 py-2 border border-gray-300 rounded-lg" oninput="updateBetSlipPotential()">
+                </div>
+                <div class="flex justify-between text-lg"><span class="font-bold">Potencjalna wygrana:</span><b id="bet-slip-potential" class="text-green-600">0 zł</b></div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="clearBetSlip()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 rounded-lg">🗑️ Wyczyść</button>
+                <button onclick="placeAKOBet()" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg">✅ Zapisz</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="compare-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeCompare()">
+        <div class="bg-white rounded-2xl p-6 max-w-4xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">⚖️ Porównywarka</h3>
+                <button onclick="closeCompare()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <div>
+                    <label class="text-sm font-semibold text-gray-700 mb-2 block">Drużyna 1:</label>
+                    <select id="compare-team1" class="w-full px-3 py-2 border border-gray-300 rounded-lg" onchange="renderCompare()"></select>
+                </div>
+                <div>
+                    <label class="text-sm font-semibold text-gray-700 mb-2 block">Drużyna 2:</label>
+                    <select id="compare-team2" class="w-full px-3 py-2 border border-gray-300 rounded-lg" onchange="renderCompare()"></select>
+                </div>
+            </div>
+            <div id="compare-result"></div>
+        </div>
+    </div>
+
+    <div id="favorites-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeFavorites()">
+        <div class="bg-white rounded-2xl p-6 max-w-3xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">⭐ Ulubione mecze</h3>
+                <button onclick="closeFavorites()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div id="favorites-list"></div>
+        </div>
+    </div>
+
+   <div id="live-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeLive()">
+    <div class="bg-white rounded-2xl w-full max-w-5xl h-[90vh] shadow-2xl overflow-hidden flex flex-col">
+        <div class="flex justify-between items-center p-4 border-b border-gray-200">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl animate-glow rounded-full inline-block">🔴</span>
+                <h3 class="font-bold text-lg text-[#1e3a5f]">Mecze na żywo</h3>
+                <span id="live-back-btn" class="hidden ml-4 text-sm text-red-600 hover:underline cursor-pointer" onclick="showLiveList()">← Wróć do listy</span>
+            </div>
+            <button onclick="closeLive()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+        </div>
+        <div class="flex-1 overflow-hidden bg-white">
+            <div id="live-list-view" class="p-4 overflow-y-auto h-full">
+                <p class="text-gray-500 text-center py-8">wkrótce dostępne...</p>
+            </div>
+            <iframe id="live-iframe" src="" class="w-full h-full border-0 hidden"></iframe>
+        </div>
+    </div>
+</div>
+
+<div id="match-detail-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeMatchDetail()">
+    <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+            <h3 class="font-bold text-lg text-[#1e3a5f]" id="md-title">Szczegóły meczu</h3>
+            <button onclick="closeMatchDetail()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+        </div>
+        <div id="md-content" class="p-6"></div>
+    </div>
+</div>
+<div id="finished-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeFinished()">
+    <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl max-h-[90vh] overflow-y-auto">
+        <div class="flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl">✅</span>
+                <h3 class="font-bold text-lg text-[#1e3a5f]">Zakończone mecze</h3>
+                <span class="text-xs text-gray-500 hidden sm:inline">· Ostatnie wyniki + weryfikacja predykcji</span>
+            </div>
+            <button onclick="closeFinished()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+        </div>
+        <div id="finished-content" class="p-6"></div>
+    </div>
+</div>
+
+    <div id="install-prompt" class="install-prompt hidden">
+        <div class="flex items-center justify-between gap-3">
+            <div>
+                <div class="font-bold">📱 Zainstaluj BetStats</div>
+                <div class="text-xs opacity-90">Miej stronę zawsze pod ręką</div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="installPWA()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-sm font-bold">Zainstaluj</button>
+                <button onclick="closeInstallPrompt()" class="text-white/60 hover:text-white text-xl px-2">×</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://mnvufnecumwuxfylfxah.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1udnVmbmVjdW13dXhmeWxmeGFoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1MDQ5NjAsImV4cCI6MjEwMTA4MDk2MH0.-B1LiyYPx-ZeYLreVyoULzfKHSGBWK4Zz8hthzCz3gQ';
+        const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        
+        let currentUser = null;
+        let userBets = [];
+        let authMode = 'login';
+
+        const DEFAULT_THRESHOLDS = { btts: 75, over15: 80, over25: 65, over35: 50, yellow: 4.5, shots: 12 };
+        const WEIGHTS = { btts: 3, over25: 2, over15: 1.5, over35: 1.5, yellow: 1, shots: 1 };
+        let THRESHOLDS = loadThresholds();
+        let matchesData = [];
+        let leaguesData = [];
+        let currentFilter = 'all';
+        let valueOnlyMode = false;
+        let favOnlyMode = false;
+        let currentModalData = null;
+        let favorites = loadFavorites();
+        let betSlip = loadBetSlip();
+        let deferredPrompt = null;
+
+        function loadThresholds() {
+            try { const s = localStorage.getItem('betstats_thresholds'); if (s) return { ...DEFAULT_THRESHOLDS, ...JSON.parse(s) }; } catch(e) {}
+            return {...DEFAULT_THRESHOLDS};
+        }
+        function saveThresholds() { localStorage.setItem('betstats_thresholds', JSON.stringify(THRESHOLDS)); }
+        function resetThresholds() { THRESHOLDS = {...DEFAULT_THRESHOLDS}; saveThresholds(); renderThresholdControls(); renderValueBets(); renderMatches(); }
+
+        function loadFavorites() { try { return JSON.parse(localStorage.getItem('betstats_favs') || '[]'); } catch(e) { return []; } }
+        function saveFavorites() { localStorage.setItem('betstats_favs', JSON.stringify(favorites)); }
+        function toggleFavorite(matchId, event) {
+            if (event) event.stopPropagation();
+            const idx = favorites.indexOf(matchId);
+            if (idx > -1) favorites.splice(idx, 1);
+            else favorites.push(matchId);
+            saveFavorites();
+            renderMatches();
+        }
+        function isFavorite(matchId) { return favorites.includes(matchId); }
+
+        function loadBetSlip() { try { return JSON.parse(localStorage.getItem('betstats_slip') || '[]'); } catch(e) { return []; } }
+        function saveBetSlip() { localStorage.setItem('betstats_slip', JSON.stringify(betSlip)); updateBetSlipUI(); }
+        function updateBetSlipUI() {
+            const el = document.getElementById('bet-slip');
+            if (!el) return;
+            if (betSlip.length === 0) { el.classList.add('hidden'); return; }
+            el.classList.remove('hidden');
+            const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
+            document.getElementById('bet-slip-count').textContent = betSlip.length;
+            document.getElementById('bet-slip-odds').textContent = totalOdds.toFixed(2);
+        }
+        function addToBetSlip() {
+            if (!currentModalData) return;
+            const odds = parseFloat(document.getElementById('modal-odds-input').value);
+            if (!odds || odds <= 1) { alert('Wpisz kurs!'); return; }
+            const m = matchesData[currentModalData.matchIndex];
+            betSlip.push({
+                match: m.home + ' vs ' + m.away,
+                league: m.league_name,
+                betType: document.getElementById('modal-bet-type').textContent,
+                odds: odds
+            });
+            saveBetSlip();
+            closeValueModal();
+            alert('Dodano do kuponu!');
+        }
+        function openBetSlip() {
+            const container = document.getElementById('bet-slip-items');
+            if (betSlip.length === 0) {
+                container.innerHTML = '<p class="text-gray-500 text-center py-4">Kupon jest pusty</p>';
+            } else {
+                let html = '';
+                betSlip.forEach((b, i) => {
+                    html += '<div class="border border-gray-200 rounded-lg p-3 flex justify-between items-center">';
+                    html += '<div class="flex-1">';
+                    html += '<div class="text-[10px] text-gray-500">' + b.league + '</div>';
+                    html += '<div class="font-bold text-sm text-[#1e3a5f]">' + b.match + '</div>';
+                    html += '<div class="text-xs text-gray-700">' + b.betType + '</div>';
+                    html += '</div>';
+                    html += '<div class="text-right">';
+                    html += '<div class="font-black text-lg text-green-600">' + b.odds + '</div>';
+                    html += '<button onclick="removeFromBetSlip(' + i + ')" class="text-red-600 text-xs hover:underline">Usuń</button>';
+                    html += '</div></div>';
+                });
+                container.innerHTML = html;
+            }
+            const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
+            document.getElementById('bet-slip-total-odds').textContent = totalOdds.toFixed(2);
+            document.getElementById('bet-slip-stake').value = '';
+            document.getElementById('bet-slip-potential').textContent = '0 zł';
+            document.getElementById('bet-slip-modal').classList.remove('hidden');
+        }
+        function closeBetSlip() { document.getElementById('bet-slip-modal').classList.add('hidden'); }
+        function removeFromBetSlip(i) { betSlip.splice(i, 1); saveBetSlip(); openBetSlip(); }
+        function clearBetSlip() { if (confirm('Wyczyścić kupon?')) { betSlip = []; saveBetSlip(); openBetSlip(); } }
+        function updateBetSlipPotential() {
+            const stake = parseFloat(document.getElementById('bet-slip-stake').value) || 0;
+            const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
+            document.getElementById('bet-slip-potential').textContent = (stake * totalOdds).toFixed(2) + ' zł';
+        }
+        async function placeAKOBet() {
+            if (!currentUser) { alert('Zaloguj się!'); return; }
+            if (betSlip.length === 0) { alert('Kupon pusty!'); return; }
+            const stake = parseFloat(document.getElementById('bet-slip-stake').value);
+            if (!stake || stake <= 0) { alert('Podaj stawkę!'); return; }
+            const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
+            const betType = 'AKO: ' + betSlip.map(b => b.match + ' - ' + b.betType).join(' | ');
+            const { error } = await sb.from('bets').insert({
+                user_id: currentUser.id,
+                match_home: 'KUPON', match_away: betSlip.length + ' zdarzeń', match_league: 'AKO',
+                bet_type: betType.substring(0, 500),
+                odds: totalOdds, stake: stake, potential_win: stake * totalOdds, status: 'pending'
+            });
+            if (error) { alert('Błąd: ' + error.message); return; }
+            betSlip = [];
+            saveBetSlip();
+            closeBetSlip();
+            await loadBets();
+            alert('Kupon zapisany!');
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            localStorage.setItem('betstats_dark', isDark ? '1' : '0');
+            document.getElementById('dark-toggle').innerHTML = isDark ? '☀️' : '🌙';
+        }
+        if (localStorage.getItem('betstats_dark') === '1') {
+            document.body.classList.add('dark');
+            setTimeout(() => { const el = document.getElementById('dark-toggle'); if (el) el.innerHTML = '☀️'; }, 100);
+        }
+
+        async function shareMatch(matchId) {
+            const m = matchesData.find(x => x.match_id === matchId);
+            if (!m) return;
+            const s = analyzeMatch(m);
+            const text = m.home + ' vs ' + m.away + '\n' + m.datetime + '\nBTTS: ' + s.btts + '%\nOver 2.5: ' + s.o25 + '%';
+            if (navigator.share) {
+                try { await navigator.share({ title: m.home + ' vs ' + m.away, text }); } catch(e) {}
+            } else {
+                await navigator.clipboard.writeText(text);
+                alert('Skopiowano!');
+            }
+        }
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            if (!localStorage.getItem('betstats_install_dismissed')) {
+                setTimeout(() => document.getElementById('install-prompt').classList.remove('hidden'), 3000);
+            }
+        });
+        function installPWA() {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(() => { deferredPrompt = null; closeInstallPrompt(); });
+        }
+        function closeInstallPrompt() { document.getElementById('install-prompt').classList.add('hidden'); localStorage.setItem('betstats_install_dismissed', '1'); }
+        if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); }); }
+
+        async function checkAuth() {
+            const { data } = await sb.auth.getSession();
+            if (data.session) { currentUser = data.session.user; updateUIForUser(); await loadBets(); }
+        }
+        function updateUIForUser() {
+            const authB = document.getElementById('auth-buttons');
+            const userB = document.getElementById('user-buttons');
+            if (!authB || !userB) return;
+            if (currentUser) {
+                authB.classList.add('hidden');
+                userB.classList.remove('hidden');
+                userB.classList.add('flex');
+                const pi = document.getElementById('profile-icon');
+                if (pi) pi.innerHTML = currentUser.email[0].toUpperCase();
+            } else {
+                authB.classList.remove('hidden');
+                userB.classList.add('hidden');
+                userB.classList.remove('flex');
+            }
+        }
+        function openAuthModal(mode) { authMode = mode || 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; document.getElementById('auth-modal').classList.remove('hidden'); }
+        function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
+        function updateAuthModalUI() {
+            if (authMode === 'register') { document.getElementById('auth-title').textContent = 'Rejestracja'; document.getElementById('auth-submit').textContent = 'Zarejestruj się'; document.getElementById('auth-toggle-text').textContent = 'Masz już konto?'; document.getElementById('auth-toggle-btn').textContent = 'Zaloguj się'; }
+            else { document.getElementById('auth-title').textContent = 'Logowanie'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; document.getElementById('auth-toggle-text').textContent = 'Nie masz konta?'; document.getElementById('auth-toggle-btn').textContent = 'Zarejestruj się'; }
+        }
+        function toggleAuthMode() { authMode = authMode === 'login' ? 'register' : 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); }
+        async function doAuth() {
+            const email = document.getElementById('auth-email').value.trim();
+            const password = document.getElementById('auth-password').value;
+            const errEl = document.getElementById('auth-error');
+            if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; }
+            if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; }
+            try {
+                let r;
+                if (authMode === 'login') r = await sb.auth.signInWithPassword({ email, password });
+                else r = await sb.auth.signUp({ email, password });
+                if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; }
+                currentUser = r.data.user;
+                updateUIForUser();
+                await loadBets();
+                closeAuthModal();
+            } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); }
+        }
+        function openProfile() { if (!currentUser) return; document.getElementById('profile-email').textContent = currentUser.email; document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase(); updateProfileBalance(); document.getElementById('profile-modal').classList.remove('hidden'); }
+        function closeProfile() { document.getElementById('profile-modal').classList.add('hidden'); }
+        function updateProfileBalance() {
+            let balance = 0;
+            userBets.forEach(b => { if (b.status === 'won') balance += (b.stake * b.odds) - b.stake; else if (b.status === 'lost') balance -= b.stake; });
+            const el = document.getElementById('profile-balance');
+            el.textContent = (balance >= 0 ? '+' : '') + balance.toFixed(2) + ' zł';
+            el.className = 'text-3xl font-black text-center ' + (balance > 0 ? 'text-green-600' : balance < 0 ? 'text-red-600' : 'text-gray-600');
+            document.getElementById('profile-stats').textContent = userBets.length + ' zakładów';
+        }
+        async function doLogout() { await sb.auth.signOut(); currentUser = null; userBets = []; updateUIForUser(); closeProfile(); }
+        async function loadBets() { if (!currentUser) return; const { data, error } = await sb.from('bets').select('*').order('created_at', { ascending: false }); if (!error) userBets = data || []; }
+        async function placeBet() {
+            if (!currentUser) { alert('Zaloguj się!'); closeValueModal(); openAuthModal('login'); return; }
+            const stake = parseFloat(document.getElementById('stake-input').value);
+            const odds = parseFloat(document.getElementById('modal-odds-input').value);
+            if (!stake || stake <= 0) { alert('Podaj stawkę'); return; }
+            if (!odds || odds <= 1) { alert('Podaj kurs'); return; }
+            const m = matchesData[currentModalData.matchIndex];
+            const { error } = await sb.from('bets').insert({ user_id: currentUser.id, match_home: m.home, match_away: m.away, match_league: m.league_name, bet_type: document.getElementById('modal-bet-type').textContent, odds: odds, stake: stake, potential_win: stake * odds, status: 'pending' });
+            if (error) { alert('Błąd: ' + error.message); return; }
+            await loadBets();
+            closeValueModal();
+            alert('Zakład dodany!');
+        }
+        async function updateBetStatus(betId, status) { await sb.from('bets').update({ status }).eq('id', betId); await loadBets(); renderDashboard(); }
+        async function deleteBet(betId) { if (!confirm('Usunąć?')) return; await sb.from('bets').delete().eq('id', betId); await loadBets(); renderDashboard(); }
+
+        function openDashboard() { if (!currentUser) { openAuthModal('login'); return; } renderDashboard(); document.getElementById('dashboard-modal').classList.remove('hidden'); }
+        function closeDashboard() { document.getElementById('dashboard-modal').classList.add('hidden'); }
+        function renderDashboard() {
+            const total = userBets.length;
+            const totalStake = userBets.reduce((s, b) => s + parseFloat(b.stake), 0);
+            let totalWin = 0, balance = 0, pending = 0, won = 0, lost = 0;
+            userBets.forEach(b => { if (b.status === 'won') { totalWin += b.stake * b.odds; balance += (b.stake * b.odds) - b.stake; won++; } else if (b.status === 'lost') { balance -= b.stake; lost++; } else pending++; });
+            document.getElementById('dash-count').textContent = total;
+            document.getElementById('dash-total-stake').textContent = totalStake.toFixed(2) + ' zł';
+            document.getElementById('dash-total-win').textContent = totalWin.toFixed(2) + ' zł';
+            const b = document.getElementById('dash-balance');
+            b.textContent = (balance >= 0 ? '+' : '') + balance.toFixed(2) + ' zł';
+            b.className = 'text-2xl font-black ' + (balance > 0 ? 'text-green-600' : balance < 0 ? 'text-red-600' : 'text-gray-600');
+            document.getElementById('dash-pending').textContent = pending;
+            document.getElementById('dash-won').textContent = won;
+            document.getElementById('dash-lost').textContent = lost;
+            const list = document.getElementById('bets-list');
+            if (userBets.length === 0) { list.innerHTML = '<p class="text-gray-500 text-center py-4">Brak zakładów.</p>'; return; }
+            let html = '';
+            userBets.forEach(b => {
+                const sc = { pending: 'bg-yellow-100 text-yellow-800', won: 'bg-green-100 text-green-800', lost: 'bg-red-100 text-red-800' };
+                const si = { pending: '⏳', won: '✅', lost: '❌' };
+                const sl = { pending: 'Oczekuje', won: 'Wygrany', lost: 'Przegrany' };
+                const date = new Date(b.created_at).toLocaleDateString('pl-PL');
+                html += '<div class="border border-gray-200 rounded-xl p-3">';
+                html += '<div class="flex justify-between items-start mb-2">';
+                html += '<div class="flex-1"><div class="text-[10px] text-gray-500">' + date + ' · ' + (b.match_league || '') + '</div>';
+                html += '<div class="font-bold text-[#1e3a5f]">' + b.match_home + ' vs ' + b.match_away + '</div>';
+                html += '<div class="text-sm text-gray-700 mt-1">' + b.bet_type.substring(0, 100) + '</div></div>';
+                html += '<span class="text-xs font-bold px-2 py-1 rounded ' + sc[b.status] + '">' + si[b.status] + ' ' + sl[b.status] + '</span>';
+                html += '</div>';
+                html += '<div class="flex flex-wrap gap-3 text-xs text-gray-600 mb-2">';
+                html += '<span>Stawka: <b>' + b.stake + ' zł</b></span>';
+                html += '<span>Kurs: <b>' + b.odds + '</b></span>';
+                html += '<span>Potencjał: <b>' + b.potential_win.toFixed(2) + ' zł</b></span>';
+                html += '</div>';
+                if (b.status === 'pending') {
+                    html += '<div class="flex gap-2 mt-2">';
+                    html += '<button onclick="updateBetStatus(\'' + b.id + '\', \'won\')" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-xs font-bold py-2 rounded">✅ Wygrany</button>';
+                    html += '<button onclick="updateBetStatus(\'' + b.id + '\', \'lost\')" class="flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 rounded">❌ Przegrany</button>';
+                    html += '<button onclick="deleteBet(\'' + b.id + '\')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 text-xs font-bold py-2 px-3 rounded">🗑️</button>';
+                    html += '</div>';
+                } else {
+                    html += '<div class="flex gap-2 mt-2">';
+                    html += '<button onclick="updateBetStatus(\'' + b.id + '\', \'pending\')" class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white text-xs font-bold py-2 rounded">↺ Oczekuje</button>';
+                    html += '<button onclick="deleteBet(\'' + b.id + '\')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 text-xs font-bold py-2 px-3 rounded">🗑️</button>';
+                    html += '</div>';
+                }
+                html += '</div>';
+            });
+            list.innerHTML = html;
+        }
+
+        function parseMatchDate(d) { if (!d || d === 'TBA') return null; const t = new Date(); const y = t.getFullYear(); const m = d.match(/(\d{1,2})\.(\d{1,2})\.?\s*(\d{1,2}:\d{2})?/); if (m) { const day = parseInt(m[1]); const mo = parseInt(m[2]) - 1; const ts = m[3] || '00:00'; const [h, mi] = ts.split(':').map(Number); let yr = y; const c = new Date(yr, mo, day, h, mi); if (c < t && (t - c) > 30 * 24 * 60 * 60 * 1000) yr++; return new Date(yr, mo, day, h, mi); } return null; }
+        function isWithinDays(d, days) { const md = parseMatchDate(d); if (!md) return true; const now = new Date(); return md >= now && md <= new Date(now.getTime() + days * 86400000); }
+
+        let liveData = {};
+
+async function loadLiveData() {
+    try {
+        const r = await fetch('live.json?t=' + Date.now());
+        const d = await r.json();
+        liveData = d.matches || {};
+        renderMatches();
+    } catch (e) {
+        console.log('Brak live.json');
+    }
+}
+
+async function loadInitialData() {
+    try {
+        const r = await fetch('data.json?t=' + Date.now());
+        const d = await r.json();
+        matchesData = d.matches;
+        leaguesData = d.leagues || [];
+        renderSplashLeagues();
+        updateBetSlipUI();
+        // Ładuj live co 60 sekund
+        loadLiveData();
+        setInterval(loadLiveData, 60000);
+    } catch (e) { console.error(e); }
+}
+
+function getLiveInfo(home, away) {
+    const key = home + '_' + away;
+    return liveData[key] || null;
+}
+
+        function renderSplashLeagues() {
+            const c = document.getElementById('league-cards');
+            if (!leaguesData || leaguesData.length === 0) { c.innerHTML = '<p class="text-gray-500 col-span-2">Ładowanie...</p>'; return; }
+            let h = '<div class="league-card p-5 rounded-2xl flex items-center justify-between md:col-span-2" style="animation-delay: 0s" onclick="enterAppWithLeague(\'all\')"><div class="flex items-center gap-4"><span class="text-4xl">🌍</span><div class="text-left"><div class="font-bold text-lg text-[#1e3a5f]">Wszystkie ligi</div><div class="text-xs text-gray-500">' + matchesData.length + ' meczów</div></div></div><span class="league-arrow text-2xl text-[#1e3a5f]">→</span></div>';
+            const isOdd = leaguesData.length % 2 !== 0;
+            leaguesData.forEach((l, i) => {
+                const cnt = matchesData.filter(m => m.league_id === l.id).length;
+                const isLast = i === leaguesData.length - 1;
+                const cl = isOdd && isLast ? 'md:col-span-2 md:mx-auto md:w-1/2' : '';
+                h += '<div class="league-card p-5 rounded-2xl flex items-center justify-between ' + cl + '" style="animation-delay: ' + ((i + 1) * 0.08) + 's" onclick="enterAppWithLeague(\'' + l.id + '\')"><div class="flex items-center gap-4"><span class="text-4xl">' + l.flag + '</span><div class="text-left"><div class="font-bold text-base text-[#1e3a5f]">' + l.name + '</div><div class="text-xs text-gray-500">' + cnt + ' meczów</div></div></div><span class="league-arrow text-2xl text-[#1e3a5f]">→</span></div>';
+            });
+            c.innerHTML = h;
+        }
+
+        function analyzeMatch(m) { const hs = m.home_stats || {}; const as = m.away_stats || {}; const avg = (a, b) => Math.round(((a || 0) + (b || 0)) / 2); const avgF = (a, b) => Math.round((((a || 0) + (b || 0)) / 2) * 10) / 10; return { btts: avg(hs.btts_pct, as.btts_pct), o15: avg(hs.over15_pct, as.over15_pct), o25: avg(hs.over25_pct, as.over25_pct), o35: avg(hs.over35_pct, as.over35_pct), corners: avgF(hs.avg_corners, as.avg_corners), yellow: avgF(hs.avg_yellow, as.avg_yellow), shots: avgF(hs.avg_shots, as.avg_shots), xg: avgF(hs.avg_xg, as.avg_xg) }; }
+        function getSuggestedOverThreshold(a) { const f = Math.floor(a); const d = a - f; if (d >= 0.5) return f + 0.5; return f - 0.5 > 0 ? f - 0.5 : 0.5; }
+        function estimateOverProb(a, t) { const d = a - t; if (d >= 3) return 88; if (d >= 2) return 80; if (d >= 1.5) return 72; if (d >= 1) return 65; if (d >= 0.5) return 55; if (d >= 0) return 48; if (d >= -0.5) return 38; if (d >= -1) return 28; return 15; }
+        function getMatchValueBets(m) {
+            const s = analyzeMatch(m); const b = [];
+            if (s.btts >= THRESHOLDS.btts) b.push({ type: 'BTTS', key: 'btts', prob: s.btts, weight: WEIGHTS.btts, icon: '🎯', display: s.btts + '%' });
+            if (s.o15 >= THRESHOLDS.over15) b.push({ type: 'Over 1.5', key: 'o15', prob: s.o15, weight: WEIGHTS.over15, icon: '⚽', display: s.o15 + '%' });
+            if (s.o25 >= THRESHOLDS.over25) b.push({ type: 'Over 2.5', key: 'o25', prob: s.o25, weight: WEIGHTS.over25, icon: '⚽', display: s.o25 + '%' });
+            if (s.o35 >= THRESHOLDS.over35) b.push({ type: 'Over 3.5', key: 'o35', prob: s.o35, weight: WEIGHTS.over35, icon: '⚽', display: s.o35 + '%' });
+            if (s.yellow >= THRESHOLDS.yellow) { const t = getSuggestedOverThreshold(s.yellow); b.push({ type: 'Kartki O' + t, key: 'yellow', prob: estimateOverProb(s.yellow, t), weight: WEIGHTS.yellow, icon: '🟨', display: 'śr. ' + s.yellow.toFixed(1) }); }
+            if (s.shots >= THRESHOLDS.shots) { const t = getSuggestedOverThreshold(s.shots); b.push({ type: 'Strzały O' + t, key: 'shots', prob: estimateOverProb(s.shots, t), weight: WEIGHTS.shots, icon: '🎯', display: 'śr. ' + s.shots.toFixed(1) }); }
+            return b;
+        }
+        function findValueBets() { const a = []; matchesData.forEach((m, i) => { if (!isWithinDays(m.datetime, 10)) return; getMatchValueBets(m).forEach(b => a.push(Object.assign({}, b, { match: m, matchIndex: i, score: (b.prob/100)*b.weight*100 }))); }); a.sort((x, y) => y.score - x.score); return a.slice(0, 5); }
+
+        function renderValueBets() {
+            const c = document.getElementById('value-bets-section'); const b = findValueBets();
+            if (b.length === 0) { c.innerHTML = ''; return; }
+            let html = '<div class="bg-gradient-to-r from-red-600 to-orange-500 text-white p-4 rounded-t-2xl flex items-center gap-2"><span class="text-2xl animate-glow rounded-full">🔥</span><div class="flex-1"><div class="font-black text-lg">TYPY DNIA · Najbliższe 10 dni</div><div class="text-xs opacity-90">Top ' + b.length + '</div></div></div>';
+            html += '<div class="bg-white border-2 border-red-500 border-t-0 rounded-b-2xl p-4"><div class="grid grid-cols-1 md:grid-cols-2 gap-3">';
+            b.forEach(x => {
+                html += '<div class="border-2 border-gray-200 rounded-xl p-3 hover:border-red-500 cursor-pointer transition" onclick="goToMatch(' + x.matchIndex + ', \'' + x.match.league_id + '\')">';
+                html += '<div class="flex items-center justify-between mb-2"><span class="text-[10px] font-bold text-gray-500">' + x.match.league_flag + ' ' + x.match.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">' + x.match.datetime + '</span></div>';
+                html += '<div class="font-bold text-sm text-[#1e3a5f] mb-2">' + x.match.home + ' vs ' + x.match.away + '</div>';
+                html += '<div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="text-2xl">' + x.icon + '</span><span class="font-semibold text-sm text-gray-700">' + x.type + '</span></div><span class="bg-green-100 text-green-700 font-black text-lg px-3 py-1 rounded-lg">' + x.display + '</span></div>';
+                html += '</div>';
+            });
+            html += '</div></div>';
+            c.innerHTML = html;
+        }
+        function goToMatch(matchIndex, leagueId) { if (valueOnlyMode) { valueOnlyMode = false; const b = document.getElementById('value-filter-btn'); b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2'; b.innerHTML = '🔥 Value bety'; } if (currentFilter !== 'all' && currentFilter !== leagueId) { currentFilter = leagueId; const label = document.getElementById('current-league'); const league = leaguesData.find(l => l.id === leagueId); if (league) label.textContent = league.flag + ' ' + league.name; renderMatches(); } setTimeout(() => { const el = document.getElementById('match-card-' + matchIndex); if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.style.boxShadow = '0 0 0 3px #dc2626'; setTimeout(() => el.style.boxShadow = '', 2000); } }, 200); }
+
+        function openValueModal(mi, k, bt, op, ex, av) {
+            currentModalData = { matchIndex: mi, betKey: k, betType: bt, ourProb: op, avgValue: av };
+            document.getElementById('modal-bet-type').textContent = bt;
+            document.getElementById('modal-our-prob').textContent = op + '%';
+            document.getElementById('modal-explanation').textContent = ex || '';
+            document.getElementById('modal-odds-input').value = '';
+            document.getElementById('stake-input').value = '';
+            document.getElementById('modal-result').classList.add('hidden');
+            document.getElementById('place-bet-section').classList.add('hidden');
+            document.getElementById('value-modal').classList.remove('hidden');
+            const sel = document.getElementById('modal-threshold-selector');
+            const btns = document.getElementById('modal-threshold-buttons');
+            if (av !== undefined && av !== null && ['yellow', 'shots'].indexOf(k) >= 0) {
+                sel.classList.remove('hidden');
+                const base = Math.floor(av); const ths = [];
+                for (let i = -2; i <= 2; i++) { const t = base + i + 0.5; if (t > 0) ths.push(t); }
+                const p = k === 'yellow' ? 'Kartki' : 'Strzały'; const def = getSuggestedOverThreshold(av);
+                let html = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="flex gap-2 flex-wrap">';
+                ths.forEach(t => {
+                    const pr = estimateOverProb(av, t); const isd = t === def;
+                    html += '<button onclick="selectThreshold(' + t + ', ' + pr + ', \'' + p + '\', this)" class="threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 ' + (isd ? 'bg-red-600 text-white border-red-600' : 'bg-white border-gray-300 hover:border-red-500') + '">Over ' + t + '<br><span class="text-[10px] opacity-80">' + pr + '%</span></button>';
+                });
+                html += '</div>';
+                btns.innerHTML = html;
+            } else sel.classList.add('hidden');
+            setTimeout(() => document.getElementById('modal-odds-input').focus(), 100);
+        }
+        function selectThreshold(t, p, pr, el) {
+            currentModalData.ourProb = p;
+            document.getElementById('modal-bet-type').textContent = pr + ' Over ' + t;
+            document.getElementById('modal-our-prob').textContent = p + '%';
+            document.querySelectorAll('.threshold-btn').forEach(b => b.className = 'threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 bg-white border-gray-300 hover:border-red-500');
+            el.className = 'threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 bg-red-600 text-white border-red-600';
+            calculateModalValue();
+        }
+        function openShotsModalV2(mi) {
+    const m = matchesData[mi]; const hs = m.home_stats || {}; const as = m.away_stats || {};
+    const hc = hs.shots_per_match || []; const ac = as.shots_per_match || [];
+    if (hc.length === 0 && ac.length === 0) { alert('Brak danych o strzałach.'); return; }
+    const ha = hc.length > 0 ? hc.reduce((a,b)=>a+b,0)/hc.length : 0;
+    const aa = ac.length > 0 ? ac.reduce((a,b)=>a+b,0)/ac.length : 0;
+    currentModalData = { matchIndex: mi, betKey: 'shots_v2', hc: hc, ac: ac, ha: ha, aa: aa, totalAvg: ha+aa };
+    document.getElementById('modal-bet-type').textContent = 'Strzały w meczu';
+    document.getElementById('modal-explanation').innerHTML = m.home + ': ' + ha.toFixed(1) + '<br>' + m.away + ': ' + aa.toFixed(1) + '<br><b>Suma:</b> ' + (ha+aa).toFixed(1);
+    document.getElementById('modal-odds-input').value = '';
+    document.getElementById('stake-input').value = '';
+    document.getElementById('modal-result').classList.add('hidden');
+    document.getElementById('place-bet-section').classList.add('hidden');
+    document.getElementById('value-modal').classList.remove('hidden');
+    renderShotsV2Thresholds();
+}
+function renderShotsV2Thresholds() {
+    const s = document.getElementById('modal-threshold-selector'); const b = document.getElementById('modal-threshold-buttons');
+    s.classList.remove('hidden'); const d = currentModalData;
+    const ths = [6.5, 8.5, 10.5, 12.5, 14.5, 16.5, 18.5, 20.5, 22.5, 24.5, 26.5, 28.5, 30.5];
+    let h = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="grid grid-cols-3 gap-2">';
+    ths.forEach(t => {
+        const p = Math.min(d.hc.length, d.ac.length); let hits = 0, tot = 0;
+        if (p > 0) { for (let i = 0; i < p; i++) { tot++; if (d.hc[i] + d.ac[i] > t) hits++; } } else { hits = d.totalAvg > t ? 1 : 0; tot = 1; }
+        const pr = tot > 0 ? Math.round((hits/tot)*100) : 0;
+        const col = pr >= 70 ? 'bg-green-600 text-white' : pr >= 50 ? 'bg-lime-500 text-white' : pr >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
+        h += '<button onclick="selectShotsV2(' + t + ', ' + pr + ', ' + hits + ', ' + tot + ', this)" class="shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white"><div class="text-sm">O' + t + '</div><div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + pr + '%</div><div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + tot + '</div></button>';
+    });
+    h += '</div>';
+    b.innerHTML = h;
+    document.getElementById('modal-our-prob').textContent = '—';
+}
+function selectShotsV2(t, p, h, tt, el) {
+    currentModalData.ourProb = p;
+    document.getElementById('modal-bet-type').textContent = 'Strzały Over ' + t;
+    document.getElementById('modal-our-prob').textContent = p + '%';
+    document.querySelectorAll('.shots-v2-btn').forEach(b => b.className = 'shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white');
+    el.className = 'shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
+    calculateModalValue();
+}
+        function openCornerModalV2(mi) {
+            const m = matchesData[mi]; const hs = m.home_stats || {}; const as = m.away_stats || {};
+            const hc = hs.corners_per_match || []; const ac = as.corners_per_match || [];
+            if (hc.length === 0 && ac.length === 0) { alert('Brak danych.'); return; }
+            const ha = hc.length > 0 ? hc.reduce((a,b)=>a+b,0)/hc.length : 0;
+            const aa = ac.length > 0 ? ac.reduce((a,b)=>a+b,0)/ac.length : 0;
+            currentModalData = { matchIndex: mi, betKey: 'corners_v2', hc: hc, ac: ac, ha: ha, aa: aa, totalAvg: ha+aa };
+            document.getElementById('modal-bet-type').textContent = 'Cornery w meczu';
+            document.getElementById('modal-explanation').innerHTML = m.home + ': ' + ha.toFixed(1) + '<br>' + m.away + ': ' + aa.toFixed(1) + '<br><b>Suma:</b> ' + (ha+aa).toFixed(1);
+            document.getElementById('modal-odds-input').value = '';
+            document.getElementById('stake-input').value = '';
+            document.getElementById('modal-result').classList.add('hidden');
+            document.getElementById('place-bet-section').classList.add('hidden');
+            document.getElementById('value-modal').classList.remove('hidden');
+            renderCornerV2Thresholds();
+        }
+        function renderCornerV2Thresholds() {
+            const s = document.getElementById('modal-threshold-selector'); const b = document.getElementById('modal-threshold-buttons');
+            s.classList.remove('hidden'); const d = currentModalData;
+            const ths = [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5];
+            let h = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="grid grid-cols-3 gap-2">';
+            ths.forEach(t => {
+                const p = Math.min(d.hc.length, d.ac.length); let hits = 0, tot = 0;
+                if (p > 0) { for (let i = 0; i < p; i++) { tot++; if (d.hc[i] + d.ac[i] > t) hits++; } } else { hits = d.totalAvg > t ? 1 : 0; tot = 1; }
+                const pr = tot > 0 ? Math.round((hits/tot)*100) : 0;
+                const col = pr >= 70 ? 'bg-green-600 text-white' : pr >= 50 ? 'bg-lime-500 text-white' : pr >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
+                h += '<button onclick="selectCornerV2(' + t + ', ' + pr + ', ' + hits + ', ' + tot + ', this)" class="corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white"><div class="text-sm">O' + t + '</div><div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + pr + '%</div><div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + tot + '</div></button>';
+            });
+            h += '</div>';
+            b.innerHTML = h;
+            document.getElementById('modal-our-prob').textContent = '—';
+        }
+        function selectCornerV2(t, p, h, tt, el) { currentModalData.ourProb = p; document.getElementById('modal-bet-type').textContent = 'Cornery Over ' + t; document.getElementById('modal-our-prob').textContent = p + '%'; document.querySelectorAll('.corner-v2-btn').forEach(b => b.className = 'corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white'); el.className = 'corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50'; calculateModalValue(); }
+        function closeValueModal() { document.getElementById('value-modal').classList.add('hidden'); currentModalData = null; }
+        function calculateModalValue() {
+            if (!currentModalData) return;
+            const o = parseFloat(document.getElementById('modal-odds-input').value);
+            if (!o || o <= 1) { document.getElementById('modal-result').classList.add('hidden'); document.getElementById('place-bet-section').classList.add('hidden'); return; }
+            const im = (1/o)*100; const e = currentModalData.ourProb - im;
+            document.getElementById('modal-implied').textContent = im.toFixed(1) + '%';
+            const ee = document.getElementById('modal-edge'); const ve = document.getElementById('modal-verdict');
+            if (e > 10) { ee.innerHTML = '<span class="text-green-600">+' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-green-600">🔥 MOCNY VALUE BET!</span>'; }
+            else if (e > 0) { ee.innerHTML = '<span class="text-lime-600">+' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-lime-600">✅ Value bet</span>'; }
+            else if (e > -5) { ee.innerHTML = '<span class="text-orange-600">' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-orange-600">⚠️ Neutralny</span>'; }
+            else { ee.innerHTML = '<span class="text-red-600">' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-red-600">❌ Brak value</span>'; }
+            document.getElementById('modal-result').classList.remove('hidden');
+            document.getElementById('place-bet-section').classList.remove('hidden');
+            document.getElementById('bet-msg').textContent = currentUser ? '✅ Zalogowany' : '⚠️ Zaloguj się';
+        }
+        function toggleSettings() { const p = document.getElementById('settings-panel'); if (p.classList.contains('hidden')) { p.classList.remove('hidden'); renderThresholdControls(); } else p.classList.add('hidden'); }
+        function renderThresholdControls() {
+            const c = document.getElementById('threshold-controls');
+            const cs = [{k:'btts',l:'🎯 BTTS',mi:50,ma:90,u:'%'},{k:'over15',l:'⚽ O1.5',mi:60,ma:95,u:'%'},{k:'over25',l:'⚽ O2.5',mi:40,ma:85,u:'%'},{k:'over35',l:'⚽ O3.5',mi:30,ma:70,u:'%'},{k:'yellow',l:'🟨 Kartki',mi:2,ma:8,s:0.5,u:''},{k:'shots',l:'🎯 Strzały',mi:8,ma:20,s:1,u:''}];
+            let html = '';
+            cs.forEach(x => {
+                html += '<div class="mb-4"><div class="flex justify-between text-sm mb-1"><span class="font-semibold">' + x.l + '</span><span class="font-bold text-[#1e3a5f]" id="threshold-val-' + x.k + '">' + THRESHOLDS[x.k] + x.u + '</span></div>';
+                html += '<input type="range" min="' + x.mi + '" max="' + x.ma + '" step="' + (x.s || 1) + '" value="' + THRESHOLDS[x.k] + '" class="w-full" oninput="updateThreshold(\'' + x.k + '\', this.value, \'' + x.u + '\')"></div>';
+            });
+            c.innerHTML = html;
+        }
+        function updateThreshold(k, v, u) { THRESHOLDS[k] = parseFloat(v); document.getElementById('threshold-val-'+k).textContent = v+u; saveThresholds(); renderValueBets(); renderMatches(); }
+
+        function enterAppWithLeague(li) { const s = document.getElementById('splash-screen'); const a = document.getElementById('app'); s.classList.add('animate-fade-out'); setTimeout(() => { s.classList.add('hidden'); s.classList.remove('animate-fade-out'); a.classList.remove('hidden'); a.classList.add('animate-fade-in'); currentFilter = li; const l = document.getElementById('current-league'); if (li === 'all') l.textContent = 'Wszystkie'; else { const x = leaguesData.find(y => y.id === li); if (x) l.textContent = x.flag + ' ' + x.name; } renderLeagueList(); renderValueBets(); renderMatches(); window.scrollTo(0, 0); }, 400); }
+        function backToSplash() { document.getElementById('app').classList.add('hidden'); document.getElementById('app').classList.remove('animate-fade-in'); document.getElementById('splash-screen').classList.remove('hidden'); window.scrollTo(0, 0); }
+        function toggleValueOnly() { valueOnlyMode = !valueOnlyMode; const b = document.getElementById('value-filter-btn'); if (valueOnlyMode) { b.className = 'px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold flex items-center gap-2'; b.innerHTML = '🔥 Value bety ✓'; } else { b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2'; b.innerHTML = '🔥 Value bety'; } renderMatches(); }
+        function toggleFavOnly() { favOnlyMode = !favOnlyMode; const b = document.getElementById('fav-filter-btn'); if (favOnlyMode) { b.className = 'px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-semibold flex items-center gap-2'; b.innerHTML = '⭐ Ulubione ✓'; } else { b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2'; b.innerHTML = '⭐ Ulubione'; } renderMatches(); }
+        function getColorClass(p) { if (p >= 70) return { text: 'text-green-600', bar: 'bg-green-500' }; if (p >= 50) return { text: 'text-lime-600', bar: 'bg-lime-500' }; if (p >= 35) return { text: 'text-orange-600', bar: 'bg-orange-500' }; return { text: 'text-red-600', bar: 'bg-red-500' }; }
+        function formBadge(f) { const c = { W: 'bg-green-600 border-green-700', D: 'bg-yellow-500 border-yellow-600', L: 'bg-red-600 border-red-700' }; return '<span class="inline-block w-6 h-6 text-[10px] rounded border ' + (c[f] || 'bg-gray-500') + ' text-white flex items-center justify-center font-bold">' + f + '</span>'; }
+function renderStatBox(l, p, mi, k, t, bt) {
+    const c = getColorClass(p);
+    const iv = p >= t;
+    const e = 'Historyczna szansa ' + l + ': ' + p + '%';
+    
+    // Sprawdz czy mecz sie skonczyl i czy predykcja sie sprawdzila
+    const m = matchesData[mi];
+    const live = getLiveInfo(m.home, m.away);
+    let resultClass = '';
+    let resultIcon = '';
+    
+    if (live && live.is_finished && live.score) {
+        const parts = live.score.split(':');
+        if (parts.length === 2) {
+            const hg = parseInt(parts[0]);
+            const ag = parseInt(parts[1]);
+            let hit = false;
+            
+            if (k === 'btts') hit = hg > 0 && ag > 0;
+            else if (k === 'o15') hit = (hg + ag) > 1;
+            else if (k === 'o25') hit = (hg + ag) > 2;
+            else if (k === 'o35') hit = (hg + ag) > 3;
+            
+            if (hit) {
+                resultClass = 'bg-green-100 border-2 border-green-500';
+                resultIcon = '<div class="text-[10px] font-black text-green-700 mb-1">✅ TRAFIONE</div>';
+            } else {
+                resultClass = 'bg-red-100 border-2 border-red-500';
+                resultIcon = '<div class="text-[10px] font-black text-red-700 mb-1">❌ NIETRAFIONE</div>';
+            }
+        }
+    } else if (iv) {
+        resultClass = 'ring-2 ring-red-500 bg-red-50/30';
+    }
+    
+    return '<div class="stat-card p-4 rounded-xl ' + resultClass + '" onclick="event.stopPropagation()">' +
+        resultIcon +
+        (iv && !resultIcon ? '<div class="text-[9px] font-black text-red-600 mb-1">🔥 VALUE BET</div>' : '') +
+        '<div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">' + l + '</div>' +
+        '<div class="text-3xl font-black ' + c.text + '">' + p + '%</div>' +
+        '<div class="mt-2 bg-gray-200 rounded-full h-1"><div class="bar-fill ' + c.bar + '" style="width: ' + p + '%"></div></div>' +
+        '<button onclick="event.stopPropagation();openValueModal(' + mi + ', \'' + k + '\', \'' + bt + '\', ' + p + ', \'' + e + '\', null)" class="mt-3 w-full text-[10px] font-bold py-1.5 rounded ' + (iv ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300') + '">💰 Kurs</button>' +
+    '</div>';
+}function renderMiniStatWithCalc(i, l, v, t, mi, k, a) {
+    const iv = t && a >= t;
+    const s = getSuggestedOverThreshold(a);
+    const p = estimateOverProb(a, s);
+    const pf = k === 'yellow' ? 'Kartki' : 'Strzały';
+    const bt = pf + ' Over ' + s;
+    
+    // Dla strzałów - wywołaj analizę sumowaną
+    if (k === 'shots') {
+        return '<div class="bg-white border ' + (iv ? 'border-red-500 bg-red-50/30' : 'border-gray-200') + ' rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">' + i + '</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">' + l + (iv ? ' <span class="text-red-600 font-bold">🔥</span>' : '') + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div><button onclick="event.stopPropagation();openShotsModalV2(' + mi + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded bg-red-600 text-white hover:bg-red-700">🎯 Analiza</button></div>';
+    }
+    
+return '<div class="bg-white border ' + (iv ? 'border-red-500 bg-red-50/30' : 'border-gray-200') + ' rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">' + i + '</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">' + l + (iv ? ' <span class="text-red-600 font-bold">🔥</span>' : '') + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div><button onclick="event.stopPropagation();openValueModal(' + mi + ', \'' + k + '\', \'' + bt + '\', ' + p + ', \'Średnio ' + a.toFixed(1) + '\', ' + a + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded ' + (iv ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200') + '">💰 Kurs</button></div>';}        function renderCornerMiniStat(mi, hs, as) { const s = ((hs.avg_corners || 0) + (as.avg_corners || 0)).toFixed(1); const h = (hs.corners_per_match && hs.corners_per_match.length > 0) || (as.corners_per_match && as.corners_per_match.length > 0); return '<div class="bg-white border border-gray-200 rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">🚩</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">Suma cornerów</div><div class="text-sm font-bold text-[#1e3a5f]">' + s + '</div></div></div><button onclick="event.stopPropagation();openCornerModalV2(' + mi + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded ' + (h ? 'bg-orange-500 text-white hover:bg-orange-600' : 'bg-gray-100 text-gray-400') + '">🚩 Analiza</button></div>'; }
+function renderMiniStat(i, l, v) { return '<div class="bg-white border border-gray-200 rounded-lg p-3 flex items-center gap-2" onclick="event.stopPropagation()"><span class="text-lg">' + i + '</span><div><div class="text-[10px] text-gray-500 uppercase">' + l + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div>'; }        function detailRow(l, v) { return '<div class="flex justify-between border-b border-gray-200 pb-1"><span class="text-gray-600">' + l + '</span><b class="text-[#1e3a5f]">' + v + '</b></div>'; }        function renderLeagueList() {
+            const c = document.getElementById('league-list');
+            let h = '';
+            leaguesData.forEach(l => {
+                h += '<button onclick="filterLeague(\'' + l.id + '\')" class="w-full text-left px-4 py-3 hover:bg-gray-100 text-sm flex items-center gap-3 border-b border-gray-200 last:border-0"><span class="text-lg">' + l.flag + '</span><span>' + l.name + '</span><span class="ml-auto text-xs text-gray-500" id="count-' + l.id + '"></span></button>';
+            });
+            c.innerHTML = h;
+            leaguesData.forEach(l => { const cnt = matchesData.filter(m => m.league_id === l.id).length; const el = document.getElementById('count-'+l.id); if (el) el.textContent = cnt > 0 ? '('+cnt+')' : ''; });
+        }
+        function toggleDropdown() { const m = document.getElementById('dropdown-menu'); const a = document.getElementById('dropdown-arrow'); if (m.classList.contains('hidden')) { m.classList.remove('hidden'); a.textContent = '▲'; } else { m.classList.add('hidden'); a.textContent = '▼'; } }
+        document.addEventListener('click', (e) => { const d = document.getElementById('dropdown-menu'); const b = document.getElementById('dropdown-btn'); if (d && b && !d.contains(e.target) && !b.contains(e.target)) { d.classList.add('hidden'); const arr = document.getElementById('dropdown-arrow'); if (arr) arr.textContent = '▼'; } });
+        
+        function renderMatchCard(m, i) {
+    const hs = m.home_stats || {}; const as = m.away_stats || {}; const s = analyzeMatch(m); const vb = getMatchValueBets(m); const isHot = vb.length >= 2;
+    const isFav = isFavorite(m.match_id);
+    const live = getLiveInfo(m.home, m.away);
+    
+    let liveBadge = '';
+    if (live) {
+        if (live.is_live) {
+            liveBadge = '<div class="bg-red-600 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2"><span class="animate-glow inline-block w-3 h-3 bg-white rounded-full"></span> 🔴 MECZ TRWA! · ' + live.score + ' · ' + (live.stage || '') + '</div>';
+        } else if (live.is_finished) {
+            liveBadge = '<div class="bg-gray-700 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2">⚽ KONIEC · ' + live.score + '</div>';
+        }
+    }
+    
+    let html = '<div id="match-card-' + i + '" class="bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" onclick="openMatchDetail(' + i + ')">';
+    if (liveBadge) html += liveBadge;
+    if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block">🔥</span> HOT MATCH · ' + vb.length + ' value bets</div>';
+    html += '<div class="flex justify-between items-center px-4 py-2 bg-gray-50 border-b border-gray-200"><span class="text-[10px] font-bold text-gray-600 tracking-wider">' + (m.league_flag || '🏆') + ' ' + (m.league_name || '').toUpperCase() + '</span><div class="flex items-center gap-2"><span class="fav-star text-lg" onclick="toggleFavorite(\'' + m.match_id + '\', event)" title="Ulubione">' + (isFav ? '⭐' : '☆') + '</span><span class="fav-star text-sm" onclick="event.stopPropagation();shareMatch(\'' + m.match_id + '\')" title="Udostępnij">📤</span><span class="text-[10px] text-gray-500">📅 ' + (m.datetime || 'TBA') + '</span></div></div>';
+    html += '<div class="p-4 grid grid-cols-3 items-center"><div class="text-left"><div class="font-bold text-lg mb-2 text-[#1e3a5f]">' + m.home + '</div><div class="flex gap-1">' + (hs.form || []).map(f => formBadge(f)).join('') + '</div></div><div class="flex justify-center"><div class="w-12 h-12 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-xs text-gray-500 font-bold">VS</div></div><div class="text-right"><div class="font-bold text-lg mb-2 text-[#1e3a5f]">' + m.away + '</div><div class="flex gap-1 justify-end">' + (as.form || []).map(f => formBadge(f)).join('') + '</div></div></div>';
+    html += '<div class="px-4 pb-4 grid grid-cols-2 md:grid-cols-4 gap-3">' + renderStatBox('BTTS', s.btts, i, 'btts', THRESHOLDS.btts, 'BTTS') + renderStatBox('O1.5', s.o15, i, 'o15', THRESHOLDS.over15, 'Over 1.5') + renderStatBox('O2.5', s.o25, i, 'o25', THRESHOLDS.over25, 'Over 2.5') + renderStatBox('O3.5', s.o35, i, 'o35', THRESHOLDS.over35, 'Over 3.5') + '</div>';
+    html += '<div class="px-4 pb-3 grid grid-cols-2 md:grid-cols-6 gap-2">' + renderMiniStat('⚽', 'Śr. strzelone', (((hs.avg_goals_scored||0)+(as.avg_goals_scored||0))/2).toFixed(2)) + renderMiniStat('🥅', 'Śr. stracone', (((hs.avg_goals_conceded||0)+(as.avg_goals_conceded||0))/2).toFixed(2)) + renderCornerMiniStat(i, hs, as) + renderMiniStatWithCalc('🟨', 'Śr. kartki', s.yellow, THRESHOLDS.yellow, i, 'yellow', s.yellow) + renderMiniStatWithCalc('🎯', 'Śr. strzały', s.shots, THRESHOLDS.shots, i, 'shots', s.shots) + renderMiniStat('📊', 'xG', s.xg) + '</div>';
+    html += '<div class="px-4 pb-3 text-center text-xs text-blue-600 font-semibold border-t border-gray-200 pt-2">👆 Kliknij aby zobaczyć pełne szczegóły meczu</div>';
+    html += '</div>';
+    return html;
+}
+        function filterLeague(li) { currentFilter = li; const l = document.getElementById('current-league'); if (li === 'all') l.textContent = 'Wszystkie'; else { const x = leaguesData.find(y => y.id === li); if (x) l.textContent = x.flag + ' ' + x.name; } document.getElementById('dropdown-menu').classList.add('hidden'); document.getElementById('dropdown-arrow').textContent = '▼'; renderMatches(); }
+        function renderMatches() {
+            let f = currentFilter === 'all' ? matchesData : matchesData.filter(m => m.league_id === currentFilter);
+            // Ukryj zakonczone mecze z glownej listy
+            f = f.filter(m => { const live = getLiveInfo(m.home, m.away); return !(live && live.is_finished); });
+            if (valueOnlyMode) f = f.filter(m => getMatchValueBets(m).length > 0);
+            if (favOnlyMode) f = f.filter(m => isFavorite(m.match_id));            const searchEl = document.getElementById('search-input');
+            const query = searchEl ? searchEl.value.trim().toLowerCase() : '';
+            if (query) f = f.filter(m => m.home.toLowerCase().indexOf(query) >= 0 || m.away.toLowerCase().indexOf(query) >= 0);
+            f = f.slice().sort((a, b) => { const aFav = isFavorite(a.match_id) ? 1 : 0; const bFav = isFavorite(b.match_id) ? 1 : 0; if (aFav !== bFav) return bFav - aFav; return getMatchValueBets(b).length - getMatchValueBets(a).length; });
+            document.getElementById('match-count').innerText = '(' + f.length + ')';
+            const c = document.getElementById('matches');
+            if (f.length === 0) { c.innerHTML = '<p class="text-gray-500 text-center py-8">Brak meczów</p>'; }
+            else { let html = ''; f.forEach(m => { html += renderMatchCard(m, matchesData.indexOf(m)); }); c.innerHTML = html; }
+        }
+
+        function openCompare() {
+            const sel1 = document.getElementById('compare-team1');
+            const sel2 = document.getElementById('compare-team2');
+            const teamSet = {};
+            matchesData.forEach(m => { teamSet[m.home] = true; teamSet[m.away] = true; });
+            const teams = Object.keys(teamSet).sort();
+            let opts = '<option value="">-- Wybierz --</option>';
+            teams.forEach(t => { opts += '<option value="' + t + '">' + t + '</option>'; });
+            sel1.innerHTML = opts;
+            sel2.innerHTML = opts;
+            document.getElementById('compare-result').innerHTML = '<p class="text-gray-500 text-center py-8">Wybierz drużyny</p>';
+            document.getElementById('compare-modal').classList.remove('hidden');
+        }
+        function closeCompare() { document.getElementById('compare-modal').classList.add('hidden'); }
+        function renderCompare() {
+            const t1 = document.getElementById('compare-team1').value;
+            const t2 = document.getElementById('compare-team2').value;
+            const resultEl = document.getElementById('compare-result');
+            if (!t1 || !t2) { resultEl.innerHTML = '<p class="text-gray-500 text-center py-8">Wybierz obie drużyny</p>'; return; }
+            const s1 = getTeamStats(t1); const s2 = getTeamStats(t2);
+            let html = '';
+            if (!s1 || !s2) {
+                let msg = '';
+                if (!s1 && !s2) msg = 'Brak danych dla obu drużyn';
+                else if (!s1) msg = 'Brak danych dla ' + t1;
+                else msg = 'Brak danych dla ' + t2;
+                html += '<div class="bg-red-50 border-2 border-red-500 rounded-lg p-3 mb-4 text-red-700 text-sm">⚠️ ' + msg + '</div>';
+            }
+            const t1Class = s1 ? 'text-[#1e3a5f]' : 'text-red-500 bg-red-100 rounded-lg border-2 border-red-500';
+            const t2Class = s2 ? 'text-[#1e3a5f]' : 'text-red-500 bg-red-100 rounded-lg border-2 border-red-500';
+            html += '<div class="grid grid-cols-3 gap-4 mb-4 text-center">';
+            html += '<div class="font-bold p-2 ' + t1Class + '">' + t1 + (s1 ? '' : ' ❌') + '</div>';
+            html += '<div class="text-gray-400 text-sm flex items-center justify-center">vs</div>';
+            html += '<div class="font-bold p-2 ' + t2Class + '">' + t2 + (s2 ? '' : ' ❌') + '</div>';
+            html += '</div>';
+            const rows = [
+                { l: '⚽ Śr. strzelonych', a: s1 ? (s1.avg_goals_scored || 0) : null, b: s2 ? (s2.avg_goals_scored || 0) : null, unit: '' },
+                { l: '🥅 Śr. straconych', a: s1 ? (s1.avg_goals_conceded || 0) : null, b: s2 ? (s2.avg_goals_conceded || 0) : null, unit: '', invert: true },
+                { l: '🎯 BTTS', a: s1 ? (s1.btts_pct || 0) : null, b: s2 ? (s2.btts_pct || 0) : null, unit: '%' },
+                { l: '⚽ Over 2.5', a: s1 ? (s1.over25_pct || 0) : null, b: s2 ? (s2.over25_pct || 0) : null, unit: '%' },
+                { l: '🚩 Cornery', a: s1 ? (s1.avg_corners || 0) : null, b: s2 ? (s2.avg_corners || 0) : null, unit: '' },
+                { l: '🟨 Kartki', a: s1 ? (s1.avg_yellow || 0) : null, b: s2 ? (s2.avg_yellow || 0) : null, unit: '', invert: true },
+                { l: '🎯 Strzały', a: s1 ? (s1.avg_shots || 0) : null, b: s2 ? (s2.avg_shots || 0) : null, unit: '' },
+                { l: '📊 xG', a: s1 ? (s1.avg_xg || 0) : null, b: s2 ? (s2.avg_xg || 0) : null, unit: '' }
+            ];
+            html += '<div class="space-y-3">';
+            rows.forEach(r => {
+                const aMiss = r.a === null;
+                const bMiss = r.b === null;
+                const aBetter = !aMiss && !bMiss && (r.invert ? r.a < r.b : r.a > r.b);
+                const bBetter = !aMiss && !bMiss && (r.invert ? r.b < r.a : r.b > r.a);
+                const aCls = aMiss ? 'bg-red-100 text-red-500 font-bold border-2 border-red-500' : (aBetter ? 'text-green-600 font-bold' : 'text-gray-700');
+                const bCls = bMiss ? 'bg-red-100 text-red-500 font-bold border-2 border-red-500' : (bBetter ? 'text-green-600 font-bold' : 'text-gray-700');
+                const aVal = aMiss ? '❌ brak' : (r.a + r.unit);
+                const bVal = bMiss ? '❌ brak' : (r.b + r.unit);
+                html += '<div class="grid grid-cols-3 items-center gap-4 p-3 bg-gray-50 rounded-lg">';
+                html += '<div class="text-right p-2 rounded ' + aCls + '">' + aVal + '</div>';
+                html += '<div class="text-center text-xs text-gray-500">' + r.l + '</div>';
+                html += '<div class="text-left p-2 rounded ' + bCls + '">' + bVal + '</div>';
+                html += '</div>';
+            });
+            html += '</div>';
+            resultEl.innerHTML = html;
+        }
+        function getTeamStats(teamName) {
+            for (let i = 0; i < matchesData.length; i++) {
+                const m = matchesData[i];
+                if (m.home === teamName && m.home_stats && m.home_stats.total_matches) return m.home_stats;
+                if (m.away === teamName && m.away_stats && m.away_stats.total_matches) return m.away_stats;
+            }
+            return null;
+        }
+
+        function openMatchDetail(matchIndex) {
+    var m = matchesData[matchIndex];
+    if (!m) return;
+    var hs = m.home_stats || {};
+    var as = m.away_stats || {};
+    var s = analyzeMatch(m);
+    var live = getLiveInfo(m.home, m.away);
+    document.getElementById('md-title').textContent = m.home + ' vs ' + m.away;
+    var liveBadge = '';
+    var isFinished = false;
+    var matchScore = null;
+    if (live) {
+        if (live.is_live) { liveBadge = '<div class="bg-red-600 text-white text-center py-3 rounded-xl mb-4 font-black text-lg animate-pulse">🔴 MECZ TRWA! · ' + live.score + '</div>'; }
+        else if (live.is_finished) { liveBadge = '<div class="bg-gray-700 text-white text-center py-3 rounded-xl mb-4 font-black text-lg">⚽ KONIEC · ' + live.score + '</div>'; isFinished = true; var pp = live.score.split(':'); if (pp.length === 2) matchScore = {hg: parseInt(pp[0]), ag: parseInt(pp[1])}; }
+    }
+    var html = liveBadge;
+    html += '<div class="grid grid-cols-3 items-center gap-4 mb-6 p-4 bg-gray-50 rounded-xl"><div class="text-center"><div class="font-bold text-lg text-[#1e3a5f] mb-2">' + m.home + '</div><div class="flex gap-1 justify-center">' + (hs.form || []).map(function(f){return formBadge(f)}).join('') + '</div></div><div class="text-center"><div class="text-3xl font-black text-gray-400">VS</div><div class="text-xs text-gray-500 mt-2">' + m.datetime + '</div><div class="text-[10px] text-gray-500">' + m.league_flag + ' ' + m.league_name + '</div></div><div class="text-center"><div class="font-bold text-lg text-[#1e3a5f] mb-2">' + m.away + '</div><div class="flex gap-1 justify-center">' + (as.form || []).map(function(f){return formBadge(f)}).join('') + '</div></div></div>';
+    if (isFinished && matchScore) {
+        var total = matchScore.hg + matchScore.ag;
+        var btts = matchScore.hg > 0 && matchScore.ag > 0;
+        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">✅ Weryfikacja</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
+        [{l:'BTTS',h:btts,p:s.btts,i:btts?'TAK':'NIE'},{l:'O1.5',h:total>1,p:s.o15,i:total+' gole'},{l:'O2.5',h:total>2,p:s.o25,i:total+' gole'},{l:'O3.5',h:total>3,p:s.o35,i:total+' gole'}].forEach(function(c){
+            html+='<div class="p-4 rounded-xl border-2 '+(c.h?'bg-green-100 border-green-500':'bg-red-100 border-red-500')+'"><div class="text-[10px] font-black mb-1 '+(c.h?'text-green-700':'text-red-700')+'">'+(c.h?'✅':'❌')+'</div><div class="text-[10px] text-gray-600 uppercase mb-1">'+c.l+'</div><div class="text-2xl font-black '+(c.h?'text-green-600':'text-red-600')+'">'+c.p+'%</div><div class="text-[10px] text-gray-500">'+c.i+'</div></div>';
+        });
+        html += '</div></div>';
+        html += '<div class="bg-gray-50 rounded-xl p-4 mb-6 text-center"><div class="text-3xl font-black">' + matchScore.hg + ' : ' + matchScore.ag + '</div></div>';
+    } else {
+        var vb = getMatchValueBets(m);
+        if (vb.length > 0) {
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🔥 Value bety</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-2">';
+            vb.forEach(function(b){html+='<div class="border-2 border-red-500 bg-red-50 rounded-lg p-3 text-center"><div class="text-2xl mb-1">'+b.icon+'</div><div class="text-sm font-bold text-[#1e3a5f]">'+b.type+'</div><div class="text-lg font-black text-red-600">'+b.display+'</div></div>';});
+            html += '</div></div>';
+        }
+        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📊 Prognoza</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
+        html += renderStatBoxDetail('BTTS',s.btts,THRESHOLDS.btts)+renderStatBoxDetail('O1.5',s.o15,THRESHOLDS.over15)+renderStatBoxDetail('O2.5',s.o25,THRESHOLDS.over25)+renderStatBoxDetail('O3.5',s.o35,THRESHOLDS.over35);
+        html += '</div></div>';
+        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">⚖️ Porównanie</h4><div class="space-y-2">';
+        [{l:'⚽ Gole strz.',a:hs.avg_goals_scored,b:as.avg_goals_scored},{l:'🥅 Gole strac.',a:hs.avg_goals_conceded,b:as.avg_goals_conceded,inv:1},{l:'🎯 BTTS',a:hs.btts_pct,b:as.btts_pct,u:'%'},{l:'⚽ O2.5',a:hs.over25_pct,b:as.over25_pct,u:'%'},{l:'🚩 Cornery',a:hs.avg_corners,b:as.avg_corners},{l:'🟨 Kartki',a:hs.avg_yellow,b:as.avg_yellow,inv:1},{l:'🎯 Strzały',a:hs.avg_shots,b:as.avg_shots},{l:'📊 xG',a:hs.avg_xg,b:as.avg_xg}].forEach(function(r){
+            var am=r.a===undefined||r.a===null,bm=r.b===undefined||r.b===null;
+            var av=am?0:r.a,bv=bm?0:r.b;
+            var ab=!am&&!bm&&(r.inv?av<bv:av>bv),bb=!am&&!bm&&(r.inv?bv<av:bv>av);
+            html+='<div class="grid grid-cols-3 items-center gap-4 p-2 bg-gray-50 rounded"><div class="text-right p-1 rounded '+(am?'text-red-500':ab?'text-green-600 font-bold':'text-gray-700')+'">'+(am?'—':av+(r.u||''))+'</div><div class="text-center text-xs text-gray-500">'+r.l+'</div><div class="text-left p-1 rounded '+(bm?'text-red-500':bb?'text-green-600 font-bold':'text-gray-700')+'">'+(bm?'—':bv+(r.u||''))+'</div></div>';
+        });
+        html += '</div></div>';
+    }
+    document.getElementById('md-content').innerHTML = html;
+    document.getElementById('match-detail-modal').classList.remove('hidden');
+}
+function renderStatBoxDetail(label, pct, threshold) {
+    var c = getColorClass(pct); var isValue = pct >= threshold;
+    return '<div class="stat-card p-4 rounded-xl ' + (isValue ? 'ring-2 ring-red-500 bg-red-50/30' : '') + '">' + (isValue ? '<div class="text-[9px] font-black text-red-600 mb-1">🔥 VALUE</div>' : '') + '<div class="text-[10px] text-gray-500 uppercase mb-1">' + label + '</div><div class="text-3xl font-black ' + c.text + '">' + pct + '%</div><div class="mt-2 bg-gray-200 rounded-full h-1"><div class="bar-fill ' + c.bar + '" style="width: ' + pct + '%"></div></div></div>';
+}
+function closeMatchDetail() { document.getElementById('match-detail-modal').classList.add('hidden'); }
+  
+        function openFinished() {
+    const container = document.getElementById('finished-content');
+    
+    // Zbierz wszystkie zakonczone mecze
+    const finishedMatches = [];
+    matchesData.forEach((m, i) => {
+        const live = getLiveInfo(m.home, m.away);
+        if (live && live.is_finished && live.score) {
+            finishedMatches.push({ match: m, matchIndex: i, live: live });
+        }
+    });
+    
+    if (finishedMatches.length === 0) {
+        container.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">📅</div><p class="text-gray-500">Brak zakończonych meczów</p><p class="text-xs text-gray-400 mt-2">Wróć tu po weekendzie - zobaczysz wyniki i weryfikację predykcji!</p></div>';
+        document.getElementById('finished-modal').classList.remove('hidden');
+        return;
+    }
+    
+    let html = '<div class="space-y-3">';
+    finishedMatches.forEach(({ match: m, matchIndex: i, live }) => {
+        const s = analyzeMatch(m);
+        const parts = live.score.split(':');
+        const hg = parseInt(parts[0]);
+        const ag = parseInt(parts[1]);
+        const total = hg + ag;
+        const btts = hg > 0 && ag > 0;
+        
+        // Sprawdz predykcje
+        const predictions = [];
+        if (s.btts >= 50) predictions.push({ label: 'BTTS', predicted: 'TAK', actual: btts ? 'TAK' : 'NIE', hit: btts, pct: s.btts });
+        if (s.o15 >= 60) predictions.push({ label: 'Over 1.5', predicted: 'TAK', actual: total > 1 ? 'TAK' : 'NIE', hit: total > 1, pct: s.o15 });
+        if (s.o25 >= 50) predictions.push({ label: 'Over 2.5', predicted: 'TAK', actual: total > 2 ? 'TAK' : 'NIE', hit: total > 2, pct: s.o25 });
+        if (s.o35 >= 40) predictions.push({ label: 'Over 3.5', predicted: 'TAK', actual: total > 3 ? 'TAK' : 'NIE', hit: total > 3, pct: s.o35 });
+        
+        const hits = predictions.filter(p => p.hit).length;
+        const missed = predictions.filter(p => !p.hit).length;
+        
+        html += '<div class="border border-gray-200 rounded-xl p-4 hover:border-[#1e3a5f] cursor-pointer transition" onclick="closeFinished(); openMatchDetail(' + i + ');">';
+        html += '<div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + m.league_flag + ' ' + m.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">📅 ' + m.datetime + '</span></div>';
+        
+        html += '<div class="grid grid-cols-3 items-center gap-4 mb-3">';
+        html += '<div class="text-right font-bold text-[#1e3a5f]">' + m.home + '</div>';
+        html += '<div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div>';
+        html += '<div class="text-left font-bold text-[#1e3a5f]">' + m.away + '</div>';
+        html += '</div>';
+        
+        if (predictions.length > 0) {
+            html += '<div class="border-t border-gray-100 pt-3">';
+            html += '<div class="text-xs text-gray-500 mb-2 font-semibold">Weryfikacja predykcji: ' + hits + '/' + predictions.length + ' trafione</div>';
+            html += '<div class="flex flex-wrap gap-2">';
+            predictions.forEach(p => {
+                const cls = p.hit ? 'bg-green-100 text-green-800 border border-green-500' : 'bg-red-100 text-red-800 border border-red-500';
+                const icon = p.hit ? '✅' : '❌';
+                html += '<div class="' + cls + ' rounded-lg px-3 py-1 text-xs">';
+                html += '<span class="font-bold">' + icon + ' ' + p.label + '</span> ';
+                html += '<span class="opacity-75">(' + p.pct + '%)</span>';
+                html += '</div>';
+            });
+            html += '</div></div>';
+        }
+        
+        html += '<div class="text-center text-xs text-blue-600 font-semibold mt-3 pt-2 border-t border-gray-100">👆 Kliknij aby zobaczyć pełne statystyki</div>';
+        html += '</div>';
+    });
+    html += '</div>';
+    
+    container.innerHTML = html;
+    document.getElementById('finished-modal').classList.remove('hidden');
+}
+
+function closeFinished() {
+    document.getElementById('finished-modal').classList.add('hidden');
+}
+
+        function openLive() {
+            const iframe = document.getElementById('live-iframe');
+            iframe.src = 'https://www.flashscore.pl/pilka-nozna/?d=1';
+            document.getElementById('live-modal').classList.remove('hidden');
+        }
+        function closeLive() {
+            document.getElementById('live-modal').classList.add('hidden');
+            document.getElementById('live-iframe').src = '';
+        }
+        
+        function openFavorites() {
+            const list = document.getElementById('favorites-list');
+            const favMatches = matchesData.filter(m => isFavorite(m.match_id));
+            if (favMatches.length === 0) { list.innerHTML = '<p class="text-gray-500 text-center py-8">Brak ulubionych. Kliknij ☆ przy meczu!</p>'; }
+            else {
+                let html = '';
+                favMatches.forEach(m => {
+                    const s = analyzeMatch(m);
+                    html += '<div class="border border-gray-200 rounded-xl p-3 mb-2">';
+                    html += '<div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + m.league_flag + ' ' + m.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">' + m.datetime + '</span></div>';
+                    html += '<div class="font-bold text-[#1e3a5f] mb-2">' + m.home + ' vs ' + m.away + '</div>';
+                    html += '<div class="flex gap-2 text-xs"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">BTTS ' + s.btts + '%</span><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">O2.5 ' + s.o25 + '%</span></div>';
+                    html += '<button onclick="toggleFavorite(\'' + m.match_id + '\'); openFavorites();" class="mt-2 text-xs text-red-600 hover:underline">Usuń z ulubionych</button>';
+                    html += '</div>';
+                });
+                list.innerHTML = html;
+            }
+            document.getElementById('favorites-modal').classList.remove('hidden');
+        }
+        function closeFavorites() { document.getElementById('favorites-modal').classList.add('hidden'); }
+
+        loadInitialData();
+        checkAuth();
+    </script>
+</body>
+</html>
