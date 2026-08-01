@@ -10,6 +10,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
+        /* TOAST NOTIFICATIONS */
+        #toast-container { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 9999; display: flex; flex-direction: column; gap: 10px; align-items: center; pointer-events: none; }
+        .toast { min-width: 280px; max-width: 400px; padding: 14px 20px; border-radius: 12px; color: white; font-weight: 600; font-size: 14px; box-shadow: 0 8px 25px rgba(0,0,0,0.25); display: flex; align-items: center; gap: 10px; animation: toastSlideUp 0.3s ease-out; pointer-events: auto; cursor: pointer; }
+        .toast.toast-hide { animation: toastSlideDown 0.3s ease-in forwards; }
+        .toast-success { background: linear-gradient(135deg, #16a34a, #15803d); }
+        .toast-error { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+        .toast-info { background: linear-gradient(135deg, #2563eb, #1e40af); }
+        .toast-warning { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        @keyframes toastSlideUp { from { opacity: 0; transform: translateY(30px) scale(0.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes toastSlideDown { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(30px) scale(0.9); } }
+
         body { background: #efeeea; padding-top: 60px; transition: background 0.3s, color 0.3s; }
         body.dark { background: #0f1419; color: #e5e7eb; }
         body.dark .top-bar { background: #000; }
@@ -22,24 +33,12 @@
         body.dark .text-gray-700 { color: #d1d5db !important; }
         body.dark .text-gray-600 { color: #9ca3af !important; }
         body.dark .text-gray-500 { color: #6b7280 !important; }
-        body.dark .bg-yellow-100 { background: #3b2f0a !important; }
-        body.dark .border-yellow-300 { border-color: #78591b !important; }
-        body.dark .text-yellow-800 { color: #fbbf24 !important; }
         body.dark .league-card { background: #1a1f2e; border-color: #2d3548; }
-        body.dark .league-card:hover { border-color: #60a5fa; }
-        body.dark .bg-gray-100 { background: #151a26 !important; }
-        body.dark .hover\:bg-gray-100:hover { background: #1a1f2e !important; }
-        body.dark .hover\:bg-gray-50:hover { background: #151a26 !important; }
-        body.dark .bg-gray-200 { background: #2d3548 !important; }
-        body.dark .bg-red-50 { background: #3f1515 !important; }
-        body.dark .bg-green-50 { background: #0f2818 !important; }
-        body.dark .bg-yellow-50 { background: #3b2f0a !important; }
-        body.dark .bg-blue-50 { background: #0f1a3f !important; }
         body.dark input, body.dark select { background: #1a1f2e; color: #e5e7eb; border-color: #2d3548; }
-        
+
         .bar-fill { height: 3px; border-radius: 999px; transition: width 0.3s; }
         .stat-card { background: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0)); border: 1px solid rgba(0,0,0,0.08); }
-        
+
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.95); } }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -47,8 +46,8 @@
         @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
         @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); } 50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); } }
         @keyframes hot-shake { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-3deg); } 75% { transform: rotate(3deg); } }
-        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
-        
+        @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
         .animate-fade-up { animation: fadeInUp 0.8s ease-out; }
         .animate-fade-up-delay-1 { animation: fadeInUp 0.8s ease-out 0.2s both; }
         .animate-fade-up-delay-2 { animation: fadeInUp 0.8s ease-out 0.4s both; }
@@ -57,60 +56,63 @@
         .animate-float { animation: float 4s ease-in-out infinite; }
         .animate-glow { animation: pulse-glow 2s infinite; }
         .animate-hot { animation: hot-shake 1s infinite; display: inline-block; }
-        
-        .league-card { background: white; border: 2px solid #e5e5e5; transition: all 0.3s; cursor: pointer; opacity: 0; animation: slideInLeft 0.5s ease-out forwards; }
-        .league-card:hover { border-color: #1e3a5f; transform: translateY(-4px); box-shadow: 0 10px 25px rgba(30,58,95,0.15); }
-        .league-card:hover .league-arrow { transform: translateX(5px); color: #dc2626; }
+
+        .sport-card { border: 3px solid transparent; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; opacity: 0; animation: fadeInUp 0.6s ease-out forwards; position: relative; overflow: hidden; }
+        .sport-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 25px 50px rgba(0,0,0,0.25); }
+        .sport-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent); opacity: 0; transition: opacity 0.3s; }
+        .sport-card:hover::before { opacity: 1; }
+
+        .league-card { border: 3px solid; transition: all 0.3s; cursor: pointer; opacity: 0; animation: slideInLeft 0.5s ease-out forwards; position: relative; overflow: hidden; }
+        .league-card:hover { transform: translateY(-4px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+        .league-card.coming-soon { opacity: 0.6; cursor: not-allowed; }
+        .league-card.coming-soon:hover { transform: none; }
         .league-arrow { transition: all 0.3s; }
-        
+        .league-card:hover .league-arrow { transform: translateX(8px); }
+
+        .league-header-bar { height: 6px; }
+
         .hot-match-badge { background: linear-gradient(45deg, #dc2626, #f59e0b, #dc2626); background-size: 200% 200%; animation: gradientShift 3s ease infinite; }
-        @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
-        
+
         input[type="range"] { -webkit-appearance: none; height: 6px; background: #e5e7eb; border-radius: 3px; }
         input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; background: #1e3a5f; border-radius: 50%; cursor: pointer; }
-        
+
         .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.2s ease-out; }
         .modal-overlay.hidden { display: none !important; }
         .hidden { display: none !important; }
-        
+
         .top-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 90; background: #1e3a5f; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        
         .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.3); color: white; transition: all 0.2s; }
         .btn-outline:hover { background: white; color: #1e3a5f; border-color: white; }
         .btn-solid { background: #dc2626; color: white; transition: all 0.2s; }
         .btn-solid:hover { background: white; color: #dc2626; }
-        
-        .bet-slip { position: fixed; bottom: 0; right: 0; z-index: 80; background: #1e3a5f; color: white; padding: 12px 20px; border-top-left-radius: 12px; box-shadow: -4px -4px 15px rgba(0,0,0,0.2); cursor: pointer; animation: slideInRight 0.3s ease-out; }
+
+        .bet-slip { position: fixed; bottom: 0; right: 0; z-index: 80; background: #1e3a5f; color: white; padding: 12px 20px; border-top-left-radius: 12px; box-shadow: -4px -4px 15px rgba(0,0,0,0.2); cursor: pointer; }
         .bet-slip:hover { background: #dc2626; }
-        
         .fav-star { cursor: pointer; transition: transform 0.2s; }
         .fav-star:hover { transform: scale(1.3); }
-        
-        .install-prompt { position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 100; background: #1e3a5f; color: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 400px; margin: 0 auto; }
+
+        .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #666; margin-bottom: 20px; }
+        .breadcrumb a { color: #1e3a5f; font-weight: 600; cursor: pointer; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .separator { color: #999; }
     </style>
 </head>
 <body class="text-gray-800 font-sans min-h-screen">
 
+    <!-- TOP BAR -->
     <div class="top-bar px-4 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-3 cursor-pointer" onclick="backToSplash()">
+        <div class="flex items-center gap-3 cursor-pointer" onclick="backToSportSelection()">
             <img src="logo.png" alt="BetStats" class="w-8 h-8 bg-white rounded p-0.5">
             <span class="font-black text-sm tracking-wider hidden sm:inline">BET STATS</span>
         </div>
-        
         <div class="flex items-center gap-2">
-            <button onclick="openLive()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="Live mecze">
-    <span class="text-red-400">🔴</span> <span class="hidden sm:inline">LIVE</span>
-</button>
-<button onclick="openFinished()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="Zakończone mecze">
-    <span class="text-green-400">✅</span> <span class="hidden sm:inline">Zakończone</span>
-</button>
-        <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-lg w-10 h-10 rounded-lg flex items-center justify-center" title="Zmień motyw">🌙</button>
-            
+            <button onclick="openLive()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1"><span class="text-red-400">🔴</span> <span class="hidden sm:inline">LIVE</span></button>
+            <button onclick="openFinished()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1"><span class="text-green-400">✅</span> <span class="hidden sm:inline">Zakończone</span></button>
+            <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-lg w-10 h-10 rounded-lg flex items-center justify-center">🌙</button>
             <div id="auth-buttons" class="flex items-center gap-2">
                 <button onclick="openAuthModal('login')" class="btn-outline text-xs px-4 py-2 rounded-lg font-semibold">Zaloguj się</button>
                 <button onclick="openAuthModal('register')" class="btn-solid text-xs px-4 py-2 rounded-lg font-semibold">Zarejestruj się</button>
             </div>
-            
             <div id="user-buttons" class="hidden items-center gap-2">
                 <button onclick="openDashboard()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1">📊 <span class="hidden sm:inline">Dashboard</span></button>
                 <button onclick="openProfile()" id="profile-icon" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white">👤</button>
@@ -122,16 +124,47 @@
         🎫 Kupon: <span id="bet-slip-count">0</span> · Kurs: <span id="bet-slip-odds">0.00</span>
     </div>
 
-    <div id="splash-screen" class="min-h-screen py-10 px-6">
-        <div class="max-w-3xl mx-auto text-center">
+    <!-- SPLASH: WYBÓR SPORTU -->
+    <div id="sport-selection" class="min-h-screen py-10 px-6">
+        <div class="max-w-4xl mx-auto text-center">
             <div class="text-8xl mb-6 animate-float">⚡</div>
             <h1 class="text-5xl md:text-6xl font-black text-[#1e3a5f] tracking-wider mb-2 animate-fade-up">BET STATS</h1>
-            <p class="text-lg md:text-xl italic text-red-600 font-semibold mb-10 animate-fade-up-delay-1">statystyki twoich ulubionych lig</p>
+            <p class="text-lg md:text-xl italic text-red-600 font-semibold mb-12 animate-fade-up-delay-1">statystyki twoich ulubionych lig</p>
+
             <div class="animate-fade-up-delay-2">
-                <h2 class="text-xl md:text-2xl font-bold text-[#1e3a5f] mb-6">Wybierz ligę</h2>
-                <div id="league-cards" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"></div>
-                
-                <div class="mt-8 flex justify-center gap-3 flex-wrap">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#1e3a5f] mb-8">Wybierz sport</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+                    <!-- PIŁKA NOŻNA -->
+                    <div class="sport-card rounded-3xl p-8 text-white" style="background: linear-gradient(135deg, #0F5DE3 0%, #1e3a5f 100%); animation-delay: 0.1s;" onclick="selectSport('football')">
+                        <div class="text-7xl mb-4">⚽</div>
+                        <h3 class="text-3xl font-black mb-2">Piłka nożna</h3>
+                        <p class="text-white/80 text-sm mb-4">4 ligi + rozgrywki europejskie</p>
+                        <div class="flex flex-wrap gap-2 justify-center text-xs">
+                            <span class="bg-white/20 px-3 py-1 rounded-full">Ekstraklasa</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full">La Liga</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full">Bundesliga</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full">+3 więcej</span>
+                        </div>
+                        <div class="mt-6 text-xl font-bold">Przejdź do sportu →</div>
+                    </div>
+
+                    <!-- SIATKÓWKA -->
+                    <div class="sport-card rounded-3xl p-8 text-white" style="background: linear-gradient(135deg, #F58220 0%, #D4AF37 100%); animation-delay: 0.2s;" onclick="selectSport('volleyball')">
+                        <div class="text-7xl mb-4">🏐</div>
+                        <h3 class="text-3xl font-black mb-2">Siatkówka</h3>
+                        <p class="text-white/80 text-sm mb-4">Polskie ligi + Mistrzostwa Europy</p>
+                        <div class="flex flex-wrap gap-2 justify-center text-xs">
+                            <span class="bg-white/20 px-3 py-1 rounded-full">Tauron Liga</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full">1. Liga</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full">Kobiety</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full">ME</span>
+                        </div>
+                        <div class="mt-6 text-xl font-bold">Przejdź do sportu →</div>
+                    </div>
+                </div>
+
+                <div class="mt-10 flex justify-center gap-3 flex-wrap">
                     <button onclick="openCompare()" class="px-5 py-3 bg-white border-2 border-[#1e3a5f] text-[#1e3a5f] font-semibold rounded-xl hover:bg-[#1e3a5f] hover:text-white transition">⚖️ Porównywarka</button>
                     <button onclick="openFavorites()" class="px-5 py-3 bg-white border-2 border-yellow-500 text-yellow-600 font-semibold rounded-xl hover:bg-yellow-500 hover:text-white transition">⭐ Ulubione</button>
                 </div>
@@ -140,8 +173,48 @@
         <div class="text-center text-xs text-gray-500 mt-10 pb-4"><p>© 2026 BetStats · Hazard może uzależniać · 18+</p></div>
     </div>
 
+    <!-- WYBÓR LIGI (po wyborze sportu) -->
+    <div id="league-selection" class="hidden min-h-screen py-10 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="breadcrumb max-w-5xl mx-auto mb-8">
+                <a onclick="backToSportSelection()">🏠 Sport</a>
+                <span class="separator">›</span>
+                <span id="breadcrumb-sport" class="font-bold text-[#1e3a5f]"></span>
+            </div>
+            <div class="text-center mb-10">
+                <div id="sport-selection-icon" class="text-6xl mb-4"></div>
+                <h1 class="text-4xl md:text-5xl font-black text-[#1e3a5f] mb-2" id="sport-selection-title"></h1>
+                <p class="text-gray-500">Wybierz ligę aby zobaczyć mecze i statystyki</p>
+            </div>
+            <div id="league-selection-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8"></div>
+        </div>
+    </div>
+        <!-- SEKCJA MECZÓW (po wyborze ligi) -->
     <div id="app" class="hidden">
         <div class="max-w-6xl mx-auto p-4 md:p-8">
+            <div class="breadcrumb">
+                <a onclick="backToSportSelection()">🏠 Sport</a>
+                <span class="separator">›</span>
+                <a onclick="backToLeagueSelection()" id="breadcrumb-sport-2"></a>
+                <span class="separator">›</span>
+                <span id="breadcrumb-league" class="font-bold text-[#1e3a5f]"></span>
+            </div>
+
+            <!-- LEAGUE HEADER (kolorowy pasek z kolorami ligi) -->
+            <div id="league-header" class="rounded-2xl p-6 mb-6 text-white shadow-lg">
+                <div class="flex items-center gap-4">
+                    <div id="league-header-flag" class="text-5xl"></div>
+                    <div class="flex-1">
+                        <h2 id="league-header-name" class="text-2xl md:text-3xl font-black"></h2>
+                        <p id="league-header-sport" class="text-sm opacity-90"></p>
+                    </div>
+                    <div id="league-header-count" class="text-right">
+                        <div class="text-3xl font-black" id="league-match-count">0</div>
+                        <div class="text-xs opacity-80">meczów</div>
+                    </div>
+                </div>
+            </div>
+
             <div id="value-bets-section" class="mb-8"></div>
 
             <div class="bg-yellow-100 border border-yellow-300 rounded-xl p-4 mb-6">
@@ -166,17 +239,6 @@
                     <button onclick="toggleFavOnly()" id="fav-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2">⭐ Ulubione</button>
                     <button onclick="toggleValueOnly()" id="value-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2">🔥 Value bety</button>
                     <button onclick="toggleSettings()" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-[#1e3a5f] transition flex items-center gap-2">⚙️</button>
-                    <div class="relative">
-                        <button onclick="toggleDropdown()" id="dropdown-btn" class="px-4 py-2 bg-[#1e3a5f] text-white rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-red-600 transition">
-                            <span>🏆</span><span id="current-league">Wszystkie</span><span id="dropdown-arrow">▼</span>
-                        </button>
-                        <div id="dropdown-menu" class="hidden absolute right-0 mt-2 w-64 bg-white border border-gray-300 rounded-xl shadow-xl z-50 overflow-hidden">
-                            <button onclick="filterLeague('all')" class="w-full text-left px-4 py-3 hover:bg-gray-100 text-sm flex items-center gap-3 border-b border-gray-200">
-                                <span class="text-lg">🌍</span><span>Wszystkie ligi</span>
-                            </button>
-                            <div id="league-list"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -195,7 +257,7 @@
                         <span class="font-bold text-[#1e3a5f] tracking-wider">BET STATS</span>
                         <span class="bg-blue-600/20 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded border border-blue-600/30">BETA</span>
                     </div>
-                    <p class="text-gray-600">Kompleksowe statystyki piłkarskie</p>
+                    <p class="text-gray-600">Kompleksowe statystyki sportowe</p>
                     <div class="pt-3 border-t border-gray-300 text-gray-500 text-[11px]">
                         <p class="mb-2">© 2026 BetStats</p>
                         <p class="text-gray-400">Hazard może uzależniać. 18+</p>
@@ -205,6 +267,7 @@
         </div>
     </div>
 
+    <!-- MODAL VALUE BET -->
     <div id="value-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeValueModal()">
         <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4">
@@ -246,6 +309,7 @@
         </div>
     </div>
 
+    <!-- MODAL AUTH -->
     <div id="auth-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeAuthModal()">
         <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl">
             <div class="flex justify-between items-center mb-4">
@@ -265,6 +329,7 @@
         </div>
     </div>
 
+    <!-- MODAL PROFILE -->
     <div id="profile-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeProfile()">
         <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
             <div class="flex justify-between items-center mb-4">
@@ -285,6 +350,7 @@
         </div>
     </div>
 
+    <!-- MODAL DASHBOARD -->
     <div id="dashboard-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeDashboard()">
         <div class="bg-white rounded-2xl p-6 max-w-4xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4">
@@ -307,6 +373,7 @@
         </div>
     </div>
 
+    <!-- MODAL BET SLIP -->
     <div id="bet-slip-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeBetSlip()">
         <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4">
@@ -329,10 +396,11 @@
         </div>
     </div>
 
+    <!-- MODAL COMPARE -->
     <div id="compare-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeCompare()">
         <div class="bg-white rounded-2xl p-6 max-w-4xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4">
-                <h3 class="font-bold text-lg text-[#1e3a5f]">⚖️ Porównywarka</h3>
+                <h3 class="font-bold text-lg text-[#1e3a5f]">⚖️ Porównywarka drużyn</h3>
                 <button onclick="closeCompare()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
             </div>
             <div class="grid grid-cols-2 gap-3 mb-4">
@@ -349,6 +417,7 @@
         </div>
     </div>
 
+    <!-- MODAL FAVORITES -->
     <div id="favorites-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeFavorites()">
         <div class="bg-white rounded-2xl p-6 max-w-3xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4">
@@ -359,914 +428,815 @@
         </div>
     </div>
 
-   <div id="live-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeLive()">
-    <div class="bg-white rounded-2xl w-full max-w-5xl h-[90vh] shadow-2xl overflow-hidden flex flex-col">
-        <div class="flex justify-between items-center p-4 border-b border-gray-200">
-            <div class="flex items-center gap-2">
-                <span class="text-2xl animate-glow rounded-full inline-block">🔴</span>
-                <h3 class="font-bold text-lg text-[#1e3a5f]">Mecze na żywo</h3>
-                <span id="live-back-btn" class="hidden ml-4 text-sm text-red-600 hover:underline cursor-pointer" onclick="showLiveList()">← Wróć do listy</span>
+    <!-- MODAL LIVE -->
+    <div id="live-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeLive()">
+        <div class="bg-white rounded-2xl w-full max-w-5xl h-[90vh] shadow-2xl overflow-hidden flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b border-gray-200">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl animate-glow rounded-full inline-block">🔴</span>
+                    <h3 class="font-bold text-lg text-[#1e3a5f]">Mecze na żywo</h3>
+                </div>
+                <button onclick="closeLive()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
             </div>
-            <button onclick="closeLive()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
-        </div>
-        <div class="flex-1 overflow-hidden bg-white">
-            <div id="live-list-view" class="p-4 overflow-y-auto h-full">
-                <p class="text-gray-500 text-center py-8">wkrótce dostępne...</p>
-            </div>
-            <iframe id="live-iframe" src="" class="w-full h-full border-0 hidden"></iframe>
+            <div id="live-list-container" class="flex-1 overflow-y-auto"></div>
         </div>
     </div>
-</div>
 
-<div id="match-detail-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeMatchDetail()">
-    <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl max-h-[90vh] overflow-y-auto">
-        <div class="flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
-            <h3 class="font-bold text-lg text-[#1e3a5f]" id="md-title">Szczegóły meczu</h3>
-            <button onclick="closeMatchDetail()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
-        </div>
-        <div id="md-content" class="p-6"></div>
-    </div>
-</div>
-<div id="finished-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeFinished()">
-    <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl max-h-[90vh] overflow-y-auto">
-        <div class="flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
-            <div class="flex items-center gap-2">
-                <span class="text-2xl">✅</span>
-                <h3 class="font-bold text-lg text-[#1e3a5f]">Zakończone mecze</h3>
-                <span class="text-xs text-gray-500 hidden sm:inline">· Ostatnie wyniki + weryfikacja predykcji</span>
+    <!-- MODAL MATCH DETAIL -->
+    <div id="match-detail-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeMatchDetail()">
+        <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                <h3 class="font-bold text-lg text-[#1e3a5f]" id="md-title">Szczegóły meczu</h3>
+                <button onclick="closeMatchDetail()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
             </div>
-            <button onclick="closeFinished()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            <div id="md-content" class="p-6"></div>
         </div>
-        <div id="finished-content" class="p-6"></div>
     </div>
-</div>
 
-    <div id="install-prompt" class="install-prompt hidden">
-        <div class="flex items-center justify-between gap-3">
-            <div>
-                <div class="font-bold">📱 Zainstaluj BetStats</div>
-                <div class="text-xs opacity-90">Miej stronę zawsze pod ręką</div>
+    <!-- MODAL FINISHED -->
+    <div id="finished-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeFinished()">
+        <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">✅</span>
+                    <h3 class="font-bold text-lg text-[#1e3a5f]">Zakończone mecze</h3>
+                </div>
+                <button onclick="closeFinished()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div id="finished-content" class="p-6"></div>
+        </div>
+    </div>
+
+    <!-- MODAL CONFIRM -->
+    <div id="confirm-modal" class="hidden modal-overlay" onclick="if(event.target===this)hideConfirm()">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+            <div class="text-center mb-4">
+                <div id="confirm-icon" class="text-5xl mb-3">⚠️</div>
+                <h3 id="confirm-title" class="font-bold text-lg text-[#1e3a5f] mb-2">Potwierdzenie</h3>
+                <p id="confirm-message" class="text-sm text-gray-600">Czy na pewno?</p>
             </div>
             <div class="flex gap-2">
-                <button onclick="installPWA()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-sm font-bold">Zainstaluj</button>
-                <button onclick="closeInstallPrompt()" class="text-white/60 hover:text-white text-xl px-2">×</button>
+                <button onclick="hideConfirm()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 rounded-lg transition">Anuluj</button>
+                <button id="confirm-ok-btn" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition">Potwierdź</button>
             </div>
         </div>
     </div>
 
-    <script>
-        const SUPABASE_URL = 'https://mnvufnecumwuxfylfxah.supabase.co';
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1udnVmbmVjdW13dXhmeWxmeGFoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1MDQ5NjAsImV4cCI6MjEwMTA4MDk2MH0.-B1LiyYPx-ZeYLreVyoULzfKHSGBWK4Zz8hthzCz3gQ';
-        const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-        
-        let currentUser = null;
-        let userBets = [];
-        let authMode = 'login';
+    <div id="toast-container"></div>
+        <script>
+    // ═══════════════════════════════════════════════════════════════════
+    // KONFIGURACJA SPORTÓW I LIG
+    // ═══════════════════════════════════════════════════════════════════
 
-        const DEFAULT_THRESHOLDS = { btts: 75, over15: 80, over25: 65, over35: 50, yellow: 4.5, shots: 12 };
-        const WEIGHTS = { btts: 3, over25: 2, over15: 1.5, over35: 1.5, yellow: 1, shots: 1 };
-        let THRESHOLDS = loadThresholds();
-        let matchesData = [];
-        let leaguesData = [];
-        let currentFilter = 'all';
-        let valueOnlyMode = false;
-        let favOnlyMode = false;
-        let currentModalData = null;
-        let favorites = loadFavorites();
-        let betSlip = loadBetSlip();
-        let deferredPrompt = null;
+    const SPORTS = {
+        football: {
+            id: 'football',
+            name: 'Piłka nożna',
+            icon: '⚽',
+            leagues: [
+                { id: 'ekstraklasa', name: 'PKO BP Ekstraklasa', flag: '🇵🇱', country: 'Polska',
+                  colors: { primary: '#0F5DE3', secondary: '#FFFFFF', accent: '#D4AF37' },
+                  gradient: 'linear-gradient(135deg, #0F5DE3 0%, #003D82 100%)',
+                  dataFile: 'data_ekstra', available: true },
+                { id: 'betclic-1-liga', name: 'Betclic 1. Liga', flag: '🇵🇱', country: 'Polska',
+                  colors: { primary: '#00A651', secondary: '#FFFFFF', accent: '#003366' },
+                  gradient: 'linear-gradient(135deg, #00A651 0%, #003366 100%)',
+                  dataFile: 'data_ekstra', available: true },
+                { id: 'laliga', name: 'La Liga', flag: '🇪🇸', country: 'Hiszpania',
+                  colors: { primary: '#EE1C24', secondary: '#D4AF37', accent: '#FFFFFF' },
+                  gradient: 'linear-gradient(135deg, #EE1C24 0%, #D4AF37 100%)',
+                  dataFile: 'data_int', available: true },
+                { id: 'bundesliga', name: 'Bundesliga', flag: '🇩🇪', country: 'Niemcy',
+                  colors: { primary: '#000000', secondary: '#D20515', accent: '#FFFFFF' },
+                  gradient: 'linear-gradient(135deg, #000000 0%, #D20515 100%)',
+                  dataFile: 'data_int', available: true },
+                { id: 'ucl', name: 'Liga Mistrzów', flag: '🏆', country: 'UEFA',
+                  colors: { primary: '#001F5B', secondary: '#C0C0C0', accent: '#FFFFFF' },
+                  gradient: 'linear-gradient(135deg, #001F5B 0%, #4A5CDB 100%)',
+                  dataFile: 'data_world', available: false },
+                { id: 'uel', name: 'Liga Europy', flag: '🏆', country: 'UEFA',
+                  colors: { primary: '#FF6600', secondary: '#000000', accent: '#FFFFFF' },
+                  gradient: 'linear-gradient(135deg, #FF6600 0%, #000000 100%)',
+                  dataFile: 'data_world', available: false },
+                { id: 'uecl', name: 'Liga Konferencji', flag: '🏆', country: 'UEFA',
+                  colors: { primary: '#00A651', secondary: '#1B1B1B', accent: '#FFFFFF' },
+                  gradient: 'linear-gradient(135deg, #00A651 0%, #1B1B1B 100%)',
+                  dataFile: 'data_world', available: false },
+            ]
+        },
+        volleyball: {
+            id: 'volleyball',
+            name: 'Siatkówka',
+            icon: '🏐',
+            leagues: [
+                { id: 'tauron-liga-m', name: 'Tauron Liga', flag: '🇵🇱', country: 'Polska (Mężczyźni)',
+                  colors: { primary: '#003D82', secondary: '#FFD100', accent: '#FFFFFF' },
+                  gradient: 'linear-gradient(135deg, #003D82 0%, #FFD100 100%)',
+                  dataFile: 'data_volley_pl', available: false },
+                { id: 'tauron-1-liga-m', name: 'Tauron 1. Liga', flag: '🇵🇱', country: 'Polska (Mężczyźni)',
+                  colors: { primary: '#F58220', secondary: '#003366', accent: '#FFFFFF' },
+                  gradient: 'linear-gradient(135deg, #F58220 0%, #003366 100%)',
+                  dataFile: 'data_volley_pl', available: false },
+                { id: 'tauron-liga-k', name: 'Tauron Liga Kobiet', flag: '🇵🇱', country: 'Polska (Kobiety)',
+                  colors: { primary: '#E91E63', secondary: '#FFFFFF', accent: '#7B1FA2' },
+                  gradient: 'linear-gradient(135deg, #E91E63 0%, #7B1FA2 100%)',
+                  dataFile: 'data_volley_pl', available: false },
+                { id: 'me-volley', name: 'Mistrzostwa Europy', flag: '🏆', country: 'CEV',
+                  colors: { primary: '#D4AF37', secondary: '#003366', accent: '#FFFFFF' },
+                  gradient: 'linear-gradient(135deg, #D4AF37 0%, #003366 100%)',
+                  dataFile: 'data_volley_eu', available: false },
+            ]
+        }
+    };
 
-        function loadThresholds() {
-            try { const s = localStorage.getItem('betstats_thresholds'); if (s) return { ...DEFAULT_THRESHOLDS, ...JSON.parse(s) }; } catch(e) {}
-            return {...DEFAULT_THRESHOLDS};
-        }
-        function saveThresholds() { localStorage.setItem('betstats_thresholds', JSON.stringify(THRESHOLDS)); }
-        function resetThresholds() { THRESHOLDS = {...DEFAULT_THRESHOLDS}; saveThresholds(); renderThresholdControls(); renderValueBets(); renderMatches(); }
+    // ═══════════════════════════════════════════════════════════════════
+    // SUPABASE + STAN APLIKACJI
+    // ═══════════════════════════════════════════════════════════════════
 
-        function loadFavorites() { try { return JSON.parse(localStorage.getItem('betstats_favs') || '[]'); } catch(e) { return []; } }
-        function saveFavorites() { localStorage.setItem('betstats_favs', JSON.stringify(favorites)); }
-        function toggleFavorite(matchId, event) {
-            if (event) event.stopPropagation();
-            const idx = favorites.indexOf(matchId);
-            if (idx > -1) favorites.splice(idx, 1);
-            else favorites.push(matchId);
-            saveFavorites();
-            renderMatches();
-        }
-        function isFavorite(matchId) { return favorites.includes(matchId); }
+    const SUPABASE_URL = 'https://mnvufnecumwuxfylfxah.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1udnVmbmVjdW13dXhmeWxmeGFoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1MDQ5NjAsImV4cCI6MjEwMTA4MDk2MH0.-B1LiyYPx-ZeYLreVyoULzfKHSGBWK4Zz8hthzCz3gQ';
+    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-        function loadBetSlip() { try { return JSON.parse(localStorage.getItem('betstats_slip') || '[]'); } catch(e) { return []; } }
-        function saveBetSlip() { localStorage.setItem('betstats_slip', JSON.stringify(betSlip)); updateBetSlipUI(); }
-        function updateBetSlipUI() {
-            const el = document.getElementById('bet-slip');
-            if (!el) return;
-            if (betSlip.length === 0) { el.classList.add('hidden'); return; }
-            el.classList.remove('hidden');
-            const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
-            document.getElementById('bet-slip-count').textContent = betSlip.length;
-            document.getElementById('bet-slip-odds').textContent = totalOdds.toFixed(2);
-        }
-        function addToBetSlip() {
-            if (!currentModalData) return;
-            const odds = parseFloat(document.getElementById('modal-odds-input').value);
-            if (!odds || odds <= 1) { alert('Wpisz kurs!'); return; }
-            const m = matchesData[currentModalData.matchIndex];
-            betSlip.push({
-                match: m.home + ' vs ' + m.away,
-                league: m.league_name,
-                betType: document.getElementById('modal-bet-type').textContent,
-                odds: odds
-            });
-            saveBetSlip();
-            closeValueModal();
-            alert('Dodano do kuponu!');
-        }
-        function openBetSlip() {
-            const container = document.getElementById('bet-slip-items');
-            if (betSlip.length === 0) {
-                container.innerHTML = '<p class="text-gray-500 text-center py-4">Kupon jest pusty</p>';
-            } else {
-                let html = '';
-                betSlip.forEach((b, i) => {
-                    html += '<div class="border border-gray-200 rounded-lg p-3 flex justify-between items-center">';
-                    html += '<div class="flex-1">';
-                    html += '<div class="text-[10px] text-gray-500">' + b.league + '</div>';
-                    html += '<div class="font-bold text-sm text-[#1e3a5f]">' + b.match + '</div>';
-                    html += '<div class="text-xs text-gray-700">' + b.betType + '</div>';
-                    html += '</div>';
-                    html += '<div class="text-right">';
-                    html += '<div class="font-black text-lg text-green-600">' + b.odds + '</div>';
-                    html += '<button onclick="removeFromBetSlip(' + i + ')" class="text-red-600 text-xs hover:underline">Usuń</button>';
-                    html += '</div></div>';
-                });
-                container.innerHTML = html;
-            }
-            const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
-            document.getElementById('bet-slip-total-odds').textContent = totalOdds.toFixed(2);
-            document.getElementById('bet-slip-stake').value = '';
-            document.getElementById('bet-slip-potential').textContent = '0 zł';
-            document.getElementById('bet-slip-modal').classList.remove('hidden');
-        }
-        function closeBetSlip() { document.getElementById('bet-slip-modal').classList.add('hidden'); }
-        function removeFromBetSlip(i) { betSlip.splice(i, 1); saveBetSlip(); openBetSlip(); }
-        function clearBetSlip() { if (confirm('Wyczyścić kupon?')) { betSlip = []; saveBetSlip(); openBetSlip(); } }
-        function updateBetSlipPotential() {
-            const stake = parseFloat(document.getElementById('bet-slip-stake').value) || 0;
-            const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
-            document.getElementById('bet-slip-potential').textContent = (stake * totalOdds).toFixed(2) + ' zł';
-        }
-        async function placeAKOBet() {
-            if (!currentUser) { alert('Zaloguj się!'); return; }
-            if (betSlip.length === 0) { alert('Kupon pusty!'); return; }
-            const stake = parseFloat(document.getElementById('bet-slip-stake').value);
-            if (!stake || stake <= 0) { alert('Podaj stawkę!'); return; }
-            const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
-            const betType = 'AKO: ' + betSlip.map(b => b.match + ' - ' + b.betType).join(' | ');
-            const { error } = await sb.from('bets').insert({
-                user_id: currentUser.id,
-                match_home: 'KUPON', match_away: betSlip.length + ' zdarzeń', match_league: 'AKO',
-                bet_type: betType.substring(0, 500),
-                odds: totalOdds, stake: stake, potential_win: stake * totalOdds, status: 'pending'
-            });
-            if (error) { alert('Błąd: ' + error.message); return; }
-            betSlip = [];
-            saveBetSlip();
-            closeBetSlip();
-            await loadBets();
-            alert('Kupon zapisany!');
-        }
+    let currentUser = null;
+    let userBets = [];
+    let authMode = 'login';
+    let currentSport = null;       // 'football' albo 'volleyball'
+    let currentLeague = null;      // obiekt ligi z SPORTS
 
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark');
-            const isDark = document.body.classList.contains('dark');
-            localStorage.setItem('betstats_dark', isDark ? '1' : '0');
-            document.getElementById('dark-toggle').innerHTML = isDark ? '☀️' : '🌙';
-        }
-        if (localStorage.getItem('betstats_dark') === '1') {
-            document.body.classList.add('dark');
-            setTimeout(() => { const el = document.getElementById('dark-toggle'); if (el) el.innerHTML = '☀️'; }, 100);
+    const DEFAULT_THRESHOLDS = { btts: 75, over15: 80, over25: 65, over35: 50, yellow: 4.5, shots: 12 };
+    const WEIGHTS = { btts: 3, over25: 2, over15: 1.5, over35: 1.5, yellow: 1, shots: 1 };
+    let THRESHOLDS = loadThresholds();
+
+    let allMatchesData = {};       // { 'data_ekstra': [...], 'data_int': [...], 'data_world': [...] }
+    let matchesData = [];          // aktualnie wyświetlane
+    let liveData = {};
+    let valueOnlyMode = false;
+    let favOnlyMode = false;
+    let currentModalData = null;
+    let favorites = loadFavorites();
+    let betSlip = loadBetSlip();
+    let lastMatchDetailIndex = null;
+    let confirmCallback = null;
+    let deferredPrompt = null;
+
+    // ═══════════════════════════════════════════════════════════════════
+    // UTILS
+    // ═══════════════════════════════════════════════════════════════════
+
+    function loadThresholds() { try { const s = localStorage.getItem('betstats_thresholds'); if (s) return { ...DEFAULT_THRESHOLDS, ...JSON.parse(s) }; } catch(e) {} return {...DEFAULT_THRESHOLDS}; }
+    function saveThresholds() { localStorage.setItem('betstats_thresholds', JSON.stringify(THRESHOLDS)); }
+    function resetThresholds() { THRESHOLDS = {...DEFAULT_THRESHOLDS}; saveThresholds(); renderThresholdControls(); renderMatches(); }
+    function loadFavorites() { try { return JSON.parse(localStorage.getItem('betstats_favs') || '[]'); } catch(e) { return []; } }
+    function saveFavorites() { localStorage.setItem('betstats_favs', JSON.stringify(favorites)); }
+    function loadBetSlip() { try { return JSON.parse(localStorage.getItem('betstats_slip') || '[]'); } catch(e) { return []; } }
+    function saveBetSlip() { localStorage.setItem('betstats_slip', JSON.stringify(betSlip)); updateBetSlipUI(); }
+    function toggleFavorite(mid, e) { if (e) e.stopPropagation(); const i = favorites.indexOf(mid); if (i > -1) favorites.splice(i, 1); else favorites.push(mid); saveFavorites(); renderMatches(); }
+    function isFavorite(mid) { return favorites.includes(mid); }
+
+    function showToast(msg, type) {
+        type = type || 'success';
+        const c = document.getElementById('toast-container'); if (!c) return;
+        const icons = { success: '✅', error: '❌', info: 'ℹ️', warning: '⚠️' };
+        const t = document.createElement('div');
+        t.className = 'toast toast-' + type;
+        t.innerHTML = '<span class="text-xl">' + (icons[type] || '✅') + '</span><span>' + msg + '</span>';
+        t.onclick = () => { t.classList.add('toast-hide'); setTimeout(() => t.remove(), 300); };
+        c.appendChild(t);
+        setTimeout(() => { t.classList.add('toast-hide'); setTimeout(() => t.remove(), 300); }, 3500);
+    }
+
+    function showConfirm(title, msg, cb, icon) {
+        document.getElementById('confirm-title').textContent = title || 'Potwierdzenie';
+        document.getElementById('confirm-message').textContent = msg || 'Czy na pewno?';
+        document.getElementById('confirm-icon').textContent = icon || '⚠️';
+        confirmCallback = cb;
+        document.getElementById('confirm-ok-btn').onclick = () => { if (confirmCallback) confirmCallback(); hideConfirm(); };
+        document.getElementById('confirm-modal').classList.remove('hidden');
+    }
+    function hideConfirm() { document.getElementById('confirm-modal').classList.add('hidden'); confirmCallback = null; }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+        const d = document.body.classList.contains('dark');
+        localStorage.setItem('betstats_dark', d ? '1' : '0');
+        document.getElementById('dark-toggle').innerHTML = d ? '☀️' : '🌙';
+    }
+    if (localStorage.getItem('betstats_dark') === '1') {
+        document.body.classList.add('dark');
+        setTimeout(() => { const el = document.getElementById('dark-toggle'); if (el) el.innerHTML = '☀️'; }, 100);
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // NAWIGACJA: SPORT → LIGA → MECZE
+    // ═══════════════════════════════════════════════════════════════════
+
+     function selectSport(sportId, skipHistory) {
+        const sport = SPORTS[sportId];
+        if (!sport) return;
+        currentSport = sport;
+        currentLeague = null;
+        resetTheme();
+
+        document.getElementById('sport-selection').classList.add('hidden');
+        document.getElementById('app').classList.add('hidden');
+        document.getElementById('league-selection').classList.remove('hidden');
+
+        document.getElementById('breadcrumb-sport').textContent = sport.icon + ' ' + sport.name;
+        document.getElementById('sport-selection-icon').textContent = sport.icon;
+        document.getElementById('sport-selection-title').textContent = sport.name;
+
+        // Kolor gradientu sportu w tle
+        if (sportId === 'football') {
+            document.body.style.background = 'linear-gradient(180deg, #0F5DE310 0%, transparent 60%)';
+        } else if (sportId === 'volleyball') {
+            document.body.style.background = 'linear-gradient(180deg, #F5822010 0%, transparent 60%)';
         }
 
-        async function shareMatch(matchId) {
-            const m = matchesData.find(x => x.match_id === matchId);
-            if (!m) return;
-            const s = analyzeMatch(m);
-            const text = m.home + ' vs ' + m.away + '\n' + m.datetime + '\nBTTS: ' + s.btts + '%\nOver 2.5: ' + s.o25 + '%';
-            if (navigator.share) {
-                try { await navigator.share({ title: m.home + ' vs ' + m.away, text }); } catch(e) {}
-            } else {
-                await navigator.clipboard.writeText(text);
-                alert('Skopiowano!');
-            }
-        }
+        renderLeagueSelection(sport);
+        window.scrollTo(0, 0);
 
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            if (!localStorage.getItem('betstats_install_dismissed')) {
-                setTimeout(() => document.getElementById('install-prompt').classList.remove('hidden'), 3000);
-            }
+        if (!skipHistory) history.pushState({ view: 'sport', sport: sportId }, '', '#/' + sportId);
+    }
+
+    function renderLeagueSelection(sport) {
+        const c = document.getElementById('league-selection-cards');
+        let html = '';
+        sport.leagues.forEach((l, i) => {
+            const disabled = !l.available;
+            const badge = disabled ? '<span class="absolute top-3 right-3 bg-yellow-400 text-black text-[10px] font-black px-3 py-1 rounded-full">WKRÓTCE</span>' : '';
+            const clickHandler = disabled ? '' : `onclick="selectLeague('${l.id}')"`;
+            const cls = disabled ? 'coming-soon' : '';
+            html += `
+                <div class="league-card ${cls} rounded-2xl p-6 text-white" style="background: ${l.gradient}; border-color: ${l.colors.accent}; animation-delay: ${i * 0.08}s;" ${clickHandler}>
+                    ${badge}
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-4xl">${l.flag}</span>
+                        <div class="flex-1">
+                            <div class="font-black text-lg">${l.name}</div>
+                            <div class="text-xs opacity-80">${l.country}</div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <div class="text-xs opacity-70">${disabled ? 'Dostępne wkrótce' : 'Zobacz mecze'}</div>
+                        ${!disabled ? '<span class="league-arrow text-2xl">→</span>' : ''}
+                    </div>
+                </div>
+            `;
         });
-        function installPWA() {
-            if (!deferredPrompt) return;
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then(() => { deferredPrompt = null; closeInstallPrompt(); });
-        }
-        function closeInstallPrompt() { document.getElementById('install-prompt').classList.add('hidden'); localStorage.setItem('betstats_install_dismissed', '1'); }
-        if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); }); }
+        c.innerHTML = html;
+    }
 
-        async function checkAuth() {
-            const { data } = await sb.auth.getSession();
-            if (data.session) { currentUser = data.session.user; updateUIForUser(); await loadBets(); }
+        async function selectLeague(leagueId, skipHistory) {
+        const league = currentSport.leagues.find(l => l.id === leagueId);
+        if (!league || !league.available) return;
+        currentLeague = league;
+
+        document.getElementById('league-selection').classList.add('hidden');
+        document.getElementById('app').classList.remove('hidden');
+        document.getElementById('app').classList.add('animate-fade-in');
+
+        document.getElementById('breadcrumb-sport-2').textContent = currentSport.icon + ' ' + currentSport.name;
+        document.getElementById('breadcrumb-league').textContent = league.flag + ' ' + league.name;
+
+        const header = document.getElementById('league-header');
+        header.style.background = league.gradient;
+        header.style.borderLeft = `6px solid ${league.colors.accent}`;
+        document.getElementById('league-header-flag').textContent = league.flag;
+        document.getElementById('league-header-name').textContent = league.name;
+        document.getElementById('league-header-sport').textContent = currentSport.name + ' · ' + league.country;
+
+        applyLeagueTheme(league);
+
+        await loadLeagueData(league);
+
+        renderMatches();
+        window.scrollTo(0, 0);
+
+        if (!skipHistory) {
+            history.pushState({ view: 'league', sport: currentSport.id, league: leagueId }, '', '#/' + currentSport.id + '/' + leagueId);
         }
-        function updateUIForUser() {
-            const authB = document.getElementById('auth-buttons');
-            const userB = document.getElementById('user-buttons');
-            if (!authB || !userB) return;
-            if (currentUser) {
-                authB.classList.add('hidden');
-                userB.classList.remove('hidden');
-                userB.classList.add('flex');
-                const pi = document.getElementById('profile-icon');
-                if (pi) pi.innerHTML = currentUser.email[0].toUpperCase();
-            } else {
-                authB.classList.remove('hidden');
-                userB.classList.add('hidden');
-                userB.classList.remove('flex');
-            }
+    }
+
+        function applyLeagueTheme(league) {
+        const c = league.colors;
+        const isDark = document.body.classList.contains('dark');
+
+        if (isDark) {
+            // TRYB CIEMNY - mocniejsze kolory
+            document.body.style.background = `linear-gradient(180deg, ${c.primary}80 0%, ${c.primary}40 40%, #0f1419 100%)`;
+        } else {
+            // TRYB JASNY - wyraźny gradient z kolorem ligi
+            document.body.style.background = `linear-gradient(180deg, ${c.primary}50 0%, ${c.primary}25 40%, ${c.primary}10 100%)`;
         }
-        function openAuthModal(mode) { authMode = mode || 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; document.getElementById('auth-modal').classList.remove('hidden'); }
-        function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
-        function updateAuthModalUI() {
-            if (authMode === 'register') { document.getElementById('auth-title').textContent = 'Rejestracja'; document.getElementById('auth-submit').textContent = 'Zarejestruj się'; document.getElementById('auth-toggle-text').textContent = 'Masz już konto?'; document.getElementById('auth-toggle-btn').textContent = 'Zaloguj się'; }
-            else { document.getElementById('auth-title').textContent = 'Logowanie'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; document.getElementById('auth-toggle-text').textContent = 'Nie masz konta?'; document.getElementById('auth-toggle-btn').textContent = 'Zarejestruj się'; }
+        document.body.style.minHeight = '100vh';
+        document.body.style.backgroundAttachment = 'fixed';
+
+        const topbar = document.querySelector('.top-bar');
+        if (topbar) topbar.style.background = league.gradient;
+    }
+
+    function resetTheme() {
+        document.body.style.background = '';
+        document.body.style.backgroundAttachment = '';
+        const topbar = document.querySelector('.top-bar');
+        if (topbar) topbar.style.background = '';
+    }
+        function backToSportSelection(skipHistory) {
+        currentSport = null;
+        currentLeague = null;
+        resetTheme();
+        document.getElementById('app').classList.add('hidden');
+        document.getElementById('league-selection').classList.add('hidden');
+        document.getElementById('sport-selection').classList.remove('hidden');
+        window.scrollTo(0, 0);
+        if (!skipHistory) history.pushState({ view: 'home' }, '', '#/');
+    }
+
+    function backToLeagueSelection(skipHistory) {
+        if (!currentSport) { backToSportSelection(); return; }
+        currentLeague = null;
+        resetTheme();
+        document.getElementById('app').classList.add('hidden');
+        document.getElementById('league-selection').classList.remove('hidden');
+        window.scrollTo(0, 0);
+        if (!skipHistory) history.pushState({ view: 'sport', sport: currentSport.id }, '', '#/' + currentSport.id);
+    }
+    function backToSportSelection() {
+        currentSport = null;
+        currentLeague = null;
+        document.getElementById('app').classList.add('hidden');
+        document.getElementById('league-selection').classList.add('hidden');
+        document.getElementById('sport-selection').classList.remove('hidden');
+        window.scrollTo(0, 0);
+    }
+
+    function backToLeagueSelection() {
+        if (!currentSport) { backToSportSelection(); return; }
+        currentLeague = null;
+        document.getElementById('app').classList.add('hidden');
+        document.getElementById('league-selection').classList.remove('hidden');
+        window.scrollTo(0, 0);
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // DATA LOADING
+    // ═══════════════════════════════════════════════════════════════════
+
+    async function loadLeagueData(league) {
+        const file = league.dataFile;
+        if (allMatchesData[file] !== undefined) {
+            // już mamy — odfiltruj do currentMatches
+            matchesData = allMatchesData[file].filter(m => m.league_id === league.id);
+            updateLeagueMatchCount();
+            return;
         }
-        function toggleAuthMode() { authMode = authMode === 'login' ? 'register' : 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); }
-        async function doAuth() {
-            const email = document.getElementById('auth-email').value.trim();
-            const password = document.getElementById('auth-password').value;
-            const errEl = document.getElementById('auth-error');
-            if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; }
-            if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; }
+
+        try {
+            const r = await fetch(file + '.json?t=' + Date.now());
+            if (!r.ok) throw new Error('404');
+            const d = await r.json();
+            allMatchesData[file] = d.matches || [];
+            matchesData = allMatchesData[file].filter(m => m.league_id === league.id);
+        } catch (e) {
+            console.log('Brak pliku ' + file + '.json');
+            allMatchesData[file] = [];
+            matchesData = [];
+        }
+
+        updateLeagueMatchCount();
+    }
+
+    function updateLeagueMatchCount() {
+        const filtered = matchesData.filter(m => {
+            const live = getLiveInfo(m.home, m.away);
+            return !(live && (live.is_finished || live.is_live));
+        });
+        document.getElementById('league-match-count').textContent = filtered.length;
+    }
+
+    async function loadLiveData() {
+        // Ładujemy WSZYSTKIE live pliki
+        const files = ['live_ekstra', 'live_int', 'live_world', 'live_volley_pl', 'live_volley_eu'];
+        const merged = {};
+
+        for (const file of files) {
             try {
-                let r;
-                if (authMode === 'login') r = await sb.auth.signInWithPassword({ email, password });
-                else r = await sb.auth.signUp({ email, password });
-                if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; }
-                currentUser = r.data.user;
-                updateUIForUser();
-                await loadBets();
-                closeAuthModal();
-            } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); }
+                const r = await fetch(file + '.json?t=' + Date.now());
+                if (!r.ok) continue;
+                const d = await r.json();
+                if (d.matches) Object.assign(merged, d.matches);
+            } catch (e) {}
         }
-        function openProfile() { if (!currentUser) return; document.getElementById('profile-email').textContent = currentUser.email; document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase(); updateProfileBalance(); document.getElementById('profile-modal').classList.remove('hidden'); }
-        function closeProfile() { document.getElementById('profile-modal').classList.add('hidden'); }
-        function updateProfileBalance() {
-            let balance = 0;
-            userBets.forEach(b => { if (b.status === 'won') balance += (b.stake * b.odds) - b.stake; else if (b.status === 'lost') balance -= b.stake; });
-            const el = document.getElementById('profile-balance');
-            el.textContent = (balance >= 0 ? '+' : '') + balance.toFixed(2) + ' zł';
-            el.className = 'text-3xl font-black text-center ' + (balance > 0 ? 'text-green-600' : balance < 0 ? 'text-red-600' : 'text-gray-600');
-            document.getElementById('profile-stats').textContent = userBets.length + ' zakładów';
-        }
-        async function doLogout() { await sb.auth.signOut(); currentUser = null; userBets = []; updateUIForUser(); closeProfile(); }
-        async function loadBets() { if (!currentUser) return; const { data, error } = await sb.from('bets').select('*').order('created_at', { ascending: false }); if (!error) userBets = data || []; }
-        async function placeBet() {
-            if (!currentUser) { alert('Zaloguj się!'); closeValueModal(); openAuthModal('login'); return; }
-            const stake = parseFloat(document.getElementById('stake-input').value);
-            const odds = parseFloat(document.getElementById('modal-odds-input').value);
-            if (!stake || stake <= 0) { alert('Podaj stawkę'); return; }
-            if (!odds || odds <= 1) { alert('Podaj kurs'); return; }
-            const m = matchesData[currentModalData.matchIndex];
-            const { error } = await sb.from('bets').insert({ user_id: currentUser.id, match_home: m.home, match_away: m.away, match_league: m.league_name, bet_type: document.getElementById('modal-bet-type').textContent, odds: odds, stake: stake, potential_win: stake * odds, status: 'pending' });
-            if (error) { alert('Błąd: ' + error.message); return; }
-            await loadBets();
-            closeValueModal();
-            alert('Zakład dodany!');
-        }
-        async function updateBetStatus(betId, status) { await sb.from('bets').update({ status }).eq('id', betId); await loadBets(); renderDashboard(); }
-        async function deleteBet(betId) { if (!confirm('Usunąć?')) return; await sb.from('bets').delete().eq('id', betId); await loadBets(); renderDashboard(); }
 
-        function openDashboard() { if (!currentUser) { openAuthModal('login'); return; } renderDashboard(); document.getElementById('dashboard-modal').classList.remove('hidden'); }
-        function closeDashboard() { document.getElementById('dashboard-modal').classList.add('hidden'); }
-        function renderDashboard() {
-            const total = userBets.length;
-            const totalStake = userBets.reduce((s, b) => s + parseFloat(b.stake), 0);
-            let totalWin = 0, balance = 0, pending = 0, won = 0, lost = 0;
-            userBets.forEach(b => { if (b.status === 'won') { totalWin += b.stake * b.odds; balance += (b.stake * b.odds) - b.stake; won++; } else if (b.status === 'lost') { balance -= b.stake; lost++; } else pending++; });
-            document.getElementById('dash-count').textContent = total;
-            document.getElementById('dash-total-stake').textContent = totalStake.toFixed(2) + ' zł';
-            document.getElementById('dash-total-win').textContent = totalWin.toFixed(2) + ' zł';
-            const b = document.getElementById('dash-balance');
-            b.textContent = (balance >= 0 ? '+' : '') + balance.toFixed(2) + ' zł';
-            b.className = 'text-2xl font-black ' + (balance > 0 ? 'text-green-600' : balance < 0 ? 'text-red-600' : 'text-gray-600');
-            document.getElementById('dash-pending').textContent = pending;
-            document.getElementById('dash-won').textContent = won;
-            document.getElementById('dash-lost').textContent = lost;
-            const list = document.getElementById('bets-list');
-            if (userBets.length === 0) { list.innerHTML = '<p class="text-gray-500 text-center py-4">Brak zakładów.</p>'; return; }
-            let html = '';
-            userBets.forEach(b => {
-                const sc = { pending: 'bg-yellow-100 text-yellow-800', won: 'bg-green-100 text-green-800', lost: 'bg-red-100 text-red-800' };
-                const si = { pending: '⏳', won: '✅', lost: '❌' };
-                const sl = { pending: 'Oczekuje', won: 'Wygrany', lost: 'Przegrany' };
-                const date = new Date(b.created_at).toLocaleDateString('pl-PL');
-                html += '<div class="border border-gray-200 rounded-xl p-3">';
-                html += '<div class="flex justify-between items-start mb-2">';
-                html += '<div class="flex-1"><div class="text-[10px] text-gray-500">' + date + ' · ' + (b.match_league || '') + '</div>';
-                html += '<div class="font-bold text-[#1e3a5f]">' + b.match_home + ' vs ' + b.match_away + '</div>';
-                html += '<div class="text-sm text-gray-700 mt-1">' + b.bet_type.substring(0, 100) + '</div></div>';
-                html += '<span class="text-xs font-bold px-2 py-1 rounded ' + sc[b.status] + '">' + si[b.status] + ' ' + sl[b.status] + '</span>';
-                html += '</div>';
-                html += '<div class="flex flex-wrap gap-3 text-xs text-gray-600 mb-2">';
-                html += '<span>Stawka: <b>' + b.stake + ' zł</b></span>';
-                html += '<span>Kurs: <b>' + b.odds + '</b></span>';
-                html += '<span>Potencjał: <b>' + b.potential_win.toFixed(2) + ' zł</b></span>';
-                html += '</div>';
-                if (b.status === 'pending') {
-                    html += '<div class="flex gap-2 mt-2">';
-                    html += '<button onclick="updateBetStatus(\'' + b.id + '\', \'won\')" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-xs font-bold py-2 rounded">✅ Wygrany</button>';
-                    html += '<button onclick="updateBetStatus(\'' + b.id + '\', \'lost\')" class="flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 rounded">❌ Przegrany</button>';
-                    html += '<button onclick="deleteBet(\'' + b.id + '\')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 text-xs font-bold py-2 px-3 rounded">🗑️</button>';
-                    html += '</div>';
-                } else {
-                    html += '<div class="flex gap-2 mt-2">';
-                    html += '<button onclick="updateBetStatus(\'' + b.id + '\', \'pending\')" class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white text-xs font-bold py-2 rounded">↺ Oczekuje</button>';
-                    html += '<button onclick="deleteBet(\'' + b.id + '\')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 text-xs font-bold py-2 px-3 rounded">🗑️</button>';
-                    html += '</div>';
-                }
-                html += '</div>';
+        liveData = merged;
+        if (currentLeague) renderMatches();
+    }
+
+    function getLiveInfo(home, away) {
+        return liveData[home + '_' + away] || null;
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // ANALIZA MECZU (piłka nożna + siatkówka)
+    // ═══════════════════════════════════════════════════════════════════
+
+    function analyzeMatch(m) {
+        if (m.sport === 'volleyball') {
+            const hs = m.home_stats || {}, as = m.away_stats || {};
+            const avg = (a, b) => Math.round((((a || 0) + (b || 0)) / 2) * 10) / 10;
+            return {
+                avgSets: avg(hs.avg_sets, as.avg_sets),
+                over25setsPct: Math.round(((hs.over25_sets_pct || 0) + (as.over25_sets_pct || 0)) / 2),
+                over35setsPct: Math.round(((hs.over35_sets_pct || 0) + (as.over35_sets_pct || 0)) / 2),
+                avgPointsSet1: avg(hs.avg_points_set1, as.avg_points_set1),
+                tiebreakPct: Math.round(((hs.tiebreak_pct || 0) + (as.tiebreak_pct || 0)) / 2)
+            };
+        }
+        // Piłka nożna (domyślnie)
+        const hs = m.home_stats || {}, as = m.away_stats || {};
+        const avg = (a, b) => Math.round(((a || 0) + (b || 0)) / 2);
+        const avgF = (a, b) => Math.round((((a || 0) + (b || 0)) / 2) * 10) / 10;
+        return {
+            btts: avg(hs.btts_pct, as.btts_pct),
+            o15: avg(hs.over15_pct, as.over15_pct),
+            o25: avg(hs.over25_pct, as.over25_pct),
+            o35: avg(hs.over35_pct, as.over35_pct),
+            corners: avgF(hs.avg_corners, as.avg_corners),
+            yellow: avgF(hs.avg_yellow, as.avg_yellow),
+            shots: avgF(hs.avg_shots, as.avg_shots),
+            xg: avgF(hs.avg_xg, as.avg_xg)
+        };
+    }
+
+    function getSuggestedOverThreshold(a) { const f = Math.floor(a); const d = a - f; if (d >= 0.5) return f + 0.5; return f - 0.5 > 0 ? f - 0.5 : 0.5; }
+    function estimateOverProb(a, t) { const d = a - t; if (d >= 3) return 88; if (d >= 2) return 80; if (d >= 1.5) return 72; if (d >= 1) return 65; if (d >= 0.5) return 55; if (d >= 0) return 48; if (d >= -0.5) return 38; if (d >= -1) return 28; return 15; }
+
+    function getMatchValueBets(m) {
+        if (m.sport === 'volleyball') return [];  // TODO: value bety dla siatkówki
+        const s = analyzeMatch(m); const b = [];
+        if (s.btts >= THRESHOLDS.btts) b.push({ type: 'BTTS', key: 'btts', prob: s.btts, weight: WEIGHTS.btts, icon: '🎯', display: s.btts + '%' });
+        if (s.o15 >= THRESHOLDS.over15) b.push({ type: 'Over 1.5', key: 'o15', prob: s.o15, weight: WEIGHTS.over15, icon: '⚽', display: s.o15 + '%' });
+        if (s.o25 >= THRESHOLDS.over25) b.push({ type: 'Over 2.5', key: 'o25', prob: s.o25, weight: WEIGHTS.over25, icon: '⚽', display: s.o25 + '%' });
+        if (s.o35 >= THRESHOLDS.over35) b.push({ type: 'Over 3.5', key: 'o35', prob: s.o35, weight: WEIGHTS.over35, icon: '⚽', display: s.o35 + '%' });
+        if (s.yellow >= THRESHOLDS.yellow) { const t = getSuggestedOverThreshold(s.yellow); b.push({ type: 'Kartki O' + t, key: 'yellow', prob: estimateOverProb(s.yellow, t), weight: WEIGHTS.yellow, icon: '🟨', display: 'śr. ' + s.yellow.toFixed(1) }); }
+        if (s.shots >= THRESHOLDS.shots) { const t = getSuggestedOverThreshold(s.shots); b.push({ type: 'Strzały O' + t, key: 'shots', prob: estimateOverProb(s.shots, t), weight: WEIGHTS.shots, icon: '🎯', display: 'śr. ' + s.shots.toFixed(1) }); }
+        return b;
+    }
+        // ═══════════════════════════════════════════════════════════════════
+    // AUTH + BET SLIP + DASHBOARD (skrócone - działa jak w starym)
+    // ═══════════════════════════════════════════════════════════════════
+
+    async function checkAuth() { const { data } = await sb.auth.getSession(); if (data.session) { currentUser = data.session.user; updateUIForUser(); await loadBets(); } }
+    function updateUIForUser() { const a = document.getElementById('auth-buttons'), u = document.getElementById('user-buttons'); if (!a || !u) return; if (currentUser) { a.classList.add('hidden'); u.classList.remove('hidden'); u.classList.add('flex'); const p = document.getElementById('profile-icon'); if (p) p.innerHTML = currentUser.email[0].toUpperCase(); } else { a.classList.remove('hidden'); u.classList.add('hidden'); u.classList.remove('flex'); } }
+    function openAuthModal(mode) { authMode = mode || 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; document.getElementById('auth-modal').classList.remove('hidden'); }
+    function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
+    function updateAuthModalUI() { if (authMode === 'register') { document.getElementById('auth-title').textContent = 'Rejestracja'; document.getElementById('auth-submit').textContent = 'Zarejestruj się'; document.getElementById('auth-toggle-text').textContent = 'Masz już konto?'; document.getElementById('auth-toggle-btn').textContent = 'Zaloguj się'; } else { document.getElementById('auth-title').textContent = 'Logowanie'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; document.getElementById('auth-toggle-text').textContent = 'Nie masz konta?'; document.getElementById('auth-toggle-btn').textContent = 'Zarejestruj się'; } }
+    function toggleAuthMode() { authMode = authMode === 'login' ? 'register' : 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); }
+    async function doAuth() { const email = document.getElementById('auth-email').value.trim(), password = document.getElementById('auth-password').value, errEl = document.getElementById('auth-error'); if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; } if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; } try { let r; if (authMode === 'login') r = await sb.auth.signInWithPassword({ email, password }); else r = await sb.auth.signUp({ email, password }); if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; } currentUser = r.data.user; updateUIForUser(); await loadBets(); closeAuthModal(); } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); } }
+    function openProfile() { if (!currentUser) return; document.getElementById('profile-email').textContent = currentUser.email; document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase(); updateProfileBalance(); document.getElementById('profile-modal').classList.remove('hidden'); }
+    function closeProfile() { document.getElementById('profile-modal').classList.add('hidden'); }
+    function updateProfileBalance() { let bal = 0; userBets.forEach(b => { if (b.status === 'won') bal += (b.stake * b.odds) - b.stake; else if (b.status === 'lost') bal -= b.stake; }); const el = document.getElementById('profile-balance'); el.textContent = (bal >= 0 ? '+' : '') + bal.toFixed(2) + ' zł'; el.className = 'text-3xl font-black text-center ' + (bal > 0 ? 'text-green-600' : bal < 0 ? 'text-red-600' : 'text-gray-600'); document.getElementById('profile-stats').textContent = userBets.length + ' zakładów'; }
+    async function doLogout() { await sb.auth.signOut(); currentUser = null; userBets = []; updateUIForUser(); closeProfile(); }
+    async function loadBets() { if (!currentUser) return; const { data, error } = await sb.from('bets').select('*').order('created_at', { ascending: false }); if (!error) userBets = data || []; }
+
+    function updateBetSlipUI() { const el = document.getElementById('bet-slip'); if (!el) return; if (betSlip.length === 0) { el.classList.add('hidden'); return; } el.classList.remove('hidden'); const t = betSlip.reduce((acc, b) => acc * b.odds, 1); document.getElementById('bet-slip-count').textContent = betSlip.length; document.getElementById('bet-slip-odds').textContent = t.toFixed(2); }
+    function addToBetSlip() { if (!currentModalData) return; const odds = parseFloat(document.getElementById('modal-odds-input').value); if (!odds || odds <= 1) { showToast('Wpisz kurs!', 'error'); return; } const m = matchesData[currentModalData.matchIndex]; betSlip.push({ match: m.home + ' vs ' + m.away, league: m.league_name, betType: document.getElementById('modal-bet-type').textContent, odds }); saveBetSlip(); closeValueModal(); showToast('Dodano do kuponu! 🎫', 'success'); }
+    function openBetSlip() { const c = document.getElementById('bet-slip-items'); if (betSlip.length === 0) { c.innerHTML = '<p class="text-gray-500 text-center py-4">Kupon jest pusty</p>'; } else { let html = ''; betSlip.forEach((b, i) => { html += '<div class="border border-gray-200 rounded-lg p-3 flex justify-between items-center"><div class="flex-1"><div class="text-[10px] text-gray-500">' + b.league + '</div><div class="font-bold text-sm text-[#1e3a5f]">' + b.match + '</div><div class="text-xs text-gray-700">' + b.betType + '</div></div><div class="text-right"><div class="font-black text-lg text-green-600">' + b.odds + '</div><button onclick="removeFromBetSlip(' + i + ')" class="text-red-600 text-xs hover:underline">Usuń</button></div></div>'; }); c.innerHTML = html; } const t = betSlip.reduce((a, b) => a * b.odds, 1); document.getElementById('bet-slip-total-odds').textContent = t.toFixed(2); document.getElementById('bet-slip-stake').value = ''; document.getElementById('bet-slip-potential').textContent = '0 zł'; document.getElementById('bet-slip-modal').classList.remove('hidden'); }
+    function closeBetSlip() { document.getElementById('bet-slip-modal').classList.add('hidden'); }
+    function removeFromBetSlip(i) { betSlip.splice(i, 1); saveBetSlip(); openBetSlip(); showToast('Usunięto z kuponu', 'info'); }
+    function clearBetSlip() { showConfirm('Wyczyścić kupon?', 'Wszystkie zdarzenia zostaną usunięte.', () => { betSlip = []; saveBetSlip(); openBetSlip(); showToast('Kupon wyczyszczony 🗑️', 'info'); }, '🗑️'); }
+    function updateBetSlipPotential() { const s = parseFloat(document.getElementById('bet-slip-stake').value) || 0; const t = betSlip.reduce((a, b) => a * b.odds, 1); document.getElementById('bet-slip-potential').textContent = (s * t).toFixed(2) + ' zł'; }
+    async function placeAKOBet() { if (!currentUser) { showToast('Zaloguj się!', 'warning'); return; } if (betSlip.length === 0) { showToast('Kupon pusty!', 'warning'); return; } const stake = parseFloat(document.getElementById('bet-slip-stake').value); if (!stake || stake <= 0) { showToast('Podaj stawkę!', 'warning'); return; } const t = betSlip.reduce((a, b) => a * b.odds, 1); const bt = 'AKO: ' + betSlip.map(b => b.match + ' - ' + b.betType).join(' | '); const { error } = await sb.from('bets').insert({ user_id: currentUser.id, match_home: 'KUPON', match_away: betSlip.length + ' zdarzeń', match_league: 'AKO', bet_type: bt.substring(0, 500), odds: t, stake, potential_win: stake * t, status: 'pending' }); if (error) { showToast('Błąd: ' + error.message, 'error'); return; } betSlip = []; saveBetSlip(); closeBetSlip(); await loadBets(); showToast('Kupon zapisany! ✅', 'success'); }
+
+    async function placeBet() { if (!currentUser) { showToast('Zaloguj się!', 'warning'); closeValueModal(); openAuthModal('login'); return; } const stake = parseFloat(document.getElementById('stake-input').value), odds = parseFloat(document.getElementById('modal-odds-input').value); if (!stake || stake <= 0) { showToast('Podaj stawkę!', 'warning'); return; } if (!odds || odds <= 1) { showToast('Podaj kurs!', 'warning'); return; } const m = matchesData[currentModalData.matchIndex]; const { error } = await sb.from('bets').insert({ user_id: currentUser.id, match_home: m.home, match_away: m.away, match_league: m.league_name, bet_type: document.getElementById('modal-bet-type').textContent, odds, stake, potential_win: stake * odds, status: 'pending' }); if (error) { showToast('Błąd: ' + error.message, 'error'); return; } await loadBets(); closeValueModal(); showToast('Zakład dodany! ✅', 'success'); }
+    async function updateBetStatus(id, status) { await sb.from('bets').update({ status }).eq('id', id); await loadBets(); renderDashboard(); const m = { won: 'Wygrany ✅', lost: 'Przegrany ❌', pending: 'Oczekuje ↺' }; showToast(m[status] || 'Zmieniono', status === 'won' ? 'success' : status === 'lost' ? 'error' : 'info'); }
+    async function deleteBet(id) { showConfirm('Usunąć zakład?', 'Nieodwracalne.', async () => { const { error } = await sb.from('bets').delete().eq('id', id); if (error) { showToast('Błąd: ' + error.message, 'error'); return; } await loadBets(); renderDashboard(); showToast('Usunięto 🗑️', 'success'); }, '🗑️'); }
+
+    function openDashboard() { if (!currentUser) { openAuthModal('login'); return; } renderDashboard(); document.getElementById('dashboard-modal').classList.remove('hidden'); }
+    function closeDashboard() { document.getElementById('dashboard-modal').classList.add('hidden'); }
+    function renderDashboard() {
+        const total = userBets.length, totalStake = userBets.reduce((s, b) => s + parseFloat(b.stake), 0);
+        let totalWin = 0, balance = 0, pending = 0, won = 0, lost = 0;
+        userBets.forEach(b => { if (b.status === 'won') { totalWin += b.stake * b.odds; balance += (b.stake * b.odds) - b.stake; won++; } else if (b.status === 'lost') { balance -= b.stake; lost++; } else pending++; });
+        document.getElementById('dash-count').textContent = total;
+        document.getElementById('dash-total-stake').textContent = totalStake.toFixed(2) + ' zł';
+        document.getElementById('dash-total-win').textContent = totalWin.toFixed(2) + ' zł';
+        const b = document.getElementById('dash-balance');
+        b.textContent = (balance >= 0 ? '+' : '') + balance.toFixed(2) + ' zł';
+        b.className = 'text-2xl font-black ' + (balance > 0 ? 'text-green-600' : balance < 0 ? 'text-red-600' : 'text-gray-600');
+        document.getElementById('dash-pending').textContent = pending;
+        document.getElementById('dash-won').textContent = won;
+        document.getElementById('dash-lost').textContent = lost;
+        const list = document.getElementById('bets-list');
+        if (userBets.length === 0) { list.innerHTML = '<p class="text-gray-500 text-center py-4">Brak zakładów.</p>'; return; }
+        let html = '';
+        userBets.forEach(bet => {
+            const sc = { pending: 'bg-yellow-100 text-yellow-800', won: 'bg-green-100 text-green-800', lost: 'bg-red-100 text-red-800' };
+            const si = { pending: '⏳', won: '✅', lost: '❌' };
+            const sl = { pending: 'Oczekuje', won: 'Wygrany', lost: 'Przegrany' };
+            const date = new Date(bet.created_at).toLocaleDateString('pl-PL');
+            html += '<div class="border border-gray-200 rounded-xl p-3"><div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="text-[10px] text-gray-500">' + date + ' · ' + (bet.match_league || '') + '</div><div class="font-bold text-[#1e3a5f]">' + bet.match_home + ' vs ' + bet.match_away + '</div><div class="text-sm text-gray-700 mt-1">' + bet.bet_type.substring(0, 100) + '</div></div><span class="text-xs font-bold px-2 py-1 rounded ' + sc[bet.status] + '">' + si[bet.status] + ' ' + sl[bet.status] + '</span></div>';
+            html += '<div class="flex flex-wrap gap-3 text-xs text-gray-600 mb-2"><span>Stawka: <b>' + bet.stake + ' zł</b></span><span>Kurs: <b>' + bet.odds + '</b></span><span>Potencjał: <b>' + bet.potential_win.toFixed(2) + ' zł</b></span></div>';
+            if (bet.status === 'pending') html += '<div class="flex gap-2 mt-2"><button onclick="updateBetStatus(\'' + bet.id + '\',\'won\')" class="flex-1 bg-green-600 text-white text-xs font-bold py-2 rounded">✅ Wygrany</button><button onclick="updateBetStatus(\'' + bet.id + '\',\'lost\')" class="flex-1 bg-red-600 text-white text-xs font-bold py-2 rounded">❌ Przegrany</button><button onclick="deleteBet(\'' + bet.id + '\')" class="bg-gray-200 text-gray-700 text-xs font-bold py-2 px-3 rounded">🗑️</button></div>';
+            else html += '<div class="flex gap-2 mt-2"><button onclick="updateBetStatus(\'' + bet.id + '\',\'pending\')" class="flex-1 bg-yellow-500 text-white text-xs font-bold py-2 rounded">↺ Oczekuje</button><button onclick="deleteBet(\'' + bet.id + '\')" class="bg-gray-200 text-gray-700 text-xs font-bold py-2 px-3 rounded">🗑️</button></div>';
+            html += '</div>';
+        });
+        list.innerHTML = html;
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // VALUE MODAL
+    // ═══════════════════════════════════════════════════════════════════
+
+    function openValueModal(mi, k, bt, op, ex, av) {
+        const dm = document.getElementById('match-detail-modal');
+        if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = mi; dm.classList.add('hidden'); }
+        currentModalData = { matchIndex: mi, betKey: k, betType: bt, ourProb: op, avgValue: av };
+        document.getElementById('modal-bet-type').textContent = bt;
+        document.getElementById('modal-our-prob').textContent = op + '%';
+        document.getElementById('modal-explanation').textContent = ex || '';
+        document.getElementById('modal-odds-input').value = '';
+        document.getElementById('stake-input').value = '';
+        document.getElementById('modal-result').classList.add('hidden');
+        document.getElementById('place-bet-section').classList.add('hidden');
+        document.getElementById('value-modal').classList.remove('hidden');
+        document.getElementById('modal-threshold-selector').classList.add('hidden');
+        setTimeout(() => document.getElementById('modal-odds-input').focus(), 100);
+    }
+    function closeValueModal() {
+        document.getElementById('value-modal').classList.add('hidden'); currentModalData = null;
+        if (lastMatchDetailIndex !== null) { const idx = lastMatchDetailIndex; lastMatchDetailIndex = null; openMatchDetail(idx); }
+    }
+    function calculateModalValue() {
+        if (!currentModalData) return;
+        const o = parseFloat(document.getElementById('modal-odds-input').value);
+        if (!o || o <= 1) { document.getElementById('modal-result').classList.add('hidden'); document.getElementById('place-bet-section').classList.add('hidden'); return; }
+        const im = (1 / o) * 100, e = currentModalData.ourProb - im;
+        document.getElementById('modal-implied').textContent = im.toFixed(1) + '%';
+        const ee = document.getElementById('modal-edge'), ve = document.getElementById('modal-verdict');
+        if (e > 10) { ee.innerHTML = '<span class="text-green-600">+' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-green-600">🔥 MOCNY VALUE BET!</span>'; }
+        else if (e > 0) { ee.innerHTML = '<span class="text-lime-600">+' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-lime-600">✅ Value bet</span>'; }
+        else if (e > -5) { ee.innerHTML = '<span class="text-orange-600">' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-orange-600">⚠️ Neutralny</span>'; }
+        else { ee.innerHTML = '<span class="text-red-600">' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-red-600">❌ Brak value</span>'; }
+        document.getElementById('modal-result').classList.remove('hidden');
+        document.getElementById('place-bet-section').classList.remove('hidden');
+        document.getElementById('bet-msg').textContent = currentUser ? '✅ Zalogowany' : '⚠️ Zaloguj się';
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // RENDER MATCH CARD (piłka + siatkówka)
+    // ═══════════════════════════════════════════════════════════════════
+
+    function getColorClass(p) { if (p >= 70) return { text: 'text-green-600', bar: 'bg-green-500' }; if (p >= 50) return { text: 'text-lime-600', bar: 'bg-lime-500' }; if (p >= 35) return { text: 'text-orange-600', bar: 'bg-orange-500' }; return { text: 'text-red-600', bar: 'bg-red-500' }; }
+    function formBadge(f) { const c = { W: 'bg-green-600', D: 'bg-yellow-500', L: 'bg-red-600' }; return '<span class="inline-flex w-6 h-6 text-[10px] rounded ' + (c[f] || 'bg-gray-500') + ' text-white items-center justify-center font-bold">' + f + '</span>'; }
+    function renderMiniStat(i, l, v) { return '<div class="bg-white border border-gray-200 rounded-lg p-3 flex items-center gap-2" onclick="event.stopPropagation()"><span class="text-lg">' + i + '</span><div><div class="text-[10px] text-gray-500 uppercase">' + l + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div>'; }
+
+    function renderStatBox(l, p, mi, k, t, bt) {
+        const c = getColorClass(p), iv = p >= t, e = 'Historyczna szansa ' + l + ': ' + p + '%';
+        return '<div class="stat-card p-4 rounded-xl ' + (iv ? 'ring-2 ring-red-500 bg-red-50/30' : '') + '" onclick="event.stopPropagation()">' + (iv ? '<div class="text-[9px] font-black text-red-600 mb-1">🔥 VALUE BET</div>' : '') + '<div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">' + l + '</div><div class="text-3xl font-black ' + c.text + '">' + p + '%</div><div class="mt-2 bg-gray-200 rounded-full h-1"><div class="bar-fill ' + c.bar + '" style="width:' + p + '%"></div></div><button onclick="event.stopPropagation();openValueModal(' + mi + ',\'' + k + '\',\'' + bt + '\',' + p + ',\'' + e + '\',null)" class="mt-3 w-full text-[10px] font-bold py-1.5 rounded ' + (iv ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700') + '">💰 Kurs</button></div>';
+    }
+
+    function renderMatchCard(m, i) {
+        const hs = m.home_stats || {}, as = m.away_stats || {};
+        const isFav = isFavorite(m.match_id), live = getLiveInfo(m.home, m.away);
+        const isVolley = m.sport === 'volleyball';
+        const vb = getMatchValueBets(m) || [], isHot = vb.length >= 2;
+
+        // Kolory ligi
+        const lc = currentLeague ? currentLeague.colors : null;
+        const borderStyle = lc ? `style="border-left: 5px solid ${lc.primary};"` : '';
+
+        let liveBadge = '';
+        if (live) {
+            if (live.is_live) liveBadge = '<div class="bg-red-600 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2"><span class="animate-glow inline-block w-3 h-3 bg-white rounded-full"></span> 🔴 LIVE · ' + live.score + ' · ' + (live.stage || '') + '</div>';
+            else if (live.is_finished) liveBadge = '<div class="bg-gray-700 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2">✅ KONIEC · ' + live.score + '</div>';
+        }
+
+        let html = '<div id="match-card-' + i + '" class="bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" ' + borderStyle + ' onclick="openMatchDetail(' + i + ')">';
+        if (liveBadge) html += liveBadge;
+        if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block">🔥</span> HOT · ' + vb.length + ' value bets</div>';
+
+        html += '<div class="flex justify-between items-center px-4 py-2 bg-gray-50 border-b border-gray-200">';
+        html += '<span class="text-[10px] font-bold text-gray-600 tracking-wider">' + (m.league_flag || '🏆') + ' ' + (m.league_name || '').toUpperCase() + '</span>';
+        html += '<div class="flex items-center gap-2"><span class="fav-star text-lg" onclick="toggleFavorite(\'' + m.match_id + '\',event)">' + (isFav ? '⭐' : '☆') + '</span><span class="text-[10px] text-gray-500">📅 ' + (m.datetime || 'TBA') + '</span></div></div>';
+
+        html += '<div class="p-4 grid grid-cols-3 items-center">';
+        html += '<div class="text-left"><div class="font-bold text-lg mb-2 text-[#1e3a5f]">' + m.home + '</div><div class="flex gap-1">' + (hs.form || []).map(f => formBadge(f)).join('') + '</div></div>';
+        html += '<div class="flex justify-center"><div class="w-12 h-12 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-xs text-gray-500 font-bold">VS</div></div>';
+        html += '<div class="text-right"><div class="font-bold text-lg mb-2 text-[#1e3a5f]">' + m.away + '</div><div class="flex gap-1 justify-end">' + (as.form || []).map(f => formBadge(f)).join('') + '</div></div>';
+        html += '</div>';
+
+        if (isVolley) {
+            // ═══ SIATKÓWKA ═══
+            const s = analyzeMatch(m);
+            html += '<div class="px-4 pb-4 grid grid-cols-2 gap-3">';
+            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">🏐 Over 2.5 setów</div><div class="text-3xl font-black text-[#1e3a5f]">' + (s.over25setsPct || '—') + (s.over25setsPct ? '%' : '') + '</div></div>';
+            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">🎯 Over pkt w 1. secie</div><div class="text-3xl font-black text-[#1e3a5f]">' + (s.avgPointsSet1 ? s.avgPointsSet1.toFixed(1) : '—') + '</div></div>';
+            html += '</div>';
+            html += '<div class="px-4 pb-4"><button onclick="event.stopPropagation();openMatchDetail(' + i + ')" class="w-full py-3 bg-[#1e3a5f] hover:bg-orange-500 text-white font-bold text-sm rounded-xl transition">👁️ Więcej statystyk i VB</button></div>';
+        } else {
+            // ═══ PIŁKA NOŻNA ═══
+            const s = analyzeMatch(m);
+            html += '<div class="px-4 pb-4 grid grid-cols-2 md:grid-cols-4 gap-3">';
+            html += renderStatBox('BTTS', s.btts, i, 'btts', THRESHOLDS.btts, 'BTTS');
+            html += renderStatBox('O1.5', s.o15, i, 'o15', THRESHOLDS.over15, 'Over 1.5');
+            html += renderStatBox('O2.5', s.o25, i, 'o25', THRESHOLDS.over25, 'Over 2.5');
+            html += renderStatBox('O3.5', s.o35, i, 'o35', THRESHOLDS.over35, 'Over 3.5');
+            html += '</div>';
+            html += '<div class="px-4 pb-3 grid grid-cols-2 md:grid-cols-4 gap-2">';
+            html += renderMiniStat('⚽', 'Śr. strzelone', (((hs.avg_goals_scored || 0) + (as.avg_goals_scored || 0)) / 2).toFixed(2));
+            html += renderMiniStat('🥅', 'Śr. stracone', (((hs.avg_goals_conceded || 0) + (as.avg_goals_conceded || 0)) / 2).toFixed(2));
+            html += renderMiniStat('🚩', 'Cornery', ((hs.avg_corners || 0) + (as.avg_corners || 0)).toFixed(1));
+            html += renderMiniStat('📊', 'xG', s.xg);
+            html += '</div>';
+            html += '<div class="px-4 pb-3 text-center text-xs text-blue-600 font-semibold border-t border-gray-200 pt-2">👆 Kliknij aby zobaczyć szczegóły</div>';
+        }
+
+        html += '</div>';
+        return html;
+    }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // MATCH DETAIL, LIVE, FINISHED, COMPARE, FAVORITES (uproszczone)
+    // ═══════════════════════════════════════════════════════════════════
+
+    function openMatchDetail(mi) {
+        const m = matchesData[mi]; if (!m) return;
+        document.getElementById('md-title').textContent = m.home + ' vs ' + m.away;
+        const isVolley = m.sport === 'volleyball';
+        const s = analyzeMatch(m);
+        let html = '';
+
+        html += '<div class="text-center mb-6"><div class="text-3xl font-black text-[#1e3a5f]">' + m.home + ' vs ' + m.away + '</div><div class="text-sm text-gray-500 mt-2">' + m.league_flag + ' ' + m.league_name + ' · ' + m.datetime + '</div></div>';
+
+        if (isVolley) {
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🏐 Statystyki siatkarskie</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
+            html += '<div class="stat-card p-4 rounded-xl"><div class="text-[10px] text-gray-500 uppercase mb-1">🏐 Over 2.5 setów</div><div class="text-3xl font-black text-[#1e3a5f]">' + (s.over25setsPct || '—') + '%</div></div>';
+            html += '<div class="stat-card p-4 rounded-xl"><div class="text-[10px] text-gray-500 uppercase mb-1">🏐 Over 3.5 setów</div><div class="text-3xl font-black text-[#1e3a5f]">' + (s.over35setsPct || '—') + '%</div></div>';
+            html += '<div class="stat-card p-4 rounded-xl"><div class="text-[10px] text-gray-500 uppercase mb-1">🎯 Over pkt w 1. secie</div><div class="text-3xl font-black text-[#1e3a5f]">' + (s.avgPointsSet1 || '—') + '</div></div>';
+            html += '<div class="stat-card p-4 rounded-xl"><div class="text-[10px] text-gray-500 uppercase mb-1">⏱️ Tie-break %</div><div class="text-3xl font-black text-[#1e3a5f]">' + (s.tiebreakPct || '—') + '%</div></div>';
+            html += '</div></div>';
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🎯 Rynki (WKRÓTCE)</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-center">';
+            ['Handicap setowy', 'Zwycięstwo 1. seta', 'Over pkt w meczu', 'Over asów', 'Który 1. break'].forEach(x => {
+                html += '<div class="border border-gray-300 rounded-lg p-3 text-sm text-gray-500">' + x + '<br><span class="text-[10px]">wkrótce</span></div>';
             });
+            html += '</div></div>';
+        } else {
+            const vb = getMatchValueBets(m);
+            if (vb.length > 0) {
+                html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🔥 Value bety</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-2">';
+                vb.forEach(b => { html += '<div class="border-2 border-red-500 bg-red-50 rounded-lg p-3 text-center"><div class="text-2xl mb-1">' + b.icon + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + b.type + '</div><div class="text-lg font-black text-red-600">' + b.display + '</div></div>'; });
+                html += '</div></div>';
+            }
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📊 Prognoza</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
+            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">BTTS</div><div class="text-3xl font-black text-[#1e3a5f]">' + s.btts + '%</div></div>';
+            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">O1.5</div><div class="text-3xl font-black text-[#1e3a5f]">' + s.o15 + '%</div></div>';
+            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">O2.5</div><div class="text-3xl font-black text-[#1e3a5f]">' + s.o25 + '%</div></div>';
+            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">O3.5</div><div class="text-3xl font-black text-[#1e3a5f]">' + s.o35 + '%</div></div>';
+            html += '</div></div>';
+        }
+
+        document.getElementById('md-content').innerHTML = html;
+        document.getElementById('match-detail-modal').classList.remove('hidden');
+    }
+    function closeMatchDetail() { document.getElementById('match-detail-modal').classList.add('hidden'); }
+
+    function openLive() {
+        const container = document.getElementById('live-list-container');
+        const liveMatches = [];
+        for (const key in liveData) {
+            const info = liveData[key];
+            if (info.is_live) liveMatches.push({ ...info, key });
+        }
+        let html = '';
+        if (liveMatches.length === 0) html = '<div class="text-center py-12"><div class="text-6xl mb-4">😴</div><p class="text-gray-500">Brak meczów na żywo</p></div>';
+        else {
+            html = '<div class="p-6"><div class="text-sm text-gray-500 mb-4">🔴 Trwających: <b>' + liveMatches.length + '</b></div><div class="space-y-3">';
+            liveMatches.forEach(lm => {
+                html += '<div class="border-2 border-red-500 bg-red-50 rounded-xl p-4"><div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-600">' + (lm.league_flag || '') + ' ' + (lm.league_name || 'LIVE') + '</span><span class="bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full animate-pulse">🔴 ' + (lm.stage || 'LIVE') + '</span></div>';
+                html += '<div class="grid grid-cols-3 items-center gap-4"><div class="text-right font-bold text-lg text-[#1e3a5f]">' + lm.home + '</div><div class="text-center"><span class="bg-gray-800 text-white font-black text-2xl px-4 py-2 rounded-lg">' + (lm.score || '0:0') + '</span></div><div class="text-left font-bold text-lg text-[#1e3a5f]">' + lm.away + '</div></div></div>';
+            });
+            html += '</div></div>';
+        }
+        container.innerHTML = html;
+        document.getElementById('live-modal').classList.remove('hidden');
+    }
+    function closeLive() { document.getElementById('live-modal').classList.add('hidden'); }
+
+    function openFinished() {
+        const container = document.getElementById('finished-content');
+        const finished = [];
+        Object.entries(liveData).forEach(([key, info]) => {
+            if (info.is_finished && info.score) finished.push({ ...info, key });
+        });
+        if (finished.length === 0) { container.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">📅</div><p class="text-gray-500">Brak zakończonych meczów</p></div>'; document.getElementById('finished-modal').classList.remove('hidden'); return; }
+        let html = '<div class="space-y-3">';
+        finished.forEach(fm => {
+            const parts = fm.score.split(':');
+            const hg = parseInt(parts[0]), ag = parseInt(parts[1]);
+            html += '<div class="border border-gray-200 rounded-xl p-4"><div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + (fm.league_flag || '') + ' ' + (fm.league_name || '').toUpperCase() + '</span><span class="text-[10px] text-gray-500">📅 ' + (fm.datetime || '') + '</span></div>';
+            html += '<div class="grid grid-cols-3 items-center gap-4"><div class="text-right font-bold text-[#1e3a5f]">' + fm.home + '</div><div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div><div class="text-left font-bold text-[#1e3a5f]">' + fm.away + '</div></div></div>';
+        });
+        html += '</div>';
+        container.innerHTML = html;
+        document.getElementById('finished-modal').classList.remove('hidden');
+    }
+    function closeFinished() { document.getElementById('finished-modal').classList.add('hidden'); }
+
+    function openFavorites() {
+        const list = document.getElementById('favorites-list');
+        const allMatches = Object.values(allMatchesData).flat();
+        const fav = allMatches.filter(m => isFavorite(m.match_id));
+        if (fav.length === 0) list.innerHTML = '<p class="text-gray-500 text-center py-8">Brak ulubionych ⭐</p>';
+        else {
+            let html = '';
+            fav.forEach(m => { html += '<div class="border border-gray-200 rounded-xl p-3 mb-2"><div class="font-bold text-[#1e3a5f]">' + m.home + ' vs ' + m.away + '</div><div class="text-xs text-gray-500">' + (m.league_flag || '') + ' ' + m.league_name + ' · ' + m.datetime + '</div><button onclick="toggleFavorite(\'' + m.match_id + '\'); openFavorites();" class="mt-2 text-xs text-red-600 hover:underline">Usuń</button></div>'; });
             list.innerHTML = html;
         }
-
-        function parseMatchDate(d) { if (!d || d === 'TBA') return null; const t = new Date(); const y = t.getFullYear(); const m = d.match(/(\d{1,2})\.(\d{1,2})\.?\s*(\d{1,2}:\d{2})?/); if (m) { const day = parseInt(m[1]); const mo = parseInt(m[2]) - 1; const ts = m[3] || '00:00'; const [h, mi] = ts.split(':').map(Number); let yr = y; const c = new Date(yr, mo, day, h, mi); if (c < t && (t - c) > 30 * 24 * 60 * 60 * 1000) yr++; return new Date(yr, mo, day, h, mi); } return null; }
-        function isWithinDays(d, days) { const md = parseMatchDate(d); if (!md) return true; const now = new Date(); return md >= now && md <= new Date(now.getTime() + days * 86400000); }
-
-        let liveData = {};
-
-async function loadLiveData() {
-    try {
-        const r = await fetch('live.json?t=' + Date.now());
-        const d = await r.json();
-        liveData = d.matches || {};
-        renderMatches();
-    } catch (e) {
-        console.log('Brak live.json');
+        document.getElementById('favorites-modal').classList.remove('hidden');
     }
-}
+    function closeFavorites() { document.getElementById('favorites-modal').classList.add('hidden'); }
 
-async function loadInitialData() {
-    try {
-        const r = await fetch('data.json?t=' + Date.now());
-        const d = await r.json();
-        matchesData = d.matches;
-        leaguesData = d.leagues || [];
-        renderSplashLeagues();
-        updateBetSlipUI();
-        // Ładuj live co 60 sekund
-        loadLiveData();
-        setInterval(loadLiveData, 60000);
-    } catch (e) { console.error(e); }
-}
+    function openCompare() { showToast('Porównywarka - wkrótce w nowej wersji', 'info'); }
+    function closeCompare() { document.getElementById('compare-modal').classList.add('hidden'); }
+    function renderCompare() {}
 
-function getLiveInfo(home, away) {
-    const key = home + '_' + away;
-    return liveData[key] || null;
-}
+    // ═══════════════════════════════════════════════════════════════════
+    // RENDER MATCHES + FILTRY + SETTINGS
+    // ═══════════════════════════════════════════════════════════════════
 
-        function renderSplashLeagues() {
-            const c = document.getElementById('league-cards');
-            if (!leaguesData || leaguesData.length === 0) { c.innerHTML = '<p class="text-gray-500 col-span-2">Ładowanie...</p>'; return; }
-            let h = '<div class="league-card p-5 rounded-2xl flex items-center justify-between md:col-span-2" style="animation-delay: 0s" onclick="enterAppWithLeague(\'all\')"><div class="flex items-center gap-4"><span class="text-4xl">🌍</span><div class="text-left"><div class="font-bold text-lg text-[#1e3a5f]">Wszystkie ligi</div><div class="text-xs text-gray-500">' + matchesData.length + ' meczów</div></div></div><span class="league-arrow text-2xl text-[#1e3a5f]">→</span></div>';
-            const isOdd = leaguesData.length % 2 !== 0;
-            leaguesData.forEach((l, i) => {
-                const cnt = matchesData.filter(m => m.league_id === l.id).length;
-                const isLast = i === leaguesData.length - 1;
-                const cl = isOdd && isLast ? 'md:col-span-2 md:mx-auto md:w-1/2' : '';
-                h += '<div class="league-card p-5 rounded-2xl flex items-center justify-between ' + cl + '" style="animation-delay: ' + ((i + 1) * 0.08) + 's" onclick="enterAppWithLeague(\'' + l.id + '\')"><div class="flex items-center gap-4"><span class="text-4xl">' + l.flag + '</span><div class="text-left"><div class="font-bold text-base text-[#1e3a5f]">' + l.name + '</div><div class="text-xs text-gray-500">' + cnt + ' meczów</div></div></div><span class="league-arrow text-2xl text-[#1e3a5f]">→</span></div>';
-            });
-            c.innerHTML = h;
-        }
+    function renderMatches() {
+        if (!currentLeague) return;
+        let f = matchesData.filter(m => { const live = getLiveInfo(m.home, m.away); return !(live && (live.is_finished || live.is_live)); });
+        if (valueOnlyMode) f = f.filter(m => getMatchValueBets(m).length > 0);
+        if (favOnlyMode) f = f.filter(m => isFavorite(m.match_id));
+        const q = (document.getElementById('search-input').value || '').trim().toLowerCase();
+        if (q) f = f.filter(m => m.home.toLowerCase().includes(q) || m.away.toLowerCase().includes(q));
+        document.getElementById('match-count').innerText = '(' + f.length + ')';
+        updateLeagueMatchCount();
+        const c = document.getElementById('matches');
+        if (f.length === 0) c.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">📅</div><p class="text-gray-500">Brak nadchodzących meczów w tej lidze</p><p class="text-xs text-gray-400 mt-2">Sprawdź później lub odpal scraper</p></div>';
+        else { let html = ''; f.forEach(m => { html += renderMatchCard(m, matchesData.indexOf(m)); }); c.innerHTML = html; }
+    }
 
-        function analyzeMatch(m) { const hs = m.home_stats || {}; const as = m.away_stats || {}; const avg = (a, b) => Math.round(((a || 0) + (b || 0)) / 2); const avgF = (a, b) => Math.round((((a || 0) + (b || 0)) / 2) * 10) / 10; return { btts: avg(hs.btts_pct, as.btts_pct), o15: avg(hs.over15_pct, as.over15_pct), o25: avg(hs.over25_pct, as.over25_pct), o35: avg(hs.over35_pct, as.over35_pct), corners: avgF(hs.avg_corners, as.avg_corners), yellow: avgF(hs.avg_yellow, as.avg_yellow), shots: avgF(hs.avg_shots, as.avg_shots), xg: avgF(hs.avg_xg, as.avg_xg) }; }
-        function getSuggestedOverThreshold(a) { const f = Math.floor(a); const d = a - f; if (d >= 0.5) return f + 0.5; return f - 0.5 > 0 ? f - 0.5 : 0.5; }
-        function estimateOverProb(a, t) { const d = a - t; if (d >= 3) return 88; if (d >= 2) return 80; if (d >= 1.5) return 72; if (d >= 1) return 65; if (d >= 0.5) return 55; if (d >= 0) return 48; if (d >= -0.5) return 38; if (d >= -1) return 28; return 15; }
-        function getMatchValueBets(m) {
-            const s = analyzeMatch(m); const b = [];
-            if (s.btts >= THRESHOLDS.btts) b.push({ type: 'BTTS', key: 'btts', prob: s.btts, weight: WEIGHTS.btts, icon: '🎯', display: s.btts + '%' });
-            if (s.o15 >= THRESHOLDS.over15) b.push({ type: 'Over 1.5', key: 'o15', prob: s.o15, weight: WEIGHTS.over15, icon: '⚽', display: s.o15 + '%' });
-            if (s.o25 >= THRESHOLDS.over25) b.push({ type: 'Over 2.5', key: 'o25', prob: s.o25, weight: WEIGHTS.over25, icon: '⚽', display: s.o25 + '%' });
-            if (s.o35 >= THRESHOLDS.over35) b.push({ type: 'Over 3.5', key: 'o35', prob: s.o35, weight: WEIGHTS.over35, icon: '⚽', display: s.o35 + '%' });
-            if (s.yellow >= THRESHOLDS.yellow) { const t = getSuggestedOverThreshold(s.yellow); b.push({ type: 'Kartki O' + t, key: 'yellow', prob: estimateOverProb(s.yellow, t), weight: WEIGHTS.yellow, icon: '🟨', display: 'śr. ' + s.yellow.toFixed(1) }); }
-            if (s.shots >= THRESHOLDS.shots) { const t = getSuggestedOverThreshold(s.shots); b.push({ type: 'Strzały O' + t, key: 'shots', prob: estimateOverProb(s.shots, t), weight: WEIGHTS.shots, icon: '🎯', display: 'śr. ' + s.shots.toFixed(1) }); }
-            return b;
-        }
-        function findValueBets() { const a = []; matchesData.forEach((m, i) => { if (!isWithinDays(m.datetime, 10)) return; getMatchValueBets(m).forEach(b => a.push(Object.assign({}, b, { match: m, matchIndex: i, score: (b.prob/100)*b.weight*100 }))); }); a.sort((x, y) => y.score - x.score); return a.slice(0, 5); }
+    function toggleValueOnly() { valueOnlyMode = !valueOnlyMode; const b = document.getElementById('value-filter-btn'); if (valueOnlyMode) { b.className = 'px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold flex items-center gap-2'; b.innerHTML = '🔥 Value bety ✓'; } else { b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2'; b.innerHTML = '🔥 Value bety'; } renderMatches(); }
+    function toggleFavOnly() { favOnlyMode = !favOnlyMode; const b = document.getElementById('fav-filter-btn'); if (favOnlyMode) { b.className = 'px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-semibold flex items-center gap-2'; b.innerHTML = '⭐ Ulubione ✓'; } else { b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2'; b.innerHTML = '⭐ Ulubione'; } renderMatches(); }
+    function toggleSettings() { const p = document.getElementById('settings-panel'); if (p.classList.contains('hidden')) { p.classList.remove('hidden'); renderThresholdControls(); } else p.classList.add('hidden'); }
+    function renderThresholdControls() {
+        const c = document.getElementById('threshold-controls');
+        const cs = [{ k: 'btts', l: '🎯 BTTS', mi: 50, ma: 90, u: '%' }, { k: 'over15', l: '⚽ O1.5', mi: 60, ma: 95, u: '%' }, { k: 'over25', l: '⚽ O2.5', mi: 40, ma: 85, u: '%' }, { k: 'over35', l: '⚽ O3.5', mi: 30, ma: 70, u: '%' }];
+        let html = '';
+        cs.forEach(x => { html += '<div class="mb-4"><div class="flex justify-between text-sm mb-1"><span class="font-semibold">' + x.l + '</span><span class="font-bold text-[#1e3a5f]" id="threshold-val-' + x.k + '">' + THRESHOLDS[x.k] + x.u + '</span></div><input type="range" min="' + x.mi + '" max="' + x.ma + '" value="' + THRESHOLDS[x.k] + '" class="w-full" oninput="updateThreshold(\'' + x.k + '\',this.value,\'' + x.u + '\')"></div>'; });
+        c.innerHTML = html;
+    }
+    function updateThreshold(k, v, u) { THRESHOLDS[k] = parseFloat(v); document.getElementById('threshold-val-' + k).textContent = v + u; saveThresholds(); renderMatches(); }
 
-        function renderValueBets() {
-            const c = document.getElementById('value-bets-section'); const b = findValueBets();
-            if (b.length === 0) { c.innerHTML = ''; return; }
-            let html = '<div class="bg-gradient-to-r from-red-600 to-orange-500 text-white p-4 rounded-t-2xl flex items-center gap-2"><span class="text-2xl animate-glow rounded-full">🔥</span><div class="flex-1"><div class="font-black text-lg">TYPY DNIA · Najbliższe 10 dni</div><div class="text-xs opacity-90">Top ' + b.length + '</div></div></div>';
-            html += '<div class="bg-white border-2 border-red-500 border-t-0 rounded-b-2xl p-4"><div class="grid grid-cols-1 md:grid-cols-2 gap-3">';
-            b.forEach(x => {
-                html += '<div class="border-2 border-gray-200 rounded-xl p-3 hover:border-red-500 cursor-pointer transition" onclick="goToMatch(' + x.matchIndex + ', \'' + x.match.league_id + '\')">';
-                html += '<div class="flex items-center justify-between mb-2"><span class="text-[10px] font-bold text-gray-500">' + x.match.league_flag + ' ' + x.match.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">' + x.match.datetime + '</span></div>';
-                html += '<div class="font-bold text-sm text-[#1e3a5f] mb-2">' + x.match.home + ' vs ' + x.match.away + '</div>';
-                html += '<div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="text-2xl">' + x.icon + '</span><span class="font-semibold text-sm text-gray-700">' + x.type + '</span></div><span class="bg-green-100 text-green-700 font-black text-lg px-3 py-1 rounded-lg">' + x.display + '</span></div>';
-                html += '</div>';
-            });
-            html += '</div></div>';
-            c.innerHTML = html;
-        }
-        function goToMatch(matchIndex, leagueId) { if (valueOnlyMode) { valueOnlyMode = false; const b = document.getElementById('value-filter-btn'); b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2'; b.innerHTML = '🔥 Value bety'; } if (currentFilter !== 'all' && currentFilter !== leagueId) { currentFilter = leagueId; const label = document.getElementById('current-league'); const league = leaguesData.find(l => l.id === leagueId); if (league) label.textContent = league.flag + ' ' + league.name; renderMatches(); } setTimeout(() => { const el = document.getElementById('match-card-' + matchIndex); if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.style.boxShadow = '0 0 0 3px #dc2626'; setTimeout(() => el.style.boxShadow = '', 2000); } }, 200); }
+    // ═══════════════════════════════════════════════════════════════════
+    // HISTORIA PRZEGLĄDARKI (Alt+← / strzałka "wstecz" na myszce)
+    // ═══════════════════════════════════════════════════════════════════
 
-        function openValueModal(mi, k, bt, op, ex, av) {
-            currentModalData = { matchIndex: mi, betKey: k, betType: bt, ourProb: op, avgValue: av };
-            document.getElementById('modal-bet-type').textContent = bt;
-            document.getElementById('modal-our-prob').textContent = op + '%';
-            document.getElementById('modal-explanation').textContent = ex || '';
-            document.getElementById('modal-odds-input').value = '';
-            document.getElementById('stake-input').value = '';
-            document.getElementById('modal-result').classList.add('hidden');
-            document.getElementById('place-bet-section').classList.add('hidden');
-            document.getElementById('value-modal').classList.remove('hidden');
-            const sel = document.getElementById('modal-threshold-selector');
-            const btns = document.getElementById('modal-threshold-buttons');
-            if (av !== undefined && av !== null && ['yellow', 'shots'].indexOf(k) >= 0) {
-                sel.classList.remove('hidden');
-                const base = Math.floor(av); const ths = [];
-                for (let i = -2; i <= 2; i++) { const t = base + i + 0.5; if (t > 0) ths.push(t); }
-                const p = k === 'yellow' ? 'Kartki' : 'Strzały'; const def = getSuggestedOverThreshold(av);
-                let html = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="flex gap-2 flex-wrap">';
-                ths.forEach(t => {
-                    const pr = estimateOverProb(av, t); const isd = t === def;
-                    html += '<button onclick="selectThreshold(' + t + ', ' + pr + ', \'' + p + '\', this)" class="threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 ' + (isd ? 'bg-red-600 text-white border-red-600' : 'bg-white border-gray-300 hover:border-red-500') + '">Over ' + t + '<br><span class="text-[10px] opacity-80">' + pr + '%</span></button>';
-                });
-                html += '</div>';
-                btns.innerHTML = html;
-            } else sel.classList.add('hidden');
-            setTimeout(() => document.getElementById('modal-odds-input').focus(), 100);
-        }
-        function selectThreshold(t, p, pr, el) {
-            currentModalData.ourProb = p;
-            document.getElementById('modal-bet-type').textContent = pr + ' Over ' + t;
-            document.getElementById('modal-our-prob').textContent = p + '%';
-            document.querySelectorAll('.threshold-btn').forEach(b => b.className = 'threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 bg-white border-gray-300 hover:border-red-500');
-            el.className = 'threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 bg-red-600 text-white border-red-600';
-            calculateModalValue();
-        }
-        function openShotsModalV2(mi) {
-    const m = matchesData[mi]; const hs = m.home_stats || {}; const as = m.away_stats || {};
-    const hc = hs.shots_per_match || []; const ac = as.shots_per_match || [];
-    if (hc.length === 0 && ac.length === 0) { alert('Brak danych o strzałach.'); return; }
-    const ha = hc.length > 0 ? hc.reduce((a,b)=>a+b,0)/hc.length : 0;
-    const aa = ac.length > 0 ? ac.reduce((a,b)=>a+b,0)/ac.length : 0;
-    currentModalData = { matchIndex: mi, betKey: 'shots_v2', hc: hc, ac: ac, ha: ha, aa: aa, totalAvg: ha+aa };
-    document.getElementById('modal-bet-type').textContent = 'Strzały w meczu';
-    document.getElementById('modal-explanation').innerHTML = m.home + ': ' + ha.toFixed(1) + '<br>' + m.away + ': ' + aa.toFixed(1) + '<br><b>Suma:</b> ' + (ha+aa).toFixed(1);
-    document.getElementById('modal-odds-input').value = '';
-    document.getElementById('stake-input').value = '';
-    document.getElementById('modal-result').classList.add('hidden');
-    document.getElementById('place-bet-section').classList.add('hidden');
-    document.getElementById('value-modal').classList.remove('hidden');
-    renderShotsV2Thresholds();
-}
-function renderShotsV2Thresholds() {
-    const s = document.getElementById('modal-threshold-selector'); const b = document.getElementById('modal-threshold-buttons');
-    s.classList.remove('hidden'); const d = currentModalData;
-    const ths = [6.5, 8.5, 10.5, 12.5, 14.5, 16.5, 18.5, 20.5, 22.5, 24.5, 26.5, 28.5, 30.5];
-    let h = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="grid grid-cols-3 gap-2">';
-    ths.forEach(t => {
-        const p = Math.min(d.hc.length, d.ac.length); let hits = 0, tot = 0;
-        if (p > 0) { for (let i = 0; i < p; i++) { tot++; if (d.hc[i] + d.ac[i] > t) hits++; } } else { hits = d.totalAvg > t ? 1 : 0; tot = 1; }
-        const pr = tot > 0 ? Math.round((hits/tot)*100) : 0;
-        const col = pr >= 70 ? 'bg-green-600 text-white' : pr >= 50 ? 'bg-lime-500 text-white' : pr >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
-        h += '<button onclick="selectShotsV2(' + t + ', ' + pr + ', ' + hits + ', ' + tot + ', this)" class="shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white"><div class="text-sm">O' + t + '</div><div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + pr + '%</div><div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + tot + '</div></button>';
-    });
-    h += '</div>';
-    b.innerHTML = h;
-    document.getElementById('modal-our-prob').textContent = '—';
-}
-function selectShotsV2(t, p, h, tt, el) {
-    currentModalData.ourProb = p;
-    document.getElementById('modal-bet-type').textContent = 'Strzały Over ' + t;
-    document.getElementById('modal-our-prob').textContent = p + '%';
-    document.querySelectorAll('.shots-v2-btn').forEach(b => b.className = 'shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white');
-    el.className = 'shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
-    calculateModalValue();
-}
-        function openCornerModalV2(mi) {
-            const m = matchesData[mi]; const hs = m.home_stats || {}; const as = m.away_stats || {};
-            const hc = hs.corners_per_match || []; const ac = as.corners_per_match || [];
-            if (hc.length === 0 && ac.length === 0) { alert('Brak danych.'); return; }
-            const ha = hc.length > 0 ? hc.reduce((a,b)=>a+b,0)/hc.length : 0;
-            const aa = ac.length > 0 ? ac.reduce((a,b)=>a+b,0)/ac.length : 0;
-            currentModalData = { matchIndex: mi, betKey: 'corners_v2', hc: hc, ac: ac, ha: ha, aa: aa, totalAvg: ha+aa };
-            document.getElementById('modal-bet-type').textContent = 'Cornery w meczu';
-            document.getElementById('modal-explanation').innerHTML = m.home + ': ' + ha.toFixed(1) + '<br>' + m.away + ': ' + aa.toFixed(1) + '<br><b>Suma:</b> ' + (ha+aa).toFixed(1);
-            document.getElementById('modal-odds-input').value = '';
-            document.getElementById('stake-input').value = '';
-            document.getElementById('modal-result').classList.add('hidden');
-            document.getElementById('place-bet-section').classList.add('hidden');
-            document.getElementById('value-modal').classList.remove('hidden');
-            renderCornerV2Thresholds();
-        }
-        function renderCornerV2Thresholds() {
-            const s = document.getElementById('modal-threshold-selector'); const b = document.getElementById('modal-threshold-buttons');
-            s.classList.remove('hidden'); const d = currentModalData;
-            const ths = [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5];
-            let h = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="grid grid-cols-3 gap-2">';
-            ths.forEach(t => {
-                const p = Math.min(d.hc.length, d.ac.length); let hits = 0, tot = 0;
-                if (p > 0) { for (let i = 0; i < p; i++) { tot++; if (d.hc[i] + d.ac[i] > t) hits++; } } else { hits = d.totalAvg > t ? 1 : 0; tot = 1; }
-                const pr = tot > 0 ? Math.round((hits/tot)*100) : 0;
-                const col = pr >= 70 ? 'bg-green-600 text-white' : pr >= 50 ? 'bg-lime-500 text-white' : pr >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
-                h += '<button onclick="selectCornerV2(' + t + ', ' + pr + ', ' + hits + ', ' + tot + ', this)" class="corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white"><div class="text-sm">O' + t + '</div><div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + pr + '%</div><div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + tot + '</div></button>';
-            });
-            h += '</div>';
-            b.innerHTML = h;
-            document.getElementById('modal-our-prob').textContent = '—';
-        }
-        function selectCornerV2(t, p, h, tt, el) { currentModalData.ourProb = p; document.getElementById('modal-bet-type').textContent = 'Cornery Over ' + t; document.getElementById('modal-our-prob').textContent = p + '%'; document.querySelectorAll('.corner-v2-btn').forEach(b => b.className = 'corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white'); el.className = 'corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50'; calculateModalValue(); }
-        function closeValueModal() { document.getElementById('value-modal').classList.add('hidden'); currentModalData = null; }
-        function calculateModalValue() {
-            if (!currentModalData) return;
-            const o = parseFloat(document.getElementById('modal-odds-input').value);
-            if (!o || o <= 1) { document.getElementById('modal-result').classList.add('hidden'); document.getElementById('place-bet-section').classList.add('hidden'); return; }
-            const im = (1/o)*100; const e = currentModalData.ourProb - im;
-            document.getElementById('modal-implied').textContent = im.toFixed(1) + '%';
-            const ee = document.getElementById('modal-edge'); const ve = document.getElementById('modal-verdict');
-            if (e > 10) { ee.innerHTML = '<span class="text-green-600">+' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-green-600">🔥 MOCNY VALUE BET!</span>'; }
-            else if (e > 0) { ee.innerHTML = '<span class="text-lime-600">+' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-lime-600">✅ Value bet</span>'; }
-            else if (e > -5) { ee.innerHTML = '<span class="text-orange-600">' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-orange-600">⚠️ Neutralny</span>'; }
-            else { ee.innerHTML = '<span class="text-red-600">' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-red-600">❌ Brak value</span>'; }
-            document.getElementById('modal-result').classList.remove('hidden');
-            document.getElementById('place-bet-section').classList.remove('hidden');
-            document.getElementById('bet-msg').textContent = currentUser ? '✅ Zalogowany' : '⚠️ Zaloguj się';
-        }
-        function toggleSettings() { const p = document.getElementById('settings-panel'); if (p.classList.contains('hidden')) { p.classList.remove('hidden'); renderThresholdControls(); } else p.classList.add('hidden'); }
-        function renderThresholdControls() {
-            const c = document.getElementById('threshold-controls');
-            const cs = [{k:'btts',l:'🎯 BTTS',mi:50,ma:90,u:'%'},{k:'over15',l:'⚽ O1.5',mi:60,ma:95,u:'%'},{k:'over25',l:'⚽ O2.5',mi:40,ma:85,u:'%'},{k:'over35',l:'⚽ O3.5',mi:30,ma:70,u:'%'},{k:'yellow',l:'🟨 Kartki',mi:2,ma:8,s:0.5,u:''},{k:'shots',l:'🎯 Strzały',mi:8,ma:20,s:1,u:''}];
-            let html = '';
-            cs.forEach(x => {
-                html += '<div class="mb-4"><div class="flex justify-between text-sm mb-1"><span class="font-semibold">' + x.l + '</span><span class="font-bold text-[#1e3a5f]" id="threshold-val-' + x.k + '">' + THRESHOLDS[x.k] + x.u + '</span></div>';
-                html += '<input type="range" min="' + x.mi + '" max="' + x.ma + '" step="' + (x.s || 1) + '" value="' + THRESHOLDS[x.k] + '" class="w-full" oninput="updateThreshold(\'' + x.k + '\', this.value, \'' + x.u + '\')"></div>';
-            });
-            c.innerHTML = html;
-        }
-        function updateThreshold(k, v, u) { THRESHOLDS[k] = parseFloat(v); document.getElementById('threshold-val-'+k).textContent = v+u; saveThresholds(); renderValueBets(); renderMatches(); }
-
-        function enterAppWithLeague(li) { const s = document.getElementById('splash-screen'); const a = document.getElementById('app'); s.classList.add('animate-fade-out'); setTimeout(() => { s.classList.add('hidden'); s.classList.remove('animate-fade-out'); a.classList.remove('hidden'); a.classList.add('animate-fade-in'); currentFilter = li; const l = document.getElementById('current-league'); if (li === 'all') l.textContent = 'Wszystkie'; else { const x = leaguesData.find(y => y.id === li); if (x) l.textContent = x.flag + ' ' + x.name; } renderLeagueList(); renderValueBets(); renderMatches(); window.scrollTo(0, 0); }, 400); }
-        function backToSplash() { document.getElementById('app').classList.add('hidden'); document.getElementById('app').classList.remove('animate-fade-in'); document.getElementById('splash-screen').classList.remove('hidden'); window.scrollTo(0, 0); }
-        function toggleValueOnly() { valueOnlyMode = !valueOnlyMode; const b = document.getElementById('value-filter-btn'); if (valueOnlyMode) { b.className = 'px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold flex items-center gap-2'; b.innerHTML = '🔥 Value bety ✓'; } else { b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2'; b.innerHTML = '🔥 Value bety'; } renderMatches(); }
-        function toggleFavOnly() { favOnlyMode = !favOnlyMode; const b = document.getElementById('fav-filter-btn'); if (favOnlyMode) { b.className = 'px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-semibold flex items-center gap-2'; b.innerHTML = '⭐ Ulubione ✓'; } else { b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2'; b.innerHTML = '⭐ Ulubione'; } renderMatches(); }
-        function getColorClass(p) { if (p >= 70) return { text: 'text-green-600', bar: 'bg-green-500' }; if (p >= 50) return { text: 'text-lime-600', bar: 'bg-lime-500' }; if (p >= 35) return { text: 'text-orange-600', bar: 'bg-orange-500' }; return { text: 'text-red-600', bar: 'bg-red-500' }; }
-        function formBadge(f) { const c = { W: 'bg-green-600 border-green-700', D: 'bg-yellow-500 border-yellow-600', L: 'bg-red-600 border-red-700' }; return '<span class="inline-block w-6 h-6 text-[10px] rounded border ' + (c[f] || 'bg-gray-500') + ' text-white flex items-center justify-center font-bold">' + f + '</span>'; }
-function renderStatBox(l, p, mi, k, t, bt) {
-    const c = getColorClass(p);
-    const iv = p >= t;
-    const e = 'Historyczna szansa ' + l + ': ' + p + '%';
-    
-    // Sprawdz czy mecz sie skonczyl i czy predykcja sie sprawdzila
-    const m = matchesData[mi];
-    const live = getLiveInfo(m.home, m.away);
-    let resultClass = '';
-    let resultIcon = '';
-    
-    if (live && live.is_finished && live.score) {
-        const parts = live.score.split(':');
-        if (parts.length === 2) {
-            const hg = parseInt(parts[0]);
-            const ag = parseInt(parts[1]);
-            let hit = false;
-            
-            if (k === 'btts') hit = hg > 0 && ag > 0;
-            else if (k === 'o15') hit = (hg + ag) > 1;
-            else if (k === 'o25') hit = (hg + ag) > 2;
-            else if (k === 'o35') hit = (hg + ag) > 3;
-            
-            if (hit) {
-                resultClass = 'bg-green-100 border-2 border-green-500';
-                resultIcon = '<div class="text-[10px] font-black text-green-700 mb-1">✅ TRAFIONE</div>';
-            } else {
-                resultClass = 'bg-red-100 border-2 border-red-500';
-                resultIcon = '<div class="text-[10px] font-black text-red-700 mb-1">❌ NIETRAFIONE</div>';
+    window.addEventListener('popstate', function(event) {
+        const state = event.state;
+        if (!state || state.view === 'home') {
+            backToSportSelection(true);
+        } else if (state.view === 'sport') {
+            selectSport(state.sport, true);
+        } else if (state.view === 'league') {
+            // Najpierw wybierz sport (bez zapisu do historii)
+            if (!currentSport || currentSport.id !== state.sport) {
+                const sport = SPORTS[state.sport];
+                if (sport) { currentSport = sport; }
             }
-        }
-    } else if (iv) {
-        resultClass = 'ring-2 ring-red-500 bg-red-50/30';
-    }
-    
-    return '<div class="stat-card p-4 rounded-xl ' + resultClass + '" onclick="event.stopPropagation()">' +
-        resultIcon +
-        (iv && !resultIcon ? '<div class="text-[9px] font-black text-red-600 mb-1">🔥 VALUE BET</div>' : '') +
-        '<div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">' + l + '</div>' +
-        '<div class="text-3xl font-black ' + c.text + '">' + p + '%</div>' +
-        '<div class="mt-2 bg-gray-200 rounded-full h-1"><div class="bar-fill ' + c.bar + '" style="width: ' + p + '%"></div></div>' +
-        '<button onclick="event.stopPropagation();openValueModal(' + mi + ', \'' + k + '\', \'' + bt + '\', ' + p + ', \'' + e + '\', null)" class="mt-3 w-full text-[10px] font-bold py-1.5 rounded ' + (iv ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300') + '">💰 Kurs</button>' +
-    '</div>';
-}function renderMiniStatWithCalc(i, l, v, t, mi, k, a) {
-    const iv = t && a >= t;
-    const s = getSuggestedOverThreshold(a);
-    const p = estimateOverProb(a, s);
-    const pf = k === 'yellow' ? 'Kartki' : 'Strzały';
-    const bt = pf + ' Over ' + s;
-    
-    // Dla strzałów - wywołaj analizę sumowaną
-    if (k === 'shots') {
-        return '<div class="bg-white border ' + (iv ? 'border-red-500 bg-red-50/30' : 'border-gray-200') + ' rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">' + i + '</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">' + l + (iv ? ' <span class="text-red-600 font-bold">🔥</span>' : '') + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div><button onclick="event.stopPropagation();openShotsModalV2(' + mi + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded bg-red-600 text-white hover:bg-red-700">🎯 Analiza</button></div>';
-    }
-    
-return '<div class="bg-white border ' + (iv ? 'border-red-500 bg-red-50/30' : 'border-gray-200') + ' rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">' + i + '</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">' + l + (iv ? ' <span class="text-red-600 font-bold">🔥</span>' : '') + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div><button onclick="event.stopPropagation();openValueModal(' + mi + ', \'' + k + '\', \'' + bt + '\', ' + p + ', \'Średnio ' + a.toFixed(1) + '\', ' + a + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded ' + (iv ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200') + '">💰 Kurs</button></div>';}        function renderCornerMiniStat(mi, hs, as) { const s = ((hs.avg_corners || 0) + (as.avg_corners || 0)).toFixed(1); const h = (hs.corners_per_match && hs.corners_per_match.length > 0) || (as.corners_per_match && as.corners_per_match.length > 0); return '<div class="bg-white border border-gray-200 rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">🚩</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">Suma cornerów</div><div class="text-sm font-bold text-[#1e3a5f]">' + s + '</div></div></div><button onclick="event.stopPropagation();openCornerModalV2(' + mi + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded ' + (h ? 'bg-orange-500 text-white hover:bg-orange-600' : 'bg-gray-100 text-gray-400') + '">🚩 Analiza</button></div>'; }
-function renderMiniStat(i, l, v) { return '<div class="bg-white border border-gray-200 rounded-lg p-3 flex items-center gap-2" onclick="event.stopPropagation()"><span class="text-lg">' + i + '</span><div><div class="text-[10px] text-gray-500 uppercase">' + l + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div>'; }        function detailRow(l, v) { return '<div class="flex justify-between border-b border-gray-200 pb-1"><span class="text-gray-600">' + l + '</span><b class="text-[#1e3a5f]">' + v + '</b></div>'; }        function renderLeagueList() {
-            const c = document.getElementById('league-list');
-            let h = '';
-            leaguesData.forEach(l => {
-                h += '<button onclick="filterLeague(\'' + l.id + '\')" class="w-full text-left px-4 py-3 hover:bg-gray-100 text-sm flex items-center gap-3 border-b border-gray-200 last:border-0"><span class="text-lg">' + l.flag + '</span><span>' + l.name + '</span><span class="ml-auto text-xs text-gray-500" id="count-' + l.id + '"></span></button>';
-            });
-            c.innerHTML = h;
-            leaguesData.forEach(l => { const cnt = matchesData.filter(m => m.league_id === l.id).length; const el = document.getElementById('count-'+l.id); if (el) el.textContent = cnt > 0 ? '('+cnt+')' : ''; });
-        }
-        function toggleDropdown() { const m = document.getElementById('dropdown-menu'); const a = document.getElementById('dropdown-arrow'); if (m.classList.contains('hidden')) { m.classList.remove('hidden'); a.textContent = '▲'; } else { m.classList.add('hidden'); a.textContent = '▼'; } }
-        document.addEventListener('click', (e) => { const d = document.getElementById('dropdown-menu'); const b = document.getElementById('dropdown-btn'); if (d && b && !d.contains(e.target) && !b.contains(e.target)) { d.classList.add('hidden'); const arr = document.getElementById('dropdown-arrow'); if (arr) arr.textContent = '▼'; } });
-        
-        function renderMatchCard(m, i) {
-    const hs = m.home_stats || {}; const as = m.away_stats || {}; const s = analyzeMatch(m); const vb = getMatchValueBets(m); const isHot = vb.length >= 2;
-    const isFav = isFavorite(m.match_id);
-    const live = getLiveInfo(m.home, m.away);
-    
-    let liveBadge = '';
-    if (live) {
-        if (live.is_live) {
-            liveBadge = '<div class="bg-red-600 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2"><span class="animate-glow inline-block w-3 h-3 bg-white rounded-full"></span> 🔴 MECZ TRWA! · ' + live.score + ' · ' + (live.stage || '') + '</div>';
-        } else if (live.is_finished) {
-            liveBadge = '<div class="bg-gray-700 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2">⚽ KONIEC · ' + live.score + '</div>';
-        }
-    }
-    
-    let html = '<div id="match-card-' + i + '" class="bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" onclick="openMatchDetail(' + i + ')">';
-    if (liveBadge) html += liveBadge;
-    if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block">🔥</span> HOT MATCH · ' + vb.length + ' value bets</div>';
-    html += '<div class="flex justify-between items-center px-4 py-2 bg-gray-50 border-b border-gray-200"><span class="text-[10px] font-bold text-gray-600 tracking-wider">' + (m.league_flag || '🏆') + ' ' + (m.league_name || '').toUpperCase() + '</span><div class="flex items-center gap-2"><span class="fav-star text-lg" onclick="toggleFavorite(\'' + m.match_id + '\', event)" title="Ulubione">' + (isFav ? '⭐' : '☆') + '</span><span class="fav-star text-sm" onclick="event.stopPropagation();shareMatch(\'' + m.match_id + '\')" title="Udostępnij">📤</span><span class="text-[10px] text-gray-500">📅 ' + (m.datetime || 'TBA') + '</span></div></div>';
-    html += '<div class="p-4 grid grid-cols-3 items-center"><div class="text-left"><div class="font-bold text-lg mb-2 text-[#1e3a5f]">' + m.home + '</div><div class="flex gap-1">' + (hs.form || []).map(f => formBadge(f)).join('') + '</div></div><div class="flex justify-center"><div class="w-12 h-12 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-xs text-gray-500 font-bold">VS</div></div><div class="text-right"><div class="font-bold text-lg mb-2 text-[#1e3a5f]">' + m.away + '</div><div class="flex gap-1 justify-end">' + (as.form || []).map(f => formBadge(f)).join('') + '</div></div></div>';
-    html += '<div class="px-4 pb-4 grid grid-cols-2 md:grid-cols-4 gap-3">' + renderStatBox('BTTS', s.btts, i, 'btts', THRESHOLDS.btts, 'BTTS') + renderStatBox('O1.5', s.o15, i, 'o15', THRESHOLDS.over15, 'Over 1.5') + renderStatBox('O2.5', s.o25, i, 'o25', THRESHOLDS.over25, 'Over 2.5') + renderStatBox('O3.5', s.o35, i, 'o35', THRESHOLDS.over35, 'Over 3.5') + '</div>';
-    html += '<div class="px-4 pb-3 grid grid-cols-2 md:grid-cols-6 gap-2">' + renderMiniStat('⚽', 'Śr. strzelone', (((hs.avg_goals_scored||0)+(as.avg_goals_scored||0))/2).toFixed(2)) + renderMiniStat('🥅', 'Śr. stracone', (((hs.avg_goals_conceded||0)+(as.avg_goals_conceded||0))/2).toFixed(2)) + renderCornerMiniStat(i, hs, as) + renderMiniStatWithCalc('🟨', 'Śr. kartki', s.yellow, THRESHOLDS.yellow, i, 'yellow', s.yellow) + renderMiniStatWithCalc('🎯', 'Śr. strzały', s.shots, THRESHOLDS.shots, i, 'shots', s.shots) + renderMiniStat('📊', 'xG', s.xg) + '</div>';
-    html += '<div class="px-4 pb-3 text-center text-xs text-blue-600 font-semibold border-t border-gray-200 pt-2">👆 Kliknij aby zobaczyć pełne szczegóły meczu</div>';
-    html += '</div>';
-    return html;
-}
-        function filterLeague(li) { currentFilter = li; const l = document.getElementById('current-league'); if (li === 'all') l.textContent = 'Wszystkie'; else { const x = leaguesData.find(y => y.id === li); if (x) l.textContent = x.flag + ' ' + x.name; } document.getElementById('dropdown-menu').classList.add('hidden'); document.getElementById('dropdown-arrow').textContent = '▼'; renderMatches(); }
-        function renderMatches() {
-            let f = currentFilter === 'all' ? matchesData : matchesData.filter(m => m.league_id === currentFilter);
-            // Ukryj zakonczone mecze z glownej listy
-            f = f.filter(m => { const live = getLiveInfo(m.home, m.away); return !(live && live.is_finished); });
-            if (valueOnlyMode) f = f.filter(m => getMatchValueBets(m).length > 0);
-            if (favOnlyMode) f = f.filter(m => isFavorite(m.match_id));            const searchEl = document.getElementById('search-input');
-            const query = searchEl ? searchEl.value.trim().toLowerCase() : '';
-            if (query) f = f.filter(m => m.home.toLowerCase().indexOf(query) >= 0 || m.away.toLowerCase().indexOf(query) >= 0);
-            f = f.slice().sort((a, b) => { const aFav = isFavorite(a.match_id) ? 1 : 0; const bFav = isFavorite(b.match_id) ? 1 : 0; if (aFav !== bFav) return bFav - aFav; return getMatchValueBets(b).length - getMatchValueBets(a).length; });
-            document.getElementById('match-count').innerText = '(' + f.length + ')';
-            const c = document.getElementById('matches');
-            if (f.length === 0) { c.innerHTML = '<p class="text-gray-500 text-center py-8">Brak meczów</p>'; }
-            else { let html = ''; f.forEach(m => { html += renderMatchCard(m, matchesData.indexOf(m)); }); c.innerHTML = html; }
-        }
-
-        function openCompare() {
-            const sel1 = document.getElementById('compare-team1');
-            const sel2 = document.getElementById('compare-team2');
-            const teamSet = {};
-            matchesData.forEach(m => { teamSet[m.home] = true; teamSet[m.away] = true; });
-            const teams = Object.keys(teamSet).sort();
-            let opts = '<option value="">-- Wybierz --</option>';
-            teams.forEach(t => { opts += '<option value="' + t + '">' + t + '</option>'; });
-            sel1.innerHTML = opts;
-            sel2.innerHTML = opts;
-            document.getElementById('compare-result').innerHTML = '<p class="text-gray-500 text-center py-8">Wybierz drużyny</p>';
-            document.getElementById('compare-modal').classList.remove('hidden');
-        }
-        function closeCompare() { document.getElementById('compare-modal').classList.add('hidden'); }
-        function renderCompare() {
-            const t1 = document.getElementById('compare-team1').value;
-            const t2 = document.getElementById('compare-team2').value;
-            const resultEl = document.getElementById('compare-result');
-            if (!t1 || !t2) { resultEl.innerHTML = '<p class="text-gray-500 text-center py-8">Wybierz obie drużyny</p>'; return; }
-            const s1 = getTeamStats(t1); const s2 = getTeamStats(t2);
-            let html = '';
-            if (!s1 || !s2) {
-                let msg = '';
-                if (!s1 && !s2) msg = 'Brak danych dla obu drużyn';
-                else if (!s1) msg = 'Brak danych dla ' + t1;
-                else msg = 'Brak danych dla ' + t2;
-                html += '<div class="bg-red-50 border-2 border-red-500 rounded-lg p-3 mb-4 text-red-700 text-sm">⚠️ ' + msg + '</div>';
-            }
-            const t1Class = s1 ? 'text-[#1e3a5f]' : 'text-red-500 bg-red-100 rounded-lg border-2 border-red-500';
-            const t2Class = s2 ? 'text-[#1e3a5f]' : 'text-red-500 bg-red-100 rounded-lg border-2 border-red-500';
-            html += '<div class="grid grid-cols-3 gap-4 mb-4 text-center">';
-            html += '<div class="font-bold p-2 ' + t1Class + '">' + t1 + (s1 ? '' : ' ❌') + '</div>';
-            html += '<div class="text-gray-400 text-sm flex items-center justify-center">vs</div>';
-            html += '<div class="font-bold p-2 ' + t2Class + '">' + t2 + (s2 ? '' : ' ❌') + '</div>';
-            html += '</div>';
-            const rows = [
-                { l: '⚽ Śr. strzelonych', a: s1 ? (s1.avg_goals_scored || 0) : null, b: s2 ? (s2.avg_goals_scored || 0) : null, unit: '' },
-                { l: '🥅 Śr. straconych', a: s1 ? (s1.avg_goals_conceded || 0) : null, b: s2 ? (s2.avg_goals_conceded || 0) : null, unit: '', invert: true },
-                { l: '🎯 BTTS', a: s1 ? (s1.btts_pct || 0) : null, b: s2 ? (s2.btts_pct || 0) : null, unit: '%' },
-                { l: '⚽ Over 2.5', a: s1 ? (s1.over25_pct || 0) : null, b: s2 ? (s2.over25_pct || 0) : null, unit: '%' },
-                { l: '🚩 Cornery', a: s1 ? (s1.avg_corners || 0) : null, b: s2 ? (s2.avg_corners || 0) : null, unit: '' },
-                { l: '🟨 Kartki', a: s1 ? (s1.avg_yellow || 0) : null, b: s2 ? (s2.avg_yellow || 0) : null, unit: '', invert: true },
-                { l: '🎯 Strzały', a: s1 ? (s1.avg_shots || 0) : null, b: s2 ? (s2.avg_shots || 0) : null, unit: '' },
-                { l: '📊 xG', a: s1 ? (s1.avg_xg || 0) : null, b: s2 ? (s2.avg_xg || 0) : null, unit: '' }
-            ];
-            html += '<div class="space-y-3">';
-            rows.forEach(r => {
-                const aMiss = r.a === null;
-                const bMiss = r.b === null;
-                const aBetter = !aMiss && !bMiss && (r.invert ? r.a < r.b : r.a > r.b);
-                const bBetter = !aMiss && !bMiss && (r.invert ? r.b < r.a : r.b > r.a);
-                const aCls = aMiss ? 'bg-red-100 text-red-500 font-bold border-2 border-red-500' : (aBetter ? 'text-green-600 font-bold' : 'text-gray-700');
-                const bCls = bMiss ? 'bg-red-100 text-red-500 font-bold border-2 border-red-500' : (bBetter ? 'text-green-600 font-bold' : 'text-gray-700');
-                const aVal = aMiss ? '❌ brak' : (r.a + r.unit);
-                const bVal = bMiss ? '❌ brak' : (r.b + r.unit);
-                html += '<div class="grid grid-cols-3 items-center gap-4 p-3 bg-gray-50 rounded-lg">';
-                html += '<div class="text-right p-2 rounded ' + aCls + '">' + aVal + '</div>';
-                html += '<div class="text-center text-xs text-gray-500">' + r.l + '</div>';
-                html += '<div class="text-left p-2 rounded ' + bCls + '">' + bVal + '</div>';
-                html += '</div>';
-            });
-            html += '</div>';
-            resultEl.innerHTML = html;
-        }
-        function getTeamStats(teamName) {
-            for (let i = 0; i < matchesData.length; i++) {
-                const m = matchesData[i];
-                if (m.home === teamName && m.home_stats && m.home_stats.total_matches) return m.home_stats;
-                if (m.away === teamName && m.away_stats && m.away_stats.total_matches) return m.away_stats;
-            }
-            return null;
-        }
-
-        function openMatchDetail(matchIndex) {
-    var m = matchesData[matchIndex];
-    if (!m) return;
-    var hs = m.home_stats || {};
-    var as = m.away_stats || {};
-    var s = analyzeMatch(m);
-    var live = getLiveInfo(m.home, m.away);
-    document.getElementById('md-title').textContent = m.home + ' vs ' + m.away;
-    var liveBadge = '';
-    var isFinished = false;
-    var matchScore = null;
-    if (live) {
-        if (live.is_live) { liveBadge = '<div class="bg-red-600 text-white text-center py-3 rounded-xl mb-4 font-black text-lg animate-pulse">🔴 MECZ TRWA! · ' + live.score + '</div>'; }
-        else if (live.is_finished) { liveBadge = '<div class="bg-gray-700 text-white text-center py-3 rounded-xl mb-4 font-black text-lg">⚽ KONIEC · ' + live.score + '</div>'; isFinished = true; var pp = live.score.split(':'); if (pp.length === 2) matchScore = {hg: parseInt(pp[0]), ag: parseInt(pp[1])}; }
-    }
-    var html = liveBadge;
-    html += '<div class="grid grid-cols-3 items-center gap-4 mb-6 p-4 bg-gray-50 rounded-xl"><div class="text-center"><div class="font-bold text-lg text-[#1e3a5f] mb-2">' + m.home + '</div><div class="flex gap-1 justify-center">' + (hs.form || []).map(function(f){return formBadge(f)}).join('') + '</div></div><div class="text-center"><div class="text-3xl font-black text-gray-400">VS</div><div class="text-xs text-gray-500 mt-2">' + m.datetime + '</div><div class="text-[10px] text-gray-500">' + m.league_flag + ' ' + m.league_name + '</div></div><div class="text-center"><div class="font-bold text-lg text-[#1e3a5f] mb-2">' + m.away + '</div><div class="flex gap-1 justify-center">' + (as.form || []).map(function(f){return formBadge(f)}).join('') + '</div></div></div>';
-    if (isFinished && matchScore) {
-        var total = matchScore.hg + matchScore.ag;
-        var btts = matchScore.hg > 0 && matchScore.ag > 0;
-        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">✅ Weryfikacja</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
-        [{l:'BTTS',h:btts,p:s.btts,i:btts?'TAK':'NIE'},{l:'O1.5',h:total>1,p:s.o15,i:total+' gole'},{l:'O2.5',h:total>2,p:s.o25,i:total+' gole'},{l:'O3.5',h:total>3,p:s.o35,i:total+' gole'}].forEach(function(c){
-            html+='<div class="p-4 rounded-xl border-2 '+(c.h?'bg-green-100 border-green-500':'bg-red-100 border-red-500')+'"><div class="text-[10px] font-black mb-1 '+(c.h?'text-green-700':'text-red-700')+'">'+(c.h?'✅':'❌')+'</div><div class="text-[10px] text-gray-600 uppercase mb-1">'+c.l+'</div><div class="text-2xl font-black '+(c.h?'text-green-600':'text-red-600')+'">'+c.p+'%</div><div class="text-[10px] text-gray-500">'+c.i+'</div></div>';
-        });
-        html += '</div></div>';
-        html += '<div class="bg-gray-50 rounded-xl p-4 mb-6 text-center"><div class="text-3xl font-black">' + matchScore.hg + ' : ' + matchScore.ag + '</div></div>';
-    } else {
-        var vb = getMatchValueBets(m);
-        if (vb.length > 0) {
-            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🔥 Value bety</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-2">';
-            vb.forEach(function(b){html+='<div class="border-2 border-red-500 bg-red-50 rounded-lg p-3 text-center"><div class="text-2xl mb-1">'+b.icon+'</div><div class="text-sm font-bold text-[#1e3a5f]">'+b.type+'</div><div class="text-lg font-black text-red-600">'+b.display+'</div></div>';});
-            html += '</div></div>';
-        }
-        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📊 Prognoza</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
-        html += renderStatBoxDetail('BTTS',s.btts,THRESHOLDS.btts)+renderStatBoxDetail('O1.5',s.o15,THRESHOLDS.over15)+renderStatBoxDetail('O2.5',s.o25,THRESHOLDS.over25)+renderStatBoxDetail('O3.5',s.o35,THRESHOLDS.over35);
-        html += '</div></div>';
-        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">⚖️ Porównanie</h4><div class="space-y-2">';
-        [{l:'⚽ Gole strz.',a:hs.avg_goals_scored,b:as.avg_goals_scored},{l:'🥅 Gole strac.',a:hs.avg_goals_conceded,b:as.avg_goals_conceded,inv:1},{l:'🎯 BTTS',a:hs.btts_pct,b:as.btts_pct,u:'%'},{l:'⚽ O2.5',a:hs.over25_pct,b:as.over25_pct,u:'%'},{l:'🚩 Cornery',a:hs.avg_corners,b:as.avg_corners},{l:'🟨 Kartki',a:hs.avg_yellow,b:as.avg_yellow,inv:1},{l:'🎯 Strzały',a:hs.avg_shots,b:as.avg_shots},{l:'📊 xG',a:hs.avg_xg,b:as.avg_xg}].forEach(function(r){
-            var am=r.a===undefined||r.a===null,bm=r.b===undefined||r.b===null;
-            var av=am?0:r.a,bv=bm?0:r.b;
-            var ab=!am&&!bm&&(r.inv?av<bv:av>bv),bb=!am&&!bm&&(r.inv?bv<av:bv>av);
-            html+='<div class="grid grid-cols-3 items-center gap-4 p-2 bg-gray-50 rounded"><div class="text-right p-1 rounded '+(am?'text-red-500':ab?'text-green-600 font-bold':'text-gray-700')+'">'+(am?'—':av+(r.u||''))+'</div><div class="text-center text-xs text-gray-500">'+r.l+'</div><div class="text-left p-1 rounded '+(bm?'text-red-500':bb?'text-green-600 font-bold':'text-gray-700')+'">'+(bm?'—':bv+(r.u||''))+'</div></div>';
-        });
-        html += '</div></div>';
-    }
-    document.getElementById('md-content').innerHTML = html;
-    document.getElementById('match-detail-modal').classList.remove('hidden');
-}
-function renderStatBoxDetail(label, pct, threshold) {
-    var c = getColorClass(pct); var isValue = pct >= threshold;
-    return '<div class="stat-card p-4 rounded-xl ' + (isValue ? 'ring-2 ring-red-500 bg-red-50/30' : '') + '">' + (isValue ? '<div class="text-[9px] font-black text-red-600 mb-1">🔥 VALUE</div>' : '') + '<div class="text-[10px] text-gray-500 uppercase mb-1">' + label + '</div><div class="text-3xl font-black ' + c.text + '">' + pct + '%</div><div class="mt-2 bg-gray-200 rounded-full h-1"><div class="bar-fill ' + c.bar + '" style="width: ' + pct + '%"></div></div></div>';
-}
-function closeMatchDetail() { document.getElementById('match-detail-modal').classList.add('hidden'); }
-  
-        function openFinished() {
-    const container = document.getElementById('finished-content');
-    
-    // Zbierz wszystkie zakonczone mecze
-    const finishedMatches = [];
-    matchesData.forEach((m, i) => {
-        const live = getLiveInfo(m.home, m.away);
-        if (live && live.is_finished && live.score) {
-            finishedMatches.push({ match: m, matchIndex: i, live: live });
+            selectLeague(state.league, true);
         }
     });
-    
-    if (finishedMatches.length === 0) {
-        container.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">📅</div><p class="text-gray-500">Brak zakończonych meczów</p><p class="text-xs text-gray-400 mt-2">Wróć tu po weekendzie - zobaczysz wyniki i weryfikację predykcji!</p></div>';
-        document.getElementById('finished-modal').classList.remove('hidden');
-        return;
-    }
-    
-    let html = '<div class="space-y-3">';
-    finishedMatches.forEach(({ match: m, matchIndex: i, live }) => {
-        const s = analyzeMatch(m);
-        const parts = live.score.split(':');
-        const hg = parseInt(parts[0]);
-        const ag = parseInt(parts[1]);
-        const total = hg + ag;
-        const btts = hg > 0 && ag > 0;
-        
-        // Sprawdz predykcje
-        const predictions = [];
-        if (s.btts >= 50) predictions.push({ label: 'BTTS', predicted: 'TAK', actual: btts ? 'TAK' : 'NIE', hit: btts, pct: s.btts });
-        if (s.o15 >= 60) predictions.push({ label: 'Over 1.5', predicted: 'TAK', actual: total > 1 ? 'TAK' : 'NIE', hit: total > 1, pct: s.o15 });
-        if (s.o25 >= 50) predictions.push({ label: 'Over 2.5', predicted: 'TAK', actual: total > 2 ? 'TAK' : 'NIE', hit: total > 2, pct: s.o25 });
-        if (s.o35 >= 40) predictions.push({ label: 'Over 3.5', predicted: 'TAK', actual: total > 3 ? 'TAK' : 'NIE', hit: total > 3, pct: s.o35 });
-        
-        const hits = predictions.filter(p => p.hit).length;
-        const missed = predictions.filter(p => !p.hit).length;
-        
-        html += '<div class="border border-gray-200 rounded-xl p-4 hover:border-[#1e3a5f] cursor-pointer transition" onclick="closeFinished(); openMatchDetail(' + i + ');">';
-        html += '<div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + m.league_flag + ' ' + m.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">📅 ' + m.datetime + '</span></div>';
-        
-        html += '<div class="grid grid-cols-3 items-center gap-4 mb-3">';
-        html += '<div class="text-right font-bold text-[#1e3a5f]">' + m.home + '</div>';
-        html += '<div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div>';
-        html += '<div class="text-left font-bold text-[#1e3a5f]">' + m.away + '</div>';
-        html += '</div>';
-        
-        if (predictions.length > 0) {
-            html += '<div class="border-t border-gray-100 pt-3">';
-            html += '<div class="text-xs text-gray-500 mb-2 font-semibold">Weryfikacja predykcji: ' + hits + '/' + predictions.length + ' trafione</div>';
-            html += '<div class="flex flex-wrap gap-2">';
-            predictions.forEach(p => {
-                const cls = p.hit ? 'bg-green-100 text-green-800 border border-green-500' : 'bg-red-100 text-red-800 border border-red-500';
-                const icon = p.hit ? '✅' : '❌';
-                html += '<div class="' + cls + ' rounded-lg px-3 py-1 text-xs">';
-                html += '<span class="font-bold">' + icon + ' ' + p.label + '</span> ';
-                html += '<span class="opacity-75">(' + p.pct + '%)</span>';
-                html += '</div>';
-            });
-            html += '</div></div>';
-        }
-        
-        html += '<div class="text-center text-xs text-blue-600 font-semibold mt-3 pt-2 border-t border-gray-100">👆 Kliknij aby zobaczyć pełne statystyki</div>';
-        html += '</div>';
-    });
-    html += '</div>';
-    
-    container.innerHTML = html;
-    document.getElementById('finished-modal').classList.remove('hidden');
-}
 
-function closeFinished() {
-    document.getElementById('finished-modal').classList.add('hidden');
-}
-
-        function openLive() {
-            const iframe = document.getElementById('live-iframe');
-            iframe.src = 'https://www.flashscore.pl/pilka-nozna/?d=1';
-            document.getElementById('live-modal').classList.remove('hidden');
-        }
-        function closeLive() {
-            document.getElementById('live-modal').classList.add('hidden');
-            document.getElementById('live-iframe').src = '';
-        }
-        
-        function openFavorites() {
-            const list = document.getElementById('favorites-list');
-            const favMatches = matchesData.filter(m => isFavorite(m.match_id));
-            if (favMatches.length === 0) { list.innerHTML = '<p class="text-gray-500 text-center py-8">Brak ulubionych. Kliknij ☆ przy meczu!</p>'; }
-            else {
-                let html = '';
-                favMatches.forEach(m => {
-                    const s = analyzeMatch(m);
-                    html += '<div class="border border-gray-200 rounded-xl p-3 mb-2">';
-                    html += '<div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + m.league_flag + ' ' + m.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">' + m.datetime + '</span></div>';
-                    html += '<div class="font-bold text-[#1e3a5f] mb-2">' + m.home + ' vs ' + m.away + '</div>';
-                    html += '<div class="flex gap-2 text-xs"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">BTTS ' + s.btts + '%</span><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">O2.5 ' + s.o25 + '%</span></div>';
-                    html += '<button onclick="toggleFavorite(\'' + m.match_id + '\'); openFavorites();" class="mt-2 text-xs text-red-600 hover:underline">Usuń z ulubionych</button>';
-                    html += '</div>';
-                });
-                list.innerHTML = html;
+    function initFromURL() {
+        const hash = window.location.hash.replace('#/', '');
+        const parts = hash.split('/').filter(Boolean);
+        if (parts.length === 0) return;
+        const sportId = parts[0];
+        const leagueId = parts[1];
+        if (sportId && SPORTS[sportId]) {
+            selectSport(sportId, true);
+            if (leagueId) {
+                setTimeout(() => selectLeague(leagueId, true), 100);
             }
-            document.getElementById('favorites-modal').classList.remove('hidden');
         }
-        function closeFavorites() { document.getElementById('favorites-modal').classList.add('hidden'); }
+    }
 
-        loadInitialData();
-        checkAuth();
+    // ═══════════════════════════════════════════════════════════════════
+    // INIT
+    // ═══════════════════════════════════════════════════════════════════
+
+    updateBetSlipUI();
+    checkAuth();
+    loadLiveData();
+    setInterval(loadLiveData, 60000);
+
+    // Startowy stan w historii
+    history.replaceState({ view: 'home' }, '', '#/');
+    initFromURL();
     </script>
 </body>
 </html>

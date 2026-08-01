@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a5f">
+    <title>BetStats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        /* TOAST NOTIFICATIONS */
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    pointer-events: none;
+}
+.toast {
+    min-width: 280px;
+    max-width: 400px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: toastSlideUp 0.3s ease-out;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.toast.toast-hide {
+    animation: toastSlideDown 0.3s ease-in forwards;
+}
+.toast-success { background: linear-gradient(135deg, #16a34a, #15803d); }
+.toast-error { background: linear-gradient(135deg, #dc2626, #b91c1c); }
+.toast-info { background: linear-gradient(135deg, #2563eb, #1e40af); }
+.toast-warning { background: linear-gradient(135deg, #f59e0b, #d97706); }
+@keyframes toastSlideUp {
+    from { opacity: 0; transform: translateY(30px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes toastSlideDown {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(30px) scale(0.9); }
+}
+        body { background: #efeeea; padding-top: 60px; transition: background 0.3s, color 0.3s; }
+        body.dark { background: #0f1419; color: #e5e7eb; }
+        body.dark .top-bar { background: #000; }
+        body.dark .stat-card { background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0)); border-color: rgba(255,255,255,0.1); }
+        body.dark .bg-white { background: #1a1f2e !important; color: #e5e7eb; }
+        body.dark .bg-gray-50 { background: #151a26 !important; }
+        body.dark .border-gray-200 { border-color: #2d3548 !important; }
+        body.dark .border-gray-300 { border-color: #2d3548 !important; }
+        body.dark .text-\[\#1e3a5f\] { color: #60a5fa !important; }
+        body.dark .text-gray-700 { color: #d1d5db !important; }
+        body.dark .text-gray-600 { color: #9ca3af !important; }
+        body.dark .text-gray-500 { color: #6b7280 !important; }
+        body.dark .bg-yellow-100 { background: #3b2f0a !important; }
+        body.dark .border-yellow-300 { border-color: #78591b !important; }
+        body.dark .text-yellow-800 { color: #fbbf24 !important; }
+        body.dark .league-card { background: #1a1f2e; border-color: #2d3548; }
+        body.dark .league-card:hover { border-color: #60a5fa; }
+        body.dark .bg-gray-100 { background: #151a26 !important; }
+        body.dark .hover\:bg-gray-100:hover { background: #1a1f2e !important; }
+        body.dark .hover\:bg-gray-50:hover { background: #151a26 !important; }
+        body.dark .bg-gray-200 { background: #2d3548 !important; }
+        body.dark .bg-red-50 { background: #3f1515 !important; }
+        body.dark .bg-green-50 { background: #0f2818 !important; }
+        body.dark .bg-yellow-50 { background: #3b2f0a !important; }
+        body.dark .bg-blue-50 { background: #0f1a3f !important; }
+        body.dark input, body.dark select { background: #1a1f2e; color: #e5e7eb; border-color: #2d3548; }
+        
+        .bar-fill { height: 3px; border-radius: 999px; transition: width 0.3s; }
+        .stat-card { background: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0)); border: 1px solid rgba(0,0,0,0.08); }
+        
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.95); } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); } 50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); } }
+        @keyframes hot-shake { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-3deg); } 75% { transform: rotate(3deg); } }
+        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        
+        .animate-fade-up { animation: fadeInUp 0.8s ease-out; }
+        .animate-fade-up-delay-1 { animation: fadeInUp 0.8s ease-out 0.2s both; }
+        .animate-fade-up-delay-2 { animation: fadeInUp 0.8s ease-out 0.4s both; }
+        .animate-fade-out { animation: fadeOut 0.4s ease-in forwards; }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out; }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+        .animate-glow { animation: pulse-glow 2s infinite; }
+        .animate-hot { animation: hot-shake 1s infinite; display: inline-block; }
+        
+        .league-card { background: white; border: 2px solid #e5e5e5; transition: all 0.3s; cursor: pointer; opacity: 0; animation: slideInLeft 0.5s ease-out forwards; }
+        .league-card:hover { border-color: #1e3a5f; transform: translateY(-4px); box-shadow: 0 10px 25px rgba(30,58,95,0.15); }
+        .league-card:hover .league-arrow { transform: translateX(5px); color: #dc2626; }
+        .league-arrow { transition: all 0.3s; }
+        
+        .hot-match-badge { background: linear-gradient(45deg, #dc2626, #f59e0b, #dc2626); background-size: 200% 200%; animation: gradientShift 3s ease infinite; }
+        @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        
+        input[type="range"] { -webkit-appearance: none; height: 6px; background: #e5e7eb; border-radius: 3px; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; background: #1e3a5f; border-radius: 50%; cursor: pointer; }
+        
+        .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.2s ease-out; }
+        .modal-overlay.hidden { display: none !important; }
+        .hidden { display: none !important; }
+        
+        .top-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 90; background: #1e3a5f; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        
+        .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.3); color: white; transition: all 0.2s; }
+        .btn-outline:hover { background: white; color: #1e3a5f; border-color: white; }
+        .btn-solid { background: #dc2626; color: white; transition: all 0.2s; }
+        .btn-solid:hover { background: white; color: #dc2626; }
+        
+        .bet-slip { position: fixed; bottom: 0; right: 0; z-index: 80; background: #1e3a5f; color: white; padding: 12px 20px; border-top-left-radius: 12px; box-shadow: -4px -4px 15px rgba(0,0,0,0.2); cursor: pointer; animation: slideInRight 0.3s ease-out; }
+        .bet-slip:hover { background: #dc2626; }
+        
+        .fav-star { cursor: pointer; transition: transform 0.2s; }
+        .fav-star:hover { transform: scale(1.3); }
+        
+        .install-prompt { position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 100; background: #1e3a5f; color: white; padding: 16px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); max-width: 400px; margin: 0 auto; }
+    </style>
+</head>
+<body class="text-gray-800 font-sans min-h-screen">
+
+    <div class="top-bar px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3 cursor-pointer" onclick="backToSplash()">
+            <img src="logo.png" alt="BetStats" class="w-8 h-8 bg-white rounded p-0.5">
+            <span class="font-black text-sm tracking-wider hidden sm:inline">BET STATS</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <button onclick="openLive()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="Live mecze">
+                <span class="text-red-400">🔴</span> <span class="hidden sm:inline">LIVE</span>
+            </button>
+            <button onclick="openFinished()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="Zakończone mecze">
+                <span class="text-green-400">✅</span> <span class="hidden sm:inline">Zakończone</span>
+            </button>
+            <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-lg w-10 h-10 rounded-lg flex items-center justify-center" title="Zmień motyw">🌙</button>
+            <div id="auth-buttons" class="flex items-center gap-2">
+                <button onclick="openAuthModal('login')" class="btn-outline text-xs px-4 py-2 rounded-lg font-semibold">Zaloguj się</button>
+                <button onclick="openAuthModal('register')" class="btn-solid text-xs px-4 py-2 rounded-lg font-semibold">Zarejestruj się</button>
+            </div>
+            <div id="user-buttons" class="hidden items-center gap-2">
+                <button onclick="openDashboard()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1">📊 <span class="hidden sm:inline">Dashboard</span></button>
+                <button onclick="openProfile()" id="profile-icon" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white">👤</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="bet-slip" class="bet-slip hidden" onclick="openBetSlip()">
+        🎫 Kupon: <span id="bet-slip-count">0</span> · Kurs: <span id="bet-slip-odds">0.00</span>
+    </div>
+
+    <div id="splash-screen" class="min-h-screen py-10 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="text-8xl mb-6 animate-float">⚡</div>
+            <h1 class="text-5xl md:text-6xl font-black text-[#1e3a5f] tracking-wider mb-2 animate-fade-up">BET STATS</h1>
+            <p class="text-lg md:text-xl italic text-red-600 font-semibold mb-10 animate-fade-up-delay-1">statystyki twoich ulubionych lig</p>
+            <div class="animate-fade-up-delay-2">
+                <h2 class="text-xl md:text-2xl font-bold text-[#1e3a5f] mb-6">Wybierz ligę</h2>
+                <div id="league-cards" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8"></div>
+                <div class="mt-8 flex justify-center gap-3 flex-wrap">
+                    <button onclick="openCompare()" class="px-5 py-3 bg-white border-2 border-[#1e3a5f] text-[#1e3a5f] font-semibold rounded-xl hover:bg-[#1e3a5f] hover:text-white transition">⚖️ Porównywarka</button>
+                    <button onclick="openFavorites()" class="px-5 py-3 bg-white border-2 border-yellow-500 text-yellow-600 font-semibold rounded-xl hover:bg-yellow-500 hover:text-white transition">⭐ Ulubione</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 mt-10 pb-4"><p>© 2026 BetStats · Hazard może uzależniać · 18+</p></div>
+    </div>
+
+    <div id="app" class="hidden">
+        <div class="max-w-6xl mx-auto p-4 md:p-8">
+            <div id="value-bets-section" class="mb-8"></div>
+            <div class="bg-yellow-100 border border-yellow-300 rounded-xl p-4 mb-6">
+                <div class="flex items-start gap-3">
+                    <span class="text-2xl">⚠️</span>
+                    <div class="text-sm">
+                        <div class="font-bold text-yellow-800 mb-1">Informacja o danych</div>
+                        <div class="text-gray-700">Aplikacja jest na początku sezonu. Dane w pełni funkcjonalne <b class="text-[#1e3a5f]">od 5. kolejki</b>.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <input type="text" id="search-input" placeholder="🔍 Wyszukaj drużynę/zawodnika..." class="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-sm focus:border-[#1e3a5f] outline-none" oninput="renderMatches()">
+            </div>
+            <div class="flex justify-between items-center mb-4 flex-wrap gap-3">
+                <h2 class="text-lg font-semibold flex items-center gap-2 text-[#1e3a5f]">
+                    📅 Nadchodzące mecze <span class="text-gray-500 text-sm" id="match-count"></span>
+                </h2>
+                <div class="flex gap-2 flex-wrap">
+                    <button onclick="toggleFavOnly()" id="fav-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2">⭐ Ulubione</button>
+                    <button onclick="toggleValueOnly()" id="value-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2">🔥 Value bety</button>
+                    <button onclick="toggleSettings()" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-[#1e3a5f] transition flex items-center gap-2">⚙️</button>
+                    <div class="relative">
+                        <button onclick="toggleDropdown()" id="dropdown-btn" class="px-4 py-2 bg-[#1e3a5f] text-white rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-red-600 transition">
+                            <span>🏆</span><span id="current-league">Wszystkie</span><span id="dropdown-arrow">▼</span>
+                        </button>
+                        <div id="dropdown-menu" class="hidden absolute right-0 mt-2 w-64 bg-white border border-gray-300 rounded-xl shadow-xl z-50 overflow-hidden">
+                            <button onclick="filterLeague('all')" class="w-full text-left px-4 py-3 hover:bg-gray-100 text-sm flex items-center gap-3 border-b border-gray-200">
+                                <span class="text-lg">🌍</span><span>Wszystkie ligi</span>
+                            </button>
+                            <div id="league-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="settings-panel" class="hidden bg-white border border-gray-300 rounded-xl p-6 mb-6">
+                <h3 class="font-bold text-[#1e3a5f] mb-4">⚙️ Ustawienia progów value bet</h3>
+                <div id="threshold-controls"></div>
+                <button onclick="resetThresholds()" class="mt-4 text-xs text-red-600 hover:underline">↺ Przywróć domyślne</button>
+            </div>
+            <div id="matches" class="space-y-4"></div>
+            <footer class="mt-16 pt-8 border-t border-gray-300">
+                <div class="max-w-3xl mx-auto text-center text-xs text-gray-600 pb-6 space-y-3">
+                    <div class="flex items-center justify-center gap-2 text-sm">
+                        <img src="logo.png" alt="BetStats" class="w-8 h-8">
+                        <span class="font-bold text-[#1e3a5f] tracking-wider">BET STATS</span>
+                        <span class="bg-blue-600/20 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded border border-blue-600/30">BETA</span>
+                    </div>
+                    <p class="text-gray-600">Kompleksowe statystyki piłkarskie i tenisowe</p>
+                    <div class="pt-3 border-t border-gray-300 text-gray-500 text-[11px]">
+                        <p class="mb-2">© 2026 BetStats</p>
+                        <p class="text-gray-400">Hazard może uzależniać. 18+</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <div id="value-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeValueModal()">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">🎯 Kalkulator Value Bet</h3>
+                <button onclick="closeValueModal()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <div class="text-xs text-gray-500 mb-1">Zakład</div>
+                <div id="modal-bet-type" class="font-bold text-[#1e3a5f] text-lg"></div>
+                <div id="modal-explanation" class="text-xs text-gray-500 mt-2"></div>
+                <div id="modal-threshold-selector" class="hidden mt-3"><div id="modal-threshold-buttons"></div></div>
+                <div class="mt-3 flex items-center gap-2">
+                    <span class="text-xs text-gray-500">Nasza szansa:</span>
+                    <span id="modal-our-prob" class="text-2xl font-black text-green-600"></span>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="text-sm font-semibold text-gray-700 mb-2 block">Kurs bukmachera:</label>
+                <input type="number" id="modal-odds-input" step="0.01" placeholder="np. 1.29" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-lg font-semibold focus:border-[#1e3a5f] outline-none" oninput="calculateModalValue()">
+            </div>
+            <div id="modal-result" class="hidden bg-gray-50 rounded-lg p-4 mb-4">
+                <div class="space-y-2 text-sm">
+                    <div class="flex justify-between"><span class="text-gray-600">Kurs implikuje:</span><b id="modal-implied"></b></div>
+                    <div class="flex justify-between"><span class="text-gray-600">Przewaga:</span><b id="modal-edge"></b></div>
+                    <div class="border-t pt-2 mt-2"><div id="modal-verdict" class="text-center font-bold text-lg"></div></div>
+                </div>
+            </div>
+            <div id="place-bet-section" class="hidden mt-4 space-y-2">
+                <div class="p-4 bg-green-50 border-2 border-green-500 rounded-lg">
+                    <div class="font-bold text-green-800 mb-3">💰 Postaw zakład (solo)</div>
+                    <div class="flex gap-2 mb-2">
+                        <input type="number" id="stake-input" placeholder="Stawka (zł)" class="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm">
+                        <button onclick="placeBet()" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-green-700">➕ Dodaj</button>
+                    </div>
+                    <div id="bet-msg" class="text-[10px] text-gray-600">Musisz być zalogowany</div>
+                </div>
+                <button onclick="addToBetSlip()" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold">🎫 Dodaj do kuponu (AKO)</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="auth-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeAuthModal()">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="auth-title" class="font-bold text-lg text-[#1e3a5f]">🔐 Logowanie</h3>
+                <button onclick="closeAuthModal()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="space-y-3">
+                <input type="email" id="auth-email" placeholder="Email" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#1e3a5f] outline-none">
+                <input type="password" id="auth-password" placeholder="Hasło (min 6 znaków)" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#1e3a5f] outline-none">
+                <div id="auth-error" class="hidden text-red-600 text-sm bg-red-50 p-2 rounded"></div>
+                <button id="auth-submit" onclick="doAuth()" class="w-full bg-[#1e3a5f] hover:bg-red-600 text-white font-bold py-3 rounded-lg transition">Zaloguj</button>
+                <div class="text-center text-sm">
+                    <span id="auth-toggle-text">Nie masz konta?</span>
+                    <button onclick="toggleAuthMode()" class="text-red-600 font-bold ml-2 hover:underline" id="auth-toggle-btn">Zarejestruj się</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeProfile()">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">👤 Profil</h3>
+                <button onclick="closeProfile()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="text-center mb-4">
+                <div id="profile-avatar" class="w-20 h-20 mx-auto rounded-full bg-red-600 flex items-center justify-center text-white text-3xl font-bold mb-3">👤</div>
+                <div id="profile-email" class="font-bold text-[#1e3a5f]"></div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                <div class="text-xs text-gray-500 mb-1 text-center">Zysk / Strata</div>
+                <div id="profile-balance" class="text-3xl font-black text-center">0 zł</div>
+                <div id="profile-stats" class="text-xs text-center text-gray-500 mt-2">0 zakładów</div>
+            </div>
+            <button onclick="openDashboard(); closeProfile();" class="w-full bg-[#1e3a5f] hover:bg-red-600 text-white font-bold py-3 rounded-lg mb-2 transition">📊 Dashboard</button>
+            <button onclick="doLogout()" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 rounded-lg transition">Wyloguj się</button>
+        </div>
+    </div>
+
+    <div id="dashboard-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeDashboard()">
+        <div class="bg-white rounded-2xl p-6 max-w-4xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">📊 Dashboard</h3>
+                <button onclick="closeDashboard()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-xs text-gray-500 mb-1">Zakłady</div><div id="dash-count" class="text-2xl font-black text-[#1e3a5f]">0</div></div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-xs text-gray-500 mb-1">Postawione</div><div id="dash-total-stake" class="text-2xl font-black text-[#1e3a5f]">0 zł</div></div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-xs text-gray-500 mb-1">Wygrane</div><div id="dash-total-win" class="text-2xl font-black text-green-600">0 zł</div></div>
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-xs text-gray-500 mb-1">Zysk / Strata</div><div id="dash-balance" class="text-2xl font-black">0 zł</div></div>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mb-6">
+                <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-3 text-center"><div class="text-xs text-gray-500">⏳ Oczekujące</div><div id="dash-pending" class="text-lg font-bold">0</div></div>
+                <div class="bg-green-50 border border-green-200 rounded-xl p-3 text-center"><div class="text-xs text-gray-500">✅ Wygrane</div><div id="dash-won" class="text-lg font-bold text-green-600">0</div></div>
+                <div class="bg-red-50 border border-red-200 rounded-xl p-3 text-center"><div class="text-xs text-gray-500">❌ Przegrane</div><div id="dash-lost" class="text-lg font-bold text-red-600">0</div></div>
+            </div>
+            <h4 class="font-bold text-[#1e3a5f] mb-3">📝 Historia zakładów</h4>
+            <div id="bets-list" class="space-y-2"></div>
+        </div>
+    </div>
+
+    <div id="bet-slip-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeBetSlip()">
+        <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">🎫 Kupon (AKO)</h3>
+                <button onclick="closeBetSlip()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div id="bet-slip-items" class="space-y-2 mb-4"></div>
+            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                <div class="flex justify-between mb-2"><span class="text-gray-600">Łączny kurs:</span><b id="bet-slip-total-odds" class="text-[#1e3a5f]">0.00</b></div>
+                <div class="mb-3">
+                    <label class="text-sm font-semibold text-gray-700 mb-2 block">Stawka:</label>
+                    <input type="number" id="bet-slip-stake" placeholder="np. 100" class="w-full px-3 py-2 border border-gray-300 rounded-lg" oninput="updateBetSlipPotential()">
+                </div>
+                <div class="flex justify-between text-lg"><span class="font-bold">Potencjalna wygrana:</span><b id="bet-slip-potential" class="text-green-600">0 zł</b></div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="clearBetSlip()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 rounded-lg">🗑️ Wyczyść</button>
+                <button onclick="placeAKOBet()" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg">✅ Zapisz</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="compare-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeCompare()">
+        <div class="bg-white rounded-2xl p-6 max-w-4xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">⚖️ Porównywarka</h3>
+                <button onclick="closeCompare()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <div>
+                    <label class="text-sm font-semibold text-gray-700 mb-2 block">Drużyna / Zawodnik 1:</label>
+                    <select id="compare-team1" class="w-full px-3 py-2 border border-gray-300 rounded-lg" onchange="renderCompare()"></select>
+                </div>
+                <div>
+                    <label class="text-sm font-semibold text-gray-700 mb-2 block">Drużyna / Zawodnik 2:</label>
+                    <select id="compare-team2" class="w-full px-3 py-2 border border-gray-300 rounded-lg" onchange="renderCompare()"></select>
+                </div>
+            </div>
+            <div id="compare-result"></div>
+        </div>
+    </div>
+
+    <div id="favorites-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeFavorites()">
+        <div class="bg-white rounded-2xl p-6 max-w-3xl w-full shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg text-[#1e3a5f]">⭐ Ulubione mecze</h3>
+                <button onclick="closeFavorites()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div id="favorites-list"></div>
+        </div>
+    </div>
+
+    <div id="live-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeLive()">
+        <div class="bg-white rounded-2xl w-full max-w-5xl h-[90vh] shadow-2xl overflow-hidden flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b border-gray-200">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl animate-glow rounded-full inline-block">🔴</span>
+                    <h3 class="font-bold text-lg text-[#1e3a5f]">Mecze na żywo</h3>
+                </div>
+                <button onclick="closeLive()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div class="flex-1 overflow-hidden bg-white">
+                <iframe id="live-iframe" src="" class="w-full h-full border-0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="match-detail-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeMatchDetail()">
+        <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                <h3 class="font-bold text-lg text-[#1e3a5f]" id="md-title">Szczegóły meczu</h3>
+                <button onclick="closeMatchDetail()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div id="md-content" class="p-6"></div>
+        </div>
+    </div>
+
+    <div id="finished-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeFinished()">
+        <div class="bg-white rounded-2xl w-full max-w-4xl shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">✅</span>
+                    <h3 class="font-bold text-lg text-[#1e3a5f]">Zakończone mecze</h3>
+                    <span class="text-xs text-gray-500 hidden sm:inline">· Ostatnie wyniki + weryfikacja predykcji</span>
+                </div>
+                <button onclick="closeFinished()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
+            </div>
+            <div id="finished-content" class="p-6"></div>
+        </div>
+    </div>
+
+    <div id="install-prompt" class="install-prompt hidden">
+        <div class="flex items-center justify-between gap-3">
+            <div>
+                <div class="font-bold">📱 Zainstaluj BetStats</div>
+                <div class="text-xs opacity-90">Miej stronę zawsze pod ręką</div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="installPWA()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-sm font-bold">Zainstaluj</button>
+                <button onclick="closeInstallPrompt()" class="text-white/60 hover:text-white text-xl px-2">×</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const SUPABASE_URL = 'https://mnvufnecumwuxfylfxah.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1udnVmbmVjdW13dXhmeWxmeGFoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1MDQ5NjAsImV4cCI6MjEwMTA4MDk2MH0.-B1LiyYPx-ZeYLreVyoULzfKHSGBWK4Zz8hthzCz3gQ';
+    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    let currentUser = null;
+    let userBets = [];
+    let authMode = 'login';
+
+    const DEFAULT_THRESHOLDS = { btts: 75, over15: 80, over25: 65, over35: 50, yellow: 4.5, shots: 12 };
+    const WEIGHTS = { btts: 3, over25: 2, over15: 1.5, over35: 1.5, yellow: 1, shots: 1 };
+    let THRESHOLDS = loadThresholds();
+    let matchesData = [];
+    let leaguesData = [];
+    let currentFilter = 'all';
+    let valueOnlyMode = false;
+    let favOnlyMode = false;
+    let currentModalData = null;
+    let favorites = loadFavorites();
+    let betSlip = loadBetSlip();
+    // Zapamiętaj z którego meczu został otwarty kalkulator
+let lastMatchDetailIndex = null;
+
+function openShotsModalV2FromDetail(mi) {
+    lastMatchDetailIndex = mi;
+    document.getElementById('match-detail-modal').classList.add('hidden');
+    openShotsModalV2(mi);
+}
+
+function openCornerModalV2FromDetail(mi) {
+    lastMatchDetailIndex = mi;
+    document.getElementById('match-detail-modal').classList.add('hidden');
+    openCornerModalV2(mi);
+}
+    let deferredPrompt = null;
+    let liveData = {};
+let confirmCallback = null;
+
+function showConfirm(title, message, onConfirm, icon) {
+    document.getElementById('confirm-title').textContent = title || 'Potwierdzenie';
+    document.getElementById('confirm-message').textContent = message || 'Czy na pewno?';
+    document.getElementById('confirm-icon').textContent = icon || '⚠️';
+    confirmCallback = onConfirm;
+    document.getElementById('confirm-ok-btn').onclick = () => {
+        if (confirmCallback) confirmCallback();
+        hideConfirm();
+    };
+    document.getElementById('confirm-modal').classList.remove('hidden');
+}
+
+function hideConfirm() {
+    document.getElementById('confirm-modal').classList.add('hidden');
+    confirmCallback = null;
+}
+    function showToast(message, type) {
+    type = type || 'success';
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+    
+    const icons = { success: '✅', error: '❌', info: 'ℹ️', warning: '⚠️' };
+    const toast = document.createElement('div');
+    toast.className = 'toast toast-' + type;
+    toast.innerHTML = '<span class="text-xl">' + (icons[type] || '✅') + '</span><span>' + message + '</span>';
+    
+    toast.onclick = () => {
+        toast.classList.add('toast-hide');
+        setTimeout(() => toast.remove(), 300);
+    };
+    
+    container.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.classList.add('toast-hide');
+        setTimeout(() => toast.remove(), 300);
+    }, 3500);
+}
+    // ─── UTILS ───────────────────────────────────────────────────────────────────
+
+    function loadThresholds() {
+        try { const s = localStorage.getItem('betstats_thresholds'); if (s) return { ...DEFAULT_THRESHOLDS, ...JSON.parse(s) }; } catch(e) {}
+        return {...DEFAULT_THRESHOLDS};
+    }
+    function saveThresholds() { localStorage.setItem('betstats_thresholds', JSON.stringify(THRESHOLDS)); }
+    function resetThresholds() { THRESHOLDS = {...DEFAULT_THRESHOLDS}; saveThresholds(); renderThresholdControls(); renderValueBets(); renderMatches(); }
+    function loadFavorites() { try { return JSON.parse(localStorage.getItem('betstats_favs') || '[]'); } catch(e) { return []; } }
+    function saveFavorites() { localStorage.setItem('betstats_favs', JSON.stringify(favorites)); }
+    function loadBetSlip() { try { return JSON.parse(localStorage.getItem('betstats_slip') || '[]'); } catch(e) { return []; } }
+    function saveBetSlip() { localStorage.setItem('betstats_slip', JSON.stringify(betSlip)); updateBetSlipUI(); }
+
+    function toggleFavorite(matchId, event) {
+        if (event) event.stopPropagation();
+        const idx = favorites.indexOf(matchId);
+        if (idx > -1) favorites.splice(idx, 1);
+        else favorites.push(matchId);
+        saveFavorites();
+        renderMatches();
+    }
+    function isFavorite(matchId) { return favorites.includes(matchId); }
+
+    function parseMatchDate(d) {
+        if (!d || d === 'TBA') return null;
+        const t = new Date(); const y = t.getFullYear();
+        const m = d.match(/(\d{1,2})\.(\d{1,2})\.?\s*(\d{1,2}:\d{2})?/);
+        if (m) {
+            const day = parseInt(m[1]); const mo = parseInt(m[2]) - 1;
+            const ts = m[3] || '00:00'; const [h, mi] = ts.split(':').map(Number);
+            let yr = y; const c = new Date(yr, mo, day, h, mi);
+            if (c < t && (t - c) > 30 * 24 * 60 * 60 * 1000) yr++;
+            return new Date(yr, mo, day, h, mi);
+        }
+        return null;
+    }
+    function isWithinDays(d, days) {
+        const md = parseMatchDate(d);
+        if (!md) return true;
+        const now = new Date();
+        return md >= now && md <= new Date(now.getTime() + days * 86400000);
+    }
+
+    // ─── DARK MODE ────────────────────────────────────────────────────────────────
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        localStorage.setItem('betstats_dark', isDark ? '1' : '0');
+        document.getElementById('dark-toggle').innerHTML = isDark ? '☀️' : '🌙';
+    }
+    if (localStorage.getItem('betstats_dark') === '1') {
+        document.body.classList.add('dark');
+        setTimeout(() => { const el = document.getElementById('dark-toggle'); if (el) el.innerHTML = '☀️'; }, 100);
+    }
+
+    // ─── PWA ─────────────────────────────────────────────────────────────────────
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault(); deferredPrompt = e;
+        if (!localStorage.getItem('betstats_install_dismissed')) {
+            setTimeout(() => document.getElementById('install-prompt').classList.remove('hidden'), 3000);
+        }
+    });
+    function installPWA() {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(() => { deferredPrompt = null; closeInstallPrompt(); });
+    }
+    function closeInstallPrompt() { document.getElementById('install-prompt').classList.add('hidden'); localStorage.setItem('betstats_install_dismissed', '1'); }
+    if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); }); }
+
+    // ─── BET SLIP ─────────────────────────────────────────────────────────────────
+
+    function updateBetSlipUI() {
+        const el = document.getElementById('bet-slip');
+        if (!el) return;
+        if (betSlip.length === 0) { el.classList.add('hidden'); return; }
+        el.classList.remove('hidden');
+        const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
+        document.getElementById('bet-slip-count').textContent = betSlip.length;
+        document.getElementById('bet-slip-odds').textContent = totalOdds.toFixed(2);
+    }
+    function addToBetSlip() {
+        if (!currentModalData) return;
+        const odds = parseFloat(document.getElementById('modal-odds-input').value);
+        if (!odds || odds <= 1) { showToast('Wpisz kurs!', 'error');
+; return; }
+        const m = matchesData[currentModalData.matchIndex];
+        betSlip.push({ match: m.home + ' vs ' + m.away, league: m.league_name, betType: document.getElementById('modal-bet-type').textContent, odds: odds });
+        saveBetSlip(); closeValueModal(); showToast('Dodano do kuponu! 🎫', 'success');
+    }
+    function openBetSlip() {
+        const container = document.getElementById('bet-slip-items');
+        if (betSlip.length === 0) { container.innerHTML = '<p class="text-gray-500 text-center py-4">Kupon jest pusty</p>'; }
+        else {
+            let html = '';
+            betSlip.forEach((b, i) => {
+                html += '<div class="border border-gray-200 rounded-lg p-3 flex justify-between items-center">';
+                html += '<div class="flex-1"><div class="text-[10px] text-gray-500">' + b.league + '</div><div class="font-bold text-sm text-[#1e3a5f]">' + b.match + '</div><div class="text-xs text-gray-700">' + b.betType + '</div></div>';
+                html += '<div class="text-right"><div class="font-black text-lg text-green-600">' + b.odds + '</div><button onclick="removeFromBetSlip(' + i + ')" class="text-red-600 text-xs hover:underline">Usuń</button></div></div>';
+            });
+            container.innerHTML = html;
+        }
+        const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
+        document.getElementById('bet-slip-total-odds').textContent = totalOdds.toFixed(2);
+        document.getElementById('bet-slip-stake').value = '';
+        document.getElementById('bet-slip-potential').textContent = '0 zł';
+        document.getElementById('bet-slip-modal').classList.remove('hidden');
+    }
+    function closeBetSlip() { document.getElementById('bet-slip-modal').classList.add('hidden'); }
+    function removeFromBetSlip(i) {
+    betSlip.splice(i, 1);
+    saveBetSlip();
+    openBetSlip();
+    showToast('Usunięto z kuponu', 'info');
+}    function clearBetSlip() {
+    showConfirm('Wyczyścić kupon?', 'Wszystkie zdarzenia zostaną usunięte z kuponu.', () => {
+        betSlip = [];
+        saveBetSlip();
+        openBetSlip();
+        showToast('Kupon wyczyszczony 🗑️', 'info');
+    }, '🗑️');
+}    function updateBetSlipPotential() {
+        const stake = parseFloat(document.getElementById('bet-slip-stake').value) || 0;
+        const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
+        document.getElementById('bet-slip-potential').textContent = (stake * totalOdds).toFixed(2) + ' zł';
+    }
+    async function placeAKOBet() {
+      if (!currentUser) { showToast('Zaloguj się aby zapisać kupon!', 'warning'); return; }
+if (betSlip.length === 0) { showToast('Kupon jest pusty!', 'warning'); return; }
+        if (betSlip.length === 0) { alert('Kupon pusty!'); return; }
+        const stake = parseFloat(document.getElementById('bet-slip-stake').value);
+  if (!stake || stake <= 0) { showToast('Podaj stawkę!', 'warning'); return; }
+        const totalOdds = betSlip.reduce((acc, b) => acc * b.odds, 1);
+        const betType = 'AKO: ' + betSlip.map(b => b.match + ' - ' + b.betType).join(' | ');
+        const { error } = await sb.from('bets').insert({ user_id: currentUser.id, match_home: 'KUPON', match_away: betSlip.length + ' zdarzeń', match_league: 'AKO', bet_type: betType.substring(0, 500), odds: totalOdds, stake: stake, potential_win: stake * totalOdds, status: 'pending' });
+    if (error) { showToast('Błąd: ' + error.message, 'error'); return; }
+        betSlip = []; saveBetSlip(); closeBetSlip(); await loadBets(); showToast('Kupon zapisany poprawnie! ✅', 'success');
+    }
+
+    // ─── AUTH ─────────────────────────────────────────────────────────────────────
+
+    async function checkAuth() {
+        const { data } = await sb.auth.getSession();
+        if (data.session) { currentUser = data.session.user; updateUIForUser(); await loadBets(); }
+    }
+    function updateUIForUser() {
+        const authB = document.getElementById('auth-buttons');
+        const userB = document.getElementById('user-buttons');
+        if (!authB || !userB) return;
+        if (currentUser) { authB.classList.add('hidden'); userB.classList.remove('hidden'); userB.classList.add('flex'); const pi = document.getElementById('profile-icon'); if (pi) pi.innerHTML = currentUser.email[0].toUpperCase(); }
+        else { authB.classList.remove('hidden'); userB.classList.add('hidden'); userB.classList.remove('flex'); }
+    }
+    function openAuthModal(mode) { authMode = mode || 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; document.getElementById('auth-modal').classList.remove('hidden'); }
+    function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
+    function updateAuthModalUI() {
+        if (authMode === 'register') { document.getElementById('auth-title').textContent = 'Rejestracja'; document.getElementById('auth-submit').textContent = 'Zarejestruj się'; document.getElementById('auth-toggle-text').textContent = 'Masz już konto?'; document.getElementById('auth-toggle-btn').textContent = 'Zaloguj się'; }
+        else { document.getElementById('auth-title').textContent = 'Logowanie'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; document.getElementById('auth-toggle-text').textContent = 'Nie masz konta?'; document.getElementById('auth-toggle-btn').textContent = 'Zarejestruj się'; }
+    }
+    function toggleAuthMode() { authMode = authMode === 'login' ? 'register' : 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); }
+    async function doAuth() {
+        const email = document.getElementById('auth-email').value.trim();
+        const password = document.getElementById('auth-password').value;
+        const errEl = document.getElementById('auth-error');
+        if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; }
+        if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; }
+        try {
+            let r;
+            if (authMode === 'login') r = await sb.auth.signInWithPassword({ email, password });
+            else r = await sb.auth.signUp({ email, password });
+            if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; }
+            currentUser = r.data.user; updateUIForUser(); await loadBets(); closeAuthModal();
+        } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); }
+    }
+    function openProfile() { if (!currentUser) return; document.getElementById('profile-email').textContent = currentUser.email; document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase(); updateProfileBalance(); document.getElementById('profile-modal').classList.remove('hidden'); }
+    function closeProfile() { document.getElementById('profile-modal').classList.add('hidden'); }
+    function updateProfileBalance() {
+        let balance = 0;
+        userBets.forEach(b => { if (b.status === 'won') balance += (b.stake * b.odds) - b.stake; else if (b.status === 'lost') balance -= b.stake; });
+        const el = document.getElementById('profile-balance');
+        el.textContent = (balance >= 0 ? '+' : '') + balance.toFixed(2) + ' zł';
+        el.className = 'text-3xl font-black text-center ' + (balance > 0 ? 'text-green-600' : balance < 0 ? 'text-red-600' : 'text-gray-600');
+        document.getElementById('profile-stats').textContent = userBets.length + ' zakładów';
+    }
+    async function doLogout() { await sb.auth.signOut(); currentUser = null; userBets = []; updateUIForUser(); closeProfile(); }
+    async function loadBets() { if (!currentUser) return; const { data, error } = await sb.from('bets').select('*').order('created_at', { ascending: false }); if (!error) userBets = data || []; }
+    async function placeBet() {
+        if (!currentUser) { showToast('Zaloguj się aby postawić zakład!', 'warning'); closeValueModal(); openAuthModal('login'); return; }
+        const stake = parseFloat(document.getElementById('stake-input').value);
+        const odds = parseFloat(document.getElementById('modal-odds-input').value);
+        if (!stake || stake <= 0) { showToast('Podaj stawkę!', 'warning'); return; }
+        if (!odds || odds <= 1) { showToast('Podaj kurs!', 'warning'); return; }
+        const m = matchesData[currentModalData.matchIndex];
+        const { error } = await sb.from('bets').insert({ user_id: currentUser.id, match_home: m.home, match_away: m.away, match_league: m.league_name, bet_type: document.getElementById('modal-bet-type').textContent, odds: odds, stake: stake, potential_win: stake * odds, status: 'pending' });
+        if (error) { showToast('Błąd: ' + error.message, 'error'); return; }
+        await loadBets(); closeValueModal(); showToast('Zakład dodany poprawnie! ✅', 'success');
+    }
+    async function updateBetStatus(betId, status) {
+    await sb.from('bets').update({ status }).eq('id', betId);
+    await loadBets();
+    renderDashboard();
+    const msg = { won: 'Zakład oznaczony jako wygrany ✅', lost: 'Zakład oznaczony jako przegrany ❌', pending: 'Zakład przywrócony do oczekujących ↺' };
+    const type = { won: 'success', lost: 'error', pending: 'info' };
+    showToast(msg[status] || 'Zmieniono status', type[status] || 'info');
+}async function deleteBet(betId) {
+    showConfirm('Usunąć zakład?', 'Ta operacja jest nieodwracalna.', async () => {
+        const { error } = await sb.from('bets').delete().eq('id', betId);
+        if (error) { showToast('Błąd usuwania: ' + error.message, 'error'); return; }
+        await loadBets();
+        renderDashboard();
+        showToast('Zakład usunięty 🗑️', 'success');
+    }, '🗑️');
+}
+    // ─── DASHBOARD ────────────────────────────────────────────────────────────────
+
+    function openDashboard() { if (!currentUser) { openAuthModal('login'); return; } renderDashboard(); document.getElementById('dashboard-modal').classList.remove('hidden'); }
+    function closeDashboard() { document.getElementById('dashboard-modal').classList.add('hidden'); }
+    function renderDashboard() {
+        const total = userBets.length;
+        const totalStake = userBets.reduce((s, b) => s + parseFloat(b.stake), 0);
+        let totalWin = 0, balance = 0, pending = 0, won = 0, lost = 0;
+        userBets.forEach(b => { if (b.status === 'won') { totalWin += b.stake * b.odds; balance += (b.stake * b.odds) - b.stake; won++; } else if (b.status === 'lost') { balance -= b.stake; lost++; } else pending++; });
+        document.getElementById('dash-count').textContent = total;
+        document.getElementById('dash-total-stake').textContent = totalStake.toFixed(2) + ' zł';
+        document.getElementById('dash-total-win').textContent = totalWin.toFixed(2) + ' zł';
+        const b = document.getElementById('dash-balance');
+        b.textContent = (balance >= 0 ? '+' : '') + balance.toFixed(2) + ' zł';
+        b.className = 'text-2xl font-black ' + (balance > 0 ? 'text-green-600' : balance < 0 ? 'text-red-600' : 'text-gray-600');
+        document.getElementById('dash-pending').textContent = pending;
+        document.getElementById('dash-won').textContent = won;
+        document.getElementById('dash-lost').textContent = lost;
+        const list = document.getElementById('bets-list');
+        if (userBets.length === 0) { list.innerHTML = '<p class="text-gray-500 text-center py-4">Brak zakładów.</p>'; return; }
+        let html = '';
+        userBets.forEach(b => {
+            const sc = { pending: 'bg-yellow-100 text-yellow-800', won: 'bg-green-100 text-green-800', lost: 'bg-red-100 text-red-800' };
+            const si = { pending: '⏳', won: '✅', lost: '❌' };
+            const sl = { pending: 'Oczekuje', won: 'Wygrany', lost: 'Przegrany' };
+            const date = new Date(b.created_at).toLocaleDateString('pl-PL');
+            html += '<div class="border border-gray-200 rounded-xl p-3">';
+            html += '<div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="text-[10px] text-gray-500">' + date + ' · ' + (b.match_league || '') + '</div><div class="font-bold text-[#1e3a5f]">' + b.match_home + ' vs ' + b.match_away + '</div><div class="text-sm text-gray-700 mt-1">' + b.bet_type.substring(0, 100) + '</div></div><span class="text-xs font-bold px-2 py-1 rounded ' + sc[b.status] + '">' + si[b.status] + ' ' + sl[b.status] + '</span></div>';
+            html += '<div class="flex flex-wrap gap-3 text-xs text-gray-600 mb-2"><span>Stawka: <b>' + b.stake + ' zł</b></span><span>Kurs: <b>' + b.odds + '</b></span><span>Potencjał: <b>' + b.potential_win.toFixed(2) + ' zł</b></span></div>';
+            if (b.status === 'pending') {
+                html += '<div class="flex gap-2 mt-2"><button onclick="updateBetStatus(\'' + b.id + '\', \'won\')" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-xs font-bold py-2 rounded">✅ Wygrany</button><button onclick="updateBetStatus(\'' + b.id + '\', \'lost\')" class="flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 rounded">❌ Przegrany</button><button onclick="deleteBet(\'' + b.id + '\')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 text-xs font-bold py-2 px-3 rounded">🗑️</button></div>';
+            } else {
+                html += '<div class="flex gap-2 mt-2"><button onclick="updateBetStatus(\'' + b.id + '\', \'pending\')" class="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white text-xs font-bold py-2 rounded">↺ Oczekuje</button><button onclick="deleteBet(\'' + b.id + '\')" class="bg-gray-200 hover:bg-gray-300 text-gray-700 text-xs font-bold py-2 px-3 rounded">🗑️</button></div>';
+            }
+            html += '</div>';
+        });
+        list.innerHTML = html;
+    }
+
+    // ─── DATA LOADING ─────────────────────────────────────────────────────────────
+
+        async function loadLiveData() {
+        try {
+            const files = ['live_ekstra.json', 'live_int.json'];
+            const merged = {};
+
+            for (const file of files) {
+                try {
+                    const r = await fetch(file + '?t=' + Date.now());
+                    if (!r.ok) continue;
+                    const d = await r.json();
+                    if (d.matches) Object.assign(merged, d.matches);
+                } catch (e) {
+                    console.log('Pominięto ' + file);
+                }
+            }
+
+            liveData = merged;
+            renderMatches();
+        } catch (e) { console.log('Brak plików live'); }
+    }
+
+        async function loadInitialData() {
+        try {
+            const files = ['data_ekstra.json', 'data_int.json'];
+            const allMatches = [];
+            const allLeagues = [];
+            const leaguesSeen = new Set();
+
+            for (const file of files) {
+                try {
+                    const r = await fetch(file + '?t=' + Date.now());
+                    if (!r.ok) continue;
+                    const d = await r.json();
+                    if (d.matches) allMatches.push(...d.matches);
+                    if (d.leagues) {
+                        d.leagues.forEach(l => {
+                            if (!leaguesSeen.has(l.id)) {
+                                leaguesSeen.add(l.id);
+                                allLeagues.push(l);
+                            }
+                        });
+                    }
+                } catch (e) {
+                    console.log('Pominięto ' + file + ':', e.message);
+                }
+            }
+
+            matchesData = allMatches;
+            leaguesData = allLeagues;
+            renderSplashLeagues();
+            updateBetSlipUI();
+            loadLiveData();
+            setInterval(loadLiveData, 60000);
+        } catch (e) { console.error(e); }
+    }
+
+    function getLiveInfo(home, away) {
+        const key = home + '_' + away;
+        return liveData[key] || null;
+    }
+
+    // ─── ANALYSIS ─────────────────────────────────────────────────────────────────
+
+    function analyzeMatch(m) {
+        // Piłka nożna
+        if (m.sport !== 'tennis') {
+            const hs = m.home_stats || {}; const as = m.away_stats || {};
+            const avg = (a, b) => Math.round(((a || 0) + (b || 0)) / 2);
+            const avgF = (a, b) => Math.round((((a || 0) + (b || 0)) / 2) * 10) / 10;
+            return { btts: avg(hs.btts_pct, as.btts_pct), o15: avg(hs.over15_pct, as.over15_pct), o25: avg(hs.over25_pct, as.over25_pct), o35: avg(hs.over35_pct, as.over35_pct), corners: avgF(hs.avg_corners, as.avg_corners), yellow: avgF(hs.avg_yellow, as.avg_yellow), shots: avgF(hs.avg_shots, as.avg_shots), xg: avgF(hs.avg_xg, as.avg_xg) };
+        }
+        // Tenis
+        const hs = m.home_stats || {}; const as = m.away_stats || {};
+        const avg = (a, b) => Math.round((((a || 0) + (b || 0)) / 2) * 10) / 10;
+        return {
+            avgGames: avg(hs.avg_games, as.avg_games),
+            bwsPct: Math.round(((hs.both_won_set_pct || 0) + (as.both_won_set_pct || 0)) / 2),
+            tbPct: Math.round(((hs.tiebreak_pct || 0) + (as.tiebreak_pct || 0)) / 2),
+            avgAces: avg(hs.avg_aces, as.avg_aces),
+            avgDF: avg(hs.avg_df, as.avg_df),
+            avgFS: Math.round(((hs.avg_first_serve || 0) + (as.avg_first_serve || 0)) / 2)
+        };
+    }
+
+    // ─── TENNIS VALUE BETS ───────────────────────────────────────────────────────
+
+    function getTennisValueBets(m) {
+        const s = analyzeMatch(m);
+        const b = [];
+        if (s.bwsPct >= 60) b.push({ type: 'Obaj wygrają set', key: 'bws', prob: s.bwsPct, weight: 2, icon: '🏆', display: s.bwsPct + '%' });
+        if (s.tbPct >= 40) b.push({ type: 'Tie-break w meczu', key: 'tb', prob: s.tbPct, weight: 1.5, icon: '⚡', display: s.tbPct + '%' });
+        return b;
+    }
+
+    function getSuggestedOverThreshold(a) {
+        const f = Math.floor(a); const d = a - f;
+        if (d >= 0.5) return f + 0.5;
+        return f - 0.5 > 0 ? f - 0.5 : 0.5;
+    }
+    function estimateOverProb(a, t) {
+        const d = a - t;
+        if (d >= 3) return 88; if (d >= 2) return 80; if (d >= 1.5) return 72; if (d >= 1) return 65;
+        if (d >= 0.5) return 55; if (d >= 0) return 48; if (d >= -0.5) return 38; if (d >= -1) return 28; return 15;
+    }
+
+    function getMatchValueBets(m) {
+        if (m.sport === 'tennis') return getTennisValueBets(m);
+        const s = analyzeMatch(m); const b = [];
+        if (s.btts >= THRESHOLDS.btts) b.push({ type: 'BTTS', key: 'btts', prob: s.btts, weight: WEIGHTS.btts, icon: '🎯', display: s.btts + '%' });
+        if (s.o15 >= THRESHOLDS.over15) b.push({ type: 'Over 1.5', key: 'o15', prob: s.o15, weight: WEIGHTS.over15, icon: '⚽', display: s.o15 + '%' });
+        if (s.o25 >= THRESHOLDS.over25) b.push({ type: 'Over 2.5', key: 'o25', prob: s.o25, weight: WEIGHTS.over25, icon: '⚽', display: s.o25 + '%' });
+        if (s.o35 >= THRESHOLDS.over35) b.push({ type: 'Over 3.5', key: 'o35', prob: s.o35, weight: WEIGHTS.over35, icon: '⚽', display: s.o35 + '%' });
+        if (s.yellow >= THRESHOLDS.yellow) { const t = getSuggestedOverThreshold(s.yellow); b.push({ type: 'Kartki O' + t, key: 'yellow', prob: estimateOverProb(s.yellow, t), weight: WEIGHTS.yellow, icon: '🟨', display: 'śr. ' + s.yellow.toFixed(1) }); }
+        if (s.shots >= THRESHOLDS.shots) { const t = getSuggestedOverThreshold(s.shots); b.push({ type: 'Strzały O' + t, key: 'shots', prob: estimateOverProb(s.shots, t), weight: WEIGHTS.shots, icon: '🎯', display: 'śr. ' + s.shots.toFixed(1) }); }
+        return b;
+    }
+
+    function findValueBets() {
+        const a = [];
+        matchesData.forEach((m, i) => {
+            if (!isWithinDays(m.datetime, 10)) return;
+            getMatchValueBets(m).forEach(b => a.push(Object.assign({}, b, { match: m, matchIndex: i, score: (b.prob / 100) * b.weight * 100 })));
+        });
+        a.sort((x, y) => y.score - x.score);
+        return a.slice(0, 5);
+    }
+
+    // ─── VALUE BETS SECTION ───────────────────────────────────────────────────────
+
+    function renderValueBets() {
+        const c = document.getElementById('value-bets-section'); const b = findValueBets();
+        if (b.length === 0) { c.innerHTML = ''; return; }
+        let html = '<div class="bg-gradient-to-r from-red-600 to-orange-500 text-white p-4 rounded-t-2xl flex items-center gap-2"><span class="text-2xl animate-glow rounded-full">🔥</span><div class="flex-1"><div class="font-black text-lg">TYPY DNIA · Najbliższe 10 dni</div><div class="text-xs opacity-90">Top ' + b.length + '</div></div></div>';
+        html += '<div class="bg-white border-2 border-red-500 border-t-0 rounded-b-2xl p-4"><div class="grid grid-cols-1 md:grid-cols-2 gap-3">';
+        b.forEach(x => {
+            html += '<div class="border-2 border-gray-200 rounded-xl p-3 hover:border-red-500 cursor-pointer transition" onclick="goToMatch(' + x.matchIndex + ', \'' + x.match.league_id + '\')">';
+            html += '<div class="flex items-center justify-between mb-2"><span class="text-[10px] font-bold text-gray-500">' + x.match.league_flag + ' ' + x.match.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">' + x.match.datetime + '</span></div>';
+            html += '<div class="font-bold text-sm text-[#1e3a5f] mb-2">' + x.match.home + ' vs ' + x.match.away + '</div>';
+            html += '<div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="text-2xl">' + x.icon + '</span><span class="font-semibold text-sm text-gray-700">' + x.type + '</span></div><span class="bg-green-100 text-green-700 font-black text-lg px-3 py-1 rounded-lg">' + x.display + '</span></div>';
+            html += '</div>';
+        });
+        html += '</div></div>';
+        c.innerHTML = html;
+    }
+
+    function goToMatch(matchIndex, leagueId) {
+        if (valueOnlyMode) { valueOnlyMode = false; const b = document.getElementById('value-filter-btn'); b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2'; b.innerHTML = '🔥 Value bety'; }
+        if (currentFilter !== 'all' && currentFilter !== leagueId) { currentFilter = leagueId; const label = document.getElementById('current-league'); const league = leaguesData.find(l => l.id === leagueId); if (league) label.textContent = league.flag + ' ' + league.name; renderMatches(); }
+        setTimeout(() => { const el = document.getElementById('match-card-' + matchIndex); if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.style.boxShadow = '0 0 0 3px #dc2626'; setTimeout(() => el.style.boxShadow = '', 2000); } }, 200);
+    }
+
+    // ─── VALUE MODAL ──────────────────────────────────────────────────────────────
+
+    function openValueModal(mi, k, bt, op, ex, av) {
+        const dm = document.getElementById('match-detail-modal');
+        if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = mi; dm.classList.add('hidden'); }
+        currentModalData = { matchIndex: mi, betKey: k, betType: bt, ourProb: op, avgValue: av };
+        document.getElementById('modal-bet-type').textContent = bt;
+        document.getElementById('modal-our-prob').textContent = op + '%';
+        document.getElementById('modal-explanation').textContent = ex || '';
+        document.getElementById('modal-odds-input').value = '';
+        document.getElementById('stake-input').value = '';
+        document.getElementById('modal-result').classList.add('hidden');
+        document.getElementById('place-bet-section').classList.add('hidden');
+        document.getElementById('value-modal').classList.remove('hidden');
+        const sel = document.getElementById('modal-threshold-selector');
+        const btns = document.getElementById('modal-threshold-buttons');
+        if (av !== undefined && av !== null && ['yellow', 'shots'].indexOf(k) >= 0) {
+            sel.classList.remove('hidden');
+            const base = Math.floor(av); const ths = [];
+            for (let i = -2; i <= 2; i++) { const t = base + i + 0.5; if (t > 0) ths.push(t); }
+            const p = k === 'yellow' ? 'Kartki' : 'Strzały'; const def = getSuggestedOverThreshold(av);
+            let html = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="flex gap-2 flex-wrap">';
+            ths.forEach(t => {
+                const pr = estimateOverProb(av, t); const isd = t === def;
+                html += '<button onclick="selectThreshold(' + t + ', ' + pr + ', \'' + p + '\', this)" class="threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 ' + (isd ? 'bg-red-600 text-white border-red-600' : 'bg-white border-gray-300 hover:border-red-500') + '">Over ' + t + '<br><span class="text-[10px] opacity-80">' + pr + '%</span></button>';
+            });
+            html += '</div>';
+            btns.innerHTML = html;
+        } else { sel.classList.add('hidden'); }
+        setTimeout(() => document.getElementById('modal-odds-input').focus(), 100);
+    }
+
+    function selectThreshold(t, p, pr, el) {
+        currentModalData.ourProb = p;
+        document.getElementById('modal-bet-type').textContent = pr + ' Over ' + t;
+        document.getElementById('modal-our-prob').textContent = p + '%';
+        document.querySelectorAll('.threshold-btn').forEach(b => b.className = 'threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 bg-white border-gray-300 hover:border-red-500');
+        el.className = 'threshold-btn px-3 py-2 rounded-lg text-xs font-bold border-2 bg-red-600 text-white border-red-600';
+        calculateModalValue();
+    }
+
+    function closeValueModal() {
+    document.getElementById('value-modal').classList.add('hidden');
+    currentModalData = null;
+    // Jeśli VB został otwarty z detail modala - wróć do niego
+    if (lastMatchDetailIndex !== null) {
+        const idx = lastMatchDetailIndex;
+        lastMatchDetailIndex = null;
+        openMatchDetail(idx);
+    }
+}
+
+    function calculateModalValue() {
+        if (!currentModalData) return;
+        const o = parseFloat(document.getElementById('modal-odds-input').value);
+        if (!o || o <= 1) { document.getElementById('modal-result').classList.add('hidden'); document.getElementById('place-bet-section').classList.add('hidden'); return; }
+        const im = (1 / o) * 100; const e = currentModalData.ourProb - im;
+        document.getElementById('modal-implied').textContent = im.toFixed(1) + '%';
+        const ee = document.getElementById('modal-edge'); const ve = document.getElementById('modal-verdict');
+        if (e > 10) { ee.innerHTML = '<span class="text-green-600">+' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-green-600">🔥 MOCNY VALUE BET!</span>'; }
+        else if (e > 0) { ee.innerHTML = '<span class="text-lime-600">+' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-lime-600">✅ Value bet</span>'; }
+        else if (e > -5) { ee.innerHTML = '<span class="text-orange-600">' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-orange-600">⚠️ Neutralny</span>'; }
+        else { ee.innerHTML = '<span class="text-red-600">' + e.toFixed(1) + '%</span>'; ve.innerHTML = '<span class="text-red-600">❌ Brak value</span>'; }
+        document.getElementById('modal-result').classList.remove('hidden');
+        document.getElementById('place-bet-section').classList.remove('hidden');
+        document.getElementById('bet-msg').textContent = currentUser ? '✅ Zalogowany' : '⚠️ Zaloguj się';
+    }
+
+    // ─── SHOTS / CORNERS MODAL V2 ─────────────────────────────────────────────────
+
+    function openShotsModalV2(mi) {
+        const dm = document.getElementById('match-detail-modal');
+        if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = mi; dm.classList.add('hidden'); }
+        const m = matchesData[mi]; const hs = m.home_stats || {}; const as = m.away_stats || {};
+        const hc = hs.shots_per_match || []; const ac = as.shots_per_match || [];
+        if (hc.length === 0 && ac.length === 0) { showToast('Brak danych o strzałach', 'info'); return; }
+        const ha = hc.length > 0 ? hc.reduce((a, b) => a + b, 0) / hc.length : 0;
+        const aa = ac.length > 0 ? ac.reduce((a, b) => a + b, 0) / ac.length : 0;
+        currentModalData = { matchIndex: mi, betKey: 'shots_v2', hc, ac, ha, aa, totalAvg: ha + aa };
+        document.getElementById('modal-bet-type').textContent = 'Strzały w meczu';
+        document.getElementById('modal-explanation').innerHTML = m.home + ': ' + ha.toFixed(1) + '<br>' + m.away + ': ' + aa.toFixed(1) + '<br><b>Suma:</b> ' + (ha + aa).toFixed(1);
+        document.getElementById('modal-odds-input').value = '';
+        document.getElementById('stake-input').value = '';
+        document.getElementById('modal-result').classList.add('hidden');
+        document.getElementById('place-bet-section').classList.add('hidden');
+        document.getElementById('value-modal').classList.remove('hidden');
+        renderShotsV2Thresholds();
+    }
+    function renderShotsV2Thresholds() {
+        const s = document.getElementById('modal-threshold-selector'); const b = document.getElementById('modal-threshold-buttons');
+        s.classList.remove('hidden'); const d = currentModalData;
+        const ths = [6.5, 8.5, 10.5, 12.5, 14.5, 16.5, 18.5, 20.5, 22.5, 24.5, 26.5, 28.5, 30.5];
+        let h = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="grid grid-cols-3 gap-2">';
+        ths.forEach(t => {
+            const p = Math.min(d.hc.length, d.ac.length); let hits = 0, tot = 0;
+            if (p > 0) { for (let i = 0; i < p; i++) { tot++; if (d.hc[i] + d.ac[i] > t) hits++; } } else { hits = d.totalAvg > t ? 1 : 0; tot = 1; }
+            const pr = tot > 0 ? Math.round((hits / tot) * 100) : 0;
+            const col = pr >= 70 ? 'bg-green-600 text-white' : pr >= 50 ? 'bg-lime-500 text-white' : pr >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
+            h += '<button onclick="selectShotsV2(' + t + ', ' + pr + ', ' + hits + ', ' + tot + ', this)" class="shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white"><div class="text-sm">O' + t + '</div><div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + pr + '%</div><div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + tot + '</div></button>';
+        });
+        h += '</div>';
+        b.innerHTML = h;
+        document.getElementById('modal-our-prob').textContent = '—';
+    }
+    function selectShotsV2(t, p, h, tt, el) {
+        currentModalData.ourProb = p;
+        document.getElementById('modal-bet-type').textContent = 'Strzały Over ' + t;
+        document.getElementById('modal-our-prob').textContent = p + '%';
+        document.querySelectorAll('.shots-v2-btn').forEach(b => b.className = 'shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white');
+        el.className = 'shots-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
+        calculateModalValue();
+    }
+
+    function openCornerModalV2(mi) {
+        const dm = document.getElementById('match-detail-modal');
+        if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = mi; dm.classList.add('hidden'); }
+        const m = matchesData[mi]; const hs = m.home_stats || {}; const as = m.away_stats || {};
+        const hc = hs.corners_per_match || []; const ac = as.corners_per_match || [];
+        if (hc.length === 0 && ac.length === 0) { showToast('Brak danych o cornerach', 'info'); return; }
+        const ha = hc.length > 0 ? hc.reduce((a, b) => a + b, 0) / hc.length : 0;
+        const aa = ac.length > 0 ? ac.reduce((a, b) => a + b, 0) / ac.length : 0;
+        currentModalData = { matchIndex: mi, betKey: 'corners_v2', hc, ac, ha, aa, totalAvg: ha + aa };
+        document.getElementById('modal-bet-type').textContent = 'Cornery w meczu';
+        document.getElementById('modal-explanation').innerHTML = m.home + ': ' + ha.toFixed(1) + '<br>' + m.away + ': ' + aa.toFixed(1) + '<br><b>Suma:</b> ' + (ha + aa).toFixed(1);
+        document.getElementById('modal-odds-input').value = '';
+        document.getElementById('stake-input').value = '';
+        document.getElementById('modal-result').classList.add('hidden');
+        document.getElementById('place-bet-section').classList.add('hidden');
+        document.getElementById('value-modal').classList.remove('hidden');
+        renderCornerV2Thresholds();
+    }
+    function renderCornerV2Thresholds() {
+        const s = document.getElementById('modal-threshold-selector'); const b = document.getElementById('modal-threshold-buttons');
+        s.classList.remove('hidden'); const d = currentModalData;
+        const ths = [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5];
+        let h = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="grid grid-cols-3 gap-2">';
+        ths.forEach(t => {
+            const p = Math.min(d.hc.length, d.ac.length); let hits = 0, tot = 0;
+            if (p > 0) { for (let i = 0; i < p; i++) { tot++; if (d.hc[i] + d.ac[i] > t) hits++; } } else { hits = d.totalAvg > t ? 1 : 0; tot = 1; }
+            const pr = tot > 0 ? Math.round((hits / tot) * 100) : 0;
+            const col = pr >= 70 ? 'bg-green-600 text-white' : pr >= 50 ? 'bg-lime-500 text-white' : pr >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
+            h += '<button onclick="selectCornerV2(' + t + ', ' + pr + ', ' + hits + ', ' + tot + ', this)" class="corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white"><div class="text-sm">O' + t + '</div><div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + pr + '%</div><div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + tot + '</div></button>';
+        });
+        h += '</div>';
+        b.innerHTML = h;
+        document.getElementById('modal-our-prob').textContent = '—';
+    }
+    function selectCornerV2(t, p, h, tt, el) {
+        currentModalData.ourProb = p;
+        document.getElementById('modal-bet-type').textContent = 'Cornery Over ' + t;
+        document.getElementById('modal-our-prob').textContent = p + '%';
+        document.querySelectorAll('.corner-v2-btn').forEach(b => b.className = 'corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white');
+        el.className = 'corner-v2-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
+        calculateModalValue();
+    }
+
+    // ─── SETTINGS ────────────────────────────────────────────────────────────────
+
+    function toggleSettings() {
+        const p = document.getElementById('settings-panel');
+        if (p.classList.contains('hidden')) { p.classList.remove('hidden'); renderThresholdControls(); } else p.classList.add('hidden');
+    }
+    function renderThresholdControls() {
+        const c = document.getElementById('threshold-controls');
+        const cs = [
+            { k: 'btts', l: '🎯 BTTS', mi: 50, ma: 90, u: '%' },
+            { k: 'over15', l: '⚽ O1.5', mi: 60, ma: 95, u: '%' },
+            { k: 'over25', l: '⚽ O2.5', mi: 40, ma: 85, u: '%' },
+            { k: 'over35', l: '⚽ O3.5', mi: 30, ma: 70, u: '%' },
+            { k: 'yellow', l: '🟨 Kartki', mi: 2, ma: 8, s: 0.5, u: '' },
+            { k: 'shots', l: '🎯 Strzały', mi: 8, ma: 20, s: 1, u: '' }
+        ];
+        let html = '';
+        cs.forEach(x => {
+            html += '<div class="mb-4"><div class="flex justify-between text-sm mb-1"><span class="font-semibold">' + x.l + '</span><span class="font-bold text-[#1e3a5f]" id="threshold-val-' + x.k + '">' + THRESHOLDS[x.k] + x.u + '</span></div>';
+            html += '<input type="range" min="' + x.mi + '" max="' + x.ma + '" step="' + (x.s || 1) + '" value="' + THRESHOLDS[x.k] + '" class="w-full" oninput="updateThreshold(\'' + x.k + '\', this.value, \'' + x.u + '\')"></div>';
+        });
+        c.innerHTML = html;
+    }
+    function updateThreshold(k, v, u) { THRESHOLDS[k] = parseFloat(v); document.getElementById('threshold-val-' + k).textContent = v + u; saveThresholds(); renderValueBets(); renderMatches(); }
+
+    // ─── SPLASH LEAGUES ───────────────────────────────────────────────────────────
+
+    function renderSplashLeagues() {
+        const c = document.getElementById('league-cards');
+        if (!leaguesData || leaguesData.length === 0) { c.innerHTML = '<p class="text-gray-500 col-span-2">Ładowanie...</p>'; return; }
+        let h = '<div class="league-card p-5 rounded-2xl flex items-center justify-between md:col-span-2" style="animation-delay: 0s" onclick="enterAppWithLeague(\'all\')"><div class="flex items-center gap-4"><span class="text-4xl">🌍</span><div class="text-left"><div class="font-bold text-lg text-[#1e3a5f]">Wszystkie ligi</div><div class="text-xs text-gray-500">' + matchesData.length + ' meczów</div></div></div><span class="league-arrow text-2xl text-[#1e3a5f]">→</span></div>';
+        const isOdd = leaguesData.length % 2 !== 0;
+        leaguesData.forEach((l, i) => {
+            const cnt = matchesData.filter(m => m.league_id === l.id).length;
+            const isLast = i === leaguesData.length - 1;
+            const cl = isOdd && isLast ? 'md:col-span-2 md:mx-auto md:w-1/2' : '';
+            h += '<div class="league-card p-5 rounded-2xl flex items-center justify-between ' + cl + '" style="animation-delay: ' + ((i + 1) * 0.08) + 's" onclick="enterAppWithLeague(\'' + l.id + '\')"><div class="flex items-center gap-4"><span class="text-4xl">' + l.flag + '</span><div class="text-left"><div class="font-bold text-base text-[#1e3a5f]">' + l.name + '</div><div class="text-xs text-gray-500">' + cnt + ' meczów</div></div></div><span class="league-arrow text-2xl text-[#1e3a5f]">→</span></div>';
+        });
+        c.innerHTML = h;
+    }
+
+    // ─── RENDER HELPERS ───────────────────────────────────────────────────────────
+
+    function getColorClass(p) {
+        if (p >= 70) return { text: 'text-green-600', bar: 'bg-green-500' };
+        if (p >= 50) return { text: 'text-lime-600', bar: 'bg-lime-500' };
+        if (p >= 35) return { text: 'text-orange-600', bar: 'bg-orange-500' };
+        return { text: 'text-red-600', bar: 'bg-red-500' };
+    }
+    function formBadge(f) {
+        const c = { W: 'bg-green-600 border-green-700', D: 'bg-yellow-500 border-yellow-600', L: 'bg-red-600 border-red-700' };
+        return '<span class="inline-flex w-6 h-6 text-[10px] rounded border ' + (c[f] || 'bg-gray-500') + ' text-white items-center justify-center font-bold">' + f + '</span>';
+    }
+    function renderMiniStat(i, l, v) {
+        return '<div class="bg-white border border-gray-200 rounded-lg p-3 flex items-center gap-2" onclick="event.stopPropagation()"><span class="text-lg">' + i + '</span><div><div class="text-[10px] text-gray-500 uppercase">' + l + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div>';
+    }
+
+    function renderStatBox(l, p, mi, k, t, bt) {
+        const c = getColorClass(p);
+        const iv = p >= t;
+        const e = 'Historyczna szansa ' + l + ': ' + p + '%';
+        const m = matchesData[mi];
+        const live = getLiveInfo(m.home, m.away);
+        let resultClass = '';
+        let resultIcon = '';
+        if (live && live.is_finished && live.score) {
+            const parts = live.score.split(':');
+            if (parts.length === 2) {
+                const hg = parseInt(parts[0]); const ag = parseInt(parts[1]);
+                let hit = false;
+                if (k === 'btts') hit = hg > 0 && ag > 0;
+                else if (k === 'o15') hit = (hg + ag) > 1;
+                else if (k === 'o25') hit = (hg + ag) > 2;
+                else if (k === 'o35') hit = (hg + ag) > 3;
+                if (hit) { resultClass = 'bg-green-100 border-2 border-green-500'; resultIcon = '<div class="text-[10px] font-black text-green-700 mb-1">✅ TRAFIONE</div>'; }
+                else { resultClass = 'bg-red-100 border-2 border-red-500'; resultIcon = '<div class="text-[10px] font-black text-red-700 mb-1">❌ NIETRAFIONE</div>'; }
+            }
+        } else if (iv) {
+            resultClass = 'ring-2 ring-red-500 bg-red-50/30';
+        }
+        return '<div class="stat-card p-4 rounded-xl ' + resultClass + '" onclick="event.stopPropagation()">' +
+            resultIcon +
+            (iv && !resultIcon ? '<div class="text-[9px] font-black text-red-600 mb-1">🔥 VALUE BET</div>' : '') +
+            '<div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">' + l + '</div>' +
+            '<div class="text-3xl font-black ' + c.text + '">' + p + '%</div>' +
+            '<div class="mt-2 bg-gray-200 rounded-full h-1"><div class="bar-fill ' + c.bar + '" style="width: ' + p + '%"></div></div>' +
+            '<button onclick="event.stopPropagation();openValueModal(' + mi + ', \'' + k + '\', \'' + bt + '\', ' + p + ', \'' + e + '\', null)" class="mt-3 w-full text-[10px] font-bold py-1.5 rounded ' + (iv ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300') + '">💰 Kurs</button>' +
+            '</div>';
+    }
+
+    function renderMiniStatWithCalc(i, l, v, t, mi, k, a) {
+        const iv = t && a >= t;
+        const s = getSuggestedOverThreshold(a);
+        const p = estimateOverProb(a, s);
+        const pf = k === 'yellow' ? 'Kartki' : 'Strzały';
+        const bt = pf + ' Over ' + s;
+        if (k === 'shots') {
+            return '<div class="bg-white border ' + (iv ? 'border-red-500 bg-red-50/30' : 'border-gray-200') + ' rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">' + i + '</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">' + l + (iv ? ' <span class="text-red-600 font-bold">🔥</span>' : '') + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div><button onclick="event.stopPropagation();openShotsModalV2(' + mi + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded bg-red-600 text-white hover:bg-red-700">🎯 Analiza</button></div>';
+        }
+        return '<div class="bg-white border ' + (iv ? 'border-red-500 bg-red-50/30' : 'border-gray-200') + ' rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">' + i + '</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">' + l + (iv ? ' <span class="text-red-600 font-bold">🔥</span>' : '') + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + v + '</div></div></div><button onclick="event.stopPropagation();openValueModal(' + mi + ', \'' + k + '\', \'' + bt + '\', ' + p + ', \'Średnio ' + a.toFixed(1) + '\', ' + a + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded ' + (iv ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200') + '">💰 Kurs</button></div>';
+    }
+
+    function renderCornerMiniStat(mi, hs, as) {
+        const s = ((hs.avg_corners || 0) + (as.avg_corners || 0)).toFixed(1);
+        const h = (hs.corners_per_match && hs.corners_per_match.length > 0) || (as.corners_per_match && as.corners_per_match.length > 0);
+        return '<div class="bg-white border border-gray-200 rounded-lg p-3" onclick="event.stopPropagation()"><div class="flex items-center gap-2 mb-1"><span class="text-lg">🚩</span><div class="flex-1"><div class="text-[10px] text-gray-500 uppercase">Suma cornerów</div><div class="text-sm font-bold text-[#1e3a5f]">' + s + '</div></div></div><button onclick="event.stopPropagation();openCornerModalV2(' + mi + ')" class="mt-1 w-full text-[9px] font-semibold py-1 rounded ' + (h ? 'bg-orange-500 text-white hover:bg-orange-600' : 'bg-gray-100 text-gray-400') + '">🚩 Analiza</button></div>';
+    }
+
+    // ─── TENNIS STAT BOX ─────────────────────────────────────────────────────────
+
+    function renderTennisStatBox(label, val, suffix, colorClass) {
+        suffix = suffix || '';
+        colorClass = colorClass || 'text-[#1e3a5f]';
+        const display = (val !== undefined && val !== null && val !== 0) ? val + suffix : '—';
+        return '<div class="stat-card p-4 rounded-xl" onclick="event.stopPropagation()">' +
+            '<div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">' + label + '</div>' +
+            '<div class="text-3xl font-black ' + colorClass + '">' + display + '</div>' +
+            '</div>';
+    }
+
+function avgFromArray(arr) {
+    if (!arr || !arr.length) return 0;
+    return arr.reduce((a, b) => a + b, 0) / arr.length;
+}
+
+function getTennisMarketData(matchIndex, market, scope, side) {
+    const m = matchesData[matchIndex];
+    const hs = m.home_stats || {};
+    const as = m.away_stats || {};
+
+    const isAces = market === 'aces';
+    const marketLabel = isAces ? 'Asy' : 'Podwójne błędy';
+
+    const homeArr = isAces ? (hs.aces_per_match || []) : (hs.df_per_match || []);
+    const awayArr = isAces ? (as.aces_per_match || []) : (as.df_per_match || []);
+
+    const homeAvg = isAces ? (hs.avg_aces || avgFromArray(homeArr)) : (hs.avg_df || avgFromArray(homeArr));
+    const awayAvg = isAces ? (as.avg_aces || avgFromArray(awayArr)) : (as.avg_df || avgFromArray(awayArr));
+
+    if (scope === 'match') {
+        const pairCount = Math.min(homeArr.length, awayArr.length);
+        const series = [];
+
+        if (pairCount > 0) {
+            for (let i = 0; i < pairCount; i++) {
+                series.push((homeArr[i] || 0) + (awayArr[i] || 0));
+            }
+        }
+
+        const avg = (homeAvg || 0) + (awayAvg || 0);
+
+        return {
+            label: marketLabel + ' w meczu',
+            explanation:
+                m.home + ': ' + homeAvg.toFixed(1) +
+                '<br>' +
+                m.away + ': ' + awayAvg.toFixed(1) +
+                '<br><b>Suma:</b> ' + avg.toFixed(1),
+            avg,
+            series,
+            marketLabel
+        };
+    }
+
+    const isHome = side === 'home';
+    const playerName = isHome ? m.home : m.away;
+    const arr = isHome ? homeArr : awayArr;
+    const avg = isHome ? homeAvg : awayAvg;
+
+    return {
+        label: playerName + ' · ' + marketLabel,
+        explanation:
+            'Zawodnik: <b>' + playerName + '</b><br>' +
+            'Średnio: <b>' + avg.toFixed(1) + '</b> na mecz',
+        avg,
+        series: arr,
+        marketLabel,
+        playerName
+    };
+}
+
+function getTennisMarketThresholds(market, scope) {
+    if (scope === 'match') {
+        if (market === 'aces') return [3.5, 5.5, 7.5, 9.5, 11.5, 13.5, 15.5, 17.5, 19.5, 21.5, 23.5];
+        return [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5];
+    }
+
+    if (market === 'aces') return [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 12.5];
+    return [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5];
+}
+
+function openTennisMarketModal(matchIndex, market, scope, side) {
+    const dm = document.getElementById('match-detail-modal');
+    if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = matchIndex; dm.classList.add('hidden'); }
+    const data = getTennisMarketData(matchIndex, market, scope, side);
+
+    if ((!data.series || data.series.length === 0) && !data.avg) {
+        alert('Brak danych dla tego rynku.');
+        return;
+    }
+
+    currentModalData = {
+        matchIndex,
+        betKey: 'tennis_' + market + '_' + scope + '_' + (side || 'all'),
+        market,
+        scope,
+        side,
+        avg: data.avg,
+        series: data.series || [],
+        marketLabel: data.marketLabel
+    };
+
+    document.getElementById('modal-bet-type').textContent = data.label;
+    document.getElementById('modal-explanation').innerHTML = data.explanation;
+    document.getElementById('modal-our-prob').textContent = '—';
+    document.getElementById('modal-odds-input').value = '';
+    document.getElementById('stake-input').value = '';
+    document.getElementById('modal-result').classList.add('hidden');
+    document.getElementById('place-bet-section').classList.add('hidden');
+    document.getElementById('value-modal').classList.remove('hidden');
+
+    renderTennisMarketThresholds();
+}
+
+function renderTennisMarketThresholds() {
+    const sel = document.getElementById('modal-threshold-selector');
+    const btns = document.getElementById('modal-threshold-buttons');
+    const d = currentModalData;
+
+    sel.classList.remove('hidden');
+
+    const thresholds = getTennisMarketThresholds(d.market, d.scope);
+
+    let html = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div>';
+    html += '<div class="grid grid-cols-3 gap-2">';
+
+    thresholds.forEach(t => {
+        const total = d.series.length;
+        let hits = 0;
+
+        if (total > 0) {
+            d.series.forEach(v => {
+                if (v > t) hits++;
+            });
+        }
+
+        const prob = total > 0 ? Math.round((hits / total) * 100) : estimateOverProb(d.avg, t);
+        const col =
+            prob >= 70 ? 'bg-green-600 text-white' :
+            prob >= 50 ? 'bg-lime-500 text-white' :
+            prob >= 30 ? 'bg-orange-500 text-white' :
+            'bg-red-500 text-white';
+
+        html +=
+            '<button onclick="selectTennisMarketThreshold(' + t + ', ' + prob + ', this)" class="tennis-market-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white">' +
+                '<div class="text-sm">O' + t + '</div>' +
+                '<div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + prob + '%</div>' +
+                (total > 0 ? '<div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + total + '</div>' : '') +
+            '</button>';
+    });
+
+    html += '</div>';
+    btns.innerHTML = html;
+}
+
+function selectTennisMarketThreshold(threshold, prob, el) {
+    currentModalData.ourProb = prob;
+
+    const m = matchesData[currentModalData.matchIndex];
+    const label = currentModalData.market === 'aces' ? 'Asy' : 'Podwójne błędy';
+
+    let betType = label + ' Over ' + threshold;
+
+    if (currentModalData.scope === 'player') {
+        const playerName = currentModalData.side === 'home' ? m.home : m.away;
+        betType = playerName + ' · ' + label + ' Over ' + threshold;
+    } else {
+        betType = label + ' w meczu Over ' + threshold;
+    }
+
+    document.getElementById('modal-bet-type').textContent = betType;
+    document.getElementById('modal-our-prob').textContent = prob + '%';
+
+    document.querySelectorAll('.tennis-market-btn').forEach(b => {
+        b.className = 'tennis-market-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white';
+    });
+
+    el.className = 'tennis-market-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
+
+    calculateModalValue();
+}
+
+function renderTennisMarketCard(icon, label, value, btnText, onclickCode, accent) {
+    const accentClass = accent ? 'border-red-500 bg-red-50/30' : 'border-gray-200';
+    return (
+        '<div class="bg-white border ' + accentClass + ' rounded-lg p-3" onclick="event.stopPropagation()">' +
+            '<div class="flex items-center gap-2 mb-1">' +
+                '<span class="text-lg">' + icon + '</span>' +
+                '<div class="flex-1">' +
+                    '<div class="text-[10px] text-gray-500 uppercase">' + label + '</div>' +
+                    '<div class="text-sm font-bold text-[#1e3a5f]">' + value + '</div>' +
+                '</div>' +
+            '</div>' +
+            '<button onclick="event.stopPropagation();' + onclickCode + '" class="mt-1 w-full text-[9px] font-semibold py-1 rounded bg-red-600 text-white hover:bg-red-700">' + btnText + '</button>' +
+        '</div>'
+    );
+}
+
+    function renderTennisValueStatBox(label, pct, key, mi) {
+        const c = getColorClass(pct);
+        const isValue = pct >= 60;
+        const e = 'Szansa historyczna: ' + pct + '%';
+        return '<div class="stat-card p-4 rounded-xl ' + (isValue ? 'ring-2 ring-red-500 bg-red-50/30' : '') + '" onclick="event.stopPropagation()">' +
+            (isValue ? '<div class="text-[9px] font-black text-red-600 mb-1">🔥 VALUE BET</div>' : '') +
+            '<div class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">' + label + '</div>' +
+            '<div class="text-3xl font-black ' + c.text + '">' + pct + '%</div>' +
+            '<div class="mt-2 bg-gray-200 rounded-full h-1"><div class="bar-fill ' + c.bar + '" style="width: ' + pct + '%"></div></div>' +
+            '<button onclick="event.stopPropagation();openValueModal(' + mi + ', \'' + key + '\', \'' + label + '\', ' + pct + ', \'' + e + '\', null)" class="mt-3 w-full text-[10px] font-bold py-1.5 rounded ' + (isValue ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-gray-200 text-gray-700 hover:bg-gray-300') + '">💰 Kurs</button>' +
+            '</div>';
+    }
+
+    // ─── TENNIS GAMES MODAL ───────────────────────────────────────────────────────
+
+    function openTennisGamesModal(mi) {
+        const dm = document.getElementById('match-detail-modal');
+        if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = mi; dm.classList.add('hidden'); }
+        const m = matchesData[mi];
+        const hs = m.home_stats || {}; const as = m.away_stats || {};
+        const hc = hs.games_per_match || []; const ac = as.games_per_match || [];
+        const ha = hc.length > 0 ? hc.reduce((a, b) => a + b, 0) / hc.length : (hs.avg_games || 0);
+        const aa = ac.length > 0 ? ac.reduce((a, b) => a + b, 0) / ac.length : (as.avg_games || 0);
+        const totalAvg = ha + aa;
+        currentModalData = { matchIndex: mi, betKey: 'tennis_games', hc, ac, ha, aa, totalAvg };
+        document.getElementById('modal-bet-type').textContent = 'Gemy w meczu';
+        document.getElementById('modal-explanation').innerHTML =
+            m.home + ': śr. ' + ha.toFixed(1) + ' gemów<br>' +
+            m.away + ': śr. ' + aa.toFixed(1) + ' gemów<br>' +
+            '<b>Suma:</b> ' + totalAvg.toFixed(1);
+        document.getElementById('modal-odds-input').value = '';
+        document.getElementById('stake-input').value = '';
+        document.getElementById('modal-result').classList.add('hidden');
+        document.getElementById('place-bet-section').classList.add('hidden');
+        document.getElementById('value-modal').classList.remove('hidden');
+        renderTennisGamesThresholds();
+    }
+
+    function renderTennisGamesThresholds() {
+        const s = document.getElementById('modal-threshold-selector');
+        const b = document.getElementById('modal-threshold-buttons');
+        s.classList.remove('hidden');
+        const d = currentModalData;
+        const ths = [14.5, 16.5, 18.5, 20.5, 22.5, 24.5, 26.5, 28.5, 30.5, 32.5, 34.5, 36.5, 38.5];
+        let h = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg gemów:</div><div class="grid grid-cols-3 gap-2">';
+        ths.forEach(t => {
+            const p = Math.min(d.hc.length, d.ac.length);
+            let hits = 0, tot = 0;
+            if (p > 0) {
+                for (let i = 0; i < p; i++) { tot++; if ((d.hc[i] || 0) + (d.ac[i] || 0) > t) hits++; }
+            } else {
+                hits = d.totalAvg > t ? 1 : 0; tot = 1;
+            }
+            const pr = tot > 0 ? Math.round((hits / tot) * 100) : estimateOverProb(d.totalAvg, t);
+            const col = pr >= 70 ? 'bg-green-600 text-white' : pr >= 50 ? 'bg-lime-500 text-white' : pr >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
+            h += '<button onclick="selectTennisGames(' + t + ', ' + pr + ', this)" class="tg-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white">' +
+                '<div class="text-sm">O' + t + '</div>' +
+                '<div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + pr + '%</div>' +
+                (tot > 1 ? '<div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + tot + '</div>' : '') +
+                '</button>';
+        });
+        h += '</div>';
+        b.innerHTML = h;
+        document.getElementById('modal-our-prob').textContent = '—';
+    }
+
+    function selectTennisGames(t, p, el) {
+        currentModalData.ourProb = p;
+        document.getElementById('modal-bet-type').textContent = 'Gemy Over ' + t;
+        document.getElementById('modal-our-prob').textContent = p + '%';
+        document.querySelectorAll('.tg-btn').forEach(b => b.className = 'tg-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white');
+        el.className = 'tg-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
+        calculateModalValue();
+    }
+
+    // ─── RENDER MATCH CARD ────────────────────────────────────────────────────────
+// ─── TENNIS VB MODAL (asy/DF · mecz/zawodnik) ─────────────────────────────────
+function openTennisVBModal(matchIndex, market) {
+    const dm = document.getElementById('match-detail-modal');
+    if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = matchIndex; dm.classList.add('hidden'); }
+    const m = matchesData[matchIndex], hs = m.home_stats || {}, as = m.away_stats || {};
+    const isAces = market === 'aces';
+    const homeArr = isAces ? (hs.aces_per_match || []) : (hs.df_per_match || []);
+    const awayArr = isAces ? (as.aces_per_match || []) : (as.df_per_match || []);
+    const homeAvg = isAces ? (hs.avg_aces || avgFromArray(homeArr)) : (hs.avg_df || avgFromArray(homeArr));
+    const awayAvg = isAces ? (as.avg_aces || avgFromArray(awayArr)) : (as.avg_df || avgFromArray(awayArr));
+    currentModalData = {
+        kind: 'tennis-vb', matchIndex, market,
+        marketLabel: isAces ? 'Asy' : 'Double Faults',
+        scope: 'match', side: 'home',
+        homeArr, awayArr, homeAvg, awayAvg,
+        ourProb: null, selectedThreshold: null
+    };
+    document.getElementById('modal-odds-input').value = '';
+    document.getElementById('stake-input').value = '';
+    document.getElementById('modal-result').classList.add('hidden');
+    document.getElementById('place-bet-section').classList.add('hidden');
+    document.getElementById('value-modal').classList.remove('hidden');
+    renderTennisVBModal();
+}
+
+function setTennisVBScope(scope) {
+    if (!currentModalData || currentModalData.kind !== 'tennis-vb') return;
+    currentModalData.scope = scope;
+    currentModalData.ourProb = null;
+    currentModalData.selectedThreshold = null;
+    renderTennisVBModal();
+}
+
+function setTennisVBPlayer(side) {
+    if (!currentModalData || currentModalData.kind !== 'tennis-vb') return;
+    currentModalData.side = side;
+    currentModalData.ourProb = null;
+    currentModalData.selectedThreshold = null;
+    renderTennisVBModal();
+}
+
+function getTennisVBSelection() {
+    const d = currentModalData;
+    if (!d || d.kind !== 'tennis-vb') return null;
+    const m = matchesData[d.matchIndex];
+    if (d.scope === 'match') {
+        const pc = Math.min(d.homeArr.length, d.awayArr.length), series = [];
+        for (let i = 0; i < pc; i++) series.push((d.homeArr[i] || 0) + (d.awayArr[i] || 0));
+        const avg = (d.homeAvg || 0) + (d.awayAvg || 0);
+        return {
+            label: d.marketLabel + ' w meczu',
+            avg, series,
+            meta: m.home + ': ' + d.homeAvg.toFixed(1) + ' · ' + m.away + ': ' + d.awayAvg.toFixed(1) + ' · suma: ' + avg.toFixed(1)
+        };
+    }
+    const isHome = d.side === 'home', name = isHome ? m.home : m.away;
+    const avg = isHome ? d.homeAvg : d.awayAvg, series = isHome ? d.homeArr : d.awayArr;
+    return {
+        label: name + ' · ' + d.marketLabel,
+        avg, series,
+        meta: 'zawodnik: ' + name + ' · średnio: ' + avg.toFixed(1)
+    };
+}
+
+function renderTennisVBModal() {
+    const d = currentModalData;
+    if (!d || d.kind !== 'tennis-vb') return;
+    const m = matchesData[d.matchIndex], sel = getTennisVBSelection();
+    const sBtn = (a) => a ? 'bg-red-600 text-white border-red-600' : 'bg-white text-gray-700 border-gray-300 hover:border-red-500';
+    const pBtn = (a) => a ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-700 border-gray-300 hover:border-blue-500';
+    
+    let expl = '<div class="mb-3"><div class="text-xs text-gray-600 mb-2 font-semibold">Zakres analizy:</div><div class="flex gap-2">';
+    expl += '<button onclick="setTennisVBScope(\'match\')" class="px-3 py-2 rounded-lg text-xs font-bold border-2 ' + sBtn(d.scope === 'match') + '">🏟️ W meczu</button>';
+    expl += '<button onclick="setTennisVBScope(\'player\')" class="px-3 py-2 rounded-lg text-xs font-bold border-2 ' + sBtn(d.scope === 'player') + '">👤 Zawodnik</button>';
+    expl += '</div></div>';
+    
+    if (d.scope === 'player') {
+        expl += '<div class="mb-3"><div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz zawodnika:</div><div class="flex gap-2 flex-wrap">';
+        expl += '<button onclick="setTennisVBPlayer(\'home\')" class="px-3 py-2 rounded-lg text-xs font-bold border-2 ' + pBtn(d.side === 'home') + '">' + m.home + '</button>';
+        expl += '<button onclick="setTennisVBPlayer(\'away\')" class="px-3 py-2 rounded-lg text-xs font-bold border-2 ' + pBtn(d.side === 'away') + '">' + m.away + '</button>';
+        expl += '</div></div>';
+    }
+    
+    expl += '<div class="text-xs text-gray-500 mt-2">' + sel.meta + '</div>';
+    
+    document.getElementById('modal-bet-type').textContent = sel.label;
+    document.getElementById('modal-explanation').innerHTML = expl;
+    document.getElementById('modal-our-prob').textContent = d.ourProb ? d.ourProb + '%' : '—';
+    document.getElementById('modal-result').classList.add('hidden');
+    document.getElementById('place-bet-section').classList.add('hidden');
+    
+    const isAces = d.market === 'aces';
+    const ths = d.scope === 'match'
+        ? (isAces ? [5.5, 7.5, 9.5, 11.5, 13.5, 15.5, 17.5, 19.5, 21.5, 23.5] : [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5])
+        : (isAces ? [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 12.5] : [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5]);
+    
+    const thSel = document.getElementById('modal-threshold-selector'), thBtns = document.getElementById('modal-threshold-buttons');
+    thSel.classList.remove('hidden');
+    
+    let html = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="grid grid-cols-3 gap-2">';
+    ths.forEach(t => {
+        const total = sel.series.length;
+        let hits = 0;
+        if (total > 0) sel.series.forEach(v => { if (v > t) hits++; });
+        const prob = total > 0 ? Math.round((hits / total) * 100) : estimateOverProb(sel.avg, t);
+        const col = prob >= 70 ? 'bg-green-600 text-white' : prob >= 50 ? 'bg-lime-500 text-white' : prob >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
+        const active = d.selectedThreshold === t;
+        html += '<button onclick="selectTennisVBThreshold(' + t + ',' + prob + ',this)" class="tvb-btn px-2 py-2 rounded-lg text-xs font-bold border-2 ' + (active ? 'border-red-600 bg-red-50' : 'border-gray-300 bg-white hover:border-red-500') + '"><div class="text-sm">O' + t + '</div><div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + prob + '%</div>' + (total > 0 ? '<div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + total + '</div>' : '') + '</button>';
+    });
+    html += '</div>';
+    thBtns.innerHTML = html;
+}
+
+function selectTennisVBThreshold(threshold, prob, el) {
+    if (!currentModalData || currentModalData.kind !== 'tennis-vb') return;
+    currentModalData.selectedThreshold = threshold;
+    currentModalData.ourProb = prob;
+    const sel = getTennisVBSelection();
+    document.getElementById('modal-bet-type').textContent = sel.label + ' Over ' + threshold;
+    document.getElementById('modal-our-prob').textContent = prob + '%';
+    document.querySelectorAll('.tvb-btn').forEach(b => b.className = 'tvb-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 bg-white hover:border-red-500');
+    el.className = 'tvb-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
+    calculateModalValue();
+}
+function renderMatchCard(m, i) {
+    const hs = m.home_stats || {};
+    const as = m.away_stats || {};
+    const isFav = isFavorite(m.match_id);
+    const live = getLiveInfo(m.home, m.away);
+    const isTennis = m.sport === 'tennis';
+
+    const vb = getMatchValueBets(m) || [];
+    const isHot = vb.length >= 2;
+
+    let liveBadge = '';
+    if (live) {
+        if (live.is_live) {
+            liveBadge = '<div class="bg-red-600 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2"><span class="animate-glow inline-block w-3 h-3 bg-white rounded-full"></span> 🔴 MECZ TRWA! · ' + live.score + ' · ' + (live.stage || '') + '</div>';
+        } else if (live.is_finished) {
+            liveBadge = '<div class="bg-gray-700 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2">⚽ KONIEC · ' + live.score + '</div>';
+        }
+    }
+
+    let html = '<div id="match-card-' + i + '" class="bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" onclick="openMatchDetail(' + i + ')">';
+    
+    if (liveBadge) html += liveBadge;
+    if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block">🔥</span> HOT MATCH · ' + vb.length + ' value bets</div>';
+
+    // Header (Liga i Data)
+    html += '<div class="flex justify-between items-center px-4 py-2 bg-gray-50 border-b border-gray-200">';
+    html += '<span class="text-[10px] font-bold text-gray-600 tracking-wider">' + (isTennis ? '🎾 ' : (m.league_flag || '🏆') + ' ') + (m.league_name || '').toUpperCase() + '</span>';
+    html += '<div class="flex items-center gap-2"><span class="fav-star text-lg" onclick="toggleFavorite(\'' + m.match_id + '\', event)" title="Ulubione">' + (isFav ? '⭐' : '☆') + '</span><span class="fav-star text-sm" onclick="event.stopPropagation();shareMatch(\'' + m.match_id + '\')" title="Udostępnij">📤</span><span class="text-[10px] text-gray-500">📅 ' + (m.datetime || 'TBA') + '</span></div></div>';
+
+    // Drużyny / Zawodnicy
+    html += '<div class="p-4 grid grid-cols-3 items-center">';
+    html += '<div class="text-left"><div class="font-bold text-lg mb-2 text-[#1e3a5f]">' + m.home + '</div>';
+    if (!isTennis) html += '<div class="flex gap-1">' + (hs.form || []).map(f => formBadge(f)).join('') + '</div>';
+    else html += '<div class="text-xs text-gray-500">' + (hs.ranking ? '🎾 #' + hs.ranking : '') + '</div>';
+    html += '</div>';
+    html += '<div class="flex justify-center"><div class="w-12 h-12 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-xs text-gray-500 font-bold">VS</div></div>';
+    html += '<div class="text-right"><div class="font-bold text-lg mb-2 text-[#1e3a5f]">' + m.away + '</div>';
+    if (!isTennis) html += '<div class="flex gap-1 justify-end">' + (as.form || []).map(f => formBadge(f)).join('') + '</div>';
+    else html += '<div class="text-xs text-gray-500 text-right">' + (as.ranking ? '🎾 #' + as.ranking : '') + '</div>';
+    html += '</div></div>';
+
+    // ──────────────────────────────────────────
+    // LOGIKA TENISOWA - TYLKO STATYSTYKI
+    // ──────────────────────────────────────────
+    if (isTennis) {
+        const s = analyzeMatch(m);
+        const totalGamesAvg = (hs.avg_games || 0) + (as.avg_games || 0);
+
+        // Główne statystyki
+        html += '<div class="px-4 pb-4 grid grid-cols-2 md:grid-cols-3 gap-3">';
+        html += renderTennisStatBox('🎾 Śr. suma gemów', totalGamesAvg ? totalGamesAvg.toFixed(1) : null);
+        html += renderTennisStatBox('🏆 Obaj wygrają set', s.bwsPct || null, '%');
+        html += renderTennisStatBox('⚡ Tie-break', s.tbPct || null, '%');
+        html += '</div>';
+
+        // Statystyki zawodników - asy i DF jeden pod drugim per zawodnik
+        html += '<div class="px-4 pb-3 grid grid-cols-2 gap-3">';
+        // Zawodnik A (home)
+        html += '<div class="space-y-2">';
+        html += '<div class="text-[10px] font-bold text-gray-500 uppercase text-center">' + m.home + '</div>';
+        html += renderMiniStat('🔥', 'Asy', (hs.avg_aces || 0).toFixed(1));
+        html += renderMiniStat('❌', 'Double Faults', (hs.avg_df || 0).toFixed(1));
+        html += '</div>';
+        // Zawodnik B (away)
+        html += '<div class="space-y-2">';
+        html += '<div class="text-[10px] font-bold text-gray-500 uppercase text-center">' + m.away + '</div>';
+        html += renderMiniStat('🔥', 'Asy', (as.avg_aces || 0).toFixed(1));
+        html += renderMiniStat('❌', 'Double Faults', (as.avg_df || 0).toFixed(1));
+        html += '</div>';
+        html += '</div>';
+
+        // Przycisk "Zobacz więcej" na środku
+        html += '<div class="px-4 pb-4 pt-2">';
+        html += '<button onclick="event.stopPropagation();openMatchDetail(' + i + ')" class="w-full py-3 bg-[#1e3a5f] hover:bg-red-600 text-white font-bold text-sm rounded-xl transition flex items-center justify-center gap-2">👁️ Zobacz więcej i sprawdź Value</button>';
+        html += '</div>';
+    // ──────────────────────────────────────────
+    // LOGIKA PIŁKI NOŻNEJ
+    // ──────────────────────────────────────────
+    } else {
+        const s = analyzeMatch(m);
+        html += '<div class="px-4 pb-4 grid grid-cols-2 md:grid-cols-4 gap-3">';
+        html += renderStatBox('BTTS', s.btts, i, 'btts', THRESHOLDS.btts, 'BTTS');
+        html += renderStatBox('O1.5', s.o15, i, 'o15', THRESHOLDS.over15, 'Over 1.5');
+        html += renderStatBox('O2.5', s.o25, i, 'o25', THRESHOLDS.over25, 'Over 2.5');
+        html += renderStatBox('O3.5', s.o35, i, 'o35', THRESHOLDS.over35, 'Over 3.5');
+        html += '</div>';
+
+        html += '<div class="px-4 pb-3 grid grid-cols-2 md:grid-cols-6 gap-2">';
+        html += renderMiniStat('⚽', 'Śr. strzelone', (((hs.avg_goals_scored || 0) + (as.avg_goals_scored || 0)) / 2).toFixed(2));
+        html += renderMiniStat('🥅', 'Śr. stracone', (((hs.avg_goals_conceded || 0) + (as.avg_goals_conceded || 0)) / 2).toFixed(2));
+        html += renderCornerMiniStat(i, hs, as);
+        html += renderMiniStatWithCalc('🟨', 'Śr. kartki', s.yellow, THRESHOLDS.yellow, i, 'yellow', s.yellow);
+        html += renderMiniStatWithCalc('🎯', 'Śr. strzały', s.shots, THRESHOLDS.shots, i, 'shots', s.shots);
+        html += renderMiniStat('📊', 'xG', s.xg);
+        html += '</div>';
+        
+        html += '<div class="px-4 pb-3 text-center text-xs text-blue-600 font-semibold border-t border-gray-200 pt-2">👆 Kliknij aby zobaczyć pełne szczegóły meczu</div>';
+    }
+
+    html += '</div>'; // Zamknięcie karty
+    return html;
+}
+
+
+    // ─── MATCH DETAIL ─────────────────────────────────────────────────────────────
+
+    function openMatchDetail(matchIndex) {
+        const m = matchesData[matchIndex];
+        if (!m) return;
+        const hs = m.home_stats || {};
+        const as = m.away_stats || {};
+        const s = analyzeMatch(m);
+        const live = getLiveInfo(m.home, m.away);
+        const isTennis = m.sport === 'tennis';
+
+        document.getElementById('md-title').textContent = m.home + ' vs ' + m.away;
+
+        let liveBadge = '';
+        let isFinished = false;
+        let matchScore = null;
+
+        if (live) {
+            if (live.is_live) {
+                liveBadge = '<div class="bg-red-600 text-white text-center py-3 rounded-xl mb-4 font-black text-lg animate-pulse">🔴 MECZ TRWA! · ' + live.score + '</div>';
+            } else if (live.is_finished) {
+                liveBadge = '<div class="bg-gray-700 text-white text-center py-3 rounded-xl mb-4 font-black text-lg">⚽ KONIEC · ' + live.score + '</div>';
+                isFinished = true;
+                const pp = live.score.split(':');
+                if (pp.length === 2) matchScore = { hg: parseInt(pp[0]), ag: parseInt(pp[1]) };
+            }
+        }
+
+        let html = liveBadge;
+
+        // Header
+        html += '<div class="grid grid-cols-3 items-center gap-4 mb-6 p-4 bg-gray-50 rounded-xl">';
+        html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f] mb-2">' + m.home + '</div>';
+        if (!isTennis) html += '<div class="flex gap-1 justify-center">' + (hs.form || []).map(f => formBadge(f)).join('') + '</div>';
+        else html += '<div class="text-xs text-gray-500">' + (hs.ranking ? '#' + hs.ranking : '') + '</div>';
+        html += '</div>';
+        html += '<div class="text-center"><div class="text-3xl font-black text-gray-400">VS</div><div class="text-xs text-gray-500 mt-2">' + m.datetime + '</div><div class="text-[10px] text-gray-500">' + (m.league_flag || '') + ' ' + m.league_name + '</div></div>';
+        html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f] mb-2">' + m.away + '</div>';
+        if (!isTennis) html += '<div class="flex gap-1 justify-center">' + (as.form || []).map(f => formBadge(f)).join('') + '</div>';
+        else html += '<div class="text-xs text-gray-500">' + (as.ranking ? '#' + as.ranking : '') + '</div>';
+        html += '</div></div>';
+
+        // ── ZAKOŃCZONY MECZ PIŁKA ──
+        if (isFinished && matchScore && !isTennis) {
+            const total = matchScore.hg + matchScore.ag;
+            const btts = matchScore.hg > 0 && matchScore.ag > 0;
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">✅ Weryfikacja</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
+            [
+                { l: 'BTTS', h: btts, p: s.btts, i: btts ? 'TAK' : 'NIE' },
+                { l: 'O1.5', h: total > 1, p: s.o15, i: total + ' gole' },
+                { l: 'O2.5', h: total > 2, p: s.o25, i: total + ' gole' },
+                { l: 'O3.5', h: total > 3, p: s.o35, i: total + ' gole' }
+            ].forEach(c => {
+                html += '<div class="p-4 rounded-xl border-2 ' + (c.h ? 'bg-green-100 border-green-500' : 'bg-red-100 border-red-500') + '">';
+                html += '<div class="text-[10px] font-black mb-1 ' + (c.h ? 'text-green-700' : 'text-red-700') + '">' + (c.h ? '✅' : '❌') + '</div>';
+                html += '<div class="text-[10px] text-gray-600 uppercase mb-1">' + c.l + '</div>';
+                html += '<div class="text-2xl font-black ' + (c.h ? 'text-green-600' : 'text-red-600') + '">' + c.p + '%</div>';
+                html += '<div class="text-[10px] text-gray-500">' + c.i + '</div></div>';
+            });
+            html += '</div></div>';
+            html += '<div class="bg-gray-50 rounded-xl p-4 mb-6 text-center"><div class="text-3xl font-black">' + matchScore.hg + ' : ' + matchScore.ag + '</div></div>';
+        }
+
+         // ── TENIS DETAIL (z przyciskami VB) ──
+    if (isTennis) {
+        const totalGames = (hs.avg_games || 0) + (as.avg_games || 0);
+        const homeAces = hs.avg_aces || 0, awayAces = as.avg_aces || 0, totalAces = homeAces + awayAces;
+        const homeDf = hs.avg_df || 0, awayDf = as.avg_df || 0, totalDf = homeDf + awayDf;
+
+        // ─── KLUCZOWE STATYSTYKI TENISOWE ───
+        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🎯 Kluczowe statystyki tenisowe</h4>';
+        html += '<div class="text-xs text-gray-500 mb-3">Skuteczność serwisu, break pointów i punktów przy własnym podaniu to najważniejsze wskaźniki w tenisie.</div>';
+        
+        html += '<div class="grid grid-cols-3 gap-2 mb-2 text-xs font-bold text-gray-600 uppercase">';
+        html += '<div class="text-right">' + m.home + '</div>';
+        html += '<div class="text-center">Statystyka</div>';
+        html += '<div class="text-left">' + m.away + '</div>';
+        html += '</div>';
+
+        const tennisKeyRows = [
+            { l: '📈 % 1. serwis (skuteczność)', a: hs.avg_first_serve_pct || hs.avg_first_serve, b: as.avg_first_serve_pct || as.avg_first_serve, u: '%', hi: 65 },
+            { l: '🎯 % wygranych przy 1. serwisie', a: hs.avg_first_serve_won_pct, b: as.avg_first_serve_won_pct, u: '%', hi: 70 },
+            { l: '💪 % wygranych przy 2. serwisie', a: hs.avg_second_serve_won_pct, b: as.avg_second_serve_won_pct, u: '%', hi: 50 },
+            { l: '🛡️ % obronionych break pointów', a: hs.avg_bp_saved_pct, b: as.avg_bp_saved_pct, u: '%', hi: 60 },
+            { l: '⚡ % wykorzystanych break pointów', a: hs.avg_bp_converted_pct, b: as.avg_bp_converted_pct, u: '%', hi: 40 },
+            { l: '🏆 % wygranych gemów serwisowych', a: hs.avg_service_games_won_pct, b: as.avg_service_games_won_pct, u: '%', hi: 80 },
+            { l: '🔄 % przełamanych gemów rywala', a: hs.avg_return_games_won_pct, b: as.avg_return_games_won_pct, u: '%', hi: 25 }
+        ];
+
+        tennisKeyRows.forEach(r => {
+            const am = r.a === undefined || r.a === null, bm = r.b === undefined || r.b === null;
+            const av = am ? 0 : r.a, bv = bm ? 0 : r.b;
+            const ab = !am && !bm && av > bv, bb = !am && !bm && bv > av;
+            const aHi = !am && av >= r.hi, bHi = !bm && bv >= r.hi;
+            
+            const aCls = am ? 'text-red-500' : (ab ? 'text-green-600 font-bold' : 'text-gray-700');
+            const bCls = bm ? 'text-red-500' : (bb ? 'text-green-600 font-bold' : 'text-gray-700');
+            const aBg = aHi ? 'bg-green-50 border border-green-300' : 'bg-gray-50';
+            const bBg = bHi ? 'bg-green-50 border border-green-300' : 'bg-gray-50';
+            
+            html += '<div class="grid grid-cols-3 items-center gap-2 mb-2">';
+            html += '<div class="text-right p-2 rounded ' + aBg + ' ' + aCls + '">' + (am ? '— brak' : av + (r.u || '')) + (aHi ? ' 🔥' : '') + '</div>';
+            html += '<div class="text-center text-xs text-gray-600 font-semibold">' + r.l + '</div>';
+            html += '<div class="text-left p-2 rounded ' + bBg + ' ' + bCls + '">' + (bm ? '— brak' : bv + (r.u || '')) + (bHi ? ' 🔥' : '') + '</div>';
+            html += '</div>';
+        });
+        html += '</div>';
+
+        // ─── PROGNOZA MECZOWA ───
+        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🎾 Prognoza meczu</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-3">';
+        html += '<div class="stat-card p-4 rounded-xl"><div class="text-[10px] text-gray-500 uppercase mb-1">🎾 Śr. suma gemów</div><div class="text-3xl font-black text-[#1e3a5f]">' + (totalGames ? totalGames.toFixed(1) : '—') + '</div><button onclick="openTennisGamesModal(' + matchIndex + ')" class="mt-2 w-full text-[10px] font-bold py-1.5 rounded bg-blue-600 text-white hover:bg-blue-700">🎾 Sprawdź VB gemów</button></div>';
+        if (s.bwsPct > 0) html += renderTennisValueStatBox('🏆 Obaj wygrają set', s.bwsPct, 'bws', matchIndex);
+        else html += renderTennisStatBox('🏆 Obaj wygrają set', null);
+        if (s.tbPct > 0) html += renderTennisValueStatBox('⚡ Tie-break', s.tbPct, 'tb', matchIndex);
+        else html += renderTennisStatBox('⚡ Tie-break', null);
+        html += '</div></div>';
+
+        // ─── ASY I DF Z VB ───
+        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🎯 Asy i Double Faults - sprawdź Value Bet</h4><div class="grid grid-cols-2 gap-3">';
+
+        // Asy
+        html += '<div class="bg-white border-2 border-gray-200 rounded-xl p-4" onclick="event.stopPropagation()">';
+        html += '<div class="text-center text-3xl mb-1">🔥</div>';
+        html += '<div class="text-center text-[10px] text-gray-500 uppercase mb-1">Asy w meczu</div>';
+        html += '<div class="text-center text-2xl font-black text-[#1e3a5f] mb-1">' + totalAces.toFixed(1) + '</div>';
+        html += '<div class="text-center text-[10px] text-gray-500 mb-3">' + m.home + ': ' + homeAces.toFixed(1) + ' · ' + m.away + ': ' + awayAces.toFixed(1) + '</div>';
+        html += '<button onclick="openTennisVBModal(' + matchIndex + ',\'aces\')" class="w-full text-xs font-bold py-2 rounded-lg bg-red-600 text-white hover:bg-red-700">💰 Sprawdź VB (mecz / zawodnik)</button>';
+        html += '</div>';
+
+        // DF
+        html += '<div class="bg-white border-2 border-gray-200 rounded-xl p-4" onclick="event.stopPropagation()">';
+        html += '<div class="text-center text-3xl mb-1">❌</div>';
+        html += '<div class="text-center text-[10px] text-gray-500 uppercase mb-1">Double Faults w meczu</div>';
+        html += '<div class="text-center text-2xl font-black text-[#1e3a5f] mb-1">' + totalDf.toFixed(1) + '</div>';
+        html += '<div class="text-center text-[10px] text-gray-500 mb-3">' + m.home + ': ' + homeDf.toFixed(1) + ' · ' + m.away + ': ' + awayDf.toFixed(1) + '</div>';
+        html += '<button onclick="openTennisVBModal(' + matchIndex + ',\'df\')" class="w-full text-xs font-bold py-2 rounded-lg bg-red-600 text-white hover:bg-red-700">💰 Sprawdź VB (mecz / zawodnik)</button>';
+        html += '</div>';
+
+        html += '</div></div>';
+
+        // ─── FORMA ───
+        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📋 Forma z ostatnich meczów</h4><div class="grid grid-cols-2 gap-4"><div><div class="font-semibold text-[#1e3a5f] mb-2">' + m.home + '</div><div class="flex gap-1 flex-wrap">' + (hs.form || []).map(f => formBadge(f)).join('') + '</div></div><div><div class="font-semibold text-[#1e3a5f] mb-2">' + m.away + '</div><div class="flex gap-1 flex-wrap">' + (as.form || []).map(f => formBadge(f)).join('') + '</div></div></div></div>';
+
+        // ─── OSTATNIE MECZE (jeśli są w danych) ───
+        if ((hs.recent_matches && hs.recent_matches.length) || (as.recent_matches && as.recent_matches.length)) {
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📅 Ostatnie mecze</h4><div class="grid grid-cols-2 gap-4">';
+            
+            [
+                { name: m.home, matches: hs.recent_matches || [] },
+                { name: m.away, matches: as.recent_matches || [] }
+            ].forEach(p => {
+                html += '<div><div class="font-semibold text-[#1e3a5f] mb-2 text-sm">' + p.name + '</div>';
+                if (!p.matches.length) html += '<div class="text-xs text-gray-400">Brak danych</div>';
+                else {
+                    p.matches.slice(0, 8).forEach(rm => {
+                        const wCls = rm.result === 'W' ? 'bg-green-100 text-green-800 border-green-500' : 'bg-red-100 text-red-800 border-red-500';
+                        html += '<div class="border ' + wCls + ' rounded-lg p-2 mb-1 text-xs">';
+                        html += '<div class="flex justify-between"><span class="font-bold">' + rm.result + ' vs ' + rm.opponent + '</span><span>' + (rm.score || '') + '</span></div>';
+                        html += '<div class="text-[10px] opacity-75">' + (rm.tournament || '') + ' · ' + (rm.surface || '') + ' · ' + (rm.date || '') + '</div>';
+                        html += '</div>';
+                    });
+                }
+                html += '</div>';
+            });
+            
+            html += '</div></div>';
+        }
+
+        // ── PIŁKA NOŻNA DETAIL ──
+        } else {
+            const vb = getMatchValueBets(m);
+            if (vb.length > 0) {
+                html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🔥 Value bety</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-2">';
+                vb.forEach(b => { html += '<div class="border-2 border-red-500 bg-red-50 rounded-lg p-3 text-center"><div class="text-2xl mb-1">' + b.icon + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + b.type + '</div><div class="text-lg font-black text-red-600">' + b.display + '</div></div>'; });
+                html += '</div></div>';
+            }
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📊 Prognoza</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
+            html += renderStatBoxDetail('BTTS', s.btts, THRESHOLDS.btts) + renderStatBoxDetail('O1.5', s.o15, THRESHOLDS.over15) + renderStatBoxDetail('O2.5', s.o25, THRESHOLDS.over25) + renderStatBoxDetail('O3.5', s.o35, THRESHOLDS.over35);
+            html += '</div></div>';
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">⚖️ Porównanie</h4><div class="space-y-2">';
+            [
+                { l: '⚽ Gole strz.', a: hs.avg_goals_scored, b: as.avg_goals_scored },
+                { l: '🥅 Gole strac.', a: hs.avg_goals_conceded, b: as.avg_goals_conceded, inv: 1 },
+                { l: '🎯 BTTS', a: hs.btts_pct, b: as.btts_pct, u: '%' },
+                { l: '⚽ O2.5', a: hs.over25_pct, b: as.over25_pct, u: '%' },
+                { l: '🚩 Cornery', a: hs.avg_corners, b: as.avg_corners },
+                { l: '🟨 Kartki', a: hs.avg_yellow, b: as.avg_yellow, inv: 1 },
+                { l: '🎯 Strzały', a: hs.avg_shots, b: as.avg_shots },
+                { l: '📊 xG', a: hs.avg_xg, b: as.avg_xg }
+            ].forEach(r => {
+                const am = r.a === undefined || r.a === null; const bm = r.b === undefined || r.b === null;
+                const av = am ? 0 : r.a; const bv = bm ? 0 : r.b;
+                const ab = !am && !bm && (r.inv ? av < bv : av > bv);
+                const bb = !am && !bm && (r.inv ? bv < av : bv > av);
+                html += '<div class="grid grid-cols-3 items-center gap-4 p-2 bg-gray-50 rounded">';
+                html += '<div class="text-right p-1 rounded ' + (am ? 'text-red-500' : ab ? 'text-green-600 font-bold' : 'text-gray-700') + '">' + (am ? '—' : av + (r.u || '')) + '</div>';
+                html += '<div class="text-center text-xs text-gray-500">' + r.l + '</div>';
+                html += '<div class="text-left p-1 rounded ' + (bm ? 'text-red-500' : bb ? 'text-green-600 font-bold' : 'text-gray-700') + '">' + (bm ? '—' : bv + (r.u || '')) + '</div>';
+                html += '</div>';
+            });
+            html += '</div></div>';
+        }
+
+        document.getElementById('md-content').innerHTML = html;
+        document.getElementById('match-detail-modal').classList.remove('hidden');
+    }
+
+    function renderStatBoxDetail(label, pct, threshold) {
+        const c = getColorClass(pct); const isValue = pct >= threshold;
+        return '<div class="stat-card p-4 rounded-xl ' + (isValue ? 'ring-2 ring-red-500 bg-red-50/30' : '') + '">' +
+            (isValue ? '<div class="text-[9px] font-black text-red-600 mb-1">🔥 VALUE</div>' : '') +
+            '<div class="text-[10px] text-gray-500 uppercase mb-1">' + label + '</div>' +
+            '<div class="text-3xl font-black ' + c.text + '">' + pct + '%</div>' +
+            '<div class="mt-2 bg-gray-200 rounded-full h-1"><div class="bar-fill ' + c.bar + '" style="width: ' + pct + '%"></div></div></div>';
+    }
+
+    function closeMatchDetail() { document.getElementById('match-detail-modal').classList.add('hidden'); }
+
+    // ─── FINISHED ─────────────────────────────────────────────────────────────────
+function openFinishedMatchStats(homeName, awayName) {
+    const key = homeName + '_' + awayName;
+    const info = liveData[key];
+    if (!info) return;
+    
+    const stats = info.match_stats;
+    const parts = (info.score || '').split(':');
+    const hg = parseInt(parts[0]);
+    const ag = parseInt(parts[1]);
+    
+    document.getElementById('md-title').textContent = homeName + ' vs ' + awayName;
+    
+    let html = '<div class="bg-gray-700 text-white text-center py-3 rounded-xl mb-4 font-black text-lg">⚽ KONIEC · ' + info.score + '</div>';
+    
+    // Header
+    html += '<div class="grid grid-cols-3 items-center gap-4 mb-6 p-4 bg-gray-50 rounded-xl">';
+    html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f]">' + homeName + '</div></div>';
+    html += '<div class="text-center"><div class="text-3xl font-black">' + (isNaN(hg) ? '?' : hg) + ' : ' + (isNaN(ag) ? '?' : ag) + '</div><div class="text-xs text-gray-500 mt-2">' + (info.datetime || '') + '</div><div class="text-[10px] text-gray-500">' + (info.league_flag || '') + ' ' + (info.league_name || '') + '</div></div>';
+    html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f]">' + awayName + '</div></div>';
+    html += '</div>';
+    
+    // Statystyki meczu
+    if (stats) {
+        html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📊 Statystyki meczu</h4>';
+        
+        const statLabels = [
+            { key: 'possession', label: '⚽ Posiadanie piłki', unit: '%' },
+            { key: 'shots', label: '🎯 Strzały łącznie', unit: '' },
+            { key: 'shots_on_target', label: '🎯 Strzały na bramkę', unit: '' },
+            { key: 'xg', label: '📊 xG (oczekiwane gole)', unit: '' },
+            { key: 'corners', label: '🚩 Rzuty rożne', unit: '' },
+            { key: 'yellow', label: '🟨 Żółte kartki', unit: '' },
+            { key: 'red', label: '🟥 Czerwone kartki', unit: '' },
+            { key: 'fouls', label: '⚠️ Faule', unit: '' },
+            { key: 'offsides', label: '🚫 Spalone', unit: '' }
+        ];
+        
+        html += '<div class="space-y-2">';
+        let hasAnyStats = false;
+        statLabels.forEach(s => {
+            const stat = stats[s.key];
+            if (!stat || (stat.home === null && stat.away === null)) return;
+            hasAnyStats = true;
+            
+            const hv = stat.home;
+            const av = stat.away;
+            const hBetter = hv !== null && av !== null && (s.key === 'yellow' || s.key === 'red' || s.key === 'fouls' || s.key === 'offsides' ? hv < av : hv > av);
+            const aBetter = hv !== null && av !== null && (s.key === 'yellow' || s.key === 'red' || s.key === 'fouls' || s.key === 'offsides' ? av < hv : av > hv);
+            
+            const hCls = hBetter ? 'text-green-600 font-bold' : 'text-gray-700';
+            const aCls = aBetter ? 'text-green-600 font-bold' : 'text-gray-700';
+            
+            html += '<div class="grid grid-cols-3 items-center gap-4 p-3 bg-gray-50 rounded-lg">';
+            html += '<div class="text-right p-2 rounded ' + hCls + '">' + (hv === null ? '—' : hv + s.unit) + '</div>';
+            html += '<div class="text-center text-xs text-gray-600 font-semibold">' + s.label + '</div>';
+            html += '<div class="text-left p-2 rounded ' + aCls + '">' + (av === null ? '—' : av + s.unit) + '</div>';
+            html += '</div>';
+        });
+        html += '</div>';
+        
+        if (!hasAnyStats) {
+            html += '<p class="text-gray-500 text-center py-4">Brak dostępnych statystyk dla tego meczu</p>';
+        }
+        html += '</div>';
+    } else {
+        html += '<div class="bg-yellow-50 border border-yellow-300 rounded-xl p-4 text-center text-sm text-yellow-800">⚠️ Statystyki tego meczu nie zostały pobrane</div>';
+    }
+    
+    document.getElementById('md-content').innerHTML = html;
+    document.getElementById('match-detail-modal').classList.remove('hidden');
+}
+
+function openFinished() {
+    const container = document.getElementById('finished-content');
+    const finishedMatches = [];
+    
+    // Bierzemy zakończone z LIVE.JSON (nie z data.json)
+    Object.entries(liveData).forEach(([key, info]) => {
+        if (!info.is_finished || !info.score) return;
+        
+        // Klucz to "Home_Away" - rozbij
+        const parts = key.split('_');
+        if (parts.length !== 2) return;
+        
+        const home = parts[0];
+        const away = parts[1];
+        
+        // Sprawdź czy jest w matchesData (żeby mieć statystyki i pełne dane)
+        const matchInDate = matchesData.find(m => 
+            m.home === home && m.away === away
+        );
+        const matchIndex = matchInDate ? matchesData.indexOf(matchInDate) : -1;
+        
+        finishedMatches.push({
+            home: home,
+            away: away,
+            score: info.score,
+            live: info,
+            match: matchInDate,
+            matchIndex: matchIndex,
+            league_name: matchInDate ? matchInDate.league_name : (info.league_name || 'Liga'),
+            league_flag: matchInDate ? matchInDate.league_flag : (info.league_flag || '⚽'),
+            datetime: matchInDate ? matchInDate.datetime : (info.stage || '')
+        });
+    });
+    
+    // Sortuj alfabetycznie po lidze
+    finishedMatches.sort((a, b) => (a.league_name || '').localeCompare(b.league_name || ''));
+    
+    if (finishedMatches.length === 0) {
+        container.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">📅</div><p class="text-gray-500">Brak zakończonych meczów</p></div>';
+        document.getElementById('finished-modal').classList.remove('hidden');
+        return;
+    }
+    
+    let html = '<div class="space-y-3">';
+    finishedMatches.forEach(fm => {
+        const parts = fm.score.split(':');
+        if (parts.length !== 2) return;
+        const hg = parseInt(parts[0]);
+        const ag = parseInt(parts[1]);
+        if (isNaN(hg) || isNaN(ag)) return;
+        
+        const total = hg + ag;
+        const btts = hg > 0 && ag > 0;
+        
+        // Weryfikacja predykcji tylko jeśli mamy mecz w data.json
+        let predictionsHtml = '';
+        if (fm.match) {
+            const s = analyzeMatch(fm.match);
+            const predictions = [];
+            if (s.btts >= 50) predictions.push({ label: 'BTTS', hit: btts, pct: s.btts });
+            if (s.o15 >= 60) predictions.push({ label: 'Over 1.5', hit: total > 1, pct: s.o15 });
+            if (s.o25 >= 50) predictions.push({ label: 'Over 2.5', hit: total > 2, pct: s.o25 });
+            if (s.o35 >= 40) predictions.push({ label: 'Over 3.5', hit: total > 3, pct: s.o35 });
+            
+            if (predictions.length > 0) {
+                const hits = predictions.filter(p => p.hit).length;
+                predictionsHtml = '<div class="border-t border-gray-100 pt-3"><div class="text-xs text-gray-500 mb-2 font-semibold">Weryfikacja: ' + hits + '/' + predictions.length + ' trafione</div><div class="flex flex-wrap gap-2">';
+                predictions.forEach(p => {
+                    const cls = p.hit ? 'bg-green-100 text-green-800 border border-green-500' : 'bg-red-100 text-red-800 border border-red-500';
+                    predictionsHtml += '<div class="' + cls + ' rounded-lg px-3 py-1 text-xs"><span class="font-bold">' + (p.hit ? '✅' : '❌') + ' ' + p.label + '</span> <span class="opacity-75">(' + p.pct + '%)</span></div>';
+                });
+                predictionsHtml += '</div></div>';
+            }
+        }
+        
+        const clickable = true; // teraz każdy zakończony ma statystyki
+        const cursorClass = 'cursor-pointer hover:border-[#1e3a5f]';
+        const onclick = `onclick="closeFinished();openFinishedMatchStats('${fm.home.replace(/'/g, "\\'")}','${fm.away.replace(/'/g, "\\'")}');"`;
+        
+        html += '<div class="border border-gray-200 rounded-xl p-4 transition ' + cursorClass + '" ' + onclick + '>';
+        html += '<div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + fm.league_flag + ' ' + fm.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">📅 ' + fm.datetime + '</span></div>';
+        html += '<div class="grid grid-cols-3 items-center gap-4 mb-3"><div class="text-right font-bold text-[#1e3a5f]">' + fm.home + '</div><div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div><div class="text-left font-bold text-[#1e3a5f]">' + fm.away + '</div></div>';
+        html += predictionsHtml;
+        if (clickable) {
+            html += '<div class="text-center text-xs text-blue-600 font-semibold mt-3 pt-2 border-t border-gray-100">👆 Kliknij aby zobaczyć szczegóły</div>';
+        }
+        html += '</div>';
+    });
+    html += '</div>';
+    
+    container.innerHTML = html;
+    document.getElementById('finished-modal').classList.remove('hidden');
+}
+    
+    function closeFinished() { document.getElementById('finished-modal').classList.add('hidden'); }
+
+    // ─── LIVE ─────────────────────────────────────────────────────────────────────
+
+    function openLive() {
+    const container = document.getElementById('live-modal-content') || document.getElementById('live-iframe').parentElement;
+    
+    // Zbierz live mecze z liveData
+    const liveMatches = [];
+    for (const key in liveData) {
+        const info = liveData[key];
+        if (info.is_live) {
+            const [home, away] = key.split('_');
+            // Znajdź pełne dane meczu w matchesData (jeśli są)
+            const fullMatch = matchesData.find(m => m.home === home && m.away === away);
+            liveMatches.push({
+                home, away,
+                score: info.score,
+                stage: info.stage,
+                league: fullMatch ? (fullMatch.league_flag + ' ' + fullMatch.league_name) : '',
+                match: fullMatch
+            });
+        }
+    }
+    
+    // Sortuj po lidze
+    liveMatches.sort((a, b) => (a.league || '').localeCompare(b.league || ''));
+    
+    // Zbuduj HTML
+    let html = '';
+    if (liveMatches.length === 0) {
+        html = '<div class="text-center py-12"><div class="text-6xl mb-4">😴</div><p class="text-gray-500 text-lg">Brak meczów na żywo</p><p class="text-xs text-gray-400 mt-2">Sprawdź ponownie za chwilę</p></div>';
+    } else {
+        html = '<div class="p-6"><div class="text-sm text-gray-500 mb-4">🔴 Aktualnie trwających meczów: <b>' + liveMatches.length + '</b></div><div class="space-y-3">';
+        liveMatches.forEach((lm, idx) => {
+            const clickable = lm.match ? `onclick="closeLive(); openMatchDetail(${matchesData.indexOf(lm.match)});"` : '';
+            const cursor = lm.match ? 'cursor-pointer hover:border-red-500' : '';
+            html += `
+                <div class="border-2 border-red-500 bg-red-50 rounded-xl p-4 ${cursor} transition" ${clickable}>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-[10px] font-bold text-gray-600">${lm.league || 'LIVE'}</span>
+                        <span class="bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full animate-pulse">🔴 ${lm.stage || 'LIVE'}</span>
+                    </div>
+                    <div class="grid grid-cols-3 items-center gap-4">
+                        <div class="text-right font-bold text-lg text-[#1e3a5f]">${lm.home}</div>
+                        <div class="text-center">
+                            <span class="bg-gray-800 text-white font-black text-2xl px-4 py-2 rounded-lg">${lm.score || '0:0'}</span>
+                        </div>
+                        <div class="text-left font-bold text-lg text-[#1e3a5f]">${lm.away}</div>
+                    </div>
+                    ${lm.match ? '<div class="text-center text-xs text-blue-600 font-semibold mt-3 pt-2 border-t border-red-200">👆 Kliknij aby zobaczyć szczegóły i VB</div>' : ''}
+                </div>
+            `;
+        });
+        html += '</div></div>';
+    }
+    
+    // Zamień iframe na listę
+    const iframe = document.getElementById('live-iframe');
+    if (iframe) {
+        iframe.style.display = 'none';
+        // Utwórz kontener na listę jeśli nie istnieje
+        let listContainer = document.getElementById('live-list-container');
+        if (!listContainer) {
+            listContainer = document.createElement('div');
+            listContainer.id = 'live-list-container';
+            listContainer.className = 'w-full h-full overflow-y-auto';
+            iframe.parentElement.appendChild(listContainer);
+        }
+        listContainer.style.display = 'block';
+        listContainer.innerHTML = html;
+    }
+    
+    document.getElementById('live-modal').classList.remove('hidden');
+}
+
+function closeLive() {
+    document.getElementById('live-modal').classList.add('hidden');
+    const iframe = document.getElementById('live-iframe');
+    if (iframe) iframe.src = '';
+    const listContainer = document.getElementById('live-list-container');
+    if (listContainer) listContainer.style.display = 'none';
+}
+    function closeLive() { document.getElementById('live-modal').classList.add('hidden'); document.getElementById('live-iframe').src = ''; }
+
+    // ─── FAVORITES ────────────────────────────────────────────────────────────────
+
+    function openFavorites() {
+        const list = document.getElementById('favorites-list');
+        const favMatches = matchesData.filter(m => isFavorite(m.match_id));
+        if (favMatches.length === 0) { list.innerHTML = '<p class="text-gray-500 text-center py-8">Brak ulubionych. Kliknij ☆ przy meczu!</p>'; }
+        else {
+            let html = '';
+            favMatches.forEach(m => {
+                const s = analyzeMatch(m);
+                const isTennis = m.sport === 'tennis';
+                html += '<div class="border border-gray-200 rounded-xl p-3 mb-2">';
+                html += '<div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + (m.league_flag || '') + ' ' + m.league_name.toUpperCase() + '</span><span class="text-[10px] text-gray-500">' + m.datetime + '</span></div>';
+                html += '<div class="font-bold text-[#1e3a5f] mb-2">' + m.home + ' vs ' + m.away + '</div>';
+                if (isTennis) {
+                    html += '<div class="flex gap-2 text-xs"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">🎾 Tenis</span><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">Obaj set: ' + s.bwsPct + '%</span></div>';
+                } else {
+                    html += '<div class="flex gap-2 text-xs"><span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">BTTS ' + s.btts + '%</span><span class="bg-purple-100 text-purple-800 px-2 py-1 rounded">O2.5 ' + s.o25 + '%</span></div>';
+                }
+                html += '<button onclick="toggleFavorite(\'' + m.match_id + '\'); openFavorites();" class="mt-2 text-xs text-red-600 hover:underline">Usuń z ulubionych</button>';
+                html += '</div>';
+            });
+            list.innerHTML = html;
+        }
+        document.getElementById('favorites-modal').classList.remove('hidden');
+    }
+    function closeFavorites() { document.getElementById('favorites-modal').classList.add('hidden'); }
+
+    // ─── COMPARE ─────────────────────────────────────────────────────────────────
+
+    function openCompare() {
+        const sel1 = document.getElementById('compare-team1');
+        const sel2 = document.getElementById('compare-team2');
+        const teamSet = {};
+        matchesData.forEach(m => { teamSet[m.home] = m.sport || 'football'; teamSet[m.away] = m.sport || 'football'; });
+        const teams = Object.keys(teamSet).sort();
+        let opts = '<option value="">-- Wybierz --</option>';
+        teams.forEach(t => { opts += '<option value="' + t + '">' + t + '</option>'; });
+        sel1.innerHTML = opts; sel2.innerHTML = opts;
+        document.getElementById('compare-result').innerHTML = '<p class="text-gray-500 text-center py-8">Wybierz drużyny / zawodników</p>';
+        document.getElementById('compare-modal').classList.remove('hidden');
+    }
+    function closeCompare() { document.getElementById('compare-modal').classList.add('hidden'); }
+
+    function getTeamStats(teamName) {
+        for (let i = 0; i < matchesData.length; i++) {
+            const m = matchesData[i];
+            if (m.home === teamName && m.home_stats && (m.home_stats.total_matches || m.home_stats.avg_games)) return { stats: m.home_stats, sport: m.sport };
+            if (m.away === teamName && m.away_stats && (m.away_stats.total_matches || m.away_stats.avg_games)) return { stats: m.away_stats, sport: m.sport };
+        }
+        return null;
+    }
+
+    function renderCompare() {
+        const t1 = document.getElementById('compare-team1').value;
+        const t2 = document.getElementById('compare-team2').value;
+        const resultEl = document.getElementById('compare-result');
+        if (!t1 || !t2) { resultEl.innerHTML = '<p class="text-gray-500 text-center py-8">Wybierz obie drużyny</p>'; return; }
+        const d1 = getTeamStats(t1); const d2 = getTeamStats(t2);
+        const s1 = d1 ? d1.stats : null; const s2 = d2 ? d2.stats : null;
+        const sport1 = d1 ? d1.sport : null; const sport2 = d2 ? d2.sport : null;
+        const isTennis = sport1 === 'tennis' || sport2 === 'tennis';
+        let html = '<div class="grid grid-cols-3 gap-4 mb-4 text-center">';
+        html += '<div class="font-bold p-2 text-[#1e3a5f]">' + t1 + (s1 ? '' : ' ❌') + '</div>';
+        html += '<div class="text-gray-400 text-sm flex items-center justify-center">vs</div>';
+        html += '<div class="font-bold p-2 text-[#1e3a5f]">' + t2 + (s2 ? '' : ' ❌') + '</div>';
+        html += '</div>';
+        const rows = isTennis ? [
+            { l: '🎾 Śr. gemów', a: s1 ? s1.avg_games : null, b: s2 ? s2.avg_games : null },
+            { l: '🏆 Obaj set', a: s1 ? s1.both_won_set_pct : null, b: s2 ? s2.both_won_set_pct : null, u: '%' },
+            { l: '⚡ Tie-break', a: s1 ? s1.tiebreak_pct : null, b: s2 ? s2.tiebreak_pct : null, u: '%' },
+            { l: '🔥 Asy', a: s1 ? s1.avg_aces : null, b: s2 ? s2.avg_aces : null },
+            { l: '❌ Dbl błędy', a: s1 ? s1.avg_df : null, b: s2 ? s2.avg_df : null, inv: true },
+            { l: '📈 % 1. serwis', a: s1 ? s1.avg_first_serve : null, b: s2 ? s2.avg_first_serve : null, u: '%' }
+        ] : [
+            { l: '⚽ Śr. strz.', a: s1 ? s1.avg_goals_scored : null, b: s2 ? s2.avg_goals_scored : null },
+            { l: '🥅 Śr. strac.', a: s1 ? s1.avg_goals_conceded : null, b: s2 ? s2.avg_goals_conceded : null, inv: true },
+            { l: '🎯 BTTS', a: s1 ? s1.btts_pct : null, b: s2 ? s2.btts_pct : null, u: '%' },
+            { l: '⚽ O2.5', a: s1 ? s1.over25_pct : null, b: s2 ? s2.over25_pct : null, u: '%' },
+            { l: '🚩 Cornery', a: s1 ? s1.avg_corners : null, b: s2 ? s2.avg_corners : null },
+            { l: '🟨 Kartki', a: s1 ? s1.avg_yellow : null, b: s2 ? s2.avg_yellow : null, inv: true },
+            { l: '🎯 Strzały', a: s1 ? s1.avg_shots : null, b: s2 ? s2.avg_shots : null },
+            { l: '📊 xG', a: s1 ? s1.avg_xg : null, b: s2 ? s2.avg_xg : null }
+        ];
+        html += '<div class="space-y-3">';
+        rows.forEach(r => {
+            const am = r.a === null || r.a === undefined; const bm = r.b === null || r.b === undefined;
+            const av = am ? 0 : r.a; const bv = bm ? 0 : r.b;
+            const ab = !am && !bm && (r.inv ? av < bv : av > bv);
+            const bb = !am && !bm && (r.inv ? bv < av : bv > av);
+            const aCls = am ? 'text-red-500' : (ab ? 'text-green-600 font-bold' : 'text-gray-700');
+            const bCls = bm ? 'text-red-500' : (bb ? 'text-green-600 font-bold' : 'text-gray-700');
+            html += '<div class="grid grid-cols-3 items-center gap-4 p-3 bg-gray-50 rounded-lg">';
+            html += '<div class="text-right p-2 rounded ' + aCls + '">' + (am ? '❌ brak' : av + (r.u || '')) + '</div>';
+            html += '<div class="text-center text-xs text-gray-500">' + r.l + '</div>';
+            html += '<div class="text-left p-2 rounded ' + bCls + '">' + (bm ? '❌ brak' : bv + (r.u || '')) + '</div>';
+            html += '</div>';
+        });
+        html += '</div>';
+        resultEl.innerHTML = html;
+    }
+
+    // ─── NAVIGATION ───────────────────────────────────────────────────────────────
+
+    function enterAppWithLeague(li) {
+        const s = document.getElementById('splash-screen'); const a = document.getElementById('app');
+        s.classList.add('animate-fade-out');
+        setTimeout(() => {
+            s.classList.add('hidden'); s.classList.remove('animate-fade-out');
+            a.classList.remove('hidden'); a.classList.add('animate-fade-in');
+            currentFilter = li;
+            const l = document.getElementById('current-league');
+            if (li === 'all') l.textContent = 'Wszystkie';
+            else { const x = leaguesData.find(y => y.id === li); if (x) l.textContent = x.flag + ' ' + x.name; }
+            renderLeagueList(); renderValueBets(); renderMatches(); window.scrollTo(0, 0);
+        }, 400);
+    }
+    function backToSplash() { document.getElementById('app').classList.add('hidden'); document.getElementById('app').classList.remove('animate-fade-in'); document.getElementById('splash-screen').classList.remove('hidden'); window.scrollTo(0, 0); }
+
+    function toggleValueOnly() {
+        valueOnlyMode = !valueOnlyMode;
+        const b = document.getElementById('value-filter-btn');
+        if (valueOnlyMode) { b.className = 'px-4 py-2 bg-red-600 text-white rounded-lg text-sm font-semibold flex items-center gap-2'; b.innerHTML = '🔥 Value bety ✓'; }
+        else { b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2'; b.innerHTML = '🔥 Value bety'; }
+        renderMatches();
+    }
+    function toggleFavOnly() {
+        favOnlyMode = !favOnlyMode;
+        const b = document.getElementById('fav-filter-btn');
+        if (favOnlyMode) { b.className = 'px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-semibold flex items-center gap-2'; b.innerHTML = '⭐ Ulubione ✓'; }
+        else { b.className = 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2'; b.innerHTML = '⭐ Ulubione'; }
+        renderMatches();
+    }
+
+    function renderLeagueList() {
+        const c = document.getElementById('league-list');
+        let h = '';
+        leaguesData.forEach(l => {
+            h += '<button onclick="filterLeague(\'' + l.id + '\')" class="w-full text-left px-4 py-3 hover:bg-gray-100 text-sm flex items-center gap-3 border-b border-gray-200 last:border-0"><span class="text-lg">' + l.flag + '</span><span>' + l.name + '</span><span class="ml-auto text-xs text-gray-500" id="count-' + l.id + '"></span></button>';
+        });
+        c.innerHTML = h;
+        leaguesData.forEach(l => { const cnt = matchesData.filter(m => m.league_id === l.id).length; const el = document.getElementById('count-' + l.id); if (el) el.textContent = cnt > 0 ? '(' + cnt + ')' : ''; });
+    }
+    function toggleDropdown() {
+        const m = document.getElementById('dropdown-menu'); const a = document.getElementById('dropdown-arrow');
+        if (m.classList.contains('hidden')) { m.classList.remove('hidden'); a.textContent = '▲'; }
+        else { m.classList.add('hidden'); a.textContent = '▼'; }
+    }
+    document.addEventListener('click', (e) => {
+        const d = document.getElementById('dropdown-menu'); const b = document.getElementById('dropdown-btn');
+        if (d && b && !d.contains(e.target) && !b.contains(e.target)) { d.classList.add('hidden'); const arr = document.getElementById('dropdown-arrow'); if (arr) arr.textContent = '▼'; }
+    });
+    function filterLeague(li) {
+        currentFilter = li;
+        const l = document.getElementById('current-league');
+        if (li === 'all') l.textContent = 'Wszystkie';
+        else { const x = leaguesData.find(y => y.id === li); if (x) l.textContent = x.flag + ' ' + x.name; }
+        document.getElementById('dropdown-menu').classList.add('hidden');
+        document.getElementById('dropdown-arrow').textContent = '▼';
+        renderMatches();
+    }
+
+    // ─── RENDER MATCHES ───────────────────────────────────────────────────────────
+
+    function renderMatches() {
+    let f = currentFilter === 'all' ? matchesData : matchesData.filter(m => m.league_id === currentFilter);
+    f = f.filter(m => { 
+        const live = getLiveInfo(m.home, m.away); 
+        return !(live && (live.is_finished || live.is_live)); 
+    });
+        if (valueOnlyMode) f = f.filter(m => getMatchValueBets(m).length > 0);
+        if (favOnlyMode) f = f.filter(m => isFavorite(m.match_id));
+        const searchEl = document.getElementById('search-input');
+        const query = searchEl ? searchEl.value.trim().toLowerCase() : '';
+        if (query) f = f.filter(m => m.home.toLowerCase().indexOf(query) >= 0 || m.away.toLowerCase().indexOf(query) >= 0);
+        f = f.slice().sort((a, b) => {
+            const aFav = isFavorite(a.match_id) ? 1 : 0; const bFav = isFavorite(b.match_id) ? 1 : 0;
+            if (aFav !== bFav) return bFav - aFav;
+            return getMatchValueBets(b).length - getMatchValueBets(a).length;
+        });
+        document.getElementById('match-count').innerText = '(' + f.length + ')';
+        const c = document.getElementById('matches');
+        if (f.length === 0) { c.innerHTML = '<p class="text-gray-500 text-center py-8">Brak meczów</p>'; }
+        else { let html = ''; f.forEach(m => { html += renderMatchCard(m, matchesData.indexOf(m)); }); c.innerHTML = html; }
+    }
+
+    // ─── SHARE ────────────────────────────────────────────────────────────────────
+
+    async function shareMatch(matchId) {
+        const m = matchesData.find(x => x.match_id === matchId);
+        if (!m) return;
+        const isTennis = m.sport === 'tennis';
+        const s = analyzeMatch(m);
+        const text = isTennis
+            ? m.home + ' vs ' + m.away + '\n' + m.datetime + '\nObaj wygrają set: ' + s.bwsPct + '%\nTie-break: ' + s.tbPct + '%'
+            : m.home + ' vs ' + m.away + '\n' + m.datetime + '\nBTTS: ' + s.btts + '%\nOver 2.5: ' + s.o25 + '%';
+        if (navigator.share) {
+            try { await navigator.share({ title: m.home + ' vs ' + m.away, text }); } catch (e) {}
+        } else {
+            await navigator.clipboard.writeText(text);
+            showToast('Skopiowano do schowka! 📋', 'success');
+        }
+    }
+
+    // ─── INIT ─────────────────────────────────────────────────────────────────────
+
+    loadInitialData();
+    checkAuth();
+    </script>
+    <div id="toast-container"></div>
+    <div id="confirm-modal" class="hidden modal-overlay" onclick="if(event.target===this)hideConfirm()">
+    <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+        <div class="text-center mb-4">
+            <div id="confirm-icon" class="text-5xl mb-3">⚠️</div>
+            <h3 id="confirm-title" class="font-bold text-lg text-[#1e3a5f] mb-2">Potwierdzenie</h3>
+            <p id="confirm-message" class="text-sm text-gray-600">Czy na pewno?</p>
+        </div>
+        <div class="flex gap-2">
+            <button onclick="hideConfirm()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 rounded-lg transition">Anuluj</button>
+            <button id="confirm-ok-btn" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition">Potwierdź</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
