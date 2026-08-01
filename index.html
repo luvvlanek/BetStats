@@ -190,7 +190,10 @@
                 </div>
             </div>
         </div>
-        <div class="text-center text-xs text-gray-500 mt-10 pb-4"><p>© 2026 BetStats · Hazard może uzależniać · 18+</p></div>
+                <div class="text-center text-xs text-gray-500 mt-10 pb-4 space-y-2">
+            <p id="refresh-info" class="text-gray-600"></p>
+            <p>© 2026 BetStats · Hazard może uzależniać · 18+</p>
+        </div>
     </div>
 
     <!-- WYBÓR LIGI (po wyborze sportu) -->
@@ -278,11 +281,11 @@
                         <span class="bg-blue-600/20 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded border border-blue-600/30">BETA</span>
                     </div>
                     <p class="text-gray-600">Kompleksowe statystyki sportowe</p>
-                    <div class="pt-3 border-t border-gray-300 text-gray-500 text-[11px]">
+                    <div class="pt-3 border-t border-gray-300 text-gray-500 text-[11px] space-y-1">
+                        <p id="refresh-info-2" class="text-gray-500"></p>
                         <p class="mb-2">© 2026 BetStats</p>
                         <p class="text-gray-400">Hazard może uzależniać. 18+</p>
-                    </div>
-                </div>
+                    </div>                </div>
             </footer>
         </div>
     </div>
@@ -1613,6 +1616,50 @@
             }
         }
     }
+
+    // ═══════════════════════════════════════════════════════════════════
+    // INFO O ODŚWIEŻANIU DANYCH
+    // ═══════════════════════════════════════════════════════════════════
+
+    function updateRefreshInfo() {
+        // Cron leci: 00:00, 06:00, 12:00, 18:00 UTC
+        // W Polsce (CEST +2h latem, +1h zimą): 02:00, 08:00, 14:00, 20:00
+        const now = new Date();
+        const hoursUTC = now.getUTCHours();
+        const nextRefreshUTC = Math.ceil((hoursUTC + 0.01) / 6) * 6;
+
+        const nextRefresh = new Date(now);
+        nextRefresh.setUTCHours(nextRefreshUTC % 24, 0, 0, 0);
+        if (nextRefreshUTC >= 24) nextRefresh.setUTCDate(nextRefresh.getUTCDate() + 1);
+
+        const hh = String(nextRefresh.getHours()).padStart(2, '0');
+        const mm = String(nextRefresh.getMinutes()).padStart(2, '0');
+        const dd = String(nextRefresh.getDate()).padStart(2, '0');
+        const mo = String(nextRefresh.getMonth() + 1).padStart(2, '0');
+
+        const isToday = nextRefresh.toDateString() === now.toDateString();
+        const dateStr = isToday ? 'dzisiaj' : `${dd}.${mo}`;
+
+        // Ile minut zostało
+        const diffMs = nextRefresh - now;
+        const diffMin = Math.round(diffMs / 60000);
+        const diffH = Math.floor(diffMin / 60);
+        const remMin = diffMin % 60;
+
+        let remainStr = '';
+        if (diffH > 0) remainStr = `za ${diffH}h ${remMin}min`;
+        else remainStr = `za ${diffMin} min`;
+
+        const infoText = `🔄 Dane odświeżane automatycznie co 6h · Następne odświeżenie: <b>${dateStr} o ${hh}:${mm}</b> (${remainStr})`;
+
+        const el1 = document.getElementById('refresh-info');
+        const el2 = document.getElementById('refresh-info-2');
+        if (el1) el1.innerHTML = infoText;
+        if (el2) el2.innerHTML = infoText;
+    }
+
+    updateRefreshInfo();
+    setInterval(updateRefreshInfo, 60000); // co minutę odświeżaj info
 
     // ═══════════════════════════════════════════════════════════════════
     // INIT
