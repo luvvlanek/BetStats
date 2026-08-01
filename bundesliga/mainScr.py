@@ -676,7 +676,7 @@ async def main():
                 "updated": time.strftime("%Y-%m-%d %H:%M")
             }, f, indent=4, ensure_ascii=False)
 
-        FRONTEND_DIR = r"C:\Users\abalc\football-stats"
+        FRONTEND_DIR = os.path.abspath(os.path.join(os.getcwd(), ".."))
 
         print(f"\n📤 Kopiowanie do folderu frontendu:")
         for filename in [data_file, live_file, finished_file]:

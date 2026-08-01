@@ -1,0 +1,81 @@
+name: Scraper - BetStats
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # co 6 godzin (00:00, 06:00, 12:00, 18:00 UTC)
+  workflow_dispatch:  # pozwala uruchomić ręcznie z GitHuba
+
+jobs:
+  scrape-ekstraklasa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run Ekstraklasa scraper
+        working-directory: ./ekstraklasa
+        run: python mainScr.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data_ekstra.json live_ekstra.json finished_ekstra.json 2>/dev/null || true
+          git add ekstraklasa/data_ekstra.json ekstraklasa/live_ekstra.json ekstraklasa/finished_ekstra.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "🤖 Auto: aktualizacja Ekstraklasa + 1. Liga"
+          git push
+
+  scrape-bundesliga:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: scrape-ekstraklasa  # uruchamia się PO ekstraklasa (żeby uniknąć konfliktów git push)
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull latest changes
+        run: git pull
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run Bundesliga scraper
+        working-directory: ./bundesliga
+        run: python mainScr.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add data_int.json live_int.json finished_int.json 2>/dev/null || true
+          git add bundesliga/data_int.json bundesliga/live_int.json bundesliga/finished_int.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "🤖 Auto: aktualizacja Bundesliga + La Liga"
+          git push
