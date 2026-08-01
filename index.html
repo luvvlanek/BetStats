@@ -76,6 +76,26 @@
         input[type="range"] { -webkit-appearance: none; height: 6px; background: #e5e7eb; border-radius: 3px; }
         input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; background: #1e3a5f; border-radius: 50%; cursor: pointer; }
 
+        /* Ukryj scrollbary w modalach */
+.modal-overlay > div,
+#md-content,
+#finished-content,
+#live-list-container,
+#value-modal > div,
+#bets-list {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.modal-overlay > div::-webkit-scrollbar,
+#md-content::-webkit-scrollbar,
+#finished-content::-webkit-scrollbar,
+#live-list-container::-webkit-scrollbar,
+#value-modal > div::-webkit-scrollbar,
+#bets-list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
         .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.2s ease-out; }
         .modal-overlay.hidden { display: none !important; }
         .hidden { display: none !important; }
@@ -872,14 +892,12 @@
     function estimateOverProb(a, t) { const d = a - t; if (d >= 3) return 88; if (d >= 2) return 80; if (d >= 1.5) return 72; if (d >= 1) return 65; if (d >= 0.5) return 55; if (d >= 0) return 48; if (d >= -0.5) return 38; if (d >= -1) return 28; return 15; }
 
     function getMatchValueBets(m) {
-        if (m.sport === 'volleyball') return [];  // TODO: value bety dla siatkówki
+        if (m.sport === 'volleyball') return [];
         const s = analyzeMatch(m); const b = [];
         if (s.btts >= THRESHOLDS.btts) b.push({ type: 'BTTS', key: 'btts', prob: s.btts, weight: WEIGHTS.btts, icon: '🎯', display: s.btts + '%' });
         if (s.o15 >= THRESHOLDS.over15) b.push({ type: 'Over 1.5', key: 'o15', prob: s.o15, weight: WEIGHTS.over15, icon: '⚽', display: s.o15 + '%' });
         if (s.o25 >= THRESHOLDS.over25) b.push({ type: 'Over 2.5', key: 'o25', prob: s.o25, weight: WEIGHTS.over25, icon: '⚽', display: s.o25 + '%' });
         if (s.o35 >= THRESHOLDS.over35) b.push({ type: 'Over 3.5', key: 'o35', prob: s.o35, weight: WEIGHTS.over35, icon: '⚽', display: s.o35 + '%' });
-        if (s.yellow >= THRESHOLDS.yellow) { const t = getSuggestedOverThreshold(s.yellow); b.push({ type: 'Kartki O' + t, key: 'yellow', prob: estimateOverProb(s.yellow, t), weight: WEIGHTS.yellow, icon: '🟨', display: 'śr. ' + s.yellow.toFixed(1) }); }
-        if (s.shots >= THRESHOLDS.shots) { const t = getSuggestedOverThreshold(s.shots); b.push({ type: 'Strzały O' + t, key: 'shots', prob: estimateOverProb(s.shots, t), weight: WEIGHTS.shots, icon: '🎯', display: 'śr. ' + s.shots.toFixed(1) }); }
         return b;
     }
         // ═══════════════════════════════════════════════════════════════════
@@ -888,13 +906,11 @@
 
     async function checkAuth() { const { data } = await sb.auth.getSession(); if (data.session) { currentUser = data.session.user; updateUIForUser(); await loadBets(); } }
     function updateUIForUser() { const a = document.getElementById('auth-buttons'), u = document.getElementById('user-buttons'); if (!a || !u) return; if (currentUser) { a.classList.add('hidden'); u.classList.remove('hidden'); u.classList.add('flex'); const p = document.getElementById('profile-icon'); if (p) p.innerHTML = currentUser.email[0].toUpperCase(); } else { a.classList.remove('hidden'); u.classList.add('hidden'); u.classList.remove('flex'); } }
-    function openAuthModal(mode) { authMode = mode || 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; document.getElementById('auth-modal').classList.remove('hidden'); }
-    function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
+    function openAuthModal(mode) { authMode = mode || 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; pushModalState('auth-modal'); document.getElementById('auth-modal').classList.remove('hidden'); }    function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
     function updateAuthModalUI() { if (authMode === 'register') { document.getElementById('auth-title').textContent = 'Rejestracja'; document.getElementById('auth-submit').textContent = 'Zarejestruj się'; document.getElementById('auth-toggle-text').textContent = 'Masz już konto?'; document.getElementById('auth-toggle-btn').textContent = 'Zaloguj się'; } else { document.getElementById('auth-title').textContent = 'Logowanie'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; document.getElementById('auth-toggle-text').textContent = 'Nie masz konta?'; document.getElementById('auth-toggle-btn').textContent = 'Zarejestruj się'; } }
     function toggleAuthMode() { authMode = authMode === 'login' ? 'register' : 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); }
     async function doAuth() { const email = document.getElementById('auth-email').value.trim(), password = document.getElementById('auth-password').value, errEl = document.getElementById('auth-error'); if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; } if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; } try { let r; if (authMode === 'login') r = await sb.auth.signInWithPassword({ email, password }); else r = await sb.auth.signUp({ email, password }); if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; } currentUser = r.data.user; updateUIForUser(); await loadBets(); closeAuthModal(); } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); } }
-    function openProfile() { if (!currentUser) return; document.getElementById('profile-email').textContent = currentUser.email; document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase(); updateProfileBalance(); document.getElementById('profile-modal').classList.remove('hidden'); }
-    function closeProfile() { document.getElementById('profile-modal').classList.add('hidden'); }
+    function openProfile() { if (!currentUser) return; document.getElementById('profile-email').textContent = currentUser.email; document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase(); updateProfileBalance(); pushModalState('profile-modal'); document.getElementById('profile-modal').classList.remove('hidden'); }    function closeProfile() { document.getElementById('profile-modal').classList.add('hidden'); }
     function updateProfileBalance() { let bal = 0; userBets.forEach(b => { if (b.status === 'won') bal += (b.stake * b.odds) - b.stake; else if (b.status === 'lost') bal -= b.stake; }); const el = document.getElementById('profile-balance'); el.textContent = (bal >= 0 ? '+' : '') + bal.toFixed(2) + ' zł'; el.className = 'text-3xl font-black text-center ' + (bal > 0 ? 'text-green-600' : bal < 0 ? 'text-red-600' : 'text-gray-600'); document.getElementById('profile-stats').textContent = userBets.length + ' zakładów'; }
     async function doLogout() { await sb.auth.signOut(); currentUser = null; userBets = []; updateUIForUser(); closeProfile(); }
     async function loadBets() { if (!currentUser) return; const { data, error } = await sb.from('bets').select('*').order('created_at', { ascending: false }); if (!error) userBets = data || []; }
@@ -902,6 +918,7 @@
     function updateBetSlipUI() { const el = document.getElementById('bet-slip'); if (!el) return; if (betSlip.length === 0) { el.classList.add('hidden'); return; } el.classList.remove('hidden'); const t = betSlip.reduce((acc, b) => acc * b.odds, 1); document.getElementById('bet-slip-count').textContent = betSlip.length; document.getElementById('bet-slip-odds').textContent = t.toFixed(2); }
     function addToBetSlip() { if (!currentModalData) return; const odds = parseFloat(document.getElementById('modal-odds-input').value); if (!odds || odds <= 1) { showToast('Wpisz kurs!', 'error'); return; } const m = matchesData[currentModalData.matchIndex]; betSlip.push({ match: m.home + ' vs ' + m.away, league: m.league_name, betType: document.getElementById('modal-bet-type').textContent, odds }); saveBetSlip(); closeValueModal(); showToast('Dodano do kuponu! 🎫', 'success'); }
     function openBetSlip() { const c = document.getElementById('bet-slip-items'); if (betSlip.length === 0) { c.innerHTML = '<p class="text-gray-500 text-center py-4">Kupon jest pusty</p>'; } else { let html = ''; betSlip.forEach((b, i) => { html += '<div class="border border-gray-200 rounded-lg p-3 flex justify-between items-center"><div class="flex-1"><div class="text-[10px] text-gray-500">' + b.league + '</div><div class="font-bold text-sm text-[#1e3a5f]">' + b.match + '</div><div class="text-xs text-gray-700">' + b.betType + '</div></div><div class="text-right"><div class="font-black text-lg text-green-600">' + b.odds + '</div><button onclick="removeFromBetSlip(' + i + ')" class="text-red-600 text-xs hover:underline">Usuń</button></div></div>'; }); c.innerHTML = html; } const t = betSlip.reduce((a, b) => a * b.odds, 1); document.getElementById('bet-slip-total-odds').textContent = t.toFixed(2); document.getElementById('bet-slip-stake').value = ''; document.getElementById('bet-slip-potential').textContent = '0 zł'; document.getElementById('bet-slip-modal').classList.remove('hidden'); }
+            pushModalState('bet-slip-modal');
     function closeBetSlip() { document.getElementById('bet-slip-modal').classList.add('hidden'); }
     function removeFromBetSlip(i) { betSlip.splice(i, 1); saveBetSlip(); openBetSlip(); showToast('Usunięto z kuponu', 'info'); }
     function clearBetSlip() { showConfirm('Wyczyścić kupon?', 'Wszystkie zdarzenia zostaną usunięte.', () => { betSlip = []; saveBetSlip(); openBetSlip(); showToast('Kupon wyczyszczony 🗑️', 'info'); }, '🗑️'); }
@@ -912,8 +929,7 @@
     async function updateBetStatus(id, status) { await sb.from('bets').update({ status }).eq('id', id); await loadBets(); renderDashboard(); const m = { won: 'Wygrany ✅', lost: 'Przegrany ❌', pending: 'Oczekuje ↺' }; showToast(m[status] || 'Zmieniono', status === 'won' ? 'success' : status === 'lost' ? 'error' : 'info'); }
     async function deleteBet(id) { showConfirm('Usunąć zakład?', 'Nieodwracalne.', async () => { const { error } = await sb.from('bets').delete().eq('id', id); if (error) { showToast('Błąd: ' + error.message, 'error'); return; } await loadBets(); renderDashboard(); showToast('Usunięto 🗑️', 'success'); }, '🗑️'); }
 
-    function openDashboard() { if (!currentUser) { openAuthModal('login'); return; } renderDashboard(); document.getElementById('dashboard-modal').classList.remove('hidden'); }
-    function closeDashboard() { document.getElementById('dashboard-modal').classList.add('hidden'); }
+    function openDashboard() { if (!currentUser) { openAuthModal('login'); return; } renderDashboard(); pushModalState('dashboard-modal'); document.getElementById('dashboard-modal').classList.remove('hidden'); }    function closeDashboard() { document.getElementById('dashboard-modal').classList.add('hidden'); }
     function renderDashboard() {
         const total = userBets.length, totalStake = userBets.reduce((s, b) => s + parseFloat(b.stake), 0);
         let totalWin = 0, balance = 0, pending = 0, won = 0, lost = 0;
@@ -951,6 +967,7 @@
     function openValueModal(mi, k, bt, op, ex, av) {
         const dm = document.getElementById('match-detail-modal');
         if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = mi; dm.classList.add('hidden'); }
+        pushModalState('value-modal');
         currentModalData = { matchIndex: mi, betKey: k, betType: bt, ourProb: op, avgValue: av };
         document.getElementById('modal-bet-type').textContent = bt;
         document.getElementById('modal-our-prob').textContent = op + '%';
@@ -1063,13 +1080,31 @@
     function openMatchDetail(mi) {
         const m = matchesData[mi]; if (!m) return;
         document.getElementById('md-title').textContent = m.home + ' vs ' + m.away;
+                pushModalState('match-detail-modal');
         const isVolley = m.sport === 'volleyball';
         const s = analyzeMatch(m);
+        const hs = m.home_stats || {};
+        const as = m.away_stats || {};
+        const live = getLiveInfo(m.home, m.away);
+
         let html = '';
 
-        html += '<div class="text-center mb-6"><div class="text-3xl font-black text-[#1e3a5f]">' + m.home + ' vs ' + m.away + '</div><div class="text-sm text-gray-500 mt-2">' + m.league_flag + ' ' + m.league_name + ' · ' + m.datetime + '</div></div>';
+        // Live badge jeśli mecz trwa
+        if (live && live.is_live) {
+            html += '<div class="bg-red-600 text-white text-center py-3 rounded-xl mb-4 font-black text-lg animate-pulse">🔴 MECZ TRWA! · ' + live.score + ' · ' + (live.stage || '') + '</div>';
+        }
+
+        // HEADER
+        html += '<div class="grid grid-cols-3 items-center gap-4 mb-6 p-4 bg-gray-50 rounded-xl">';
+        html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f] mb-2">' + m.home + '</div>';
+        html += '<div class="flex gap-1 justify-center">' + (hs.form || []).map(f => formBadge(f)).join('') + '</div></div>';
+        html += '<div class="text-center"><div class="text-3xl font-black text-gray-400">VS</div><div class="text-xs text-gray-500 mt-2">' + (m.datetime || '') + '</div><div class="text-[10px] text-gray-500">' + (m.league_flag || '') + ' ' + m.league_name + '</div></div>';
+        html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f] mb-2">' + m.away + '</div>';
+        html += '<div class="flex gap-1 justify-center">' + (as.form || []).map(f => formBadge(f)).join('') + '</div></div>';
+        html += '</div>';
 
         if (isVolley) {
+            // ═══ SIATKÓWKA ═══
             html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🏐 Statystyki siatkarskie</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
             html += '<div class="stat-card p-4 rounded-xl"><div class="text-[10px] text-gray-500 uppercase mb-1">🏐 Over 2.5 setów</div><div class="text-3xl font-black text-[#1e3a5f]">' + (s.over25setsPct || '—') + '%</div></div>';
             html += '<div class="stat-card p-4 rounded-xl"><div class="text-[10px] text-gray-500 uppercase mb-1">🏐 Over 3.5 setów</div><div class="text-3xl font-black text-[#1e3a5f]">' + (s.over35setsPct || '—') + '%</div></div>';
@@ -1082,27 +1117,257 @@
             });
             html += '</div></div>';
         } else {
+            // ═══ PIŁKA NOŻNA ═══
             const vb = getMatchValueBets(m);
             if (vb.length > 0) {
                 html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🔥 Value bety</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-2">';
                 vb.forEach(b => { html += '<div class="border-2 border-red-500 bg-red-50 rounded-lg p-3 text-center"><div class="text-2xl mb-1">' + b.icon + '</div><div class="text-sm font-bold text-[#1e3a5f]">' + b.type + '</div><div class="text-lg font-black text-red-600">' + b.display + '</div></div>'; });
                 html += '</div></div>';
             }
+
+            // Prognoza z klikalnymi VB
             html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📊 Prognoza</h4><div class="grid grid-cols-2 md:grid-cols-4 gap-3">';
-            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">BTTS</div><div class="text-3xl font-black text-[#1e3a5f]">' + s.btts + '%</div></div>';
-            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">O1.5</div><div class="text-3xl font-black text-[#1e3a5f]">' + s.o15 + '%</div></div>';
-            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">O2.5</div><div class="text-3xl font-black text-[#1e3a5f]">' + s.o25 + '%</div></div>';
-            html += '<div class="stat-card p-4 rounded-xl text-center"><div class="text-[10px] text-gray-500 uppercase mb-1">O3.5</div><div class="text-3xl font-black text-[#1e3a5f]">' + s.o35 + '%</div></div>';
+            html += renderStatBox('BTTS', s.btts, mi, 'btts', THRESHOLDS.btts, 'BTTS');
+            html += renderStatBox('O1.5', s.o15, mi, 'o15', THRESHOLDS.over15, 'Over 1.5');
+            html += renderStatBox('O2.5', s.o25, mi, 'o25', THRESHOLDS.over25, 'Over 2.5');
+            html += renderStatBox('O3.5', s.o35, mi, 'o35', THRESHOLDS.over35, 'Over 3.5');
+            html += '</div></div>';
+
+            // Cornery + kartki + strzały - jako klikalne z VB
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🎯 Rynki dodatkowe (kliknij dla Value Bet)</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-3">';
+            html += renderExtraStat('🚩', 'Cornery', ((hs.avg_corners || 0) + (as.avg_corners || 0)).toFixed(1), mi, 'corners', hs, as);
+            html += renderExtraStat('🟨', 'Kartki', ((hs.avg_yellow || 0) + (as.avg_yellow || 0)).toFixed(1), mi, 'yellow', hs, as);
+            html += renderExtraStat('🎯', 'Strzały', ((hs.avg_shots || 0) + (as.avg_shots || 0)).toFixed(1), mi, 'shots', hs, as);
+            html += '</div></div>';
+
+            // Porównanie drużyn
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">⚖️ Porównanie drużyn</h4><div class="space-y-2">';
+            const rows = [
+                { l: '⚽ Gole strzelone', a: hs.avg_goals_scored, b: as.avg_goals_scored },
+                { l: '🥅 Gole stracone', a: hs.avg_goals_conceded, b: as.avg_goals_conceded, inv: true },
+                { l: '🎯 BTTS', a: hs.btts_pct, b: as.btts_pct, u: '%' },
+                { l: '⚽ Over 2.5', a: hs.over25_pct, b: as.over25_pct, u: '%' },
+                { l: '🚩 Cornery', a: hs.avg_corners, b: as.avg_corners },
+                { l: '🟨 Kartki', a: hs.avg_yellow, b: as.avg_yellow, inv: true },
+                { l: '🎯 Strzały', a: hs.avg_shots, b: as.avg_shots },
+                { l: '📊 xG', a: hs.avg_xg, b: as.avg_xg }
+            ];
+            rows.forEach(r => {
+                const am = r.a === undefined || r.a === null;
+                const bm = r.b === undefined || r.b === null;
+                const av = am ? 0 : r.a, bv = bm ? 0 : r.b;
+                const ab = !am && !bm && (r.inv ? av < bv : av > bv);
+                const bb = !am && !bm && (r.inv ? bv < av : bv > av);
+                const aCls = am ? 'text-red-500' : (ab ? 'text-green-600 font-bold' : 'text-gray-700');
+                const bCls = bm ? 'text-red-500' : (bb ? 'text-green-600 font-bold' : 'text-gray-700');
+                html += '<div class="grid grid-cols-3 items-center gap-4 p-2 bg-gray-50 rounded">';
+                html += '<div class="text-right p-1 rounded ' + aCls + '">' + (am ? '—' : av + (r.u || '')) + '</div>';
+                html += '<div class="text-center text-xs text-gray-500">' + r.l + '</div>';
+                html += '<div class="text-left p-1 rounded ' + bCls + '">' + (bm ? '—' : bv + (r.u || '')) + '</div>';
+                html += '</div>';
+            });
             html += '</div></div>';
         }
 
         document.getElementById('md-content').innerHTML = html;
         document.getElementById('match-detail-modal').classList.remove('hidden');
     }
+
+    function renderExtraStat(icon, label, value, mi, type, hs, as) {
+        return '<div class="stat-card p-4 rounded-xl cursor-pointer hover:border-red-500 transition" onclick="openExtraStatModal(' + mi + ',\'' + type + '\')">' +
+            '<div class="text-3xl text-center mb-2">' + icon + '</div>' +
+            '<div class="text-[10px] text-gray-500 uppercase text-center mb-1">' + label + ' (suma śr.)</div>' +
+            '<div class="text-3xl font-black text-center text-[#1e3a5f] mb-2">' + value + '</div>' +
+            '<button class="w-full text-xs font-bold py-2 rounded bg-red-600 text-white hover:bg-red-700">💰 Sprawdź VB</button>' +
+            '</div>';
+    }
+        function openExtraStatModal(mi, type) {
+        const dm = document.getElementById('match-detail-modal');
+        if (!dm.classList.contains('hidden')) { lastMatchDetailIndex = mi; dm.classList.add('hidden'); }
+
+        currentModalData = { matchIndex: mi, betKey: type, scope: 'total', ourProb: null, selectedThreshold: null };
+                pushModalState('value-modal');
+        document.getElementById('modal-odds-input').value = '';
+        document.getElementById('stake-input').value = '';
+        document.getElementById('modal-result').classList.add('hidden');
+        document.getElementById('place-bet-section').classList.add('hidden');
+        document.getElementById('value-modal').classList.remove('hidden');
+
+        renderExtraStatModal();
+    }
+
+    function setExtraScope(scope) {
+        if (!currentModalData) return;
+        currentModalData.scope = scope;
+        currentModalData.ourProb = null;
+        currentModalData.selectedThreshold = null;
+        renderExtraStatModal();
+    }
+
+    function getExtraSelection() {
+        const d = currentModalData;
+        const m = matchesData[d.matchIndex];
+        const hs = m.home_stats || {};
+        const as = m.away_stats || {};
+        const type = d.betKey;
+
+        let hc, ac;
+        if (type === 'corners') { hc = hs.corners_per_match || []; ac = as.corners_per_match || []; }
+        else if (type === 'yellow') { hc = hs.yellow_per_match || []; ac = as.yellow_per_match || []; }
+        else if (type === 'shots') { hc = hs.shots_per_match || []; ac = as.shots_per_match || []; }
+
+        const ha = hc.length > 0 ? hc.reduce((a, b) => a + b, 0) / hc.length : (hs['avg_' + type] || 0);
+        const aa = ac.length > 0 ? ac.reduce((a, b) => a + b, 0) / ac.length : (as['avg_' + type] || 0);
+
+        const labels = { corners: 'Cornery', yellow: 'Kartki', shots: 'Strzały' };
+        const label = labels[type];
+
+        if (d.scope === 'total') {
+            const pc = Math.min(hc.length, ac.length);
+            const series = [];
+            for (let i = 0; i < pc; i++) series.push((hc[i] || 0) + (ac[i] || 0));
+            return {
+                label: label + ' w meczu (łącznie)',
+                avg: ha + aa,
+                series,
+                meta: m.home + ': ' + ha.toFixed(1) + ' · ' + m.away + ': ' + aa.toFixed(1) + ' · suma: ' + (ha + aa).toFixed(1)
+            };
+        } else if (d.scope === 'home') {
+            return { label: m.home + ' · ' + label, avg: ha, series: hc, meta: 'drużyna: ' + m.home + ' · średnio: ' + ha.toFixed(1) };
+        } else {
+            return { label: m.away + ' · ' + label, avg: aa, series: ac, meta: 'drużyna: ' + m.away + ' · średnio: ' + aa.toFixed(1) };
+        }
+    }
+
+    function renderExtraStatModal() {
+        const d = currentModalData;
+        if (!d) return;
+        const m = matchesData[d.matchIndex];
+        const sel = getExtraSelection();
+
+        const btnCls = (active) => active
+            ? 'flex-1 px-3 py-3 rounded-xl text-xs font-bold border-2 bg-red-600 text-white border-red-600 transition'
+            : 'flex-1 px-3 py-3 rounded-xl text-xs font-bold border-2 bg-white text-gray-700 border-gray-300 hover:border-red-500 transition';
+
+        // Układ: Home | Łącznie | Away
+        let expl = '<div class="mb-3"><div class="text-xs text-gray-600 mb-2 font-semibold text-center">Zakres analizy:</div>';
+        expl += '<div class="flex gap-2 items-stretch">';
+        expl += '<button onclick="setExtraScope(\'home\')" class="' + btnCls(d.scope === 'home') + '">' +
+                '<div class="text-lg mb-1">👤</div>' +
+                '<div class="leading-tight">' + m.home + '</div>' +
+                '</button>';
+        expl += '<button onclick="setExtraScope(\'total\')" class="' + btnCls(d.scope === 'total') + '">' +
+                '<div class="text-lg mb-1">🏟️</div>' +
+                '<div class="leading-tight">Łącznie</div>' +
+                '</button>';
+        expl += '<button onclick="setExtraScope(\'away\')" class="' + btnCls(d.scope === 'away') + '">' +
+                '<div class="text-lg mb-1">👤</div>' +
+                '<div class="leading-tight">' + m.away + '</div>' +
+                '</button>';
+        expl += '</div></div>';
+        expl += '<div class="text-xs text-gray-500 mt-3 text-center bg-gray-100 rounded-lg py-2 px-3">' + sel.meta + '</div>';
+
+        document.getElementById('modal-bet-type').textContent = sel.label;
+        document.getElementById('modal-explanation').innerHTML = expl;
+        document.getElementById('modal-our-prob').textContent = d.ourProb ? d.ourProb + '%' : '—';
+        document.getElementById('modal-result').classList.add('hidden');
+        document.getElementById('place-bet-section').classList.add('hidden');
+
+        // Progi co 1 - 7 wartości wokół średniej
+        const base = Math.round(sel.avg);
+        const ths = [];
+        for (let i = -3; i <= 3; i++) {
+            const t = base + i - 0.5;
+            if (t > 0) ths.push(t);
+        }
+
+        const thSel = document.getElementById('modal-threshold-selector');
+        const thBtns = document.getElementById('modal-threshold-buttons');
+        thSel.classList.remove('hidden');
+
+        let html = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div>';
+        html += '<div class="flex flex-col gap-2">';
+        ths.forEach(t => {
+            const total = sel.series.length;
+            let hits = 0;
+            if (total > 0) sel.series.forEach(v => { if (v > t) hits++; });
+            const prob = total > 0 ? Math.round((hits / total) * 100) : estimateOverProb(sel.avg, t);
+            const col = prob >= 70 ? 'bg-green-600 hover:bg-green-700' : prob >= 50 ? 'bg-lime-500 hover:bg-lime-600' : prob >= 30 ? 'bg-orange-500 hover:bg-orange-600' : 'bg-red-500 hover:bg-red-600';
+            const active = d.selectedThreshold === t;
+            const ring = active ? 'ring-4 ring-blue-500' : '';
+            html += '<button onclick="selectExtraThreshold(' + t + ',' + prob + ',this)" class="extra-btn w-full px-4 py-3 rounded-lg text-white font-bold ' + col + ' ' + ring + ' transition flex items-center justify-between">';
+            html += '<div class="text-lg font-black">Over ' + t + '</div>';
+            html += '<div class="flex items-center gap-3">';
+            html += '<div class="text-2xl font-black">' + prob + '%</div>';
+            if (total > 0) html += '<div class="text-xs opacity-80 bg-black/20 rounded px-2 py-1">' + hits + '/' + total + '</div>';
+            html += '</div>';
+            html += '</button>';
+        });
+        html += '</div>';
+        thBtns.innerHTML = html;
+    }
+    function selectExtraThreshold(t, p, el) {
+        if (!currentModalData) return;
+        currentModalData.selectedThreshold = t;
+        currentModalData.ourProb = p;
+        const sel = getExtraSelection();
+        document.getElementById('modal-bet-type').textContent = sel.label + ' Over ' + t;
+        document.getElementById('modal-our-prob').textContent = p + '%';
+
+        // Reset stylów wszystkich przycisków i renderuj od nowa (żeby zaznaczenie się poprawiło)
+        renderExtraStatModal();
+        // Ale ourProb i selectedThreshold trzeba zachować - już są w currentModalData
+        document.getElementById('modal-our-prob').textContent = p + '%';
+        calculateModalValue();
+    }
+
+    function renderExtraThresholds(type) {
+        const sel = document.getElementById('modal-threshold-selector');
+        const btns = document.getElementById('modal-threshold-buttons');
+        sel.classList.remove('hidden');
+        const d = currentModalData;
+
+        let ths;
+        if (type === 'corners') ths = [4.5, 6.5, 8.5, 9.5, 10.5, 11.5, 12.5, 13.5];
+        else if (type === 'yellow') ths = [2.5, 3.5, 4.5, 5.5, 6.5, 7.5];
+        else if (type === 'shots') ths = [16.5, 18.5, 20.5, 22.5, 24.5, 26.5, 28.5, 30.5];
+
+        let h = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div><div class="grid grid-cols-3 gap-2">';
+        ths.forEach(t => {
+            const p = Math.min(d.hc.length, d.ac.length);
+            let hits = 0, tot = 0;
+            if (p > 0) {
+                for (let i = 0; i < p; i++) { tot++; if ((d.hc[i] || 0) + (d.ac[i] || 0) > t) hits++; }
+            } else {
+                hits = d.totalAvg > t ? 1 : 0; tot = 1;
+            }
+            const pr = tot > 0 ? Math.round((hits / tot) * 100) : estimateOverProb(d.totalAvg, t);
+            const col = pr >= 70 ? 'bg-green-600 text-white' : pr >= 50 ? 'bg-lime-500 text-white' : pr >= 30 ? 'bg-orange-500 text-white' : 'bg-red-500 text-white';
+            h += '<button onclick="selectExtraThreshold(' + t + ',' + pr + ',\'' + type + '\',this)" class="extra-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white">' +
+                '<div class="text-sm">O' + t + '</div>' +
+                '<div class="text-[10px] mt-1 inline-block px-2 py-0.5 rounded ' + col + '">' + pr + '%</div>' +
+                (tot > 1 ? '<div class="text-[9px] text-gray-500 mt-1">' + hits + '/' + tot + '</div>' : '') +
+                '</button>';
+        });
+        h += '</div>';
+        btns.innerHTML = h;
+        document.getElementById('modal-our-prob').textContent = '—';
+    }
+
+    function selectExtraThreshold(t, p, type, el) {
+        currentModalData.ourProb = p;
+        const labels = { corners: 'Cornery', yellow: 'Kartki', shots: 'Strzały' };
+        document.getElementById('modal-bet-type').textContent = labels[type] + ' Over ' + t;
+        document.getElementById('modal-our-prob').textContent = p + '%';
+        document.querySelectorAll('.extra-btn').forEach(b => b.className = 'extra-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white');
+        el.className = 'extra-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
+        calculateModalValue();
+    }
     function closeMatchDetail() { document.getElementById('match-detail-modal').classList.add('hidden'); }
 
     function openLive() {
         const container = document.getElementById('live-list-container');
+                pushModalState('live-modal');
         const liveMatches = [];
         for (const key in liveData) {
             const info = liveData[key];
@@ -1125,6 +1390,7 @@
 
     function openFinished() {
         const container = document.getElementById('finished-content');
+                pushModalState('finished-modal');
         const finished = [];
         Object.entries(liveData).forEach(([key, info]) => {
             if (info.is_finished && info.score) finished.push({ ...info, key });
@@ -1134,17 +1400,91 @@
         finished.forEach(fm => {
             const parts = fm.score.split(':');
             const hg = parseInt(parts[0]), ag = parseInt(parts[1]);
-            html += '<div class="border border-gray-200 rounded-xl p-4"><div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + (fm.league_flag || '') + ' ' + (fm.league_name || '').toUpperCase() + '</span><span class="text-[10px] text-gray-500">📅 ' + (fm.datetime || '') + '</span></div>';
-            html += '<div class="grid grid-cols-3 items-center gap-4"><div class="text-right font-bold text-[#1e3a5f]">' + fm.home + '</div><div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div><div class="text-left font-bold text-[#1e3a5f]">' + fm.away + '</div></div></div>';
+            const homeEsc = fm.home.replace(/'/g, "\\'");
+            const awayEsc = fm.away.replace(/'/g, "\\'");
+            html += '<div class="border border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1e3a5f] transition" onclick="closeFinished();openFinishedMatchStats(\'' + homeEsc + '\',\'' + awayEsc + '\');">';
+            html += '<div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + (fm.league_flag || '') + ' ' + (fm.league_name || '').toUpperCase() + '</span><span class="text-[10px] text-gray-500">📅 ' + (fm.datetime || '') + '</span></div>';
+            html += '<div class="grid grid-cols-3 items-center gap-4 mb-3"><div class="text-right font-bold text-[#1e3a5f]">' + fm.home + '</div><div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div><div class="text-left font-bold text-[#1e3a5f]">' + fm.away + '</div></div>';
+            html += '<div class="text-center text-xs text-blue-600 font-semibold mt-2 pt-2 border-t border-gray-100">👆 Kliknij aby zobaczyć statystyki</div>';
+            html += '</div>';
         });
         html += '</div>';
         container.innerHTML = html;
         document.getElementById('finished-modal').classList.remove('hidden');
     }
+
+    function openFinishedMatchStats(homeName, awayName) {
+        const key = homeName + '_' + awayName;
+        const info = liveData[key];
+        if (!info) { showToast('Brak danych o meczu', 'error'); return; }
+        pushModalState('match-detail-modal');
+
+        const stats = info.match_stats;
+        const parts = (info.score || '').split(':');
+        const hg = parseInt(parts[0]);
+        const ag = parseInt(parts[1]);
+
+        document.getElementById('md-title').textContent = homeName + ' vs ' + awayName;
+
+        let html = '<div class="bg-gray-700 text-white text-center py-3 rounded-xl mb-4 font-black text-lg">⚽ KONIEC · ' + info.score + '</div>';
+
+        // Header
+        html += '<div class="grid grid-cols-3 items-center gap-4 mb-6 p-4 bg-gray-50 rounded-xl">';
+        html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f]">' + homeName + '</div></div>';
+        html += '<div class="text-center"><div class="text-3xl font-black">' + (isNaN(hg) ? '?' : hg) + ' : ' + (isNaN(ag) ? '?' : ag) + '</div><div class="text-xs text-gray-500 mt-2">' + (info.datetime || '') + '</div><div class="text-[10px] text-gray-500">' + (info.league_flag || '') + ' ' + (info.league_name || '') + '</div></div>';
+        html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f]">' + awayName + '</div></div>';
+        html += '</div>';
+
+        if (stats) {
+            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📊 Statystyki meczu</h4>';
+
+            const statLabels = [
+                { key: 'possession', label: '⚽ Posiadanie piłki', unit: '%' },
+                { key: 'shots', label: '🎯 Strzały łącznie', unit: '' },
+                { key: 'shots_on_target', label: '🎯 Strzały na bramkę', unit: '' },
+                { key: 'xg', label: '📊 xG', unit: '' },
+                { key: 'corners', label: '🚩 Rzuty rożne', unit: '' },
+                { key: 'yellow', label: '🟨 Żółte kartki', unit: '' },
+                { key: 'red', label: '🟥 Czerwone kartki', unit: '' },
+                { key: 'fouls', label: '⚠️ Faule', unit: '' },
+                { key: 'offsides', label: '🚫 Spalone', unit: '' }
+            ];
+
+            html += '<div class="space-y-2">';
+            let hasAny = false;
+            statLabels.forEach(s => {
+                const stat = stats[s.key];
+                if (!stat || (stat.home === null && stat.away === null)) return;
+                hasAny = true;
+                const hv = stat.home, av = stat.away;
+                const inverted = ['yellow', 'red', 'fouls', 'offsides'].includes(s.key);
+                const hBetter = hv !== null && av !== null && (inverted ? hv < av : hv > av);
+                const aBetter = hv !== null && av !== null && (inverted ? av < hv : av > hv);
+                const hCls = hBetter ? 'text-green-600 font-bold' : 'text-gray-700';
+                const aCls = aBetter ? 'text-green-600 font-bold' : 'text-gray-700';
+                html += '<div class="grid grid-cols-3 items-center gap-4 p-3 bg-gray-50 rounded-lg">';
+                html += '<div class="text-right p-2 rounded ' + hCls + '">' + (hv === null ? '—' : hv + s.unit) + '</div>';
+                html += '<div class="text-center text-xs text-gray-600 font-semibold">' + s.label + '</div>';
+                html += '<div class="text-left p-2 rounded ' + aCls + '">' + (av === null ? '—' : av + s.unit) + '</div>';
+                html += '</div>';
+            });
+            html += '</div>';
+
+            if (!hasAny) html += '<p class="text-gray-500 text-center py-4">Brak dostępnych statystyk</p>';
+            html += '</div>';
+        } else {
+            html += '<div class="bg-yellow-50 border border-yellow-300 rounded-xl p-4 text-center text-sm text-yellow-800">⚠️ Statystyki tego meczu nie zostały pobrane</div>';
+        }
+
+        document.getElementById('md-content').innerHTML = html;
+        document.getElementById('match-detail-modal').classList.remove('hidden');
+    }
+
     function closeFinished() { document.getElementById('finished-modal').classList.add('hidden'); }
 
     function openFavorites() {
         const list = document.getElementById('favorites-list');
+                pushModalState('favorites-modal');
         const allMatches = Object.values(allMatchesData).flat();
         const fav = allMatches.filter(m => isFavorite(m.match_id));
         if (fav.length === 0) list.innerHTML = '<p class="text-gray-500 text-center py-8">Brak ulubionych ⭐</p>';
@@ -1195,14 +1535,64 @@
     // HISTORIA PRZEGLĄDARKI (Alt+← / strzałka "wstecz" na myszce)
     // ═══════════════════════════════════════════════════════════════════
 
+        // Lista modali do sprawdzenia - kolejność ma znaczenie (najbardziej wewnętrzne pierwsze)
+    const MODAL_IDS = [
+        'confirm-modal',
+        'auth-modal',
+        'profile-modal',
+        'dashboard-modal',
+        'bet-slip-modal',
+        'compare-modal',
+        'favorites-modal',
+        'live-modal',
+        'value-modal',
+        'match-detail-modal',
+        'finished-modal'
+    ];
+
+    // Zamyka najbardziej wierzchni otwarty modal, zwraca true jeśli coś zamknął
+    function closeTopModal() {
+        for (const id of MODAL_IDS) {
+            const el = document.getElementById(id);
+            if (el && !el.classList.contains('hidden')) {
+                // Specjalne przypadki - używamy dedykowanych funkcji zamykania
+                if (id === 'value-modal') closeValueModal();
+                else if (id === 'match-detail-modal') closeMatchDetail();
+                else if (id === 'finished-modal') closeFinished();
+                else if (id === 'live-modal') closeLive();
+                else if (id === 'favorites-modal') closeFavorites();
+                else if (id === 'compare-modal') closeCompare();
+                else if (id === 'bet-slip-modal') closeBetSlip();
+                else if (id === 'dashboard-modal') closeDashboard();
+                else if (id === 'profile-modal') closeProfile();
+                else if (id === 'auth-modal') closeAuthModal();
+                else if (id === 'confirm-modal') hideConfirm();
+                else el.classList.add('hidden');
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Otwierając modal - dodaj do historii
+    function pushModalState(modalId) {
+        history.pushState({ view: 'modal', modalId: modalId, prev: history.state }, '', window.location.hash);
+    }
+
     window.addEventListener('popstate', function(event) {
         const state = event.state;
+
+        // Najpierw sprawdź czy jest otwarty modal - jeśli tak, zamknij go
+        if (closeTopModal()) {
+            return;
+        }
+
+        // Jeśli żaden modal nie był otwarty - normalna nawigacja
         if (!state || state.view === 'home') {
             backToSportSelection(true);
         } else if (state.view === 'sport') {
             selectSport(state.sport, true);
         } else if (state.view === 'league') {
-            // Najpierw wybierz sport (bez zapisu do historii)
             if (!currentSport || currentSport.id !== state.sport) {
                 const sport = SPORTS[state.sport];
                 if (sport) { currentSport = sport; }
@@ -1210,7 +1600,6 @@
             selectLeague(state.league, true);
         }
     });
-
     function initFromURL() {
         const hash = window.location.hash.replace('#/', '');
         const parts = hash.split('/').filter(Boolean);
