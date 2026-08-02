@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Legia Warszawa_Zagłębie Lubin": {
+            "home": "Legia Warszawa",
+            "away": "Zagłębie Lubin",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_lxG8HQxJ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/zaglebie-lubin-tlYOere0/?mid=lxG8HQxJ",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 1.7,
+                    "away": 1.03
+                },
+                "possession": {
+                    "home": 62,
+                    "away": 38
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 2
+                }
+            }
+        },
         "Wieczysta Kraków_Lech Poznań": {
             "home": "Wieczysta Kraków",
             "away": "Lech Poznań",
@@ -673,6 +725,72 @@
                 "offsides": {
                     "home": 0,
                     "away": 2
+                }
+            }
+        },
+        "Śląsk Wrocław_Raków Częstochowa": {
+            "home": "Śląsk Wrocław",
+            "away": "Raków Częstochowa",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "15",
+            "datetime": "15",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_CEgQZ7hm",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/slask-wroclaw-E1Oxemse/?mid=CEgQZ7hm"
+        },
+        "Ruch Chorzów_Miedź Legnica": {
+            "home": "Ruch Chorzów",
+            "away": "Miedź Legnica",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_xbOVz16T",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/ruch-chorzow-S4zygtuJ/?mid=xbOVz16T",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 14,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 49,
+                    "away": 51
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 19
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 3
                 }
             }
         },
@@ -1403,7 +1521,21 @@
                     "away": 0
                 }
             }
+        },
+        "Stal Mielec_Podbeskidzie B-B": {
+            "home": "Stal Mielec",
+            "away": "Podbeskidzie B-B",
+            "is_live": true,
+            "is_finished": false,
+            "score": "3:0",
+            "stage": "Przerwa",
+            "datetime": "Przerwa",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_0z2mgrMc",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/podbeskidzie-b-b-zBPYeTRl/stal-mielec-pxXiDZkQ/?mid=0z2mgrMc"
         }
     },
-    "updated": "2026-08-02 08:10:26"
+    "updated": "2026-08-02 16:02:07"
 }
