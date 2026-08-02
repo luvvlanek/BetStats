@@ -3,7 +3,7 @@
         {
             "home": "Bayern Monachium",
             "away": "VfB Stuttgart",
-            "datetime": "28.08. 20:30",
+            "datetime": "28.08. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -126,7 +126,7 @@
         {
             "home": "1. FC Koeln",
             "away": "TSG Hoffenheim",
-            "datetime": "29.08. 15:30",
+            "datetime": "29.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -249,7 +249,7 @@
         {
             "home": "1. FSV Mainz 05",
             "away": "Paderborn",
-            "datetime": "29.08. 15:30",
+            "datetime": "29.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -372,7 +372,7 @@
         {
             "home": "Elversberg",
             "away": "Bayer Leverkusen",
-            "datetime": "29.08. 15:30",
+            "datetime": "29.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -495,7 +495,7 @@
         {
             "home": "RB Lipsk",
             "away": "B. Moenchengladbach",
-            "datetime": "29.08. 15:30",
+            "datetime": "29.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -618,7 +618,7 @@
         {
             "home": "Union Berlin",
             "away": "Eintracht Frankfurt",
-            "datetime": "29.08. 15:30",
+            "datetime": "29.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -635,14 +635,14 @@
                 "over35_pct": 47,
                 "avg_goals_scored": 2.0,
                 "avg_goals_conceded": 1.73,
-                "avg_corners": 6.0,
-                "avg_yellow": 1.4,
+                "avg_corners": 5.8,
+                "avg_yellow": 1.6,
                 "avg_red": 0,
-                "avg_shots": 13.8,
-                "avg_shots_on_target": 4.6,
-                "avg_xg": 1.36,
-                "avg_fouls": 10.6,
-                "avg_offsides": 0.8,
+                "avg_shots": 15.2,
+                "avg_shots_on_target": 5.8,
+                "avg_xg": 1.9,
+                "avg_fouls": 9.2,
+                "avg_offsides": 1.0,
                 "form": [
                     "L",
                     "L",
@@ -651,32 +651,32 @@
                     "D"
                 ],
                 "corners_per_match": [
+                    4,
                     8,
                     2,
                     4,
-                    11,
-                    5
+                    11
                 ],
                 "yellow_per_match": [
+                    3,
                     1,
                     2,
                     1,
-                    1,
-                    2
+                    1
                 ],
                 "shots_per_match": [
+                    17,
                     16,
                     13,
                     5,
-                    25,
-                    10
+                    25
                 ],
                 "xg_per_match": [
+                    3.68,
                     2.68,
                     1.15,
                     0.19,
-                    1.78,
-                    0.99
+                    1.78
                 ]
             },
             "away_stats": {
@@ -741,7 +741,7 @@
         {
             "home": "Borussia Dortmund",
             "away": "Hamburger SV",
-            "datetime": "29.08. 18:30",
+            "datetime": "29.08. 16:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -863,7 +863,7 @@
         {
             "home": "SC Freiburg",
             "away": "Werder Brema",
-            "datetime": "30.08. 15:30",
+            "datetime": "30.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -985,7 +985,7 @@
         {
             "home": "FC Augsburg",
             "away": "FC Schalke 04",
-            "datetime": "30.08. 17:30",
+            "datetime": "30.08. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1108,7 +1108,7 @@
         {
             "home": "VfB Stuttgart",
             "away": "1. FC Koeln",
-            "datetime": "04.09. 20:30",
+            "datetime": "04.09. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1231,7 +1231,7 @@
         {
             "home": "Alaves",
             "away": "Getafe",
-            "datetime": "15.08. 19:30",
+            "datetime": "15.08. 17:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1354,7 +1354,7 @@
         {
             "home": "Sevilla",
             "away": "Vallecano",
-            "datetime": "15.08. 21:30",
+            "datetime": "15.08. 19:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1477,7 +1477,7 @@
         {
             "home": "Racing Santander",
             "away": "Villarreal",
-            "datetime": "16.08. 17:00",
+            "datetime": "16.08. 15:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1599,7 +1599,7 @@
         {
             "home": "Espanyol",
             "away": "Levante",
-            "datetime": "16.08. 19:00",
+            "datetime": "16.08. 17:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1721,7 +1721,7 @@
         {
             "home": "Celta Vigo",
             "away": "Osasuna",
-            "datetime": "16.08. 21:30",
+            "datetime": "16.08. 19:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1844,7 +1844,7 @@
         {
             "home": "A Coruna",
             "away": "Elche",
-            "datetime": "17.08. 21:00",
+            "datetime": "17.08. 19:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1967,7 +1967,7 @@
         {
             "home": "Atl. Madryt",
             "away": "Malaga",
-            "datetime": "19.08. 21:00",
+            "datetime": "19.08. 19:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2036,13 +2036,13 @@
                 "over35_pct": 40,
                 "avg_goals_scored": 1.93,
                 "avg_goals_conceded": 1.27,
-                "avg_corners": 4.8,
+                "avg_corners": 5.2,
                 "avg_yellow": 1.6,
                 "avg_red": 1.0,
-                "avg_shots": 13.6,
+                "avg_shots": 13.2,
                 "avg_shots_on_target": 5.0,
-                "avg_xg": 1.69,
-                "avg_fouls": 11.2,
+                "avg_xg": 1.65,
+                "avg_fouls": 11.8,
                 "avg_offsides": 2.2,
                 "form": [
                     "D",
@@ -2054,30 +2054,30 @@
                 "corners_per_match": [
                     7,
                     4,
+                    7,
                     2,
-                    6,
-                    5
+                    6
                 ],
                 "yellow_per_match": [
                     4,
                     2,
-                    0,
                     1,
+                    0,
                     1
                 ],
                 "shots_per_match": [
                     12,
                     11,
+                    15,
                     11,
-                    17,
                     17
                 ],
                 "xg_per_match": [
                     1.86,
                     0.73,
+                    1.67,
                     1.17,
-                    2.81,
-                    1.9
+                    2.81
                 ]
             },
             "h2h": [],
@@ -2090,7 +2090,7 @@
         {
             "home": "Vallecano",
             "away": "Alaves",
-            "datetime": "20.08. 21:00",
+            "datetime": "20.08. 19:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2213,7 +2213,7 @@
         {
             "home": "Betis",
             "away": "Real Sociedad",
-            "datetime": "21.08. 21:00",
+            "datetime": "21.08. 19:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2334,7 +2334,7 @@
         {
             "home": "Ath. Bilbao",
             "away": "Sevilla",
-            "datetime": "22.08. 17:00",
+            "datetime": "22.08. 15:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2734,5 +2734,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-08-02 00:18"
+    "updated": "2026-08-02 00:28"
 }
