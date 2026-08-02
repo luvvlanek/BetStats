@@ -3,7 +3,7 @@
         {
             "home": "Legia Warszawa",
             "away": "Zagłębie Lubin",
-            "datetime": "02.08. 14:45",
+            "datetime": "12:45",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -20,14 +20,14 @@
                 "over35_pct": 33,
                 "avg_goals_scored": 1.6,
                 "avg_goals_conceded": 0.87,
-                "avg_corners": 4.2,
-                "avg_yellow": 2.2,
+                "avg_corners": 4.4,
+                "avg_yellow": 2.0,
                 "avg_red": 0.0,
-                "avg_shots": 12.0,
-                "avg_shots_on_target": 5.0,
-                "avg_xg": 1.51,
+                "avg_shots": 14.6,
+                "avg_shots_on_target": 5.4,
+                "avg_xg": 1.8,
                 "avg_fouls": 13.8,
-                "avg_offsides": 1.2,
+                "avg_offsides": 1.8,
                 "form": [
                     "W",
                     "L",
@@ -38,22 +38,26 @@
                 "corners_per_match": [
                     5,
                     5,
+                    5,
                     1,
                     6
                 ],
                 "yellow_per_match": [
+                    1,
                     1,
                     3,
                     1,
                     4
                 ],
                 "shots_per_match": [
+                    25,
                     18,
                     9,
                     6,
                     15
                 ],
                 "xg_per_match": [
+                    2.96,
                     2.33,
                     1.54,
                     0.51,
@@ -68,14 +72,14 @@
                 "over35_pct": 13,
                 "avg_goals_scored": 1.2,
                 "avg_goals_conceded": 0.93,
-                "avg_corners": 4.3,
-                "avg_yellow": 2.7,
+                "avg_corners": 3.6,
+                "avg_yellow": 1.6,
                 "avg_red": 1.0,
-                "avg_shots": 11.0,
-                "avg_shots_on_target": 3.7,
-                "avg_xg": 0.81,
-                "avg_fouls": 8.7,
-                "avg_offsides": 2.7,
+                "avg_shots": 14.0,
+                "avg_shots_on_target": 3.8,
+                "avg_xg": 1.32,
+                "avg_fouls": 10.8,
+                "avg_offsides": 1.8,
                 "form": [
                     "W",
                     "W",
@@ -84,24 +88,32 @@
                     "W"
                 ],
                 "corners_per_match": [
+                    5,
+                    1,
                     3,
                     4,
-                    6
+                    5
                 ],
                 "yellow_per_match": [
                     1,
+                    3,
                     1,
-                    6
+                    1,
+                    2
                 ],
                 "shots_per_match": [
+                    13,
+                    16,
                     10,
                     13,
-                    10
+                    18
                 ],
                 "xg_per_match": [
+                    0.91,
+                    2.6,
                     0.56,
                     1.26,
-                    0.6
+                    1.29
                 ]
             },
             "h2h": [],
@@ -114,7 +126,7 @@
         {
             "home": "Śląsk Wrocław",
             "away": "Raków Częstochowa",
-            "datetime": "02.08. 17:30",
+            "datetime": "15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -230,7 +242,7 @@
         {
             "home": "GKS Katowice",
             "away": "Radomiak Radom",
-            "datetime": "02.08. 20:15",
+            "datetime": "18:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -289,7 +301,58 @@
                     1.1
                 ]
             },
-            "away_stats": {},
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 80,
+                "over15_pct": 80,
+                "over25_pct": 80,
+                "over35_pct": 47,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 2.07,
+                "avg_corners": 4.2,
+                "avg_yellow": 3.0,
+                "avg_red": 0.67,
+                "avg_shots": 9.8,
+                "avg_shots_on_target": 3.0,
+                "avg_xg": 1.0,
+                "avg_fouls": 12.4,
+                "avg_offsides": 1.0,
+                "form": [
+                    "L",
+                    "W",
+                    "L",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [
+                    5,
+                    4,
+                    4,
+                    4,
+                    4
+                ],
+                "yellow_per_match": [
+                    3,
+                    5,
+                    2,
+                    4,
+                    1
+                ],
+                "shots_per_match": [
+                    13,
+                    10,
+                    7,
+                    6,
+                    13
+                ],
+                "xg_per_match": [
+                    2.14,
+                    0.87,
+                    0.62,
+                    0.3,
+                    1.06
+                ]
+            },
             "h2h": [],
             "odds": {
                 "home": null,
@@ -300,7 +363,7 @@
         {
             "home": "Cracovia",
             "away": "Pogoń Szczecin",
-            "datetime": "03.08. 19:00",
+            "datetime": "03.08. 17:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -422,7 +485,7 @@
         {
             "home": "Wisła Kraków",
             "away": "Wisła Płock",
-            "datetime": "07.08. 20:30",
+            "datetime": "07.08. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -539,7 +602,7 @@
         {
             "home": "Radomiak Radom",
             "away": "Górnik Zabrze",
-            "datetime": "08.08. 14:45",
+            "datetime": "08.08. 12:45",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -548,7 +611,58 @@
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "home_stats": {},
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 80,
+                "over15_pct": 80,
+                "over25_pct": 80,
+                "over35_pct": 47,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 2.07,
+                "avg_corners": 4.2,
+                "avg_yellow": 3.0,
+                "avg_red": 0.67,
+                "avg_shots": 9.8,
+                "avg_shots_on_target": 3.0,
+                "avg_xg": 1.0,
+                "avg_fouls": 12.4,
+                "avg_offsides": 1.0,
+                "form": [
+                    "L",
+                    "W",
+                    "L",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [
+                    5,
+                    4,
+                    4,
+                    4,
+                    4
+                ],
+                "yellow_per_match": [
+                    3,
+                    5,
+                    2,
+                    4,
+                    1
+                ],
+                "shots_per_match": [
+                    13,
+                    10,
+                    7,
+                    6,
+                    13
+                ],
+                "xg_per_match": [
+                    2.14,
+                    0.87,
+                    0.62,
+                    0.3,
+                    1.06
+                ]
+            },
             "away_stats": {
                 "total_matches": 15,
                 "btts_pct": 47,
@@ -557,14 +671,14 @@
                 "over35_pct": 13,
                 "avg_goals_scored": 1.53,
                 "avg_goals_conceded": 0.93,
-                "avg_corners": 5.8,
-                "avg_yellow": 1.2,
+                "avg_corners": 5.0,
+                "avg_yellow": 2.7,
                 "avg_red": 0,
-                "avg_shots": 13.6,
-                "avg_shots_on_target": 4.6,
-                "avg_xg": 1.44,
-                "avg_fouls": 11.0,
-                "avg_offsides": 1.2,
+                "avg_shots": 10.0,
+                "avg_shots_on_target": 3.8,
+                "avg_xg": 0.79,
+                "avg_fouls": 8.8,
+                "avg_offsides": 0.4,
                 "form": [
                     "D",
                     "W",
@@ -573,31 +687,30 @@
                     "W"
                 ],
                 "corners_per_match": [
+                    9,
                     8,
                     2,
-                    6,
                     4,
-                    9
+                    2
                 ],
                 "yellow_per_match": [
+                    4,
                     2,
-                    0,
-                    1,
                     2
                 ],
                 "shots_per_match": [
+                    15,
                     12,
                     2,
-                    25,
-                    14,
-                    15
+                    12,
+                    9
                 ],
                 "xg_per_match": [
+                    0.59,
                     0.7,
                     0.06,
-                    4.57,
-                    1.01,
-                    0.85
+                    1.35,
+                    1.24
                 ]
             },
             "h2h": [],
@@ -610,7 +723,7 @@
         {
             "home": "Pogoń Szczecin",
             "away": "Motor Lublin",
-            "datetime": "08.08. 17:30",
+            "datetime": "08.08. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -733,7 +846,7 @@
         {
             "home": "Korona Kielce",
             "away": "Legia Warszawa",
-            "datetime": "08.08. 20:15",
+            "datetime": "08.08. 18:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -801,14 +914,14 @@
                 "over35_pct": 33,
                 "avg_goals_scored": 1.6,
                 "avg_goals_conceded": 0.87,
-                "avg_corners": 4.2,
-                "avg_yellow": 2.2,
+                "avg_corners": 4.4,
+                "avg_yellow": 2.0,
                 "avg_red": 0.0,
-                "avg_shots": 12.0,
-                "avg_shots_on_target": 5.0,
-                "avg_xg": 1.51,
+                "avg_shots": 14.6,
+                "avg_shots_on_target": 5.4,
+                "avg_xg": 1.8,
                 "avg_fouls": 13.8,
-                "avg_offsides": 1.2,
+                "avg_offsides": 1.8,
                 "form": [
                     "W",
                     "L",
@@ -819,22 +932,26 @@
                 "corners_per_match": [
                     5,
                     5,
+                    5,
                     1,
                     6
                 ],
                 "yellow_per_match": [
+                    1,
                     1,
                     3,
                     1,
                     4
                 ],
                 "shots_per_match": [
+                    25,
                     18,
                     9,
                     6,
                     15
                 ],
                 "xg_per_match": [
+                    2.96,
                     2.33,
                     1.54,
                     0.51,
@@ -849,121 +966,9 @@
             }
         },
         {
-            "home": "Raków Częstochowa",
-            "away": "Zagłębie Lubin",
-            "datetime": "09.08. 14:45",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "2JhLr3yI",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/zaglebie-lubin-tlYOere0/?mid=2JhLr3yI",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 100,
-                "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.93,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 2.8,
-                "avg_yellow": 1.0,
-                "avg_red": 0.0,
-                "avg_shots": 14.2,
-                "avg_shots_on_target": 7.2,
-                "avg_xg": 1.14,
-                "avg_fouls": 10.8,
-                "avg_offsides": 2.0,
-                "form": [
-                    "W",
-                    "L",
-                    "W",
-                    "D",
-                    "L"
-                ],
-                "corners_per_match": [
-                    1,
-                    7,
-                    5,
-                    0,
-                    1
-                ],
-                "yellow_per_match": [
-                    1,
-                    1,
-                    1,
-                    1
-                ],
-                "shots_per_match": [
-                    14,
-                    17,
-                    20,
-                    8,
-                    12
-                ],
-                "xg_per_match": [
-                    1.44,
-                    1.3,
-                    0.67
-                ]
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 20,
-                "over15_pct": 67,
-                "over25_pct": 33,
-                "over35_pct": 13,
-                "avg_goals_scored": 1.2,
-                "avg_goals_conceded": 0.93,
-                "avg_corners": 4.3,
-                "avg_yellow": 2.7,
-                "avg_red": 1.0,
-                "avg_shots": 11.0,
-                "avg_shots_on_target": 3.7,
-                "avg_xg": 0.81,
-                "avg_fouls": 8.7,
-                "avg_offsides": 2.7,
-                "form": [
-                    "W",
-                    "W",
-                    "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [
-                    3,
-                    4,
-                    6
-                ],
-                "yellow_per_match": [
-                    1,
-                    1,
-                    6
-                ],
-                "shots_per_match": [
-                    10,
-                    13,
-                    10
-                ],
-                "xg_per_match": [
-                    0.56,
-                    1.26,
-                    0.6
-                ]
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Śląsk Wrocław",
             "away": "Cracovia",
-            "datetime": "09.08. 14:45",
+            "datetime": "09.08. 12:45",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1079,9 +1084,128 @@
             }
         },
         {
+            "home": "Lech Poznań",
+            "away": "Piast Gliwice",
+            "datetime": "09.08. 15:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "46Xhc2jB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/piast-gliwice-ve2oT9ck/?mid=46Xhc2jB",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 14,
+                "btts_pct": 64,
+                "over15_pct": 79,
+                "over25_pct": 71,
+                "over35_pct": 57,
+                "avg_goals_scored": 2.29,
+                "avg_goals_conceded": 0.86,
+                "avg_corners": 5.2,
+                "avg_yellow": 1.5,
+                "avg_red": 0.0,
+                "avg_shots": 17.5,
+                "avg_shots_on_target": 7.0,
+                "avg_xg": 1.49,
+                "avg_fouls": 10.5,
+                "avg_offsides": 1.0,
+                "form": [
+                    "W",
+                    "D",
+                    "W",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [
+                    7,
+                    9,
+                    2,
+                    3
+                ],
+                "yellow_per_match": [
+                    1,
+                    1,
+                    2,
+                    2
+                ],
+                "shots_per_match": [
+                    21,
+                    18,
+                    17,
+                    14
+                ],
+                "xg_per_match": [
+                    1.7,
+                    0.79,
+                    1.55,
+                    1.93
+                ]
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 80,
+                "over25_pct": 40,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.6,
+                "avg_corners": 6.8,
+                "avg_yellow": 2.4,
+                "avg_red": 0,
+                "avg_shots": 18.0,
+                "avg_shots_on_target": 5.0,
+                "avg_xg": 1.45,
+                "avg_fouls": 13.8,
+                "avg_offsides": 1.4,
+                "form": [
+                    "W",
+                    "L",
+                    "L",
+                    "D",
+                    "W"
+                ],
+                "corners_per_match": [
+                    4,
+                    11,
+                    6,
+                    9,
+                    4
+                ],
+                "yellow_per_match": [
+                    2,
+                    1,
+                    1,
+                    6,
+                    2
+                ],
+                "shots_per_match": [
+                    15,
+                    17,
+                    9,
+                    31,
+                    18
+                ],
+                "xg_per_match": [
+                    1.78,
+                    0.72,
+                    0.46,
+                    3.28,
+                    1.03
+                ]
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
             "home": "Ruch Chorzów",
             "away": "Miedź Legnica",
-            "datetime": "02.08. 14:30",
+            "datetime": "12:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1189,7 +1313,7 @@
         {
             "home": "Stal Mielec",
             "away": "Podbeskidzie B-B",
-            "datetime": "02.08. 17:00",
+            "datetime": "15:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1300,7 +1424,7 @@
         {
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Puszcza Niepołomice",
-            "datetime": "02.08. 19:30",
+            "datetime": "17:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1408,7 +1532,7 @@
         {
             "home": "Chrobry Głogów",
             "away": "Odra Opole",
-            "datetime": "03.08. 19:00",
+            "datetime": "03.08. 17:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1511,7 +1635,7 @@
         {
             "home": "Polonia Bytom",
             "away": "Pogoń Siedlce",
-            "datetime": "07.08. 18:00",
+            "datetime": "07.08. 16:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1622,7 +1746,7 @@
         {
             "home": "Polonia Warszawa",
             "away": "Ruch Chorzów",
-            "datetime": "07.08. 20:30",
+            "datetime": "07.08. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1733,7 +1857,7 @@
         {
             "home": "Miedź Legnica",
             "away": "Pogoń Grodzisk Mazowiecki",
-            "datetime": "08.08. 15:30",
+            "datetime": "08.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1841,7 +1965,7 @@
         {
             "home": "Puszcza Niepołomice",
             "away": "Odra Opole",
-            "datetime": "08.08. 15:30",
+            "datetime": "08.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1945,7 +2069,7 @@
         {
             "home": "Stal Mielec",
             "away": "Stal Rzeszów",
-            "datetime": "08.08. 15:30",
+            "datetime": "08.08. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2056,7 +2180,7 @@
         {
             "home": "Podbeskidzie B-B",
             "away": "Lechia Gdańsk",
-            "datetime": "08.08. 20:15",
+            "datetime": "08.08. 18:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2435,5 +2559,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-08-01 23:47"
+    "updated": "2026-08-02 00:14"
 }

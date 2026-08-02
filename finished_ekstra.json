@@ -1,62 +1,10 @@
 {
     "matches": [
         {
-            "home": "Piast Gliwice",
-            "away": "Wisła Kraków",
-            "score": "4:3",
-            "datetime": "Koniec",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_IBdYXoNa",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/wisla-krakow-rob20Q2Q/?mid=IBdYXoNa",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 11
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 15,
-                    "away": 27
-                },
-                "shots_on_target": {
-                    "home": 8,
-                    "away": 12
-                },
-                "xg": {
-                    "home": 1.78,
-                    "away": 3.6
-                },
-                "possession": {
-                    "home": 47,
-                    "away": 53
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 6
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
-        },
-        {
             "home": "Wieczysta Kraków",
             "away": "Lech Poznań",
             "score": "1:2",
-            "datetime": "Koniec",
+            "datetime": "01.08. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -105,10 +53,62 @@
             }
         },
         {
+            "home": "Piast Gliwice",
+            "away": "Wisła Kraków",
+            "score": "4:3",
+            "datetime": "01.08. 12:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_IBdYXoNa",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/wisla-krakow-rob20Q2Q/?mid=IBdYXoNa",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 11
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 0
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 15,
+                    "away": 27
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 12
+                },
+                "xg": {
+                    "home": 1.78,
+                    "away": 3.6
+                },
+                "possession": {
+                    "home": 47,
+                    "away": 53
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "Motor Lublin",
             "away": "Jagiellonia Białystok",
             "score": "1:2",
-            "datetime": "31.07. 20:30",
+            "datetime": "31.07. 18:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -160,7 +160,7 @@
             "home": "Wisła Płock",
             "away": "Widzew Łódź",
             "score": "0:0",
-            "datetime": "31.07. 18:00",
+            "datetime": "31.07. 16:00",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -212,7 +212,7 @@
             "home": "Zagłębie Lubin",
             "away": "Piast Gliwice",
             "score": "2:0",
-            "datetime": "27.07. 19:00",
+            "datetime": "27.07. 17:00",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -264,7 +264,7 @@
             "home": "Wisła Kraków",
             "away": "GKS Katowice",
             "score": "2:1",
-            "datetime": "26.07. 20:15",
+            "datetime": "26.07. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -316,7 +316,7 @@
             "home": "Widzew Łódź",
             "away": "Motor Lublin",
             "score": "2:2",
-            "datetime": "26.07. 17:30",
+            "datetime": "26.07. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -368,7 +368,7 @@
             "home": "Raków Częstochowa",
             "away": "Wisła Płock",
             "score": "1:2",
-            "datetime": "26.07. 14:45",
+            "datetime": "26.07. 12:45",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -420,7 +420,7 @@
             "home": "Lech Poznań",
             "away": "Cracovia",
             "score": "0:0",
-            "datetime": "25.07. 20:15",
+            "datetime": "25.07. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -472,7 +472,7 @@
             "home": "Górnik Zabrze",
             "away": "Śląsk Wrocław",
             "score": "2:1",
-            "datetime": "25.07. 17:30",
+            "datetime": "25.07. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -524,7 +524,7 @@
             "home": "Jagiellonia Białystok",
             "away": "Korona Kielce",
             "score": "1:0",
-            "datetime": "25.07. 14:45",
+            "datetime": "25.07. 12:45",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -576,7 +576,7 @@
             "home": "Pogoń Szczecin",
             "away": "Legia Warszawa",
             "score": "0:1",
-            "datetime": "24.07. 20:30",
+            "datetime": "24.07. 18:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -628,7 +628,7 @@
             "home": "Radomiak Radom",
             "away": "Wieczysta Kraków",
             "score": "2:1",
-            "datetime": "24.07. 18:00",
+            "datetime": "24.07. 16:00",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -680,7 +680,7 @@
             "home": "Arka Gdynia",
             "away": "Stal Rzeszów",
             "score": "4:0",
-            "datetime": "Koniec",
+            "datetime": "01.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -732,7 +732,7 @@
             "home": "Pogoń Siedlce",
             "away": "Bruk-Bet T.",
             "score": "1:2",
-            "datetime": "Koniec",
+            "datetime": "01.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -784,7 +784,7 @@
             "home": "Polonia Warszawa",
             "away": "Unia Skierniewice",
             "score": "3:1",
-            "datetime": "Koniec",
+            "datetime": "01.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -836,7 +836,7 @@
             "home": "Lechia Gdańsk",
             "away": "Warta Poznań",
             "score": "0:3",
-            "datetime": "31.07. 20:30",
+            "datetime": "31.07. 18:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -888,7 +888,7 @@
             "home": "ŁKS Łódź",
             "away": "Polonia Bytom",
             "score": "2:1",
-            "datetime": "31.07. 18:00",
+            "datetime": "31.07. 16:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -940,7 +940,7 @@
             "home": "Miedź Legnica",
             "away": "Podbeskidzie B-B",
             "score": "1:1",
-            "datetime": "27.07. 19:00",
+            "datetime": "27.07. 17:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -992,7 +992,7 @@
             "home": "Puszcza Niepołomice",
             "away": "Polonia Warszawa",
             "score": "0:1",
-            "datetime": "26.07. 19:30",
+            "datetime": "26.07. 17:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1044,7 +1044,7 @@
             "home": "Unia Skierniewice",
             "away": "Stal Mielec",
             "score": "1:2",
-            "datetime": "26.07. 17:00",
+            "datetime": "26.07. 15:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1096,7 +1096,7 @@
             "home": "Bruk-Bet T.",
             "away": "Ruch Chorzów",
             "score": "2:0",
-            "datetime": "26.07. 14:30",
+            "datetime": "26.07. 12:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1148,7 +1148,7 @@
             "home": "Lechia Gdańsk",
             "away": "Pogoń Grodzisk Mazowiecki",
             "score": "0:3",
-            "datetime": "25.07. 15:30",
+            "datetime": "25.07. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1200,7 +1200,7 @@
             "home": "Pogoń Siedlce",
             "away": "ŁKS Łódź",
             "score": "1:1",
-            "datetime": "25.07. 15:30",
+            "datetime": "25.07. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1252,7 +1252,7 @@
             "home": "Stal Rzeszów",
             "away": "Chrobry Głogów",
             "score": "1:5",
-            "datetime": "25.07. 15:30",
+            "datetime": "25.07. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1304,7 +1304,7 @@
             "home": "Odra Opole",
             "away": "Arka Gdynia",
             "score": "0:1",
-            "datetime": "24.07. 21:00",
+            "datetime": "24.07. 19:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1356,7 +1356,7 @@
             "home": "Polonia Bytom",
             "away": "Warta Poznań",
             "score": "4:3",
-            "datetime": "24.07. 18:00",
+            "datetime": "24.07. 16:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1405,5 +1405,5 @@
             }
         }
     ],
-    "updated": "2026-08-01 23:47"
+    "updated": "2026-08-02 00:14"
 }
