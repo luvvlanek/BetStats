@@ -1136,6 +1136,42 @@
             html += renderStatBox('O3.5', s.o35, mi, 'o35', THRESHOLDS.over35, 'Over 3.5');
             html += '</div></div>';
 
+                        // KURSY 1X2 od bukmachera
+            if (m.odds && (m.odds.home || m.odds.draw || m.odds.away)) {
+                html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">💰 Kursy bukmacherów (1X2)</h4>';
+                html += '<div class="grid grid-cols-3 gap-3">';
+
+                const oddsHome = m.odds.home || '—';
+                const oddsDraw = m.odds.draw || '—';
+                const oddsAway = m.odds.away || '—';
+
+                // Prawdopodobieństwa implikowane przez kursy
+                const impHome = m.odds.home ? Math.round(100 / m.odds.home) : 0;
+                const impDraw = m.odds.draw ? Math.round(100 / m.odds.draw) : 0;
+                const impAway = m.odds.away ? Math.round(100 / m.odds.away) : 0;
+
+                html += '<div class="stat-card p-4 rounded-xl text-center border-2 border-blue-500 bg-blue-50">';
+                html += '<div class="text-[10px] text-gray-500 uppercase mb-1">1 · ' + m.home + '</div>';
+                html += '<div class="text-3xl font-black text-blue-700">' + oddsHome + '</div>';
+                html += '<div class="text-[10px] text-gray-600 mt-1">implikuje ' + impHome + '%</div>';
+                html += '</div>';
+
+                html += '<div class="stat-card p-4 rounded-xl text-center border-2 border-gray-500 bg-gray-50">';
+                html += '<div class="text-[10px] text-gray-500 uppercase mb-1">X · Remis</div>';
+                html += '<div class="text-3xl font-black text-gray-700">' + oddsDraw + '</div>';
+                html += '<div class="text-[10px] text-gray-600 mt-1">implikuje ' + impDraw + '%</div>';
+                html += '</div>';
+
+                html += '<div class="stat-card p-4 rounded-xl text-center border-2 border-red-500 bg-red-50">';
+                html += '<div class="text-[10px] text-gray-500 uppercase mb-1">2 · ' + m.away + '</div>';
+                html += '<div class="text-3xl font-black text-red-700">' + oddsAway + '</div>';
+                html += '<div class="text-[10px] text-gray-600 mt-1">implikuje ' + impAway + '%</div>';
+                html += '</div>';
+
+                html += '</div>';
+                html += '<div class="text-[10px] text-gray-500 text-center mt-2">💡 Suma implikowanych % > 100 to margines bukmachera</div>';
+                html += '</div>';
+            }
             // Cornery + kartki + strzały - jako klikalne z VB
             html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">🎯 Rynki dodatkowe (kliknij dla Value Bet)</h4><div class="grid grid-cols-2 md:grid-cols-3 gap-3">';
             html += renderExtraStat('🚩', 'Cornery', ((hs.avg_corners || 0) + (as.avg_corners || 0)).toFixed(1), mi, 'corners', hs, as);
