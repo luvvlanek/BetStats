@@ -52,6 +52,110 @@
                 }
             }
         },
+        "Śląsk Wrocław_Raków Częstochowa": {
+            "home": "Śląsk Wrocław",
+            "away": "Raków Częstochowa",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_CEgQZ7hm",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/slask-wroclaw-E1Oxemse/?mid=CEgQZ7hm",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 17
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.52,
+                    "away": 3.02
+                },
+                "possession": {
+                    "home": 50,
+                    "away": 50
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 0
+                }
+            }
+        },
+        "GKS Katowice_Radomiak Radom": {
+            "home": "GKS Katowice",
+            "away": "Radomiak Radom",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_tW2fuUUP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/radomiak-radom-zD5nYhAT/?mid=tW2fuUUP",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 5
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 25,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 1.8,
+                    "away": 0.74
+                },
+                "possession": {
+                    "home": 55,
+                    "away": 45
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
+        },
         "Wieczysta Kraków_Lech Poznań": {
             "home": "Wieczysta Kraków",
             "away": "Lech Poznań",
@@ -79,7 +183,7 @@
                     "away": null
                 },
                 "shots": {
-                    "home": 12,
+                    "home": 11,
                     "away": 21
                 },
                 "shots_on_target": {
@@ -689,58 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 6
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 2.14,
-                    "away": 1.77
-                },
-                "possession": {
-                    "home": 42,
-                    "away": 58
-                },
-                "fouls": {
-                    "home": 19,
-                    "away": 19
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 2
-                }
-            }
-        },
-        "Śląsk Wrocław_Raków Częstochowa": {
-            "home": "Śląsk Wrocław",
-            "away": "Raków Częstochowa",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "15",
-            "datetime": "15",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_CEgQZ7hm",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/slask-wroclaw-E1Oxemse/?mid=CEgQZ7hm"
+            "match_stats": null
         },
         "Ruch Chorzów_Miedź Legnica": {
             "home": "Ruch Chorzów",
@@ -790,6 +843,110 @@
                 },
                 "offsides": {
                     "home": 2,
+                    "away": 3
+                }
+            }
+        },
+        "Stal Mielec_Podbeskidzie B-B": {
+            "home": "Stal Mielec",
+            "away": "Podbeskidzie B-B",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:3",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_0z2mgrMc",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/podbeskidzie-b-b-zBPYeTRl/stal-mielec-pxXiDZkQ/?mid=0z2mgrMc",
+            "match_stats": {
+                "corners": {
+                    "home": 1,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 7,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 45,
+                    "away": 55
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 17
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 2
+                }
+            }
+        },
+        "Pogoń Grodzisk Mazowiecki_Puszcza Niepołomice": {
+            "home": "Pogoń Grodzisk Mazowiecki",
+            "away": "Puszcza Niepołomice",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_Q3QjONMN",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/puszcza-dtqx13O8/?mid=Q3QjONMN",
+            "match_stats": {
+                "corners": {
+                    "home": 1,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 1
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 46,
+                    "away": 54
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 4,
                     "away": 3
                 }
             }
@@ -1431,44 +1588,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_OGoJ9O7U",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/odra-opole-C8Kg1k4R/?mid=OGoJ9O7U",
-            "match_stats": {
-                "corners": {
-                    "home": 2,
-                    "away": 0
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 5,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 52,
-                    "away": 48
-                },
-                "fouls": {
-                    "home": 16,
-                    "away": 8
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         "Polonia Bytom_Warta Poznań": {
             "home": "Polonia Bytom",
@@ -1483,59 +1603,8 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 16,
-                    "away": 18
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 8
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 47,
-                    "away": 53
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 0
-                }
-            }
-        },
-        "Stal Mielec_Podbeskidzie B-B": {
-            "home": "Stal Mielec",
-            "away": "Podbeskidzie B-B",
-            "is_live": true,
-            "is_finished": false,
-            "score": "3:0",
-            "stage": "Przerwa",
-            "datetime": "Przerwa",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_0z2mgrMc",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/podbeskidzie-b-b-zBPYeTRl/stal-mielec-pxXiDZkQ/?mid=0z2mgrMc"
+            "match_stats": null
         }
     },
-    "updated": "2026-08-02 16:02:07"
+    "updated": "2026-08-02 21:27:38"
 }
