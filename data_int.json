@@ -1054,14 +1054,14 @@
                 "over35_pct": 40,
                 "avg_goals_scored": 2.0,
                 "avg_goals_conceded": 1.13,
-                "avg_corners": 4.2,
-                "avg_yellow": 1.4,
-                "avg_red": 0,
-                "avg_shots": 15.6,
-                "avg_shots_on_target": 5.8,
-                "avg_xg": 2.05,
-                "avg_fouls": 8.2,
-                "avg_offsides": 1.8,
+                "avg_corners": 3.8,
+                "avg_yellow": 1.6,
+                "avg_red": 1.0,
+                "avg_shots": 14.6,
+                "avg_shots_on_target": 5.2,
+                "avg_xg": 2.06,
+                "avg_fouls": 8.8,
+                "avg_offsides": 1.4,
                 "form": [
                     "W",
                     "W",
@@ -1072,30 +1072,30 @@
                 "corners_per_match": [
                     3,
                     5,
-                    4,
                     2,
-                    7
+                    7,
+                    2
                 ],
                 "yellow_per_match": [
                     1,
                     2,
-                    2,
                     1,
-                    1
+                    1,
+                    3
                 ],
                 "shots_per_match": [
                     13,
                     16,
-                    14,
                     11,
-                    24
+                    24,
+                    9
                 ],
                 "xg_per_match": [
                     2.21,
                     1.81,
-                    1.36,
                     2.28,
-                    2.61
+                    2.61,
+                    1.37
                 ]
             },
             "h2h": [],
@@ -2734,5 +2734,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-08-02 16:15"
+    "updated": "2026-08-02 21:39"
 }
