@@ -212,6 +212,81 @@
             <div id="league-selection-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8"></div>
         </div>
     </div>
+        <!-- PUBLICZNY PROFIL UŻYTKOWNIKA -->
+    <div id="public-profile" class="hidden min-h-screen py-10 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="breadcrumb mb-6">
+                <a onclick="backToSportSelection()">🏠 Strona główna</a>
+                <span class="separator">›</span>
+                <span id="public-profile-breadcrumb" class="font-bold text-[#1e3a5f]"></span>
+            </div>
+
+            <!-- Header profilu -->
+            <div class="bg-gradient-to-r from-[#1e3a5f] to-red-600 rounded-2xl p-6 mb-6 text-white shadow-xl">
+                <div class="flex items-center gap-4">
+                    <div id="public-profile-avatar" class="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center text-4xl font-black backdrop-blur">👤</div>
+                    <div class="flex-1">
+                        <div id="public-profile-nickname" class="text-3xl font-black">@nickname</div>
+                        <div class="text-sm opacity-80">Profil publiczny · BetStats</div>
+                    </div>
+                    <div class="text-right hidden md:block">
+                        <div class="text-xs opacity-70">Od</div>
+                        <div id="public-profile-since" class="text-sm font-bold">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statystyki główne -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-4 text-center shadow">
+                    <div class="text-xs text-gray-500 mb-1">Zakłady</div>
+                    <div id="pub-count" class="text-3xl font-black text-[#1e3a5f]">0</div>
+                </div>
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-4 text-center shadow">
+                    <div class="text-xs text-gray-500 mb-1">Postawione</div>
+                    <div id="pub-stake" class="text-3xl font-black text-[#1e3a5f]">0 zł</div>
+                </div>
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-4 text-center shadow">
+                    <div class="text-xs text-gray-500 mb-1">Wygrane</div>
+                    <div id="pub-win" class="text-3xl font-black text-green-600">0 zł</div>
+                </div>
+                <div class="bg-white border-2 border-gray-200 rounded-xl p-4 text-center shadow">
+                    <div class="text-xs text-gray-500 mb-1">Bilans</div>
+                    <div id="pub-balance" class="text-3xl font-black">0 zł</div>
+                </div>
+            </div>
+
+            <!-- ROI -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <div class="bg-blue-50 border-2 border-blue-500 rounded-xl p-4 text-center">
+                    <div class="text-xs text-gray-500 mb-1">📊 ROI</div>
+                    <div id="pub-roi" class="text-2xl font-black text-blue-700">0%</div>
+                </div>
+                <div class="bg-yellow-50 border-2 border-yellow-500 rounded-xl p-3 text-center">
+                    <div class="text-xs text-gray-500">⏳ Oczekuje</div>
+                    <div id="pub-pending" class="text-2xl font-bold">0</div>
+                </div>
+                <div class="bg-green-50 border-2 border-green-500 rounded-xl p-3 text-center">
+                    <div class="text-xs text-gray-500">✅ Wygrane</div>
+                    <div id="pub-won" class="text-2xl font-bold text-green-600">0</div>
+                </div>
+                <div class="bg-red-50 border-2 border-red-500 rounded-xl p-3 text-center">
+                    <div class="text-xs text-gray-500">❌ Przegrane</div>
+                    <div id="pub-lost" class="text-2xl font-bold text-red-600">0</div>
+                </div>
+            </div>
+
+            <!-- Historia -->
+            <div class="bg-white border-2 border-gray-200 rounded-xl p-4 shadow">
+                <h3 class="font-bold text-[#1e3a5f] mb-4">📝 Historia zakładów</h3>
+                <div id="pub-bets-list" class="space-y-2"></div>
+            </div>
+
+            <div class="text-center text-xs text-gray-500 mt-6">
+                Profil na <a onclick="backToSportSelection()" class="text-blue-600 font-bold cursor-pointer hover:underline">BetStats</a> · © 2026
+            </div>
+        </div>
+    </div>
         <!-- SEKCJA MECZÓW (po wyborze ligi) -->
     <div id="app" class="hidden">
         <div class="max-w-6xl mx-auto p-4 md:p-8">
@@ -354,7 +429,7 @@
 
     <!-- MODAL PROFILE -->
     <div id="profile-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeProfile()">
-        <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="font-bold text-lg text-[#1e3a5f]">👤 Profil</h3>
                 <button onclick="closeProfile()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
@@ -363,6 +438,9 @@
                 <div id="profile-avatar" class="w-20 h-20 mx-auto rounded-full bg-red-600 flex items-center justify-center text-white text-3xl font-bold mb-3">👤</div>
                 <div id="profile-email" class="font-bold text-[#1e3a5f]"></div>
             </div>
+
+            <div id="profile-nickname-section"></div>
+
             <div class="bg-gray-50 rounded-xl p-4 mb-4">
                 <div class="text-xs text-gray-500 mb-1 text-center">Zysk / Strata</div>
                 <div id="profile-balance" class="text-3xl font-black text-center">0 zł</div>
@@ -773,6 +851,16 @@
         document.getElementById('sport-selection').classList.remove('hidden');
         window.scrollTo(0, 0);
         if (!skipHistory) history.pushState({ view: 'home' }, '', '#/');
+    }    function backToSportSelection(skipHistory) {
+        currentSport = null;
+        currentLeague = null;
+        resetTheme();
+        document.getElementById('app').classList.add('hidden');
+        document.getElementById('league-selection').classList.add('hidden');
+        document.getElementById('public-profile').classList.add('hidden');
+        document.getElementById('sport-selection').classList.remove('hidden');
+        window.scrollTo(0, 0);
+        if (!skipHistory) history.pushState({ view: 'home' }, '', '#/');
     }
 
     function backToLeagueSelection(skipHistory) {
@@ -907,13 +995,134 @@
     // AUTH + BET SLIP + DASHBOARD (skrócone - działa jak w starym)
     // ═══════════════════════════════════════════════════════════════════
 
-    async function checkAuth() { const { data } = await sb.auth.getSession(); if (data.session) { currentUser = data.session.user; updateUIForUser(); await loadBets(); } }
+            async function checkAuth() { 
+        const { data } = await sb.auth.getSession(); 
+        if (data.session) { 
+            currentUser = data.session.user;
+            updateUIForUser(); 
+            await loadBets();
+            await loadUserProfile();
+        } 
+    }
+
+    let currentProfile = null;
+
+    async function loadUserProfile() {
+        if (!currentUser) return;
+        const { data, error } = await sb.from('profiles').select('*').eq('id', currentUser.id).single();
+        if (!error && data) {
+            currentProfile = data;
+        } else {
+            currentProfile = null;
+        }
+    }
+
+    async function saveNickname(nickname) {
+        if (!currentUser) return { error: 'Nie zalogowany' };
+        if (!nickname || nickname.length < 3) return { error: 'Nickname min. 3 znaki' };
+        if (!/^[a-zA-Z0-9_-]+$/.test(nickname)) return { error: 'Tylko litery, cyfry, _ i -' };
+
+        const { data: existing } = await sb.from('profiles').select('id').eq('nickname', nickname).neq('id', currentUser.id).maybeSingle();
+        if (existing) return { error: 'Nickname zajęty' };
+
+        const { error } = await sb.from('profiles').upsert({
+            id: currentUser.id,
+            nickname: nickname.toLowerCase()
+        });
+
+        if (error) return { error: error.message };
+        currentProfile = { id: currentUser.id, nickname: nickname.toLowerCase() };
+        return { success: true };
+    }
+
+    async function openProfile() {
+        if (!currentUser) return;
+        await loadUserProfile();
+        document.getElementById('profile-email').textContent = currentUser.email;
+        document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase();
+        updateProfileBalance();
+        renderProfileNickname();
+        pushModalState('profile-modal');
+        document.getElementById('profile-modal').classList.remove('hidden');
+    }
+
+    function closeProfile() { 
+        document.getElementById('profile-modal').classList.add('hidden'); 
+    }
+        function renderProfileNickname() {
+        const container = document.getElementById('profile-nickname-section');
+        if (!container) return;
+
+        if (currentProfile && currentProfile.nickname) {
+            const url = window.location.origin + window.location.pathname + '#/u/' + currentProfile.nickname;
+            container.innerHTML = `
+                <div class="bg-blue-50 border-2 border-blue-500 rounded-xl p-3 mb-3">
+                    <div class="text-xs text-gray-600 mb-1">Twój nickname publiczny:</div>
+                    <div class="font-black text-lg text-blue-700 mb-2">@${currentProfile.nickname}</div>
+                    <div class="text-[10px] text-gray-500 mb-2 break-all">${url}</div>
+                    <button onclick="copyProfileLink('${url}')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-sm">📤 Skopiuj link</button>
+                </div>
+                <button onclick="promptChangeNickname()" class="w-full text-xs text-gray-600 hover:text-red-600 hover:underline mb-3">✏️ Zmień nickname</button>
+            `;
+        } else {
+            container.innerHTML = `
+                <div class="bg-yellow-50 border-2 border-yellow-500 rounded-xl p-3 mb-3">
+                    <div class="text-xs text-gray-700 mb-2">📝 <b>Ustaw nickname</b> żeby udostępniać swój profil publicznie:</div>
+                    <input type="text" id="nickname-input" placeholder="np. luvvlanek" maxlength="20" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm mb-2">
+                    <button onclick="submitNickname()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-sm">✅ Zapisz nickname</button>
+                    <div id="nickname-error" class="text-red-600 text-xs mt-2 hidden"></div>
+                </div>
+            `;
+        }
+    }
+
+    async function submitNickname() {
+        const input = document.getElementById('nickname-input');
+        const errDiv = document.getElementById('nickname-error');
+        const nick = input.value.trim();
+
+        const result = await saveNickname(nick);
+        if (result.error) {
+            errDiv.textContent = result.error;
+            errDiv.classList.remove('hidden');
+            return;
+        }
+        showToast('Nickname zapisany! 🎉', 'success');
+        renderProfileNickname();
+    }
+
+    async function promptChangeNickname() {
+        const newNick = prompt('Nowy nickname (min. 3 znaki, litery/cyfry/_/-):', currentProfile?.nickname || '');
+        if (!newNick) return;
+        const result = await saveNickname(newNick.trim());
+        if (result.error) {
+            showToast('Błąd: ' + result.error, 'error');
+        } else {
+            showToast('Nickname zmieniony! ✅', 'success');
+            renderProfileNickname();
+        }
+    }
+
+    function copyProfileLink(url) {
+        navigator.clipboard.writeText(url).then(() => {
+            showToast('Link skopiowany! 📋', 'success');
+        });
+    }
     function updateUIForUser() { const a = document.getElementById('auth-buttons'), u = document.getElementById('user-buttons'); if (!a || !u) return; if (currentUser) { a.classList.add('hidden'); u.classList.remove('hidden'); u.classList.add('flex'); const p = document.getElementById('profile-icon'); if (p) p.innerHTML = currentUser.email[0].toUpperCase(); } else { a.classList.remove('hidden'); u.classList.add('hidden'); u.classList.remove('flex'); } }
     function openAuthModal(mode) { authMode = mode || 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; pushModalState('auth-modal'); document.getElementById('auth-modal').classList.remove('hidden'); }    function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
     function updateAuthModalUI() { if (authMode === 'register') { document.getElementById('auth-title').textContent = 'Rejestracja'; document.getElementById('auth-submit').textContent = 'Zarejestruj się'; document.getElementById('auth-toggle-text').textContent = 'Masz już konto?'; document.getElementById('auth-toggle-btn').textContent = 'Zaloguj się'; } else { document.getElementById('auth-title').textContent = 'Logowanie'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; document.getElementById('auth-toggle-text').textContent = 'Nie masz konta?'; document.getElementById('auth-toggle-btn').textContent = 'Zarejestruj się'; } }
     function toggleAuthMode() { authMode = authMode === 'login' ? 'register' : 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); }
     async function doAuth() { const email = document.getElementById('auth-email').value.trim(), password = document.getElementById('auth-password').value, errEl = document.getElementById('auth-error'); if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; } if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; } try { let r; if (authMode === 'login') r = await sb.auth.signInWithPassword({ email, password }); else r = await sb.auth.signUp({ email, password }); if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; } currentUser = r.data.user; updateUIForUser(); await loadBets(); closeAuthModal(); } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); } }
-    function openProfile() { if (!currentUser) return; document.getElementById('profile-email').textContent = currentUser.email; document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase(); updateProfileBalance(); pushModalState('profile-modal'); document.getElementById('profile-modal').classList.remove('hidden'); }    function closeProfile() { document.getElementById('profile-modal').classList.add('hidden'); }
+    async function openProfile() {
+        if (!currentUser) return;
+        await loadUserProfile();
+        document.getElementById('profile-email').textContent = currentUser.email;
+        document.getElementById('profile-avatar').textContent = currentUser.email[0].toUpperCase();
+        updateProfileBalance();
+        renderProfileNickname();
+        pushModalState('profile-modal');
+        document.getElementById('profile-modal').classList.remove('hidden');
+    }    
     function updateProfileBalance() { let bal = 0; userBets.forEach(b => { if (b.status === 'won') bal += (b.stake * b.odds) - b.stake; else if (b.status === 'lost') bal -= b.stake; }); const el = document.getElementById('profile-balance'); el.textContent = (bal >= 0 ? '+' : '') + bal.toFixed(2) + ' zł'; el.className = 'text-3xl font-black text-center ' + (bal > 0 ? 'text-green-600' : bal < 0 ? 'text-red-600' : 'text-gray-600'); document.getElementById('profile-stats').textContent = userBets.length + ' zakładów'; }
     async function doLogout() { await sb.auth.signOut(); currentUser = null; userBets = []; updateUIForUser(); closeProfile(); }
     async function loadBets() { if (!currentUser) return; const { data, error } = await sb.from('bets').select('*').order('created_at', { ascending: false }); if (!error) userBets = data || []; }
@@ -1569,6 +1778,114 @@
         c.innerHTML = html;
     }
     function updateThreshold(k, v, u) { THRESHOLDS[k] = parseFloat(v); document.getElementById('threshold-val-' + k).textContent = v + u; saveThresholds(); renderMatches(); }
+    // ═══════════════════════════════════════════════════════════════════
+    // PUBLICZNY PROFIL /#/u/nickname
+    // ═══════════════════════════════════════════════════════════════════
+
+    async function showPublicProfile(nickname, skipHistory) {
+        // Ukryj wszystkie inne widoki
+        document.getElementById('sport-selection').classList.add('hidden');
+        document.getElementById('league-selection').classList.add('hidden');
+        document.getElementById('app').classList.add('hidden');
+        document.getElementById('public-profile').classList.remove('hidden');
+
+        // Reset theme (profil ma własne kolory)
+        resetTheme();
+
+        window.scrollTo(0, 0);
+
+        if (!skipHistory) {
+            history.pushState({ view: 'profile', nickname: nickname }, '', '#/u/' + nickname);
+        }
+
+        document.getElementById('public-profile-breadcrumb').textContent = '@' + nickname;
+        document.getElementById('public-profile-nickname').textContent = '@' + nickname;
+        document.getElementById('public-profile-avatar').textContent = nickname[0].toUpperCase();
+
+        // Pokaż loading
+        document.getElementById('pub-bets-list').innerHTML = '<div class="text-center py-8 text-gray-500">Ładowanie...</div>';
+
+        // Pobierz profil
+        const { data: profile, error: profErr } = await sb.from('profiles').select('*').eq('nickname', nickname.toLowerCase()).maybeSingle();
+
+        if (profErr || !profile) {
+            document.getElementById('pub-bets-list').innerHTML = `
+                <div class="text-center py-12">
+                    <div class="text-6xl mb-4">❌</div>
+                    <p class="text-gray-500 text-lg">Nie znaleziono użytkownika <b>@${nickname}</b></p>
+                    <button onclick="backToSportSelection()" class="mt-4 bg-[#1e3a5f] hover:bg-red-600 text-white px-6 py-2 rounded-lg font-bold">🏠 Wróć do głównej</button>
+                </div>
+            `;
+            return;
+        }
+
+        // Data założenia
+        if (profile.created_at) {
+            const d = new Date(profile.created_at);
+            document.getElementById('public-profile-since').textContent = d.toLocaleDateString('pl-PL');
+        }
+
+        // Pobierz zakłady tego użytkownika
+        const { data: bets, error: betsErr } = await sb.from('bets').select('*').eq('user_id', profile.id).order('created_at', { ascending: false });
+
+        if (betsErr) {
+            document.getElementById('pub-bets-list').innerHTML = '<p class="text-red-600 text-center py-8">Błąd ładowania zakładów</p>';
+            return;
+        }
+
+        renderPublicStats(bets || []);
+    }
+
+    function renderPublicStats(bets) {
+        const total = bets.length;
+        const totalStake = bets.reduce((s, b) => s + parseFloat(b.stake), 0);
+        let totalWin = 0, balance = 0, pending = 0, won = 0, lost = 0;
+        bets.forEach(b => {
+            if (b.status === 'won') { totalWin += b.stake * b.odds; balance += (b.stake * b.odds) - b.stake; won++; }
+            else if (b.status === 'lost') { balance -= b.stake; lost++; }
+            else pending++;
+        });
+
+        // ROI = (zysk / suma stawek zakończonych) * 100
+        const settledStake = bets.filter(b => b.status !== 'pending').reduce((s, b) => s + parseFloat(b.stake), 0);
+        const roi = settledStake > 0 ? Math.round((balance / settledStake) * 100) : 0;
+
+        document.getElementById('pub-count').textContent = total;
+        document.getElementById('pub-stake').textContent = totalStake.toFixed(2) + ' zł';
+        document.getElementById('pub-win').textContent = totalWin.toFixed(2) + ' zł';
+
+        const balEl = document.getElementById('pub-balance');
+        balEl.textContent = (balance >= 0 ? '+' : '') + balance.toFixed(2) + ' zł';
+        balEl.className = 'text-3xl font-black ' + (balance > 0 ? 'text-green-600' : balance < 0 ? 'text-red-600' : 'text-gray-600');
+
+        const roiEl = document.getElementById('pub-roi');
+        roiEl.textContent = (roi >= 0 ? '+' : '') + roi + '%';
+        roiEl.className = 'text-2xl font-black ' + (roi > 0 ? 'text-green-700' : roi < 0 ? 'text-red-700' : 'text-blue-700');
+
+        document.getElementById('pub-pending').textContent = pending;
+        document.getElementById('pub-won').textContent = won;
+        document.getElementById('pub-lost').textContent = lost;
+
+        // Historia
+        const list = document.getElementById('pub-bets-list');
+        if (!bets.length) {
+            list.innerHTML = '<p class="text-gray-500 text-center py-8">Brak zakładów</p>';
+            return;
+        }
+
+        let html = '';
+        bets.forEach(b => {
+            const sc = { pending: 'bg-yellow-100 text-yellow-800', won: 'bg-green-100 text-green-800', lost: 'bg-red-100 text-red-800' };
+            const si = { pending: '⏳', won: '✅', lost: '❌' };
+            const sl = { pending: 'Oczekuje', won: 'Wygrany', lost: 'Przegrany' };
+            const date = new Date(b.created_at).toLocaleDateString('pl-PL');
+            html += '<div class="border border-gray-200 rounded-xl p-3">';
+            html += '<div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="text-[10px] text-gray-500">' + date + ' · ' + (b.match_league || '') + '</div><div class="font-bold text-[#1e3a5f]">' + b.match_home + ' vs ' + b.match_away + '</div><div class="text-sm text-gray-700 mt-1">' + b.bet_type.substring(0, 100) + '</div></div><span class="text-xs font-bold px-2 py-1 rounded ' + sc[b.status] + '">' + si[b.status] + ' ' + sl[b.status] + '</span></div>';
+            html += '<div class="flex flex-wrap gap-3 text-xs text-gray-600"><span>Stawka: <b>' + b.stake + ' zł</b></span><span>Kurs: <b>' + b.odds + '</b></span><span>Potencjał: <b>' + b.potential_win.toFixed(2) + ' zł</b></span></div>';
+            html += '</div>';
+        });
+        list.innerHTML = html;
+    }
 
     // ═══════════════════════════════════════════════════════════════════
     // HISTORIA PRZEGLĄDARKI (Alt+← / strzałka "wstecz" na myszce)
@@ -1637,12 +1954,33 @@
                 if (sport) { currentSport = sport; }
             }
             selectLeague(state.league, true);
+        } else if (state.view === 'profile') {
+            showPublicProfile(state.nickname, true);
         }
     });
     function initFromURL() {
         const hash = window.location.hash.replace('#/', '');
         const parts = hash.split('/').filter(Boolean);
         if (parts.length === 0) return;
+        const sportId = parts[0];
+        const leagueId = parts[1];
+        if (sportId && SPORTS[sportId]) {
+            selectSport(sportId, true);
+            if (leagueId) {
+                setTimeout(() => selectLeague(leagueId, true), 100);
+            }
+        }
+    }    function initFromURL() {
+        const hash = window.location.hash.replace('#/', '');
+        const parts = hash.split('/').filter(Boolean);
+        if (parts.length === 0) return;
+
+        // Publiczny profil: /#/u/nickname
+        if (parts[0] === 'u' && parts[1]) {
+            showPublicProfile(parts[1], true);
+            return;
+        }
+
         const sportId = parts[0];
         const leagueId = parts[1];
         if (sportId && SPORTS[sportId]) {
@@ -1706,9 +2044,16 @@
     loadLiveData();
     setInterval(loadLiveData, 60000);
 
-    // Startowy stan w historii
-    history.replaceState({ view: 'home' }, '', '#/');
+    // Startowy stan w historii - tylko jeśli nie mamy juz hashu w URL
+    if (!window.location.hash || window.location.hash === '#/') {
+        history.replaceState({ view: 'home' }, '', '#/');
+    }
     initFromURL();
+
+    // Nasłuchuj na zmiany hasha (kiedy user wpisze URL ręcznie i wciśnie Enter)
+    window.addEventListener('hashchange', function() {
+        initFromURL();
+    });
     </script>
 </body>
 </html>
