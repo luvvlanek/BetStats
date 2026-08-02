@@ -505,19 +505,12 @@ async def scrape_league(browser, league):
 
         await context.close()
 
-        teams_in_matches = set()
-        for m in matches:
-            teams_in_matches.add(m['home'].lower())
-            teams_in_matches.add(m['away'].lower())
-
+        # Bierzemy WSZYSTKIE drużyny z tabeli (nie tylko te z wybranych 10 meczów)
+        # Dzięki temu każda drużyna ma statystyki, nawet jeśli gra dopiero za tydzień
         team_urls = []
         for t in standings:
-            if t['url']:
-                t_lower = t['team'].lower()
-                for tm in teams_in_matches:
-                    if t_lower[:6] in tm or tm[:6] in t_lower:
-                        team_urls.append((t['team'], t['url']))
-                        break
+            if t.get('url') and t.get('team'):
+                team_urls.append((t['team'], t['url']))
 
         print(f"[4] Statystyki {len(team_urls)} drużyn w {CONCURRENT_TEAMS} workerach...")
 

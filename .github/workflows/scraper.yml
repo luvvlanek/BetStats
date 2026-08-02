@@ -38,8 +38,15 @@ jobs:
           git config user.email "actions@github.com"
           git add data_ekstra.json live_ekstra.json finished_ekstra.json 2>/dev/null || true
           git add ekstraklasa/data_ekstra.json ekstraklasa/live_ekstra.json ekstraklasa/finished_ekstra.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "🤖 Auto: aktualizacja Ekstraklasa + 1. Liga"
-          git push
+          git diff --staged --quiet && exit 0
+          git commit -m "🤖 Auto: aktualizacja Ekstraklasa + 1. Liga"
+          
+          # Retry push - pull najpierw jeśli konflikt
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            echo "Push nieudany, próba $i, czekam 5s..."
+            sleep 5
+          done
 
   scrape-bundesliga:
     runs-on: ubuntu-latest
@@ -77,5 +84,12 @@ jobs:
           git config user.email "actions@github.com"
           git add data_int.json live_int.json finished_int.json 2>/dev/null || true
           git add bundesliga/data_int.json bundesliga/live_int.json bundesliga/finished_int.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "🤖 Auto: aktualizacja Bundesliga + La Liga"
-          git push
+          git diff --staged --quiet && exit 0
+          git commit -m "🤖 Auto: aktualizacja Bundesliga + La Liga"
+          
+          # Retry push - pull najpierw jeśli konflikt
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && break
+            echo "Push nieudany, próba $i, czekam 5s..."
+            sleep 5
+          done
