@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Cracovia",
+            "away": "Pogoń Szczecin",
+            "score": "0:2",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_tCC0Jn86",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/pogon-szczecin-Um9YwPQ0/?mid=tCC0Jn86",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.15,
+                    "away": 0.93
+                },
+                "possession": {
+                    "home": 59,
+                    "away": 41
+                },
+                "fouls": {
+                    "home": 7,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 3
+                }
+            }
+        },
+        {
             "home": "GKS Katowice",
             "away": "Radomiak Radom",
             "score": "3:1",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_6c0v7IIq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/pogon-szczecin-Um9YwPQ0/?mid=6c0v7IIq",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 10,
-                    "away": 25
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 7
-                },
-                "xg": {
-                    "home": 1.01,
-                    "away": 2.96
-                },
-                "possession": {
-                    "home": 41,
-                    "away": 59
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 4
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Radomiak Radom",
@@ -794,6 +809,58 @@
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
+        },
+        {
+            "home": "Chrobry Głogów",
+            "away": "Odra Opole",
+            "score": "0:1",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_6X4eiMjA",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/odra-opole-C8Kg1k4R/?mid=6X4eiMjA",
+            "match_stats": {
+                "corners": {
+                    "home": 2,
+                    "away": 13
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 55,
+                    "away": 45
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 3
+                }
+            }
         },
         {
             "home": "Pogoń Grodzisk Mazowiecki",
@@ -1536,44 +1603,7 @@
             "stage": "Koniec",
             "match_id": "g_1_ldrmHl9t",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/stal-rzeszow-IkpY1q92/?mid=ldrmHl9t",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 14
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 7
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 56,
-                    "away": 44
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 15
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Odra Opole",
@@ -1606,5 +1636,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-03 12:55"
+    "updated": "2026-08-03 22:06"
 }
