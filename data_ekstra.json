@@ -269,7 +269,7 @@
                 "avg_red": 1.0,
                 "avg_shots": 11.6,
                 "avg_shots_on_target": 3.8,
-                "avg_xg": 1.14,
+                "avg_xg": 1.2,
                 "avg_fouls": 12.8,
                 "avg_offsides": 2.4,
                 "form": [
@@ -301,7 +301,7 @@
                     17
                 ],
                 "xg_per_match": [
-                    0.93,
+                    1.21,
                     1.01,
                     0.71,
                     1.09,
@@ -558,7 +558,7 @@
                 "avg_red": 0.0,
                 "avg_shots": 14.0,
                 "avg_shots_on_target": 4.0,
-                "avg_xg": 1.26,
+                "avg_xg": 1.31,
                 "avg_fouls": 12.0,
                 "avg_offsides": 1.2,
                 "form": [
@@ -589,7 +589,7 @@
                     17
                 ],
                 "xg_per_match": [
-                    1.15,
+                    1.4,
                     0.8,
                     1.43,
                     1.56,
@@ -598,9 +598,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.35,
-                "draw": 3.35,
-                "away": 2.8
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1526,9 +1526,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.1,
+                "home": 2.05,
                 "draw": 3.4,
-                "away": 2.9
+                "away": 3
             }
         },
         {
@@ -1760,47 +1760,46 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
+                "btts_pct": 60,
                 "over15_pct": 93,
-                "over25_pct": 60,
+                "over25_pct": 53,
                 "over35_pct": 20,
                 "avg_goals_scored": 2.0,
-                "avg_goals_conceded": 0.87,
-                "avg_corners": 6.8,
+                "avg_goals_conceded": 0.8,
+                "avg_corners": 6.4,
                 "avg_yellow": 2.0,
                 "avg_red": 0,
-                "avg_shots": 10.4,
+                "avg_shots": 11.4,
                 "avg_shots_on_target": 5.4,
                 "avg_xg": 0,
-                "avg_fouls": 17.3,
-                "avg_offsides": 1.0,
+                "avg_fouls": 16.5,
+                "avg_offsides": 1.2,
                 "form": [
-                    "D",
-                    "D",
-                    "D",
                     "W",
+                    "D",
+                    "D",
+                    "D",
                     "W"
                 ],
                 "corners_per_match": [
+                    3,
                     6,
                     8,
                     7,
-                    8,
-                    5
+                    8
                 ],
                 "yellow_per_match": [
                     2,
                     1,
                     4,
-                    1,
-                    2
+                    1
                 ],
                 "shots_per_match": [
+                    12,
                     8,
                     11,
                     12,
-                    14,
-                    7
+                    14
                 ],
                 "xg_per_match": []
             },
@@ -2069,9 +2068,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.67,
-                "draw": 3.6,
-                "away": 4.33
+                "home": 1.85,
+                "draw": 3.4,
+                "away": 3.7
             }
         },
         {
@@ -2183,9 +2182,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.4,
-                "draw": 3.7,
-                "away": 1.83
+                "home": 3.1,
+                "draw": 3.6,
+                "away": 1.95
             }
         },
         {
@@ -2566,5 +2565,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-08-05 10:27"
+    "updated": "2026-08-05 17:27"
 }
