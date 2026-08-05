@@ -189,52 +189,53 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 73,
-                "over25_pct": 47,
+                "btts_pct": 40,
+                "over15_pct": 67,
+                "over25_pct": 40,
                 "over35_pct": 13,
-                "avg_goals_scored": 1.53,
+                "avg_goals_scored": 1.4,
                 "avg_goals_conceded": 0.93,
-                "avg_corners": 5.0,
-                "avg_yellow": 2.7,
+                "avg_corners": 5.6,
+                "avg_yellow": 2.2,
                 "avg_red": 0,
-                "avg_shots": 10.0,
-                "avg_shots_on_target": 3.8,
-                "avg_xg": 0.79,
-                "avg_fouls": 8.8,
-                "avg_offsides": 0.4,
+                "avg_shots": 10.2,
+                "avg_shots_on_target": 3.4,
+                "avg_xg": 0.7,
+                "avg_fouls": 10.0,
+                "avg_offsides": 0.6,
                 "form": [
+                    "L",
                     "D",
                     "W",
                     "L",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [
+                    5,
                     9,
                     8,
                     2,
-                    4,
-                    2
+                    4
                 ],
                 "yellow_per_match": [
+                    1,
                     4,
                     2,
                     2
                 ],
                 "shots_per_match": [
+                    10,
                     15,
                     12,
                     2,
-                    12,
-                    9
+                    12
                 ],
                 "xg_per_match": [
+                    0.79,
                     0.59,
                     0.7,
                     0.06,
-                    1.35,
-                    1.24
+                    1.35
                 ]
             },
             "h2h": [],
@@ -1526,9 +1527,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.05,
+                "home": 2,
                 "draw": 3.4,
-                "away": 3
+                "away": 3.1
             }
         },
         {
@@ -1958,9 +1959,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.67,
+                "home": 1.65,
                 "draw": 3.6,
-                "away": 4.33
+                "away": 4.5
             }
         },
         {
@@ -2027,29 +2028,29 @@
                 "over15_pct": 80,
                 "over25_pct": 67,
                 "over35_pct": 47,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.73,
+                "avg_goals_scored": 1.67,
+                "avg_goals_conceded": 1.8,
                 "avg_corners": 5.4,
                 "avg_yellow": 1.8,
                 "avg_red": 0.0,
-                "avg_shots": 9.6,
-                "avg_shots_on_target": 5.4,
+                "avg_shots": 11.2,
+                "avg_shots_on_target": 6.4,
                 "avg_xg": 0,
-                "avg_fouls": 9.0,
-                "avg_offsides": 2.5,
+                "avg_fouls": 11.3,
+                "avg_offsides": 2.0,
                 "form": [
-                    "W",
                     "L",
+                    "W",
                     "L",
                     "L",
                     "L"
                 ],
                 "corners_per_match": [
+                    8,
                     5,
                     4,
                     6,
-                    4,
-                    8
+                    4
                 ],
                 "yellow_per_match": [
                     2,
@@ -2058,11 +2059,11 @@
                     1
                 ],
                 "shots_per_match": [
+                    18,
                     9,
                     18,
                     4,
-                    7,
-                    10
+                    7
                 ],
                 "xg_per_match": []
             },
@@ -2086,18 +2087,18 @@
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
             "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 87,
-                "over25_pct": 73,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 6.2,
-                "avg_yellow": 2.6,
+                "total_matches": 14,
+                "btts_pct": 50,
+                "over15_pct": 86,
+                "over25_pct": 71,
+                "over35_pct": 36,
+                "avg_goals_scored": 1.71,
+                "avg_goals_conceded": 1.21,
+                "avg_corners": 5.0,
+                "avg_yellow": 2.8,
                 "avg_red": 0.5,
-                "avg_shots": 15.2,
-                "avg_shots_on_target": 7.6,
+                "avg_shots": 14.2,
+                "avg_shots_on_target": 7.2,
                 "avg_xg": 0,
                 "avg_fouls": 13.5,
                 "avg_offsides": 0.5,
@@ -2112,22 +2113,19 @@
                     9,
                     2,
                     5,
-                    4,
-                    11
+                    4
                 ],
                 "yellow_per_match": [
                     3,
                     3,
                     2,
-                    3,
-                    2
+                    3
                 ],
                 "shots_per_match": [
                     11,
                     12,
                     8,
-                    26,
-                    19
+                    26
                 ],
                 "xg_per_match": []
             },
@@ -2565,5 +2563,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-08-05 17:27"
+    "updated": "2026-08-05 22:33"
 }
