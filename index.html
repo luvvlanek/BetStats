@@ -35,6 +35,33 @@
         body.dark .text-gray-500 { color: #6b7280 !important; }
         body.dark .league-card { background: #1a1f2e; border-color: #2d3548; }
         body.dark input, body.dark select { background: #1a1f2e; color: #e5e7eb; border-color: #2d3548; }
+        /* Dark mode dla modali - sekcja finished + inne */
+        body.dark #finished-content .bg-white { background: #1a1f2e !important; color: #e5e7eb; }
+        body.dark #finished-content .border-gray-200 { border-color: #2d3548 !important; }
+        body.dark #finished-content .text-gray-500 { color: #9ca3af !important; }
+        body.dark #finished-content .border-gray-100 { border-color: #2d3548 !important; }
+        body.dark #finished-content .bg-gray-200 { background: #2d3548 !important; color: #e5e7eb !important; }
+        body.dark #finished-content .text-gray-700 { color: #d1d5db !important; }
+        body.dark #finished-content .text-blue-600 { color: #60a5fa !important; }
+        body.dark #finished-content input { background: #1a1f2e !important; color: #e5e7eb !important; border-color: #2d3548 !important; }
+        body.dark #finished-content input::placeholder { color: #6b7280 !important; }
+                body.dark #about-content .bg-white { background: #1a1f2e !important; color: #e5e7eb; }
+        body.dark #about-content .bg-gray-50 { background: #151a26 !important; }
+        body.dark #about-content .text-gray-700 { color: #d1d5db !important; }
+        body.dark #about-content .text-gray-600 { color: #9ca3af !important; }
+        body.dark #about-content .text-gray-500 { color: #6b7280 !important; }
+        body.dark #about-content .border-gray-200 { border-color: #2d3548 !important; }
+        body.dark #about-content .bg-blue-50 { background: #0f1a3f !important; }
+        body.dark #about-content .bg-green-50 { background: #0f2818 !important; }
+        body.dark #about-content .bg-red-50 { background: #3f1515 !important; }
+        body.dark #about-content .bg-yellow-100 { background: #3b2f0a !important; }
+
+        /* Dark mode dla sticky top w modalach */
+        body.dark .sticky.top-0.bg-white { background: #1a1f2e !important; }
+
+        /* Dark mode - buttony filtra ligi */
+        body.dark #finished-content button.bg-gray-200 { background: #2d3548 !important; color: #e5e7eb !important; }
+        body.dark #finished-content button.bg-gray-200:hover { background: #3d4558 !important; }
 
         .bar-fill { height: 3px; border-radius: 999px; transition: width 0.3s; }
         .stat-card { background: linear-gradient(135deg, rgba(0,0,0,0.03), rgba(0,0,0,0)); border: 1px solid rgba(0,0,0,0.08); }
@@ -115,6 +142,16 @@
         .breadcrumb a { color: #1e3a5f; font-weight: 600; cursor: pointer; }
         .breadcrumb a:hover { text-decoration: underline; }
         .breadcrumb .separator { color: #999; }
+                /* Animacje dla strony O projekcie */
+        .about-fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .about-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="text-gray-800 font-sans min-h-screen">
@@ -126,9 +163,10 @@
             <span class="font-black text-sm tracking-wider hidden sm:inline">BET STATS</span>
         </div>
         <div class="flex items-center gap-2">
-            <button onclick="openLive()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1"><span class="text-red-400">🔴</span> <span class="hidden sm:inline">LIVE</span></button>
             <button onclick="openFinished()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1"><span class="text-green-400">✅</span> <span class="hidden sm:inline">Zakończone</span></button>
-            <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-lg w-10 h-10 rounded-lg flex items-center justify-center">🌙</button>
+            <button onclick="goToAbout()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="O projekcie">
+                <span class="text-yellow-400">💡</span> <span class="hidden sm:inline">O projekcie</span>
+            </button>            <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-lg w-10 h-10 rounded-lg flex items-center justify-center">🌙</button>
             <div id="auth-buttons" class="flex items-center gap-2">
                 <button onclick="openAuthModal('login')" class="btn-outline text-xs px-4 py-2 rounded-lg font-semibold">Zaloguj się</button>
                 <button onclick="openAuthModal('register')" class="btn-solid text-xs px-4 py-2 rounded-lg font-semibold">Zarejestruj się</button>
@@ -529,19 +567,6 @@
         </div>
     </div>
 
-    <!-- MODAL LIVE -->
-    <div id="live-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeLive()">
-        <div class="bg-white rounded-2xl w-full max-w-5xl h-[90vh] shadow-2xl overflow-hidden flex flex-col">
-            <div class="flex justify-between items-center p-4 border-b border-gray-200">
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl animate-glow rounded-full inline-block">🔴</span>
-                    <h3 class="font-bold text-lg text-[#1e3a5f]">Mecze na żywo</h3>
-                </div>
-                <button onclick="closeLive()" class="text-gray-500 hover:text-red-600 text-2xl">×</button>
-            </div>
-            <div id="live-list-container" class="flex-1 overflow-y-auto"></div>
-        </div>
-    </div>
 
     <!-- MODAL MATCH DETAIL -->
     <div id="match-detail-modal" class="hidden modal-overlay" onclick="if(event.target===this)closeMatchDetail()">
@@ -567,7 +592,269 @@
             <div id="finished-content" class="p-6"></div>
         </div>
     </div>
+    <!-- MODAL O PROJEKCIE -->
+    <!-- PODSTRONA O PROJEKCIE -->
+    <div id="about-page" class="hidden min-h-screen">
+        <!-- Hero -->
+        <div class="relative overflow-hidden" style="background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #dc2626 100%); min-height: 400px;">
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.3) 20px, rgba(255,255,255,0.3) 21px);"></div>
+                <div class="absolute top-10 left-10 text-9xl opacity-10 animate-float">⚽</div>
+                <div class="absolute top-20 right-20 text-8xl opacity-10 animate-float" style="animation-delay: 1s;">🏐</div>
+                <div class="absolute bottom-10 left-1/3 text-7xl opacity-10 animate-float" style="animation-delay: 2s;">📊</div>
+            </div>
+            <div class="relative max-w-5xl mx-auto px-6 py-16 text-center text-white">
+                <div class="breadcrumb justify-center mb-6">
+                    <a onclick="backToSportSelection()" class="text-white/70 hover:text-white cursor-pointer">🏠 Strona główna</a>
+                    <span class="separator text-white/40">›</span>
+                    <span class="text-white font-bold">O projekcie</span>
+                </div>
+                <div class="text-7xl mb-6 animate-float">⚡</div>
+                <h1 class="text-5xl md:text-7xl font-black tracking-wider mb-4 about-fade-in">BET STATS</h1>
+                <p class="text-xl md:text-2xl italic opacity-90 about-fade-in" style="animation-delay: 0.2s;">statystyki twoich ulubionych lig</p>
+                <div class="mt-8 flex flex-wrap gap-3 justify-center about-fade-in" style="animation-delay: 0.4s;">
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-bold">⚽ 7 lig piłkarskich</span>
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-bold">🏐 3 ligi siatkarskie</span>
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-bold">🤖 Auto co 6h</span>
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm font-bold">🔥 Value Bety</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+            <!-- CZYM JEST -->
+            <section class="about-section about-fade-in">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-3xl text-white shadow-lg">🎯</div>
+                    <h2 class="text-3xl font-black text-[#1e3a5f]">Czym jest BetStats?</h2>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-500">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        BetStats to <b class="text-[#1e3a5f]">autorskie narzędzie</b> do analizy meczów piłkarskich i siatkarskich. Automatycznie pobieramy statystyki drużyn z Flashscore, liczymy prawdopodobieństwa i wykrywamy <b class="text-red-600">Value Bety</b> — czyli zakłady, gdzie kurs bukmachera jest wyższy niż realna szansa. Koniec z ręcznym liczeniem — wystarczy jedno spojrzenie.
+                    </p>
+                </div>
+            </section>
+
+            <!-- LIGI -->
+            <section class="about-section about-fade-in">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center text-3xl text-white shadow-lg">🏆</div>
+                    <h2 class="text-3xl font-black text-[#1e3a5f]">Ligi które obsługujemy</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Piłka -->
+                    <div class="group bg-white rounded-2xl p-6 shadow-lg border-2 border-transparent hover:border-blue-500 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer" onclick="backToSportSelection();setTimeout(()=>selectSport('football'),100);">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-5xl group-hover:scale-125 transition-transform duration-500">⚽</span>
+                            <div>
+                                <h3 class="text-2xl font-black text-[#1e3a5f]">Piłka nożna</h3>
+                                <p class="text-xs text-gray-500">7 rozgrywek</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🇵🇱 Ekstraklasa</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🇵🇱 1. Liga</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🇪🇸 La Liga</span>
+                            <span class="bg-gray-800 text-white text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🇩🇪 Bundesliga</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🏆 Liga Mistrzów</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🏆 Liga Europy</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🏆 Liga Konferencji</span>
+                        </div>
+                    </div>
+                    <!-- Siatkówka -->
+                    <div class="group bg-white rounded-2xl p-6 shadow-lg border-2 border-transparent hover:border-orange-500 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer" onclick="backToSportSelection();setTimeout(()=>selectSport('volleyball'),100);">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-5xl group-hover:scale-125 transition-transform duration-500">🏐</span>
+                            <div>
+                                <h3 class="text-2xl font-black text-[#1e3a5f]">Siatkówka</h3>
+                                <p class="text-xs text-gray-500">3 ligi + ME wkrótce</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🇵🇱 Tauron Liga</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🇵🇱 Tauron 1. Liga</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🇵🇱 Liga Kobiet</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1.5 rounded-full hover:scale-110 transition-transform">🏆 ME (wkrótce)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SKAD DANE -->
+            <section class="about-section about-fade-in">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-3xl text-white shadow-lg">🤖</div>
+                    <h2 class="text-3xl font-black text-[#1e3a5f]">Skąd dane?</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border border-gray-100">
+                        <div class="text-5xl mb-4">📡</div>
+                        <h4 class="font-black text-lg text-[#1e3a5f] mb-2">Flashscore</h4>
+                        <p class="text-sm text-gray-600">Automatyczny scraper pobiera statystyki ze strony Flashscore.pl</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border border-gray-100">
+                        <div class="text-5xl mb-4">⏱️</div>
+                        <h4 class="font-black text-lg text-[#1e3a5f] mb-2">Co 6 godzin</h4>
+                        <p class="text-sm text-gray-600">GitHub Actions automatycznie aktualizuje dane <b class="text-red-600">24/7</b></p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border border-gray-100">
+                        <div class="text-5xl mb-4">📊</div>
+                        <h4 class="font-black text-lg text-[#1e3a5f] mb-2">5 ostatnich meczów</h4>
+                        <p class="text-sm text-gray-600">Statystyki z <b class="text-blue-600">ostatnich 5 meczów</b> każdej drużyny</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VALUE BET -->
+            <section class="about-section about-fade-in">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center text-3xl text-white shadow-lg">📊</div>
+                    <h2 class="text-3xl font-black text-[#1e3a5f]">Jak liczymy Value Bety?</h2>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        <b class="text-green-700">Value Bet</b> to sytuacja, w której nasze wyliczone prawdopodobieństwo jest <b>wyższe</b> niż to sugerowane przez kurs bukmachera. Bukmacher zaniża szanse — a Ty wykorzystujesz tę różnicę.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-5 text-center hover:scale-105 transition-transform duration-300 border border-green-300">
+                            <div class="text-xs text-gray-500 mb-2 uppercase tracking-wider">1. Nasza szansa</div>
+                            <div class="text-4xl font-black text-green-600">65%</div>
+                            <div class="text-xs text-gray-500 mt-2">na podstawie historii</div>
+                        </div>
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-5 text-center hover:scale-105 transition-transform duration-300 border border-blue-300">
+                            <div class="text-xs text-gray-500 mb-2 uppercase tracking-wider">2. Kurs implikuje</div>
+                            <div class="text-4xl font-black text-blue-600">50%</div>
+                            <div class="text-xs text-gray-500 mt-2">(kurs 2.00 = 50%)</div>
+                        </div>
+                        <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-5 text-center hover:scale-105 transition-transform duration-300 border border-red-300">
+                            <div class="text-xs text-gray-500 mb-2 uppercase tracking-wider">3. Edge (przewaga)</div>
+                            <div class="text-4xl font-black text-red-600">+15%</div>
+                            <div class="text-xs text-gray-500 mt-2">= VALUE BET! 🔥</div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 italic text-center">💡 Value bet nie gwarantuje wygranej — ale w długim terminie daje Ci przewagę nad bukmacherem.</p>
+                </div>
+            </section>
+
+            <!-- TECHNOLOGIA -->
+            <section class="about-section about-fade-in">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center text-3xl text-white shadow-lg">⚙️</div>
+                    <h2 class="text-3xl font-black text-[#1e3a5f]">Technologia</h2>
+                </div>
+                <p class="text-sm text-gray-500 mb-6 italic">Dla ciekawskich — na czym to wszystko stoi:</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl p-5 text-center text-white hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-lg cursor-default">
+                        <div class="text-4xl mb-2">🐍</div>
+                        <div class="font-black text-lg">Python</div>
+                        <div class="text-xs opacity-90 mt-1">Scrapery danych</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-400 to-green-600 rounded-2xl p-5 text-center text-white hover:scale-110 hover:-rotate-2 transition-all duration-500 shadow-lg cursor-default">
+                        <div class="text-4xl mb-2">🎭</div>
+                        <div class="font-black text-lg">Playwright</div>
+                        <div class="text-xs opacity-90 mt-1">Automatyzacja przeglądarki</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-800 to-black rounded-2xl p-5 text-center text-white hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-lg cursor-default">
+                        <div class="text-4xl mb-2">▲</div>
+                        <div class="font-black text-lg">Vercel</div>
+                        <div class="text-xs opacity-90 mt-1">Hosting + CDN</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl p-5 text-center text-white hover:scale-110 hover:-rotate-2 transition-all duration-500 shadow-lg cursor-default">
+                        <div class="text-4xl mb-2">⚡</div>
+                        <div class="font-black text-lg">Supabase</div>
+                        <div class="text-xs opacity-90 mt-1">Baza danych + Auth</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl p-5 text-center text-white hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-lg cursor-default">
+                        <div class="text-4xl mb-2">🐙</div>
+                        <div class="font-black text-lg">GitHub</div>
+                        <div class="text-xs opacity-90 mt-1">Actions CI/CD</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl p-5 text-center text-white hover:scale-110 hover:-rotate-2 transition-all duration-500 shadow-lg cursor-default">
+                        <div class="text-4xl mb-2">🎨</div>
+                        <div class="font-black text-lg">Tailwind</div>
+                        <div class="text-xs opacity-90 mt-1">CSS Framework</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl p-5 text-center text-white hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-lg cursor-default">
+                        <div class="text-4xl mb-2">📱</div>
+                        <div class="font-black text-lg">PWA</div>
+                        <div class="text-xs opacity-90 mt-1">Mobile ready</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-400 to-rose-600 rounded-2xl p-5 text-center text-white hover:scale-110 hover:-rotate-2 transition-all duration-500 shadow-lg cursor-default">
+                        <div class="text-4xl mb-2">🔐</div>
+                        <div class="font-black text-lg">RLS</div>
+                        <div class="text-xs opacity-90 mt-1">Row Level Security</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- O TWÓRCY -->
+            <section class="about-section about-fade-in">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1e3a5f] to-red-600 flex items-center justify-center text-3xl text-white shadow-lg">👤</div>
+                    <h2 class="text-3xl font-black text-[#1e3a5f]">O twórcy</h2>
+                </div>
+                <div class="relative bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#dc2626] rounded-3xl p-8 md:p-12 text-white shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                    <div class="relative flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-28 h-28 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center text-6xl font-black border-4 border-white/30 shadow-xl hover:scale-110 transition-transform duration-500">
+                            A
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h3 class="text-3xl font-black mb-1">Alan</h3>
+                            <p class="text-sm opacity-80 mb-4 flex items-center gap-2 justify-center md:justify-start">📍Polska </p>
+                            <p class="text-base leading-relaxed mb-6 opacity-95">
+                                Pasjonat bukmacherki i sportu. Stworzyłem BetStats, bo brakowało mi narzędzia w stylu <b>Footystats</b> z <b>automatyzacją</b> — za każdym razem gdy szukałem value betów, musiałem je ręcznie liczyć. Teraz wystarczy jedno kliknięcie żeby zobaczyć, gdzie kurs bukmachera nie oddaje rzeczywistości. Wszystko dzieje się automatycznie w tle — ja mogę skupić się na typowaniu.
+                            </p>
+                            <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                                <a href="https://instagram.com/a.balcewicz" target="_blank" class="group bg-white/10 hover:bg-white/25 backdrop-blur px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 inline-flex items-center gap-2 border border-white/20 hover:border-white/40">
+                                    <span class="group-hover:scale-125 transition-transform">📸</span> @a.balcewicz
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- OSTRZEŻENIE -->
+            <section class="about-section about-fade-in">
+                <div class="bg-gradient-to-r from-red-100 via-red-50 to-orange-50 border-2 border-red-400 rounded-2xl p-6 md:p-8 hover:border-red-600 transition-colors duration-500">
+                    <div class="flex items-start gap-5">
+                        <div class="text-6xl">⚠️</div>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-black text-red-700 mb-3">Ostrzeżenie</h4>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                <b>Hazard może uzależniać.</b> Zakłady bukmacherskie są przeznaczone tylko dla osób pełnoletnich (<b>18+</b>). BetStats jest narzędziem analitycznym — nie namawiamy do gry. Grasz na własną odpowiedzialność. Stawiaj tylko tyle, ile możesz stracić.
+                            </p>
+                            <a href="https://www.uzaleznieniabehawioralne.pl/" target="_blank" class="text-red-600 font-bold hover:underline text-sm">
+                                🆘 Krajowe Biuro ds. uzależnień behawioralnych →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KONTAKT -->
+            <section class="about-section about-fade-in">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-3xl text-white shadow-lg">📧</div>
+                    <h2 class="text-3xl font-black text-[#1e3a5f]">Kontakt</h2>
+                </div>
+                <div class="bg-gradient-to-r from-purple-50 via-pink-50 to-rose-50 rounded-2xl p-8 text-center border border-purple-200">
+                    <p class="text-gray-700 mb-6 text-lg">Masz sugestię, znalazłeś buga, chcesz się przywitać?</p>
+                    <a href="https://instagram.com/a.balcewicz" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg">
+                        <span class="text-2xl">📸</span> Instagram: @a.balcewicz
+                    </a>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <div class="text-center text-sm text-gray-400 pt-8 pb-4 border-t border-gray-200">
+                <p>© 2026 BetStats Polska · statystyki, valuebety, i wiele więcej</p>
+            </div>
+        </div>
+    </div>
     <!-- MODAL CONFIRM -->
     <div id="confirm-modal" class="hidden modal-overlay" onclick="if(event.target===this)hideConfirm()">
         <div class="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
@@ -614,15 +901,15 @@
                 { id: 'ucl', name: 'Liga Mistrzów', flag: '🏆', country: 'UEFA',
                   colors: { primary: '#001F5B', secondary: '#C0C0C0', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #001F5B 0%, #4A5CDB 100%)',
-                  dataFile: 'data_world', available: false },
+                  dataFile: 'data_world', available: true },
                 { id: 'uel', name: 'Liga Europy', flag: '🏆', country: 'UEFA',
                   colors: { primary: '#FF6600', secondary: '#000000', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #FF6600 0%, #000000 100%)',
-                  dataFile: 'data_world', available: false },
+                  dataFile: 'data_world', available: true },
                 { id: 'uecl', name: 'Liga Konferencji', flag: '🏆', country: 'UEFA',
                   colors: { primary: '#00A651', secondary: '#1B1B1B', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #00A651 0%, #1B1B1B 100%)',
-                  dataFile: 'data_world', available: false },
+                  dataFile: 'data_world', available: true },
             ]
         },
         volleyball: {
@@ -630,18 +917,18 @@
             name: 'Siatkówka',
             icon: '🏐',
             leagues: [
-                { id: 'tauron-liga-m', name: 'Tauron Liga', flag: '🇵🇱', country: 'Polska (Mężczyźni)',
+                                { id: 'tauron-liga-m', name: 'Tauron Liga', flag: '🇵🇱', country: 'Polska (Mężczyźni)',
                   colors: { primary: '#003D82', secondary: '#FFD100', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #003D82 0%, #FFD100 100%)',
-                  dataFile: 'data_volley_pl', available: false },
+                  dataFile: 'data_volley_pl', available: true },
                 { id: 'tauron-1-liga-m', name: 'Tauron 1. Liga', flag: '🇵🇱', country: 'Polska (Mężczyźni)',
                   colors: { primary: '#F58220', secondary: '#003366', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #F58220 0%, #003366 100%)',
-                  dataFile: 'data_volley_pl', available: false },
+                  dataFile: 'data_volley_pl', available: true },
                 { id: 'tauron-liga-k', name: 'Tauron Liga Kobiet', flag: '🇵🇱', country: 'Polska (Kobiety)',
                   colors: { primary: '#E91E63', secondary: '#FFFFFF', accent: '#7B1FA2' },
                   gradient: 'linear-gradient(135deg, #E91E63 0%, #7B1FA2 100%)',
-                  dataFile: 'data_volley_pl', available: false },
+                  dataFile: 'data_volley_pl', available: true },
                 { id: 'me-volley', name: 'Mistrzostwa Europy', flag: '🏆', country: 'CEV',
                   colors: { primary: '#D4AF37', secondary: '#003366', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #D4AF37 0%, #003366 100%)',
@@ -857,7 +1144,9 @@
         resetTheme();
         document.getElementById('app').classList.add('hidden');
         document.getElementById('league-selection').classList.add('hidden');
-        document.getElementById('public-profile').classList.add('hidden');
+        const pp = document.getElementById('public-profile');
+        if (pp) pp.classList.add('hidden');
+        document.getElementById('about-page').classList.add('hidden');
         document.getElementById('sport-selection').classList.remove('hidden');
         window.scrollTo(0, 0);
         if (!skipHistory) history.pushState({ view: 'home' }, '', '#/');
@@ -1049,6 +1338,34 @@
     function closeProfile() { 
         document.getElementById('profile-modal').classList.add('hidden'); 
     }
+    function goToAbout(skipHistory) {
+        document.getElementById('sport-selection').classList.add('hidden');
+        document.getElementById('league-selection').classList.add('hidden');
+        document.getElementById('app').classList.add('hidden');
+        const pp = document.getElementById('public-profile');
+        if (pp) pp.classList.add('hidden');
+        const ap = document.getElementById('about-page');
+        if (ap) ap.classList.remove('hidden');
+        else { showToast('Strona O projekcie nie jest dostępna', 'error'); return; }
+        resetTheme();
+        window.scrollTo(0, 0);
+        if (!skipHistory) history.pushState({ view: 'about' }, '', '#/about');
+        setTimeout(initAboutAnimations, 100);
+    }
+
+    function initAboutAnimations() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.about-fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    }
         function renderProfileNickname() {
         const container = document.getElementById('profile-nickname-section');
         if (!container) return;
@@ -1235,10 +1552,9 @@
         const lc = currentLeague ? currentLeague.colors : null;
         const borderStyle = lc ? `style="border-left: 5px solid ${lc.primary};"` : '';
 
-        let liveBadge = '';
-        if (live) {
-            if (live.is_live) liveBadge = '<div class="bg-red-600 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2"><span class="animate-glow inline-block w-3 h-3 bg-white rounded-full"></span> 🔴 LIVE · ' + live.score + ' · ' + (live.stage || '') + '</div>';
-            else if (live.is_finished) liveBadge = '<div class="bg-gray-700 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2">✅ KONIEC · ' + live.score + '</div>';
+                let liveBadge = '';
+        if (live && live.is_finished) {
+            liveBadge = '<div class="bg-gray-700 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2">✅ KONIEC · ' + live.score + '</div>';
         }
 
         let html = '<div id="match-card-' + i + '" class="bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" ' + borderStyle + ' onclick="openMatchDetail(' + i + ')">';
@@ -1533,39 +1849,55 @@
         const thBtns = document.getElementById('modal-threshold-buttons');
         thSel.classList.remove('hidden');
 
-        let html = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div>';
-        html += '<div class="flex flex-col gap-2">';
+                let html = '<div class="text-xs text-gray-600 mb-2 font-semibold">Wybierz próg:</div>';
+        html += '<div class="flex flex-col gap-1.5">';
         ths.forEach(t => {
             const total = sel.series.length;
             let hits = 0;
             if (total > 0) sel.series.forEach(v => { if (v > t) hits++; });
             const prob = total > 0 ? Math.round((hits / total) * 100) : estimateOverProb(sel.avg, t);
-            const col = prob >= 70 ? 'bg-green-600 hover:bg-green-700' : prob >= 50 ? 'bg-lime-500 hover:bg-lime-600' : prob >= 30 ? 'bg-orange-500 hover:bg-orange-600' : 'bg-red-500 hover:bg-red-600';
+
+            // Płaskie kolory tła - subtelne
+            // Kolory tła jako inline style (żeby Tailwind CDN nie miał problemu)
+            let bgColor;
+            if (prob >= 70) bgColor = '#16a34a';       // zielony
+            else if (prob >= 50) bgColor = '#84cc16';  // lime
+            else if (prob >= 30) bgColor = '#f97316';  // pomarańczowy
+            else bgColor = '#ef4444';                   // czerwony
+
             const active = d.selectedThreshold === t;
-            const ring = active ? 'ring-4 ring-blue-500' : '';
-            html += '<button onclick="selectExtraThreshold(' + t + ',' + prob + ',this)" class="extra-btn w-full px-4 py-3 rounded-lg text-white font-bold ' + col + ' ' + ring + ' transition flex items-center justify-between">';
-            html += '<div class="text-lg font-black">Over ' + t + '</div>';
+            const activeStyle = active ? 'box-shadow: 0 0 0 4px #3b82f6, 0 0 0 6px white;' : '';
+
+            html += '<button onclick="selectExtraThreshold(' + t + ',' + prob + ',this)" ';
+            html += 'style="background-color: ' + bgColor + '; ' + activeStyle + '" ';
+            html += 'class="extra-btn w-full px-4 py-2.5 rounded-lg text-white font-bold transition-all flex items-center justify-between">';
+            html += '<div class="text-base font-bold">Over ' + t + '</div>';
             html += '<div class="flex items-center gap-3">';
-            html += '<div class="text-2xl font-black">' + prob + '%</div>';
-            if (total > 0) html += '<div class="text-xs opacity-80 bg-black/20 rounded px-2 py-1">' + hits + '/' + total + '</div>';
+            html += '<div class="text-xl font-black">' + prob + '%</div>';
+            if (total > 0) html += '<div class="text-[10px] opacity-90 rounded px-2 py-0.5" style="background: rgba(0,0,0,0.25)">' + hits + '/' + total + '</div>';
             html += '</div>';
             html += '</button>';
         });
         html += '</div>';
         thBtns.innerHTML = html;
     }
-    function selectExtraThreshold(t, p, el) {
+        function selectExtraThreshold(t, p, el) {
         if (!currentModalData) return;
         currentModalData.selectedThreshold = t;
         currentModalData.ourProb = p;
+
+        // Pobierz aktualny label PRZED re-renderem
         const sel = getExtraSelection();
-        document.getElementById('modal-bet-type').textContent = sel.label + ' Over ' + t;
+        const labelText = sel.label + ' Over ' + t;
+
+        // Re-render całego modala (uwzględni aktywny przycisk)
+        renderExtraStatModal();
+
+        // Nadpisz label i prob PO renderze
+        document.getElementById('modal-bet-type').textContent = labelText;
         document.getElementById('modal-our-prob').textContent = p + '%';
 
-        // Reset stylów wszystkich przycisków i renderuj od nowa (żeby zaznaczenie się poprawiło)
-        renderExtraStatModal();
-        // Ale ourProb i selectedThreshold trzeba zachować - już są w currentModalData
-        document.getElementById('modal-our-prob').textContent = p + '%';
+        // Wylicz value bet
         calculateModalValue();
     }
 
@@ -1602,132 +1934,119 @@
         document.getElementById('modal-our-prob').textContent = '—';
     }
 
-    function selectExtraThreshold(t, p, type, el) {
-        currentModalData.ourProb = p;
-        const labels = { corners: 'Cornery', yellow: 'Kartki', shots: 'Strzały' };
-        document.getElementById('modal-bet-type').textContent = labels[type] + ' Over ' + t;
-        document.getElementById('modal-our-prob').textContent = p + '%';
-        document.querySelectorAll('.extra-btn').forEach(b => b.className = 'extra-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-red-500 bg-white');
-        el.className = 'extra-btn px-2 py-2 rounded-lg text-xs font-bold border-2 border-red-600 bg-red-50';
-        calculateModalValue();
-    }
     function closeMatchDetail() { document.getElementById('match-detail-modal').classList.add('hidden'); }
 
-    function openLive() {
-        const container = document.getElementById('live-list-container');
-                pushModalState('live-modal');
-        const liveMatches = [];
-        for (const key in liveData) {
-            const info = liveData[key];
-            if (info.is_live) liveMatches.push({ ...info, key });
-        }
-        let html = '';
-        if (liveMatches.length === 0) html = '<div class="text-center py-12"><div class="text-6xl mb-4">😴</div><p class="text-gray-500">Brak meczów na żywo</p></div>';
-        else {
-            html = '<div class="p-6"><div class="text-sm text-gray-500 mb-4">🔴 Trwających: <b>' + liveMatches.length + '</b></div><div class="space-y-3">';
-            liveMatches.forEach(lm => {
-                html += '<div class="border-2 border-red-500 bg-red-50 rounded-xl p-4"><div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-600">' + (lm.league_flag || '') + ' ' + (lm.league_name || 'LIVE') + '</span><span class="bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full animate-pulse">🔴 ' + (lm.stage || 'LIVE') + '</span></div>';
-                html += '<div class="grid grid-cols-3 items-center gap-4"><div class="text-right font-bold text-lg text-[#1e3a5f]">' + lm.home + '</div><div class="text-center"><span class="bg-gray-800 text-white font-black text-2xl px-4 py-2 rounded-lg">' + (lm.score || '0:0') + '</span></div><div class="text-left font-bold text-lg text-[#1e3a5f]">' + lm.away + '</div></div></div>';
-            });
-            html += '</div></div>';
-        }
-        container.innerHTML = html;
-        document.getElementById('live-modal').classList.remove('hidden');
-    }
-    function closeLive() { document.getElementById('live-modal').classList.add('hidden'); }
+        let finishedSearchQuery = '';
+    let finishedLeagueFilter = 'all';
 
     function openFinished() {
+        pushModalState('finished-modal');
+        finishedSearchQuery = '';
+        finishedLeagueFilter = 'all';
+        renderFinishedContent();
+        document.getElementById('finished-modal').classList.remove('hidden');
+    }
+
+    function renderFinishedContent() {
         const container = document.getElementById('finished-content');
-                pushModalState('finished-modal');
         const finished = [];
         Object.entries(liveData).forEach(([key, info]) => {
             if (info.is_finished && info.score) finished.push({ ...info, key });
         });
-        if (finished.length === 0) { container.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">📅</div><p class="text-gray-500">Brak zakończonych meczów</p></div>'; document.getElementById('finished-modal').classList.remove('hidden'); return; }
-        let html = '<div class="space-y-3">';
-        finished.forEach(fm => {
+
+        if (finished.length === 0) {
+            container.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">📅</div><p class="text-gray-500">Brak zakończonych meczów</p></div>';
+            return;
+        }
+
+        // Sortuj po lidze (alfabetycznie), potem po dacie (najnowsze pierwsze)
+        finished.sort((a, b) => {
+            const la = (a.league_name || '').localeCompare(b.league_name || '');
+            if (la !== 0) return la;
+            return (b.datetime || '').localeCompare(a.datetime || '');
+        });
+
+        // Zbierz unikalne ligi (do filtra)
+        const uniqueLeagues = {};
+        finished.forEach(f => {
+            if (f.league_id) {
+                uniqueLeagues[f.league_id] = { name: f.league_name, flag: f.league_flag };
+            }
+        });
+
+        // Zbuduj kontrolki (filtr + wyszukiwarka)
+        let html = '<div class="bg-white pb-3 mb-3 border-b border-gray-200">';        html += '<div class="flex flex-col gap-2">';
+
+        // Wyszukiwarka - z padding-right żeby nie nachodziła na X
+        html += '<input type="text" id="finished-search" placeholder="🔍 Szukaj drużyny..." value="' + finishedSearchQuery + '" oninput="finishedSearchQuery=this.value;renderFinishedContent()" class="w-full px-3 py-2 pr-12 border-2 border-gray-300 rounded-lg text-sm focus:border-[#1e3a5f] outline-none">';
+        // Filtr lig (jako przyciski)
+        html += '<div class="flex gap-1 flex-wrap">';
+        html += '<button onclick="finishedLeagueFilter=\'all\';renderFinishedContent()" class="px-3 py-1 rounded-lg text-xs font-bold ' + (finishedLeagueFilter === 'all' ? 'bg-[#1e3a5f] text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300') + '">🌍 Wszystkie (' + finished.length + ')</button>';
+
+        Object.entries(uniqueLeagues).forEach(([id, l]) => {
+            const count = finished.filter(f => f.league_id === id).length;
+            const active = finishedLeagueFilter === id;
+            html += '<button onclick="finishedLeagueFilter=\'' + id + '\';renderFinishedContent()" class="px-3 py-1 rounded-lg text-xs font-bold ' + (active ? 'bg-[#1e3a5f] text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300') + '">' + l.flag + ' ' + l.name + ' (' + count + ')</button>';
+        });
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+
+        // Filtruj
+        let filtered = finished;
+        if (finishedLeagueFilter !== 'all') {
+            filtered = filtered.filter(f => f.league_id === finishedLeagueFilter);
+        }
+        if (finishedSearchQuery) {
+            const q = finishedSearchQuery.toLowerCase();
+            filtered = filtered.filter(f => f.home.toLowerCase().includes(q) || f.away.toLowerCase().includes(q));
+        }
+
+        if (filtered.length === 0) {
+            html += '<div class="text-center py-8 text-gray-500">Brak meczów pasujących do filtra</div>';
+            container.innerHTML = html;
+            return;
+        }
+
+        // Grupuj po lidze (jeśli pokazujemy wszystkie)
+        html += '<div class="space-y-3">';
+
+        let lastLeague = null;
+        filtered.forEach(fm => {
             const parts = fm.score.split(':');
-            const hg = parseInt(parts[0]), ag = parseInt(parts[1]);
+            const hg = parseInt(parts[0]);
+            const ag = parseInt(parts[1]);
             const homeEsc = fm.home.replace(/'/g, "\\'");
             const awayEsc = fm.away.replace(/'/g, "\\'");
+
+            // Nagłówek ligi (tylko jak "Wszystkie" filtr)
+            if (finishedLeagueFilter === 'all' && fm.league_id !== lastLeague) {
+                if (lastLeague !== null) html += '';  // brak separatora
+                html += '<div class="text-xs font-black text-gray-500 uppercase tracking-wider mt-4 mb-2 flex items-center gap-2">';
+                html += '<span class="text-lg">' + (fm.league_flag || '⚽') + '</span>';
+                html += '<span>' + (fm.league_name || 'Liga') + '</span>';
+                html += '<span class="flex-1 border-b border-gray-200 ml-2"></span>';
+                html += '</div>';
+                lastLeague = fm.league_id;
+            }
+
             html += '<div class="border border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1e3a5f] transition" onclick="closeFinished();openFinishedMatchStats(\'' + homeEsc + '\',\'' + awayEsc + '\');">';
-            html += '<div class="flex justify-between items-center mb-2"><span class="text-[10px] font-bold text-gray-500">' + (fm.league_flag || '') + ' ' + (fm.league_name || '').toUpperCase() + '</span><span class="text-[10px] text-gray-500">📅 ' + (fm.datetime || '') + '</span></div>';
-            html += '<div class="grid grid-cols-3 items-center gap-4 mb-3"><div class="text-right font-bold text-[#1e3a5f]">' + fm.home + '</div><div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div><div class="text-left font-bold text-[#1e3a5f]">' + fm.away + '</div></div>';
+            html += '<div class="flex justify-between items-center mb-2">';
+            html += '<span class="text-[10px] font-bold text-gray-500">' + (fm.league_flag || '') + ' ' + (fm.league_name || '').toUpperCase() + '</span>';
+            html += '<span class="text-[10px] text-gray-500">📅 ' + (fm.datetime || '') + '</span>';
+            html += '</div>';
+            html += '<div class="grid grid-cols-3 items-center gap-4 mb-3">';
+            html += '<div class="text-right font-bold text-[#1e3a5f]">' + fm.home + '</div>';
+            html += '<div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div>';
+            html += '<div class="text-left font-bold text-[#1e3a5f]">' + fm.away + '</div>';
+            html += '</div>';
             html += '<div class="text-center text-xs text-blue-600 font-semibold mt-2 pt-2 border-t border-gray-100">👆 Kliknij aby zobaczyć statystyki</div>';
             html += '</div>';
         });
+
         html += '</div>';
         container.innerHTML = html;
-        document.getElementById('finished-modal').classList.remove('hidden');
     }
-
-    function openFinishedMatchStats(homeName, awayName) {
-        const key = homeName + '_' + awayName;
-        const info = liveData[key];
-        if (!info) { showToast('Brak danych o meczu', 'error'); return; }
-        pushModalState('match-detail-modal');
-
-        const stats = info.match_stats;
-        const parts = (info.score || '').split(':');
-        const hg = parseInt(parts[0]);
-        const ag = parseInt(parts[1]);
-
-        document.getElementById('md-title').textContent = homeName + ' vs ' + awayName;
-
-        let html = '<div class="bg-gray-700 text-white text-center py-3 rounded-xl mb-4 font-black text-lg">⚽ KONIEC · ' + info.score + '</div>';
-
-        // Header
-        html += '<div class="grid grid-cols-3 items-center gap-4 mb-6 p-4 bg-gray-50 rounded-xl">';
-        html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f]">' + homeName + '</div></div>';
-        html += '<div class="text-center"><div class="text-3xl font-black">' + (isNaN(hg) ? '?' : hg) + ' : ' + (isNaN(ag) ? '?' : ag) + '</div><div class="text-xs text-gray-500 mt-2">' + (info.datetime || '') + '</div><div class="text-[10px] text-gray-500">' + (info.league_flag || '') + ' ' + (info.league_name || '') + '</div></div>';
-        html += '<div class="text-center"><div class="font-bold text-lg text-[#1e3a5f]">' + awayName + '</div></div>';
-        html += '</div>';
-
-        if (stats) {
-            html += '<div class="mb-6"><h4 class="font-bold text-[#1e3a5f] mb-3">📊 Statystyki meczu</h4>';
-
-            const statLabels = [
-                { key: 'possession', label: '⚽ Posiadanie piłki', unit: '%' },
-                { key: 'shots', label: '🎯 Strzały łącznie', unit: '' },
-                { key: 'shots_on_target', label: '🎯 Strzały na bramkę', unit: '' },
-                { key: 'xg', label: '📊 xG', unit: '' },
-                { key: 'corners', label: '🚩 Rzuty rożne', unit: '' },
-                { key: 'yellow', label: '🟨 Żółte kartki', unit: '' },
-                { key: 'red', label: '🟥 Czerwone kartki', unit: '' },
-                { key: 'fouls', label: '⚠️ Faule', unit: '' },
-                { key: 'offsides', label: '🚫 Spalone', unit: '' }
-            ];
-
-            html += '<div class="space-y-2">';
-            let hasAny = false;
-            statLabels.forEach(s => {
-                const stat = stats[s.key];
-                if (!stat || (stat.home === null && stat.away === null)) return;
-                hasAny = true;
-                const hv = stat.home, av = stat.away;
-                const inverted = ['yellow', 'red', 'fouls', 'offsides'].includes(s.key);
-                const hBetter = hv !== null && av !== null && (inverted ? hv < av : hv > av);
-                const aBetter = hv !== null && av !== null && (inverted ? av < hv : av > hv);
-                const hCls = hBetter ? 'text-green-600 font-bold' : 'text-gray-700';
-                const aCls = aBetter ? 'text-green-600 font-bold' : 'text-gray-700';
-                html += '<div class="grid grid-cols-3 items-center gap-4 p-3 bg-gray-50 rounded-lg">';
-                html += '<div class="text-right p-2 rounded ' + hCls + '">' + (hv === null ? '—' : hv + s.unit) + '</div>';
-                html += '<div class="text-center text-xs text-gray-600 font-semibold">' + s.label + '</div>';
-                html += '<div class="text-left p-2 rounded ' + aCls + '">' + (av === null ? '—' : av + s.unit) + '</div>';
-                html += '</div>';
-            });
-            html += '</div>';
-
-            if (!hasAny) html += '<p class="text-gray-500 text-center py-4">Brak dostępnych statystyk</p>';
-            html += '</div>';
-        } else {
-            html += '<div class="bg-yellow-50 border border-yellow-300 rounded-xl p-4 text-center text-sm text-yellow-800">⚠️ Statystyki tego meczu nie zostały pobrane</div>';
-        }
-
-        document.getElementById('md-content').innerHTML = html;
-        document.getElementById('match-detail-modal').classList.remove('hidden');
-    }
-
     function closeFinished() { document.getElementById('finished-modal').classList.add('hidden'); }
 
     function openFavorites() {
@@ -1755,7 +2074,10 @@
 
     function renderMatches() {
         if (!currentLeague) return;
-        let f = matchesData.filter(m => { const live = getLiveInfo(m.home, m.away); return !(live && (live.is_finished || live.is_live)); });
+        let f = matchesData.filter(m => { 
+            const live = getLiveInfo(m.home, m.away); 
+            return !(live && live.is_finished); 
+        });
         if (valueOnlyMode) f = f.filter(m => getMatchValueBets(m).length > 0);
         if (favOnlyMode) f = f.filter(m => isFavorite(m.match_id));
         const q = (document.getElementById('search-input').value || '').trim().toLowerCase();
@@ -1891,31 +2213,28 @@
     // HISTORIA PRZEGLĄDARKI (Alt+← / strzałka "wstecz" na myszce)
     // ═══════════════════════════════════════════════════════════════════
 
-        // Lista modali do sprawdzenia - kolejność ma znaczenie (najbardziej wewnętrzne pierwsze)
-    const MODAL_IDS = [
-        'confirm-modal',
-        'auth-modal',
-        'profile-modal',
-        'dashboard-modal',
-        'bet-slip-modal',
-        'compare-modal',
-        'favorites-modal',
-        'live-modal',
-        'value-modal',
-        'match-detail-modal',
-        'finished-modal'
-    ];
 
-    // Zamyka najbardziej wierzchni otwarty modal, zwraca true jeśli coś zamknął
+
+        // Zamyka najbardziej wierzchni otwarty modal, zwraca true jeśli coś zamknął
     function closeTopModal() {
+        const MODAL_IDS = [
+            'confirm-modal',
+            'auth-modal',
+            'profile-modal',
+            'dashboard-modal',
+            'bet-slip-modal',
+            'compare-modal',
+            'favorites-modal',
+            'value-modal',
+            'match-detail-modal',
+            'finished-modal',
+        ];
         for (const id of MODAL_IDS) {
             const el = document.getElementById(id);
             if (el && !el.classList.contains('hidden')) {
-                // Specjalne przypadki - używamy dedykowanych funkcji zamykania
                 if (id === 'value-modal') closeValueModal();
                 else if (id === 'match-detail-modal') closeMatchDetail();
                 else if (id === 'finished-modal') closeFinished();
-                else if (id === 'live-modal') closeLive();
                 else if (id === 'favorites-modal') closeFavorites();
                 else if (id === 'compare-modal') closeCompare();
                 else if (id === 'bet-slip-modal') closeBetSlip();
@@ -1930,20 +2249,13 @@
         return false;
     }
 
-    // Otwierając modal - dodaj do historii
     function pushModalState(modalId) {
         history.pushState({ view: 'modal', modalId: modalId, prev: history.state }, '', window.location.hash);
     }
 
     window.addEventListener('popstate', function(event) {
         const state = event.state;
-
-        // Najpierw sprawdź czy jest otwarty modal - jeśli tak, zamknij go
-        if (closeTopModal()) {
-            return;
-        }
-
-        // Jeśli żaden modal nie był otwarty - normalna nawigacja
+        if (closeTopModal()) return;
         if (!state || state.view === 'home') {
             backToSportSelection(true);
         } else if (state.view === 'sport') {
@@ -1956,31 +2268,20 @@
             selectLeague(state.league, true);
         } else if (state.view === 'profile') {
             showPublicProfile(state.nickname, true);
+        } else if (state.view === 'about') {
+            goToAbout(true);
         }
     });
+
     function initFromURL() {
         const hash = window.location.hash.replace('#/', '');
         const parts = hash.split('/').filter(Boolean);
         if (parts.length === 0) return;
-        const sportId = parts[0];
-        const leagueId = parts[1];
-        if (sportId && SPORTS[sportId]) {
-            selectSport(sportId, true);
-            if (leagueId) {
-                setTimeout(() => selectLeague(leagueId, true), 100);
-            }
-        }
-    }    function initFromURL() {
-        const hash = window.location.hash.replace('#/', '');
-        const parts = hash.split('/').filter(Boolean);
-        if (parts.length === 0) return;
 
-        // Publiczny profil: /#/u/nickname
-        if (parts[0] === 'u' && parts[1]) {
-            showPublicProfile(parts[1], true);
+        if (parts[0] === 'about') {
+            goToAbout(true);
             return;
         }
-
         const sportId = parts[0];
         const leagueId = parts[1];
         if (sportId && SPORTS[sportId]) {
@@ -1990,7 +2291,6 @@
             }
         }
     }
-
     // ═══════════════════════════════════════════════════════════════════
     // INFO O ODŚWIEŻANIU DANYCH
     // ═══════════════════════════════════════════════════════════════════

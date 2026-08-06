@@ -3,7 +3,7 @@
         {
             "home": "Bayern Monachium",
             "away": "VfB Stuttgart",
-            "datetime": "28.08. 18:30",
+            "datetime": "28.08. 20:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -17,51 +17,51 @@
                 "btts_pct": 67,
                 "over15_pct": 93,
                 "over25_pct": 80,
-                "over35_pct": 53,
-                "avg_goals_scored": 3.6,
-                "avg_goals_conceded": 1.6,
-                "avg_corners": 4.8,
-                "avg_yellow": 0.8,
+                "over35_pct": 60,
+                "avg_goals_scored": 3.67,
+                "avg_goals_conceded": 1.67,
+                "avg_corners": 3.6,
+                "avg_yellow": 1.0,
                 "avg_red": 0,
-                "avg_shots": 16.4,
-                "avg_shots_on_target": 6.2,
-                "avg_xg": 2.22,
-                "avg_fouls": 8.0,
-                "avg_offsides": 2.8,
+                "avg_shots": 15.0,
+                "avg_shots_on_target": 6.4,
+                "avg_xg": 1.98,
+                "avg_fouls": 8.4,
+                "avg_offsides": 2.6,
                 "form": [
                     "W",
-                    "W",
                     "L",
+                    "W",
                     "W",
                     "W"
                 ],
                 "corners_per_match": [
-                    7,
                     9,
                     0,
                     5,
-                    3
+                    3,
+                    1
                 ],
                 "yellow_per_match": [
-                    2,
                     1,
                     0,
                     1,
-                    0
+                    0,
+                    3
                 ],
                 "shots_per_match": [
-                    25,
                     11,
                     11,
                     19,
-                    16
+                    16,
+                    18
                 ],
                 "xg_per_match": [
-                    2.64,
                     1.22,
                     2.35,
                     3.05,
-                    1.86
+                    1.86,
+                    1.4
                 ]
             },
             "away_stats": {
@@ -126,7 +126,7 @@
         {
             "home": "1. FC Koeln",
             "away": "TSG Hoffenheim",
-            "datetime": "29.08. 13:30",
+            "datetime": "29.08. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -249,7 +249,7 @@
         {
             "home": "1. FSV Mainz 05",
             "away": "Paderborn",
-            "datetime": "29.08. 13:30",
+            "datetime": "29.08. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -372,7 +372,7 @@
         {
             "home": "Elversberg",
             "away": "Bayer Leverkusen",
-            "datetime": "29.08. 13:30",
+            "datetime": "29.08. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -383,12 +383,12 @@
             "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 93,
-                "over25_pct": 73,
-                "over35_pct": 47,
-                "avg_goals_scored": 2.53,
-                "avg_goals_conceded": 1.4,
+                "btts_pct": 60,
+                "over15_pct": 87,
+                "over25_pct": 67,
+                "over35_pct": 40,
+                "avg_goals_scored": 2.27,
+                "avg_goals_conceded": 1.27,
                 "avg_corners": 4.4,
                 "avg_yellow": 1.2,
                 "avg_red": 0.0,
@@ -399,9 +399,9 @@
                 "avg_offsides": 1.0,
                 "form": [
                     "W",
-                    "W",
                     "L",
                     "D",
+                    "W",
                     "W"
                 ],
                 "corners_per_match": [
@@ -495,7 +495,7 @@
         {
             "home": "RB Lipsk",
             "away": "B. Moenchengladbach",
-            "datetime": "29.08. 13:30",
+            "datetime": "29.08. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -618,7 +618,7 @@
         {
             "home": "Union Berlin",
             "away": "Eintracht Frankfurt",
-            "datetime": "29.08. 13:30",
+            "datetime": "29.08. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -629,54 +629,54 @@
             "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 80,
-                "over15_pct": 100,
-                "over25_pct": 73,
-                "over35_pct": 53,
-                "avg_goals_scored": 2.07,
-                "avg_goals_conceded": 1.87,
-                "avg_corners": 5.8,
-                "avg_yellow": 1.6,
+                "btts_pct": 73,
+                "over15_pct": 93,
+                "over25_pct": 67,
+                "over35_pct": 47,
+                "avg_goals_scored": 2.0,
+                "avg_goals_conceded": 1.73,
+                "avg_corners": 6.0,
+                "avg_yellow": 1.4,
                 "avg_red": 0,
-                "avg_shots": 15.2,
-                "avg_shots_on_target": 5.8,
-                "avg_xg": 1.9,
-                "avg_fouls": 9.2,
-                "avg_offsides": 1.0,
+                "avg_shots": 13.8,
+                "avg_shots_on_target": 4.6,
+                "avg_xg": 1.36,
+                "avg_fouls": 10.6,
+                "avg_offsides": 0.8,
                 "form": [
-                    "D",
                     "L",
                     "L",
                     "D",
-                    "L"
+                    "L",
+                    "D"
                 ],
                 "corners_per_match": [
-                    4,
                     8,
                     2,
                     4,
-                    11
+                    11,
+                    5
                 ],
                 "yellow_per_match": [
-                    3,
                     1,
                     2,
                     1,
-                    1
+                    1,
+                    2
                 ],
                 "shots_per_match": [
-                    17,
                     16,
                     13,
                     5,
-                    25
+                    25,
+                    10
                 ],
                 "xg_per_match": [
-                    3.68,
                     2.68,
                     1.15,
                     0.19,
-                    1.78
+                    1.78,
+                    0.99
                 ]
             },
             "away_stats": {
@@ -741,7 +741,7 @@
         {
             "home": "Borussia Dortmund",
             "away": "Hamburger SV",
-            "datetime": "29.08. 16:30",
+            "datetime": "29.08. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -863,7 +863,7 @@
         {
             "home": "SC Freiburg",
             "away": "Werder Brema",
-            "datetime": "30.08. 13:30",
+            "datetime": "30.08. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -985,7 +985,7 @@
         {
             "home": "FC Augsburg",
             "away": "FC Schalke 04",
-            "datetime": "30.08. 15:30",
+            "datetime": "30.08. 17:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -997,10 +997,10 @@
             "home_stats": {
                 "total_matches": 15,
                 "btts_pct": 73,
-                "over15_pct": 100,
-                "over25_pct": 67,
-                "over35_pct": 53,
-                "avg_goals_scored": 2.53,
+                "over15_pct": 93,
+                "over25_pct": 60,
+                "over35_pct": 47,
+                "avg_goals_scored": 1.6,
                 "avg_goals_conceded": 1.87,
                 "avg_corners": 5.2,
                 "avg_yellow": 1.2,
@@ -1011,10 +1011,10 @@
                 "avg_fouls": 8.2,
                 "avg_offsides": 1.6,
                 "form": [
-                    "W",
                     "L",
                     "D",
                     "L",
+                    "W",
                     "W"
                 ],
                 "corners_per_match": [
@@ -1108,7 +1108,7 @@
         {
             "home": "VfB Stuttgart",
             "away": "1. FC Koeln",
-            "datetime": "04.09. 18:30",
+            "datetime": "04.09. 20:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1231,7 +1231,7 @@
         {
             "home": "Alaves",
             "away": "Getafe",
-            "datetime": "15.08. 17:30",
+            "datetime": "15.08. 19:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1354,7 +1354,7 @@
         {
             "home": "Sevilla",
             "away": "Vallecano",
-            "datetime": "15.08. 19:30",
+            "datetime": "15.08. 21:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1366,11 +1366,11 @@
             "home_stats": {
                 "total_matches": 14,
                 "btts_pct": 43,
-                "over15_pct": 50,
+                "over15_pct": 57,
                 "over25_pct": 43,
                 "over35_pct": 7,
-                "avg_goals_scored": 1.07,
-                "avg_goals_conceded": 1.0,
+                "avg_goals_scored": 1.0,
+                "avg_goals_conceded": 1.14,
                 "avg_corners": 3.6,
                 "avg_yellow": 2.8,
                 "avg_red": 0,
@@ -1382,9 +1382,9 @@
                 "form": [
                     "W",
                     "W",
-                    "W",
                     "L",
-                    "W"
+                    "W",
+                    "L"
                 ],
                 "corners_per_match": [
                     3,
@@ -1477,7 +1477,7 @@
         {
             "home": "Racing Santander",
             "away": "Villarreal",
-            "datetime": "16.08. 15:00",
+            "datetime": "16.08. 17:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1539,12 +1539,12 @@
             },
             "away_stats": {
                 "total_matches": 14,
-                "btts_pct": 64,
-                "over15_pct": 86,
-                "over25_pct": 57,
-                "over35_pct": 36,
-                "avg_goals_scored": 1.86,
-                "avg_goals_conceded": 1.29,
+                "btts_pct": 71,
+                "over15_pct": 93,
+                "over25_pct": 64,
+                "over35_pct": 43,
+                "avg_goals_scored": 2.0,
+                "avg_goals_conceded": 1.36,
                 "avg_corners": 5.2,
                 "avg_yellow": 1.2,
                 "avg_red": 0,
@@ -1554,11 +1554,11 @@
                 "avg_fouls": 10.4,
                 "avg_offsides": 0.6,
                 "form": [
-                    "W",
                     "L",
                     "W",
                     "W",
-                    "L"
+                    "L",
+                    "W"
                 ],
                 "corners_per_match": [
                     2,
@@ -1599,7 +1599,7 @@
         {
             "home": "Espanyol",
             "away": "Levante",
-            "datetime": "16.08. 17:00",
+            "datetime": "16.08. 19:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1661,11 +1661,11 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 73,
+                "btts_pct": 60,
+                "over15_pct": 80,
                 "over25_pct": 53,
                 "over35_pct": 27,
-                "avg_goals_scored": 1.53,
+                "avg_goals_scored": 1.6,
                 "avg_goals_conceded": 1.33,
                 "avg_corners": 6.8,
                 "avg_yellow": 1.8,
@@ -1676,11 +1676,11 @@
                 "avg_fouls": 9.2,
                 "avg_offsides": 0.8,
                 "form": [
-                    "L",
                     "W",
                     "W",
                     "L",
-                    "W"
+                    "W",
+                    "L"
                 ],
                 "corners_per_match": [
                     8,
@@ -1721,7 +1721,7 @@
         {
             "home": "Celta Vigo",
             "away": "Osasuna",
-            "datetime": "16.08. 19:30",
+            "datetime": "16.08. 21:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1736,8 +1736,8 @@
                 "over15_pct": 73,
                 "over25_pct": 67,
                 "over35_pct": 47,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.6,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 1.8,
                 "avg_corners": 2.4,
                 "avg_yellow": 1.4,
                 "avg_red": 0,
@@ -1747,11 +1747,11 @@
                 "avg_fouls": 11.2,
                 "avg_offsides": 2.8,
                 "form": [
-                    "W",
                     "D",
                     "W",
                     "D",
-                    "W"
+                    "W",
+                    "D"
                 ],
                 "corners_per_match": [
                     4,
@@ -1787,8 +1787,8 @@
                 "btts_pct": 73,
                 "over15_pct": 80,
                 "over25_pct": 67,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.27,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.33,
                 "avg_goals_conceded": 1.47,
                 "avg_corners": 5.0,
                 "avg_yellow": 2.2,
@@ -1799,10 +1799,10 @@
                 "avg_fouls": 13.4,
                 "avg_offsides": 1.4,
                 "form": [
+                    "W",
+                    "W",
+                    "W",
                     "L",
-                    "W",
-                    "W",
-                    "W",
                     "L"
                 ],
                 "corners_per_match": [
@@ -1844,7 +1844,7 @@
         {
             "home": "A Coruna",
             "away": "Elche",
-            "datetime": "17.08. 19:00",
+            "datetime": "17.08. 21:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1967,7 +1967,7 @@
         {
             "home": "Atl. Madryt",
             "away": "Malaga",
-            "datetime": "19.08. 19:00",
+            "datetime": "19.08. 21:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2036,13 +2036,13 @@
                 "over35_pct": 40,
                 "avg_goals_scored": 1.93,
                 "avg_goals_conceded": 1.27,
-                "avg_corners": 5.2,
+                "avg_corners": 4.8,
                 "avg_yellow": 1.6,
                 "avg_red": 1.0,
-                "avg_shots": 13.2,
+                "avg_shots": 13.6,
                 "avg_shots_on_target": 5.0,
-                "avg_xg": 1.65,
-                "avg_fouls": 11.8,
+                "avg_xg": 1.69,
+                "avg_fouls": 11.2,
                 "avg_offsides": 2.2,
                 "form": [
                     "D",
@@ -2054,30 +2054,30 @@
                 "corners_per_match": [
                     7,
                     4,
-                    7,
                     2,
-                    6
+                    6,
+                    5
                 ],
                 "yellow_per_match": [
                     4,
                     2,
-                    1,
                     0,
+                    1,
                     1
                 ],
                 "shots_per_match": [
                     12,
                     11,
-                    15,
                     11,
+                    17,
                     17
                 ],
                 "xg_per_match": [
                     1.86,
                     0.73,
-                    1.67,
                     1.17,
-                    2.81
+                    2.81,
+                    1.9
                 ]
             },
             "h2h": [],
@@ -2090,7 +2090,7 @@
         {
             "home": "Vallecano",
             "away": "Alaves",
-            "datetime": "20.08. 19:00",
+            "datetime": "20.08. 21:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2213,7 +2213,7 @@
         {
             "home": "Betis",
             "away": "Real Sociedad",
-            "datetime": "21.08. 19:00",
+            "datetime": "21.08. 21:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2226,50 +2226,50 @@
                 "total_matches": 15,
                 "btts_pct": 60,
                 "over15_pct": 80,
-                "over25_pct": 67,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.93,
+                "over25_pct": 60,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.8,
                 "avg_goals_conceded": 1.13,
-                "avg_corners": 4.2,
-                "avg_yellow": 1.0,
-                "avg_red": 0.0,
-                "avg_shots": 13.0,
-                "avg_shots_on_target": 5.6,
-                "avg_xg": 1.48,
-                "avg_fouls": 9.8,
-                "avg_offsides": 1.6,
+                "avg_corners": 4.4,
+                "avg_yellow": 1.8,
+                "avg_red": 0.5,
+                "avg_shots": 13.8,
+                "avg_shots_on_target": 5.4,
+                "avg_xg": 1.57,
+                "avg_fouls": 8.8,
+                "avg_offsides": 2.4,
                 "form": [
                     "W",
                     "W",
-                    "W",
                     "L",
+                    "W",
                     "W"
                 ],
                 "corners_per_match": [
-                    2,
                     3,
                     4,
                     4,
-                    8
+                    8,
+                    3
                 ],
                 "yellow_per_match": [
-                    0,
                     1,
                     0,
+                    3,
                     3
                 ],
                 "shots_per_match": [
-                    10,
                     13,
                     19,
                     7,
-                    16
+                    16,
+                    14
                 ],
                 "xg_per_match": [
-                    1.6,
                     1.57,
                     0.97,
-                    1.79
+                    1.79,
+                    1.94
                 ]
             },
             "away_stats": {
@@ -2334,7 +2334,7 @@
         {
             "home": "Ath. Bilbao",
             "away": "Sevilla",
-            "datetime": "22.08. 15:00",
+            "datetime": "22.08. 17:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2397,11 +2397,11 @@
             "away_stats": {
                 "total_matches": 14,
                 "btts_pct": 43,
-                "over15_pct": 50,
+                "over15_pct": 57,
                 "over25_pct": 43,
                 "over35_pct": 7,
-                "avg_goals_scored": 1.07,
-                "avg_goals_conceded": 1.0,
+                "avg_goals_scored": 1.0,
+                "avg_goals_conceded": 1.14,
                 "avg_corners": 3.6,
                 "avg_yellow": 2.8,
                 "avg_red": 0,
@@ -2413,9 +2413,9 @@
                 "form": [
                     "W",
                     "W",
-                    "W",
                     "L",
-                    "W"
+                    "W",
+                    "L"
                 ],
                 "corners_per_match": [
                     3,
@@ -2734,5 +2734,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-08-05 22:45"
+    "updated": "2026-08-02 00:18"
 }

@@ -129,57 +129,44 @@ async def get_match_h2h_and_odds(page, match_url):
             pass
 
         try:
-            odds_url = base + "kursy/kursy-1x2/koniec-meczu/" + mid_part
+            odds_url = base + "porownanie-kursow/koncowy/pelny-czas/" + mid_part
             await page.goto(odds_url, wait_until="domcontentloaded", timeout=15000)
-            await asyncio.sleep(3)
+            await asyncio.sleep(2)
             odds = await page.evaluate("""
                 () => {
                     const result = { home: null, draw: null, away: null };
-
-                    // Metoda 1: Nowa struktura Flashscore - div-y z klasą ui-table__row
-                    const rows = document.querySelectorAll('.ui-table__row');
-                    for (const row of rows) {
-                        const text = row.innerText.trim();
-                        // Znajdź 3 liczby wyglądające jak kursy (X.XX)
-                        const matches = text.match(/\\b\\d+\\.\\d{2}\\b/g);
-                        if (matches && matches.length >= 3) {
-                            const nums = matches.map(parseFloat).filter(n => n > 1 && n < 100);
-                            if (nums.length >= 3) {
-                                result.home = nums[0];
-                                result.draw = nums[1];
-                                result.away = nums[2];
-                                return result;
+                    const rows = document.querySelectorAll('.oddsCell__odd, [class*="oddsCell"]');
+                    if (rows.length >= 3) {
+                        result.home = parseFloat(rows[0].innerText.trim());
+                        result.draw = parseFloat(rows[1].innerText.trim());
+                        result.away = parseFloat(rows[2].innerText.trim());
+                    }
+                    if (!result.home) {
+                        const table = document.querySelector('.ui-table__body');
+                        if (table) {
+                            const firstRow = table.querySelector('.ui-table__row');
+                            if (firstRow) {
+                                const cells = firstRow.querySelectorAll('.oddsCell__odd, span');
+                                const nums = [];
+                                cells.forEach(c => {
+                                    const n = parseFloat(c.innerText.trim());
+                                    if (!isNaN(n) && n > 1) nums.push(n);
+                                });
+                                if (nums.length >= 3) {
+                                    result.home = nums[0];
+                                    result.draw = nums[1];
+                                    result.away = nums[2];
+                                }
                             }
                         }
                     }
-
-                    // Metoda 2: Fallback - szukaj wszystkich linków/span z kursami
-                    const allElements = document.querySelectorAll('a, span, div');
-                    const oddsFound = [];
-                    for (const el of allElements) {
-                        const text = el.innerText || '';
-                        // Kurs to X.XX (1 lub 2 cyfry przed kropką, 2 po)
-                        if (/^\\d{1,2}\\.\\d{2}$/.test(text.trim())) {
-                            const n = parseFloat(text.trim());
-                            if (n > 1 && n < 100) {
-                                oddsFound.push(n);
-                                if (oddsFound.length >= 3) break;
-                            }
-                        }
-                    }
-                    if (oddsFound.length >= 3) {
-                        result.home = oddsFound[0];
-                        result.draw = oddsFound[1];
-                        result.away = oddsFound[2];
-                    }
-
                     return result;
                 }
             """)
             if odds and odds.get("home"):
                 result["odds"] = odds
-        except Exception as e:
-            print(f"      ⚠️  Błąd kursów: {e}")
+        except:
+            pass
     except:
         pass
     return result
