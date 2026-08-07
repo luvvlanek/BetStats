@@ -3,7 +3,7 @@
         {
             "home": "Wisła Kraków",
             "away": "Wisła Płock",
-            "datetime": "07.08. 18:30",
+            "datetime": "18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -200,7 +200,7 @@
                 "avg_red": 0,
                 "avg_shots": 10.2,
                 "avg_shots_on_target": 3.4,
-                "avg_xg": 0.7,
+                "avg_xg": 0.67,
                 "avg_fouls": 10.0,
                 "avg_offsides": 0.6,
                 "form": [
@@ -231,7 +231,7 @@
                     12
                 ],
                 "xg_per_match": [
-                    0.79,
+                    0.65,
                     0.59,
                     0.7,
                     0.06,
@@ -622,46 +622,45 @@
                 "over15_pct": 79,
                 "over25_pct": 71,
                 "over35_pct": 57,
-                "avg_goals_scored": 2.29,
+                "avg_goals_scored": 2.36,
                 "avg_goals_conceded": 0.86,
-                "avg_corners": 5.2,
-                "avg_yellow": 1.5,
+                "avg_corners": 5.8,
+                "avg_yellow": 1.2,
                 "avg_red": 0.0,
-                "avg_shots": 17.5,
-                "avg_shots_on_target": 7.0,
-                "avg_xg": 1.49,
+                "avg_shots": 18.8,
+                "avg_shots_on_target": 6.8,
+                "avg_xg": 1.35,
                 "avg_fouls": 10.5,
                 "avg_offsides": 1.0,
                 "form": [
                     "W",
-                    "D",
                     "W",
+                    "D",
                     "W",
                     "W"
                 ],
                 "corners_per_match": [
+                    5,
                     7,
                     9,
-                    2,
-                    3
+                    2
                 ],
                 "yellow_per_match": [
                     1,
                     1,
-                    2,
+                    1,
                     2
                 ],
                 "shots_per_match": [
+                    19,
                     21,
                     18,
-                    17,
-                    14
+                    17
                 ],
                 "xg_per_match": [
                     1.7,
                     0.79,
-                    1.55,
-                    1.93
+                    1.55
                 ]
             },
             "away_stats": {
@@ -739,17 +738,17 @@
                 "total_matches": 15,
                 "btts_pct": 47,
                 "over15_pct": 60,
-                "over25_pct": 47,
+                "over25_pct": 53,
                 "over35_pct": 20,
-                "avg_goals_scored": 1.67,
+                "avg_goals_scored": 1.73,
                 "avg_goals_conceded": 0.67,
-                "avg_corners": 4.8,
-                "avg_yellow": 1.8,
+                "avg_corners": 4.2,
+                "avg_yellow": 1.2,
                 "avg_red": 0,
-                "avg_shots": 14.6,
+                "avg_shots": 14.0,
                 "avg_shots_on_target": 5.4,
-                "avg_xg": 1.48,
-                "avg_fouls": 11.2,
+                "avg_xg": 1.56,
+                "avg_fouls": 11.6,
                 "avg_offsides": 0.4,
                 "form": [
                     "W",
@@ -759,32 +758,31 @@
                     "W"
                 ],
                 "corners_per_match": [
+                    1,
                     2,
                     3,
                     6,
-                    9,
-                    4
+                    9
                 ],
                 "yellow_per_match": [
+                    1,
                     3,
                     0,
                     1,
-                    1,
-                    4
+                    1
                 ],
                 "shots_per_match": [
+                    10,
                     13,
                     11,
                     14,
-                    22,
-                    13
+                    22
                 ],
                 "xg_per_match": [
                     0.88,
                     1.39,
                     1.89,
-                    2.07,
-                    1.19
+                    2.07
                 ]
             },
             "away_stats": {
@@ -1205,7 +1203,7 @@
         {
             "home": "Polonia Bytom",
             "away": "Pogoń Siedlce",
-            "datetime": "07.08. 16:00",
+            "datetime": "16:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1316,7 +1314,7 @@
         {
             "home": "Polonia Warszawa",
             "away": "Ruch Chorzów",
-            "datetime": "07.08. 18:30",
+            "datetime": "18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2563,5 +2561,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-08-06 10:50"
+    "updated": "2026-08-07 06:07"
 }
