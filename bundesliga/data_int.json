@@ -1310,8 +1310,8 @@
                 "avg_offsides": 1.0,
                 "form": [
                     "L",
+                    "L",
                     "D",
-                    "W",
                     "W",
                     "W"
                 ],
@@ -1347,8 +1347,8 @@
             "h2h": [],
             "odds": {
                 "home": 2.35,
-                "draw": 2.75,
-                "away": 3.6
+                "draw": 2.85,
+                "away": 3.4
             }
         },
         {
@@ -1591,9 +1591,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.4,
-                "draw": 3.5,
-                "away": 2.1
+                "home": 3,
+                "draw": 3.3,
+                "away": 2.3
             }
         },
         {
@@ -1871,10 +1871,10 @@
                 "avg_offsides": 1.2,
                 "form": [
                     "D",
-                    "W",
                     "D",
                     "W",
-                    "L"
+                    "D",
+                    "W"
                 ],
                 "corners_per_match": [
                     1,
@@ -2032,10 +2032,10 @@
                 "total_matches": 15,
                 "btts_pct": 73,
                 "over15_pct": 87,
-                "over25_pct": 53,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.93,
-                "avg_goals_conceded": 1.27,
+                "over25_pct": 60,
+                "over35_pct": 47,
+                "avg_goals_scored": 2.13,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 5.2,
                 "avg_yellow": 1.6,
                 "avg_red": 1.0,
@@ -2045,10 +2045,10 @@
                 "avg_fouls": 11.8,
                 "avg_offsides": 2.2,
                 "form": [
+                    "W",
                     "D",
                     "D",
                     "W",
-                    "D",
                     "D"
                 ],
                 "corners_per_match": [
@@ -2205,9 +2205,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2,
-                "draw": 3.1,
-                "away": 4.2
+                "home": 2.05,
+                "draw": 3.2,
+                "away": 3.9
             }
         },
         {
@@ -2734,5 +2734,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-08-06 11:02"
+    "updated": "2026-08-07 06:20"
 }
