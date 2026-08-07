@@ -810,6 +810,72 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Wisła Kraków_Wisła Płock": {
+            "home": "Wisła Kraków",
+            "away": "Wisła Płock",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:1",
+            "stage": "78",
+            "datetime": "78",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_lEwbl77t",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/wisla-krakow-rob20Q2Q/wisla-plock-QoZYVU3E/?mid=lEwbl77t"
+        },
+        "Polonia Bytom_Pogoń Siedlce": {
+            "home": "Polonia Bytom",
+            "away": "Pogoń Siedlce",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_AmpT5L53",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/polonia-bytom-vRn3UqXP/?mid=AmpT5L53",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 54,
+                    "away": 46
+                },
+                "fouls": {
+                    "home": 19,
+                    "away": 8
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
         "Chrobry Głogów_Odra Opole": {
             "home": "Chrobry Głogów",
             "away": "Odra Opole",
@@ -1551,44 +1617,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_OGRyAX1D",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/pogon-siedlce-d6IVB42i/?mid=OGRyAX1D",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 10
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 7,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 6
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 43,
-                    "away": 57
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 23
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         "Stal Rzeszów_Chrobry Głogów": {
             "home": "Stal Rzeszów",
@@ -1634,7 +1663,21 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
+        },
+        "Polonia Warszawa_Ruch Chorzów": {
+            "home": "Polonia Warszawa",
+            "away": "Ruch Chorzów",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:1",
+            "stage": "85",
+            "datetime": "85",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_rsCOs9JD",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-warszawa-ADZjR3us/ruch-chorzow-S4zygtuJ/?mid=rsCOs9JD"
         }
     },
-    "updated": "2026-08-07 15:26:50"
+    "updated": "2026-08-07 20:19:44"
 }

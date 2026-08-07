@@ -811,6 +811,58 @@
             "match_stats": null
         },
         {
+            "home": "Polonia Bytom",
+            "away": "Pogoń Siedlce",
+            "score": "2:2",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_AmpT5L53",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/polonia-bytom-vRn3UqXP/?mid=AmpT5L53",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 54,
+                    "away": 46
+                },
+                "fouls": {
+                    "home": 19,
+                    "away": 8
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "Chrobry Głogów",
             "away": "Odra Opole",
             "score": "0:1",
@@ -1551,44 +1603,7 @@
             "stage": "Koniec",
             "match_id": "g_1_OGRyAX1D",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/pogon-siedlce-d6IVB42i/?mid=OGRyAX1D",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 10
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 7,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 6
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 43,
-                    "away": 57
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 23
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Stal Rzeszów",
@@ -1636,5 +1651,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-07 15:26"
+    "updated": "2026-08-07 20:19"
 }
