@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Wisła Kraków",
+            "away": "Wisła Płock",
+            "score": "2:1",
+            "datetime": "07.08. 18:30",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_lEwbl77t",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/wisla-krakow-rob20Q2Q/wisla-plock-QoZYVU3E/?mid=lEwbl77t",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 10
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 22
+                },
+                "shots_on_target": {
+                    "home": 4,
+                    "away": 7
+                },
+                "xg": {
+                    "home": 1.78,
+                    "away": 1.49
+                },
+                "possession": {
+                    "home": 49,
+                    "away": 51
+                },
+                "fouls": {
+                    "home": 19,
+                    "away": 7
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 3
+                }
+            }
+        },
+        {
             "home": "Cracovia",
             "away": "Pogoń Szczecin",
             "score": "0:2",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_hYltRwAF",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/korona-kielce-pp78XcbA/?mid=hYltRwAF",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 6
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 11,
-                    "away": 16
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 1
-                },
-                "xg": {
-                    "home": 1.39,
-                    "away": 0.77
-                },
-                "possession": {
-                    "home": 62,
-                    "away": 38
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 19
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Pogoń Szczecin",
@@ -811,10 +826,62 @@
             "match_stats": null
         },
         {
+            "home": "Polonia Warszawa",
+            "away": "Ruch Chorzów",
+            "score": "1:1",
+            "datetime": "07.08. 18:30",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_rsCOs9JD",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-warszawa-ADZjR3us/ruch-chorzow-S4zygtuJ/?mid=rsCOs9JD",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 12,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
+        },
+        {
             "home": "Polonia Bytom",
             "away": "Pogoń Siedlce",
             "score": "2:2",
-            "datetime": "Koniec",
+            "datetime": "07.08. 16:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1551,44 +1618,7 @@
             "stage": "Koniec",
             "match_id": "g_1_GjrBBpwI",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=GjrBBpwI",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 4,
-                    "away": 7
-                },
-                "shots_on_target": {
-                    "home": 0,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 49,
-                    "away": 51
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 3
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Pogoń Siedlce",
@@ -1651,5 +1681,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-07 20:19"
+    "updated": "2026-08-08 04:32"
 }
