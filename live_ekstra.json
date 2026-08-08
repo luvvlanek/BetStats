@@ -825,6 +825,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Radomiak Radom_Górnik Zabrze": {
+            "home": "Radomiak Radom",
+            "away": "Górnik Zabrze",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:2",
+            "stage": "61",
+            "datetime": "61",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_MRy6noxg",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/radomiak-radom-zD5nYhAT/?mid=MRy6noxg"
+        },
         "Polonia Warszawa_Ruch Chorzów": {
             "home": "Polonia Warszawa",
             "away": "Ruch Chorzów",
@@ -1679,7 +1693,49 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
+        },
+        "Miedź Legnica_Pogoń Grodzisk Mazowiecki": {
+            "home": "Miedź Legnica",
+            "away": "Pogoń Grodzisk Mazowiecki",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:1",
+            "stage": "43",
+            "datetime": "43",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_d4ry4azG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=d4ry4azG"
+        },
+        "Puszcza Niepołomice_Odra Opole": {
+            "home": "Puszcza Niepołomice",
+            "away": "Odra Opole",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:1",
+            "stage": "43",
+            "datetime": "43",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_IgcsrIDd",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/puszcza-dtqx13O8/?mid=IgcsrIDd"
+        },
+        "Stal Mielec_Stal Rzeszów": {
+            "home": "Stal Mielec",
+            "away": "Stal Rzeszów",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "43",
+            "datetime": "43",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_ATgZqvqp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/stal-mielec-pxXiDZkQ/stal-rzeszow-IkpY1q92/?mid=ATgZqvqp"
         }
     },
-    "updated": "2026-08-08 08:21:01"
+    "updated": "2026-08-08 14:20:56"
 }
