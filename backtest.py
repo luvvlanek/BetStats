@@ -1,59 +1,90 @@
 #!/usr/bin/env python3
 """
-BetStats prediction-log backtest helper.
+BetStats 3.0 backtest / calibration report.
 
-Input JSON should be a list of prediction records, e.g.
-[
-  {"market":"Over 2.5","probability":0.68,"odds":1.80,"result":1},
-  {"market":"Over 2.5","probability":0.62,"odds":1.90,"result":0}
-]
+Use prediction records exported from the app:
+  python backtest.py betstats-predictions.json
 
-result: 1 for win, 0 for loss.
-This script intentionally does not fabricate historical predictions from
-finished match scores; proper backtesting requires pre-match snapshots.
+Only settled predictions are evaluated. Predictions should have been
+generated before kickoff; do not mix post-match data into the feature set.
 """
 import json, sys, math
 from collections import defaultdict
 
-def brier(rows):
-    return sum((r["probability"]-r["result"])**2 for r in rows)/len(rows)
+def mean(xs):
+    return sum(xs)/len(xs) if xs else None
+
+def bucket(p):
+    p=float(p)
+    lo=max(.0,min(.95,math.floor(p*20)/20))
+    return lo
 
 def calibration(rows):
-    buckets=defaultdict(list)
+    groups=defaultdict(list)
     for r in rows:
-        p=float(r["probability"])
-        key=min(0.95, max(0.05, math.floor(p*20)/20))
-        buckets[key].append(r)
-    return [
-        {"predicted_range":f"{int(k*100)}-{int((k+0.05)*100)}%",
-         "count":len(v),
-         "predicted":round(sum(x["probability"] for x in v)/len(v)*100,2),
-         "actual":round(sum(x["result"] for x in v)/len(v)*100,2)}
-        for k,v in sorted(buckets.items())
-    ]
+        groups[bucket(r["probability"])].append(r)
+    out=[]
+    for lo,rs in sorted(groups.items()):
+        pred=mean([float(r["probability"]) for r in rs])
+        act=mean([int(r["result"]) for r in rs])
+        out.append({
+            "range":f"{int(lo*100)}-{int((lo+.05)*100)}%",
+            "n":len(rs),"predicted_pct":round(pred*100,2),
+            "actual_pct":round(act*100,2),
+            "delta_pp":round((act-pred)*100,2)
+        })
+    return out
+
+def report(rows):
+    settled=[r for r in rows if r.get("result") in (0,1)]
+    wins=sum(int(r["result"]) for r in settled)
+    brier=mean([(float(r["probability"])-int(r["result"]))**2 for r in settled])
+    logloss=None
+    if settled:
+        vals=[]
+        for r in settled:
+            p=max(.0001,min(.9999,float(r["probability"])))
+            y=int(r["result"])
+            vals.append(-(y*math.log(p)+(1-y)*math.log(1-p)))
+        logloss=mean(vals)
+    with_odds=[r for r in settled if r.get("odds") and float(r["odds"])>1]
+    pnl=sum((float(r["odds"])-1 if r["result"] else -1) for r in with_odds)
+    def grouped(field):
+        g=defaultdict(list)
+        for r in settled:g[str(r.get(field) or "Unknown")].append(r)
+        out=[]
+        for k,v in g.items():
+            out.append({"group":k,"n":len(v),"win_rate_pct":round(mean([r["result"] for r in v])*100,2),
+                        "avg_probability_pct":round(mean([r["probability"] for r in v])*100,2)})
+        return sorted(out,key=lambda x:-x["n"])
+    conf=defaultdict(list)
+    for r in settled:
+        c=float(r.get("confidence",0))
+        k="90+" if c>=90 else "85-89" if c>=85 else "80-84" if c>=80 else "75-79" if c>=75 else "<75"
+        conf[k].append(r)
+    conf_out=[]
+    for k,v in conf.items():
+        conf_out.append({"bucket":k,"n":len(v),"win_rate_pct":round(mean([r["result"] for r in v])*100,2),
+                         "avg_probability_pct":round(mean([r["probability"] for r in v])*100,2)})
+    return {
+        "records":len(rows),"settled":len(settled),
+        "win_rate_pct":round(wins/len(settled)*100,2) if settled else None,
+        "brier_score":round(brier,5) if brier is not None else None,
+        "log_loss":round(logloss,5) if logloss is not None else None,
+        "roi_pct":round(pnl/len(with_odds)*100,2) if with_odds else None,
+        "with_odds":len(with_odds),
+        "calibration":calibration(settled),
+        "by_market":grouped("market_name"),
+        "by_league":grouped("league"),
+        "by_confidence":sorted(conf_out,key=lambda x:x["bucket"])
+    }
 
 def main(path):
-    rows=json.load(open(path,encoding="utf-8"))
-    rows=[r for r in rows if "probability" in r and "result" in r]
-    if not rows:
-        raise SystemExit("Brak poprawnych prediction records.")
-    wins=sum(int(r["result"]) for r in rows)
-    roi=0.0; staked=0
-    with_odds=0
-    for r in rows:
-        if r.get("odds") and float(r["odds"])>1:
-            with_odds+=1; staked+=1
-            roi += float(r["odds"])-1 if r["result"] else -1
-    print(json.dumps({
-        "predictions":len(rows),
-        "win_rate":round(wins/len(rows)*100,2),
-        "brier_score":round(brier(rows),5),
-        "roi_pct":round(roi/staked*100,2) if staked else None,
-        "with_odds":with_odds,
-        "calibration":calibration(rows)
-    },ensure_ascii=False,indent=2))
+    with open(path,encoding="utf-8") as f: data=json.load(f)
+    if isinstance(data,dict): data=data.get("predictions",data.get("rows",[]))
+    print(json.dumps(report(data),ensure_ascii=False,indent=2))
 
 if __name__=="__main__":
     if len(sys.argv)!=2:
-        raise SystemExit("Użycie: python backtest.py predictions.json")
+        raise SystemExit("Użycie: python backtest.py betstats-predictions.json")
     main(sys.argv[1])

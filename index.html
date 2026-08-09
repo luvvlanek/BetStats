@@ -2504,5 +2504,195 @@
   window.addEventListener('load',()=>setTimeout(renderBetStatsRadar,150));
 })();
 </script>
+
+<style>
+/* BETSTATS 3.0 MODEL CENTER */
+.bs3-panel{background:linear-gradient(145deg,#0b1118,#101923);color:#e8eef7;border:1px solid rgba(255,255,255,.09);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.18);overflow:hidden}
+.bs3-panel *{box-sizing:border-box}.bs3-muted{color:#93a1b3}.bs3-green{color:#35d07f}.bs3-yellow{color:#f5c451}.bs3-red{color:#ff6b6b}.bs3-blue{color:#72a7ff}
+.bs3-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.bs3-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:15px}
+.bs3-big{font-size:25px;font-weight:900;line-height:1}.bs3-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#8b98a9;font-weight:800;margin-bottom:8px}
+.bs3-bar{height:7px;background:#202b38;border-radius:99px;overflow:hidden}.bs3-bar>i{display:block;height:100%;background:#35d07f;border-radius:99px}
+.bs3-row{display:grid;grid-template-columns:38px 1fr 70px 70px 75px 75px;gap:10px;align-items:center;padding:13px 8px;border-top:1px solid rgba(255,255,255,.06)}
+.bs3-row:hover{background:rgba(255,255,255,.035)}.bs3-rank{font-size:20px;font-weight:900;color:#64748b;text-align:center}.bs3-teams{font-weight:800}.bs3-teams small{display:block;color:#7f8da0;font-size:10px;margin-bottom:4px}.bs3-market{font-size:12px;color:#dce6f3}.bs3-metric{text-align:right}.bs3-metric b{display:block;font-size:15px}.bs3-metric small{display:block;color:#7f8da0;font-size:9px;text-transform:uppercase}
+.bs3-badge{display:inline-flex;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:900;letter-spacing:.05em}.bs3-badge.green{background:rgba(53,208,127,.12);color:#4ce58f}.bs3-badge.value{background:rgba(72,139,255,.14);color:#82b0ff}.bs3-badge.skip{background:rgba(255,255,255,.07);color:#9aa7b7}
+.bs3-actions{display:flex;gap:8px;flex-wrap:wrap}.bs3-btn{border:1px solid rgba(255,255,255,.12);background:#17212d;color:#eaf0f7;border-radius:10px;padding:9px 12px;font-weight:800;font-size:11px;cursor:pointer}.bs3-btn:hover{background:#203040}.bs3-btn.active{background:#168a4c;border-color:#35d07f}
+.bs3-input{background:#111923;border:1px solid #2a3746;color:#fff;border-radius:10px;padding:8px 10px;width:100%}
+.bs3-table{width:100%;border-collapse:collapse;font-size:12px}.bs3-table th,.bs3-table td{padding:8px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left}.bs3-table th{color:#8190a3;font-size:9px;text-transform:uppercase}
+.bs3-modal{position:fixed;inset:0;background:rgba(2,6,12,.72);backdrop-filter:blur(7px);z-index:10000;display:none;align-items:center;justify-content:center;padding:16px}.bs3-modal.show{display:flex}.bs3-modal-inner{width:min(1100px,100%);max-height:92vh;overflow:auto}
+.bs3-explain{display:grid;grid-template-columns:1fr 1fr;gap:10px}.bs3-explain-item{background:#111923;border:1px solid #263242;border-radius:12px;padding:10px}.bs3-chip{font-size:10px;padding:3px 6px;border-radius:6px;background:#1b2734;color:#9fb0c3}
+@media(max-width:800px){.bs3-grid{grid-template-columns:repeat(2,1fr)}.bs3-row{grid-template-columns:28px 1fr 55px 55px}.bs3-row .bs3-metric:nth-last-child(-n+2){display:none}.bs3-explain{grid-template-columns:1fr}}
+</style>
+
+<script>
+(function(){
+'use strict';
+const SETTINGS_KEY='betstats_model_settings_v3';
+const DEFAULTS={minConfidence:80,minDataQuality:75,minAgreement:65,minProbability:63,minEdge:4,greenOnly:false};
+function getSettings(){try{return Object.assign({},DEFAULTS,JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}'))}catch(e){return {...DEFAULTS}}}
+function saveSettings(s){localStorage.setItem(SETTINGS_KEY,JSON.stringify(s));return s}
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function allLoaded(){let a=[];if(typeof allMatchesData!=='undefined')Object.values(allMatchesData||{}).forEach(v=>a=a.concat(v||[]));if(typeof matchesData!=='undefined')a=a.concat(matchesData||[]);const seen=new Set();return a.filter(m=>{const k=m.match_id||m.home+'|'+m.away+'|'+m.datetime;if(seen.has(k))return false;seen.add(k);return true})}
+function eligible(x,s){return x&&x.probPct>=s.minProbability&&x.confidence>=s.minConfidence&&x.dataQuality>=s.minDataQuality&&x.agreement>=s.minAgreement&&(x.edgePct===null||x.edgePct>=s.minEdge)}
+window.betStatsModelSettings=getSettings;
+window.betStatsModelRefresh=function(){
+  if(typeof renderMatches==='function')renderMatches();
+  if(typeof window.renderBetStatsRadar==='function')window.renderBetStatsRadar();
+  renderModelCenter();
+};
+
+/* Make the Green filter use adjustable quality gates. */
+window.getMatchValueBets=function(m){
+  if(!m||m.sport==='volleyball'||!window.BetStatsEngine)return [];
+  const s=getSettings(),a=window.BetStatsEngine.model(m);
+  return a.markets.filter(x=>eligible(x,s)).sort((u,v)=>v.score-u.score).map(x=>({
+    type:x.type,key:x.key,prob:x.probPct,weight:1,icon:x.icon,display:x.probPct+'%',
+    score:x.score,confidence:x.confidence,dataQuality:x.dataQuality,edge:x.edgePct,ev:x.evPct,
+    fairOdds:x.fairOdds,isValue:x.value,status:x.value?'VALUE':'GREEN'
+  }));
+};
+
+/* Model explanation in match detail. */
+const oldOpen=window.openMatchDetail;
+if(oldOpen){
+  window.openMatchDetail=function(i){
+    oldOpen(i);
+    setTimeout(()=>{
+      const m=(typeof matchesData!=='undefined'?matchesData[i]:null); if(!m||!window.BetStatsEngine)return;
+      const a=window.BetStatsEngine.model(m); if(!a)return;
+      const box=document.getElementById('md-content');if(!box)return;
+      const s=getSettings();
+      const top=a.markets.filter(x=>eligible(x,s)).sort((u,v)=>v.score-u.score).slice(0,4);
+      const html='<div id="bs3-detail-engine" class="mt-5 bs3-panel p-5">'+
+        '<div class="flex flex-wrap justify-between gap-3 items-start"><div><div class="text-[10px] font-black tracking-[.18em] text-green-400">BETSTATS 3.0 ENGINE</div><h4 class="text-xl font-black text-white mt-1">🧠 Model check</h4></div>'+
+        '<div class="flex gap-2 flex-wrap"><span class="bs3-badge green">CONF '+a.confidence+'/100</span><span class="bs3-badge green">DATA '+a.dataQuality+'/100</span><span class="bs3-badge value">AGREEMENT '+a.modelAgreement+'/100</span></div></div>'+
+        '<div class="bs3-grid mt-4">'+
+        '<div class="bs3-card"><div class="bs3-label">Expected goals</div><div class="bs3-big">'+a.lambdas.home+' — '+a.lambdas.away+'</div><div class="bs3-muted text-[10px] mt-1">'+esc(m.home)+' / '+esc(m.away)+'</div></div>'+
+        '<div class="bs3-card"><div class="bs3-label">Sample</div><div class="bs3-big">'+a.samplePct+'%</div><div class="bs3-bar mt-3"><i style="width:'+a.samplePct+'%"></i></div></div>'+
+        '<div class="bs3-card"><div class="bs3-label">Top signal</div><div class="bs3-big">'+(top[0]?top[0].probPct+'%':'—')+'</div><div class="bs3-muted text-[10px] mt-1">'+(top[0]?top[0].type:'brak kwalifikacji')+'</div></div>'+
+        '<div class="bs3-card"><div class="bs3-label">Risk flags</div><div class="text-xs font-bold">'+(a.riskFlags.length?a.riskFlags.map(x=>'<span class="bs3-chip mr-1 inline-block mb-1">'+x+'</span>').join(''):'<span class="bs3-green">Brak</span>')+'</div></div></div>'+
+        '<div class="mt-4"><div class="text-xs font-black text-white mb-2">Najlepsze rynki</div><div class="grid grid-cols-1 md:grid-cols-2 gap-2">'+a.markets.map(x=>'<div class="bs3-card"><div class="flex justify-between gap-2"><b>'+x.icon+' '+x.type+'</b><span class="bs3-badge '+(eligible(x,s)?(x.value?'value':'green'):'skip')+'">'+(eligible(x,s)?(x.value?'VALUE':'GREEN'):'SKIP')+'</span></div><div class="grid grid-cols-4 gap-2 mt-3 text-center"><div><b>'+x.probPct+'%</b><small class="block bs3-muted">model</small></div><div><b>'+x.fairOdds+'</b><small class="block bs3-muted">fair</small></div><div><b>'+(x.edgePct===null?'—':(x.edgePct>0?'+':'')+x.edgePct+' pp')+'</b><small class="block bs3-muted">edge</small></div><div><b>'+x.score+'</b><small class="block bs3-muted">score</small></div></div><div class="bs3-muted text-[10px] mt-2">'+esc(x.reasons.join(' · '))+'</div></div>').join('')+'</div></div>'+
+        '<div class="mt-4 text-[10px] bs3-muted">Model probability is an estimate. Confidence is a data/model-quality score, not a guaranteed win probability.</div></div>';
+      box.insertAdjacentHTML('beforeend',html);
+      a.markets.filter(x=>x.status!=='SKIP').forEach(x=>window.BetStatsEngine.logPrediction(m,x,a));
+    },80);
+  };
+}
+
+/* Finished feed resolver. */
+async function loadFinishedAndResolve(){
+  if(!window.BetStatsEngine)return;
+  const files=['finished_ekstra','finished_int','finished_world','finished_volley_pl'];
+  const all=[];
+  for(const f of files){try{const r=await fetch(f+'.json?t='+Date.now());if(r.ok){const d=await r.json();all.push(...(d.matches||[]))}}catch(e){}}
+  if(all.length)window.BetStatsEngine.resolveLogs(all);
+}
+async function preloadFootballData(){
+  const files=['data_ekstra','data_int','data_world'];
+  for(const f of files){
+    if(typeof allMatchesData!=='undefined'&&allMatchesData[f]!==undefined)continue;
+    try{const r=await fetch(f+'.json?t='+Date.now());if(r.ok){const d=await r.json();if(typeof allMatchesData!=='undefined')allMatchesData[f]=d.matches||[]}}catch(e){}
+  }
+}
+
+/* Model center modal. */
+function createCenter(){
+  if(document.getElementById('bs3-model-modal'))return;
+  const d=document.createElement('div');d.id='bs3-model-modal';d.className='bs3-modal';
+  d.innerHTML='<div class="bs3-modal-inner">'+
+    '<div class="bs3-panel p-5 md:p-7"><div class="flex justify-between items-start gap-3"><div><div class="text-[10px] font-black tracking-[.2em] text-green-400">BETSTATS 3.0</div><h2 class="text-2xl md:text-3xl font-black text-white mt-1">🛰️ Model Center</h2><p class="bs3-muted text-xs mt-1">Radar, selekcja, kalibracja i historia predykcji.</p></div><button class="bs3-btn" onclick="document.getElementById(\'bs3-model-modal\').classList.remove(\'show\')">✕ Zamknij</button></div>'+
+    '<div id="bs3-center-body" class="mt-5"></div></div></div>';
+  d.addEventListener('click',e=>{if(e.target===d)d.classList.remove('show')});document.body.appendChild(d);
+}
+async function openModelCenter(){createCenter();const d=document.getElementById('bs3-model-modal');d.classList.add('show');await preloadFootballData();const ms=allLoaded().filter(m=>m.sport!=='volleyball');window.BetStatsEngine.logMatches(ms);await loadFinishedAndResolve();renderModelCenter()}
+window.openModelCenter=openModelCenter;
+
+function renderModelCenter(){
+  const host=document.getElementById('bs3-center-body');if(!host)return;
+  const s=getSettings(),ms=allLoaded().filter(m=>m.sport!=='volleyball');
+  const r=window.BetStatsEngine.radar(ms,{limit:12,minConfidence:s.minConfidence,minDataQuality:s.minDataQuality});
+  const perf=window.BetStatsEngine.performance(),logs=window.BetStatsEngine.getLogs();
+  const rows=r.picks.map((p,i)=>'<button onclick="bs3OpenMatch('+JSON.stringify(p.match.match_id)+')" class="bs3-row text-left w-full"><div class="bs3-rank">'+(i+1)+'</div><div class="bs3-teams"><small>'+esc(p.match.league_name||'Liga')+'</small>'+esc(p.match.home)+' <span class="bs3-muted">vs</span> '+esc(p.match.away)+'<div class="bs3-market mt-1">'+p.icon+' '+p.type+' <span class="bs3-badge '+(p.value?'value':'green')+' ml-1">'+(p.value?'VALUE':'GREEN')+'</span></div></div><div class="bs3-metric"><b>'+p.probPct+'%</b><small>model</small></div><div class="bs3-metric"><b>'+p.confidence+'</b><small>conf</small></div><div class="bs3-metric"><b>'+p.score+'</b><small>score</small></div><div class="bs3-metric"><b>'+(p.edgePct===null?'—':(p.edgePct>0?'+':'')+p.edgePct+'pp')+'</b><small>edge</small></div></button>').join('');
+  const cal=perf.calibration||[];
+  const calRows=cal.length?cal.map(x=>'<tr><td>'+x.range+'</td><td>'+x.count+'</td><td>'+x.predicted+'%</td><td>'+x.actual+'%</td><td class="'+(Math.abs(x.predicted-x.actual)<=5?'bs3-green':'bs3-yellow')+'">'+(x.actual-x.predicted>=0?'+':'')+(x.actual-x.predicted).toFixed(1)+' pp</td></tr>').join(''):'<tr><td colspan="5" class="bs3-muted">Brak wystarczającej liczby rozliczonych predykcji.</td></tr>';
+  host.innerHTML=
+    '<div class="bs3-grid">'+
+      '<div class="bs3-card"><div class="bs3-label">Mecze przeanalizowane</div><div class="bs3-big">'+r.analyzed+'</div></div>'+
+      '<div class="bs3-card"><div class="bs3-label">Green</div><div class="bs3-big bs3-green">'+r.green+'</div></div>'+
+      '<div class="bs3-card"><div class="bs3-label">Value</div><div class="bs3-big bs3-blue">'+r.value+'</div></div>'+
+      '<div class="bs3-card"><div class="bs3-label">Rozliczone</div><div class="bs3-big">'+perf.settled+'</div></div>'+
+    '</div>'+
+    '<div class="bs3-card mt-3"><div class="flex justify-between items-center gap-3 flex-wrap"><div><div class="bs3-label">Selekcja</div><div class="text-sm font-black text-white">Im wyższe bramki, tym mniej sygnałów — ale lepsza jakość danych.</div></div><div class="bs3-actions"><button class="bs3-btn '+(s.greenOnly?'active':'')+'" onclick="bs3ToggleGreen()">'+(s.greenOnly?'🟢 GREEN ON':'🟢 GREEN MODE')+'</button><button class="bs3-btn" onclick="bs3ExportLogs()">⬇ Eksport</button><button class="bs3-btn" onclick="bs3SyncCloud()">☁️ Sync</button><button class="bs3-btn" onclick="bs3PullCloud()">☁️ Pobierz</button><button class="bs3-btn" onclick="bs3ClearLogs()">🗑 Wyczyść</button></div></div>'+
+      '<div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-4">'+
+      [['minConfidence','Confidence',s.minConfidence],['minDataQuality','Data quality',s.minDataQuality],['minAgreement','Agreement',s.minAgreement],['minProbability','Probability %',s.minProbability],['minEdge','Min edge pp',s.minEdge]].map(([k,l,v])=>'<label class="text-[10px] font-bold text-slate-400">'+l+'<input class="bs3-input mt-1" type="number" min="0" max="'+(k==='minEdge'?'30':'100')+'" step="1" value="'+v+'" onchange="bs3Set(\''+k+'\',this.value)"></label>').join('')+
+      '</div></div>'+
+    '<div class="bs3-card mt-3"><div class="flex justify-between items-end gap-3"><div><div class="bs3-label">🛰️ TOP PICKS</div><div class="text-lg font-black text-white">Radar po filtrach</div></div><div class="bs3-muted text-[10px]">Wersja '+window.BetStatsEngine.VERSION+'</div></div><div class="mt-2">'+(rows||'<div class="bs3-muted py-8 text-center">Brak sygnałów po filtrach. To jest poprawny wynik.</div>')+'</div></div>'+
+    '<div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-3">'+
+      '<div class="bs3-card"><div class="bs3-label">📈 Kalibracja</div><div class="text-xs bs3-muted mb-2">Porównanie prawdopodobieństwa modelu z faktycznymi wynikami.</div><table class="bs3-table"><thead><tr><th>Zakres</th><th>N</th><th>Model</th><th>Actual</th><th>Delta</th></tr></thead><tbody>'+calRows+'</tbody></table></div>'+
+      '<div class="bs3-card"><div class="bs3-label">📊 Performance</div><div class="bs3-grid" style="grid-template-columns:repeat(2,1fr)"><div><div class="bs3-big">'+(perf.winRate===null?'—':perf.winRate+'%')+'</div><div class="bs3-muted text-[9px] uppercase">Win rate</div></div><div><div class="bs3-big">'+(perf.roi===null?'—':(perf.roi>0?'+':'')+perf.roi+'%')+'</div><div class="bs3-muted text-[9px] uppercase">ROI</div></div><div><div class="bs3-big">'+(perf.brier===null?'—':perf.brier)+'</div><div class="bs3-muted text-[9px] uppercase">Brier</div></div><div><div class="bs3-big">'+logs.length+'</div><div class="bs3-muted text-[9px] uppercase">Logów</div></div></div><div class="mt-4 text-xs bs3-muted">Najlepsza kalibracja wymaga predykcji zapisanych <b>przed startem</b> oraz odpowiednio dużej próby.</div></div>'+
+    '</div>';
+}
+window.bs3OpenMatch=function(matchId){
+  document.getElementById('bs3-model-modal')?.classList.remove('show');
+  let m=null,idx=-1;
+  if(typeof matchesData!=='undefined'){idx=(matchesData||[]).findIndex(x=>x.match_id===matchId);if(idx>=0)m=matchesData[idx]}
+  if(!m&&typeof allMatchesData!=='undefined'){
+    outer: for(const arr of Object.values(allMatchesData||{})){for(const z of (arr||[])){if(z.match_id===matchId){m=z;break outer}}}
+  }
+  if(m){
+    if(typeof matchesData!=='undefined' && !matchesData.includes(m)) matchesData=[m];
+    openMatchDetail(Math.max(0,typeof matchesData!=='undefined'?matchesData.indexOf(m):0));
+  }
+};
+window.bs3SyncCloud=async function(){
+  try{
+    if(typeof sb==='undefined'||!sb){alert('Supabase nie jest dostępny.');return}
+    if(typeof currentUser==='undefined'||!currentUser){alert('Zaloguj się, aby zapisać predykcje w chmurze.');return}
+    const rows=window.BetStatsEngine.getLogs();
+    if(!rows.length){alert('Brak lokalnych predykcji do synchronizacji.');return}
+    const payload=rows.map(r=>({
+      user_id:currentUser.id,prediction_key:r.key,model_version:r.modelVersion,match_id:r.matchId,
+      home:r.home,away:r.away,league:r.league,league_id:r.leagueId,match_datetime:r.datetime,
+      market:r.market,market_name:r.marketName,probability:r.probability,odds:r.odds,fair_odds:r.fairOdds,
+      edge_pct:r.edgePct,ev_pct:r.evPct,confidence:r.confidence,data_quality:r.dataQuality,
+      agreement:r.agreement,score:r.score,status:r.status,result:r.result,result_source:r.resultSource,
+      final_score:r.finalScore||null,created_at:r.createdAt,settled_at:r.finishedAt||null
+    }));
+    const {error}=await sb.from('prediction_logs').upsert(payload,{onConflict:'user_id,prediction_key'});
+    if(error)throw error;
+    alert('✅ Zsynchronizowano '+payload.length+' predykcji.');
+  }catch(e){console.error(e);alert('Nie udało się zsynchronizować. Jeśli tabela prediction_logs nie istnieje, uruchom supabase_prediction_logs.sql w Supabase.')}
+};
+window.bs3PullCloud=async function(){
+  try{
+    if(typeof sb==='undefined'||!sb||typeof currentUser==='undefined'||!currentUser){alert('Zaloguj się do Supabase.');return}
+    const {data,error}=await sb.from('prediction_logs').select('*').eq('user_id',currentUser.id).order('created_at',{ascending:true}).limit(10000);
+    if(error)throw error;
+    const local=window.BetStatsEngine.getLogs(), map=new Map(local.map(r=>[r.key,r]));
+    (data||[]).forEach(r=>map.set(r.prediction_key,{
+      key:r.prediction_key,createdAt:r.created_at,matchId:r.match_id,home:r.home,away:r.away,league:r.league,leagueId:r.league_id,
+      datetime:r.match_datetime,market:r.market,marketName:r.market_name,probability:Number(r.probability),odds:r.odds?Number(r.odds):null,
+      fairOdds:r.fair_odds?Number(r.fair_odds):null,edgePct:r.edge_pct===null?null:Number(r.edge_pct),evPct:r.ev_pct===null?null:Number(r.ev_pct),
+      confidence:r.confidence,dataQuality:r.data_quality,agreement:r.agreement,score:r.score,status:r.status,
+      modelVersion:r.model_version,result:r.result,resultSource:r.result_source,finalScore:r.final_score,finishedAt:r.settled_at
+    }));
+    localStorage.setItem('betstats_prediction_log_v3',JSON.stringify([...map.values()].slice(-10000)));
+    renderModelCenter();alert('☁️ Pobrano '+(data||[]).length+' predykcji.');
+  }catch(e){console.error(e);alert('Nie udało się pobrać historii z Supabase. Sprawdź tabelę prediction_logs.')}
+};
+window.bs3Set=function(k,v){const s=getSettings();s[k]=Number(v)||0;saveSettings(s);renderModelCenter();if(typeof renderMatches==='function')renderMatches()};
+window.bs3ToggleGreen=function(){const s=getSettings();s.greenOnly=!s.greenOnly;saveSettings(s);renderModelCenter();if(typeof renderMatches==='function')renderMatches()};
+window.bs3ExportLogs=function(){const blob=new Blob([JSON.stringify(window.BetStatsEngine.getLogs(),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='betstats-predictions.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+window.bs3ClearLogs=function(){if(confirm('Usunąć lokalną historię predykcji?')){localStorage.removeItem('betstats_prediction_log_v3');renderModelCenter()}};
+
+/* Add Model Center to the top navigation. */
+function addNavButton(){
+  if(document.getElementById('bs3-nav-btn'))return;
+  const btn=document.createElement('button');btn.id='bs3-nav-btn';btn.className='btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1';btn.innerHTML='🛰️ <span class="hidden sm:inline">Model Center</span>';btn.onclick=openModelCenter;
+  const nav=document.querySelector('button[onclick="openDashboard()"]');if(nav&&nav.parentElement)nav.parentElement.insertBefore(btn,nav);
+}
+window.addEventListener('load',()=>{createCenter();addNavButton();setTimeout(loadFinishedAndResolve,1200)});
+})();
+</script>
+
 </body>
 </html>
