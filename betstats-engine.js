@@ -156,7 +156,7 @@ function model(m){
       odds:Number.isFinite(odds)&&odds>1?odds:null,impliedPct:implied===null?null:pct(implied),
       fairOdds:+fair.toFixed(2),edgePct:edge===null?null:+(edge*100).toFixed(1),evPct:ev===null?null:+(ev*100).toFixed(1),
       agreement,confidence,dataQuality:dq,samplePct:Math.round(sample*100),score,status,green,value,reasons,explanation,
-      icon:key==='btts'?'🎯':'⚽'};
+      icon:''};
   });
   // 1X2 market is useful as an informational probability; do not use it to create value for itself.
   const oneXtwo=probabilities(lhla.home,lhla.away);
