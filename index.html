@@ -153,6 +153,28 @@
             transform: translateY(0);
         }
     </style>
+
+<style>
+/* BetStats 2.0 — Radar */
+#betstats-radar{font-family:inherit}
+.bs-radar-head{display:flex;justify-content:space-between;gap:20px;align-items:center;background:linear-gradient(135deg,#07111c,#0d1b2a);color:#fff;border-radius:20px;padding:22px 24px;margin-bottom:12px;box-shadow:0 14px 40px rgba(0,0,0,.14)}
+.bs-kicker{font-size:10px;letter-spacing:.18em;font-weight:800;color:#67e8a5;margin-bottom:4px}
+.bs-radar-head h3{font-size:20px;font-weight:900;margin:0}
+.bs-radar-head p{font-size:12px;color:#aeb9c8;margin:5px 0 0}
+.bs-radar-stats{display:flex;gap:16px;flex-wrap:wrap}
+.bs-radar-stats span{min-width:58px;text-align:center}.bs-radar-stats b{display:block;font-size:20px}.bs-radar-stats small{font-size:9px;color:#91a0b2;text-transform:uppercase}
+.bs-radar-row{width:100%;display:grid;grid-template-columns:38px minmax(0,1fr) 72px 82px 82px 72px;gap:12px;align-items:center;text-align:left;background:#fff;border:1px solid #e5e7eb;padding:13px 14px;margin:7px 0;border-radius:15px;transition:.18s;cursor:pointer}
+.bs-radar-row:hover{transform:translateY(-1px);border-color:#22c55e;box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.bs-rank{font-size:16px;font-weight:900;color:#64748b;text-align:center}.bs-league{font-size:9px;text-transform:uppercase;color:#94a3b8;font-weight:800}.bs-teams{font-weight:800;color:#172033;margin:2px 0}.bs-teams span{color:#94a3b8;font-weight:500}.bs-market{font-size:11px;font-weight:700;color:#334155}
+.bs-metric{text-align:center}.bs-metric b{display:block;font-size:14px;color:#0f172a}.bs-metric small{font-size:8px;color:#94a3b8;text-transform:uppercase}
+.bs-badge{font-size:8px;padding:3px 6px;border-radius:999px;margin-left:5px;font-weight:900}.bs-value{background:#dcfce7;color:#15803d}.bs-green{background:#ecfdf5;color:#047857}
+.bs-empty{background:#f8fafc;border:1px dashed #cbd5e1;padding:25px;text-align:center;color:#64748b;border-radius:15px;font-size:13px}
+@media(max-width:700px){
+ .bs-radar-head{display:block}.bs-radar-stats{margin-top:15px;justify-content:space-between}
+ .bs-radar-row{grid-template-columns:30px minmax(0,1fr) 60px;gap:7px}.bs-radar-row .bs-metric:nth-last-child(-n+3){display:none}
+ .bs-teams{font-size:12px}.bs-market{font-size:10px}
+}
+</style>
 </head>
 <body class="text-gray-800 font-sans min-h-screen">
 
@@ -351,7 +373,7 @@
                 </div>
             </div>
 
-            <div id="value-bets-section" class="mb-8"></div>
+            <div id="value-bets-section" class="mb-4"></div><div id="betstats-radar" class="mb-8"></div>
 
             <div class="bg-yellow-100 border border-yellow-300 rounded-xl p-4 mb-6">
                 <div class="flex items-start gap-3">
@@ -373,7 +395,7 @@
                 </h2>
                 <div class="flex gap-2 flex-wrap">
                     <button onclick="toggleFavOnly()" id="fav-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2">⭐ Ulubione</button>
-                    <button onclick="toggleValueOnly()" id="value-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2">🔥 Value bety</button>
+                    <button onclick="toggleValueOnly()" id="value-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2">🔥 Value bety</button><button onclick="toggleGreenOnly()" id="green-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-green-500 transition flex items-center gap-2">🟢 Green</button>
                     <button onclick="toggleSettings()" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-[#1e3a5f] transition flex items-center gap-2">⚙️</button>
                 </div>
             </div>
@@ -1546,7 +1568,7 @@
         const hs = m.home_stats || {}, as = m.away_stats || {};
         const isFav = isFavorite(m.match_id), live = getLiveInfo(m.home, m.away);
         const isVolley = m.sport === 'volleyball';
-        const vb = getMatchValueBets(m) || [], isHot = vb.length >= 2;
+        const vb = getMatchValueBets(m) || [], isHot = vb.length >= 2; const v2 = (!isVolley && window.BetStatsEngine) ? window.BetStatsEngine.model(m) : null;
 
         // Kolory ligi
         const lc = currentLeague ? currentLeague.colors : null;
@@ -1559,7 +1581,7 @@
 
         let html = '<div id="match-card-' + i + '" class="bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" ' + borderStyle + ' onclick="openMatchDetail(' + i + ')">';
         if (liveBadge) html += liveBadge;
-        if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block">🔥</span> HOT · ' + vb.length + ' value bets</div>';
+        if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block">🔥</span> HOT · ' + vb.length + ' value bets</div>'; if (v2) html += '<div class="px-4 py-2 bg-slate-50 border-b border-slate-200 flex justify-between items-center text-[10px]"><span class="font-bold text-slate-500">BETSTATS 2.0 · '+v2.confidence+'/100 CONFIDENCE</span><span class="'+(v2.dataQuality>=70?'text-green-600':'text-amber-600')+' font-black">DATA '+v2.dataQuality+'/100</span></div>';
 
         html += '<div class="flex justify-between items-center px-4 py-2 bg-gray-50 border-b border-gray-200">';
         html += '<span class="text-[10px] font-bold text-gray-600 tracking-wider">' + (m.league_flag || '🏆') + ' ' + (m.league_name || '').toUpperCase() + '</span>';
@@ -2355,5 +2377,132 @@
         initFromURL();
     });
     </script>
+
+<script src="betstats-engine.js"></script>
+<script>
+(function(){
+  'use strict';
+  let greenOnlyMode = localStorage.getItem('betstats_green_only') === '1';
+
+  // Replace the old averaging-only analysis with the v2 probability engine.
+  const legacyAnalyzeMatch = window.analyzeMatch;
+  window.analyzeMatch = function(m){
+    if (m && m.sport === 'volleyball') return legacyAnalyzeMatch ? legacyAnalyzeMatch(m) : {};
+    const a = window.BetStatsEngine && window.BetStatsEngine.model(m);
+    if (!a) return legacyAnalyzeMatch ? legacyAnalyzeMatch(m) : {};
+    return Object.assign({}, a, {
+      // Keep legacy fields expected by the existing UI.
+      btts:a.btts, o15:a.o15, o25:a.o25, o35:a.o35,
+      xg:+(((m.home_stats||{}).avg_xg||0)+((m.away_stats||{}).avg_xg||0)).toFixed(1)
+    });
+  };
+
+  window.getMatchValueBets = function(m){
+    if (!m || m.sport === 'volleyball') return [];
+    const a = window.BetStatsEngine.model(m);
+    return a.markets
+      .filter(x => x.green)
+      .sort((x,y)=>y.score-x.score)
+      .map(x => ({
+        type:x.type, key:x.key, prob:x.probPct, weight:1, icon:x.icon,
+        display:x.probPct+'%',
+        score:x.score, confidence:a.confidence, dataQuality:a.dataQuality,
+        edge:x.edgePct, ev:x.evPct, fairOdds:x.fairOdds,
+        isValue:x.value, status:x.status
+      }));
+  };
+
+  window.toggleGreenOnly = function(){
+    greenOnlyMode = !greenOnlyMode;
+    localStorage.setItem('betstats_green_only', greenOnlyMode ? '1' : '0');
+    const b=document.getElementById('green-filter-btn');
+    if(b){
+      b.className = greenOnlyMode
+        ? 'px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold transition flex items-center gap-2'
+        : 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-green-500 transition flex items-center gap-2';
+      b.innerHTML = greenOnlyMode ? '🟢 Green ✓' : '🟢 Green';
+    }
+    if(typeof renderMatches==='function') renderMatches();
+  };
+
+  window.renderBetStatsRadar = function(){
+    const el=document.getElementById('betstats-radar');
+    if(!el || !window.BetStatsEngine) return;
+    const all=(typeof matchesData!=='undefined' ? matchesData : []).filter(m=>{
+      const live=typeof getLiveInfo==='function' ? getLiveInfo(m.home,m.away) : null;
+      return !(live && live.is_finished);
+    });
+    const r=window.BetStatsEngine.radar(all,{limit:8});
+    const rows=r.picks.map((p,i)=>{
+      const m=p.match, a=p.analysis;
+      const edge=p.edgePct===null ? '—' : (p.edgePct>=0?'+':'')+p.edgePct+' pp';
+      const ev=p.evPct===null ? '—' : (p.evPct>=0?'+':'')+p.evPct+'%';
+      const valueBadge=p.value ? '<span class="bs-badge bs-value">VALUE</span>' : '<span class="bs-badge bs-green">GREEN</span>';
+      const idx=matchesData.indexOf(m);
+      return '<button onclick="openMatchDetail('+idx+')" class="bs-radar-row">'+
+        '<div class="bs-rank">'+(i+1)+'</div>'+
+        '<div class="bs-match"><div class="bs-league">'+(m.league_flag||'🏆')+' '+(m.league_name||'')+'</div>'+
+        '<div class="bs-teams">'+m.home+' <span>vs</span> '+m.away+'</div>'+
+        '<div class="bs-market">'+p.icon+' '+p.type+' '+valueBadge+'</div></div>'+
+        '<div class="bs-metric"><b>'+p.probPct+'%</b><small>prob.</small></div>'+
+        '<div class="bs-metric"><b>'+a.confidence+'</b><small>confidence</small></div>'+
+        '<div class="bs-metric"><b>'+edge+'</b><small>edge</small></div>'+
+        '<div class="bs-metric"><b>'+ev+'</b><small>EV</small></div>'+
+      '</button>';
+    }).join('');
+
+    el.innerHTML =
+      '<div class="bs-radar-head"><div><div class="bs-kicker">BETSTATS 2.0</div><h3>🛰️ Radar — najlepsze sygnały</h3><p>Automatycznie odrzuca słabe dane i niską zgodność modelu.</p></div>'+
+      '<div class="bs-radar-stats"><span><b>'+r.analyzed+'</b><small>meczów</small></span><span><b>'+r.green+'</b><small>green</small></span><span><b>'+r.value+'</b><small>value</small></span><span><b>'+r.elite+'</b><small>elite</small></span></div></div>'+
+      (rows || '<div class="bs-empty">Brak wystarczająco mocnych sygnałów. I to jest OK — model nie musi grać każdego meczu.</div>');
+  };
+
+  // Add a Green filter button without removing the existing filters.
+  const greenButton=document.getElementById('green-filter-btn');
+  if(greenButton){
+    greenButton.className = greenOnlyMode
+      ? 'px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-semibold transition flex items-center gap-2'
+      : 'px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-green-500 transition flex items-center gap-2';
+    greenButton.innerHTML = greenOnlyMode ? '🟢 Green ✓' : '🟢 Green';
+  }
+
+  // Extend the current match renderer with a Green-only filter + Radar.
+  const oldRenderMatches=window.renderMatches;
+  window.renderMatches=function(){
+    if(typeof currentLeague!=='undefined' && currentLeague && typeof matchesData!=='undefined'){
+      let f=matchesData.filter(m=>{
+        const live=typeof getLiveInfo==='function'?getLiveInfo(m.home,m.away):null;
+        return !(live && live.is_finished);
+      });
+      if(typeof valueOnlyMode!=='undefined' && valueOnlyMode) f=f.filter(m=>getMatchValueBets(m).length>0);
+      if(typeof favOnlyMode!=='undefined' && favOnlyMode) f=f.filter(m=>isFavorite(m.match_id));
+      if(greenOnlyMode) f=f.filter(m=>getMatchValueBets(m).length>0);
+      const q=(document.getElementById('search-input')?.value||'').trim().toLowerCase();
+      if(q) f=f.filter(m=>(m.home||'').toLowerCase().includes(q)||(m.away||'').toLowerCase().includes(q));
+      const count=document.getElementById('match-count'); if(count) count.innerText='('+f.length+')';
+      if(typeof updateLeagueMatchCount==='function') updateLeagueMatchCount();
+      const c=document.getElementById('matches');
+      if(c){
+        if(!f.length) c.innerHTML='<div class="text-center py-12"><div class="text-6xl mb-4">🟢</div><p class="text-gray-500 font-semibold">Brak meczów spełniających Green Mode</p><p class="text-xs text-gray-400 mt-2">To celowe — filtr ma usuwać słabe sygnały.</p></div>';
+        else c.innerHTML=f.map(m=>renderMatchCard(m,matchesData.indexOf(m))).join('');
+      }
+      renderBetStatsRadar();
+      return;
+    }
+    return oldRenderMatches();
+  };
+
+  // Radar refreshes whenever the app is rendered.
+  const radarHost=document.getElementById('value-bets-section');
+  if(radarHost && !document.getElementById('betstats-radar')){
+    const r=document.createElement('div');
+    r.id='betstats-radar';
+    radarHost.parentNode.insertBefore(r,radarHost.nextSibling);
+  }
+
+  // Give the current cards a small v2 indicator.
+  window.addEventListener('load',()=>setTimeout(renderBetStatsRadar,150));
+})();
+</script>
 </body>
 </html>
