@@ -2694,5 +2694,109 @@ window.addEventListener('load',()=>{createCenter();addNavButton();setTimeout(loa
 })();
 </script>
 
+
+<!-- BETSTATS 3.0.1 MODEL CENTER CLICK/LOCK FIX -->
+<style>
+/* Keep the center modal above the app without creating an invisible click shield. */
+#bs3-model-modal{pointer-events:none}
+#bs3-model-modal.show{pointer-events:auto}
+#bs3-model-modal .bs3-modal-inner{pointer-events:auto}
+#bs3-model-modal .bs3-panel{pointer-events:auto}
+#bs3-model-modal button,#bs3-model-modal input{pointer-events:auto}
+</style>
+<script>
+(function(){
+  'use strict';
+  function wireModelCenter(){
+    const modal=document.getElementById('bs3-model-modal');
+    if(!modal || modal.dataset.bs31Wired==='1') return;
+    modal.dataset.bs31Wired='1';
+
+    // Never let the full-screen backdrop swallow clicks intended for the panel.
+    modal.addEventListener('click', function(e){
+      if(e.target===modal){
+        modal.classList.remove('show');
+      }
+    }, true);
+
+    const inner=modal.querySelector('.bs3-modal-inner');
+    if(inner){
+      inner.addEventListener('click', function(e){ e.stopPropagation(); }, false);
+    }
+
+    // Inline onclick handlers in a large legacy page are fragile. Delegate all
+    // Model Center controls from one listener instead.
+    modal.addEventListener('click', function(e){
+      const btn=e.target.closest('button');
+      if(!btn) return;
+      const txt=(btn.textContent||'').trim();
+
+      try{
+        if(txt.includes('Zamknij')){
+          modal.classList.remove('show');
+          return;
+        }
+        if(txt.includes('GREEN MODE') || txt.includes('GREEN ON')){
+          if(typeof window.bs3ToggleGreen==='function') window.bs3ToggleGreen();
+          return;
+        }
+        if(txt.includes('Eksport')){
+          if(typeof window.bs3ExportLogs==='function') window.bs3ExportLogs();
+          return;
+        }
+        if(txt.includes('Sync')){
+          if(typeof window.bs3SyncCloud==='function') window.bs3SyncCloud();
+          return;
+        }
+        if(txt.includes('Pobierz')){
+          if(typeof window.bs3PullCloud==='function') window.bs3PullCloud();
+          return;
+        }
+        if(txt.includes('Wyczyść')){
+          if(typeof window.bs3ClearLogs==='function') window.bs3ClearLogs();
+          return;
+        }
+      }catch(err){
+        console.error('BetStats Model Center action failed:',err);
+      }
+    }, false);
+
+    // If the browser receives ESC, always close the center.
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){
+        const m=document.getElementById('bs3-model-modal');
+        if(m) m.classList.remove('show');
+      }
+    });
+  }
+
+  // The modal is created lazily, so observe its insertion.
+  const observer=new MutationObserver(function(){
+    wireModelCenter();
+    const modal=document.getElementById('bs3-model-modal');
+    if(modal && modal.classList.contains('show')) document.body.style.pointerEvents='';
+  });
+  observer.observe(document.documentElement,{childList:true,subtree:true});
+
+  // Patch the opener so wiring happens immediately after creation.
+  const timer=setInterval(function(){
+    if(typeof window.openModelCenter==='function'){
+      const original=window.openModelCenter;
+      if(original.__bs31patched) { clearInterval(timer); return; }
+      const wrapped=async function(){
+        const result=await original.apply(this,arguments);
+        wireModelCenter();
+        return result;
+      };
+      wrapped.__bs31patched=true;
+      window.openModelCenter=wrapped;
+      clearInterval(timer);
+    }
+  },50);
+
+  window.addEventListener('load',wireModelCenter);
+})();
+</script>
+
 </body>
 </html>
