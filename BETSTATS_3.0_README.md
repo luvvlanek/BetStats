@@ -1,6 +1,20 @@
-# BetStats 3.0 — Green Radar + Model Center
+# BetStats 3.1 — Green Radar + Model Center + Explainability + Alerts
 
 ## Co jest w tej wersji
+
+### 🔎 Dlaczego ten mecz?
+- proste wyjaśnienie sygnału dla konkretnego meczu
+- argumenty za i przeciw
+- model / kurs uczciwy / edge dla głównych rynków
+- osobne pokazanie jakości danych i zgodności modeli
+
+### 🔔 Alerty
+- wybór ligi i rynku
+- minimalne prawdopodobieństwo modelu i jakość danych
+- lokalne warunki alertów
+- opcjonalne powiadomienia przeglądarki
+- deduplikacja powiadomień, żeby nie spamować
+
 
 ### 🧠 Silnik
 - Poisson / expected goals model
@@ -91,4 +105,4 @@ Po commicie do GitHub Vercel powinien zrobić automatyczny deploy.
 
 ## Wersja
 
-`BetStats 3.0 — ensemble-calibratable`
+`BetStats 3.1 — explain-alerts-calibratable`

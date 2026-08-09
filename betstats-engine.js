@@ -4,7 +4,7 @@
 (function(){
 'use strict';
 
-const VERSION='3.0-ensemble-calibratable';
+const VERSION='3.1-explain-alerts-calibratable';
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const n=(x,d=0)=>{const v=Number(x);return Number.isFinite(v)?v:d};
 const pct=x=>Math.round(clamp(x)*100);

@@ -8,6 +8,9 @@
     <meta name="theme-color" content="#1e3a5f">
     <title>BetStats</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         /* TOAST NOTIFICATIONS */
@@ -21,7 +24,10 @@
         @keyframes toastSlideUp { from { opacity: 0; transform: translateY(30px) scale(0.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
         @keyframes toastSlideDown { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(30px) scale(0.9); } }
 
-        body { background: #efeeea; padding-top: 60px; transition: background 0.3s, color 0.3s; }
+        body { background: #efeeea; padding-top: 60px; transition: background 0.3s, color 0.3s; font-family: 'Manrope', Arial, sans-serif; }
+        h1, h2, h3, h4, .font-black { font-family: 'Space Grotesk', 'Manrope', Arial, sans-serif; letter-spacing: -0.02em; }
+        .top-bar > div:last-child { flex-wrap: wrap; justify-content: flex-end; }
+        @media (max-width: 760px) { body { padding-top: 112px; } .top-bar { align-items: flex-start; } .top-bar > div:last-child { gap: 5px; } .top-bar button { padding: 7px 8px !important; font-size: 10px !important; } }
         body.dark { background: #0f1419; color: #e5e7eb; }
         body.dark .top-bar { background: #000; }
         body.dark .stat-card { background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0)); border-color: rgba(255,255,255,0.1); }
@@ -190,21 +196,21 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
     <div class="top-bar px-4 py-3 flex items-center justify-between">
         <div class="flex items-center gap-3 cursor-pointer" onclick="backToSportSelection()">
             <img src="logo.png" alt="BetStats" class="w-8 h-8 bg-white rounded p-0.5">
-            <span class="font-black text-sm tracking-wider hidden sm:inline">BET STATS</span>
+            <span class="font-black text-sm tracking-wider">BET STATS</span>
         </div>
         <div class="flex items-center gap-2">
-            <button onclick="openFinished()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold"><span class="hidden sm:inline">Wyniki</span></button>
+            <button onclick="openFinished()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold">Wyniki</button>
             <button onclick="goToAbout()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="O projekcie">
-                <span class="hidden sm:inline">O projekcie</span>
+                O projekcie
             </button>
-            <button onclick="goToSocial()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold"><span class="hidden sm:inline">Społeczność</span></button>
+            <button onclick="goToSocial()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold">Społeczność</button>
             <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold">Motyw</button>
             <div id="auth-buttons" class="flex items-center gap-2">
                 <button onclick="openAuthModal('login')" class="btn-outline text-xs px-4 py-2 rounded-lg font-semibold">Zaloguj się</button>
                 <button onclick="openAuthModal('register')" class="btn-solid text-xs px-4 py-2 rounded-lg font-semibold">Zarejestruj się</button>
             </div>
             <div id="user-buttons" class="hidden items-center gap-2">
-                <button onclick="openDashboard()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold"><span class="hidden sm:inline">Panel gracza</span></button>
+                <button onclick="openDashboard()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold">Panel gracza</button>
                 <button onclick="openProfile()" id="profile-icon" aria-label="Profil użytkownika" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white">Profil</button>
             </div>
         </div>
@@ -405,7 +411,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
                 <div class="flex gap-2 flex-wrap">
                     <button onclick="toggleFavOnly()" id="fav-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-yellow-500 transition flex items-center gap-2">⭐ Ulubione</button>
                     <button onclick="toggleValueOnly()" id="value-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-red-500 transition flex items-center gap-2"> Value bety</button><button onclick="toggleGreenOnly()" id="green-filter-btn" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-green-500 transition flex items-center gap-2"> Green</button>
-                    <button onclick="toggleSettings()" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-[#1e3a5f] transition flex items-center gap-2"></button>
+                    <button onclick="toggleSettings()" class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-semibold hover:border-[#1e3a5f] transition flex items-center gap-2">Ustawienia</button>
                 </div>
             </div>
 
@@ -1608,8 +1614,8 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
             const date = new Date(bet.created_at).toLocaleDateString('pl-PL');
             html += '<div class="border border-gray-200 rounded-xl p-3"><div class="flex justify-between items-start mb-2"><div class="flex-1"><div class="text-[10px] text-gray-500">' + date + ' · ' + (bet.match_league || '') + '</div><div class="font-bold text-[#1e3a5f]">' + bet.match_home + ' vs ' + bet.match_away + '</div><div class="text-sm text-gray-700 mt-1">' + bet.bet_type.substring(0, 100) + '</div></div><span class="text-xs font-bold px-2 py-1 rounded ' + sc[bet.status] + '">' + si[bet.status] + ' ' + sl[bet.status] + '</span></div>';
             html += '<div class="flex flex-wrap gap-3 text-xs text-gray-600 mb-2"><span>Stawka: <b>' + bet.stake + ' zł</b></span><span>Kurs: <b>' + bet.odds + '</b></span><span>Potencjał: <b>' + bet.potential_win.toFixed(2) + ' zł</b></span></div>';
-            if (bet.status === 'pending') html += '<div class="flex gap-2 mt-2"><button onclick="updateBetStatus(\'' + bet.id + '\',\'won\')" class="flex-1 bg-green-600 text-white text-xs font-bold py-2 rounded"> Wygrany</button><button onclick="updateBetStatus(\'' + bet.id + '\',\'lost\')" class="flex-1 bg-red-600 text-white text-xs font-bold py-2 rounded"> Przegrany</button><button onclick="deleteBet(\'' + bet.id + '\')" class="bg-gray-200 text-gray-700 text-xs font-bold py-2 px-3 rounded"></button></div>';
-            else html += '<div class="flex gap-2 mt-2"><button onclick="updateBetStatus(\'' + bet.id + '\',\'pending\')" class="flex-1 bg-yellow-500 text-white text-xs font-bold py-2 rounded">↺ Oczekuje</button><button onclick="deleteBet(\'' + bet.id + '\')" class="bg-gray-200 text-gray-700 text-xs font-bold py-2 px-3 rounded"></button></div>';
+            if (bet.status === 'pending') html += '<div class="flex gap-2 mt-2"><button onclick="updateBetStatus(\'' + bet.id + '\',\'won\')" class="flex-1 bg-green-600 text-white text-xs font-bold py-2 rounded">Wygrany</button><button onclick="updateBetStatus(\'' + bet.id + '\',\'lost\')" class="flex-1 bg-red-600 text-white text-xs font-bold py-2 rounded">Przegrany</button><button onclick="deleteBet(\'' + bet.id + '\')" class="bg-gray-200 text-gray-700 text-xs font-bold py-2 px-3 rounded">Usuń</button></div>';
+            else html += '<div class="flex gap-2 mt-2"><button onclick="updateBetStatus(\'' + bet.id + '\',\'pending\')" class="flex-1 bg-yellow-500 text-white text-xs font-bold py-2 rounded">Oczekuje</button><button onclick="deleteBet(\'' + bet.id + '\')" class="bg-gray-200 text-gray-700 text-xs font-bold py-2 px-3 rounded">Usuń</button></div>';
             html += '</div>';
         });
         list.innerHTML = html;
@@ -2708,10 +2714,12 @@ async function preloadFootballData(){
 function createCenter(){
   if(document.getElementById('bs3-model-modal'))return;
   const d=document.createElement('div');d.id='bs3-model-modal';d.className='bs3-modal';
-  d.innerHTML='<div class="bs3-modal-inner">'+
-    '<div class="bs3-panel p-5 md:p-7"><div class="flex justify-between items-start gap-3"><div><div class="text-[10px] font-black tracking-[.2em] text-green-400">BETSTATS 3.0</div><h2 class="text-2xl md:text-3xl font-black text-white mt-1">Centrum modelu</h2><p class="bs3-muted text-xs mt-1">Radar, selekcja, kalibracja i historia predykcji.</p></div><button class="bs3-btn" onclick="document.getElementById(\'bs3-model-modal\').classList.remove(\'show\')">Zamknij</button></div>'+
+  d.innerHTML='<button type="button" id="bs3-close-fixed" class="bs3-btn">Zamknij centrum modelu</button><div class="bs3-modal-inner">'+
+    '<div class="bs3-panel p-5 md:p-7"><div class="flex justify-between items-start gap-3"><div><div class="text-[10px] font-black tracking-[.2em] text-green-400">BETSTATS 3.0</div><h2 class="text-2xl md:text-3xl font-black text-white mt-1">Centrum modelu</h2><p class="bs3-muted text-xs mt-1">Radar, selekcja, kalibracja i historia predykcji.</p></div><button type="button" id="bs3-close-btn" class="bs3-btn">Zamknij</button></div>'+
     '<div id="bs3-center-body" class="mt-5"></div></div></div>';
-  d.addEventListener('click',e=>{if(e.target===d)d.classList.remove('show')});document.body.appendChild(d);
+  const close=()=>d.classList.remove('show');
+  d.querySelector('#bs3-close-btn').addEventListener('click',close); d.querySelector('#bs3-close-fixed').addEventListener('click',close);
+  d.addEventListener('click',e=>{if(e.target===d)close()});document.body.appendChild(d);
 }
 async function openModelCenter(){createCenter();const d=document.getElementById('bs3-model-modal');d.classList.add('show');await preloadFootballData();const ms=allLoaded().filter(m=>m.sport!=='volleyball');window.BetStatsEngine.logMatches(ms);await loadFinishedAndResolve();renderModelCenter()}
 window.openModelCenter=openModelCenter;
@@ -2797,7 +2805,7 @@ window.bs3ClearLogs=function(){if(confirm('Usunąć lokalną historię predykcji
 /* Add Model Center to the top navigation. */
 function addNavButton(){
   if(document.getElementById('bs3-nav-btn'))return;
-  const btn=document.createElement('button');btn.id='bs3-nav-btn';btn.className='btn-outline text-xs px-3 py-2 rounded-lg font-semibold';btn.innerHTML='<span class="hidden sm:inline">Centrum modelu</span>';btn.onclick=openModelCenter;
+  const btn=document.createElement('button');btn.id='bs3-nav-btn';btn.className='btn-outline text-xs px-3 py-2 rounded-lg font-semibold';btn.textContent='Centrum modelu';btn.onclick=openModelCenter;
   const nav=document.querySelector('button[onclick="openDashboard()"]');if(nav&&nav.parentElement)nav.parentElement.insertBefore(btn,nav);
 }
 window.addEventListener('load',()=>{createCenter();addNavButton();setTimeout(loadFinishedAndResolve,1200)});
@@ -2813,6 +2821,7 @@ window.addEventListener('load',()=>{createCenter();addNavButton();setTimeout(loa
 #bs3-model-modal .bs3-modal-inner{pointer-events:auto}
 #bs3-model-modal .bs3-panel{pointer-events:auto}
 #bs3-model-modal button,#bs3-model-modal input{pointer-events:auto}
+#bs3-close-fixed{position:fixed;top:78px;right:18px;z-index:10002;background:#dc2626;border-color:#fecaca;color:#fff}
 </style>
 <script>
 (function(){
@@ -2905,6 +2914,182 @@ window.addEventListener('load',()=>{createCenter();addNavButton();setTimeout(loa
   },50);
 
   window.addEventListener('load',wireModelCenter);
+})();
+</script>
+
+
+<!-- BETSTATS 3.1 — DLACZE TEN MECZ + ALERTY -->
+<style>
+.bs31-explain{margin-top:16px;border:1px solid #dbe3ec;border-radius:18px;background:linear-gradient(145deg,#f8fafc,#fff);overflow:hidden}
+.bs31-explain-head{padding:16px 18px;background:linear-gradient(135deg,#0f172a,#1e3a5f);color:#fff}
+.bs31-explain-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:14px}
+.bs31-stat{border:1px solid #e5e7eb;border-radius:12px;padding:12px;background:#fff}
+.bs31-stat small{display:block;color:#64748b;font-size:9px;text-transform:uppercase;font-weight:800;letter-spacing:.08em}
+.bs31-stat b{display:block;font-size:20px;margin-top:4px;color:#0f172a}
+.bs31-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 14px 14px}
+.bs31-box{border:1px solid #e5e7eb;border-radius:12px;padding:13px;background:#fff}
+.bs31-box h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:900;color:#1e3a5f;margin-bottom:8px}
+.bs31-list{display:flex;flex-wrap:wrap;gap:6px}
+.bs31-pill{font-size:10px;font-weight:800;padding:5px 8px;border-radius:999px;background:#f1f5f9;color:#334155}
+.bs31-pill.good{background:#dcfce7;color:#166534}.bs31-pill.warn{background:#fef3c7;color:#92400e}.bs31-pill.bad{background:#fee2e2;color:#991b1b}
+.bs31-market-row{display:grid;grid-template-columns:1fr 70px 70px 70px;gap:8px;align-items:center;border-top:1px solid #eef2f7;padding:9px 0;font-size:11px}
+.bs31-market-row:first-child{border-top:0}.bs31-market-row b{text-align:right}.bs31-disclaimer{font-size:10px;color:#64748b;padding:0 14px 14px}
+.bs31-alert-modal{position:fixed;inset:0;background:rgba(2,6,12,.7);backdrop-filter:blur(6px);z-index:11000;display:none;align-items:center;justify-content:center;padding:16px}
+.bs31-alert-modal.show{display:flex}.bs31-alert-panel{width:min(620px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:20px;box-shadow:0 25px 80px rgba(0,0,0,.25)}
+.bs31-alert-head{padding:18px 20px;background:linear-gradient(135deg,#0f172a,#1e3a5f);color:#fff}
+.bs31-alert-body{padding:18px}.bs31-alert-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bs31-alert-body label{font-size:11px;font-weight:800;color:#475569}.bs31-alert-body select,.bs31-alert-body input{width:100%;margin-top:5px;border:1px solid #cbd5e1;border-radius:10px;padding:10px;background:#fff}
+.bs31-alert-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.bs31-alert-btn{border:1px solid #cbd5e1;background:#fff;border-radius:10px;padding:9px 12px;font-size:11px;font-weight:900;cursor:pointer}.bs31-alert-btn.primary{background:#1e3a5f;color:#fff;border-color:#1e3a5f}.bs31-alert-btn.green{background:#15803d;color:#fff;border-color:#15803d}
+.bs31-alert-list{margin-top:14px;border-top:1px solid #e2e8f0}.bs31-alert-item{padding:10px 0;border-bottom:1px solid #e2e8f0;font-size:11px}
+.bs31-alert-status{font-size:10px;font-weight:800;color:#64748b;margin-top:8px}
+@media(max-width:800px){.bs31-explain-grid{grid-template-columns:repeat(2,1fr)}.bs31-cols,.bs31-alert-grid{grid-template-columns:1fr}.bs31-market-row{grid-template-columns:1fr 55px 55px 55px}}
+</style>
+<script>
+(function(){
+'use strict';
+const ALERT_KEY='betstats_alert_rules_v1', ALERT_SEEN='betstats_alert_seen_v1';
+const esc31=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function alertRules(){try{return Object.assign({enabled:false,league:'ALL',market:'ALL',minProbability:65,minDataQuality:75,notify:true},JSON.parse(localStorage.getItem(ALERT_KEY)||'{}'))}catch(e){return {enabled:false,league:'ALL',market:'ALL',minProbability:65,minDataQuality:75,notify:true}}}
+function saveAlertRules(r){localStorage.setItem(ALERT_KEY,JSON.stringify(r));return r}
+function seenAlerts(){try{return JSON.parse(localStorage.getItem(ALERT_SEEN)||'[]')}catch(e){return[]}}
+function saveSeen(a){localStorage.setItem(ALERT_SEEN,JSON.stringify(a.slice(-200)));}
+
+function statsText(v,suffix=''){return Number.isFinite(Number(v))?Number(v).toFixed(1)+suffix:'—'}
+function formText(f){return Array.isArray(f)&&f.length?f.slice(-5).map(x=>String(x).toUpperCase()).join(' · '):'brak danych'}
+function whyForMatch(m){
+  if(!window.BetStatsEngine||!m)return null;
+  const a=window.BetStatsEngine.model(m); if(!a)return null;
+  const h=m.home_stats||{}, aw=m.away_stats||{};
+  const top=[...a.markets].sort((x,y)=>y.score-x.score)[0];
+  const positives=[], negatives=[];
+  if(Number(h.avg_xg)>0&&Number(aw.avg_xg)>0) positives.push('xG: '+statsText(h.avg_xg)+' / '+statsText(aw.avg_xg));
+  if(Array.isArray(h.form)&&Array.isArray(aw.form)) positives.push('Forma: '+formText(h.form)+' vs '+formText(aw.form));
+  if(Number(h.avg_goals_scored)>0&&Number(aw.avg_goals_scored)>0) positives.push('Gole strzelane: '+statsText(h.avg_goals_scored)+' / '+statsText(aw.avg_goals_scored));
+  if(Number(h.avg_shots_on_target)>0&&Number(aw.avg_shots_on_target)>0) positives.push('SoT: '+statsText(h.avg_shots_on_target)+' / '+statsText(aw.avg_shots_on_target));
+  if(a.dataQuality>=75) positives.push('jakość danych '+a.dataQuality+'/100');
+  if(a.modelAgreement>=70) positives.push('zgodność modeli '+a.modelAgreement+'/100');
+  if(a.riskFlags.includes('LOW_DATA')) negatives.push('za mało pełnych danych');
+  if(a.riskFlags.includes('MODEL_DISAGREEMENT')) negatives.push('modele nie są zgodne');
+  if(a.riskFlags.includes('SMALL_SAMPLE')) negatives.push('mała próba');
+  if(a.riskFlags.includes('MARKET_AGAINST_MODEL')) negatives.push('kurs jest przeciw modelowi');
+  if(top&&top.edgePct!==null&&top.edgePct<4) negatives.push('brak wyraźnego edge');
+  return {a,h,aw,top,positives,negatives};
+}
+window.bs31RenderWhy=function(m){
+  const d=whyForMatch(m); if(!d)return '';
+  const {a,h,aw,top,positives,negatives}=d;
+  const markets=a.markets.map(x=>'<div class="bs31-market-row"><div><b>'+esc31(x.type)+'</b><div style="color:#64748b;font-size:9px">'+esc31(x.status)+(x.value?' · VALUE':'')+'</div></div><b>'+x.probPct+'%</b><b>'+x.fairOdds+'</b><b>'+(x.edgePct===null?'—':(x.edgePct>0?'+':'')+x.edgePct+' pp')+'</b></div>').join('');
+  return '<section class="bs31-explain">'+
+    '<div class="bs31-explain-head"><div style="font-size:9px;letter-spacing:.15em;font-weight:900;color:#86efac">BETSTATS 3.1 · EXPLAINABILITY</div><div style="font-size:20px;font-weight:900;margin-top:3px">Dlaczego ten mecz?</div><div style="font-size:11px;opacity:.78;margin-top:3px">'+esc31(m.home)+' kontra '+esc31(m.away)+'</div></div>'+
+    '<div class="bs31-explain-grid">'+
+      '<div class="bs31-stat"><small>Najmocniejszy rynek</small><b>'+(top?esc31(top.type):'—')+'</b></div>'+
+      '<div class="bs31-stat"><small>Szansa modelu</small><b>'+(top?top.probPct+'%':'—')+'</b></div>'+
+      '<div class="bs31-stat"><small>Kurs uczciwy</small><b>'+(top?top.fairOdds:'—')+'</b></div>'+
+      '<div class="bs31-stat"><small>Jakość / zgodność</small><b>'+a.dataQuality+' / '+a.modelAgreement+'</b></div>'+
+    '</div>'+
+    '<div class="bs31-cols">'+
+      '<div class="bs31-box"><h4>Co przemawia za</h4><div class="bs31-list">'+(positives.length?positives.map(x=>'<span class="bs31-pill good">'+esc31(x)+'</span>').join(''):'<span class="bs31-pill">Brak mocnych argumentów</span>')+'</div></div>'+
+      '<div class="bs31-box"><h4>Co może zepsuć sygnał</h4><div class="bs31-list">'+(negatives.length?negatives.map(x=>'<span class="bs31-pill warn">'+esc31(x)+'</span>').join(''):'<span class="bs31-pill good">Brak głównej czerwonej flagi</span>')+'</div></div>'+
+    '</div>'+
+    '<div class="bs31-box" style="margin:0 14px 14px"><h4>Rynki · model / fair / edge</h4><div class="bs31-market-row" style="border-top:0;padding-top:0;color:#64748b"><div>Rynek</div><b>Model</b><b>Fair</b><b>Edge</b></div>'+markets+'</div>'+
+    '<div class="bs31-disclaimer">To jest wyjaśnienie estymacji modelu, nie gwarancja wyniku. „Pewność” opisuje jakość danych i zgodność sygnałów, a nie prawdopodobieństwo wygranej.</div>'+
+  '</section>';
+};
+
+// Inject into the existing match-detail renderer without replacing the legacy UI.
+function patchMatchDetail(){
+  if(typeof window.openMatchDetail!=='function'||window.openMatchDetail.__bs31patched)return;
+  const original=window.openMatchDetail;
+  const wrapped=function(){
+    const r=original.apply(this,arguments);
+    try{
+      const i=Number(arguments[0]); const m=(typeof matchesData!=='undefined'&&matchesData[i])?matchesData[i]:null;
+      if(m){
+        const host=document.getElementById('md-content');
+        if(host && !host.querySelector('.bs31-explain')) host.insertAdjacentHTML('beforeend',window.bs31RenderWhy(m));
+      }
+    }catch(e){console.warn('BetStats explainability:',e)}
+    return r;
+  };
+  wrapped.__bs31patched=true; window.openMatchDetail=wrapped;
+}
+const patchTimer=setInterval(()=>{if(typeof window.openMatchDetail==='function'){patchMatchDetail();clearInterval(patchTimer)}},100);
+
+// Alerts UI
+function createAlertModal(){
+  if(document.getElementById('bs31-alert-modal'))return;
+  const d=document.createElement('div');d.id='bs31-alert-modal';d.className='bs31-alert-modal';
+  d.innerHTML='<div class="bs31-alert-panel">'+
+    '<div class="bs31-alert-head"><div style="font-size:9px;letter-spacing:.15em;font-weight:900;color:#86efac">BETSTATS 3.1</div><div style="font-size:22px;font-weight:900">Alerty</div><div style="font-size:11px;opacity:.8">Powiadom, gdy mecz spełni Twoje warunki jakości.</div></div>'+
+    '<div class="bs31-alert-body">'+
+      '<div class="bs31-alert-grid"><label>Liga<select id="bs31-alert-league"></select></label><label>Rynek<select id="bs31-alert-market"><option value="ALL">Dowolny rynek</option><option value="btts">BTTS</option><option value="o15">Over 1.5</option><option value="o25">Over 2.5</option><option value="o35">Over 3.5</option></select></label>'+
+      '<label>Min. szansa modelu (%)<input id="bs31-alert-prob" type="number" min="50" max="95" step="1"></label><label>Min. jakość danych<input id="bs31-alert-dq" type="number" min="50" max="100" step="1"></label></div>'+
+      '<div class="bs31-alert-actions"><button class="bs31-alert-btn primary" id="bs31-alert-save">Zapisz warunki</button><button class="bs31-alert-btn green" id="bs31-alert-perm">Włącz powiadomienia</button><button class="bs31-alert-btn" id="bs31-alert-test">Sprawdź teraz</button><button class="bs31-alert-btn" id="bs31-alert-close">Zamknij</button></div>'+
+      '<div class="bs31-alert-status" id="bs31-alert-status"></div><div class="bs31-alert-list" id="bs31-alert-list"></div>'+
+    '</div></div>';
+  d.addEventListener('click',e=>{if(e.target===d)d.classList.remove('show')});
+  document.body.appendChild(d);
+  document.getElementById('bs31-alert-close').onclick=()=>d.classList.remove('show');
+  document.getElementById('bs31-alert-save').onclick=saveAlertFromUI;
+  document.getElementById('bs31-alert-perm').onclick=async()=>{if('Notification' in window){try{const p=await Notification.requestPermission();document.getElementById('bs31-alert-status').textContent='Status powiadomień: '+p}catch(e){}}};
+  document.getElementById('bs31-alert-test').onclick=()=>evaluateAlerts(true);
+}
+function all31Matches(){let a=[];if(typeof allMatchesData!=='undefined')Object.values(allMatchesData||{}).forEach(v=>a=a.concat(v||[]));if(typeof matchesData!=='undefined')a=a.concat(matchesData||[]);const seen=new Set();return a.filter(m=>{const k=m.match_id||m.home+'|'+m.away+'|'+m.datetime;if(seen.has(k))return false;seen.add(k);return true})}
+function alertLeagues(){
+  const set=new Set(['ALL']); const ms=all31Matches();
+  ms.forEach(m=>{if(m.league_name)set.add(m.league_name)});
+  return [...set];
+}
+function fillAlertUI(){
+  createAlertModal(); const r=alertRules(),sel=document.getElementById('bs31-alert-league');
+  sel.innerHTML=alertLeagues().map(x=>'<option value="'+esc31(x)+'">'+esc31(x==='ALL'?'Wszystkie ligi':x)+'</option>').join('');
+  sel.value=r.league; document.getElementById('bs31-alert-market').value=r.market;
+  document.getElementById('bs31-alert-prob').value=r.minProbability;document.getElementById('bs31-alert-dq').value=r.minDataQuality;
+  document.getElementById('bs31-alert-status').textContent=r.enabled?'Alert aktywny.':'Alert wyłączony — zapisz warunki, aby go aktywować.';
+}
+function saveAlertFromUI(){
+  const r=alertRules();r.league=document.getElementById('bs31-alert-league').value;r.market=document.getElementById('bs31-alert-market').value;
+  r.minProbability=Math.max(50,Math.min(95,Number(document.getElementById('bs31-alert-prob').value)||65));
+  r.minDataQuality=Math.max(50,Math.min(100,Number(document.getElementById('bs31-alert-dq').value)||75));r.enabled=true;saveAlertRules(r);
+  document.getElementById('bs31-alert-status').textContent='Alert aktywny. Warunki zapisane lokalnie.';
+  evaluateAlerts(true);
+}
+function evaluateAlerts(forceUI){
+  const r=alertRules(); if(!r.enabled)return [];
+  const ms=(typeof allLoaded==='function'?allLoaded():[]),hits=[];
+  ms.forEach(m=>{
+    if(m.sport==='volleyball')return;
+    if(r.league!=='ALL'&&m.league_name!==r.league)return;
+    const a=window.BetStatsEngine&&window.BetStatsEngine.model(m); if(!a)return;
+    a.markets.forEach(x=>{
+      if(r.market!=='ALL'&&x.key!==r.market)return;
+      if(x.probPct<r.minProbability||x.dataQuality<r.minDataQuality)return;
+      if(x.status==='SKIP')return;
+      hits.push({m,x,a,key:[m.match_id,m.datetime,x.key].join('|')});
+    });
+  });
+  const seen=seenAlerts(),newHits=hits.filter(h=>!seen.includes(h.key));
+  if(newHits.length){
+    saveSeen([...seen,...newHits.map(h=>h.key)]);
+    if(r.notify&&'Notification' in window&&Notification.permission==='granted'){
+      newHits.slice(0,3).forEach(h=>new Notification('BetStats · spełnione warunki',{body:h.m.home+' — '+h.m.away+' · '+h.x.type+' · '+h.x.probPct+'% modelu'}));
+    }
+  }
+  if(forceUI){
+    createAlertModal();
+    const list=document.getElementById('bs31-alert-list');
+    list.innerHTML=hits.slice(0,10).map(h=>'<div class="bs31-alert-item"><b>'+esc31(h.m.home)+' — '+esc31(h.m.away)+'</b><br><span>'+esc31(h.x.type)+' · model '+h.x.probPct+'% · dane '+h.x.dataQuality+'/100 · '+esc31(h.x.status)+'</span></div>').join('')||'<div class="bs31-alert-item" style="color:#64748b">Brak meczów spełniających warunki.</div>';
+    document.getElementById('bs31-alert-status').textContent=(newHits.length?'Nowe alerty: '+newHits.length+' · ':'')+'Spełnionych warunków: '+hits.length+'.';
+  }
+  return hits;
+}
+window.openBetStatsAlerts=function(){fillAlertUI();document.getElementById('bs31-alert-modal').classList.add('show');evaluateAlerts(true)};
+function addAlertButton(){
+  if(document.getElementById('bs31-alert-nav'))return;
+  const btn=document.createElement('button');btn.id='bs31-alert-nav';btn.className='btn-outline text-xs px-3 py-2 rounded-lg font-semibold';btn.textContent='Alerty';btn.onclick=window.openBetStatsAlerts;
+  const nav=document.querySelector('button[onclick="openDashboard()"]');if(nav&&nav.parentElement)nav.parentElement.insertBefore(btn,nav);
+}
+window.addEventListener('load',()=>{setTimeout(()=>{addAlertButton();patchMatchDetail();},200);setInterval(()=>evaluateAlerts(false),120000);});
 })();
 </script>
 

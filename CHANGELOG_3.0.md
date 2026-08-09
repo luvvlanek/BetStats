@@ -1,3 +1,9 @@
+## 3.1 — Explainability + Alerts
+- Dodano sekcję „Dlaczego ten mecz?” w szczegółach spotkania.
+- Dodano alerty filtrowane po lidze, rynku, minimalnym prawdopodobieństwie i jakości danych.
+- Dodano opcjonalne powiadomienia przeglądarki z deduplikacją.
+- Podniesiono wersję silnika do `3.1-explain-alerts-calibratable`.
+
 # BetStats 3.0
 
 - Nowy ensemble goal model.
