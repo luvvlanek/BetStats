@@ -7,7 +7,7 @@ create table if not exists public.community_posts (
   category text not null check (category in ('Analiza', 'Typ społeczności', 'Dyskusja')),
   title text not null check (char_length(title) between 4 and 90),
   body text not null check (char_length(body) between 20 and 700),
-  moderation_status text not null default 'pending' check (moderation_status in ('pending', 'approved', 'rejected')),
+  moderation_status text not null default 'approved' check (moderation_status in ('pending', 'approved', 'rejected')),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
@@ -17,22 +17,26 @@ create index if not exists community_posts_public_feed_idx
 
 alter table public.community_posts enable row level security;
 
+drop policy if exists "Publiczne wpisy są widoczne" on public.community_posts;
 create policy "Publiczne wpisy są widoczne"
   on public.community_posts for select
   using (moderation_status = 'approved' or auth.uid() = author_id);
 
+drop policy if exists "Zalogowany użytkownik dodaje własny wpis" on public.community_posts;
 create policy "Zalogowany użytkownik dodaje własny wpis"
   on public.community_posts for insert to authenticated
-  with check (auth.uid() = author_id and moderation_status = 'pending');
+  with check (auth.uid() = author_id and moderation_status = 'approved');
 
-create policy "Autor może edytować oczekujący wpis"
+drop policy if exists "Autor może edytować oczekujący wpis" on public.community_posts;
+create policy "Autor może edytować własny wpis"
   on public.community_posts for update to authenticated
-  using (auth.uid() = author_id and moderation_status = 'pending')
-  with check (auth.uid() = author_id and moderation_status = 'pending');
+  using (auth.uid() = author_id)
+  with check (auth.uid() = author_id);
 
-create policy "Autor może usunąć własny oczekujący wpis"
+drop policy if exists "Autor może usunąć własny oczekujący wpis" on public.community_posts;
+create policy "Autor może usunąć własny wpis"
   on public.community_posts for delete to authenticated
-  using (auth.uid() = author_id and moderation_status = 'pending');
+  using (auth.uid() = author_id and moderation_status = 'approved');
 
 -- Moderacja powinna odbywać się wyłącznie z zaufanego panelu backendowego
 -- z użyciem klucza service_role, nigdy bezpośrednio w przeglądarce.
@@ -101,3 +105,17 @@ drop policy if exists "Autor usuwa własny komentarz" on public.community_commen
 create policy "Autor usuwa własny komentarz"
   on public.community_comments for delete to authenticated
   using (auth.uid() = author_id);
+
+-- Beta: nowy feed jest publikowany od razu po zapisie.
+alter table public.community_posts alter column moderation_status set default 'approved';
+
+-- Bets must remain private to their owner.
+alter table if exists public.bets enable row level security;
+drop policy if exists "Users can read own bets" on public.bets;
+create policy "Users can read own bets" on public.bets for select to authenticated using (auth.uid() = user_id);
+drop policy if exists "Users can insert own bets" on public.bets;
+create policy "Users can insert own bets" on public.bets for insert to authenticated with check (auth.uid() = user_id);
+drop policy if exists "Users can update own bets" on public.bets;
+create policy "Users can update own bets" on public.bets for update to authenticated using (auth.uid() = user_id) with check (auth.uid() = user_id);
+drop policy if exists "Users can delete own bets" on public.bets;
+create policy "Users can delete own bets" on public.bets for delete to authenticated using (auth.uid() = user_id);

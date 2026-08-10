@@ -1,34 +1,35 @@
-# BetStats 1.0 Polska — Beta
+# BetStats 1.0 BETA
 
-BetStats to aplikacja do analizy meczów piłkarskich i siatkarskich. Łączy statystyki drużyn z modelem prawdopodobieństwa, pokazuje jakość danych oraz pozwala obserwować, jak predykcje wypadają po rozliczeniu.
+BetStats to platforma do analizy meczów piłkarskich oparta na statystykach i modelu prawdopodobieństwa.
 
-## Najważniejsze moduły
+## Beta
 
-- **Centrum modelu** — radar, progi selekcji, kalibracja i historia predykcji.
-- **Społeczność** — lokalna tablica analiz z kategoriami: analiza, typ społeczności i dyskusja.
-- **O projekcie** — opis źródeł danych, metodologii i zasad odpowiedzialnej gry.
+- Dostęp tylko po zalogowaniu.
+- Rejestracja nowych kont jest zamknięta.
+- Włączona jest piłka nożna i wybrane polskie rozgrywki.
+- Siatkówka i europejskie rozgrywki są tymczasowo niedostępne.
+- Radar można ręcznie pokazać lub ukryć.
+- Społeczność działa przez Supabase, a nie lokalnie.
+- Panel gracza pokazuje dane własnego konta.
+- Osobne UI Model Center zostało usunięte; silnik analityczny pozostaje aktywny.
+
+## Główne moduły
+
+- analiza meczów
+- prawdopodobieństwa modelu
+- Value / Green signals
+- Radar
+- zakończone mecze i statystyki
+- panel gracza
+- społeczność: posty, reakcje i komentarze
+- O projekcie
 
 ## Uruchomienie
 
-Projekt jest statyczny. Opublikuj zawartość folderu na hostingu obsługującym pliki statyczne albo uruchom lokalny serwer HTTP w tym folderze. Do działania części konta i synchronizacji potrzebna jest konfiguracja Supabase.
+Projekt jest statyczny. Do funkcji konta, panelu gracza i społeczności potrzebny jest Supabase.
 
-## O modelu
+Szczegółowa instrukcja administracyjna znajduje się w `README_ADMIN.md`.
 
-Model traktuje wynik jako niepewną estymację. Wskaźnik pewności nie jest szansą wygranej — opisuje jakość dostępnych danych i zgodność użytych sygnałów. Rzetelność należy oceniać na dużej liczbie predykcji zapisanych przed meczem.
+## Ważne
 
-## Następny etap dla wersji ogólnopolskiej
-
-1. Dodać tabelę wpisów społeczności, komentarze i moderację po stronie Supabase.
-2. Wprowadzić profile analityków z transparentną historią rozliczeń.
-3. Rozdzielić dane wejściowe, model i interfejs do mniejszych modułów oraz objąć je testami.
-4. Zbudować niezależny proces backtestów i publikować metodologię zmian modelu.
-
-
-## Tryb Beta 1.0
-
-- Rejestracja nowych kont jest tymczasowo wyłączona.
-- Dostęp do aplikacji wymaga zalogowania.
-- Rozgrywki europejskie (Liga Mistrzów, Liga Europy, Liga Konferencji) są oznaczone jako „Wkrótce”.
-- Moduł siatkarski jest oznaczony jako „Wkrótce”.
-- Panel gracza pobiera wyłącznie rekordy należące do zalogowanego użytkownika.
-- Społeczność korzysta z Supabase; reakcje i komentarze wymagają tabel z `supabase_community.sql`.
+Prawdopodobieństwa są estymacjami, nie gwarancją wyniku. BetStats jest narzędziem analitycznym.

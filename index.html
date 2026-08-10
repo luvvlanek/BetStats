@@ -158,7 +158,22 @@
             opacity: 1;
             transform: translateY(0);
         }
-    </style>
+            /* BETA UX / AUTH GATE / MOTION */
+        #auth-gate.flex { display:flex !important; }
+        body.auth-locked { overflow:hidden; }
+        body.auth-locked > *:not(#auth-gate):not(#auth-modal) { visibility:hidden !important; pointer-events:none !important; }
+        body.auth-locked #auth-gate { visibility:visible !important; pointer-events:auto !important; }
+        .btn-outline,.btn-solid,.sport-card,.league-card,button { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background-color .18s ease, opacity .18s ease; }
+        .btn-outline:hover,.btn-solid:hover { transform:translateY(-1px); box-shadow:0 8px 22px rgba(15,23,42,.12); }
+        .sport-card:not(.coming-soon):hover,.league-card:not(.coming-soon):hover { transform:translateY(-5px) scale(1.01); box-shadow:0 18px 40px rgba(15,23,42,.16); }
+        .league-card { animation: leagueEnter .45s ease both; }
+        @keyframes leagueEnter { from { opacity:0; transform:translateY(14px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
+        .page-enter { animation: pageEnter .3s ease both; }
+        @keyframes pageEnter { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+        .radar-collapsible { overflow:hidden; max-height:0; opacity:0; transform:translateY(-5px); transition:max-height .45s ease, opacity .25s ease, transform .3s ease; }
+        .radar-collapsible.open { max-height:2400px; opacity:1; transform:translateY(0); }
+        #radar-toggle-btn { width:100%; margin-bottom:10px; }
+</style>
 
 <style>
 /* BetStats BETA  — Radar */
@@ -207,12 +222,23 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
             <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold">Motyw</button>
             <div id="auth-buttons" class="flex items-center gap-2">
                 <button onclick="openAuthModal('login')" class="btn-outline text-xs px-4 py-2 rounded-lg font-semibold">Zaloguj się</button>
-                <button onclick="openAuthModal('register')" class="btn-solid text-xs px-4 py-2 rounded-lg font-semibold">Zarejestruj się</button>
+                
             </div>
             <div id="user-buttons" class="hidden items-center gap-2">
                 <button onclick="openDashboard()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold">Panel gracza</button>
                 <button onclick="openProfile()" id="profile-icon" aria-label="Profil użytkownika" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center font-bold text-white">Profil</button>
             </div>
+        </div>
+    </div>
+
+    <div id="auth-gate" class="fixed inset-0 z-[10000] hidden items-center justify-center bg-[#0b1220] px-6">
+        <div class="w-full max-w-md text-center text-white">
+            <img src="logo.png" alt="BetStats" class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-white p-2 shadow-2xl">
+            <div class="text-xs font-black tracking-[.25em] text-red-400 uppercase">BETSTATS BETA</div>
+            <h1 class="text-3xl md:text-4xl font-black mt-2">Dostęp tylko dla zalogowanych</h1>
+            <p class="text-slate-300 mt-3 mb-7">BetStats 1.0 BETA jest obecnie dostępny wyłącznie dla zaproszonych użytkowników.</p>
+            <button onclick="openAuthModal('login')" class="w-full bg-red-600 hover:bg-red-500 text-white font-black py-3.5 rounded-xl transition transform hover:-translate-y-0.5">Zaloguj się</button>
+            <p class="text-xs text-slate-500 mt-5">Rejestracja nowych kont jest tymczasowo zamknięta.</p>
         </div>
     </div>
 
@@ -234,21 +260,21 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
                     <div class="sport-card rounded-3xl p-8 text-white" style="background: linear-gradient(135deg, #0F5DE3 0%, #1e3a5f 100%); animation-delay: 0.1s;" onclick="selectSport('football')">
                         <div class="text-sm font-black tracking-[.2em] mb-4">PIŁKA</div>
                         <h3 class="text-3xl font-black mb-2">Piłka nożna</h3>
-                        <p class="text-white/80 text-sm mb-4">4 ligi + rozgrywki europejskie</p>
+                        <p class="text-white/80 text-sm mb-4">Polskie rozgrywki dostępne w becie</p>
                         <div class="flex flex-wrap gap-2 justify-center text-xs">
                             <span class="bg-white/20 px-3 py-1 rounded-full">Ekstraklasa</span>
-                            <span class="bg-white/20 px-3 py-1 rounded-full">La Liga</span>
-                            <span class="bg-white/20 px-3 py-1 rounded-full">Bundesliga</span>
-                            <span class="bg-white/20 px-3 py-1 rounded-full">+3 więcej</span>
+                            <span class="bg-white/20 px-3 py-1 rounded-full">Betclic 1. Liga</span>
+                            <span class="bg-yellow-300/90 text-black px-3 py-1 rounded-full">Pozostałe: WKRÓTCE</span>
                         </div>
                         <div class="mt-6 text-xl font-bold">Przejdź do sportu →</div>
                     </div>
 
                     <!-- SIATKÓWKA -->
-                    <div class="sport-card rounded-3xl p-8 text-white" style="background: linear-gradient(135deg, #F58220 0%, #D4AF37 100%); animation-delay: 0.2s;" onclick="selectSport('volleyball')">
+                    <div class="sport-card coming-soon rounded-3xl p-8 text-white opacity-70 cursor-not-allowed relative" style="background: linear-gradient(135deg, #64748b 0%, #334155 100%); animation-delay: 0.2s;">
+                        <span class="absolute top-4 right-4 bg-yellow-400 text-black text-[10px] font-black px-3 py-1 rounded-full">WKRÓTCE</span>
                         <div class="text-sm font-black tracking-[.2em] mb-4">SIATKÓWKA</div>
                         <h3 class="text-3xl font-black mb-2">Siatkówka</h3>
-                        <p class="text-white/80 text-sm mb-4">Polskie ligi + Mistrzostwa Europy</p>
+                        <p class="text-white/80 text-sm mb-4">Tymczasowo wyłączona w becie</p>
                         <div class="flex flex-wrap gap-2 justify-center text-xs">
                             <span class="bg-white/20 px-3 py-1 rounded-full">Tauron Liga</span>
                             <span class="bg-white/20 px-3 py-1 rounded-full">1. Liga</span>
@@ -494,9 +520,8 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
                 <input type="password" id="auth-password" placeholder="Hasło (min 6 znaków)" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-[#1e3a5f] outline-none">
                 <div id="auth-error" class="hidden text-red-600 text-sm bg-red-50 p-2 rounded"></div>
                 <button id="auth-submit" onclick="doAuth()" class="w-full bg-[#1e3a5f] hover:bg-red-600 text-white font-bold py-3 rounded-lg transition">Zaloguj</button>
-                <div class="text-center text-sm">
-                    <span id="auth-toggle-text">Nie masz konta?</span>
-                    <button onclick="toggleAuthMode()" class="text-red-600 font-bold ml-2 hover:underline" id="auth-toggle-btn">Zarejestruj się</button>
+                <div class="text-center text-xs text-gray-500 bg-gray-50 rounded-lg p-3">
+                    Rejestracja jest obecnie zamknięta. Dostęp do bety otrzymują zaproszeni użytkownicy.
                 </div>
             </div>
         </div>
@@ -987,23 +1012,23 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
                 { id: 'laliga', name: 'La Liga', flag: 'ES', country: 'Hiszpania',
                   colors: { primary: '#EE1C24', secondary: '#D4AF37', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #EE1C24 0%, #D4AF37 100%)',
-                  dataFile: 'data_int', available: true },
+                  dataFile: 'data_int', available: false },
                 { id: 'bundesliga', name: 'Bundesliga', flag: 'DE', country: 'Niemcy',
                   colors: { primary: '#000000', secondary: '#D20515', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #000000 0%, #D20515 100%)',
-                  dataFile: 'data_int', available: true },
+                  dataFile: 'data_int', available: false },
                 { id: 'ucl', name: 'Liga Mistrzów', flag: 'UEFA', country: 'UEFA',
                   colors: { primary: '#001F5B', secondary: '#C0C0C0', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #001F5B 0%, #4A5CDB 100%)',
-                  dataFile: 'data_world', available: true },
+                  dataFile: 'data_world', available: false },
                 { id: 'uel', name: 'Liga Europy', flag: 'UEFA', country: 'UEFA',
                   colors: { primary: '#FF6600', secondary: '#000000', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #FF6600 0%, #000000 100%)',
-                  dataFile: 'data_world', available: true },
+                  dataFile: 'data_world', available: false },
                 { id: 'uecl', name: 'Liga Konferencji', flag: 'UEFA', country: 'UEFA',
                   colors: { primary: '#00A651', secondary: '#1B1B1B', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #00A651 0%, #1B1B1B 100%)',
-                  dataFile: 'data_world', available: true },
+                  dataFile: 'data_world', available: false },
             ]
         },
         volleyball: {
@@ -1014,15 +1039,15 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
                                 { id: 'tauron-liga-m', name: 'Tauron Liga', flag: 'PL', country: 'Polska (Mężczyźni)',
                   colors: { primary: '#003D82', secondary: '#FFD100', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #003D82 0%, #FFD100 100%)',
-                  dataFile: 'data_volley_pl', available: true },
+                  dataFile: 'data_volley_pl', available: false },
                 { id: 'tauron-1-liga-m', name: 'Tauron 1. Liga', flag: 'PL', country: 'Polska (Mężczyźni)',
                   colors: { primary: '#F58220', secondary: '#003366', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #F58220 0%, #003366 100%)',
-                  dataFile: 'data_volley_pl', available: true },
+                  dataFile: 'data_volley_pl', available: false },
                 { id: 'tauron-liga-k', name: 'Tauron Liga Kobiet', flag: 'PL', country: 'Polska (Kobiety)',
                   colors: { primary: '#E91E63', secondary: '#FFFFFF', accent: '#7B1FA2' },
                   gradient: 'linear-gradient(135deg, #E91E63 0%, #7B1FA2 100%)',
-                  dataFile: 'data_volley_pl', available: true },
+                  dataFile: 'data_volley_pl', available: false },
                 { id: 'me-volley', name: 'Mistrzostwa Europy', flag: 'CEV', country: 'CEV',
                   colors: { primary: '#D4AF37', secondary: '#003366', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #D4AF37 0%, #003366 100%)',
@@ -1116,6 +1141,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         document.getElementById('social-page')?.classList.add('hidden');
         const sport = SPORTS[sportId];
         if (!sport) return;
+        if (sportId === 'volleyball') { showToast('Siatkówka jest tymczasowo wyłączona w becie.', 'info'); return; }
         currentSport = sport;
         currentLeague = null;
         resetTheme();
@@ -1123,6 +1149,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         document.getElementById('sport-selection').classList.add('hidden');
         document.getElementById('app').classList.add('hidden');
         document.getElementById('league-selection').classList.remove('hidden');
+        document.getElementById('league-selection').classList.add('page-enter');
 
         document.getElementById('breadcrumb-sport').textContent = sport.icon + ' ' + sport.name;
         document.getElementById('sport-selection-icon').textContent = sport.icon;
@@ -1176,7 +1203,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
 
         document.getElementById('league-selection').classList.add('hidden');
         document.getElementById('app').classList.remove('hidden');
-        document.getElementById('app').classList.add('animate-fade-in');
+        document.getElementById('app').classList.add('animate-fade-in','page-enter');
 
         document.getElementById('breadcrumb-sport-2').textContent = currentSport.icon + ' ' + currentSport.name;
         document.getElementById('breadcrumb-league').textContent = league.flag + ' ' + league.name;
@@ -1383,14 +1410,40 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
     // AUTH + BET SLIP + DASHBOARD (skrócone - działa jak w starym)
     // ═══════════════════════════════════════════════════════════════════
 
-            async function checkAuth() { 
-        const { data } = await sb.auth.getSession(); 
-        if (data.session) { 
+            function setAuthGate(locked) {
+        document.body.classList.toggle('auth-locked', locked);
+        const gate = document.getElementById('auth-gate');
+        if (gate) gate.classList.toggle('hidden', !locked);
+        if (gate) gate.classList.toggle('flex', locked);
+    }
+
+            async function checkAuth() {
+        setAuthGate(true);
+        const { data } = await sb.auth.getSession();
+        if (data.session) {
             currentUser = data.session.user;
-            updateUIForUser(); 
+            updateUIForUser();
             await loadBets();
             await loadUserProfile();
-        } 
+            setAuthGate(false);
+        } else {
+            currentUser = null;
+            updateUIForUser();
+            setAuthGate(true);
+        }
+        sb.auth.onAuthStateChange(async (_event, session) => {
+            currentUser = session?.user || null;
+            updateUIForUser();
+            if (currentUser) {
+                await loadBets();
+                await loadUserProfile();
+                setAuthGate(false);
+            } else {
+                userBets = [];
+                currentProfile = null;
+                setAuthGate(true);
+            }
+        });
     }
 
     let currentProfile = null;
@@ -1437,36 +1490,144 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
     function closeProfile() { 
         document.getElementById('profile-modal').classList.add('hidden'); 
     }
-    const SOCIAL_STORAGE_KEY = 'betstats_social_posts_v1';
-    const DEFAULT_SOCIAL_POSTS = [
-        {id:'start-1', category:'Analiza', author:'Zespół BetStats', title:'Jak czytać wynik modelu?', body:'Prawdopodobieństwo jest estymacją, a wskaźnik pewności opisuje przede wszystkim jakość danych i zgodność sygnałów. Oba parametry trzeba czytać razem.', createdAt:'Dzisiaj'},
-        {id:'start-2', category:'Dyskusja', author:'Zespół BetStats', title:'Czego brakuje w analizie polskich lig?', body:'Szukamy pomysłów na wskaźniki, które realnie pomagają przed meczem: składy, forma dom/wyjazd, tempo gry, a może kalendarz?', createdAt:'Dzisiaj'},
-        {id:'start-3', category:'Typ społeczności', author:'Zespół BetStats', title:'Typ to hipoteza, nie obietnica', body:'Dobry wpis podaje rynek, argumenty i ryzyko. Wynik pojedynczego meczu nie potwierdza ani nie obala metody — liczy się długa, rozliczona próba.', createdAt:'Dzisiaj'}
-    ];
+    const DEFAULT_SOCIAL_POSTS = [];
     function socialEscape(value) { const node = document.createElement('div'); node.textContent = String(value || ''); return node.innerHTML; }
-    function getSocialPosts() { try { const saved = JSON.parse(localStorage.getItem(SOCIAL_STORAGE_KEY) || '[]'); return [...saved, ...DEFAULT_SOCIAL_POSTS]; } catch (_) { return DEFAULT_SOCIAL_POSTS; } }
-    function renderSocialFeed(category) {
-        const feed = document.getElementById('social-feed'); if (!feed) return;
-        const posts = getSocialPosts().filter(post => !category || category === 'Wszystkie' || post.category === category);
-        document.getElementById('social-post-count').textContent = posts.length;
-        feed.innerHTML = posts.map(post => '<article class="social-card social-post p-5" data-category="' + socialEscape(post.category) + '"><div class="flex flex-wrap items-center justify-between gap-2"><span class="text-xs font-black uppercase tracking-wider text-red-600">' + socialEscape(post.category) + '</span><span class="text-xs text-gray-500">' + socialEscape(post.createdAt) + '</span></div><h3 class="mt-2 text-xl font-black text-[#1e3a5f]">' + socialEscape(post.title) + '</h3><p class="mt-2 text-sm leading-relaxed text-gray-700">' + socialEscape(post.body) + '</p><p class="mt-4 text-xs font-bold text-gray-500">Autor: ' + socialEscape(post.author) + '</p></article>').join('') || '<div class="py-10 text-center text-gray-500">Brak wpisów w tej kategorii.</div>';
+
+    async function getSocialPosts() {
+        if (!currentUser) return [];
+        const { data, error } = await sb.from('community_posts')
+            .select('id,author_id,category,title,body,created_at')
+            .eq('moderation_status','approved')
+            .order('created_at',{ascending:false})
+            .limit(100);
+        if (error) { console.error('Community load failed:', error); return []; }
+        const posts = data || [];
+        const ids = posts.map(p => p.id);
+        if (!ids.length) return [];
+
+        const authorIds = [...new Set(posts.map(p => p.author_id).filter(Boolean))];
+        const [{data: profiles}, {data: reactions}, {data: comments}] = await Promise.all([
+            authorIds.length ? sb.from('profiles').select('id,nickname').in('id',authorIds) : Promise.resolve({data:[]}),
+            sb.from('community_reactions').select('post_id,user_id,value').in('post_id',ids),
+            sb.from('community_comments').select('id,post_id,author_id,body,created_at').in('post_id',ids).order('created_at',{ascending:true})
+        ]);
+        const profileMap = Object.fromEntries((profiles||[]).map(p => [p.id, p.nickname || 'Użytkownik']));
+        const reactionMap = {};
+        (reactions||[]).forEach(r => {
+            if (!reactionMap[r.post_id]) reactionMap[r.post_id] = {like:0,dislike:0,mine:0};
+            if (r.value === 1) reactionMap[r.post_id].like++;
+            if (r.value === -1) reactionMap[r.post_id].dislike++;
+            if (r.user_id === currentUser.id) reactionMap[r.post_id].mine = r.value;
+        });
+        const commentMap = {};
+        (comments||[]).forEach(c => {
+            if (!commentMap[c.post_id]) commentMap[c.post_id] = [];
+            commentMap[c.post_id].push({...c, author: profileMap[c.author_id] || 'Użytkownik'});
+        });
+        return posts.map(p => ({
+            ...p,
+            author: profileMap[p.author_id] || 'Użytkownik',
+            createdAt: new Date(p.created_at).toLocaleString('pl-PL'),
+            reactions: reactionMap[p.id] || {like:0,dislike:0,mine:0},
+            comments: commentMap[p.id] || []
+        }));
     }
+
+    async function renderSocialFeed(category) {
+        const feed = document.getElementById('social-feed'); if (!feed) return;
+        feed.innerHTML = '<div class="py-12 text-center text-gray-500">Ładowanie społeczności…</div>';
+        const posts = (await getSocialPosts()).filter(post => !category || category === 'Wszystkie' || post.category === category);
+        const count = document.getElementById('social-post-count'); if (count) count.textContent = posts.length;
+        feed.innerHTML = posts.map(post => {
+            const r = post.reactions;
+            const comments = post.comments.slice(-3).map(c =>
+                '<div class="bg-gray-50 rounded-lg px-3 py-2 text-sm"><b>'+socialEscape(c.author)+'</b><span class="text-gray-500 ml-2 text-xs">'+socialEscape(new Date(c.created_at).toLocaleString('pl-PL'))+'</span><div class="mt-1 text-gray-700">'+socialEscape(c.body)+'</div></div>'
+            ).join('');
+            return '<article class="social-card social-post p-5" data-category="'+socialEscape(post.category)+'" data-post-id="'+post.id+'">'+
+                '<div class="flex flex-wrap items-center justify-between gap-2"><span class="text-xs font-black uppercase tracking-wider text-red-600">'+socialEscape(post.category)+'</span><span class="text-xs text-gray-500">'+socialEscape(post.createdAt)+'</span></div>'+
+                '<h3 class="mt-2 text-xl font-black text-[#1e3a5f]">'+socialEscape(post.title)+'</h3>'+
+                '<p class="mt-2 text-sm leading-relaxed text-gray-700">'+socialEscape(post.body)+'</p>'+
+                '<p class="mt-4 text-xs font-bold text-gray-500">Autor: '+socialEscape(post.author)+'</p>'+
+                '<div class="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-200">'+
+                    '<button onclick="toggleSocialReaction(\''+post.id+'\',1)" class="px-3 py-2 rounded-lg text-sm font-bold '+(r.mine===1?'bg-green-100 text-green-700':'bg-gray-100 text-gray-700 hover:bg-green-50')+'">👍 '+r.like+'</button>'+
+                    '<button onclick="toggleSocialReaction(\''+post.id+'\',-1)" class="px-3 py-2 rounded-lg text-sm font-bold '+(r.mine===-1?'bg-red-100 text-red-700':'bg-gray-100 text-gray-700 hover:bg-red-50')+'">👎 '+r.dislike+'</button>'+
+                    '<span class="px-3 py-2 text-sm text-gray-500 font-semibold">💬 '+post.comments.length+'</span>'+
+                '</div>'+
+                '<div class="mt-4 space-y-2">'+(comments || '<div class="text-xs text-gray-400">Brak komentarzy.</div>')+'</div>'+
+                '<form class="mt-3 flex gap-2" onsubmit="addSocialComment(event,\''+post.id+'\')">'+
+                    '<input name="body" required maxlength="500" placeholder="Dodaj komentarz…" class="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm">'+
+                    '<button class="bg-[#1e3a5f] hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-bold">Wyślij</button>'+
+                '</form>'+
+            '</article>';
+        }).join('') || '<div class="py-12 text-center text-gray-500">Brak wpisów w tej kategorii.</div>';
+    }
+
     function goToSocial(skipHistory) {
         ['sport-selection','league-selection','app','about-page','public-profile'].forEach(id => document.getElementById(id)?.classList.add('hidden'));
-        document.getElementById('social-page').classList.remove('hidden'); resetTheme(); window.scrollTo(0, 0); renderSocialFeed('Wszystkie');
+        document.getElementById('social-page').classList.remove('hidden');
+        document.getElementById('social-page').classList.add('page-enter');
+        resetTheme(); window.scrollTo(0, 0);
+        renderSocialFeed('Wszystkie');
         document.querySelectorAll('.social-tab').forEach(el => el.classList.toggle('active', el.dataset.socialFilter === 'Wszystkie'));
         if (!skipHistory) history.pushState({view:'social'}, '', '#/spolecznosc');
     }
-    function filterSocialPosts(category, button) { document.querySelectorAll('.social-tab').forEach(el => el.classList.remove('active')); button.classList.add('active'); renderSocialFeed(category); }
-    function openSocialComposer() { document.getElementById('social-composer').classList.remove('hidden'); }
+
+    function filterSocialPosts(category, button) {
+        document.querySelectorAll('.social-tab').forEach(el => el.classList.remove('active'));
+        button.classList.add('active');
+        renderSocialFeed(category);
+    }
+
+    function openSocialComposer() {
+        if (!currentUser) { openAuthModal('login'); return; }
+        document.getElementById('social-composer').classList.remove('hidden');
+    }
     function closeSocialComposer() { document.getElementById('social-composer').classList.add('hidden'); }
-    function publishSocialPost(event) {
+
+    async function publishSocialPost(event) {
         event.preventDefault();
-        const profileName = (typeof currentProfile !== 'undefined' && currentProfile?.nickname) ? currentProfile.nickname : 'Gość BetStats';
-        const post = {id:Date.now().toString(), category:document.getElementById('social-category').value, title:document.getElementById('social-title').value.trim(), body:document.getElementById('social-body').value.trim(), author:profileName, createdAt:'Przed chwilą'};
-        const saved = JSON.parse(localStorage.getItem(SOCIAL_STORAGE_KEY) || '[]'); saved.unshift(post); localStorage.setItem(SOCIAL_STORAGE_KEY, JSON.stringify(saved.slice(0, 100)));
-        event.target.reset(); closeSocialComposer(); renderSocialFeed('Wszystkie'); document.querySelectorAll('.social-tab').forEach(el => el.classList.toggle('active', el.dataset.socialFilter === 'Wszystkie'));
-        showToast('Analiza została dodana lokalnie.', 'success');
+        if (!currentUser) { openAuthModal('login'); return; }
+        const title = document.getElementById('social-title').value.trim();
+        const body = document.getElementById('social-body').value.trim();
+        const category = document.getElementById('social-category').value;
+        const { error } = await sb.from('community_posts').insert({
+            author_id: currentUser.id, category, title, body, moderation_status:'approved'
+        });
+        if (error) { showToast('Nie udało się opublikować analizy.', 'error'); console.error(error); return; }
+        event.target.reset(); closeSocialComposer(); await renderSocialFeed('Wszystkie');
+        document.querySelectorAll('.social-tab').forEach(el => el.classList.toggle('active', el.dataset.socialFilter === 'Wszystkie'));
+        showToast('Analiza została opublikowana.', 'success');
+    }
+
+    async function toggleSocialReaction(postId, value) {
+        if (!currentUser) { openAuthModal('login'); return; }
+        const { data: existing, error: readError } = await sb.from('community_reactions')
+            .select('id,value').eq('post_id',postId).eq('user_id',currentUser.id).maybeSingle();
+        if (readError) { showToast('Nie udało się pobrać reakcji.', 'error'); return; }
+        let error = null;
+        if (existing && existing.value === value) {
+            ({error} = await sb.from('community_reactions').delete().eq('id',existing.id).eq('user_id',currentUser.id));
+        } else if (existing) {
+            ({error} = await sb.from('community_reactions').update({value}).eq('id',existing.id).eq('user_id',currentUser.id));
+        } else {
+            ({error} = await sb.from('community_reactions').insert({post_id:postId,user_id:currentUser.id,value}));
+        }
+        if (error) { showToast('Nie udało się zapisać reakcji.', 'error'); return; }
+        const active = document.querySelector('.social-tab.active')?.dataset.socialFilter || 'Wszystkie';
+        await renderSocialFeed(active);
+    }
+
+    async function addSocialComment(event, postId) {
+        event.preventDefault();
+        if (!currentUser) { openAuthModal('login'); return; }
+        const input = event.target.querySelector('[name="body"]');
+        const body = input.value.trim();
+        if (!body) return;
+        const {error} = await sb.from('community_comments').insert({post_id:postId,author_id:currentUser.id,body});
+        if (error) { showToast('Nie udało się dodać komentarza.', 'error'); return; }
+        input.value = '';
+        const active = document.querySelector('.social-tab.active')?.dataset.socialFilter || 'Wszystkie';
+        await renderSocialFeed(active);
     }
 
     function goToAbout(skipHistory) {
@@ -1558,10 +1719,10 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         });
     }
     function updateUIForUser() { const a = document.getElementById('auth-buttons'), u = document.getElementById('user-buttons'); if (!a || !u) return; if (currentUser) { a.classList.add('hidden'); u.classList.remove('hidden'); u.classList.add('flex'); const p = document.getElementById('profile-icon'); if (p) p.innerHTML = currentUser.email[0].toUpperCase(); } else { a.classList.remove('hidden'); u.classList.add('hidden'); u.classList.remove('flex'); } }
-    function openAuthModal(mode) { authMode = mode || 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; pushModalState('auth-modal'); document.getElementById('auth-modal').classList.remove('hidden'); }    function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
-    function updateAuthModalUI() { if (authMode === 'register') { document.getElementById('auth-title').textContent = 'Rejestracja'; document.getElementById('auth-submit').textContent = 'Zarejestruj się'; document.getElementById('auth-toggle-text').textContent = 'Masz już konto?'; document.getElementById('auth-toggle-btn').textContent = 'Zaloguj się'; } else { document.getElementById('auth-title').textContent = 'Logowanie'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; document.getElementById('auth-toggle-text').textContent = 'Nie masz konta?'; document.getElementById('auth-toggle-btn').textContent = 'Zarejestruj się'; } }
-    function toggleAuthMode() { authMode = authMode === 'login' ? 'register' : 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); }
-    async function doAuth() { const email = document.getElementById('auth-email').value.trim(), password = document.getElementById('auth-password').value, errEl = document.getElementById('auth-error'); if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; } if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; } try { let r; if (authMode === 'login') r = await sb.auth.signInWithPassword({ email, password }); else r = await sb.auth.signUp({ email, password }); if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; } currentUser = r.data.user; updateUIForUser(); await loadBets(); closeAuthModal(); } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); } }
+    function openAuthModal(mode) { authMode = 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; pushModalState('auth-modal'); document.getElementById('auth-modal').classList.remove('hidden'); }    function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
+    function updateAuthModalUI() { authMode = 'login'; document.getElementById('auth-title').textContent = 'Logowanie do BetStats'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; }
+    function toggleAuthMode() { authMode = 'login'; updateAuthModalUI(); document.getElementById('auth-error').textContent = 'Rejestracja jest zamknięta podczas bety.'; document.getElementById('auth-error').classList.remove('hidden'); }
+    async function doAuth() { const email = document.getElementById('auth-email').value.trim(), password = document.getElementById('auth-password').value, errEl = document.getElementById('auth-error'); if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; } if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; } try { let r; r = await sb.auth.signInWithPassword({ email, password }); if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; } currentUser = r.data.user; updateUIForUser(); await loadBets(); closeAuthModal(); } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); } }
     async function openProfile() {
         if (!currentUser) return;
         await loadUserProfile();
@@ -1573,8 +1734,8 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         document.getElementById('profile-modal').classList.remove('hidden');
     }    
     function updateProfileBalance() { let bal = 0; userBets.forEach(b => { if (b.status === 'won') bal += (b.stake * b.odds) - b.stake; else if (b.status === 'lost') bal -= b.stake; }); const el = document.getElementById('profile-balance'); el.textContent = (bal >= 0 ? '+' : '') + bal.toFixed(2) + ' zł'; el.className = 'text-3xl font-black text-center ' + (bal > 0 ? 'text-green-600' : bal < 0 ? 'text-red-600' : 'text-gray-600'); document.getElementById('profile-stats').textContent = userBets.length + ' zakładów'; }
-    async function doLogout() { await sb.auth.signOut(); currentUser = null; userBets = []; updateUIForUser(); closeProfile(); }
-    async function loadBets() { if (!currentUser) return; const { data, error } = await sb.from('bets').select('*').order('created_at', { ascending: false }); if (!error) userBets = data || []; }
+    async function doLogout() { await sb.auth.signOut(); currentUser = null; userBets = []; updateUIForUser(); closeProfile(); setAuthGate(true); }
+    async function loadBets() { if (!currentUser) { userBets = []; return; } const { data, error } = await sb.from('bets').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }); if (!error) { userBets = (data || []).filter(b => b.user_id === currentUser.id); } else { userBets = []; console.error('Bets load failed:', error); } }
 
     function updateBetSlipUI() { const el = document.getElementById('bet-slip'); if (!el) return; if (betSlip.length === 0) { el.classList.add('hidden'); return; } el.classList.remove('hidden'); const t = betSlip.reduce((acc, b) => acc * b.odds, 1); document.getElementById('bet-slip-count').textContent = betSlip.length; document.getElementById('bet-slip-odds').textContent = t.toFixed(2); }
     function addToBetSlip() { if (!currentModalData) return; const odds = parseFloat(document.getElementById('modal-odds-input').value); if (!odds || odds <= 1) { showToast('Wpisz kurs!', 'error'); return; } const m = matchesData[currentModalData.matchIndex]; betSlip.push({ match: m.home + ' vs ' + m.away, league: m.league_name, betType: document.getElementById('modal-bet-type').textContent, odds }); saveBetSlip(); closeValueModal(); showToast('Dodano do kuponu! ', 'success'); }
@@ -1587,8 +1748,8 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
     async function placeAKOBet() { if (!currentUser) { showToast('Zaloguj się!', 'warning'); return; } if (betSlip.length === 0) { showToast('Kupon pusty!', 'warning'); return; } const stake = parseFloat(document.getElementById('bet-slip-stake').value); if (!stake || stake <= 0) { showToast('Podaj stawkę!', 'warning'); return; } const t = betSlip.reduce((a, b) => a * b.odds, 1); const bt = 'AKO: ' + betSlip.map(b => b.match + ' - ' + b.betType).join(' | '); const { error } = await sb.from('bets').insert({ user_id: currentUser.id, match_home: 'KUPON', match_away: betSlip.length + ' zdarzeń', match_league: 'AKO', bet_type: bt.substring(0, 500), odds: t, stake, potential_win: stake * t, status: 'pending' }); if (error) { showToast('Błąd: ' + error.message, 'error'); return; } betSlip = []; saveBetSlip(); closeBetSlip(); await loadBets(); showToast('Kupon zapisany! ', 'success'); }
 
     async function placeBet() { if (!currentUser) { showToast('Zaloguj się!', 'warning'); closeValueModal(); openAuthModal('login'); return; } const stake = parseFloat(document.getElementById('stake-input').value), odds = parseFloat(document.getElementById('modal-odds-input').value); if (!stake || stake <= 0) { showToast('Podaj stawkę!', 'warning'); return; } if (!odds || odds <= 1) { showToast('Podaj kurs!', 'warning'); return; } const m = matchesData[currentModalData.matchIndex]; const { error } = await sb.from('bets').insert({ user_id: currentUser.id, match_home: m.home, match_away: m.away, match_league: m.league_name, bet_type: document.getElementById('modal-bet-type').textContent, odds, stake, potential_win: stake * odds, status: 'pending' }); if (error) { showToast('Błąd: ' + error.message, 'error'); return; } await loadBets(); closeValueModal(); showToast('Zakład dodany! ', 'success'); }
-    async function updateBetStatus(id, status) { await sb.from('bets').update({ status }).eq('id', id); await loadBets(); renderDashboard(); const m = { won: 'Wygrany ', lost: 'Przegrany ', pending: 'Oczekuje ↺' }; showToast(m[status] || 'Zmieniono', status === 'won' ? 'success' : status === 'lost' ? 'error' : 'info'); }
-    async function deleteBet(id) { showConfirm('Usunąć zakład?', 'Nieodwracalne.', async () => { const { error } = await sb.from('bets').delete().eq('id', id); if (error) { showToast('Błąd: ' + error.message, 'error'); return; } await loadBets(); renderDashboard(); showToast('Usunięto ', 'success'); }, ''); }
+    async function updateBetStatus(id, status) { await sb.from('bets').update({ status }).eq('id', id).eq('user_id', currentUser.id); await loadBets(); renderDashboard(); const m = { won: 'Wygrany ', lost: 'Przegrany ', pending: 'Oczekuje ↺' }; showToast(m[status] || 'Zmieniono', status === 'won' ? 'success' : status === 'lost' ? 'error' : 'info'); }
+    async function deleteBet(id) { showConfirm('Usunąć zakład?', 'Nieodwracalne.', async () => { const { error } = await sb.from('bets').delete().eq('id', id).eq('user_id', currentUser.id); if (error) { showToast('Błąd: ' + error.message, 'error'); return; } await loadBets(); renderDashboard(); showToast('Usunięto ', 'success'); }, ''); }
 
     function openDashboard() { if (!currentUser) { openAuthModal('login'); return; } renderDashboard(); pushModalState('dashboard-modal'); document.getElementById('dashboard-modal').classList.remove('hidden'); }    function closeDashboard() { document.getElementById('dashboard-modal').classList.add('hidden'); }
     function renderDashboard() {
@@ -2066,7 +2227,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         document.getElementById('modal-our-prob').textContent = '—';
     }
 
-    function closeMatchDetail() { document.getElementById('match-detail-modal').classList.add('hidden'); }
+    function closeMatchDetail() { document.getElementById('match-detail-modal').classList.add('hidden'); if (window.__betstatsPreviousMatchesData) { matchesData = window.__betstatsPreviousMatchesData; window.__betstatsPreviousMatchesData = null; } }
 
         let finishedSearchQuery = '';
     let finishedLeagueFilter = 'all';
@@ -2077,6 +2238,48 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         finishedLeagueFilter = 'all';
         renderFinishedContent();
         document.getElementById('finished-modal').classList.remove('hidden');
+    }
+
+    let finishedSearchTimer = null;
+    function scheduleFinishedSearch() {
+        clearTimeout(finishedSearchTimer);
+        finishedSearchTimer = setTimeout(() => {
+            const input = document.getElementById('finished-search');
+            const hadFocus = document.activeElement === input;
+            const caret = input ? input.selectionStart : null;
+            renderFinishedContent();
+            const next = document.getElementById('finished-search');
+            if (hadFocus && next) {
+                next.focus();
+                if (caret !== null) next.setSelectionRange(caret, caret);
+            }
+        }, 500);
+    }
+
+    function openFinishedMatchStats(home, away) {
+        const h = String(home || '').trim().toLowerCase();
+        const a = String(away || '').trim().toLowerCase();
+        let match = null;
+        const sources = typeof allMatchesData !== 'undefined' ? Object.values(allMatchesData) : [];
+        for (const list of sources) {
+            if (!Array.isArray(list)) continue;
+            match = list.find(m => String(m.home || '').trim().toLowerCase() === h && String(m.away || '').trim().toLowerCase() === a);
+            if (match) break;
+        }
+        if (!match) {
+            const live = Object.values(liveData || {}).find(m =>
+                String(m.home || '').trim().toLowerCase() === h && String(m.away || '').trim().toLowerCase() === a
+            );
+            if (live) match = {...live, home: live.home || home, away: live.away || away, sport:'football'};
+        }
+        if (!match) {
+            showToast('Nie znaleziono danych statystycznych tego meczu.', 'info');
+            return;
+        }
+        window.__betstatsPreviousMatchesData = matchesData;
+        matchesData = [match];
+        closeFinished();
+        openMatchDetail(0);
     }
 
     function renderFinishedContent() {
@@ -2110,7 +2313,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         let html = '<div class="bg-white pb-3 mb-3 border-b border-gray-200">';        html += '<div class="flex flex-col gap-2">';
 
         // Wyszukiwarka - z padding-right żeby nie nachodziła na X
-        html += '<input type="text" id="finished-search" placeholder=" Szukaj drużyny..." value="' + finishedSearchQuery + '" oninput="finishedSearchQuery=this.value;renderFinishedContent()" class="w-full px-3 py-2 pr-12 border-2 border-gray-300 rounded-lg text-sm focus:border-[#1e3a5f] outline-none">';
+        html += '<input type="text" id="finished-search" placeholder=" Szukaj drużyny..." value="' + String(finishedSearchQuery || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '" oninput="finishedSearchQuery=this.value;scheduleFinishedSearch()" class="w-full px-3 py-2 pr-12 border-2 border-gray-300 rounded-lg text-sm focus:border-[#1e3a5f] outline-none">';
         // Filtr lig (jako przyciski)
         html += '<div class="flex gap-1 flex-wrap">';
         html += '<button onclick="finishedLeagueFilter=\'all\';renderFinishedContent()" class="px-3 py-1 rounded-lg text-xs font-bold ' + (finishedLeagueFilter === 'all' ? 'bg-[#1e3a5f] text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300') + '"> Wszystkie (' + finished.length + ')</button>';
@@ -2279,15 +2482,10 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
             document.getElementById('public-profile-since').textContent = d.toLocaleDateString('pl-PL');
         }
 
-        // Pobierz zakłady tego użytkownika
-        const { data: bets, error: betsErr } = await sb.from('bets').select('*').eq('user_id', profile.id).order('created_at', { ascending: false });
-
-        if (betsErr) {
-            document.getElementById('pub-bets-list').innerHTML = '<p class="text-red-600 text-center py-8">Błąd ładowania zakładów</p>';
-            return;
-        }
-
-        renderPublicStats(bets || []);
+        // Prywatność: kupony są widoczne wyłącznie w Dashboardzie ich właściciela.
+        // Publiczny profil nie pobiera tabeli bets i nie ujawnia historii zakładów.
+        renderPublicStats([]);
+        document.getElementById('pub-bets-list').innerHTML = '<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600"><b>Prywatne kupony</b><br>Historia kuponów jest dostępna wyłącznie dla właściciela w Panelu gracza.</div>';
     }
 
     function renderPublicStats(bets) {
@@ -2541,6 +2739,15 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
     if(typeof renderMatches==='function') renderMatches();
   };
 
+    let radarVisible = false;
+  window.toggleBetStatsRadar = function(){
+    radarVisible = !radarVisible;
+    const content = document.getElementById('betstats-radar-content');
+    const btn = document.getElementById('radar-toggle-btn');
+    if (content) content.classList.toggle('open', radarVisible);
+    if (btn) btn.innerHTML = radarVisible ? '▲ Ukryj radar' : '▼ Pokaż radar';
+  };
+
   window.renderBetStatsRadar = function(){
     const el=document.getElementById('betstats-radar');
     if(!el || !window.BetStatsEngine) return;
@@ -2566,11 +2773,15 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         '<div class="bs-metric"><b>'+ev+'</b><small>EV</small></div>'+
       '</button>';
     }).join('');
-
     el.innerHTML =
+      '<button id="radar-toggle-btn" onclick="toggleBetStatsRadar()" class="btn-outline px-4 py-3 rounded-xl font-black text-sm bg-white border border-gray-200">'+
+        (radarVisible ? '▲ Ukryj radar' : '▼ Pokaż radar')+
+      '</button>'+
+      '<div id="betstats-radar-content" class="radar-collapsible '+(radarVisible?'open':'')+'">'+
       '<div class="bs-radar-head"><div><div class="bs-kicker">BETSTATS BETA</div><h3>Radar — najlepsze sygnały</h3><p>Automatycznie odrzuca słabe dane i niską zgodność modelu.</p></div>'+
       '<div class="bs-radar-stats"><span><b>'+r.analyzed+'</b><small>meczów</small></span><span><b>'+r.green+'</b><small>mocnych</small></span><span><b>'+r.value+'</b><small>przewag</small></span><span><b>'+r.elite+'</b><small>najwyższych</small></span></div></div>'+
-      (rows || '<div class="bs-empty">Brak wystarczająco mocnych sygnałów. I to jest OK — model nie musi grać każdego meczu.</div>');
+      (rows || '<div class="bs-empty">Brak wystarczająco mocnych sygnałów. I to jest OK — model nie musi grać każdego meczu.</div>')+
+      '</div>';
   };
 
   // Add a Green filter button without removing the existing filters.
@@ -2620,303 +2831,6 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
   window.addEventListener('load',()=>setTimeout(renderBetStatsRadar,150));
 })();
 </script>
-
-<style>
-/* BETSTATS BETA MODEL CENTER */
-.bs3-panel{background:linear-gradient(145deg,#0b1118,#101923);color:#e8eef7;border:1px solid rgba(255,255,255,.09);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.18);overflow:hidden}
-.bs3-panel *{box-sizing:border-box}.bs3-muted{color:#93a1b3}.bs3-green{color:#35d07f}.bs3-yellow{color:#f5c451}.bs3-red{color:#ff6b6b}.bs3-blue{color:#72a7ff}
-.bs3-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.bs3-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:15px}
-.bs3-big{font-size:25px;font-weight:900;line-height:1}.bs3-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#8b98a9;font-weight:800;margin-bottom:8px}
-.bs3-bar{height:7px;background:#202b38;border-radius:99px;overflow:hidden}.bs3-bar>i{display:block;height:100%;background:#35d07f;border-radius:99px}
-.bs3-row{display:grid;grid-template-columns:38px 1fr 70px 70px 75px 75px;gap:10px;align-items:center;padding:13px 8px;border-top:1px solid rgba(255,255,255,.06)}
-.bs3-row:hover{background:rgba(255,255,255,.035)}.bs3-rank{font-size:20px;font-weight:900;color:#64748b;text-align:center}.bs3-teams{font-weight:800}.bs3-teams small{display:block;color:#7f8da0;font-size:10px;margin-bottom:4px}.bs3-market{font-size:12px;color:#dce6f3}.bs3-metric{text-align:right}.bs3-metric b{display:block;font-size:15px}.bs3-metric small{display:block;color:#7f8da0;font-size:9px;text-transform:uppercase}
-.bs3-badge{display:inline-flex;padding:4px 7px;border-radius:7px;font-size:9px;font-weight:900;letter-spacing:.05em}.bs3-badge.green{background:rgba(53,208,127,.12);color:#4ce58f}.bs3-badge.value{background:rgba(72,139,255,.14);color:#82b0ff}.bs3-badge.skip{background:rgba(255,255,255,.07);color:#9aa7b7}
-.bs3-actions{display:flex;gap:8px;flex-wrap:wrap}.bs3-btn{border:1px solid rgba(255,255,255,.12);background:#17212d;color:#eaf0f7;border-radius:10px;padding:9px 12px;font-weight:800;font-size:11px;cursor:pointer}.bs3-btn:hover{background:#203040}.bs3-btn.active{background:#168a4c;border-color:#35d07f}
-.bs3-input{background:#111923;border:1px solid #2a3746;color:#fff;border-radius:10px;padding:8px 10px;width:100%}
-.bs3-table{width:100%;border-collapse:collapse;font-size:12px}.bs3-table th,.bs3-table td{padding:8px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left}.bs3-table th{color:#8190a3;font-size:9px;text-transform:uppercase}
-.bs3-modal{position:fixed;inset:0;background:rgba(2,6,12,.72);backdrop-filter:blur(7px);z-index:10000;display:none;align-items:center;justify-content:center;padding:16px}.bs3-modal.show{display:flex}.bs3-modal-inner{width:min(1100px,100%);max-height:92vh;overflow:auto}
-.bs3-explain{display:grid;grid-template-columns:1fr 1fr;gap:10px}.bs3-explain-item{background:#111923;border:1px solid #263242;border-radius:12px;padding:10px}.bs3-chip{font-size:10px;padding:3px 6px;border-radius:6px;background:#1b2734;color:#9fb0c3}
-@media(max-width:800px){.bs3-grid{grid-template-columns:repeat(2,1fr)}.bs3-row{grid-template-columns:28px 1fr 55px 55px}.bs3-row .bs3-metric:nth-last-child(-n+2){display:none}.bs3-explain{grid-template-columns:1fr}}
-</style>
-
-<script>
-(function(){
-'use strict';
-const SETTINGS_KEY='betstats_model_settings_v3';
-const DEFAULTS={minConfidence:80,minDataQuality:75,minAgreement:65,minProbability:63,minEdge:4,greenOnly:false};
-function getSettings(){try{return Object.assign({},DEFAULTS,JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}'))}catch(e){return {...DEFAULTS}}}
-function saveSettings(s){localStorage.setItem(SETTINGS_KEY,JSON.stringify(s));return s}
-function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function allLoaded(){let a=[];if(typeof allMatchesData!=='undefined')Object.values(allMatchesData||{}).forEach(v=>a=a.concat(v||[]));if(typeof matchesData!=='undefined')a=a.concat(matchesData||[]);const seen=new Set();return a.filter(m=>{const k=m.match_id||m.home+'|'+m.away+'|'+m.datetime;if(seen.has(k))return false;seen.add(k);return true})}
-function eligible(x,s){return x&&x.probPct>=s.minProbability&&x.confidence>=s.minConfidence&&x.dataQuality>=s.minDataQuality&&x.agreement>=s.minAgreement&&(x.edgePct===null||x.edgePct>=s.minEdge)}
-window.betStatsModelSettings=getSettings;
-window.betStatsModelRefresh=function(){
-  if(typeof renderMatches==='function')renderMatches();
-  if(typeof window.renderBetStatsRadar==='function')window.renderBetStatsRadar();
-  renderModelCenter();
-};
-
-/* Make the Green filter use adjustable quality gates. */
-window.getMatchValueBets=function(m){
-  if(!m||m.sport==='volleyball'||!window.BetStatsEngine)return [];
-  const s=getSettings(),a=window.BetStatsEngine.model(m);
-  return a.markets.filter(x=>eligible(x,s)).sort((u,v)=>v.score-u.score).map(x=>({
-    type:x.type,key:x.key,prob:x.probPct,weight:1,icon:x.icon,display:x.probPct+'%',
-    score:x.score,confidence:x.confidence,dataQuality:x.dataQuality,edge:x.edgePct,ev:x.evPct,
-    fairOdds:x.fairOdds,isValue:x.value,status:x.value?'VALUE':'GREEN'
-  }));
-};
-
-/* Model explanation in match detail. */
-const oldOpen=window.openMatchDetail;
-if(oldOpen){
-  window.openMatchDetail=function(i){
-    oldOpen(i);
-    setTimeout(()=>{
-      const m=(typeof matchesData!=='undefined'?matchesData[i]:null); if(!m||!window.BetStatsEngine)return;
-      const a=window.BetStatsEngine.model(m); if(!a)return;
-      const box=document.getElementById('md-content');if(!box)return;
-      const s=getSettings();
-      const top=a.markets.filter(x=>eligible(x,s)).sort((u,v)=>v.score-u.score).slice(0,4);
-      const html='<div id="bs3-detail-engine" class="mt-5 bs3-panel p-5">'+
-        '<div class="flex flex-wrap justify-between gap-3 items-start"><div><div class="text-[10px] font-black tracking-[.18em] text-green-400">SILNIK BETSTATS BETA</div><h4 class="text-xl font-black text-white mt-1">Ocena modelu</h4></div>'+
-        '<div class="flex gap-2 flex-wrap"><span class="bs3-badge green">PEWNOŚĆ '+a.confidence+'/100</span><span class="bs3-badge green">DANE '+a.dataQuality+'/100</span><span class="bs3-badge value">ZGODNOŚĆ '+a.modelAgreement+'/100</span></div></div>'+
-        '<div class="bs3-grid mt-4">'+
-        '<div class="bs3-card"><div class="bs3-label">Oczekiwane gole</div><div class="bs3-big">'+a.lambdas.home+' — '+a.lambdas.away+'</div><div class="bs3-muted text-[10px] mt-1">'+esc(m.home)+' / '+esc(m.away)+'</div></div>'+
-        '<div class="bs3-card"><div class="bs3-label">Wielkość próby</div><div class="bs3-big">'+a.samplePct+'%</div><div class="bs3-bar mt-3"><i style="width:'+a.samplePct+'%"></i></div></div>'+
-        '<div class="bs3-card"><div class="bs3-label">Najmocniejszy sygnał</div><div class="bs3-big">'+(top[0]?top[0].probPct+'%':'—')+'</div><div class="bs3-muted text-[10px] mt-1">'+(top[0]?top[0].type:'brak kwalifikacji')+'</div></div>'+
-        '<div class="bs3-card"><div class="bs3-label">Czynniki ryzyka</div><div class="text-xs font-bold">'+(a.riskFlags.length?a.riskFlags.map(x=>'<span class="bs3-chip mr-1 inline-block mb-1">'+({'LOW_DATA':'mało danych','MODEL_DISAGREEMENT':'rozjazd sygnałów','SMALL_SAMPLE':'mała próba','MARKET_AGAINST_MODEL':'kurs przeciw modelowi'}[x]||x)+'</span>').join(''):'<span class="bs3-green">Brak</span>')+'</div></div></div>'+
-        '<div class="mt-4"><div class="text-xs font-black text-white mb-2">Najlepsze rynki</div><div class="grid grid-cols-1 md:grid-cols-2 gap-2">'+a.markets.map(x=>'<div class="bs3-card"><div class="flex justify-between gap-2"><b>'+x.icon+' '+x.type+'</b><span class="bs3-badge '+(eligible(x,s)?(x.value?'value':'green'):'skip')+'">'+(eligible(x,s)?(x.value?'VALUE':'GREEN'):'SKIP')+'</span></div><div class="grid grid-cols-4 gap-2 mt-3 text-center"><div><b>'+x.probPct+'%</b><small class="block bs3-muted">model</small></div><div><b>'+x.fairOdds+'</b><small class="block bs3-muted">fair</small></div><div><b>'+(x.edgePct===null?'—':(x.edgePct>0?'+':'')+x.edgePct+' pp')+'</b><small class="block bs3-muted">edge</small></div><div><b>'+x.score+'</b><small class="block bs3-muted">score</small></div></div><div class="bs3-muted text-[10px] mt-2">'+esc(x.reasons.join(' · '))+'</div></div>').join('')+'</div></div>'+
-        '<div class="mt-4 text-[10px] bs3-muted">Prawdopodobieństwo modelu jest estymacją. Wskaźnik pewności opisuje jakość danych i zgodność modelu — nie gwarantuje wygranej.</div></div>';
-      box.insertAdjacentHTML('beforeend',html);
-      a.markets.filter(x=>x.status!=='SKIP').forEach(x=>window.BetStatsEngine.logPrediction(m,x,a));
-    },80);
-  };
-}
-
-/* Finished feed resolver. */
-async function loadFinishedAndResolve(){
-  if(!window.BetStatsEngine)return;
-  const files=['finished_ekstra','finished_int','finished_world','finished_volley_pl'];
-  const all=[];
-  for(const f of files){try{const r=await fetch(f+'.json?t='+Date.now());if(r.ok){const d=await r.json();all.push(...(d.matches||[]))}}catch(e){}}
-  if(all.length)window.BetStatsEngine.resolveLogs(all);
-}
-async function preloadFootballData(){
-  const files=['data_ekstra','data_int','data_world'];
-  for(const f of files){
-    if(typeof allMatchesData!=='undefined'&&allMatchesData[f]!==undefined)continue;
-    try{const r=await fetch(f+'.json?t='+Date.now());if(r.ok){const d=await r.json();if(typeof allMatchesData!=='undefined')allMatchesData[f]=d.matches||[]}}catch(e){}
-  }
-}
-
-/* Model center modal. */
-function createCenter(){
-  if(document.getElementById('bs3-model-modal'))return;
-  const d=document.createElement('div');d.id='bs3-model-modal';d.className='bs3-modal';
-  d.innerHTML='<button type="button" id="bs3-close-fixed" class="bs3-btn">Zamknij centrum modelu</button><div class="bs3-modal-inner">'+
-    '<div class="bs3-panel p-5 md:p-7"><div class="flex justify-between items-start gap-3"><div><div class="text-[10px] font-black tracking-[.2em] text-green-400">BETSTATS BETA</div><h2 class="text-2xl md:text-3xl font-black text-white mt-1">Centrum modelu</h2><p class="bs3-muted text-xs mt-1">Radar, selekcja, kalibracja i historia predykcji.</p></div><button type="button" id="bs3-close-btn" class="bs3-btn">Zamknij</button></div>'+
-    '<div id="bs3-center-body" class="mt-5"></div></div></div>';
-  const close=()=>d.classList.remove('show');
-  d.querySelector('#bs3-close-btn').addEventListener('click',close); d.querySelector('#bs3-close-fixed').addEventListener('click',close);
-  d.addEventListener('click',e=>{if(e.target===d)close()});document.body.appendChild(d);
-}
-async function openModelCenter(){createCenter();const d=document.getElementById('bs3-model-modal');d.classList.add('show');await preloadFootballData();const ms=allLoaded().filter(m=>m.sport!=='volleyball');window.BetStatsEngine.logMatches(ms);await loadFinishedAndResolve();renderModelCenter()}
-window.openModelCenter=openModelCenter;
-
-function renderModelCenter(){
-  const host=document.getElementById('bs3-center-body');if(!host)return;
-  const s=getSettings(),ms=allLoaded().filter(m=>m.sport!=='volleyball');
-  const r=window.BetStatsEngine.radar(ms,{limit:12,minConfidence:s.minConfidence,minDataQuality:s.minDataQuality});
-  const perf=window.BetStatsEngine.performance(),logs=window.BetStatsEngine.getLogs();
-  const rows=r.picks.map((p,i)=>'<button onclick="bs3OpenMatch('+JSON.stringify(p.match.match_id)+')" class="bs3-row text-left w-full"><div class="bs3-rank">'+(i+1)+'</div><div class="bs3-teams"><small>'+esc(p.match.league_name||'Liga')+'</small>'+esc(p.match.home)+' <span class="bs3-muted">kontra</span> '+esc(p.match.away)+'<div class="bs3-market mt-1">'+p.type+' <span class="bs3-badge '+(p.value?'value':'green')+' ml-1">'+(p.value?'PRZEWAGA':'MOCNY SYGNAŁ')+'</span></div></div><div class="bs3-metric"><b>'+p.probPct+'%</b><small>model</small></div><div class="bs3-metric"><b>'+p.confidence+'</b><small>pewność</small></div><div class="bs3-metric"><b>'+p.score+'</b><small>ocena</small></div><div class="bs3-metric"><b>'+(p.edgePct===null?'—':(p.edgePct>0?'+':'')+p.edgePct+'pp')+'</b><small>przewaga</small></div></button>').join('');
-  const cal=perf.calibration||[];
-  const calRows=cal.length?cal.map(x=>'<tr><td>'+x.range+'</td><td>'+x.count+'</td><td>'+x.predicted+'%</td><td>'+x.actual+'%</td><td class="'+(Math.abs(x.predicted-x.actual)<=5?'bs3-green':'bs3-yellow')+'">'+(x.actual-x.predicted>=0?'+':'')+(x.actual-x.predicted).toFixed(1)+' pp</td></tr>').join(''):'<tr><td colspan="5" class="bs3-muted">Brak wystarczającej liczby rozliczonych predykcji.</td></tr>';
-  host.innerHTML=
-    '<div class="bs3-grid">'+
-      '<div class="bs3-card"><div class="bs3-label">Mecze przeanalizowane</div><div class="bs3-big">'+r.analyzed+'</div></div>'+
-      '<div class="bs3-card"><div class="bs3-label">Mocne sygnały</div><div class="bs3-big bs3-green">'+r.green+'</div></div>'+
-      '<div class="bs3-card"><div class="bs3-label">Przewagi kursowe</div><div class="bs3-big bs3-blue">'+r.value+'</div></div>'+
-      '<div class="bs3-card"><div class="bs3-label">Rozliczone</div><div class="bs3-big">'+perf.settled+'</div></div>'+
-    '</div>'+
-    '<div class="bs3-card mt-3"><div class="flex justify-between items-center gap-3 flex-wrap"><div><div class="bs3-label">Selekcja</div><div class="text-sm font-black text-white">Im wyższe progi, tym mniej sygnałów — ale lepsza jakość danych.</div></div><div class="bs3-actions"><button class="bs3-btn '+(s.greenOnly?'active':'')+'" onclick="bs3ToggleGreen()">'+(s.greenOnly?'Tylko mocne: włączone':'Tylko mocne sygnały')+'</button><button class="bs3-btn" onclick="bs3ExportLogs()">Eksportuj</button><button class="bs3-btn" onclick="bs3SyncCloud()">Synchronizuj</button><button class="bs3-btn" onclick="bs3PullCloud()">Pobierz dane</button><button class="bs3-btn" onclick="bs3ClearLogs()">Wyczyść historię</button></div></div>'+
-      '<div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-4">'+
-      [['minConfidence','Minimalna pewność',s.minConfidence],['minDataQuality','Minimalna jakość danych',s.minDataQuality],['minAgreement','Minimalna zgodność',s.minAgreement],['minProbability','Prawdopodobieństwo %',s.minProbability],['minEdge','Minimalna przewaga pp',s.minEdge]].map(([k,l,v])=>'<label class="text-[10px] font-bold text-slate-400">'+l+'<input class="bs3-input mt-1" type="number" min="0" max="'+(k==='minEdge'?'30':'100')+'" step="1" value="'+v+'" onchange="bs3Set(\''+k+'\',this.value)"></label>').join('')+
-      '</div></div>'+
-    '<div class="bs3-card mt-3"><div class="flex justify-between items-end gap-3"><div><div class="bs3-label">NAJLEPSZE SYGNAŁY</div><div class="text-lg font-black text-white">Radar po filtrach</div></div><div class="bs3-muted text-[10px]">Wersja '+window.BetStatsEngine.VERSION+'</div></div><div class="mt-2">'+(rows||'<div class="bs3-muted py-8 text-center">Brak sygnałów po filtrach. To jest poprawny wynik.</div>')+'</div></div>'+
-    '<div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-3">'+
-      '<div class="bs3-card"><div class="bs3-label">KALIBRACJA</div><div class="text-xs bs3-muted mb-2">Porównanie prawdopodobieństwa modelu z faktycznymi wynikami.</div><table class="bs3-table"><thead><tr><th>Zakres</th><th>N</th><th>Model</th><th>Wynik</th><th>Różnica</th></tr></thead><tbody>'+calRows+'</tbody></table></div>'+
-      '<div class="bs3-card"><div class="bs3-label">SKUTECZNOŚĆ MODELU</div><div class="bs3-grid" style="grid-template-columns:repeat(2,1fr)"><div><div class="bs3-big">'+(perf.winRate===null?'—':perf.winRate+'%')+'</div><div class="bs3-muted text-[9px] uppercase">Skuteczność</div></div><div><div class="bs3-big">'+(perf.roi===null?'—':(perf.roi>0?'+':'')+perf.roi+'%')+'</div><div class="bs3-muted text-[9px] uppercase">ROI</div></div><div><div class="bs3-big">'+(perf.brier===null?'—':perf.brier)+'</div><div class="bs3-muted text-[9px] uppercase">Wynik Brier’a</div></div><div><div class="bs3-big">'+logs.length+'</div><div class="bs3-muted text-[9px] uppercase">Zapisów</div></div></div><div class="mt-4 text-xs bs3-muted">Rzetelna kalibracja wymaga predykcji zapisanych <b>przed startem</b> i odpowiednio dużej próby.</div></div>'+
-    '</div>';
-}
-window.bs3OpenMatch=function(matchId){
-  document.getElementById('bs3-model-modal')?.classList.remove('show');
-  let m=null,idx=-1;
-  if(typeof matchesData!=='undefined'){idx=(matchesData||[]).findIndex(x=>x.match_id===matchId);if(idx>=0)m=matchesData[idx]}
-  if(!m&&typeof allMatchesData!=='undefined'){
-    outer: for(const arr of Object.values(allMatchesData||{})){for(const z of (arr||[])){if(z.match_id===matchId){m=z;break outer}}}
-  }
-  if(m){
-    if(typeof matchesData!=='undefined' && !matchesData.includes(m)) matchesData=[m];
-    openMatchDetail(Math.max(0,typeof matchesData!=='undefined'?matchesData.indexOf(m):0));
-  }
-};
-window.bs3SyncCloud=async function(){
-  try{
-    if(typeof sb==='undefined'||!sb){alert('Supabase nie jest dostępny.');return}
-    if(typeof currentUser==='undefined'||!currentUser){alert('Zaloguj się, aby zapisać predykcje w chmurze.');return}
-    const rows=window.BetStatsEngine.getLogs();
-    if(!rows.length){alert('Brak lokalnych predykcji do synchronizacji.');return}
-    const payload=rows.map(r=>({
-      user_id:currentUser.id,prediction_key:r.key,model_version:r.modelVersion,match_id:r.matchId,
-      home:r.home,away:r.away,league:r.league,league_id:r.leagueId,match_datetime:r.datetime,
-      market:r.market,market_name:r.marketName,probability:r.probability,odds:r.odds,fair_odds:r.fairOdds,
-      edge_pct:r.edgePct,ev_pct:r.evPct,confidence:r.confidence,data_quality:r.dataQuality,
-      agreement:r.agreement,score:r.score,status:r.status,result:r.result,result_source:r.resultSource,
-      final_score:r.finalScore||null,created_at:r.createdAt,settled_at:r.finishedAt||null
-    }));
-    const {error}=await sb.from('prediction_logs').upsert(payload,{onConflict:'user_id,prediction_key'});
-    if(error)throw error;
-    alert(' Zsynchronizowano '+payload.length+' predykcji.');
-  }catch(e){console.error(e);alert('Nie udało się zsynchronizować. Jeśli tabela prediction_logs nie istnieje, uruchom supabase_prediction_logs.sql w Supabase.')}
-};
-window.bs3PullCloud=async function(){
-  try{
-    if(typeof sb==='undefined'||!sb||typeof currentUser==='undefined'||!currentUser){alert('Zaloguj się do Supabase.');return}
-    const {data,error}=await sb.from('prediction_logs').select('*').eq('user_id',currentUser.id).order('created_at',{ascending:true}).limit(10000);
-    if(error)throw error;
-    const local=window.BetStatsEngine.getLogs(), map=new Map(local.map(r=>[r.key,r]));
-    (data||[]).forEach(r=>map.set(r.prediction_key,{
-      key:r.prediction_key,createdAt:r.created_at,matchId:r.match_id,home:r.home,away:r.away,league:r.league,leagueId:r.league_id,
-      datetime:r.match_datetime,market:r.market,marketName:r.market_name,probability:Number(r.probability),odds:r.odds?Number(r.odds):null,
-      fairOdds:r.fair_odds?Number(r.fair_odds):null,edgePct:r.edge_pct===null?null:Number(r.edge_pct),evPct:r.ev_pct===null?null:Number(r.ev_pct),
-      confidence:r.confidence,dataQuality:r.data_quality,agreement:r.agreement,score:r.score,status:r.status,
-      modelVersion:r.model_version,result:r.result,resultSource:r.result_source,finalScore:r.final_score,finishedAt:r.settled_at
-    }));
-    localStorage.setItem('betstats_prediction_log_v3',JSON.stringify([...map.values()].slice(-10000)));
-    renderModelCenter();alert(' Pobrano '+(data||[]).length+' predykcji.');
-  }catch(e){console.error(e);alert('Nie udało się pobrać historii z Supabase. Sprawdź tabelę prediction_logs.')}
-};
-window.bs3Set=function(k,v){const s=getSettings();s[k]=Number(v)||0;saveSettings(s);renderModelCenter();if(typeof renderMatches==='function')renderMatches()};
-window.bs3ToggleGreen=function(){const s=getSettings();s.greenOnly=!s.greenOnly;saveSettings(s);renderModelCenter();if(typeof renderMatches==='function')renderMatches()};
-window.bs3ExportLogs=function(){const blob=new Blob([JSON.stringify(window.BetStatsEngine.getLogs(),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='betstats-predictions.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
-window.bs3ClearLogs=function(){if(confirm('Usunąć lokalną historię predykcji?')){localStorage.removeItem('betstats_prediction_log_v3');renderModelCenter()}};
-
-/* Add Model Center to the top navigation. */
-function addNavButton(){
-  if(document.getElementById('bs3-nav-btn'))return;
-  const btn=document.createElement('button');btn.id='bs3-nav-btn';btn.className='btn-outline text-xs px-3 py-2 rounded-lg font-semibold';btn.textContent='Centrum modelu';btn.onclick=openModelCenter;
-  const nav=document.querySelector('button[onclick="openDashboard()"]');if(nav&&nav.parentElement)nav.parentElement.insertBefore(btn,nav);
-}
-window.addEventListener('load',()=>{createCenter();addNavButton();setTimeout(loadFinishedAndResolve,1200)});
-})();
-</script>
-
-
-<!-- BETSTATS BETA MODEL CENTER CLICK/LOCK FIX -->
-<style>
-/* Keep the center modal above the app without creating an invisible click shield. */
-#bs3-model-modal{pointer-events:none}
-#bs3-model-modal.show{pointer-events:auto}
-#bs3-model-modal .bs3-modal-inner{pointer-events:auto}
-#bs3-model-modal .bs3-panel{pointer-events:auto}
-#bs3-model-modal button,#bs3-model-modal input{pointer-events:auto}
-#bs3-close-fixed{position:fixed;top:78px;right:18px;z-index:10002;background:#dc2626;border-color:#fecaca;color:#fff}
-</style>
-<script>
-(function(){
-  'use strict';
-  function wireModelCenter(){
-    const modal=document.getElementById('bs3-model-modal');
-    if(!modal || modal.dataset.bs31Wired==='1') return;
-    modal.dataset.bs31Wired='1';
-
-    // Never let the full-screen backdrop swallow clicks intended for the panel.
-    modal.addEventListener('click', function(e){
-      if(e.target===modal){
-        modal.classList.remove('show');
-      }
-    }, true);
-
-    const inner=modal.querySelector('.bs3-modal-inner');
-    if(inner){
-      inner.addEventListener('click', function(e){ e.stopPropagation(); }, false);
-    }
-
-    // Inline onclick handlers in a large legacy page are fragile. Delegate all
-    // Model Center controls from one listener instead.
-    modal.addEventListener('click', function(e){
-      const btn=e.target.closest('button');
-      if(!btn) return;
-      const txt=(btn.textContent||'').trim();
-
-      try{
-        if(txt.includes('Zamknij')){
-          modal.classList.remove('show');
-          return;
-        }
-        if(txt.includes('Tylko mocne')){
-          if(typeof window.bs3ToggleGreen==='function') window.bs3ToggleGreen();
-          return;
-        }
-        if(txt.includes('Eksport')){
-          if(typeof window.bs3ExportLogs==='function') window.bs3ExportLogs();
-          return;
-        }
-        if(txt.includes('Synchronizuj')){
-          if(typeof window.bs3SyncCloud==='function') window.bs3SyncCloud();
-          return;
-        }
-        if(txt.includes('Pobierz')){
-          if(typeof window.bs3PullCloud==='function') window.bs3PullCloud();
-          return;
-        }
-        if(txt.includes('Wyczyść')){
-          if(typeof window.bs3ClearLogs==='function') window.bs3ClearLogs();
-          return;
-        }
-      }catch(err){
-        console.error('BetStats Model Center action failed:',err);
-      }
-    }, false);
-
-    // If the browser receives ESC, always close the center.
-    document.addEventListener('keydown',function(e){
-      if(e.key==='Escape'){
-        const m=document.getElementById('bs3-model-modal');
-        if(m) m.classList.remove('show');
-      }
-    });
-  }
-
-  // The modal is created lazily, so observe its insertion.
-  const observer=new MutationObserver(function(){
-    wireModelCenter();
-    const modal=document.getElementById('bs3-model-modal');
-    if(modal && modal.classList.contains('show')) document.body.style.pointerEvents='';
-  });
-  observer.observe(document.documentElement,{childList:true,subtree:true});
-
-  // Patch the opener so wiring happens immediately after creation.
-  const timer=setInterval(function(){
-    if(typeof window.openModelCenter==='function'){
-      const original=window.openModelCenter;
-      if(original.__bs31patched) { clearInterval(timer); return; }
-      const wrapped=async function(){
-        const result=await original.apply(this,arguments);
-        wireModelCenter();
-        return result;
-      };
-      wrapped.__bs31patched=true;
-      window.openModelCenter=wrapped;
-      clearInterval(timer);
-    }
-  },50);
-
-  window.addEventListener('load',wireModelCenter);
-})();
-</script>
-
 
 <!-- BETSTATS BETA — DLACZE TEN MECZ + ALERTY -->
 <style>

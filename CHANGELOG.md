@@ -1,47 +1,49 @@
-# BetStats 1.0 — Beta
+# BetStats BETA — aktualizacja prywatności
 
-## Dostęp
+- Dashboard ładuje wyłącznie kupony zalogowanego użytkownika.
+- Publiczny profil nie pobiera ani nie wyświetla historii kuponów.
+- Dodano `supabase_bets_private.sql` z pełnym resetem polityk RLS tabeli `bets`.
+- Włączono `FORCE ROW LEVEL SECURITY` dla `bets`.
+- Dodano dodatkową filtrację `user_id` po stronie UI jako zabezpieczenie defensywne.
+
+**WAŻNE:** uruchom `supabase_bets_private.sql` w Supabase SQL Editor.
+
+# BetStats 1.0 BETA — Changelog
+
+## Beta launch
+
+### Dostęp
 - Aplikacja wymaga logowania.
-- Rejestracja nowych kont jest wyłączona na czas zamkniętej bety.
+- Rejestracja nowych kont została zamknięta.
+- Supabase powinien dodatkowo mieć wyłączone publiczne signup.
 
-## Zakres
-- Piłka nożna: dostępne wybrane ligi.
-- Rozgrywki europejskie: WKRÓTCE.
-- Siatkówka: WKRÓTCE.
+### Sport i ligi
+- Piłka nożna pozostaje aktywna.
+- Polskie rozgrywki pozostają aktywne.
+- La Liga, Bundesliga i rozgrywki UEFA są oznaczone jako WKRÓTCE.
+- Siatkówka jest oznaczona jako WKRÓTCE.
 
-## Bezpieczeństwo danych
-- Panel gracza pobiera wyłącznie zakłady `user_id` zalogowanego użytkownika.
-- Społeczność działa przez Supabase.
+### UI
+- Usunięto osobny interfejs Model Center.
+- Silnik `betstats-engine.js` nadal działa.
+- Radar jest domyślnie ukryty i otwierany przyciskiem.
+- Dodano hover/motion dla przycisków i kart.
+- Dodano animacje przejść między sportem, ligą i aplikacją.
+- Poprawiono responsywność i zachowanie formularzy.
 
+### Wyniki
+- Naprawiono wyszukiwarkę zakończonych meczów, która traciła fokus po jednym znaku.
+- Kliknięcie zakończonego meczu otwiera jego statystyki zamiast zamykać widok.
 
-# Dziennik zmian
+### Społeczność
+- Usunięto lokalny `localStorage` feed.
+- Posty są przechowywane w Supabase.
+- Dodano wspólny feed dla użytkowników.
+- Dodano like/dislike.
+- Dodano komentarze.
+- Reakcje i komentarze są przypisane do kont użytkowników.
 
-## 3.1.0 — Społeczność i polski interfejs
-
-### Nowe
-
-- Dodano zakładkę **Społeczność** z tablicą analiz, kategoriami i formularzem publikacji.
-- Wpisy użytkownika są zapisywane lokalnie w przeglądarce; moduł ma strukturę gotową do późniejszego podłączenia do Supabase.
-- Dodano standard wpisu społeczności: argumenty, dane i ryzyko zamiast obietnic zysku.
-- Rozszerzono stronę **O projekcie** o metodologię, ocenę jakości danych i zasady kalibracji.
-
-### Ulepszenia
-
-- Centrum modelu zostało spolszczone: nazwy metryk, selekcji, kalibracji i przycisków są czytelne po polsku.
-- Zastąpiono część emoji opisowymi etykietami w głównej nawigacji i Centrum modelu.
-- Nazwy statusów prezentowanych użytkownikowi są bardziej zrozumiałe: „Mocny sygnał” i „Przewaga kursowa”.
-- Komunikaty o prawdopodobieństwie i pewności wyraźniej podkreślają, że model nie gwarantuje wyniku.
-
-### Znane ograniczenia
-
-- Tablica Społeczności nie ma jeszcze logowania, moderacji, komentarzy ani wspólnej bazy wpisów.
-- Model wymaga długiej, rozliczonej próby przed wyciąganiem wniosków o skuteczności lub ROI.
-
-## 3.0.1
-
-- Poprawiono obsługę nakładki Centrum modelu, zamykanie klawiszem Escape i kliknięciem poza oknem.
-
-## 3.0.0
-
-- Dodano model łączący oczekiwane gole, historię oraz strzały celne.
-- Dodano radar sygnałów, dziennik predykcji, kalibrację, wynik Brier’a i opcjonalną synchronizację z Supabase.
+### Prywatność panelu gracza
+- Pobieranie zakładów jest filtrowane po `user_id`.
+- Aktualizacja i usuwanie zakładów są dodatkowo ograniczone do właściciela.
+- Dodano RLS dla tabeli `bets` w skrypcie Supabase.
