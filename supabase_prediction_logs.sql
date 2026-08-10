@@ -1,4 +1,4 @@
--- BetStats 3.0 prediction history (optional cloud sync)
+-- BetStats 1.0 prediction history (optional cloud sync)
 -- Run this in Supabase SQL Editor.
 create table if not exists public.prediction_logs (
   id uuid primary key default gen_random_uuid(),

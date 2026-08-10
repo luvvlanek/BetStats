@@ -1,4 +1,4 @@
-/* BetStats 3.0 — selection, value, calibration & radar engine
+/* BetStats 1.0 — selection, value, calibration & radar engine
  * Dependency-free. Estimates are not guarantees. Never use confidence as a guarantee.
  */
 (function(){

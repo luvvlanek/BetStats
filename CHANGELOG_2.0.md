@@ -1,4 +1,4 @@
-# BetStats 2.0 — changes
+# BetStats 1.0 — changes
 
 Implemented in this build:
 

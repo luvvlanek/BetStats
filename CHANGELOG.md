@@ -1,3 +1,19 @@
+# BetStats 1.0 — Beta
+
+## Dostęp
+- Aplikacja wymaga logowania.
+- Rejestracja nowych kont jest wyłączona na czas zamkniętej bety.
+
+## Zakres
+- Piłka nożna: dostępne wybrane ligi.
+- Rozgrywki europejskie: WKRÓTCE.
+- Siatkówka: WKRÓTCE.
+
+## Bezpieczeństwo danych
+- Panel gracza pobiera wyłącznie zakłady `user_id` zalogowanego użytkownika.
+- Społeczność działa przez Supabase.
+
+
 # Dziennik zmian
 
 ## 3.1.0 — Społeczność i polski interfejs

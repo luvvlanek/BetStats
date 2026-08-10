@@ -4,7 +4,7 @@
 - Dodano opcjonalne powiadomienia przeglądarki z deduplikacją.
 - Podniesiono wersję silnika do `3.1-explain-alerts-calibratable`.
 
-# BetStats 3.0
+# BetStats 1.0
 
 - Nowy ensemble goal model.
 - Data Quality / Confidence / Model Agreement.

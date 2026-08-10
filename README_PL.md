@@ -1,4 +1,4 @@
-# BetStats Polska
+# BetStats 1.0 Polska — Beta
 
 BetStats to aplikacja do analizy meczów piłkarskich i siatkarskich. Łączy statystyki drużyn z modelem prawdopodobieństwa, pokazuje jakość danych oraz pozwala obserwować, jak predykcje wypadają po rozliczeniu.
 
@@ -22,3 +22,13 @@ Model traktuje wynik jako niepewną estymację. Wskaźnik pewności nie jest sza
 2. Wprowadzić profile analityków z transparentną historią rozliczeń.
 3. Rozdzielić dane wejściowe, model i interfejs do mniejszych modułów oraz objąć je testami.
 4. Zbudować niezależny proces backtestów i publikować metodologię zmian modelu.
+
+
+## Tryb Beta 1.0
+
+- Rejestracja nowych kont jest tymczasowo wyłączona.
+- Dostęp do aplikacji wymaga zalogowania.
+- Rozgrywki europejskie (Liga Mistrzów, Liga Europy, Liga Konferencji) są oznaczone jako „Wkrótce”.
+- Moduł siatkarski jest oznaczony jako „Wkrótce”.
+- Panel gracza pobiera wyłącznie rekordy należące do zalogowanego użytkownika.
+- Społeczność korzysta z Supabase; reakcje i komentarze wymagają tabel z `supabase_community.sql`.

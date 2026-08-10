@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BetStats 3.0 backtest / calibration report.
+BetStats 1.0 backtest / calibration report.
 
 Use prediction records exported from the app:
   python backtest.py betstats-predictions.json

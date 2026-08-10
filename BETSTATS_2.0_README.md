@@ -1,6 +1,6 @@
-# BetStats 2.0
+# BetStats 1.0
 
-This ZIP contains a first integrated version of the BetStats 2.0 selection engine.
+This ZIP contains a first integrated version of the BetStats 1.0 selection engine.
 
 ## What changed
 
