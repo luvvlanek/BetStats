@@ -1,50 +1,50 @@
 {
     "matches": {
-        "Śląsk Wrocław_Cracovia": {
-            "home": "Śląsk Wrocław",
-            "away": "Cracovia",
+        "Jagiellonia Białystok_Widzew Łódź": {
+            "home": "Jagiellonia Białystok",
+            "away": "Widzew Łódź",
             "is_live": false,
             "is_finished": true,
-            "score": "0:0",
+            "score": "0:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "09.08. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_QeWx1pin",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/slask-wroclaw-E1Oxemse/?mid=QeWx1pin",
+            "match_id": "g_1_WhZpaOLb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/widzew-lodz-rNOIW3uC/?mid=WhZpaOLb",
             "match_stats": {
                 "corners": {
-                    "home": 4,
-                    "away": 6
+                    "home": 8,
+                    "away": 3
                 },
                 "yellow": {
-                    "home": 0,
+                    "home": 4,
                     "away": 3
                 },
                 "red": {
-                    "home": 1,
-                    "away": 0
+                    "home": null,
+                    "away": null
                 },
                 "shots": {
-                    "home": 12,
-                    "away": 17
+                    "home": 18,
+                    "away": 16
                 },
                 "shots_on_target": {
-                    "home": 1,
+                    "home": 5,
                     "away": 5
                 },
                 "xg": {
-                    "home": 0.74,
-                    "away": 1.48
+                    "home": 1.08,
+                    "away": 1.1
                 },
                 "possession": {
-                    "home": 44,
-                    "away": 56
+                    "home": 60,
+                    "away": 40
                 },
                 "fouls": {
-                    "home": 8,
-                    "away": 12
+                    "home": 19,
+                    "away": 14
                 },
                 "offsides": {
                     "home": 3,
@@ -59,7 +59,7 @@
             "is_finished": true,
             "score": "3:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "09.08. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -101,6 +101,58 @@
                 "offsides": {
                     "home": 1,
                     "away": 1
+                }
+            }
+        },
+        "Śląsk Wrocław_Cracovia": {
+            "home": "Śląsk Wrocław",
+            "away": "Cracovia",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "09.08. 12:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_QeWx1pin",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/slask-wroclaw-E1Oxemse/?mid=QeWx1pin",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 3
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 17
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.74,
+                    "away": 1.48
+                },
+                "possession": {
+                    "home": 44,
+                    "away": 56
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
                 }
             }
         },
@@ -689,7 +741,44 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_jPftWPiC",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/widzew-lodz-rNOIW3uC/wisla-plock-QoZYVU3E/?mid=jPftWPiC",
-            "match_stats": null
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 4
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 15,
+                    "away": 16
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.53,
+                    "away": 1.79
+                },
+                "possession": {
+                    "home": 45,
+                    "away": 55
+                },
+                "fouls": {
+                    "home": 12,
+                    "away": 16
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
         },
         "Zagłębie Lubin_Piast Gliwice": {
             "home": "Zagłębie Lubin",
@@ -826,72 +915,6 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
-        "Jagiellonia Białystok_Widzew Łódź": {
-            "home": "Jagiellonia Białystok",
-            "away": "Widzew Łódź",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:2",
-            "stage": "79",
-            "datetime": "79",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_WhZpaOLb",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/widzew-lodz-rNOIW3uC/?mid=WhZpaOLb"
-        },
-        "ŁKS Łódź_Chrobry Głogów": {
-            "home": "ŁKS Łódź",
-            "away": "Chrobry Głogów",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:2",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_zH8GqVl1",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/lks-lodz-ShUKWHDG/?mid=zH8GqVl1",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 11,
-                    "away": 6
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 4
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 57,
-                    "away": 43
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
-        },
         "Bruk-Bet T._Warta Poznań": {
             "home": "Bruk-Bet T.",
             "away": "Warta Poznań",
@@ -899,7 +922,7 @@
             "is_finished": true,
             "score": "1:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "09.08. 15:15",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -940,6 +963,58 @@
                 },
                 "offsides": {
                     "home": 2,
+                    "away": 1
+                }
+            }
+        },
+        "ŁKS Łódź_Chrobry Głogów": {
+            "home": "ŁKS Łódź",
+            "away": "Chrobry Głogów",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "09.08. 12:30",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_zH8GqVl1",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/lks-lodz-ShUKWHDG/?mid=zH8GqVl1",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 1,
                     "away": 1
                 }
             }
@@ -1786,5 +1861,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-09 20:04:58"
+    "updated": "2026-08-10 05:24:43"
 }
