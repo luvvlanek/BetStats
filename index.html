@@ -161,7 +161,7 @@
     </style>
 
 <style>
-/* BetStats 2.0 — Radar */
+/* BetStats BETA  — Radar */
 #betstats-radar{font-family:inherit}
 .bs-radar-head{display:flex;justify-content:space-between;gap:20px;align-items:center;background:linear-gradient(135deg,#07111c,#0d1b2a);color:#fff;border-radius:20px;padding:22px 24px;margin-bottom:12px;box-shadow:0 14px 40px rgba(0,0,0,.14)}
 .bs-kicker{font-size:10px;letter-spacing:.18em;font-weight:800;color:#67e8a5;margin-bottom:4px}
@@ -1691,7 +1691,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
 
         let html = '<div id="match-card-' + i + '" class="bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" ' + borderStyle + ' onclick="openMatchDetail(' + i + ')">';
         if (liveBadge) html += liveBadge;
-        if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block"></span> HOT · ' + vb.length + ' value bets</div>'; if (v2) html += '<div class="px-4 py-2 bg-slate-50 border-b border-slate-200 flex justify-between items-center text-[10px]"><span class="font-bold text-slate-500">BETSTATS 2.0 · '+v2.confidence+'/100 CONFIDENCE</span><span class="'+(v2.dataQuality>=70?'text-green-600':'text-amber-600')+' font-black">DATA '+v2.dataQuality+'/100</span></div>';
+        if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block"></span> HOT · ' + vb.length + ' value bets</div>'; if (v2) html += '<div class="px-4 py-2 bg-slate-50 border-b border-slate-200 flex justify-between items-center text-[10px]"><span class="font-bold text-slate-500">BETSTATS BETA · '+v2.confidence+'/100 CONFIDENCE</span><span class="'+(v2.dataQuality>=70?'text-green-600':'text-amber-600')+' font-black">DATA '+v2.dataQuality+'/100</span></div>';
 
         html += '<div class="flex justify-between items-center px-4 py-2 bg-gray-50 border-b border-gray-200">';
         html += '<span class="text-[10px] font-bold text-gray-600 tracking-wider">' + (m.league_flag || '') + ' ' + (m.league_name || '').toUpperCase() + '</span>';
@@ -2568,7 +2568,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
     }).join('');
 
     el.innerHTML =
-      '<div class="bs-radar-head"><div><div class="bs-kicker">BETSTATS 2.0</div><h3>Radar — najlepsze sygnały</h3><p>Automatycznie odrzuca słabe dane i niską zgodność modelu.</p></div>'+
+      '<div class="bs-radar-head"><div><div class="bs-kicker">BETSTATS BETA</div><h3>Radar — najlepsze sygnały</h3><p>Automatycznie odrzuca słabe dane i niską zgodność modelu.</p></div>'+
       '<div class="bs-radar-stats"><span><b>'+r.analyzed+'</b><small>meczów</small></span><span><b>'+r.green+'</b><small>mocnych</small></span><span><b>'+r.value+'</b><small>przewag</small></span><span><b>'+r.elite+'</b><small>najwyższych</small></span></div></div>'+
       (rows || '<div class="bs-empty">Brak wystarczająco mocnych sygnałów. I to jest OK — model nie musi grać każdego meczu.</div>');
   };
@@ -2622,7 +2622,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
 </script>
 
 <style>
-/* BETSTATS 3.0 MODEL CENTER */
+/* BETSTATS BETA MODEL CENTER */
 .bs3-panel{background:linear-gradient(145deg,#0b1118,#101923);color:#e8eef7;border:1px solid rgba(255,255,255,.09);border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.18);overflow:hidden}
 .bs3-panel *{box-sizing:border-box}.bs3-muted{color:#93a1b3}.bs3-green{color:#35d07f}.bs3-yellow{color:#f5c451}.bs3-red{color:#ff6b6b}.bs3-blue{color:#72a7ff}
 .bs3-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.bs3-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:15px}
@@ -2679,7 +2679,7 @@ if(oldOpen){
       const s=getSettings();
       const top=a.markets.filter(x=>eligible(x,s)).sort((u,v)=>v.score-u.score).slice(0,4);
       const html='<div id="bs3-detail-engine" class="mt-5 bs3-panel p-5">'+
-        '<div class="flex flex-wrap justify-between gap-3 items-start"><div><div class="text-[10px] font-black tracking-[.18em] text-green-400">SILNIK BETSTATS 3.0</div><h4 class="text-xl font-black text-white mt-1">Ocena modelu</h4></div>'+
+        '<div class="flex flex-wrap justify-between gap-3 items-start"><div><div class="text-[10px] font-black tracking-[.18em] text-green-400">SILNIK BETSTATS BETA</div><h4 class="text-xl font-black text-white mt-1">Ocena modelu</h4></div>'+
         '<div class="flex gap-2 flex-wrap"><span class="bs3-badge green">PEWNOŚĆ '+a.confidence+'/100</span><span class="bs3-badge green">DANE '+a.dataQuality+'/100</span><span class="bs3-badge value">ZGODNOŚĆ '+a.modelAgreement+'/100</span></div></div>'+
         '<div class="bs3-grid mt-4">'+
         '<div class="bs3-card"><div class="bs3-label">Oczekiwane gole</div><div class="bs3-big">'+a.lambdas.home+' — '+a.lambdas.away+'</div><div class="bs3-muted text-[10px] mt-1">'+esc(m.home)+' / '+esc(m.away)+'</div></div>'+
@@ -2715,7 +2715,7 @@ function createCenter(){
   if(document.getElementById('bs3-model-modal'))return;
   const d=document.createElement('div');d.id='bs3-model-modal';d.className='bs3-modal';
   d.innerHTML='<button type="button" id="bs3-close-fixed" class="bs3-btn">Zamknij centrum modelu</button><div class="bs3-modal-inner">'+
-    '<div class="bs3-panel p-5 md:p-7"><div class="flex justify-between items-start gap-3"><div><div class="text-[10px] font-black tracking-[.2em] text-green-400">BETSTATS 3.0</div><h2 class="text-2xl md:text-3xl font-black text-white mt-1">Centrum modelu</h2><p class="bs3-muted text-xs mt-1">Radar, selekcja, kalibracja i historia predykcji.</p></div><button type="button" id="bs3-close-btn" class="bs3-btn">Zamknij</button></div>'+
+    '<div class="bs3-panel p-5 md:p-7"><div class="flex justify-between items-start gap-3"><div><div class="text-[10px] font-black tracking-[.2em] text-green-400">BETSTATS BETA</div><h2 class="text-2xl md:text-3xl font-black text-white mt-1">Centrum modelu</h2><p class="bs3-muted text-xs mt-1">Radar, selekcja, kalibracja i historia predykcji.</p></div><button type="button" id="bs3-close-btn" class="bs3-btn">Zamknij</button></div>'+
     '<div id="bs3-center-body" class="mt-5"></div></div></div>';
   const close=()=>d.classList.remove('show');
   d.querySelector('#bs3-close-btn').addEventListener('click',close); d.querySelector('#bs3-close-fixed').addEventListener('click',close);
@@ -2813,7 +2813,7 @@ window.addEventListener('load',()=>{createCenter();addNavButton();setTimeout(loa
 </script>
 
 
-<!-- BETSTATS 3.0.1 MODEL CENTER CLICK/LOCK FIX -->
+<!-- BETSTATS BETA MODEL CENTER CLICK/LOCK FIX -->
 <style>
 /* Keep the center modal above the app without creating an invisible click shield. */
 #bs3-model-modal{pointer-events:none}
@@ -2918,7 +2918,7 @@ window.addEventListener('load',()=>{createCenter();addNavButton();setTimeout(loa
 </script>
 
 
-<!-- BETSTATS 3.1 — DLACZE TEN MECZ + ALERTY -->
+<!-- BETSTATS BETA — DLACZE TEN MECZ + ALERTY -->
 <style>
 .bs31-explain{margin-top:16px;border:1px solid #dbe3ec;border-radius:18px;background:linear-gradient(145deg,#f8fafc,#fff);overflow:hidden}
 .bs31-explain-head{padding:16px 18px;background:linear-gradient(135deg,#0f172a,#1e3a5f);color:#fff}
@@ -2980,7 +2980,7 @@ window.bs31RenderWhy=function(m){
   const {a,h,aw,top,positives,negatives}=d;
   const markets=a.markets.map(x=>'<div class="bs31-market-row"><div><b>'+esc31(x.type)+'</b><div style="color:#64748b;font-size:9px">'+esc31(x.status)+(x.value?' · VALUE':'')+'</div></div><b>'+x.probPct+'%</b><b>'+x.fairOdds+'</b><b>'+(x.edgePct===null?'—':(x.edgePct>0?'+':'')+x.edgePct+' pp')+'</b></div>').join('');
   return '<section class="bs31-explain">'+
-    '<div class="bs31-explain-head"><div style="font-size:9px;letter-spacing:.15em;font-weight:900;color:#86efac">BETSTATS 3.1 · EXPLAINABILITY</div><div style="font-size:20px;font-weight:900;margin-top:3px">Dlaczego ten mecz?</div><div style="font-size:11px;opacity:.78;margin-top:3px">'+esc31(m.home)+' kontra '+esc31(m.away)+'</div></div>'+
+    '<div class="bs31-explain-head"><div style="font-size:9px;letter-spacing:.15em;font-weight:900;color:#86efac">BETSTATS BETA · EXPLAINABILITY</div><div style="font-size:20px;font-weight:900;margin-top:3px">Dlaczego ten mecz?</div><div style="font-size:11px;opacity:.78;margin-top:3px">'+esc31(m.home)+' kontra '+esc31(m.away)+'</div></div>'+
     '<div class="bs31-explain-grid">'+
       '<div class="bs31-stat"><small>Najmocniejszy rynek</small><b>'+(top?esc31(top.type):'—')+'</b></div>'+
       '<div class="bs31-stat"><small>Szansa modelu</small><b>'+(top?top.probPct+'%':'—')+'</b></div>'+
@@ -3020,7 +3020,7 @@ function createAlertModal(){
   if(document.getElementById('bs31-alert-modal'))return;
   const d=document.createElement('div');d.id='bs31-alert-modal';d.className='bs31-alert-modal';
   d.innerHTML='<div class="bs31-alert-panel">'+
-    '<div class="bs31-alert-head"><div style="font-size:9px;letter-spacing:.15em;font-weight:900;color:#86efac">BETSTATS 3.1</div><div style="font-size:22px;font-weight:900">Alerty</div><div style="font-size:11px;opacity:.8">Powiadom, gdy mecz spełni Twoje warunki jakości.</div></div>'+
+    '<div class="bs31-alert-head"><div style="font-size:9px;letter-spacing:.15em;font-weight:900;color:#86efac">BETSTATS BETA</div><div style="font-size:22px;font-weight:900">Alerty</div><div style="font-size:11px;opacity:.8">Powiadom, gdy mecz spełni Twoje warunki jakości.</div></div>'+
     '<div class="bs31-alert-body">'+
       '<div class="bs31-alert-grid"><label>Liga<select id="bs31-alert-league"></select></label><label>Rynek<select id="bs31-alert-market"><option value="ALL">Dowolny rynek</option><option value="btts">BTTS</option><option value="o15">Over 1.5</option><option value="o25">Over 2.5</option><option value="o35">Over 3.5</option></select></label>'+
       '<label>Min. szansa modelu (%)<input id="bs31-alert-prob" type="number" min="50" max="95" step="1"></label><label>Min. jakość danych<input id="bs31-alert-dq" type="number" min="50" max="100" step="1"></label></div>'+
