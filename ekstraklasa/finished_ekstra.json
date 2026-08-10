@@ -1,6 +1,162 @@
 {
     "matches": [
         {
+            "home": "Jagiellonia Białystok",
+            "away": "Widzew Łódź",
+            "score": "0:2",
+            "datetime": "09.08. 18:15",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_WhZpaOLb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/widzew-lodz-rNOIW3uC/?mid=WhZpaOLb",
+            "match_stats": {
+                "corners": {
+                    "home": 8,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 16
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 1.08,
+                    "away": 1.1
+                },
+                "possession": {
+                    "home": 60,
+                    "away": 40
+                },
+                "fouls": {
+                    "home": 19,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
+        {
+            "home": "Lech Poznań",
+            "away": "Piast Gliwice",
+            "score": "3:0",
+            "datetime": "09.08. 15:30",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_46Xhc2jB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/piast-gliwice-ve2oT9ck/?mid=46Xhc2jB",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 3.12,
+                    "away": 1.07
+                },
+                "possession": {
+                    "home": 47,
+                    "away": 53
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 16
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "Śląsk Wrocław",
+            "away": "Cracovia",
+            "score": "0:0",
+            "datetime": "09.08. 12:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_QeWx1pin",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/slask-wroclaw-E1Oxemse/?mid=QeWx1pin",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 3
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 17
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.74,
+                    "away": 1.48
+                },
+                "possession": {
+                    "home": 44,
+                    "away": 56
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
+        {
             "home": "Korona Kielce",
             "away": "Legia Warszawa",
             "score": "1:1",
@@ -28,15 +184,15 @@
                 },
                 "shots": {
                     "home": 14,
-                    "away": 6
+                    "away": 7
                 },
                 "shots_on_target": {
                     "home": 3,
                     "away": 1
                 },
                 "xg": {
-                    "home": 0.72,
-                    "away": 0.69
+                    "home": 0.77,
+                    "away": 1.2
                 },
                 "possession": {
                     "home": 61,
@@ -637,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_juZK69O0",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/zaglebie-lubin-tlYOere0/?mid=juZK69O0",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 11
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 17
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 0.91,
-                    "away": 0.72
-                },
-                "possession": {
-                    "home": 35,
-                    "away": 65
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Wisła Kraków",
@@ -795,6 +914,110 @@
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
+        },
+        {
+            "home": "Bruk-Bet T.",
+            "away": "Warta Poznań",
+            "score": "1:2",
+            "datetime": "09.08. 15:15",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_vo33k0LM",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/warta-poznan-CrVUWAl8/?mid=vo33k0LM",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "ŁKS Łódź",
+            "away": "Chrobry Głogów",
+            "score": "1:2",
+            "datetime": "09.08. 12:30",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_zH8GqVl1",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/lks-lodz-ShUKWHDG/?mid=zH8GqVl1",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
         },
         {
             "home": "Podbeskidzie B-B",
@@ -1485,44 +1708,7 @@
             "stage": "Koniec",
             "match_id": "g_1_UXKNxNyH",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/warta-poznan-CrVUWAl8/?mid=UXKNxNyH",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 6,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 0,
-                    "away": 6
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 47,
-                    "away": 53
-                },
-                "fouls": {
-                    "home": 7,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 5
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "ŁKS Łódź",
@@ -1537,44 +1723,7 @@
             "stage": "Koniec",
             "match_id": "g_1_d67Gvq74",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/polonia-bytom-vRn3UqXP/?mid=d67Gvq74",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 7
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 5,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 45,
-                    "away": 55
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Miedź Legnica",
@@ -1712,5 +1861,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-09 14:22"
+    "updated": "2026-08-10 15:46"
 }
