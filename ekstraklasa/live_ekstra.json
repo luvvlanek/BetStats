@@ -80,15 +80,15 @@
                 },
                 "shots": {
                     "home": 19,
-                    "away": 11
+                    "away": 12
                 },
                 "shots_on_target": {
                     "home": 7,
                     "away": 3
                 },
                 "xg": {
-                    "home": 3.35,
-                    "away": 1.42
+                    "home": 3.12,
+                    "away": 1.07
                 },
                 "possession": {
                     "home": 47,
@@ -131,16 +131,16 @@
                     "away": 0
                 },
                 "shots": {
-                    "home": 14,
-                    "away": 18
+                    "home": 12,
+                    "away": 17
                 },
                 "shots_on_target": {
                     "home": 1,
                     "away": 5
                 },
                 "xg": {
-                    "home": 0.87,
-                    "away": 1.52
+                    "home": 0.74,
+                    "away": 1.48
                 },
                 "possession": {
                     "home": 44,
@@ -184,15 +184,15 @@
                 },
                 "shots": {
                     "home": 14,
-                    "away": 8
+                    "away": 7
                 },
                 "shots_on_target": {
                     "home": 3,
                     "away": 1
                 },
                 "xg": {
-                    "home": 1.1,
-                    "away": 1.59
+                    "home": 0.77,
+                    "away": 1.2
                 },
                 "possession": {
                     "home": 61,
@@ -235,7 +235,7 @@
                     "away": null
                 },
                 "shots": {
-                    "home": 16,
+                    "home": 15,
                     "away": 16
                 },
                 "shots_on_target": {
@@ -243,8 +243,8 @@
                     "away": 4
                 },
                 "xg": {
-                    "home": 2.39,
-                    "away": 0.89
+                    "home": 2.35,
+                    "away": 0.92
                 },
                 "possession": {
                     "home": 44,
@@ -295,8 +295,8 @@
                     "away": 6
                 },
                 "xg": {
-                    "home": 2.36,
-                    "away": 2.69
+                    "home": 2.24,
+                    "away": 2.28
                 },
                 "possession": {
                     "home": 46,
@@ -348,7 +348,7 @@
                 },
                 "xg": {
                     "home": 1.52,
-                    "away": 1.39
+                    "away": 1.4
                 },
                 "possession": {
                     "home": 49,
@@ -914,58 +914,6 @@
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
-        },
-        "Unia Skierniewice_Arka Gdynia": {
-            "home": "Unia Skierniewice",
-            "away": "Arka Gdynia",
-            "is_live": false,
-            "is_finished": true,
-            "score": "2:0",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_23A8oiKl",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/unia-skierniewice-l42F3w54/?mid=23A8oiKl",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 5
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 20,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 11,
-                    "away": 0
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 49,
-                    "away": 51
-                },
-                "fouls": {
-                    "home": 13,
-                    "away": 18
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
         },
         "Bruk-Bet T._Warta Poznań": {
             "home": "Bruk-Bet T.",
@@ -1708,7 +1656,44 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_YT91VvUj",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-warszawa-ADZjR3us/unia-skierniewice-l42F3w54/?mid=YT91VvUj",
-            "match_stats": null
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 9
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 23,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 55,
+                    "away": 45
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 15
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
         },
         "Lechia Gdańsk_Warta Poznań": {
             "home": "Lechia Gdańsk",
@@ -1876,5 +1861,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-10 20:23:39"
+    "updated": "2026-08-10 15:46:05"
 }

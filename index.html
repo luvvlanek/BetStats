@@ -160,6 +160,9 @@
         }
             /* BETA UX / AUTH GATE / MOTION */
         #auth-gate.flex { display:flex !important; }
+        #auth-modal { z-index: 10001 !important; }
+        body.auth-locked #auth-modal { visibility: visible !important; pointer-events: auto !important; }
+        body.auth-locked #auth-modal.hidden { display: none !important; }
         body.auth-locked { overflow:hidden; }
         body.auth-locked > *:not(#auth-gate):not(#auth-modal) { visibility:hidden !important; pointer-events:none !important; }
         body.auth-locked #auth-gate { visibility:visible !important; pointer-events:auto !important; }
@@ -1719,7 +1722,28 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
         });
     }
     function updateUIForUser() { const a = document.getElementById('auth-buttons'), u = document.getElementById('user-buttons'); if (!a || !u) return; if (currentUser) { a.classList.add('hidden'); u.classList.remove('hidden'); u.classList.add('flex'); const p = document.getElementById('profile-icon'); if (p) p.innerHTML = currentUser.email[0].toUpperCase(); } else { a.classList.remove('hidden'); u.classList.add('hidden'); u.classList.remove('flex'); } }
-    function openAuthModal(mode) { authMode = 'login'; updateAuthModalUI(); document.getElementById('auth-error').classList.add('hidden'); document.getElementById('auth-email').value = ''; document.getElementById('auth-password').value = ''; pushModalState('auth-modal'); document.getElementById('auth-modal').classList.remove('hidden'); }    function closeAuthModal() { document.getElementById('auth-modal').classList.add('hidden'); }
+    function openAuthModal(mode) {
+        authMode = 'login';
+        updateAuthModalUI();
+        const modal = document.getElementById('auth-modal');
+        const error = document.getElementById('auth-error');
+        const email = document.getElementById('auth-email');
+        const password = document.getElementById('auth-password');
+        if (!modal || !email || !password) return;
+        if (error) { error.textContent = ''; error.classList.add('hidden'); }
+        email.value = '';
+        password.value = '';
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+        modal.style.zIndex = '10001';
+        requestAnimationFrame(() => email.focus());
+    }
+    function closeAuthModal() {
+        const modal = document.getElementById('auth-modal');
+        if (!modal) return;
+        modal.classList.add('hidden');
+        modal.style.display = '';
+    }
     function updateAuthModalUI() { authMode = 'login'; document.getElementById('auth-title').textContent = 'Logowanie do BetStats'; document.getElementById('auth-submit').textContent = 'Zaloguj się'; }
     function toggleAuthMode() { authMode = 'login'; updateAuthModalUI(); document.getElementById('auth-error').textContent = 'Rejestracja jest zamknięta podczas bety.'; document.getElementById('auth-error').classList.remove('hidden'); }
     async function doAuth() { const email = document.getElementById('auth-email').value.trim(), password = document.getElementById('auth-password').value, errEl = document.getElementById('auth-error'); if (!email || !password) { errEl.textContent = 'Podaj email i hasło'; errEl.classList.remove('hidden'); return; } if (password.length < 6) { errEl.textContent = 'Hasło min 6 znaków'; errEl.classList.remove('hidden'); return; } try { let r; r = await sb.auth.signInWithPassword({ email, password }); if (r.error) { errEl.textContent = r.error.message; errEl.classList.remove('hidden'); return; } currentUser = r.data.user; updateUIForUser(); await loadBets(); closeAuthModal(); } catch (e) { errEl.textContent = e.message; errEl.classList.remove('hidden'); } }
@@ -3007,5 +3031,23 @@ window.addEventListener('load',()=>{setTimeout(()=>{addAlertButton();patchMatchD
 })();
 </script>
 
+<script>
+(function(){
+  function bindBetStatsAuthForm(){
+    const email = document.getElementById('auth-email');
+    const password = document.getElementById('auth-password');
+    if(!email || !password || email.dataset.bsBound) return;
+    email.dataset.bsBound = '1';
+    password.dataset.bsBound = '1';
+    [email,password].forEach(el => el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        if(typeof window.doAuth === 'function') window.doAuth();
+      }
+    }));
+  }
+  window.addEventListener('load', bindBetStatsAuthForm);
+})();
+</script>
 </body>
 </html>
