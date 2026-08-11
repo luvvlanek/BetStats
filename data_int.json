@@ -512,14 +512,14 @@
                 "over35_pct": 47,
                 "avg_goals_scored": 1.87,
                 "avg_goals_conceded": 1.33,
-                "avg_corners": 4.8,
-                "avg_yellow": 1.6,
+                "avg_corners": 5.0,
+                "avg_yellow": 2.2,
                 "avg_red": 0,
-                "avg_shots": 16.0,
-                "avg_shots_on_target": 6.8,
-                "avg_xg": 2.08,
-                "avg_fouls": 7.4,
-                "avg_offsides": 0.8,
+                "avg_shots": 16.8,
+                "avg_shots_on_target": 7.0,
+                "avg_xg": 1.67,
+                "avg_fouls": 8.0,
+                "avg_offsides": 1.2,
                 "form": [
                     "L",
                     "W",
@@ -531,29 +531,29 @@
                     2,
                     3,
                     3,
-                    10,
-                    6
+                    6,
+                    11
                 ],
                 "yellow_per_match": [
                     1,
                     2,
                     3,
                     1,
-                    1
+                    4
                 ],
                 "shots_per_match": [
                     14,
                     13,
                     14,
-                    20,
-                    19
+                    19,
+                    24
                 ],
                 "xg_per_match": [
                     1.25,
                     1.41,
                     1.17,
-                    4.49,
-                    2.09
+                    2.09,
+                    2.43
                 ]
             },
             "away_stats": {
@@ -2080,8 +2080,8 @@
             "h2h": [],
             "odds": {
                 "home": 1.29,
-                "draw": 4.9,
-                "away": 10.5
+                "draw": 5.3,
+                "away": 9.5
             }
         },
         {
@@ -2731,5 +2731,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-08-10 15:59"
+    "updated": "2026-08-11 05:18"
 }
