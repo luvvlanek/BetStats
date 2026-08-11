@@ -1,5 +1,525 @@
 {
     "matches": {
+        "Lyon (Fra)_Sparta Praga (Cze)": {
+            "home": "Lyon (Fra)",
+            "away": "Sparta Praga (Cze)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:0",
+            "stage": "Koniec",
+            "datetime": "11.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_U52T0mTs",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lyon-2akflumR/sparta-praga-6qA358jH/?mid=U52T0mTs",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 1
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 11,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 2.86,
+                    "away": 0.61
+                },
+                "possession": {
+                    "home": 56,
+                    "away": 44
+                },
+                "fouls": {
+                    "home": 20,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
+                }
+            }
+        },
+        "Sturm Graz (Aut)_Fenerbahce (Tur)": {
+            "home": "Sturm Graz (Aut)",
+            "away": "Fenerbahce (Tur)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:1",
+            "stage": "Koniec",
+            "datetime": "11.08. 18:30",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_StveztzB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/fenerbahce-MsbmracL/sturm-zsktjfsD/?mid=StveztzB",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 6
+                },
+                "xg": {
+                    "home": 1.34,
+                    "away": 2.17
+                },
+                "possession": {
+                    "home": 50,
+                    "away": 50
+                },
+                "fouls": {
+                    "home": 12,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
+        "Celje (Slo)_Ararat-Armenia (Arm)": {
+            "home": "Celje (Slo)",
+            "away": "Ararat-Armenia (Arm)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:0",
+            "stage": "Koniec",
+            "datetime": "11.08. 18:15",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_h4HQXDd3",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ararat-armenia-xlT9cL89/celje-SpbURe4O/?mid=h4HQXDd3",
+            "match_stats": {
+                "corners": {
+                    "home": 12,
+                    "away": 9
+                },
+                "yellow": {
+                    "home": 5,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 16,
+                    "away": 15
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
+        "Slovan Bratysława (Svk)_Mjallby (Swe)": {
+            "home": "Slovan Bratysława (Svk)",
+            "away": "Mjallby (Swe)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:0",
+            "stage": "Koniec",
+            "datetime": "11.08. 18:15",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_U9nGSlY1",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/mjallby-S0XtXM1E/slovan-bratislava-QRaWdwQf/?mid=U9nGSlY1",
+            "match_stats": {
+                "corners": {
+                    "home": 2,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 4,
+                    "away": 2
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 2
+                }
+            }
+        },
+        "Crvena zvezda (Srb)_H. Beer Sheva (Isr)": {
+            "home": "Crvena zvezda (Srb)",
+            "away": "H. Beer Sheva (Isr)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:2",
+            "stage": "Koniec",
+            "datetime": "11.08. 18:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_bPlOLtLH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/crvena-zvezda-ncRzHK14/h-beer-sheva-EXAD1YZP/?mid=bPlOLtLH",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 2
+                },
+                "red": {
+                    "home": 2,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 6
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 5
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 0
+                }
+            }
+        },
+        "NEC Nijmegen (Ned)_Olympiakos (Gre)": {
+            "home": "NEC Nijmegen (Ned)",
+            "away": "Olympiakos (Gre)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:1",
+            "stage": "Koniec",
+            "datetime": "11.08. 17:30\nPo\ndogr.",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_8G3qc5S6",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nijmegen-nRluRF0T/olympiakos-hnzvnHPS/?mid=8G3qc5S6",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 4
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 1.84,
+                    "away": 0.89
+                },
+                "possession": {
+                    "home": 54,
+                    "away": 46
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 19
+                },
+                "offsides": {
+                    "home": 4,
+                    "away": 2
+                }
+            }
+        },
+        "Żalgiris Kowno (Ltu)_Dinamo Zagrzeb (Cro)": {
+            "home": "Żalgiris Kowno (Ltu)",
+            "away": "Dinamo Zagrzeb (Cro)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "11.08. 17:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_jZwEihD7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/din-zagreb-8G5ufQTg/zalgiris-kowno-0p17kQla/?mid=jZwEihD7",
+            "match_stats": {
+                "corners": {
+                    "home": 8,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 5
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 61,
+                    "away": 39
+                },
+                "fouls": {
+                    "home": 16,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
+        "Bodo/Glimt (Nor)_Royale Union SG (Bel)": {
+            "home": "Bodo/Glimt (Nor)",
+            "away": "Royale Union SG (Bel)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:2",
+            "stage": "Koniec",
+            "datetime": "11.08. 16:00\nPo\ndogr.",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_6TOBr6DD",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bodo-glimt-S0WZMUNG/royale-union-sg-407h8Ird/?mid=6TOBr6DD",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 4
+                },
+                "red": {
+                    "home": 0,
+                    "away": 2
+                },
+                "shots": {
+                    "home": 23,
+                    "away": 19
+                },
+                "shots_on_target": {
+                    "home": 9,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 3.6,
+                    "away": 3.11
+                },
+                "possession": {
+                    "home": 70,
+                    "away": 30
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 4
+                }
+            }
+        },
+        "Sabah Baku (Aze)_Aarhus (Den)": {
+            "home": "Sabah Baku (Aze)",
+            "away": "Aarhus (Den)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "4:0",
+            "stage": "Koniec",
+            "datetime": "11.08. 16:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_rZs8POLh",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/aarhus-OOXnKGbO/sabah-baku-fNGcxbyr/?mid=rZs8POLh",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 29,
+                    "away": 14
+                },
+                "shots_on_target": {
+                    "home": 10,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 2.7,
+                    "away": 0.99
+                },
+                "possession": {
+                    "home": 50,
+                    "away": 50
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
+        "Kairat Almaty (Kaz)_Levski (Bul)": {
+            "home": "Kairat Almaty (Kaz)",
+            "away": "Levski (Bul)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:1",
+            "stage": "Koniec",
+            "datetime": "11.08. 15:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_nRxQfha4",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/kairat-almaty-CrO7xXpJ/levski-E5OOzgs4/?mid=nRxQfha4",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 4
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 21,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 1.34,
+                    "away": 1.04
+                },
+                "possession": {
+                    "home": 56,
+                    "away": 44
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
         "Fenerbahce (Tur)_Sturm Graz (Aut)": {
             "home": "Fenerbahce (Tur)",
             "away": "Sturm Graz (Aut)",
@@ -273,44 +793,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_bNBc695K",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lyon-2akflumR/sparta-praga-6qA358jH/?mid=bNBc695K",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 9
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 9,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 1.29,
-                    "away": 1.27
-                },
-                "possession": {
-                    "home": 52,
-                    "away": 48
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 7
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "H. Beer Sheva (Isr)_Crvena zvezda (Srb)": {
             "home": "H. Beer Sheva (Isr)",
@@ -325,44 +808,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_jaoGN2j5",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/crvena-zvezda-ncRzHK14/h-beer-sheva-EXAD1YZP/?mid=jaoGN2j5",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 8
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 5
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 7,
-                    "away": 19
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 7
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 42,
-                    "away": 58
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 4,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "Levski (Bul)_Kairat Almaty (Kaz)": {
             "home": "Levski (Bul)",
@@ -377,44 +823,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_v1ZHdEUi",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/kairat-almaty-CrO7xXpJ/levski-E5OOzgs4/?mid=v1ZHdEUi",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 0
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 0
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 71,
-                    "away": 29
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 5
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         "Ararat-Armenia (Arm)_Celje (Slo)": {
             "home": "Ararat-Armenia (Arm)",
@@ -429,44 +838,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_0AUvAA4d",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ararat-armenia-xlT9cL89/celje-SpbURe4O/?mid=0AUvAA4d",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 12,
-                    "away": 16
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 5
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 38,
-                    "away": 62
-                },
-                "fouls": {
-                    "home": 13,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "Mjallby (Swe)_Slovan Bratysława (Svk)": {
             "home": "Mjallby (Swe)",
@@ -481,44 +853,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_rgl8UA3k",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/mjallby-S0XtXM1E/slovan-bratislava-QRaWdwQf/?mid=rgl8UA3k",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 10,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 46,
-                    "away": 54
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 17
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Slovan Bratysława (Svk)_Iberia 1999 (Geo)": {
             "home": "Slovan Bratysława (Svk)",
@@ -533,44 +868,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_Iyfcootn",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/iberia-1999-dhfRkskl/slovan-bratislava-QRaWdwQf/?mid=Iyfcootn",
-            "match_stats": {
-                "corners": {
-                    "home": 1,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 15,
-                    "away": 8
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 48,
-                    "away": 52
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 15
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 4
-                }
-            }
+            "match_stats": null
         },
         "Crvena zvezda (Srb)_Larne (Nir)": {
             "home": "Crvena zvezda (Srb)",
@@ -585,44 +883,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_lCYyxXgc",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/crvena-zvezda-ncRzHK14/larne-44wiLnI5/?mid=lCYyxXgc",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 20,
-                    "away": 1
-                },
-                "shots_on_target": {
-                    "home": 12,
-                    "away": 0
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 77,
-                    "away": 23
-                },
-                "fouls": {
-                    "home": 3,
-                    "away": 1
-                },
-                "offsides": {
-                    "home": 5,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Górnik Zabrze (Pol)_Fenerbahce (Tur)": {
             "home": "Górnik Zabrze (Pol)",
@@ -637,44 +898,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_pWgNaaTh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/fenerbahce-MsbmracL/gornik-zabrze-2LH3Ywq4/?mid=pWgNaaTh",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 7
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 5
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 15,
-                    "away": 14
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 0.59,
-                    "away": 2.66
-                },
-                "possession": {
-                    "home": 48,
-                    "away": 52
-                },
-                "fouls": {
-                    "home": 8,
-                    "away": 15
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "H. Beer Sheva (Isr)_Vikingur Reykjavik (Ice)": {
             "home": "H. Beer Sheva (Isr)",
@@ -689,44 +913,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_Qetovb9a",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/h-beer-sheva-EXAD1YZP/vikingur-reykjavik-hdKpCN4d/?mid=Qetovb9a",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 9,
-                    "away": 3
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 2
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 56,
-                    "away": 44
-                },
-                "fouls": {
-                    "home": 18,
-                    "away": 22
-                },
-                "offsides": {
-                    "home": 5,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         "Univ. Craiova (Rou)_Levski (Bul)": {
             "home": "Univ. Craiova (Rou)",
@@ -741,44 +928,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_htmdduCs",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levski-E5OOzgs4/univ-craiova-bsd9fGaK/?mid=htmdduCs",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 17,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 5
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 55,
-                    "away": 45
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 20
-                },
-                "offsides": {
-                    "home": 4,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "Żalgiris Kowno (Ltu)_Klaksvik (Fai)": {
             "home": "Żalgiris Kowno (Ltu)",
@@ -1499,6 +1649,58 @@
             "match_id": "g_1_QZOikoZI",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/drita-bwWOjXUP/zalgiris-kowno-0p17kQla/?mid=QZOikoZI",
             "match_stats": null
+        },
+        "Iberia 1999 (Geo)_Larne (Nir)": {
+            "home": "Iberia 1999 (Geo)",
+            "away": "Larne (Nir)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:1",
+            "stage": "Koniec",
+            "datetime": "11.08. 16:00\nPo\ndogr.",
+            "league_id": "uel",
+            "league_name": "Liga Europy",
+            "league_flag": "🏆",
+            "match_id": "g_1_Kj908Qof",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/iberia-1999-dhfRkskl/larne-44wiLnI5/?mid=Kj908Qof",
+            "match_stats": {
+                "corners": {
+                    "home": 11,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 3
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 1
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 68,
+                    "away": 32
+                },
+                "fouls": {
+                    "home": 19,
+                    "away": 27
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
         },
         "Benfica (Por)_Hearts (Sco)": {
             "home": "Benfica (Por)",
@@ -2241,44 +2443,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_Q7OvXDmC",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/anderlecht-vslqAKNo/hammarby-SQsg3nME/?mid=Q7OvXDmC",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 0
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 20,
-                    "away": 7
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 59,
-                    "away": 41
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Ferencvaros (Hun)_Twente (Ned)": {
             "home": "Ferencvaros (Hun)",
@@ -2669,6 +2834,110 @@
             "match_id": "g_1_6BubAnvH",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/karabach-agdam-Qgd3eSin/vestri-Y9PMInnH/?mid=6BubAnvH",
             "match_stats": null
+        },
+        "CSKA 1948 Sofia (Bul)_Panathinaikos (Gre)": {
+            "home": "CSKA 1948 Sofia (Bul)",
+            "away": "Panathinaikos (Gre)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "11.08. 17:30\nPo\ndogr.",
+            "league_id": "uecl",
+            "league_name": "Liga Konferencji",
+            "league_flag": "🏆",
+            "match_id": "g_1_YR4aowY9",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cska-1948-sofia-fgaHZGUb/panathinaikos-SENMmweG/?mid=YR4aowY9",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Apollon (Cyp)_Brann (Nor)": {
+            "home": "Apollon (Cyp)",
+            "away": "Brann (Nor)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:4",
+            "stage": "Koniec",
+            "datetime": "11.08. 17:00\nPo\ndogr.",
+            "league_id": "uecl",
+            "league_name": "Liga Konferencji",
+            "league_flag": "🏆",
+            "match_id": "g_1_Wjf10N0C",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/apollon-pjUEaE29/brann-QBbt6ivB/?mid=Wjf10N0C",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 4
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 21,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 9,
+                    "away": 6
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 0
+                }
+            }
         },
         "Hibernian (Sco)_Shkendija (Mkd)": {
             "home": "Hibernian (Sco)",
@@ -3359,44 +3628,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_b14fqObf",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/debrecen-8KymAhn2/fc-copenhagen-hSPZwbEh/?mid=b14fqObf",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 16
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 10
-                },
-                "xg": {
-                    "home": 0.36,
-                    "away": 1.69
-                },
-                "possession": {
-                    "home": 53,
-                    "away": 47
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 18
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Dynamo Kijów (Ukr)_Karabach Agdam (Aze)": {
             "home": "Dynamo Kijów (Ukr)",
@@ -3411,44 +3643,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_QTRGp0rh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dynamo-kiev-nNpqXMwH/karabach-agdam-Qgd3eSin/?mid=QTRGp0rh",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 11
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 1
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 11,
-                    "away": 8
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 2
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 39,
-                    "away": 61
-                },
-                "fouls": {
-                    "home": 19,
-                    "away": 11
-                },
-                "offsides": {
-                    "home": 4,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "Göteborg (Swe)_Gent (Bel)": {
             "home": "Göteborg (Swe)",
@@ -4981,5 +5176,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-11 16:12:10"
+    "updated": "2026-08-11 21:03:22"
 }
