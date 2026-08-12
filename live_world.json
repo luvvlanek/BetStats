@@ -451,8 +451,8 @@
                     "away": 5
                 },
                 "xg": {
-                    "home": 2.7,
-                    "away": 0.99
+                    "home": 3.01,
+                    "away": 1.28
                 },
                 "possession": {
                     "home": 50,
@@ -2835,6 +2835,162 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/karabach-agdam-Qgd3eSin/vestri-Y9PMInnH/?mid=6BubAnvH",
             "match_stats": null
         },
+        "FC Kopenhaga (Den)_Debrecen (Hun)": {
+            "home": "FC Kopenhaga (Den)",
+            "away": "Debrecen (Hun)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "5:1",
+            "stage": "Koniec",
+            "datetime": "12.08. 16:00",
+            "league_id": "uecl",
+            "league_name": "Liga Konferencji",
+            "league_flag": "🏆",
+            "match_id": "g_1_WE22s2T6",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/debrecen-8KymAhn2/fc-copenhagen-hSPZwbEh/?mid=WE22s2T6",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 11,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 4.84,
+                    "away": 0.42
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 16,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 6,
+                    "away": 2
+                }
+            }
+        },
+        "GKS Katowice (Pol)_H. Tel Aviv (Isr)": {
+            "home": "GKS Katowice (Pol)",
+            "away": "H. Tel Aviv (Isr)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:1",
+            "stage": "Koniec",
+            "datetime": "12.08. 16:00",
+            "league_id": "uecl",
+            "league_name": "Liga Konferencji",
+            "league_flag": "🏆",
+            "match_id": "g_1_ryyQCIRp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/h-tel-aviv-jigstDrf/?mid=ryyQCIRp",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 14,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 67,
+                    "away": 33
+                },
+                "fouls": {
+                    "home": 18,
+                    "away": 18
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 2
+                }
+            }
+        },
+        "Rapid Wiedeń (Aut)_Paide (Est)": {
+            "home": "Rapid Wiedeń (Aut)",
+            "away": "Paide (Est)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:0",
+            "stage": "Koniec",
+            "datetime": "12.08. 16:00",
+            "league_id": "uecl",
+            "league_name": "Liga Konferencji",
+            "league_flag": "🏆",
+            "match_id": "g_1_6m9JW5Wo",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/paide-linnameeskond-CAjWlFop/rapid-vienna-rejcUFSs/?mid=6m9JW5Wo",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 23,
+                    "away": 2
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 3.06,
+                    "away": 0.13
+                },
+                "possession": {
+                    "home": 65,
+                    "away": 35
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 3
+                },
+                "offsides": {
+                    "home": 4,
+                    "away": 3
+                }
+            }
+        },
         "CSKA 1948 Sofia (Bul)_Panathinaikos (Gre)": {
             "home": "CSKA 1948 Sofia (Bul)",
             "away": "Panathinaikos (Gre)",
@@ -3472,44 +3628,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_ELpfIv4N",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/h-tel-aviv-jigstDrf/?mid=ELpfIv4N",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 14,
-                    "away": 6
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 2
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 47,
-                    "away": 53
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         "Twente (Ned)_Dunajska Streda (Svk)": {
             "home": "Twente (Ned)",
@@ -3524,44 +3643,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_n9sCCFW8",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dun-streda-YHIkizpH/twente-dhOKTHGA/?mid=n9sCCFW8",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 20,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 10,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 2.19,
-                    "away": 0.52
-                },
-                "possession": {
-                    "home": 63,
-                    "away": 37
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 11
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "B. Jerusalem (Isr)_Austria Wiedeń (Aut)": {
             "home": "B. Jerusalem (Isr)",
@@ -3576,44 +3658,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_OYSZUHmT",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/austria-vienna-lvnOzIkE/b-jerusalem-t2BgeFT0/?mid=OYSZUHmT",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 14,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 2.13,
-                    "away": 2.29
-                },
-                "possession": {
-                    "home": 69,
-                    "away": 31
-                },
-                "fouls": {
-                    "home": 18,
-                    "away": 15
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         "Debrecen (Hun)_FC Kopenhaga (Den)": {
             "home": "Debrecen (Hun)",
@@ -5176,5 +5221,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-12 16:09:07"
+    "updated": "2026-08-12 20:50:52"
 }
