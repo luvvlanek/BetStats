@@ -39,8 +39,8 @@
                     "away": 0.61
                 },
                 "possession": {
-                    "home": 56,
-                    "away": 44
+                    "home": 55,
+                    "away": 45
                 },
                 "fouls": {
                     "home": 20,
@@ -71,7 +71,7 @@
                     "away": 6
                 },
                 "yellow": {
-                    "home": 1,
+                    "home": 2,
                     "away": 3
                 },
                 "red": {
@@ -388,7 +388,7 @@
                 },
                 "red": {
                     "home": 0,
-                    "away": 2
+                    "away": 3
                 },
                 "shots": {
                     "home": 23,
@@ -399,8 +399,8 @@
                     "away": 5
                 },
                 "xg": {
-                    "home": 3.6,
-                    "away": 3.11
+                    "home": 3.7,
+                    "away": 2.61
                 },
                 "possession": {
                     "home": 70,
@@ -5176,5 +5176,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-11 21:03:22"
+    "updated": "2026-08-12 06:25:19"
 }
