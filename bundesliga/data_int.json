@@ -1368,14 +1368,14 @@
                 "over35_pct": 7,
                 "avg_goals_scored": 1.14,
                 "avg_goals_conceded": 1.07,
-                "avg_corners": 3.6,
-                "avg_yellow": 2.8,
+                "avg_corners": 3.5,
+                "avg_yellow": 2.2,
                 "avg_red": 0,
-                "avg_shots": 15.2,
-                "avg_shots_on_target": 4.8,
-                "avg_xg": 1.14,
-                "avg_fouls": 16.0,
-                "avg_offsides": 2.6,
+                "avg_shots": 13.8,
+                "avg_shots_on_target": 4.5,
+                "avg_xg": 1.05,
+                "avg_fouls": 16.5,
+                "avg_offsides": 2.2,
                 "form": [
                     "L",
                     "W",
@@ -1387,28 +1387,24 @@
                     3,
                     4,
                     4,
-                    4,
                     3
                 ],
                 "yellow_per_match": [
                     1,
                     4,
                     1,
-                    5,
                     3
                 ],
                 "shots_per_match": [
                     9,
                     14,
                     13,
-                    21,
                     19
                 ],
                 "xg_per_match": [
                     0.8,
                     0.72,
                     0.87,
-                    1.5,
                     1.82
                 ]
             },
@@ -1588,9 +1584,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3,
+                "home": 3.1,
                 "draw": 3.6,
-                "away": 2.2
+                "away": 2.15
             }
         },
         {
@@ -2399,14 +2395,14 @@
                 "over35_pct": 7,
                 "avg_goals_scored": 1.14,
                 "avg_goals_conceded": 1.07,
-                "avg_corners": 3.6,
-                "avg_yellow": 2.8,
+                "avg_corners": 3.5,
+                "avg_yellow": 2.2,
                 "avg_red": 0,
-                "avg_shots": 15.2,
-                "avg_shots_on_target": 4.8,
-                "avg_xg": 1.14,
-                "avg_fouls": 16.0,
-                "avg_offsides": 2.6,
+                "avg_shots": 13.8,
+                "avg_shots_on_target": 4.5,
+                "avg_xg": 1.05,
+                "avg_fouls": 16.5,
+                "avg_offsides": 2.2,
                 "form": [
                     "L",
                     "W",
@@ -2418,28 +2414,24 @@
                     3,
                     4,
                     4,
-                    4,
                     3
                 ],
                 "yellow_per_match": [
                     1,
                     4,
                     1,
-                    5,
                     3
                 ],
                 "shots_per_match": [
                     9,
                     14,
                     13,
-                    21,
                     19
                 ],
                 "xg_per_match": [
                     0.8,
                     0.72,
                     0.87,
-                    1.5,
                     1.82
                 ]
             },
@@ -2731,5 +2723,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-08-13 06:19"
+    "updated": "2026-08-13 10:15"
 }
