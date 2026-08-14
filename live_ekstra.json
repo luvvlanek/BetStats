@@ -915,6 +915,72 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Legia Warszawa_Radomiak Radom": {
+            "home": "Legia Warszawa",
+            "away": "Radomiak Radom",
+            "is_live": true,
+            "is_finished": false,
+            "score": "5:0",
+            "stage": "72",
+            "datetime": "72",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_APkK0yc3",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/radomiak-radom-zD5nYhAT/?mid=APkK0yc3"
+        },
+        "Pogoń Grodzisk Mazowiecki_Stal Rzeszów": {
+            "home": "Pogoń Grodzisk Mazowiecki",
+            "away": "Stal Rzeszów",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_8KcgtHa6",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/stal-rzeszow-IkpY1q92/?mid=8KcgtHa6",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 18
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 43,
+                    "away": 57
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 8
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
         "Unia Skierniewice_Arka Gdynia": {
             "home": "Unia Skierniewice",
             "away": "Arka Gdynia",
@@ -1656,44 +1722,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_dnHMI1po",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/pogon-siedlce-d6IVB42i/?mid=dnHMI1po",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 7
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 4,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 6
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 47,
-                    "away": 53
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Polonia Warszawa_Unia Skierniewice": {
             "home": "Polonia Warszawa",
@@ -1874,7 +1903,21 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
+        },
+        "Ruch Chorzów_Lechia Gdańsk": {
+            "home": "Ruch Chorzów",
+            "away": "Lechia Gdańsk",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "50",
+            "datetime": "50",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_biyZhfqC",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/ruch-chorzow-S4zygtuJ/?mid=biyZhfqC"
         }
     },
-    "updated": "2026-08-14 15:22:29"
+    "updated": "2026-08-14 20:15:24"
 }
