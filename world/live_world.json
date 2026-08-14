@@ -1650,6 +1650,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/drita-bwWOjXUP/zalgiris-kowno-0p17kQla/?mid=QZOikoZI",
             "match_stats": null
         },
+        "Klaksvik (Fai)_Lech Poznań (Pol)": {
+            "home": "Klaksvik (Fai)",
+            "away": "Lech Poznań (Pol)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:5",
+            "stage": "Koniec",
+            "datetime": "14.08. 18:00",
+            "league_id": "uel",
+            "league_name": "Liga Europy",
+            "league_flag": "🏆",
+            "match_id": "g_1_UTxAlWfL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/klaksvik-j9PptHXf/lech-poznan-OpNH7Ouf/?mid=UTxAlWfL",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 9
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 20
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 11
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 45,
+                    "away": 55
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
         "Egnatia (Alb)_Shamrock Rovers (Irl)": {
             "home": "Egnatia (Alb)",
             "away": "Shamrock Rovers (Irl)",
@@ -1665,40 +1717,40 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/kf-egnatia-CjYs7BO9/shamrock-rovers-KIN6lmnH/?mid=6RNtUVeS",
             "match_stats": {
                 "corners": {
-                    "home": null,
-                    "away": null
+                    "home": 5,
+                    "away": 8
                 },
                 "yellow": {
-                    "home": null,
-                    "away": null
+                    "home": 5,
+                    "away": 2
                 },
                 "red": {
-                    "home": null,
-                    "away": null
+                    "home": 1,
+                    "away": 0
                 },
                 "shots": {
-                    "home": null,
-                    "away": null
+                    "home": 23,
+                    "away": 12
                 },
                 "shots_on_target": {
-                    "home": null,
-                    "away": null
+                    "home": 14,
+                    "away": 3
                 },
                 "xg": {
                     "home": null,
                     "away": null
                 },
                 "possession": {
-                    "home": null,
-                    "away": null
+                    "home": 41,
+                    "away": 59
                 },
                 "fouls": {
-                    "home": null,
-                    "away": null
+                    "home": 8,
+                    "away": 14
                 },
                 "offsides": {
-                    "home": null,
-                    "away": null
+                    "home": 1,
+                    "away": 0
                 }
             }
         },
@@ -1789,12 +1841,12 @@
                     "away": 4
                 },
                 "xg": {
-                    "home": 1.91,
-                    "away": 2.14
+                    "home": 2.12,
+                    "away": 2.19
                 },
                 "possession": {
-                    "home": 44,
-                    "away": 56
+                    "home": 45,
+                    "away": 55
                 },
                 "fouls": {
                     "home": 12,
@@ -2391,44 +2443,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_reRJYal4",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/anderlecht-vslqAKNo/paok-Kry6HxA9/?mid=reRJYal4",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 16,
-                    "away": 4
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 1.78,
-                    "away": 0.8
-                },
-                "possession": {
-                    "home": 64,
-                    "away": 36
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 19
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         "Hradec Kralove (Cze)_Besiktas (Tur)": {
             "home": "Hradec Kralove (Cze)",
@@ -4959,5 +4974,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-14 15:50:04"
+    "updated": "2026-08-14 20:44:24"
 }
