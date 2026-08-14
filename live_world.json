@@ -1650,6 +1650,110 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/drita-bwWOjXUP/zalgiris-kowno-0p17kQla/?mid=QZOikoZI",
             "match_stats": null
         },
+        "Egnatia (Alb)_Shamrock Rovers (Irl)": {
+            "home": "Egnatia (Alb)",
+            "away": "Shamrock Rovers (Irl)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "5:1",
+            "stage": "Koniec",
+            "datetime": "13.08. 19:00",
+            "league_id": "uel",
+            "league_name": "Liga Europy",
+            "league_flag": "🏆",
+            "match_id": "g_1_6RNtUVeS",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/kf-egnatia-CjYs7BO9/shamrock-rovers-KIN6lmnH/?mid=6RNtUVeS",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 5,
+                    "away": 2
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 23,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 14,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 41,
+                    "away": 59
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
+        "Hearts (Sco)_Benfica (Por)": {
+            "home": "Hearts (Sco)",
+            "away": "Benfica (Por)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:1",
+            "stage": "Koniec",
+            "datetime": "13.08. 18:45",
+            "league_id": "uel",
+            "league_name": "Liga Europy",
+            "league_flag": "🏆",
+            "match_id": "g_1_0AW3SwpL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/benfica-zBkyuyRI/hearts-0rGrwwNc/?mid=0AW3SwpL",
+            "match_stats": {
+                "corners": {
+                    "home": 0,
+                    "away": 11
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 0
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 5,
+                    "away": 20
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.68,
+                    "away": 1.12
+                },
+                "possession": {
+                    "home": 39,
+                    "away": 61
+                },
+                "fouls": {
+                    "home": 5,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 3
+                }
+            }
+        },
         "Anderlecht (Bel)_PAOK (Gre)\n2": {
             "home": "Anderlecht (Bel)",
             "away": "PAOK (Gre)\n2",
@@ -2049,8 +2153,8 @@
                     "away": 6
                 },
                 "xg": {
-                    "home": 1.33,
-                    "away": 2.79
+                    "home": 1.47,
+                    "away": 2.91
                 },
                 "possession": {
                     "home": 52,
@@ -2339,44 +2443,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_dWrChlLO",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/besiktas-IDmErJCR/hradec-kralove-vFXjbHms/?mid=dWrChlLO",
-            "match_stats": {
-                "corners": {
-                    "home": 8,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 4
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 12,
-                    "away": 22
-                },
-                "shots_on_target": {
-                    "home": 9,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 1,
-                    "away": 2.33
-                },
-                "possession": {
-                    "home": 48,
-                    "away": 52
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 6
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Lech Poznań (Pol)_Klaksvik (Fai)": {
             "home": "Lech Poznań (Pol)",
@@ -2391,44 +2458,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_dGv2jhQ8",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/klaksvik-j9PptHXf/lech-poznan-OpNH7Ouf/?mid=dGv2jhQ8",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 19,
-                    "away": 5
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 1
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 67,
-                    "away": 33
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 11
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Lincoln (Gib)_Omonia (Cyp)": {
             "home": "Lincoln (Gib)",
@@ -2970,6 +3000,162 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/karabach-agdam-Qgd3eSin/vestri-Y9PMInnH/?mid=6BubAnvH",
             "match_stats": null
         },
+        "Dinamo City (Alb)_Auda (Lat)": {
+            "home": "Dinamo City (Alb)",
+            "away": "Auda (Lat)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "4:0",
+            "stage": "Koniec",
+            "datetime": "13.08. 19:00",
+            "league_id": "uecl",
+            "league_name": "Liga Konferencji",
+            "league_flag": "🏆",
+            "match_id": "g_1_2cByswaE",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dinamo-city-KdZNQkgm/fk-auda-riga-n9K4jY6A/?mid=2cByswaE",
+            "match_stats": {
+                "corners": {
+                    "home": 2,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 4
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 5
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 2
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 16,
+                    "away": 26
+                },
+                "offsides": {
+                    "home": 4,
+                    "away": 3
+                }
+            }
+        },
+        "Hajduk Split (Cro)_Żalgiris Wilno (Ltu)": {
+            "home": "Hajduk Split (Cro)",
+            "away": "Żalgiris Wilno (Ltu)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "4:0",
+            "stage": "Koniec",
+            "datetime": "13.08. 19:00",
+            "league_id": "uecl",
+            "league_name": "Liga Konferencji",
+            "league_flag": "🏆",
+            "match_id": "g_1_2m4NfPl2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hajduk-split-2w5qgpq0/zalgiris-wilno-fuLOijFI/?mid=2m4NfPl2",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 20,
+                    "away": 3
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 0
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 63,
+                    "away": 37
+                },
+                "fouls": {
+                    "home": 19,
+                    "away": 11
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        "Shelbourne (Irl)_Ajax (Ned)": {
+            "home": "Shelbourne (Irl)",
+            "away": "Ajax (Ned)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:2",
+            "stage": "Koniec",
+            "datetime": "13.08. 18:45",
+            "league_id": "uecl",
+            "league_name": "Liga Konferencji",
+            "league_flag": "🏆",
+            "match_id": "g_1_S6cf4xMb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ajax-8UOvIwnb/shelbourne-OjQROO8j/?mid=S6cf4xMb",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 11
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 19
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 7
+                },
+                "xg": {
+                    "home": 0.69,
+                    "away": 1.12
+                },
+                "possession": {
+                    "home": 28,
+                    "away": 72
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 6,
+                    "away": 0
+                }
+            }
+        },
         "Gent (Bel)_Göteborg (Swe)": {
             "home": "Gent (Bel)",
             "away": "Göteborg (Swe)",
@@ -3058,7 +3244,7 @@
                 },
                 "xg": {
                     "home": 2.03,
-                    "away": 2.4
+                    "away": 2.44
                 },
                 "possession": {
                     "home": 37,
@@ -3555,44 +3741,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_WIAajPF6",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hammarby-SQsg3nME/rakow-czestochowa-SQOrbYim/?mid=WIAajPF6",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 4
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 17,
-                    "away": 6
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 58,
-                    "away": 42
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         "Midtjylland (Den)_Bohemians (Irl)": {
             "home": "Midtjylland (Den)",
@@ -3607,44 +3756,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_hQjKFuqI",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bohemians-zHEZJ8Wc/midtjylland-8GZDmdbB/?mid=hQjKFuqI",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 15,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 2.82,
-                    "away": 0.81
-                },
-                "possession": {
-                    "home": 63,
-                    "away": 37
-                },
-                "fouls": {
-                    "home": 22,
-                    "away": 11
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         "Nordsjaelland (Den)_Valur (Ice)": {
             "home": "Nordsjaelland (Den)",
@@ -3659,44 +3771,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_427vbGHF",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nordsjaelland-2wZHnGDH/valur-GdxJccH5/?mid=427vbGHF",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 34,
-                    "away": 7
-                },
-                "shots_on_target": {
-                    "home": 14,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 5.2,
-                    "away": 0.4
-                },
-                "possession": {
-                    "home": 66,
-                    "away": 34
-                },
-                "fouls": {
-                    "home": 19,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Tromsø (Nor)_CFR Cluj (Rou)": {
             "home": "Tromsø (Nor)",
@@ -4882,52 +4957,7 @@
             "match_id": "g_1_jDIX79Y0",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dukagjini-z5Ot4Ilc/lugano-IHaUjgT1/?mid=jDIX79Y0",
             "match_stats": null
-        },
-        "Drita (Kos)_Floriana (Mlt)": {
-            "home": "Drita (Kos)",
-            "away": "Floriana (Mlt)",
-            "is_live": false,
-            "is_finished": true,
-            "score": "2:1",
-            "stage": "Koniec",
-            "datetime": "28.07. 18:00\nPo\ndogr.",
-            "league_id": "uecl",
-            "league_name": "Liga Konferencji",
-            "league_flag": "🏆",
-            "match_id": "g_1_2J0c6Z45",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/drita-bwWOjXUP/floriana-hKIRewt8/?mid=2J0c6Z45",
-            "match_stats": null
-        },
-        "Apollon (Cyp)_Dila Gori (Geo)": {
-            "home": "Apollon (Cyp)",
-            "away": "Dila Gori (Geo)",
-            "is_live": false,
-            "is_finished": true,
-            "score": "3:0",
-            "stage": "Koniec",
-            "datetime": "28.07. 17:00",
-            "league_id": "uecl",
-            "league_name": "Liga Konferencji",
-            "league_flag": "🏆",
-            "match_id": "g_1_tA3Bdh8m",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/apollon-pjUEaE29/dila-gori-2kvaMIqb/?mid=tA3Bdh8m",
-            "match_stats": null
-        },
-        "Ryga FC (Lat)_Vardar (Mkd)": {
-            "home": "Ryga FC (Lat)",
-            "away": "Vardar (Mkd)",
-            "is_live": false,
-            "is_finished": true,
-            "score": "5:2",
-            "stage": "Koniec",
-            "datetime": "28.07. 17:00\nPo\ndogr.",
-            "league_id": "uecl",
-            "league_name": "Liga Konferencji",
-            "league_flag": "🏆",
-            "match_id": "g_1_nurrepop",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ryga-fc-l2DXxTjh/vardar-4IQgZaVs/?mid=nurrepop",
-            "match_stats": null
         }
     },
-    "updated": "2026-08-13 20:44:31"
+    "updated": "2026-08-14 06:28:41"
 }
