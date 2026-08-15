@@ -206,6 +206,18 @@
 .social-tab.active{border-color:#dc2626;color:#1e3a5f}.social-tab:hover{color:#1e3a5f}
 .social-post{border-left:4px solid #1e3a5f}.social-post[data-category="Analiza"]{border-left-color:#0f766e}.social-post[data-category="Typ społeczności"]{border-left-color:#dc2626}
 body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social-card .text-gray-700{color:#d1d5db!important}body.dark .social-card .text-gray-500{color:#9ca3af!important}
+/* Premium polish — subtelne efekty bez zmiany layoutu */
+.top-bar{backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(15,23,42,.10);transition:box-shadow .25s ease,transform .25s ease}
+.top-bar .btn-outline{transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease,border-color .2s ease}
+.top-bar .btn-outline:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(15,23,42,.12)}
+.league-card,.stat-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.league-card:not(.coming-soon):hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,23,42,.18)}
+.match-card-premium{transition:transform .22s ease,box-shadow .22s ease}
+.match-card-premium:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(15,23,42,.12)}
+.page-enter{animation:bsPageEnter .35s ease both}
+@keyframes bsPageEnter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
 </style>
 </head>
 <body class="text-gray-800 font-sans min-h-screen">
@@ -221,7 +233,6 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
             <button onclick="goToAbout()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1" title="O projekcie">
                 O projekcie
             </button>
-            <button onclick="goToSocial()" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold">Społeczność</button>
             <button onclick="toggleDarkMode()" id="dark-toggle" class="btn-outline text-xs px-3 py-2 rounded-lg font-semibold">Motyw</button>
             <div id="auth-buttons" class="flex items-center gap-2">
                 <button onclick="openAuthModal('login')" class="btn-outline text-xs px-4 py-2 rounded-lg font-semibold">Zaloguj się</button>
@@ -922,8 +933,8 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
                 </div>
                 <div class="bg-gradient-to-r from-purple-50 via-pink-50 to-rose-50 rounded-2xl p-8 text-center border border-purple-200">
                     <p class="text-gray-700 mb-6 text-lg">Masz sugestię, znalazłeś buga, chcesz się przywitać?</p>
-                    <a href="https://instagram.com/a.balcewicz" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg">
-                        <span class="text-2xl"></span> Instagram: @a.balcewicz
+                    <a href="https://discord.gg/b7wXP28JcA" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-[#5865F2] to-pink-600 hover:from-[#4752C4] hover:to-[#5865F2] text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg">
+                        <span class="text-2xl"></span> Dołącz do Discorda BETSTATS.PL
                     </a>
                 </div>
             </section>
@@ -1015,11 +1026,11 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
                 { id: 'laliga', name: 'La Liga', flag: 'ES', country: 'Hiszpania',
                   colors: { primary: '#EE1C24', secondary: '#D4AF37', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #EE1C24 0%, #D4AF37 100%)',
-                  dataFile: 'data_int', available: false },
+                  dataFile: 'data_int', available: true },
                 { id: 'bundesliga', name: 'Bundesliga', flag: 'DE', country: 'Niemcy',
                   colors: { primary: '#000000', secondary: '#D20515', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #000000 0%, #D20515 100%)',
-                  dataFile: 'data_int', available: false },
+                  dataFile: 'data_int', available: true },
                 { id: 'ucl', name: 'Liga Mistrzów', flag: 'UEFA', country: 'UEFA',
                   colors: { primary: '#001F5B', secondary: '#C0C0C0', accent: '#FFFFFF' },
                   gradient: 'linear-gradient(135deg, #001F5B 0%, #4A5CDB 100%)',
@@ -1874,7 +1885,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
             liveBadge = '<div class="bg-gray-700 text-white px-4 py-2 text-sm font-black flex items-center justify-center gap-2"> KONIEC · ' + live.score + '</div>';
         }
 
-        let html = '<div id="match-card-' + i + '" class="bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" ' + borderStyle + ' onclick="openMatchDetail(' + i + ')">';
+        let html = '<div id="match-card-' + i + '" class="match-card-premium bg-white border ' + (isHot ? 'border-red-500 border-2' : 'border-gray-200') + ' rounded-2xl overflow-hidden shadow-sm cursor-pointer hover:shadow-lg transition" ' + borderStyle + ' onclick="openMatchDetail(' + i + ')">';
         if (liveBadge) html += liveBadge;
         if (isHot) html += '<div class="hot-match-badge text-white px-4 py-1.5 text-xs font-black flex items-center justify-center gap-2"><span class="animate-hot inline-block"></span> HOT · ' + vb.length + ' value bets</div>'; if (v2) html += '<div class="px-4 py-2 bg-slate-50 border-b border-slate-200 flex justify-between items-center text-[10px]"><span class="font-bold text-slate-500">BETSTATS BETA · '+v2.confidence+'/100 CONFIDENCE</span><span class="'+(v2.dataQuality>=70?'text-green-600':'text-amber-600')+' font-black">DATA '+v2.dataQuality+'/100</span></div>';
 
@@ -2389,7 +2400,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
                 lastLeague = fm.league_id;
             }
 
-            html += '<div class="border border-gray-200 rounded-xl p-4 cursor-pointer hover:border-[#1e3a5f] transition" onclick="closeFinished();openFinishedMatchStats(\'' + homeEsc + '\',\'' + awayEsc + '\');">';
+            html += '<div class="border border-gray-200 rounded-xl p-4 opacity-90 bg-gray-50">';
             html += '<div class="flex justify-between items-center mb-2">';
             html += '<span class="text-[10px] font-bold text-gray-500">' + (fm.league_flag || '') + ' ' + (fm.league_name || '').toUpperCase() + '</span>';
             html += '<span class="text-[10px] text-gray-500"> ' + (fm.datetime || '') + '</span>';
@@ -2399,7 +2410,7 @@ body.dark .social-card{background:#1a1f2e;border-color:#2d3548}body.dark .social
             html += '<div class="text-center"><span class="bg-gray-800 text-white font-black text-xl px-4 py-2 rounded-lg">' + hg + ' : ' + ag + '</span></div>';
             html += '<div class="text-left font-bold text-[#1e3a5f]">' + fm.away + '</div>';
             html += '</div>';
-            html += '<div class="text-center text-xs text-blue-600 font-semibold mt-2 pt-2 border-t border-gray-100"> Kliknij aby zobaczyć statystyki</div>';
+            html += '<div class="text-center text-xs text-gray-400 font-semibold mt-2 pt-2 border-t border-gray-200"> Statystyki zakończonych meczów są tymczasowo wyłączone</div>';
             html += '</div>';
         });
 
