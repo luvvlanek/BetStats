@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Legia Warszawa",
+            "away": "Radomiak Radom",
+            "score": "5:0",
+            "datetime": "14.08. 18:30",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_APkK0yc3",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/radomiak-radom-zD5nYhAT/?mid=APkK0yc3",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 17,
+                    "away": 7
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 1.68,
+                    "away": 0.38
+                },
+                "possession": {
+                    "home": 49,
+                    "away": 51
+                },
+                "fouls": {
+                    "home": 21,
+                    "away": 11
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
+        },
+        {
             "home": "Jagiellonia Białystok",
             "away": "Widzew Łódź",
             "score": "0:2",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_jPftWPiC",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/widzew-lodz-rNOIW3uC/wisla-plock-QoZYVU3E/?mid=jPftWPiC",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 15,
-                    "away": 16
-                },
-                "shots_on_target": {
-                    "home": 1,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 1.53,
-                    "away": 1.79
-                },
-                "possession": {
-                    "home": 45,
-                    "away": 55
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 16
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Zagłębie Lubin",
@@ -916,10 +931,62 @@
             "match_stats": null
         },
         {
+            "home": "Ruch Chorzów",
+            "away": "Lechia Gdańsk",
+            "score": "1:0",
+            "datetime": "14.08. 19:00",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_biyZhfqC",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/ruch-chorzow-S4zygtuJ/?mid=biyZhfqC",
+            "match_stats": {
+                "corners": {
+                    "home": 11,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 25,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 58,
+                    "away": 42
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 0
+                }
+            }
+        },
+        {
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Stal Rzeszów",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "14.08. 16:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1656,44 +1723,7 @@
             "stage": "Koniec",
             "match_id": "g_1_Oh98t5xh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/stal-rzeszow-IkpY1q92/?mid=Oh98t5xh",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 10
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 12,
-                    "away": 7
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 1
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 59,
-                    "away": 41
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Pogoń Siedlce",
@@ -1891,5 +1921,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-14 20:15"
+    "updated": "2026-08-15 03:18"
 }
