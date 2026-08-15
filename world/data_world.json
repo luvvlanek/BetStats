@@ -15,9 +15,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.7,
-                "draw": 3.8,
-                "away": 4
+                "home": 1.67,
+                "draw": 3.9,
+                "away": 4.4
             }
         },
         {
@@ -35,9 +35,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.95,
+                "home": 2,
                 "draw": 3.5,
-                "away": 3.5
+                "away": 3.3
             }
         },
         {
@@ -55,9 +55,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 2.75,
-                "draw": 3.1,
-                "away": 2.45
+                "home": 2.85,
+                "draw": 3.2,
+                "away": 2.35
             }
         },
         {
@@ -75,9 +75,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.65,
-                "draw": 3.75,
-                "away": 4.5
+                "home": 1.54,
+                "draw": 4,
+                "away": 5.3
             }
         },
         {
@@ -96,8 +96,8 @@
             "h2h": [],
             "odds": {
                 "home": 2.25,
-                "draw": 3.1,
-                "away": 3
+                "draw": 3.3,
+                "away": 2.9
             }
         },
         {
@@ -116,8 +116,8 @@
             "h2h": [],
             "odds": {
                 "home": 2.45,
-                "draw": 3.5,
-                "away": 2.45
+                "draw": 3.8,
+                "away": 2.4
             }
         },
         {
@@ -135,9 +135,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.73,
-                "draw": 3.5,
-                "away": 4.33
+                "home": 1.69,
+                "draw": 3.7,
+                "away": 4.5
             }
         },
         {
@@ -295,9 +295,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 2.55,
-                "draw": 3.3,
-                "away": 2.65
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -315,9 +315,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.31,
-                "draw": 5.1,
-                "away": 8.6
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -335,9 +335,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 2.83,
-                "draw": 3.2,
-                "away": 2.26
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -435,9 +435,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.55,
-                "draw": 4.2,
-                "away": 5.25
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -455,9 +455,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.88,
-                "draw": 3.7,
-                "away": 3.75
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -475,9 +475,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 2.4,
-                "draw": 3.4,
-                "away": 2.8
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -495,9 +495,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.95,
-                "draw": 3.65,
-                "away": 3.5
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -515,9 +515,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.18,
-                "draw": 6.75,
-                "away": 13
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -641,26 +641,6 @@
             }
         },
         {
-            "home": "Thun (Sui)",
-            "away": "Lech Poznań (Pol)",
-            "datetime": "27.08. 17:00",
-            "status": "scheduled",
-            "live_minute": null,
-            "match_id": "pdNekhWq",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/thun-4WElAd9p/?mid=pdNekhWq",
-            "league_id": "uel",
-            "league_name": "Liga Europy",
-            "league_flag": "🏆",
-            "home_stats": {},
-            "away_stats": {},
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Żalgiris Kowno (Ltu)",
             "away": "Besiktas (Tur)",
             "datetime": "27.08. 17:00",
@@ -708,6 +688,26 @@
             "live_minute": null,
             "match_id": "2XLK0YMt",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cska-sofia-0xFNNECi/ofi-crete-bTObIPJB/?mid=2XLK0YMt",
+            "league_id": "uel",
+            "league_name": "Liga Europy",
+            "league_flag": "🏆",
+            "home_stats": {},
+            "away_stats": {},
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Thun (Sui)",
+            "away": "Lech Poznań (Pol)",
+            "datetime": "27.08. 18:00",
+            "status": "scheduled",
+            "live_minute": null,
+            "match_id": "pdNekhWq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/thun-4WElAd9p/?mid=pdNekhWq",
             "league_id": "uel",
             "league_name": "Liga Europy",
             "league_flag": "🏆",
@@ -775,9 +775,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 3.65,
-                "draw": 3.65,
-                "away": 1.85
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -835,9 +835,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.65,
-                "draw": 3.85,
-                "away": 4.3
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -855,9 +855,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 2.1,
-                "draw": 3.6,
-                "away": 3
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -895,9 +895,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.58,
-                "draw": 4,
-                "away": 4.8
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -935,9 +935,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 4.85,
-                "draw": 3.9,
-                "away": 1.63
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1035,9 +1035,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.53,
-                "draw": 4,
-                "away": 5.25
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1075,9 +1075,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 4.2,
-                "draw": 3.85,
-                "away": 1.68
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1095,9 +1095,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.45,
-                "draw": 4.1,
-                "away": 6
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1135,9 +1135,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.58,
-                "draw": 4,
-                "away": 4.7
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1155,9 +1155,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.38,
-                "draw": 4.4,
-                "away": 6.75
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1175,9 +1175,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 2.9,
-                "draw": 3.3,
-                "away": 2.25
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1215,9 +1215,9 @@
             "away_stats": {},
             "h2h": [],
             "odds": {
-                "home": 1.87,
-                "draw": 3.5,
-                "away": 3.9
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1739,5 +1739,5 @@
             "flag": "🏆"
         }
     ],
-    "updated": "2026-08-14 20:44"
+    "updated": "2026-08-15 03:48"
 }
