@@ -1,19 +1,109 @@
 {
     "matches": {
+        "Sevilla_Vallecano": {
+            "home": "Sevilla",
+            "away": "Vallecano",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:1",
+            "stage": "Koniec",
+            "datetime": "15.08. 19:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_6RZt3GwK",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/sevilla-h8oAv4Ts/vallecano-8bcjFy6O/?mid=6RZt3GwK",
+            "match_stats": {
+                "corners": {
+                    "home": 1,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 4
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 13,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 4,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 2.3,
+                    "away": 2.01
+                },
+                "possession": {
+                    "home": 49,
+                    "away": 51
+                },
+                "fouls": {
+                    "home": 18,
+                    "away": 18
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
         "Alaves_Getafe": {
             "home": "Alaves",
             "away": "Getafe",
-            "is_live": true,
-            "is_finished": false,
-            "score": "2:0",
-            "stage": "90+2",
-            "datetime": "90+2",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:0",
+            "stage": "Koniec",
+            "datetime": "15.08. 17:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "match_id": "g_1_E75kfwuq",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq"
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 3
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 1.93,
+                    "away": 0.24
+                },
+                "possession": {
+                    "home": 52,
+                    "away": 48
+                },
+                "fouls": {
+                    "home": 16,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 4,
+                    "away": 0
+                }
+            }
         }
     },
-    "updated": "2026-08-15 19:30:07"
+    "updated": "2026-08-16 03:45:28"
 }
