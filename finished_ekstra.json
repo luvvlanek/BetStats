@@ -1,54 +1,54 @@
 {
     "matches": [
         {
-            "home": "Zagłębie Lubin",
-            "away": "Śląsk Wrocław",
-            "score": "2:1",
-            "datetime": "Koniec",
+            "home": "Widzew Łódź",
+            "away": "Korona Kielce",
+            "score": "1:2",
+            "datetime": "15.08. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_KjmaDEt9",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/slask-wroclaw-E1Oxemse/zaglebie-lubin-tlYOere0/?mid=KjmaDEt9",
+            "match_id": "g_1_dtlSbFRF",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/widzew-lodz-rNOIW3uC/?mid=dtlSbFRF",
             "match_stats": {
                 "corners": {
-                    "home": 8,
-                    "away": 0
+                    "home": 15,
+                    "away": 4
                 },
                 "yellow": {
                     "home": 2,
-                    "away": 2
+                    "away": 1
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": 12,
-                    "away": 12
+                    "home": 15,
+                    "away": 16
                 },
                 "shots_on_target": {
-                    "home": 5,
-                    "away": 2
+                    "home": 3,
+                    "away": 6
                 },
                 "xg": {
-                    "home": 0.89,
-                    "away": 1.25
+                    "home": 2.31,
+                    "away": 2.09
                 },
                 "possession": {
-                    "home": 58,
-                    "away": 42
+                    "home": 62,
+                    "away": 38
                 },
                 "fouls": {
-                    "home": 13,
-                    "away": 10
+                    "home": 12,
+                    "away": 19
                 },
                 "offsides": {
                     "home": 1,
-                    "away": 0
+                    "away": 2
                 }
             }
         },
@@ -56,7 +56,7 @@
             "home": "Piast Gliwice",
             "away": "Wieczysta Kraków",
             "score": "3:4",
-            "datetime": "Koniec",
+            "datetime": "15.08. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -101,6 +101,58 @@
                 "offsides": {
                     "home": 0,
                     "away": 2
+                }
+            }
+        },
+        {
+            "home": "Zagłębie Lubin",
+            "away": "Śląsk Wrocław",
+            "score": "2:1",
+            "datetime": "15.08. 12:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_KjmaDEt9",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/slask-wroclaw-E1Oxemse/zaglebie-lubin-tlYOere0/?mid=KjmaDEt9",
+            "match_stats": {
+                "corners": {
+                    "home": 8,
+                    "away": 0
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 0.89,
+                    "away": 1.25
+                },
+                "possession": {
+                    "home": 58,
+                    "away": 42
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
                 }
             }
         },
@@ -637,44 +689,7 @@
             "stage": "Koniec",
             "match_id": "g_1_CEgQZ7hm",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/slask-wroclaw-E1Oxemse/?mid=CEgQZ7hm",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 11,
-                    "away": 17
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 1.63,
-                    "away": 3.24
-                },
-                "possession": {
-                    "home": 50,
-                    "away": 50
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Legia Warszawa",
@@ -689,44 +704,7 @@
             "stage": "Koniec",
             "match_id": "g_1_lxG8HQxJ",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/zaglebie-lubin-tlYOere0/?mid=lxG8HQxJ",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 22,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 8,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 1.66,
-                    "away": 1.01
-                },
-                "possession": {
-                    "home": 62,
-                    "away": 38
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Wieczysta Kraków",
@@ -741,44 +719,7 @@
             "stage": "Koniec",
             "match_id": "g_1_feEhL8wf",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/lech-poznan-OpNH7Ouf/?mid=feEhL8wf",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 7
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 11,
-                    "away": 21
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 7
-                },
-                "xg": {
-                    "home": 0.99,
-                    "away": 1.7
-                },
-                "possession": {
-                    "home": 52,
-                    "away": 48
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Piast Gliwice",
@@ -964,7 +905,7 @@
             "home": "Chrobry Głogów",
             "away": "Podbeskidzie B-B",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "15.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1016,7 +957,7 @@
             "home": "Odra Opole",
             "away": "Warta Poznań",
             "score": "3:1",
-            "datetime": "Koniec",
+            "datetime": "15.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1068,7 +1009,7 @@
             "home": "Pogoń Siedlce",
             "away": "Polonia Warszawa",
             "score": "1:0",
-            "datetime": "Koniec",
+            "datetime": "15.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1996,5 +1937,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-15 19:15"
+    "updated": "2026-08-16 03:31"
 }
