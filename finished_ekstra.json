@@ -1,6 +1,110 @@
 {
     "matches": [
         {
+            "home": "Motor Lublin",
+            "away": "GKS Katowice",
+            "score": "1:0",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_A5aQvfzp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/motor-lublin-IoLk2VlL/?mid=A5aQvfzp",
+            "match_stats": {
+                "corners": {
+                    "home": 2,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 15,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 2.92,
+                    "away": 1.1
+                },
+                "possession": {
+                    "home": 41,
+                    "away": 59
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "Cracovia",
+            "away": "Raków Częstochowa",
+            "score": "2:1",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_IV2YxY4d",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/rakow-czestochowa-SQOrbYim/?mid=IV2YxY4d",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 14
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 2.74,
+                    "away": 0.85
+                },
+                "possession": {
+                    "home": 42,
+                    "away": 58
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 11
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
+        },
+        {
             "home": "Widzew Łódź",
             "away": "Korona Kielce",
             "score": "1:2",
@@ -585,44 +689,7 @@
             "stage": "Koniec",
             "match_id": "g_1_tCC0Jn86",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/pogon-szczecin-Um9YwPQ0/?mid=tCC0Jn86",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 6
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 19,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 1.4,
-                    "away": 1.21
-                },
-                "possession": {
-                    "home": 59,
-                    "away": 41
-                },
-                "fouls": {
-                    "home": 7,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "GKS Katowice",
@@ -637,44 +704,7 @@
             "stage": "Koniec",
             "match_id": "g_1_tW2fuUUP",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/radomiak-radom-zD5nYhAT/?mid=tW2fuUUP",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 5
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 25,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 1.83,
-                    "away": 0.8
-                },
-                "possession": {
-                    "home": 55,
-                    "away": 45
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Śląsk Wrocław",
@@ -689,44 +719,7 @@
             "stage": "Koniec",
             "match_id": "g_1_CEgQZ7hm",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/slask-wroclaw-E1Oxemse/?mid=CEgQZ7hm",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 11,
-                    "away": 17
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 1.63,
-                    "away": 3.24
-                },
-                "possession": {
-                    "home": 50,
-                    "away": 50
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Legia Warszawa",
@@ -741,44 +734,7 @@
             "stage": "Koniec",
             "match_id": "g_1_lxG8HQxJ",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/zaglebie-lubin-tlYOere0/?mid=lxG8HQxJ",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 22,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 8,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 1.66,
-                    "away": 1.01
-                },
-                "possession": {
-                    "home": 62,
-                    "away": 38
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Wieczysta Kraków",
@@ -974,6 +930,110 @@
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
+        },
+        {
+            "home": "ŁKS Łódź",
+            "away": "Bruk-Bet T.",
+            "score": "2:1",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_tYe1veUI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/nieciecza-YNkK4khO/?mid=tYe1veUI",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 13,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 1
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
+        {
+            "home": "Stal Mielec",
+            "away": "Polonia Bytom",
+            "score": "5:2",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_IDZIdxpm",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/stal-mielec-pxXiDZkQ/?mid=IDZIdxpm",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 16
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 6
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 44,
+                    "away": 56
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
         },
         {
             "home": "Chrobry Głogów",
@@ -1664,44 +1724,7 @@
             "stage": "Koniec",
             "match_id": "g_1_AmpT5L53",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/polonia-bytom-vRn3UqXP/?mid=AmpT5L53",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 16,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 8,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 54,
-                    "away": 46
-                },
-                "fouls": {
-                    "home": 19,
-                    "away": 8
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Chrobry Głogów",
@@ -1716,44 +1739,7 @@
             "stage": "Koniec",
             "match_id": "g_1_6X4eiMjA",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/odra-opole-C8Kg1k4R/?mid=6X4eiMjA",
-            "match_stats": {
-                "corners": {
-                    "home": 2,
-                    "away": 13
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 10,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 1,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 55,
-                    "away": 45
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Pogoń Grodzisk Mazowiecki",
@@ -2011,5 +1997,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-16 13:57"
+    "updated": "2026-08-16 19:14"
 }
