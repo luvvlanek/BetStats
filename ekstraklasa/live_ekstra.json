@@ -689,7 +689,44 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_CEgQZ7hm",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/slask-wroclaw-E1Oxemse/?mid=CEgQZ7hm",
-            "match_stats": null
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 17
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.63,
+                    "away": 3.24
+                },
+                "possession": {
+                    "home": 50,
+                    "away": 50
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 0
+                }
+            }
         },
         "Legia Warszawa_Zagłębie Lubin": {
             "home": "Legia Warszawa",
@@ -704,7 +741,44 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_lxG8HQxJ",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/zaglebie-lubin-tlYOere0/?mid=lxG8HQxJ",
-            "match_stats": null
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 1.66,
+                    "away": 1.01
+                },
+                "possession": {
+                    "home": 62,
+                    "away": 38
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 2
+                }
+            }
         },
         "Wieczysta Kraków_Lech Poznań": {
             "home": "Wieczysta Kraków",
@@ -1935,7 +2009,21 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
+        },
+        "ŁKS Łódź_Bruk-Bet T.": {
+            "home": "ŁKS Łódź",
+            "away": "Bruk-Bet T.",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:0",
+            "stage": "61",
+            "datetime": "61",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_tYe1veUI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/nieciecza-YNkK4khO/?mid=tYe1veUI"
         }
     },
-    "updated": "2026-08-16 07:58:53"
+    "updated": "2026-08-16 13:57:57"
 }
