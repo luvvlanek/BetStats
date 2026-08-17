@@ -1,53 +1,53 @@
 {
     "matches": {
-        "Motor Lublin_GKS Katowice": {
-            "home": "Motor Lublin",
-            "away": "GKS Katowice",
+        "Górnik Zabrze_Wisła Kraków": {
+            "home": "Górnik Zabrze",
+            "away": "Wisła Kraków",
             "is_live": false,
             "is_finished": true,
-            "score": "1:0",
+            "score": "2:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "16.08. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_A5aQvfzp",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/motor-lublin-IoLk2VlL/?mid=A5aQvfzp",
+            "match_id": "g_1_82tEkBl2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/wisla-krakow-rob20Q2Q/?mid=82tEkBl2",
             "match_stats": {
                 "corners": {
-                    "home": 2,
-                    "away": 1
+                    "home": 6,
+                    "away": 3
                 },
                 "yellow": {
                     "home": 3,
-                    "away": 2
+                    "away": 4
                 },
                 "red": {
-                    "home": null,
-                    "away": null
+                    "home": 1,
+                    "away": 0
                 },
                 "shots": {
-                    "home": 15,
-                    "away": 11
+                    "home": 9,
+                    "away": 16
                 },
                 "shots_on_target": {
                     "home": 5,
-                    "away": 2
+                    "away": 5
                 },
                 "xg": {
-                    "home": 2.92,
-                    "away": 1.1
+                    "home": 0.61,
+                    "away": 1.69
                 },
                 "possession": {
-                    "home": 41,
-                    "away": 59
+                    "home": 36,
+                    "away": 64
                 },
                 "fouls": {
-                    "home": 15,
-                    "away": 12
+                    "home": 16,
+                    "away": 17
                 },
                 "offsides": {
-                    "home": 3,
+                    "home": 1,
                     "away": 1
                 }
             }
@@ -59,7 +59,7 @@
             "is_finished": true,
             "score": "2:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "16.08. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -101,6 +101,58 @@
                 "offsides": {
                     "home": 1,
                     "away": 2
+                }
+            }
+        },
+        "Motor Lublin_GKS Katowice": {
+            "home": "Motor Lublin",
+            "away": "GKS Katowice",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:0",
+            "stage": "Koniec",
+            "datetime": "16.08. 12:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_A5aQvfzp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/motor-lublin-IoLk2VlL/?mid=A5aQvfzp",
+            "match_stats": {
+                "corners": {
+                    "home": 2,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 15,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 2.92,
+                    "away": 1.1
+                },
+                "possession": {
+                    "home": 41,
+                    "away": 59
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
                 }
             }
         },
@@ -689,7 +741,44 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_tCC0Jn86",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/pogon-szczecin-Um9YwPQ0/?mid=tCC0Jn86",
-            "match_stats": null
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.4,
+                    "away": 1.21
+                },
+                "possession": {
+                    "home": 59,
+                    "away": 41
+                },
+                "fouls": {
+                    "home": 7,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 3
+                }
+            }
         },
         "GKS Katowice_Radomiak Radom": {
             "home": "GKS Katowice",
@@ -931,37 +1020,23 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
-        "Górnik Zabrze_Wisła Kraków": {
-            "home": "Górnik Zabrze",
-            "away": "Wisła Kraków",
-            "is_live": true,
-            "is_finished": false,
-            "score": "1:0",
-            "stage": "41",
-            "datetime": "41",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_82tEkBl2",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/wisla-krakow-rob20Q2Q/?mid=82tEkBl2"
-        },
-        "ŁKS Łódź_Bruk-Bet T.": {
-            "home": "ŁKS Łódź",
-            "away": "Bruk-Bet T.",
+        "Unia Skierniewice_Miedź Legnica": {
+            "home": "Unia Skierniewice",
+            "away": "Miedź Legnica",
             "is_live": false,
             "is_finished": true,
-            "score": "2:1",
+            "score": "0:3",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "16.08. 17:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_tYe1veUI",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/nieciecza-YNkK4khO/?mid=tYe1veUI",
+            "match_id": "g_1_0fforwVg",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/unia-skierniewice-l42F3w54/?mid=0fforwVg",
             "match_stats": {
                 "corners": {
-                    "home": 3,
-                    "away": 8
+                    "home": 6,
+                    "away": 7
                 },
                 "yellow": {
                     "home": 1,
@@ -972,28 +1047,28 @@
                     "away": null
                 },
                 "shots": {
-                    "home": 13,
-                    "away": 13
+                    "home": 10,
+                    "away": 21
                 },
                 "shots_on_target": {
-                    "home": 6,
-                    "away": 1
+                    "home": 2,
+                    "away": 9
                 },
                 "xg": {
                     "home": null,
                     "away": null
                 },
                 "possession": {
-                    "home": 53,
-                    "away": 47
+                    "home": 49,
+                    "away": 51
                 },
                 "fouls": {
-                    "home": 10,
-                    "away": 10
+                    "home": 13,
+                    "away": 13
                 },
                 "offsides": {
-                    "home": 3,
-                    "away": 0
+                    "home": 1,
+                    "away": 3
                 }
             }
         },
@@ -1004,7 +1079,7 @@
             "is_finished": true,
             "score": "5:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "16.08. 15:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1046,6 +1121,58 @@
                 "offsides": {
                     "home": 1,
                     "away": 1
+                }
+            }
+        },
+        "ŁKS Łódź_Bruk-Bet T.": {
+            "home": "ŁKS Łódź",
+            "away": "Bruk-Bet T.",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:1",
+            "stage": "Koniec",
+            "datetime": "16.08. 12:30",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_tYe1veUI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/nieciecza-YNkK4khO/?mid=tYe1veUI",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 13,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 1
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
                 }
             }
         },
@@ -1686,44 +1813,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_rsCOs9JD",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-warszawa-ADZjR3us/ruch-chorzow-S4zygtuJ/?mid=rsCOs9JD",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 16,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 57,
-                    "away": 43
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "Polonia Bytom_Pogoń Siedlce": {
             "home": "Polonia Bytom",
@@ -2009,21 +2099,7 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
-        },
-        "Unia Skierniewice_Miedź Legnica": {
-            "home": "Unia Skierniewice",
-            "away": "Miedź Legnica",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:3",
-            "stage": "77",
-            "datetime": "77",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_0fforwVg",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/unia-skierniewice-l42F3w54/?mid=0fforwVg"
         }
     },
-    "updated": "2026-08-16 19:14:14"
+    "updated": "2026-08-17 03:30:28"
 }
