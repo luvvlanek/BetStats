@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "A Coruna",
+            "away": "Elche",
+            "score": "1:1",
+            "datetime": "17.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_dEi1jwfE",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/elche-4jl02tPF/?mid=dEi1jwfE",
+            "match_stats": {
+                "corners": {
+                    "home": 2,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 6
+                },
+                "xg": {
+                    "home": 0.33,
+                    "away": 1.23
+                },
+                "possession": {
+                    "home": 39,
+                    "away": 61
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 0
+                }
+            }
+        },
+        {
             "home": "Espanyol",
             "away": "Levante",
             "score": "3:0",
@@ -209,5 +261,5 @@
             }
         }
     ],
-    "updated": "2026-08-17 19:45"
+    "updated": "2026-08-18 03:39"
 }
