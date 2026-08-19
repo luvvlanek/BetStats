@@ -1,5 +1,161 @@
 {
     "matches": {
+        "Dinamo Zagrzeb (Cro)_Viking (Nor)": {
+            "home": "Dinamo Zagrzeb (Cro)",
+            "away": "Viking (Nor)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:2",
+            "stage": "Koniec",
+            "datetime": "18.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_O49PC8FO",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/din-zagreb-8G5ufQTg/viking-bXAgOWwb/?mid=O49PC8FO",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 23,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 4,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 2.45,
+                    "away": 0.76
+                },
+                "possession": {
+                    "home": 60,
+                    "away": 40
+                },
+                "fouls": {
+                    "home": 12,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
+        "Fenerbahce (Tur)_Lyon (Fra)": {
+            "home": "Fenerbahce (Tur)",
+            "away": "Lyon (Fra)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:1",
+            "stage": "Koniec",
+            "datetime": "18.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_GYnRgMfm",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/fenerbahce-MsbmracL/lyon-2akflumR/?mid=GYnRgMfm",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 0
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.43,
+                    "away": 0.73
+                },
+                "possession": {
+                    "home": 52,
+                    "away": 48
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
+        "Levski (Bul)_AEK (Gre)": {
+            "home": "Levski (Bul)",
+            "away": "AEK (Gre)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "18.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_jiwzJ2wP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/aek-ANpZncAM/levski-E5OOzgs4/?mid=jiwzJ2wP",
+            "match_stats": {
+                "corners": {
+                    "home": 1,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 15,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 0.9,
+                    "away": 0.84
+                },
+                "possession": {
+                    "home": 52,
+                    "away": 48
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 17
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
+                }
+            }
+        },
         "Lyon (Fra)_Sparta Praga (Cze)": {
             "home": "Lyon (Fra)",
             "away": "Sparta Praga (Cze)",
@@ -637,44 +793,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_r9z6gEre",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/din-zagreb-8G5ufQTg/zalgiris-kowno-0p17kQla/?mid=r9z6gEre",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 0
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 22,
-                    "away": 3
-                },
-                "shots_on_target": {
-                    "home": 9,
-                    "away": 0
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 70,
-                    "away": 30
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 11
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "Olympiakos (Gre)_NEC Nijmegen (Ned)": {
             "home": "Olympiakos (Gre)",
@@ -689,44 +808,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_z35yaRcf",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nijmegen-nRluRF0T/olympiakos-hnzvnHPS/?mid=z35yaRcf",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 11,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 0.59,
-                    "away": 1.36
-                },
-                "possession": {
-                    "home": 54,
-                    "away": 46
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 16
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 6
-                }
-            }
+            "match_stats": null
         },
         "Royale Union SG (Bel)_Bodo/Glimt (Nor)": {
             "home": "Royale Union SG (Bel)",
@@ -741,44 +823,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_b3L3pSr1",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bodo-glimt-S0WZMUNG/royale-union-sg-407h8Ird/?mid=b3L3pSr1",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 0
-                },
-                "yellow": {
-                    "home": 5,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 9,
-                    "away": 5
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 49,
-                    "away": 51
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Sparta Praga (Cze)_Lyon (Fra)": {
             "home": "Sparta Praga (Cze)",
@@ -4974,5 +5019,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-18 20:02:58"
+    "updated": "2026-08-19 03:58:50"
 }
