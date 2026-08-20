@@ -1,6 +1,214 @@
 {
     "matches": [
         {
+            "home": "Celtic (Sco)",
+            "away": "LASK (Aut)",
+            "score": "3:0",
+            "datetime": "19.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_WU22Pdbd",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celtic-QFKRRD8M/lask-linz-MipWYeKQ/?mid=WU22Pdbd",
+            "match_stats": {
+                "corners": {
+                    "home": 8,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 17,
+                    "away": 20
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 8
+                },
+                "xg": {
+                    "home": 0.87,
+                    "away": 1.75
+                },
+                "possession": {
+                    "home": 64,
+                    "away": 36
+                },
+                "fouls": {
+                    "home": 6,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 5
+                }
+            }
+        },
+        {
+            "home": "H. Beer Sheva (Isr)",
+            "away": "Sabah Baku (Aze)",
+            "score": "2:1",
+            "datetime": "19.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_4lCRrJhM",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/h-beer-sheva-EXAD1YZP/sabah-baku-fNGcxbyr/?mid=4lCRrJhM",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 0
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 1.87,
+                    "away": 0.7
+                },
+                "possession": {
+                    "home": 67,
+                    "away": 33
+                },
+                "fouls": {
+                    "home": 12,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "NEC Nijmegen (Ned)",
+            "away": "Bodo/Glimt (Nor)",
+            "score": "1:3",
+            "datetime": "19.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_QDLeoRWA",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bodo-glimt-S0WZMUNG/nijmegen-nRluRF0T/?mid=QDLeoRWA",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 2.14,
+                    "away": 1.62
+                },
+                "possession": {
+                    "home": 69,
+                    "away": 31
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "Slovan Bratysława (Svk)",
+            "away": "Celje (Slo)",
+            "score": "1:1",
+            "datetime": "19.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_xhudNKqS",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celje-SpbURe4O/slovan-bratislava-QRaWdwQf/?mid=xhudNKqS",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 0
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 14,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.66,
+                    "away": 0.3
+                },
+                "possession": {
+                    "home": 49,
+                    "away": 51
+                },
+                "fouls": {
+                    "home": 12,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 5
+                }
+            }
+        },
+        {
             "home": "Dinamo Zagrzeb (Cro)",
             "away": "Viking (Nor)",
             "score": "2:2",
@@ -585,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_rZs8POLh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/aarhus-OOXnKGbO/sabah-baku-fNGcxbyr/?mid=rZs8POLh",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 29,
-                    "away": 14
-                },
-                "shots_on_target": {
-                    "home": 10,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 3.01,
-                    "away": 1.28
-                },
-                "possession": {
-                    "home": 50,
-                    "away": 50
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Kairat Almaty (Kaz)",
@@ -637,44 +808,7 @@
             "stage": "Koniec",
             "match_id": "g_1_nRxQfha4",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/kairat-almaty-CrO7xXpJ/levski-E5OOzgs4/?mid=nRxQfha4",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 21,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 1.34,
-                    "away": 1.04
-                },
-                "possession": {
-                    "home": 56,
-                    "away": 44
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Fenerbahce (Tur)",
@@ -689,44 +823,7 @@
             "stage": "Koniec",
             "match_id": "g_1_fTumx25b",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/fenerbahce-MsbmracL/sturm-zsktjfsD/?mid=fTumx25b",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 17,
-                    "away": 5
-                },
-                "shots_on_target": {
-                    "home": 10,
-                    "away": 1
-                },
-                "xg": {
-                    "home": 1.38,
-                    "away": 0.16
-                },
-                "possession": {
-                    "home": 72,
-                    "away": 28
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 19
-                },
-                "offsides": {
-                    "home": 4,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Aarhus (Den)",
@@ -741,44 +838,7 @@
             "stage": "Koniec",
             "match_id": "g_1_ALq0Rpit",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/aarhus-OOXnKGbO/sabah-baku-fNGcxbyr/?mid=ALq0Rpit",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 10,
-                    "away": 15
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 0.58,
-                    "away": 1.06
-                },
-                "possession": {
-                    "home": 44,
-                    "away": 56
-                },
-                "fouls": {
-                    "home": 13,
-                    "away": 11
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Dinamo Zagrzeb (Cro)",
@@ -5019,5 +5079,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-19 14:52"
+    "updated": "2026-08-20 03:54"
 }
