@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Atl. Madryt",
+            "away": "Malaga",
+            "score": "2:0",
+            "datetime": "19.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_MX8chH9e",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/malaga-25tIqYiJ/?mid=MX8chH9e",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 15,
+                    "away": 5
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 0.93,
+                    "away": 0.15
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 11
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 2
+                }
+            }
+        },
+        {
             "home": "A Coruna",
             "away": "Elche",
             "score": "1:1",
@@ -261,5 +313,5 @@
             }
         }
     ],
-    "updated": "2026-08-19 19:44"
+    "updated": "2026-08-20 03:40"
 }
