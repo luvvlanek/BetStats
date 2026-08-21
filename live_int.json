@@ -119,40 +119,40 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/elche-4jl02tPF/?mid=dEi1jwfE",
             "match_stats": {
                 "corners": {
-                    "home": 2,
-                    "away": 6
+                    "home": null,
+                    "away": null
                 },
                 "yellow": {
-                    "home": 2,
-                    "away": 2
+                    "home": null,
+                    "away": null
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": 8,
-                    "away": 11
+                    "home": null,
+                    "away": null
                 },
                 "shots_on_target": {
-                    "home": 3,
-                    "away": 6
+                    "home": null,
+                    "away": null
                 },
                 "xg": {
-                    "home": 0.33,
-                    "away": 1.23
+                    "home": null,
+                    "away": null
                 },
                 "possession": {
-                    "home": 39,
-                    "away": 61
+                    "home": null,
+                    "away": null
                 },
                 "fouls": {
-                    "home": 17,
-                    "away": 12
+                    "home": null,
+                    "away": null
                 },
                 "offsides": {
-                    "home": 2,
-                    "away": 0
+                    "home": null,
+                    "away": null
                 }
             }
         },
@@ -363,7 +363,21 @@
                     "away": 0
                 }
             }
+        },
+        "Betis_Real Sociedad": {
+            "home": "Betis",
+            "away": "Real Sociedad",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "36",
+            "datetime": "36",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_jFuzhjVI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/real-sociedad-jNvak2f3/?mid=jFuzhjVI"
         }
     },
-    "updated": "2026-08-21 14:34:39"
+    "updated": "2026-08-21 19:44:50"
 }
