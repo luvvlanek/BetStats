@@ -1938,7 +1938,7 @@
                     "away": null
                 },
                 "shots": {
-                    "home": 16,
+                    "home": 17,
                     "away": 8
                 },
                 "shots_on_target": {
@@ -1946,8 +1946,8 @@
                     "away": 2
                 },
                 "xg": {
-                    "home": 1.55,
-                    "away": 1.03
+                    "home": 1.9,
+                    "away": 0.99
                 },
                 "possession": {
                     "home": 57,
@@ -3335,8 +3335,8 @@
                     "away": 1
                 },
                 "xg": {
-                    "home": 3.09,
-                    "away": 0.53
+                    "home": 3.13,
+                    "away": 0.38
                 },
                 "possession": {
                     "home": 58,
@@ -3848,7 +3848,7 @@
                 },
                 "shots": {
                     "home": 4,
-                    "away": 26
+                    "away": 25
                 },
                 "shots_on_target": {
                     "home": 1,
@@ -5656,5 +5656,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-21 14:44:25"
+    "updated": "2026-08-21 19:54:40"
 }
