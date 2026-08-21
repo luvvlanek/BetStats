@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Vallecano_Alaves": {
+            "home": "Vallecano",
+            "away": "Alaves",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:1",
+            "stage": "Koniec",
+            "datetime": "20.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_Q7vRBpMi",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/vallecano-8bcjFy6O/?mid=Q7vRBpMi",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 0.42,
+                    "away": 2
+                },
+                "possession": {
+                    "home": 48,
+                    "away": 52
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
         "Atl. Madryt_Malaga": {
             "home": "Atl. Madryt",
             "away": "Malaga",
@@ -311,21 +363,7 @@
                     "away": 0
                 }
             }
-        },
-        "Vallecano_Alaves": {
-            "home": "Vallecano",
-            "away": "Alaves",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "Przerwa",
-            "datetime": "Przerwa",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_Q7vRBpMi",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/vallecano-8bcjFy6O/?mid=Q7vRBpMi"
         }
     },
-    "updated": "2026-08-20 20:13:41"
+    "updated": "2026-08-21 03:59:18"
 }

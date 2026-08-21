@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Vallecano",
+            "away": "Alaves",
+            "score": "1:1",
+            "datetime": "20.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_Q7vRBpMi",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/vallecano-8bcjFy6O/?mid=Q7vRBpMi",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 0.42,
+                    "away": 2
+                },
+                "possession": {
+                    "home": 48,
+                    "away": 52
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
+        {
             "home": "Atl. Madryt",
             "away": "Malaga",
             "score": "2:0",
@@ -313,5 +365,5 @@
             }
         }
     ],
-    "updated": "2026-08-20 20:13"
+    "updated": "2026-08-21 03:59"
 }
