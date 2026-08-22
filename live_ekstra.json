@@ -1035,6 +1035,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Korona Kielce_Motor Lublin": {
+            "home": "Korona Kielce",
+            "away": "Motor Lublin",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:1",
+            "stage": "Przerwa",
+            "datetime": "Przerwa",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_Onxw6WYr",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/motor-lublin-IoLk2VlL/?mid=Onxw6WYr"
+        },
         "Lechia Gdańsk_Pogoń Siedlce": {
             "home": "Lechia Gdańsk",
             "away": "Pogoń Siedlce",
@@ -2159,7 +2173,49 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
+        },
+        "Bruk-Bet T._Polonia Warszawa": {
+            "home": "Bruk-Bet T.",
+            "away": "Polonia Warszawa",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:1",
+            "stage": "21",
+            "datetime": "21",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_G4uJ1ORq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/polonia-warszawa-ADZjR3us/?mid=G4uJ1ORq"
+        },
+        "Podbeskidzie B-B_Odra Opole": {
+            "home": "Podbeskidzie B-B",
+            "away": "Odra Opole",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:1",
+            "stage": "21",
+            "datetime": "21",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_SQHb9FTh",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/podbeskidzie-b-b-zBPYeTRl/?mid=SQHb9FTh"
+        },
+        "Polonia Bytom_Pogoń Grodzisk Mazowiecki": {
+            "home": "Polonia Bytom",
+            "away": "Pogoń Grodzisk Mazowiecki",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "19",
+            "datetime": "19",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_K0EjByat",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/polonia-bytom-vRn3UqXP/?mid=K0EjByat"
         }
     },
-    "updated": "2026-08-22 07:59:46"
+    "updated": "2026-08-22 13:58:00"
 }
