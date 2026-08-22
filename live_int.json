@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Betis_Real Sociedad": {
+            "home": "Betis",
+            "away": "Real Sociedad",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:0",
+            "stage": "Koniec",
+            "datetime": "21.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_jFuzhjVI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/real-sociedad-jNvak2f3/?mid=jFuzhjVI",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.06,
+                    "away": 1.4
+                },
+                "possession": {
+                    "home": 48,
+                    "away": 52
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 3
+                }
+            }
+        },
         "Vallecano_Alaves": {
             "home": "Vallecano",
             "away": "Alaves",
@@ -119,40 +171,40 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/elche-4jl02tPF/?mid=dEi1jwfE",
             "match_stats": {
                 "corners": {
-                    "home": null,
-                    "away": null
+                    "home": 2,
+                    "away": 6
                 },
                 "yellow": {
-                    "home": null,
-                    "away": null
+                    "home": 2,
+                    "away": 2
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": null,
-                    "away": null
+                    "home": 8,
+                    "away": 11
                 },
                 "shots_on_target": {
-                    "home": null,
-                    "away": null
+                    "home": 3,
+                    "away": 6
                 },
                 "xg": {
-                    "home": null,
-                    "away": null
+                    "home": 0.33,
+                    "away": 1.23
                 },
                 "possession": {
-                    "home": null,
-                    "away": null
+                    "home": 39,
+                    "away": 61
                 },
                 "fouls": {
-                    "home": null,
-                    "away": null
+                    "home": 17,
+                    "away": 12
                 },
                 "offsides": {
-                    "home": null,
-                    "away": null
+                    "home": 2,
+                    "away": 0
                 }
             }
         },
@@ -363,21 +415,7 @@
                     "away": 0
                 }
             }
-        },
-        "Betis_Real Sociedad": {
-            "home": "Betis",
-            "away": "Real Sociedad",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "36",
-            "datetime": "36",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_jFuzhjVI",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/real-sociedad-jNvak2f3/?mid=jFuzhjVI"
         }
     },
-    "updated": "2026-08-21 19:44:50"
+    "updated": "2026-08-22 03:38:34"
 }
