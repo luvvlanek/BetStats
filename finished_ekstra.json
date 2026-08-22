@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Cracovia",
+            "away": "Wieczysta Kraków",
+            "score": "3:2",
+            "datetime": "21.08. 18:30",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_WCuo4A3e",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/ks-wieczysta-krakow-ImhQf1z6/?mid=WCuo4A3e",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 24,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 2.08,
+                    "away": 1.98
+                },
+                "possession": {
+                    "home": 45,
+                    "away": 55
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "Górnik Zabrze",
             "away": "Wisła Kraków",
             "score": "2:1",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_tCC0Jn86",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/pogon-szczecin-Um9YwPQ0/?mid=tCC0Jn86",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 6
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 19,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 1.4,
-                    "away": 1.21
-                },
-                "possession": {
-                    "home": 59,
-                    "away": 41
-                },
-                "fouls": {
-                    "home": 7,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "GKS Katowice",
@@ -1021,10 +1036,62 @@
             "match_stats": null
         },
         {
+            "home": "Lechia Gdańsk",
+            "away": "Pogoń Siedlce",
+            "score": "1:0",
+            "datetime": "21.08. 18:30",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_WfCVNErn",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/pogon-siedlce-d6IVB42i/?mid=WfCVNErn",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 27,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 13,
+                    "away": 2
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 58,
+                    "away": 42
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "Chrobry Głogów",
             "away": "Warta Poznań",
             "score": "0:1",
-            "datetime": "Koniec",
+            "datetime": "21.08. 16:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1087,40 +1154,40 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/puszcza-dtqx13O8/?mid=nVrm2bMP",
             "match_stats": {
                 "corners": {
-                    "home": null,
-                    "away": null
+                    "home": 6,
+                    "away": 5
                 },
                 "yellow": {
-                    "home": null,
-                    "away": null
+                    "home": 2,
+                    "away": 2
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": null,
-                    "away": null
+                    "home": 11,
+                    "away": 17
                 },
                 "shots_on_target": {
-                    "home": null,
-                    "away": null
+                    "home": 7,
+                    "away": 4
                 },
                 "xg": {
                     "home": null,
                     "away": null
                 },
                 "possession": {
-                    "home": null,
-                    "away": null
+                    "home": 46,
+                    "away": 54
                 },
                 "fouls": {
-                    "home": null,
-                    "away": null
+                    "home": 18,
+                    "away": 21
                 },
                 "offsides": {
-                    "home": null,
-                    "away": null
+                    "home": 0,
+                    "away": 0
                 }
             }
         },
@@ -1761,44 +1828,7 @@
             "stage": "Koniec",
             "match_id": "g_1_d4ry4azG",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=d4ry4azG",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 1
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 19,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 8
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 61,
-                    "away": 39
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 2
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Puszcza Niepołomice",
@@ -2131,5 +2161,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-21 19:30"
+    "updated": "2026-08-22 03:24"
 }
