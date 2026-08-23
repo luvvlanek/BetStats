@@ -1,54 +1,54 @@
 {
     "matches": [
         {
-            "home": "Korona Kielce",
-            "away": "Motor Lublin",
-            "score": "1:1",
-            "datetime": "Koniec",
+            "home": "Śląsk Wrocław",
+            "away": "Widzew Łódź",
+            "score": "3:3",
+            "datetime": "22.08. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_Onxw6WYr",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/motor-lublin-IoLk2VlL/?mid=Onxw6WYr",
+            "match_id": "g_1_MqJQGmm1",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/slask-wroclaw-E1Oxemse/widzew-lodz-rNOIW3uC/?mid=MqJQGmm1",
             "match_stats": {
                 "corners": {
-                    "home": 4,
-                    "away": 4
+                    "home": 5,
+                    "away": 0
                 },
                 "yellow": {
-                    "home": 4,
-                    "away": 4
+                    "home": 3,
+                    "away": 3
                 },
                 "red": {
-                    "home": null,
-                    "away": null
+                    "home": 0,
+                    "away": 1
                 },
                 "shots": {
-                    "home": 16,
-                    "away": 11
+                    "home": 17,
+                    "away": 13
                 },
                 "shots_on_target": {
-                    "home": 3,
-                    "away": 2
+                    "home": 6,
+                    "away": 7
                 },
                 "xg": {
-                    "home": 0.88,
-                    "away": 0.67
+                    "home": 1.82,
+                    "away": 1.3
                 },
                 "possession": {
-                    "home": 59,
-                    "away": 41
+                    "home": 69,
+                    "away": 31
                 },
                 "fouls": {
-                    "home": 16,
-                    "away": 14
+                    "home": 15,
+                    "away": 7
                 },
                 "offsides": {
-                    "home": 0,
-                    "away": 2
+                    "home": 3,
+                    "away": 1
                 }
             }
         },
@@ -56,7 +56,7 @@
             "home": "Piast Gliwice",
             "away": "Legia Warszawa",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "22.08. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -97,6 +97,58 @@
                 "fouls": {
                     "home": 10,
                     "away": 4
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 2
+                }
+            }
+        },
+        {
+            "home": "Korona Kielce",
+            "away": "Motor Lublin",
+            "score": "1:1",
+            "datetime": "22.08. 12:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_Onxw6WYr",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/motor-lublin-IoLk2VlL/?mid=Onxw6WYr",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 4
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 0.88,
+                    "away": 0.67
+                },
+                "possession": {
+                    "home": 59,
+                    "away": 41
+                },
+                "fouls": {
+                    "home": 16,
+                    "away": 14
                 },
                 "offsides": {
                     "home": 0,
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_fgkDpP65",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/motor-lublin-IoLk2VlL/pogon-szczecin-Um9YwPQ0/?mid=fgkDpP65",
-            "match_stats": {
-                "corners": {
-                    "home": 2,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 16,
-                    "away": 16
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 2.39,
-                    "away": 0.89
-                },
-                "possession": {
-                    "home": 44,
-                    "away": 56
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Radomiak Radom",
@@ -1069,7 +1084,7 @@
             "home": "Bruk-Bet T.",
             "away": "Polonia Warszawa",
             "score": "1:3",
-            "datetime": "Koniec",
+            "datetime": "22.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1121,7 +1136,7 @@
             "home": "Podbeskidzie B-B",
             "away": "Odra Opole",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "22.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1173,7 +1188,7 @@
             "home": "Polonia Bytom",
             "away": "Pogoń Grodzisk Mazowiecki",
             "score": "2:2",
-            "datetime": "Koniec",
+            "datetime": "22.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2236,5 +2251,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-22 19:16"
+    "updated": "2026-08-23 03:43"
 }
