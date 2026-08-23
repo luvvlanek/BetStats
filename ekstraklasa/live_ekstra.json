@@ -80,7 +80,7 @@
                 },
                 "shots": {
                     "home": 14,
-                    "away": 13
+                    "away": 14
                 },
                 "shots_on_target": {
                     "home": 3,
@@ -1079,6 +1079,20 @@
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
+        },
+        "Radomiak Radom_Zagłębie Lubin": {
+            "home": "Radomiak Radom",
+            "away": "Zagłębie Lubin",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "Przerwa",
+            "datetime": "Przerwa",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_4Qwg2lY7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/zaglebie-lubin-tlYOere0/?mid=4Qwg2lY7"
         },
         "Bruk-Bet T._Polonia Warszawa": {
             "home": "Bruk-Bet T.",
@@ -2249,7 +2263,21 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
+        },
+        "Miedź Legnica_Arka Gdynia": {
+            "home": "Miedź Legnica",
+            "away": "Arka Gdynia",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:0",
+            "stage": "65",
+            "datetime": "65",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_84JE5XSH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/miedz-legnica-lnY5n2Xe/?mid=84JE5XSH"
         }
     },
-    "updated": "2026-08-23 08:02:24"
+    "updated": "2026-08-23 13:58:47"
 }
