@@ -1,5 +1,109 @@
 {
     "matches": {
+        "Espanyol_Real Madryt": {
+            "home": "Espanyol",
+            "away": "Real Madryt",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "22.08. 19:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_l8fgco7b",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/real-madryt-W8mj7MDD/?mid=l8fgco7b",
+            "match_stats": {
+                "corners": {
+                    "home": 0,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 5,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 21
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 8
+                },
+                "xg": {
+                    "home": 1.05,
+                    "away": 2.7
+                },
+                "possession": {
+                    "home": 37,
+                    "away": 63
+                },
+                "fouls": {
+                    "home": 19,
+                    "away": 7
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
+        "Valencia_Celta Vigo": {
+            "home": "Valencia",
+            "away": "Celta Vigo",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "22.08. 17:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_YXsZ9Oj4",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/valencia-CQeaytrD/?mid=YXsZ9Oj4",
+            "match_stats": {
+                "corners": {
+                    "home": 1,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 7
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 0.58,
+                    "away": 0.66
+                },
+                "possession": {
+                    "home": 44,
+                    "away": 56
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 17
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 2
+                }
+            }
+        },
         "Ath. Bilbao_Sevilla": {
             "home": "Ath. Bilbao",
             "away": "Sevilla",
@@ -7,7 +111,7 @@
             "is_finished": true,
             "score": "1:3",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "22.08. 15:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -467,21 +571,7 @@
                     "away": 0
                 }
             }
-        },
-        "Valencia_Celta Vigo": {
-            "home": "Valencia",
-            "away": "Celta Vigo",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "90",
-            "datetime": "90",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_YXsZ9Oj4",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/valencia-CQeaytrD/?mid=YXsZ9Oj4"
         }
     },
-    "updated": "2026-08-22 19:30:48"
+    "updated": "2026-08-23 03:58:28"
 }
