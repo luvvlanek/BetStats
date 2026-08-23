@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Atl. Madryt_Villarreal": {
+            "home": "Atl. Madryt",
+            "away": "Villarreal",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_ImSSgC06",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/villarreal-lUatW5jE/?mid=ImSSgC06",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 4,
+                    "away": 6
+                },
+                "xg": {
+                    "home": 0.72,
+                    "away": 3.6
+                },
+                "possession": {
+                    "home": 52,
+                    "away": 48
+                },
+                "fouls": {
+                    "home": 12,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
         "Espanyol_Real Madryt": {
             "home": "Espanyol",
             "away": "Real Madryt",
@@ -87,12 +139,12 @@
                     "away": 3
                 },
                 "xg": {
-                    "home": 0.58,
-                    "away": 0.66
+                    "home": 0.7,
+                    "away": 0.62
                 },
                 "possession": {
-                    "home": 44,
-                    "away": 56
+                    "home": 45,
+                    "away": 55
                 },
                 "fouls": {
                     "home": 17,
@@ -571,7 +623,21 @@
                     "away": 0
                 }
             }
+        },
+        "Getafe_Racing Santander": {
+            "home": "Getafe",
+            "away": "Racing Santander",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:0",
+            "stage": "89",
+            "datetime": "89",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_dYc1ePyB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/racing-santander-nVpEwOrl/?mid=dYc1ePyB"
         }
     },
-    "updated": "2026-08-23 14:13:33"
+    "updated": "2026-08-23 19:28:58"
 }
