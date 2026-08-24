@@ -1,10 +1,114 @@
 {
     "matches": [
         {
+            "home": "Elche",
+            "away": "Barcelona",
+            "score": "0:5",
+            "datetime": "23.08. 19:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_Gfdoa7xn",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/elche-4jl02tPF/?mid=Gfdoa7xn",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 0
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 7,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 7
+                },
+                "xg": {
+                    "home": 0.7,
+                    "away": 4.38
+                },
+                "possession": {
+                    "home": 46,
+                    "away": 54
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 3
+                }
+            }
+        },
+        {
+            "home": "Getafe",
+            "away": "Racing Santander",
+            "score": "1:0",
+            "datetime": "23.08. 17:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_dYc1ePyB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/racing-santander-nVpEwOrl/?mid=dYc1ePyB",
+            "match_stats": {
+                "corners": {
+                    "home": 8,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.22,
+                    "away": 1
+                },
+                "possession": {
+                    "home": 43,
+                    "away": 57
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 17
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 2
+                }
+            }
+        },
+        {
             "home": "Atl. Madryt",
             "away": "Villarreal",
             "score": "2:2",
-            "datetime": "Koniec",
+            "datetime": "23.08. 15:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -35,7 +139,7 @@
                     "away": 6
                 },
                 "xg": {
-                    "home": 0.72,
+                    "home": 0.78,
                     "away": 3.6
                 },
                 "possession": {
@@ -625,5 +729,5 @@
             }
         }
     ],
-    "updated": "2026-08-23 19:28"
+    "updated": "2026-08-24 03:59"
 }
