@@ -1126,6 +1126,58 @@
             "match_stats": null
         },
         {
+            "home": "Stal Rzeszów",
+            "away": "Ruch Chorzów",
+            "score": "0:1",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_48AwMhDb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ruch-chorzow-S4zygtuJ/stal-rzeszow-IkpY1q92/?mid=48AwMhDb",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 5
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 4
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 1
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 52,
+                    "away": 48
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 18
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "ŁKS Łódź",
             "away": "Stal Mielec",
             "score": "4:0",
@@ -1866,44 +1918,7 @@
             "stage": "Koniec",
             "match_id": "g_1_hUjwpa0s",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/polonia-warszawa-ADZjR3us/?mid=hUjwpa0s",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 13
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 6,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 2
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 38,
-                    "away": 62
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 16
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Ruch Chorzów",
@@ -2341,5 +2356,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-24 14:36"
+    "updated": "2026-08-24 19:54"
 }
