@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Osasuna_Levante": {
+            "home": "Osasuna",
+            "away": "Levante",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_b1nulsUp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/osasuna-ETdxjU8a/?mid=b1nulsUp",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 0.67,
+                    "away": 1.31
+                },
+                "possession": {
+                    "home": 46,
+                    "away": 54
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 5,
+                    "away": 3
+                }
+            }
+        },
         "Elche_Barcelona": {
             "home": "Elche",
             "away": "Barcelona",
@@ -727,7 +779,21 @@
                     "away": 0
                 }
             }
+        },
+        "Malaga_A Coruna": {
+            "home": "Malaga",
+            "away": "A Coruna",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:1",
+            "stage": "30",
+            "datetime": "30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_2V09g36N",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/malaga-25tIqYiJ/?mid=2V09g36N"
         }
     },
-    "updated": "2026-08-24 14:51:59"
+    "updated": "2026-08-24 20:08:56"
 }

@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Osasuna",
+            "away": "Levante",
+            "score": "0:0",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_b1nulsUp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/osasuna-ETdxjU8a/?mid=b1nulsUp",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 0.67,
+                    "away": 1.31
+                },
+                "possession": {
+                    "home": 46,
+                    "away": 54
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 5,
+                    "away": 3
+                }
+            }
+        },
+        {
             "home": "Elche",
             "away": "Barcelona",
             "score": "0:5",
@@ -729,5 +781,5 @@
             }
         }
     ],
-    "updated": "2026-08-24 14:51"
+    "updated": "2026-08-24 20:08"
 }
