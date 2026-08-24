@@ -1,25 +1,25 @@
 {
     "matches": {
-        "Radomiak Radom_Zagłębie Lubin": {
-            "home": "Radomiak Radom",
-            "away": "Zagłębie Lubin",
+        "Pogoń Szczecin_Wisła Kraków": {
+            "home": "Pogoń Szczecin",
+            "away": "Wisła Kraków",
             "is_live": false,
             "is_finished": true,
-            "score": "0:0",
+            "score": "2:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "23.08. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_4Qwg2lY7",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/zaglebie-lubin-tlYOere0/?mid=4Qwg2lY7",
+            "match_id": "g_1_ANQvQiQE",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-szczecin-Um9YwPQ0/wisla-krakow-rob20Q2Q/?mid=ANQvQiQE",
             "match_stats": {
                 "corners": {
-                    "home": 10,
-                    "away": 2
+                    "home": 2,
+                    "away": 4
                 },
                 "yellow": {
-                    "home": 1,
+                    "home": 3,
                     "away": 2
                 },
                 "red": {
@@ -27,27 +27,27 @@
                     "away": null
                 },
                 "shots": {
-                    "home": 18,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 0.78,
-                    "away": 1.26
-                },
-                "possession": {
-                    "home": 60,
-                    "away": 40
-                },
-                "fouls": {
-                    "home": 14,
+                    "home": 13,
                     "away": 14
                 },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.33,
+                    "away": 0.86
+                },
+                "possession": {
+                    "home": 40,
+                    "away": 60
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 10
+                },
                 "offsides": {
-                    "home": 0,
+                    "home": 2,
                     "away": 1
                 }
             }
@@ -59,7 +59,7 @@
             "is_finished": true,
             "score": "5:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "23.08. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -101,6 +101,58 @@
                 "offsides": {
                     "home": 0,
                     "away": 3
+                }
+            }
+        },
+        "Radomiak Radom_Zagłębie Lubin": {
+            "home": "Radomiak Radom",
+            "away": "Zagłębie Lubin",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "23.08. 12:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_4Qwg2lY7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/zaglebie-lubin-tlYOere0/?mid=4Qwg2lY7",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 0.78,
+                    "away": 1.26
+                },
+                "possession": {
+                    "home": 60,
+                    "away": 40
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
                 }
             }
         },
@@ -741,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_46Xhc2jB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/piast-gliwice-ve2oT9ck/?mid=46Xhc2jB",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 19,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 3.35,
-                    "away": 1.42
-                },
-                "possession": {
-                    "home": 47,
-                    "away": 53
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 16
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         "Śląsk Wrocław_Cracovia": {
             "home": "Śląsk Wrocław",
@@ -1110,40 +1125,26 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
-        "Pogoń Szczecin_Wisła Kraków": {
-            "home": "Pogoń Szczecin",
-            "away": "Wisła Kraków",
-            "is_live": true,
-            "is_finished": false,
-            "score": "2:2",
-            "stage": "45",
-            "datetime": "45",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_ANQvQiQE",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-szczecin-Um9YwPQ0/wisla-krakow-rob20Q2Q/?mid=ANQvQiQE"
-        },
-        "Miedź Legnica_Arka Gdynia": {
-            "home": "Miedź Legnica",
-            "away": "Arka Gdynia",
+        "ŁKS Łódź_Stal Mielec": {
+            "home": "ŁKS Łódź",
+            "away": "Stal Mielec",
             "is_live": false,
             "is_finished": true,
-            "score": "2:0",
+            "score": "4:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "23.08. 17:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_84JE5XSH",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/miedz-legnica-lnY5n2Xe/?mid=84JE5XSH",
+            "match_id": "g_1_CYDoKWsB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/stal-mielec-pxXiDZkQ/?mid=CYDoKWsB",
             "match_stats": {
                 "corners": {
-                    "home": 3,
-                    "away": 8
+                    "home": 5,
+                    "away": 2
                 },
                 "yellow": {
-                    "home": 1,
+                    "home": 2,
                     "away": 2
                 },
                 "red": {
@@ -1151,28 +1152,28 @@
                     "away": null
                 },
                 "shots": {
-                    "home": 12,
-                    "away": 17
+                    "home": 24,
+                    "away": 11
                 },
                 "shots_on_target": {
-                    "home": 2,
-                    "away": 3
+                    "home": 9,
+                    "away": 2
                 },
                 "xg": {
                     "home": null,
                     "away": null
                 },
                 "possession": {
-                    "home": 34,
-                    "away": 66
+                    "home": 52,
+                    "away": 48
                 },
                 "fouls": {
-                    "home": 15,
-                    "away": 12
+                    "home": 12,
+                    "away": 7
                 },
                 "offsides": {
                     "home": 1,
-                    "away": 3
+                    "away": 1
                 }
             }
         },
@@ -1183,7 +1184,7 @@
             "is_finished": true,
             "score": "0:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "23.08. 15:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1228,26 +1229,26 @@
                 }
             }
         },
-        "ŁKS Łódź_Stal Mielec": {
-            "home": "ŁKS Łódź",
-            "away": "Stal Mielec",
+        "Miedź Legnica_Arka Gdynia": {
+            "home": "Miedź Legnica",
+            "away": "Arka Gdynia",
             "is_live": false,
             "is_finished": true,
-            "score": "4:0",
+            "score": "2:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "23.08. 12:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_CYDoKWsB",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/stal-mielec-pxXiDZkQ/?mid=CYDoKWsB",
+            "match_id": "g_1_84JE5XSH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/miedz-legnica-lnY5n2Xe/?mid=84JE5XSH",
             "match_stats": {
                 "corners": {
-                    "home": 5,
-                    "away": 2
+                    "home": 3,
+                    "away": 8
                 },
                 "yellow": {
-                    "home": 2,
+                    "home": 1,
                     "away": 2
                 },
                 "red": {
@@ -1255,28 +1256,28 @@
                     "away": null
                 },
                 "shots": {
-                    "home": 24,
-                    "away": 11
+                    "home": 12,
+                    "away": 17
                 },
                 "shots_on_target": {
-                    "home": 9,
-                    "away": 2
+                    "home": 2,
+                    "away": 3
                 },
                 "xg": {
                     "home": null,
                     "away": null
                 },
                 "possession": {
-                    "home": 52,
-                    "away": 48
+                    "home": 34,
+                    "away": 66
                 },
                 "fouls": {
-                    "home": 12,
-                    "away": 7
+                    "home": 15,
+                    "away": 12
                 },
                 "offsides": {
                     "home": 1,
-                    "away": 1
+                    "away": 3
                 }
             }
         },
@@ -2340,5 +2341,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-23 19:13:44"
+    "updated": "2026-08-24 03:44:29"
 }
