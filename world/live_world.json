@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Sabah Baku (Aze)_H. Beer Sheva (Isr)\n2": {
+            "home": "Sabah Baku (Aze)",
+            "away": "H. Beer Sheva (Isr)\n2",
+            "is_live": false,
+            "is_finished": true,
+            "score": "5:2",
+            "stage": "Koniec",
+            "datetime": "25.08. 16:45\nPo\ndogr.",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_0KccwcGq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/h-beer-sheva-EXAD1YZP/sabah-baku-fNGcxbyr/?mid=0KccwcGq",
+            "match_stats": {
+                "corners": {
+                    "home": 11,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 5
+                },
+                "red": {
+                    "home": 0,
+                    "away": 2
+                },
+                "shots": {
+                    "home": 33,
+                    "away": 14
+                },
+                "shots_on_target": {
+                    "home": 12,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 3.6,
+                    "away": 1.44
+                },
+                "possession": {
+                    "home": 54,
+                    "away": 46
+                },
+                "fouls": {
+                    "home": 22,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 5,
+                    "away": 4
+                }
+            }
+        },
         "Celtic (Sco)_LASK (Aut)": {
             "home": "Celtic (Sco)",
             "away": "LASK (Aut)",
@@ -741,44 +793,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_6TOBr6DD",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bodo-glimt-S0WZMUNG/royale-union-sg-407h8Ird/?mid=6TOBr6DD",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 4
-                },
-                "red": {
-                    "home": 0,
-                    "away": 3
-                },
-                "shots": {
-                    "home": 23,
-                    "away": 19
-                },
-                "shots_on_target": {
-                    "home": 9,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 3.7,
-                    "away": 2.61
-                },
-                "possession": {
-                    "home": 70,
-                    "away": 30
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 4
-                }
-            }
+            "match_stats": null
         },
         "Sabah Baku (Aze)_Aarhus (Den)": {
             "home": "Sabah Baku (Aze)",
@@ -5656,5 +5671,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-25 15:03:01"
+    "updated": "2026-08-25 20:21:04"
 }
