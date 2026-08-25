@@ -118,7 +118,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.24,
+                "home": 1.28,
                 "draw": 6.5,
                 "away": 8
             }
@@ -239,8 +239,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.8,
-                "draw": 3.8,
+                "home": 2.9,
+                "draw": 3.6,
                 "away": 2.25
             }
         },
@@ -358,9 +358,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.61,
+                "home": 1.68,
                 "draw": 4,
-                "away": 4.6
+                "away": 4.75
             }
         },
         {
@@ -481,9 +481,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 5.1,
-                "draw": 4.2,
-                "away": 1.56
+                "home": 5.25,
+                "draw": 4.5,
+                "away": 1.55
             }
         },
         {
@@ -604,8 +604,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.48,
-                "draw": 4.6,
+                "home": 1.52,
+                "draw": 4.75,
                 "away": 5.5
             }
         },
@@ -718,9 +718,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.35,
-                "draw": 3.6,
-                "away": 2.75
+                "home": 2.45,
+                "draw": 3.5,
+                "away": 2.65
             }
         },
         {
@@ -841,9 +841,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.28,
-                "draw": 5.7,
-                "away": 8.5
+                "home": 1.3,
+                "draw": 5.5,
+                "away": 9
             }
         },
         {
@@ -962,8 +962,8 @@
             "h2h": [],
             "odds": {
                 "home": 2,
-                "draw": 3.7,
-                "away": 3.4
+                "draw": 3.6,
+                "away": 3.5
             }
         },
         {
@@ -1085,8 +1085,8 @@
             "h2h": [],
             "odds": {
                 "home": 2.15,
-                "draw": 3.8,
-                "away": 2.95
+                "draw": 3.6,
+                "away": 3.1
             }
         },
         {
@@ -1207,126 +1207,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.37,
-                "draw": 5.3,
-                "away": 6
-            }
-        },
-        {
-            "home": "Valencia",
-            "away": "Betis",
-            "datetime": "19:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "xAQCcf1s",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/valencia-CQeaytrD/?mid=xAQCcf1s",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 80,
-                "over25_pct": 53,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.2,
-                "avg_corners": 3.8,
-                "avg_yellow": 1.2,
-                "avg_red": 1.0,
-                "avg_shots": 13.0,
-                "avg_shots_on_target": 4.2,
-                "avg_xg": 1.12,
-                "avg_fouls": 12.0,
-                "avg_offsides": 2.0,
-                "form": [
-                    "D",
-                    "W",
-                    "L",
-                    "L",
-                    "D"
-                ],
-                "corners_per_match": [
-                    1,
-                    7,
-                    2,
-                    5
-                ],
-                "yellow_per_match": [
-                    2,
-                    2,
-                    0,
-                    1
-                ],
-                "shots_per_match": [
-                    8,
-                    19,
-                    13,
-                    12
-                ],
-                "xg_per_match": [
-                    0.7,
-                    1.35,
-                    1.67,
-                    0.77
-                ]
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 67,
-                "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 0.87,
-                "avg_corners": 3.2,
-                "avg_yellow": 1.2,
-                "avg_red": 0,
-                "avg_shots": 13.4,
-                "avg_shots_on_target": 5.6,
-                "avg_xg": 1.14,
-                "avg_fouls": 8.0,
-                "avg_offsides": 0.6,
-                "form": [
-                    "W",
-                    "L",
-                    "D",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [
-                    4,
-                    3,
-                    2,
-                    3,
-                    4
-                ],
-                "yellow_per_match": [
-                    3,
-                    1,
-                    0,
-                    1
-                ],
-                "shots_per_match": [
-                    18,
-                    7,
-                    10,
-                    13,
-                    19
-                ],
-                "xg_per_match": [
-                    1.24,
-                    0.15,
-                    1.6,
-                    1.57
-                ]
-            },
-            "h2h": [],
-            "odds": {
-                "home": 2.9,
-                "draw": 3.2,
-                "away": 2.5
+                "home": 1.44,
+                "draw": 5,
+                "away": 5.75
             }
         },
         {
@@ -1447,8 +1330,8 @@
             "h2h": [],
             "odds": {
                 "home": 1.3,
-                "draw": 5.9,
-                "away": 8.5
+                "draw": 5.5,
+                "away": 8
             }
         },
         {
@@ -1570,7 +1453,7 @@
             "h2h": [],
             "odds": {
                 "home": 1.95,
-                "draw": 3.3,
+                "draw": 3.4,
                 "away": 4
             }
         },
@@ -1681,8 +1564,8 @@
             "h2h": [],
             "odds": {
                 "home": 1.28,
-                "draw": 5.9,
-                "away": 8
+                "draw": 5.75,
+                "away": 9
             }
         },
         {
@@ -1802,9 +1685,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.15,
+                "home": 2.2,
                 "draw": 3.4,
-                "away": 3.3
+                "away": 3.2
             }
         },
         {
@@ -1927,7 +1810,7 @@
             "odds": {
                 "home": 3,
                 "draw": 3.4,
-                "away": 2.25
+                "away": 2.3
             }
         },
         {
@@ -2046,9 +1929,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.3,
+                "home": 3.2,
                 "draw": 3.3,
-                "away": 2.2
+                "away": 2.3
             }
         },
         {
@@ -2167,9 +2050,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.77,
+                "home": 1.95,
                 "draw": 3.6,
-                "away": 4.1
+                "away": 4
             }
         },
         {
@@ -2290,7 +2173,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.4,
+                "home": 3.5,
                 "draw": 3.4,
                 "away": 2.1
             }
@@ -2413,9 +2296,245 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.13,
+                "home": 1.17,
                 "draw": 7.5,
                 "away": 14
+            }
+        },
+        {
+            "home": "A Coruna",
+            "away": "Valencia",
+            "datetime": "30.08. 17:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "OpVK0KDj",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/valencia-CQeaytrD/?mid=OpVK0KDj",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 67,
+                "over25_pct": 33,
+                "over35_pct": 13,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 0.73,
+                "avg_corners": 3.0,
+                "avg_yellow": 1.6,
+                "avg_red": 0.0,
+                "avg_shots": 7.8,
+                "avg_shots_on_target": 3.2,
+                "avg_xg": 0.57,
+                "avg_fouls": 11.6,
+                "avg_offsides": 1.4,
+                "form": [
+                    "D",
+                    "D",
+                    "L",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [
+                    4,
+                    2,
+                    5,
+                    1,
+                    3
+                ],
+                "yellow_per_match": [
+                    4,
+                    2,
+                    0,
+                    1,
+                    1
+                ],
+                "shots_per_match": [
+                    6,
+                    8,
+                    10,
+                    6,
+                    9
+                ],
+                "xg_per_match": [
+                    1.12,
+                    0.33,
+                    0.35,
+                    0.21,
+                    0.84
+                ]
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 80,
+                "over25_pct": 53,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.2,
+                "avg_corners": 3.8,
+                "avg_yellow": 1.2,
+                "avg_red": 1.0,
+                "avg_shots": 13.0,
+                "avg_shots_on_target": 4.2,
+                "avg_xg": 1.12,
+                "avg_fouls": 12.0,
+                "avg_offsides": 2.0,
+                "form": [
+                    "D",
+                    "W",
+                    "L",
+                    "L",
+                    "D"
+                ],
+                "corners_per_match": [
+                    1,
+                    7,
+                    2,
+                    5
+                ],
+                "yellow_per_match": [
+                    2,
+                    2,
+                    0,
+                    1
+                ],
+                "shots_per_match": [
+                    8,
+                    19,
+                    13,
+                    12
+                ],
+                "xg_per_match": [
+                    0.7,
+                    1.35,
+                    1.67,
+                    0.77
+                ]
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.6,
+                "draw": 3.1,
+                "away": 2.9
+            }
+        },
+        {
+            "home": "Valencia",
+            "away": "Betis",
+            "datetime": "Przerwa",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "xAQCcf1s",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/valencia-CQeaytrD/?mid=xAQCcf1s",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 80,
+                "over25_pct": 53,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.2,
+                "avg_corners": 3.8,
+                "avg_yellow": 1.2,
+                "avg_red": 1.0,
+                "avg_shots": 13.0,
+                "avg_shots_on_target": 4.2,
+                "avg_xg": 1.12,
+                "avg_fouls": 12.0,
+                "avg_offsides": 2.0,
+                "form": [
+                    "D",
+                    "W",
+                    "L",
+                    "L",
+                    "D"
+                ],
+                "corners_per_match": [
+                    1,
+                    7,
+                    2,
+                    5
+                ],
+                "yellow_per_match": [
+                    2,
+                    2,
+                    0,
+                    1
+                ],
+                "shots_per_match": [
+                    8,
+                    19,
+                    13,
+                    12
+                ],
+                "xg_per_match": [
+                    0.7,
+                    1.35,
+                    1.67,
+                    0.77
+                ]
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 67,
+                "over25_pct": 60,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.73,
+                "avg_goals_conceded": 0.87,
+                "avg_corners": 3.2,
+                "avg_yellow": 1.2,
+                "avg_red": 0,
+                "avg_shots": 13.4,
+                "avg_shots_on_target": 5.6,
+                "avg_xg": 1.14,
+                "avg_fouls": 8.0,
+                "avg_offsides": 0.6,
+                "form": [
+                    "W",
+                    "L",
+                    "D",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [
+                    4,
+                    3,
+                    2,
+                    3,
+                    4
+                ],
+                "yellow_per_match": [
+                    3,
+                    1,
+                    0,
+                    1
+                ],
+                "shots_per_match": [
+                    18,
+                    7,
+                    10,
+                    13,
+                    19
+                ],
+                "xg_per_match": [
+                    1.24,
+                    0.15,
+                    1.6,
+                    1.57
+                ]
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.75,
+                "draw": 3.2,
+                "away": 2.65
             }
         }
     ],
@@ -2568,31 +2687,31 @@
             "league_id": "laliga"
         },
         {
+            "team": "Betis",
+            "points": "4",
+            "rank": 4,
+            "url": "https://www.flashscore.pl/druzyna/betis/vJbTeCGP/",
+            "league_id": "laliga"
+        },
+        {
             "team": "Barcelona",
             "points": "3",
-            "rank": 4,
+            "rank": 5,
             "url": "https://www.flashscore.pl/druzyna/barcelona/SKbpVP5K/",
             "league_id": "laliga"
         },
         {
             "team": "Espanyol",
             "points": "3",
-            "rank": 5,
+            "rank": 6,
             "url": "https://www.flashscore.pl/druzyna/espanyol/QFfPdh1J/",
             "league_id": "laliga"
         },
         {
             "team": "Real Madryt",
             "points": "3",
-            "rank": 6,
-            "url": "https://www.flashscore.pl/druzyna/real-madryt/W8mj7MDD/",
-            "league_id": "laliga"
-        },
-        {
-            "team": "Betis",
-            "points": "3",
             "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/betis/vJbTeCGP/",
+            "url": "https://www.flashscore.pl/druzyna/real-madryt/W8mj7MDD/",
             "league_id": "laliga"
         },
         {
@@ -2617,17 +2736,17 @@
             "league_id": "laliga"
         },
         {
-            "team": "Celta Vigo",
-            "points": "1",
+            "team": "Valencia",
+            "points": "2",
             "rank": 11,
-            "url": "https://www.flashscore.pl/druzyna/celta-vigo/8pvUZFhf/",
+            "url": "https://www.flashscore.pl/druzyna/valencia/CQeaytrD/",
             "league_id": "laliga"
         },
         {
-            "team": "Valencia",
+            "team": "Celta Vigo",
             "points": "1",
             "rank": 12,
-            "url": "https://www.flashscore.pl/druzyna/valencia/CQeaytrD/",
+            "url": "https://www.flashscore.pl/druzyna/celta-vigo/8pvUZFhf/",
             "league_id": "laliga"
         },
         {
@@ -2699,5 +2818,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-08-25 14:53"
+    "updated": "2026-08-25 20:11"
 }
