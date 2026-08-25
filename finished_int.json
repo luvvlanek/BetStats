@@ -1,10 +1,62 @@
 {
     "matches": [
         {
+            "home": "Malaga",
+            "away": "A Coruna",
+            "score": "1:1",
+            "datetime": "24.08. 19:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_2V09g36N",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/malaga-25tIqYiJ/?mid=2V09g36N",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 4
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 13,
+                    "away": 6
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.95,
+                    "away": 1.12
+                },
+                "possession": {
+                    "home": 55,
+                    "away": 45
+                },
+                "fouls": {
+                    "home": 12,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
+        },
+        {
             "home": "Osasuna",
             "away": "Levante",
             "score": "0:0",
-            "datetime": "Koniec",
+            "datetime": "24.08. 17:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -35,8 +87,8 @@
                     "away": 1
                 },
                 "xg": {
-                    "home": 0.67,
-                    "away": 1.31
+                    "home": 0.7,
+                    "away": 1.28
                 },
                 "possession": {
                     "home": 46,
@@ -741,45 +793,8 @@
             "stage": "Koniec",
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 3
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 18,
-                    "away": 6
-                },
-                "shots_on_target": {
-                    "home": 8,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 1.93,
-                    "away": 0.24
-                },
-                "possession": {
-                    "home": 52,
-                    "away": 48
-                },
-                "fouls": {
-                    "home": 16,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 4,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         }
     ],
-    "updated": "2026-08-24 20:08"
+    "updated": "2026-08-25 03:42"
 }
