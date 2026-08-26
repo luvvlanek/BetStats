@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Valencia",
+            "away": "Betis",
+            "score": "0:1",
+            "datetime": "25.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_xAQCcf1s",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/valencia-CQeaytrD/?mid=xAQCcf1s",
+            "match_stats": {
+                "corners": {
+                    "home": 8,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.15,
+                    "away": 0.71
+                },
+                "possession": {
+                    "home": 42,
+                    "away": 58
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 11
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "Malaga",
             "away": "A Coruna",
             "score": "1:1",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_6RZt3GwK",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/sevilla-h8oAv4Ts/vallecano-8bcjFy6O/?mid=6RZt3GwK",
-            "match_stats": {
-                "corners": {
-                    "home": 1,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 4
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 6
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 2.19,
-                    "away": 1.89
-                },
-                "possession": {
-                    "home": 49,
-                    "away": 51
-                },
-                "fouls": {
-                    "home": 18,
-                    "away": 18
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Alaves",
@@ -796,5 +811,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-25 20:11"
+    "updated": "2026-08-26 04:00"
 }

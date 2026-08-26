@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Valencia_Betis": {
+            "home": "Valencia",
+            "away": "Betis",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:1",
+            "stage": "Koniec",
+            "datetime": "25.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_xAQCcf1s",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/valencia-CQeaytrD/?mid=xAQCcf1s",
+            "match_stats": {
+                "corners": {
+                    "home": 8,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.15,
+                    "away": 0.71
+                },
+                "possession": {
+                    "home": 42,
+                    "away": 58
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 11
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
         "Malaga_A Coruna": {
             "home": "Malaga",
             "away": "A Coruna",
@@ -741,44 +793,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_6RZt3GwK",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/sevilla-h8oAv4Ts/vallecano-8bcjFy6O/?mid=6RZt3GwK",
-            "match_stats": {
-                "corners": {
-                    "home": 1,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 4
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 6
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 2.19,
-                    "away": 1.89
-                },
-                "possession": {
-                    "home": 49,
-                    "away": 51
-                },
-                "fouls": {
-                    "home": 18,
-                    "away": 18
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         "Alaves_Getafe": {
             "home": "Alaves",
@@ -794,21 +809,7 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
-        },
-        "Valencia_Betis": {
-            "home": "Valencia",
-            "away": "Betis",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "Przerwa",
-            "datetime": "Przerwa",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_xAQCcf1s",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/valencia-CQeaytrD/?mid=xAQCcf1s"
         }
     },
-    "updated": "2026-08-25 20:11:37"
+    "updated": "2026-08-26 04:00:31"
 }
