@@ -1,5 +1,109 @@
 {
     "matches": {
+        "Bodo/Glimt (Nor)_NEC Nijmegen (Ned)": {
+            "home": "Bodo/Glimt (Nor)",
+            "away": "NEC Nijmegen (Ned)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:0",
+            "stage": "Koniec",
+            "datetime": "25.08. 19:00",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_YwP3q51N",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bodo-glimt-S0WZMUNG/nijmegen-nRluRF0T/?mid=YwP3q51N",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 2
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 21,
+                    "away": 3
+                },
+                "shots_on_target": {
+                    "home": 9,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 1.35,
+                    "away": 0.15
+                },
+                "possession": {
+                    "home": 80,
+                    "away": 20
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 8
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 3
+                }
+            }
+        },
+        "LASK (Aut)_Celtic (Sco)": {
+            "home": "LASK (Aut)",
+            "away": "Celtic (Sco)",
+            "is_live": false,
+            "is_finished": true,
+            "score": "5:1",
+            "stage": "Koniec",
+            "datetime": "25.08. 19:00\nPo\ndogr.",
+            "league_id": "ucl",
+            "league_name": "Liga Mistrzów",
+            "league_flag": "🏆",
+            "match_id": "g_1_OOklm0j3",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celtic-QFKRRD8M/lask-linz-MipWYeKQ/?mid=OOklm0j3",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 40,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 4.91,
+                    "away": 0.39
+                },
+                "possession": {
+                    "home": 49,
+                    "away": 51
+                },
+                "fouls": {
+                    "home": 20,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
         "Sabah Baku (Aze)_H. Beer Sheva (Isr)\n2": {
             "home": "Sabah Baku (Aze)",
             "away": "H. Beer Sheva (Isr)\n2",
@@ -689,44 +793,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_8G3qc5S6",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nijmegen-nRluRF0T/olympiakos-hnzvnHPS/?mid=8G3qc5S6",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 4
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 17,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 1.91,
-                    "away": 1.08
-                },
-                "possession": {
-                    "home": 54,
-                    "away": 46
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 19
-                },
-                "offsides": {
-                    "home": 4,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "Żalgiris Kowno (Ltu)_Dinamo Zagrzeb (Cro)": {
             "home": "Żalgiris Kowno (Ltu)",
@@ -741,44 +808,7 @@
             "league_flag": "🏆",
             "match_id": "g_1_jZwEihD7",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/din-zagreb-8G5ufQTg/zalgiris-kowno-0p17kQla/?mid=jZwEihD7",
-            "match_stats": {
-                "corners": {
-                    "home": 8,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 18,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 5
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 61,
-                    "away": 39
-                },
-                "fouls": {
-                    "home": 16,
-                    "away": 10
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Bodo/Glimt (Nor)_Royale Union SG (Bel)": {
             "home": "Bodo/Glimt (Nor)",
@@ -5671,5 +5701,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-25 20:21:04"
+    "updated": "2026-08-26 04:09:53"
 }
