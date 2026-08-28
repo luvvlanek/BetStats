@@ -1,6 +1,162 @@
 {
     "matches": [
         {
+            "home": "Bayern Monachium",
+            "away": "VfB Stuttgart",
+            "score": "5:1",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_xrtCcyAe",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 21,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 9,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 3.93,
+                    "away": 0.86
+                },
+                "possession": {
+                    "home": 59,
+                    "away": 41
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 17
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "Racing Santander",
+            "away": "Elche",
+            "score": "3:2",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_CrPiFJSq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/racing-santander-nVpEwOrl/?mid=CrPiFJSq",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 10
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 13,
+                    "away": 18
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 7
+                },
+                "xg": {
+                    "home": 1.5,
+                    "away": 1.06
+                },
+                "possession": {
+                    "home": 40,
+                    "away": 60
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 19
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "Alaves",
+            "away": "Villarreal",
+            "score": "1:0",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_6ots82LG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/villarreal-lUatW5jE/?mid=6ots82LG",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 9
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 9,
+                    "away": 19
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 6
+                },
+                "xg": {
+                    "home": 0.81,
+                    "away": 1.4
+                },
+                "possession": {
+                    "home": 24,
+                    "away": 76
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 8
+                },
+                "offsides": {
+                    "home": 5,
+                    "away": 4
+                }
+            }
+        },
+        {
             "home": "Barcelona",
             "away": "Ath. Bilbao",
             "score": "2:0",
@@ -88,11 +244,11 @@
                 },
                 "xg": {
                     "home": 0.13,
-                    "away": 2.68
+                    "away": 2.61
                 },
                 "possession": {
-                    "home": 51,
-                    "away": 49
+                    "home": 52,
+                    "away": 48
                 },
                 "fouls": {
                     "home": 7,
@@ -689,44 +845,7 @@
             "stage": "Koniec",
             "match_id": "g_1_Q7vRBpMi",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/vallecano-8bcjFy6O/?mid=Q7vRBpMi",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 7
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 8,
-                    "away": 15
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 0.42,
-                    "away": 2
-                },
-                "possession": {
-                    "home": 48,
-                    "away": 52
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Atl. Madryt",
@@ -741,44 +860,7 @@
             "stage": "Koniec",
             "match_id": "g_1_MX8chH9e",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/malaga-25tIqYiJ/?mid=MX8chH9e",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 15,
-                    "away": 5
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 1
-                },
-                "xg": {
-                    "home": 0.93,
-                    "away": 0.15
-                },
-                "possession": {
-                    "home": 53,
-                    "away": 47
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 11
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "A Coruna",
@@ -856,5 +938,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-28 02:03"
+    "updated": "2026-08-28 22:21"
 }
