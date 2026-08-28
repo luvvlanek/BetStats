@@ -1,6 +1,162 @@
 {
     "matches": [
         {
+            "home": "Barcelona",
+            "away": "Ath. Bilbao",
+            "score": "2:0",
+            "datetime": "27.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_0Atuqenl",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/barcelona-SKbpVP5K/?mid=0Atuqenl",
+            "match_stats": {
+                "corners": {
+                    "home": 12,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 5
+                },
+                "shots_on_target": {
+                    "home": 10,
+                    "away": 0
+                },
+                "xg": {
+                    "home": 4.23,
+                    "away": 0.25
+                },
+                "possession": {
+                    "home": 70,
+                    "away": 30
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 8,
+                    "away": 5
+                }
+            }
+        },
+        {
+            "home": "Celta Vigo",
+            "away": "Osasuna",
+            "score": "1:2",
+            "datetime": "27.08. 18:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_fo75jev8",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/osasuna-ETdxjU8a/?mid=fo75jev8",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 1
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 4,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.13,
+                    "away": 2.68
+                },
+                "possession": {
+                    "home": 51,
+                    "away": 49
+                },
+                "fouls": {
+                    "home": 7,
+                    "away": 16
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 4
+                }
+            }
+        },
+        {
+            "home": "Real Madryt",
+            "away": "Real Sociedad",
+            "score": "4:1",
+            "datetime": "26.08. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_EXneuDoD",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/real-sociedad-jNvak2f3/?mid=EXneuDoD",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 20,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 11,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 3.18,
+                    "away": 0.66
+                },
+                "possession": {
+                    "home": 51,
+                    "away": 49
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 8
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
+        {
             "home": "Valencia",
             "away": "Betis",
             "score": "0:1",
@@ -637,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_dEi1jwfE",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/elche-4jl02tPF/?mid=dEi1jwfE",
-            "match_stats": {
-                "corners": {
-                    "home": 2,
-                    "away": 6
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 8,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 6
-                },
-                "xg": {
-                    "home": 0.33,
-                    "away": 1.23
-                },
-                "possession": {
-                    "home": 39,
-                    "away": 61
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Espanyol",
@@ -689,44 +808,7 @@
             "stage": "Koniec",
             "match_id": "g_1_4ve9lHOQ",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/levante-G8FL0ShI/?mid=4ve9lHOQ",
-            "match_stats": {
-                "corners": {
-                    "home": 0,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 16,
-                    "away": 4
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 0
-                },
-                "xg": {
-                    "home": 1.56,
-                    "away": 0.28
-                },
-                "possession": {
-                    "home": 54,
-                    "away": 46
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 7
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Racing Santander",
@@ -741,44 +823,7 @@
             "stage": "Koniec",
             "match_id": "g_1_8zpmsZG0",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/villarreal-lUatW5jE/?mid=8zpmsZG0",
-            "match_stats": {
-                "corners": {
-                    "home": 6,
-                    "away": 10
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 17,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 7
-                },
-                "xg": {
-                    "home": 1.87,
-                    "away": 0.66
-                },
-                "possession": {
-                    "home": 41,
-                    "away": 59
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Sevilla",
@@ -811,5 +856,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-26 14:53"
+    "updated": "2026-08-28 02:03"
 }
