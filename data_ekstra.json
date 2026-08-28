@@ -3,7 +3,7 @@
         {
             "home": "Wisła Płock",
             "away": "Korona Kielce",
-            "datetime": "28.08. 16:00",
+            "datetime": "16:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -125,7 +125,7 @@
         {
             "home": "Legia Warszawa",
             "away": "Śląsk Wrocław",
-            "datetime": "28.08. 18:30",
+            "datetime": "18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -440,7 +440,7 @@
                 "avg_goals_scored": 1.27,
                 "avg_goals_conceded": 1.73,
                 "avg_corners": 5.8,
-                "avg_yellow": 1.6,
+                "avg_yellow": 1.8,
                 "avg_red": 0,
                 "avg_shots": 14.6,
                 "avg_shots_on_target": 4.4,
@@ -462,7 +462,7 @@
                     11
                 ],
                 "yellow_per_match": [
-                    2,
+                    3,
                     0,
                     2,
                     3,
@@ -688,7 +688,7 @@
                 "avg_red": 0,
                 "avg_shots": 11.4,
                 "avg_shots_on_target": 5.2,
-                "avg_xg": 1.33,
+                "avg_xg": 1.35,
                 "avg_fouls": 13.4,
                 "avg_offsides": 2.0,
                 "form": [
@@ -720,7 +720,7 @@
                     7
                 ],
                 "xg_per_match": [
-                    1.33,
+                    1.42,
                     2.39,
                     1.21,
                     1.01,
@@ -748,100 +748,100 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
+                "btts_pct": 67,
                 "over15_pct": 87,
                 "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 4.0,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.73,
+                "avg_goals_conceded": 1.47,
+                "avg_corners": 4.4,
                 "avg_yellow": 2.0,
                 "avg_red": 0.0,
-                "avg_shots": 12.0,
-                "avg_shots_on_target": 4.0,
-                "avg_xg": 2.04,
-                "avg_fouls": 9.6,
-                "avg_offsides": 0.8,
+                "avg_shots": 12.6,
+                "avg_shots_on_target": 4.4,
+                "avg_xg": 1.57,
+                "avg_fouls": 10.4,
+                "avg_offsides": 1.4,
                 "form": [
+                    "L",
                     "D",
                     "L",
                     "W",
-                    "D",
-                    "L"
+                    "D"
                 ],
                 "corners_per_match": [
                     5,
                     5,
-                    2,
                     5,
-                    3
+                    2,
+                    5
                 ],
                 "yellow_per_match": [
                     2,
+                    2,
                     1,
                     4,
-                    1,
-                    2
+                    1
                 ],
                 "shots_per_match": [
+                    20,
                     12,
                     14,
                     6,
-                    11,
-                    17
+                    11
                 ],
                 "xg_per_match": [
-                    0.85,
-                    3.24
+                    2.29,
+                    0.85
                 ]
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 40,
+                "btts_pct": 47,
                 "over15_pct": 60,
-                "over25_pct": 40,
+                "over25_pct": 47,
                 "over35_pct": 20,
                 "avg_goals_scored": 1.6,
-                "avg_goals_conceded": 0.6,
-                "avg_corners": 3.4,
-                "avg_yellow": 2.4,
+                "avg_goals_conceded": 0.67,
+                "avg_corners": 3.8,
+                "avg_yellow": 1.8,
                 "avg_red": 0,
-                "avg_shots": 14.4,
-                "avg_shots_on_target": 5.6,
-                "avg_xg": 0.9,
-                "avg_fouls": 15.6,
+                "avg_shots": 15.0,
+                "avg_shots_on_target": 5.8,
+                "avg_xg": 1.35,
+                "avg_fouls": 16.6,
                 "avg_offsides": 2.0,
                 "form": [
                     "W",
+                    "W",
                     "D",
                     "L",
-                    "W",
                     "W"
                 ],
                 "corners_per_match": [
                     4,
+                    4,
                     2,
                     8,
-                    1,
-                    2
+                    1
                 ],
                 "yellow_per_match": [
+                    0,
                     1,
                     3,
                     4,
-                    1,
-                    3
+                    1
                 ],
                 "shots_per_match": [
+                    16,
                     24,
                     7,
                     18,
-                    10,
-                    13
+                    10
                 ],
                 "xg_per_match": [
-                    0.92,
-                    0.88
+                    1.79,
+                    0.92
                 ]
             },
             "h2h": [],
@@ -869,50 +869,50 @@
                 "over15_pct": 80,
                 "over25_pct": 60,
                 "over35_pct": 27,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.2,
-                "avg_corners": 6.0,
-                "avg_yellow": 2.0,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 5.4,
+                "avg_yellow": 2.2,
                 "avg_red": 1.0,
-                "avg_shots": 15.2,
-                "avg_shots_on_target": 4.6,
-                "avg_xg": 1.41,
-                "avg_fouls": 11.2,
-                "avg_offsides": 0.8,
+                "avg_shots": 14.6,
+                "avg_shots_on_target": 5.4,
+                "avg_xg": 1.53,
+                "avg_fouls": 11.6,
+                "avg_offsides": 0.6,
                 "form": [
+                    "L",
                     "L",
                     "W",
                     "D",
-                    "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [
+                    2,
                     7,
                     6,
                     9,
-                    3,
-                    5
+                    3
                 ],
                 "yellow_per_match": [
                     2,
+                    2,
                     3,
                     0,
-                    4,
-                    1
+                    4
                 ],
                 "shots_per_match": [
+                    7,
                     17,
                     9,
                     19,
-                    21,
-                    10
+                    21
                 ],
                 "xg_per_match": [
+                    1.26,
                     1.16,
                     0.61,
                     1.95,
-                    2.69,
-                    0.65
+                    2.69
                 ]
             },
             "away_stats": {
@@ -1037,52 +1037,52 @@
             },
             "away_stats": {
                 "total_matches": 14,
-                "btts_pct": 50,
-                "over15_pct": 79,
-                "over25_pct": 71,
-                "over35_pct": 57,
-                "avg_goals_scored": 2.79,
-                "avg_goals_conceded": 0.57,
-                "avg_corners": 6.4,
-                "avg_yellow": 1.2,
+                "btts_pct": 57,
+                "over15_pct": 86,
+                "over25_pct": 79,
+                "over35_pct": 64,
+                "avg_goals_scored": 2.86,
+                "avg_goals_conceded": 0.71,
+                "avg_corners": 5.6,
+                "avg_yellow": 1.6,
                 "avg_red": 0,
-                "avg_shots": 19.8,
-                "avg_shots_on_target": 8.4,
-                "avg_xg": 2.63,
-                "avg_fouls": 11.0,
-                "avg_offsides": 0.8,
+                "avg_shots": 18.2,
+                "avg_shots_on_target": 7.6,
+                "avg_xg": 2.48,
+                "avg_fouls": 11.6,
+                "avg_offsides": 1.0,
                 "form": [
-                    "W",
+                    "D",
                     "W",
                     "W",
                     "W",
                     "W"
                 ],
                 "corners_per_match": [
+                    3,
                     5,
                     9,
                     6,
-                    5,
-                    7
+                    5
                 ],
                 "yellow_per_match": [
+                    3,
                     1,
                     2,
-                    1,
                     1,
                     1
                 ],
                 "shots_per_match": [
+                    13,
                     20,
                     20,
                     19,
-                    19,
-                    21
+                    19
                 ],
                 "xg_per_match": [
+                    1.25,
                     2.84,
-                    3.35,
-                    1.7
+                    3.35
                 ]
             },
             "h2h": [],
@@ -1106,51 +1106,51 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
+                "btts_pct": 67,
                 "over15_pct": 87,
                 "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 4.0,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.73,
+                "avg_goals_conceded": 1.47,
+                "avg_corners": 4.4,
                 "avg_yellow": 2.0,
                 "avg_red": 0.0,
-                "avg_shots": 12.0,
-                "avg_shots_on_target": 4.0,
-                "avg_xg": 2.04,
-                "avg_fouls": 9.6,
-                "avg_offsides": 0.8,
+                "avg_shots": 12.6,
+                "avg_shots_on_target": 4.4,
+                "avg_xg": 1.57,
+                "avg_fouls": 10.4,
+                "avg_offsides": 1.4,
                 "form": [
+                    "L",
                     "D",
                     "L",
                     "W",
-                    "D",
-                    "L"
+                    "D"
                 ],
                 "corners_per_match": [
                     5,
                     5,
-                    2,
                     5,
-                    3
+                    2,
+                    5
                 ],
                 "yellow_per_match": [
                     2,
+                    2,
                     1,
                     4,
-                    1,
-                    2
+                    1
                 ],
                 "shots_per_match": [
+                    20,
                     12,
                     14,
                     6,
-                    11,
-                    17
+                    11
                 ],
                 "xg_per_match": [
-                    0.85,
-                    3.24
+                    2.29,
+                    0.85
                 ]
             },
             "away_stats": {
@@ -1159,50 +1159,50 @@
                 "over15_pct": 80,
                 "over25_pct": 60,
                 "over35_pct": 27,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.2,
-                "avg_corners": 6.0,
-                "avg_yellow": 2.0,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 5.4,
+                "avg_yellow": 2.2,
                 "avg_red": 1.0,
-                "avg_shots": 15.2,
-                "avg_shots_on_target": 4.6,
-                "avg_xg": 1.41,
-                "avg_fouls": 11.2,
-                "avg_offsides": 0.8,
+                "avg_shots": 14.6,
+                "avg_shots_on_target": 5.4,
+                "avg_xg": 1.53,
+                "avg_fouls": 11.6,
+                "avg_offsides": 0.6,
                 "form": [
+                    "L",
                     "L",
                     "W",
                     "D",
-                    "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [
+                    2,
                     7,
                     6,
                     9,
-                    3,
-                    5
+                    3
                 ],
                 "yellow_per_match": [
                     2,
+                    2,
                     3,
                     0,
-                    4,
-                    1
+                    4
                 ],
                 "shots_per_match": [
+                    7,
                     17,
                     9,
                     19,
-                    21,
-                    10
+                    21
                 ],
                 "xg_per_match": [
+                    1.26,
                     1.16,
                     0.61,
                     1.95,
-                    2.69,
-                    0.65
+                    2.69
                 ]
             },
             "h2h": [],
@@ -1215,7 +1215,7 @@
         {
             "home": "Unia Skierniewice",
             "away": "Stal Rzeszów",
-            "datetime": "28.08. 16:00",
+            "datetime": "16:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1323,7 +1323,7 @@
         {
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Bruk-Bet T.",
-            "datetime": "28.08. 16:15",
+            "datetime": "16:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1433,7 +1433,7 @@
         {
             "home": "Odra Opole",
             "away": "ŁKS Łódź",
-            "datetime": "28.08. 18:45",
+            "datetime": "18:45",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2577,5 +2577,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-08-26 14:37"
+    "updated": "2026-08-28 01:48"
 }
