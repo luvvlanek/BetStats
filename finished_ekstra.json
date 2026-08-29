@@ -1,62 +1,10 @@
 {
     "matches": [
         {
-            "home": "Wisła Płock",
-            "away": "Korona Kielce",
-            "score": "0:2",
-            "datetime": "Koniec",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_Ew8G74Rp",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/wisla-plock-QoZYVU3E/?mid=Ew8G74Rp",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 0
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 18,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 2.24,
-                    "away": 0.91
-                },
-                "possession": {
-                    "home": 57,
-                    "away": 43
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
-        },
-        {
             "home": "Legia Warszawa",
             "away": "Śląsk Wrocław",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "28.08. 18:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -97,6 +45,58 @@
                 "fouls": {
                     "home": 14,
                     "away": 12
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "Wisła Płock",
+            "away": "Korona Kielce",
+            "score": "0:2",
+            "datetime": "28.08. 16:00",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_Ew8G74Rp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/wisla-plock-QoZYVU3E/?mid=Ew8G74Rp",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 0
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 0
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 4,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 2.24,
+                    "away": 0.91
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 14
                 },
                 "offsides": {
                     "home": 0,
@@ -1156,54 +1156,54 @@
             "match_stats": null
         },
         {
-            "home": "Unia Skierniewice",
-            "away": "Stal Rzeszów",
-            "score": "0:1",
-            "datetime": "Koniec",
+            "home": "Odra Opole",
+            "away": "ŁKS Łódź",
+            "score": "0:0",
+            "datetime": "28.08. 18:45",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_GOVCN5l3",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/stal-rzeszow-IkpY1q92/unia-skierniewice-l42F3w54/?mid=GOVCN5l3",
+            "match_id": "g_1_d2XSJNmS",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/odra-opole-C8Kg1k4R/?mid=d2XSJNmS",
             "match_stats": {
                 "corners": {
-                    "home": 3,
-                    "away": 7
+                    "home": 4,
+                    "away": 3
                 },
                 "yellow": {
-                    "home": 1,
-                    "away": 2
+                    "home": 2,
+                    "away": 0
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": 12,
-                    "away": 14
+                    "home": 9,
+                    "away": 6
                 },
                 "shots_on_target": {
-                    "home": 2,
-                    "away": 4
+                    "home": 4,
+                    "away": 2
                 },
                 "xg": {
                     "home": null,
                     "away": null
                 },
                 "possession": {
-                    "home": 50,
-                    "away": 50
+                    "home": 53,
+                    "away": 47
                 },
                 "fouls": {
-                    "home": 9,
-                    "away": 16
+                    "home": 17,
+                    "away": 8
                 },
                 "offsides": {
-                    "home": 2,
-                    "away": 3
+                    "home": 1,
+                    "away": 1
                 }
             }
         },
@@ -1211,7 +1211,7 @@
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Bruk-Bet T.",
             "score": "2:2",
-            "datetime": "Koniec",
+            "datetime": "28.08. 16:15",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1260,54 +1260,54 @@
             }
         },
         {
-            "home": "Odra Opole",
-            "away": "ŁKS Łódź",
-            "score": "0:0",
-            "datetime": "Koniec",
+            "home": "Unia Skierniewice",
+            "away": "Stal Rzeszów",
+            "score": "0:1",
+            "datetime": "28.08. 16:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_d2XSJNmS",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/odra-opole-C8Kg1k4R/?mid=d2XSJNmS",
+            "match_id": "g_1_GOVCN5l3",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/stal-rzeszow-IkpY1q92/unia-skierniewice-l42F3w54/?mid=GOVCN5l3",
             "match_stats": {
                 "corners": {
-                    "home": 4,
-                    "away": 3
+                    "home": 3,
+                    "away": 7
                 },
                 "yellow": {
-                    "home": 2,
-                    "away": 0
+                    "home": 1,
+                    "away": 2
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": 9,
-                    "away": 6
+                    "home": 12,
+                    "away": 14
                 },
                 "shots_on_target": {
-                    "home": 4,
-                    "away": 2
+                    "home": 2,
+                    "away": 4
                 },
                 "xg": {
                     "home": null,
                     "away": null
                 },
                 "possession": {
-                    "home": 53,
-                    "away": 47
+                    "home": 50,
+                    "away": 50
                 },
                 "fouls": {
-                    "home": 17,
-                    "away": 8
+                    "home": 9,
+                    "away": 16
                 },
                 "offsides": {
-                    "home": 1,
-                    "away": 1
+                    "home": 2,
+                    "away": 3
                 }
             }
         },
@@ -2431,5 +2431,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-28 22:06"
+    "updated": "2026-08-29 00:17"
 }
