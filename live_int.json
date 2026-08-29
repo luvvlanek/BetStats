@@ -7,7 +7,7 @@
             "is_finished": true,
             "score": "5:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "28.08. 18:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -35,8 +35,8 @@
                     "away": 4
                 },
                 "xg": {
-                    "home": 3.93,
-                    "away": 0.86
+                    "home": 4.06,
+                    "away": 0.78
                 },
                 "possession": {
                     "home": 59,
@@ -52,58 +52,6 @@
                 }
             }
         },
-        "Racing Santander_Elche": {
-            "home": "Racing Santander",
-            "away": "Elche",
-            "is_live": false,
-            "is_finished": true,
-            "score": "3:2",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_CrPiFJSq",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/racing-santander-nVpEwOrl/?mid=CrPiFJSq",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 10
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 18
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 7
-                },
-                "xg": {
-                    "home": 1.5,
-                    "away": 1.06
-                },
-                "possession": {
-                    "home": 40,
-                    "away": 60
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 19
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 1
-                }
-            }
-        },
         "Alaves_Villarreal": {
             "home": "Alaves",
             "away": "Villarreal",
@@ -111,7 +59,7 @@
             "is_finished": true,
             "score": "1:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "28.08. 19:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -153,6 +101,58 @@
                 "offsides": {
                     "home": 5,
                     "away": 4
+                }
+            }
+        },
+        "Racing Santander_Elche": {
+            "home": "Racing Santander",
+            "away": "Elche",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:2",
+            "stage": "Koniec",
+            "datetime": "28.08. 17:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_CrPiFJSq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/racing-santander-nVpEwOrl/?mid=CrPiFJSq",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 10
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 13,
+                    "away": 18
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 7
+                },
+                "xg": {
+                    "home": 1.72,
+                    "away": 1.04
+                },
+                "possession": {
+                    "home": 40,
+                    "away": 60
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 19
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 1
                 }
             }
         },
@@ -938,5 +938,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-28 22:21:45"
+    "updated": "2026-08-29 00:32:26"
 }
