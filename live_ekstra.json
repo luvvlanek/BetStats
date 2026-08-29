@@ -1155,6 +1155,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Radomiak Radom_Cracovia": {
+            "home": "Radomiak Radom",
+            "away": "Cracovia",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:1",
+            "stage": "90+1",
+            "datetime": "90+1",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_YPm4DZc6",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/radomiak-radom-zD5nYhAT/?mid=YPm4DZc6"
+        },
         "Odra Opole_ŁKS Łódź": {
             "home": "Odra Opole",
             "away": "ŁKS Łódź",
@@ -2431,5 +2445,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-08-29 06:17:59"
+    "updated": "2026-08-29 12:19:08"
 }
