@@ -1,5 +1,265 @@
 {
     "matches": {
+        "1. FC Koeln_TSG Hoffenheim": {
+            "home": "1. FC Koeln",
+            "away": "TSG Hoffenheim",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_bcMB76dE",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hoffenheim-hQAtP9Sl/koln-WG9pOTse/?mid=bcMB76dE",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.71,
+                    "away": 1.76
+                },
+                "possession": {
+                    "home": 41,
+                    "away": 59
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 0
+                }
+            }
+        },
+        "1. FSV Mainz 05_Paderborn": {
+            "home": "1. FSV Mainz 05",
+            "away": "Paderborn",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_r7qK1G8e",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/mainz-EuakNmc1/paderborn-G2Op923t/?mid=r7qK1G8e",
+            "match_stats": {
+                "corners": {
+                    "home": 11,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 4,
+                    "away": 0
+                },
+                "xg": {
+                    "home": 1.25,
+                    "away": 0.76
+                },
+                "possession": {
+                    "home": 51,
+                    "away": 49
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        "Elversberg_Bayer Leverkusen": {
+            "home": "Elversberg",
+            "away": "Bayer Leverkusen",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_6q9MVvD5",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elversberg-6in2Eknb/leverkusen-4jcj2zMd/?mid=6q9MVvD5",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 21
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.12,
+                    "away": 1.99
+                },
+                "possession": {
+                    "home": 33,
+                    "away": 67
+                },
+                "fouls": {
+                    "home": 18,
+                    "away": 15
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        "RB Lipsk_B. Moenchengladbach": {
+            "home": "RB Lipsk",
+            "away": "B. Moenchengladbach",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_WpiYAKo9",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/rb-leipzig-KbS1suSm/?mid=WpiYAKo9",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 0
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 25,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 11,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 3.94,
+                    "away": 0.97
+                },
+                "possession": {
+                    "home": 47,
+                    "away": 53
+                },
+                "fouls": {
+                    "home": 10,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 5
+                }
+            }
+        },
+        "Union Berlin_Eintracht Frankfurt": {
+            "home": "Union Berlin",
+            "away": "Eintracht Frankfurt",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:3",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_UNsSafw8",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/frankfurt-8vndvXTk/union-berlin-pzHW4oaE/?mid=UNsSafw8",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 4
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 10,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 2.02,
+                    "away": 1.39
+                },
+                "possession": {
+                    "home": 49,
+                    "away": 51
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 2
+                }
+            }
+        },
         "Bayern Monachium_VfB Stuttgart": {
             "home": "Bayern Monachium",
             "away": "VfB Stuttgart",
@@ -49,6 +309,72 @@
                 "offsides": {
                     "home": 3,
                     "away": 1
+                }
+            }
+        },
+        "Borussia Dortmund_Hamburger SV": {
+            "home": "Borussia Dortmund",
+            "away": "Hamburger SV",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:0",
+            "stage": "89",
+            "datetime": "89",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_vi4nmHg2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dortmund-nP1i5US1/hamburger-v9k3aY5F/?mid=vi4nmHg2"
+        },
+        "Levante_Betis": {
+            "home": "Levante",
+            "away": "Betis",
+            "is_live": false,
+            "is_finished": true,
+            "score": "5:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_O4LEM1zA",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/levante-G8FL0ShI/?mid=O4LEM1zA",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 20
+                },
+                "shots_on_target": {
+                    "home": 10,
+                    "away": 6
+                },
+                "xg": {
+                    "home": 3,
+                    "away": 1.97
+                },
+                "possession": {
+                    "home": 40,
+                    "away": 60
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 7
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
                 }
             }
         },
@@ -793,44 +1119,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_jFuzhjVI",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/real-sociedad-jNvak2f3/?mid=jFuzhjVI",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 18,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 1.24,
-                    "away": 1.36
-                },
-                "possession": {
-                    "home": 48,
-                    "away": 52
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         "Vallecano_Alaves": {
             "home": "Vallecano",
@@ -936,7 +1225,21 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
+        },
+        "Real Sociedad_Espanyol": {
+            "home": "Real Sociedad",
+            "away": "Espanyol",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:1",
+            "stage": "63",
+            "datetime": "63",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_nFKoy1k3",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/real-sociedad-jNvak2f3/?mid=nFKoy1k3"
         }
     },
-    "updated": "2026-08-29 12:34:54"
+    "updated": "2026-08-29 18:33:50"
 }
