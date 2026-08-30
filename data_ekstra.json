@@ -1,131 +1,9 @@
 {
     "matches": [
         {
-            "home": "Zagłębie Lubin",
-            "away": "Pogoń Szczecin",
-            "datetime": "18:15",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "I7MpDQ3N",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-szczecin-Um9YwPQ0/zaglebie-lubin-tlYOere0/?mid=I7MpDQ3N",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 27,
-                "over15_pct": 73,
-                "over25_pct": 40,
-                "over35_pct": 13,
-                "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 0.93,
-                "avg_corners": 3.6,
-                "avg_yellow": 2.0,
-                "avg_red": 0,
-                "avg_shots": 12.6,
-                "avg_shots_on_target": 3.2,
-                "avg_xg": 1.33,
-                "avg_fouls": 14.4,
-                "avg_offsides": 1.0,
-                "form": [
-                    "D",
-                    "W",
-                    "L",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [
-                    2,
-                    8,
-                    2,
-                    5,
-                    1
-                ],
-                "yellow_per_match": [
-                    2,
-                    2,
-                    1,
-                    3
-                ],
-                "shots_per_match": [
-                    9,
-                    12,
-                    13,
-                    13,
-                    16
-                ],
-                "xg_per_match": [
-                    1.26,
-                    0.89,
-                    1.01,
-                    0.91,
-                    2.6
-                ]
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 80,
-                "over25_pct": 53,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.4,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 2.6,
-                "avg_yellow": 1.2,
-                "avg_red": 0,
-                "avg_shots": 11.4,
-                "avg_shots_on_target": 5.2,
-                "avg_xg": 1.35,
-                "avg_fouls": 13.4,
-                "avg_offsides": 2.0,
-                "form": [
-                    "D",
-                    "W",
-                    "W",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [
-                    2,
-                    2,
-                    6,
-                    3,
-                    0
-                ],
-                "yellow_per_match": [
-                    3,
-                    1,
-                    1,
-                    1,
-                    0
-                ],
-                "shots_per_match": [
-                    13,
-                    16,
-                    11,
-                    10,
-                    7
-                ],
-                "xg_per_match": [
-                    1.42,
-                    2.39,
-                    1.21,
-                    1.01,
-                    0.71
-                ]
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Raków Częstochowa",
             "away": "Jagiellonia Białystok",
-            "datetime": "30.08. 12:45",
+            "datetime": "12:45",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -242,7 +120,7 @@
         {
             "home": "Górnik Zabrze",
             "away": "GKS Katowice",
-            "datetime": "30.08. 15:30",
+            "datetime": "15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -362,7 +240,7 @@
         {
             "home": "Widzew Łódź",
             "away": "Lech Poznań",
-            "datetime": "30.08. 18:15",
+            "datetime": "18:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1207,9 +1085,132 @@
             }
         },
         {
+            "home": "Cracovia",
+            "away": "Górnik Zabrze",
+            "datetime": "06.09. 12:45",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "8v0QP3mT",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/gornik-zabrze-2LH3Ywq4/?mid=8v0QP3mT",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 67,
+                "over25_pct": 40,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.0,
+                "avg_corners": 7.6,
+                "avg_yellow": 1.6,
+                "avg_red": 0.0,
+                "avg_shots": 19.4,
+                "avg_shots_on_target": 6.6,
+                "avg_xg": 1.95,
+                "avg_fouls": 13.4,
+                "avg_offsides": 1.2,
+                "form": [
+                    "L",
+                    "W",
+                    "W",
+                    "D",
+                    "L"
+                ],
+                "corners_per_match": [
+                    10,
+                    9,
+                    7,
+                    6,
+                    6
+                ],
+                "yellow_per_match": [
+                    3,
+                    0,
+                    0,
+                    3,
+                    2
+                ],
+                "shots_per_match": [
+                    18,
+                    24,
+                    18,
+                    18,
+                    19
+                ],
+                "xg_per_match": [
+                    2.02,
+                    2.08,
+                    2.74,
+                    1.52,
+                    1.4
+                ]
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 60,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 5.4,
+                "avg_yellow": 2.2,
+                "avg_red": 1.0,
+                "avg_shots": 14.6,
+                "avg_shots_on_target": 5.4,
+                "avg_xg": 1.53,
+                "avg_fouls": 11.6,
+                "avg_offsides": 0.6,
+                "form": [
+                    "L",
+                    "L",
+                    "W",
+                    "D",
+                    "W"
+                ],
+                "corners_per_match": [
+                    2,
+                    7,
+                    6,
+                    9,
+                    3
+                ],
+                "yellow_per_match": [
+                    2,
+                    2,
+                    3,
+                    0,
+                    4
+                ],
+                "shots_per_match": [
+                    7,
+                    17,
+                    9,
+                    19,
+                    21
+                ],
+                "xg_per_match": [
+                    1.26,
+                    1.16,
+                    0.61,
+                    1.95,
+                    2.69
+                ]
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
             "home": "Miedź Legnica",
             "away": "Warta Poznań",
-            "datetime": "30.08. 10:30",
+            "datetime": "10:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1319,7 +1320,7 @@
         {
             "home": "Arka Gdynia",
             "away": "Polonia Bytom",
-            "datetime": "30.08. 12:30",
+            "datetime": "12:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1429,7 +1430,7 @@
         {
             "home": "Chrobry Głogów",
             "away": "Ruch Chorzów",
-            "datetime": "30.08. 15:15",
+            "datetime": "15:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2335,38 +2336,38 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Korona Kielce",
+            "team": "Pogoń Szczecin",
             "points": "8",
             "rank": 4,
+            "url": "https://www.flashscore.pl/druzyna/pogon-szczecin/Um9YwPQ0/",
+            "league_id": "ekstraklasa"
+        },
+        {
+            "team": "Korona Kielce",
+            "points": "8",
+            "rank": 5,
             "url": "https://www.flashscore.pl/druzyna/korona-kielce/pp78XcbA/",
+            "league_id": "ekstraklasa"
+        },
+        {
+            "team": "Zagłębie Lubin",
+            "points": "8",
+            "rank": 6,
+            "url": "https://www.flashscore.pl/druzyna/zaglebie-lubin/tlYOere0/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "Cracovia",
             "points": "8",
-            "rank": 5,
+            "rank": 7,
             "url": "https://www.flashscore.pl/druzyna/cracovia/KvXSf2A6/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "Lech Poznań",
             "points": "7",
-            "rank": 6,
-            "url": "https://www.flashscore.pl/druzyna/lech-poznan/OpNH7Ouf/",
-            "league_id": "ekstraklasa"
-        },
-        {
-            "team": "Pogoń Szczecin",
-            "points": "7",
-            "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/pogon-szczecin/Um9YwPQ0/",
-            "league_id": "ekstraklasa"
-        },
-        {
-            "team": "Zagłębie Lubin",
-            "points": "7",
             "rank": 8,
-            "url": "https://www.flashscore.pl/druzyna/zaglebie-lubin/tlYOere0/",
+            "url": "https://www.flashscore.pl/druzyna/lech-poznan/OpNH7Ouf/",
             "league_id": "ekstraklasa"
         },
         {
@@ -2578,5 +2579,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-08-29 18:17"
+    "updated": "2026-08-30 00:18"
 }

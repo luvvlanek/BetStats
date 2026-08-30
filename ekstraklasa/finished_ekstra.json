@@ -1,54 +1,106 @@
 {
     "matches": [
         {
-            "home": "Radomiak Radom",
-            "away": "Cracovia",
-            "score": "2:1",
-            "datetime": "Koniec",
+            "home": "Zagłębie Lubin",
+            "away": "Pogoń Szczecin",
+            "score": "0:0",
+            "datetime": "29.08. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_YPm4DZc6",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/radomiak-radom-zD5nYhAT/?mid=YPm4DZc6",
+            "match_id": "g_1_I7MpDQ3N",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-szczecin-Um9YwPQ0/zaglebie-lubin-tlYOere0/?mid=I7MpDQ3N",
             "match_stats": {
                 "corners": {
-                    "home": 10,
-                    "away": 10
+                    "home": 2,
+                    "away": 3
                 },
                 "yellow": {
-                    "home": 0,
+                    "home": 4,
                     "away": 3
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 1.37,
+                    "away": 0.82
+                },
+                "possession": {
+                    "home": 63,
+                    "away": 37
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 16
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "Wisła Kraków",
+            "away": "Wieczysta Kraków",
+            "score": "2:0",
+            "datetime": "29.08. 15:30",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_0CkdFeTg",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/wisla-krakow-rob20Q2Q/?mid=0CkdFeTg",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 0
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": 20,
-                    "away": 18
+                    "home": 11,
+                    "away": 15
                 },
                 "shots_on_target": {
-                    "home": 5,
-                    "away": 7
+                    "home": 7,
+                    "away": 4
                 },
                 "xg": {
-                    "home": 1.89,
-                    "away": 2.02
+                    "home": 1.64,
+                    "away": 1.38
                 },
                 "possession": {
-                    "home": 55,
-                    "away": 45
+                    "home": 40,
+                    "away": 60
                 },
                 "fouls": {
-                    "home": 9,
-                    "away": 20
+                    "home": 16,
+                    "away": 11
                 },
                 "offsides": {
                     "home": 2,
-                    "away": 2
+                    "away": 1
                 }
             }
         },
@@ -56,7 +108,7 @@
             "home": "Motor Lublin",
             "away": "Piast Gliwice",
             "score": "0:2",
-            "datetime": "Koniec",
+            "datetime": "29.08. 12:45",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -105,54 +157,54 @@
             }
         },
         {
-            "home": "Wisła Kraków",
-            "away": "Wieczysta Kraków",
-            "score": "2:0",
-            "datetime": "Koniec",
+            "home": "Radomiak Radom",
+            "away": "Cracovia",
+            "score": "2:1",
+            "datetime": "29.08. 10:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_0CkdFeTg",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/wisla-krakow-rob20Q2Q/?mid=0CkdFeTg",
+            "match_id": "g_1_YPm4DZc6",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/radomiak-radom-zD5nYhAT/?mid=YPm4DZc6",
             "match_stats": {
                 "corners": {
-                    "home": 4,
-                    "away": 4
+                    "home": 10,
+                    "away": 10
                 },
                 "yellow": {
-                    "home": 2,
-                    "away": 0
+                    "home": 0,
+                    "away": 3
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": 11,
-                    "away": 15
+                    "home": 20,
+                    "away": 18
                 },
                 "shots_on_target": {
-                    "home": 7,
-                    "away": 4
+                    "home": 5,
+                    "away": 7
                 },
                 "xg": {
-                    "home": 1.64,
-                    "away": 1.38
+                    "home": 1.89,
+                    "away": 2.02
                 },
                 "possession": {
-                    "home": 40,
-                    "away": 60
+                    "home": 55,
+                    "away": 45
                 },
                 "fouls": {
-                    "home": 16,
-                    "away": 11
+                    "home": 9,
+                    "away": 20
                 },
                 "offsides": {
                     "home": 2,
-                    "away": 1
+                    "away": 2
                 }
             }
         },
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_A5aQvfzp",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/motor-lublin-IoLk2VlL/?mid=A5aQvfzp",
-            "match_stats": {
-                "corners": {
-                    "home": 2,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 15,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 2.36,
-                    "away": 1.29
-                },
-                "possession": {
-                    "home": 41,
-                    "away": 59
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Widzew Łódź",
@@ -1204,7 +1219,7 @@
             "home": "Pogoń Siedlce",
             "away": "Stal Mielec",
             "score": "2:0",
-            "datetime": "Koniec",
+            "datetime": "29.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1256,7 +1271,7 @@
             "home": "Polonia Warszawa",
             "away": "Lechia Gdańsk",
             "score": "2:4",
-            "datetime": "Koniec",
+            "datetime": "29.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1308,7 +1323,7 @@
             "home": "Puszcza Niepołomice",
             "away": "Podbeskidzie B-B",
             "score": "2:0",
-            "datetime": "Koniec",
+            "datetime": "29.08. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2521,5 +2536,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-29 18:17"
+    "updated": "2026-08-30 00:18"
 }
