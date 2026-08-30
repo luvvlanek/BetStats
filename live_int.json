@@ -1,5 +1,109 @@
 {
     "matches": {
+        "SC Freiburg_Werder Brema": {
+            "home": "SC Freiburg",
+            "away": "Werder Brema",
+            "is_live": false,
+            "is_finished": true,
+            "score": "4:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_vBft9bGL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/freiburg-fiEQZ7C7/?mid=vBft9bGL",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.94,
+                    "away": 0.48
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 16
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
+                }
+            }
+        },
+        "FC Augsburg_FC Schalke 04": {
+            "home": "FC Augsburg",
+            "away": "FC Schalke 04",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_AgoC3xvq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/schalke-0Ija0Ej9/?mid=AgoC3xvq",
+            "match_stats": {
+                "corners": {
+                    "home": 11,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 0
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 24,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 13,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 3.52,
+                    "away": 1.54
+                },
+                "possession": {
+                    "home": 47,
+                    "away": 53
+                },
+                "fouls": {
+                    "home": 5,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 2
+                }
+            }
+        },
         "Borussia Dortmund_Hamburger SV": {
             "home": "Borussia Dortmund",
             "away": "Hamburger SV",
@@ -364,6 +468,58 @@
                 }
             }
         },
+        "Real Madryt_Malaga": {
+            "home": "Real Madryt",
+            "away": "Malaga",
+            "is_live": false,
+            "is_finished": true,
+            "score": "4:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_K8SaDccd",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/real-madryt-W8mj7MDD/?mid=K8SaDccd",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 19,
+                    "away": 14
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 2.4,
+                    "away": 0.72
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 6,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
+                }
+            }
+        },
         "Sevilla_Atl. Madryt": {
             "home": "Sevilla",
             "away": "Atl. Madryt",
@@ -452,7 +608,7 @@
                 },
                 "xg": {
                     "home": 1.82,
-                    "away": 0.91
+                    "away": 0.77
                 },
                 "possession": {
                     "home": 51,
@@ -1105,44 +1261,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_l8fgco7b",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/real-madryt-W8mj7MDD/?mid=l8fgco7b",
-            "match_stats": {
-                "corners": {
-                    "home": 0,
-                    "away": 8
-                },
-                "yellow": {
-                    "home": 5,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 8,
-                    "away": 21
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 8
-                },
-                "xg": {
-                    "home": 1.05,
-                    "away": 2.7
-                },
-                "possession": {
-                    "home": 37,
-                    "away": 63
-                },
-                "fouls": {
-                    "home": 19,
-                    "away": 7
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Valencia_Celta Vigo": {
             "home": "Valencia",
@@ -1293,7 +1412,21 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
+        },
+        "A Coruna_Valencia": {
+            "home": "A Coruna",
+            "away": "Valencia",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:1",
+            "stage": "Przerwa",
+            "datetime": "Przerwa",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_OpVK0KDj",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/valencia-CQeaytrD/?mid=OpVK0KDj"
         }
     },
-    "updated": "2026-08-30 12:33:20"
+    "updated": "2026-08-30 18:33:03"
 }
