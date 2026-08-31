@@ -1,10 +1,62 @@
 {
     "matches": [
         {
+            "home": "FC Augsburg",
+            "away": "FC Schalke 04",
+            "score": "3:0",
+            "datetime": "30.08. 15:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_AgoC3xvq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/schalke-0Ija0Ej9/?mid=AgoC3xvq",
+            "match_stats": {
+                "corners": {
+                    "home": 11,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 0
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 24,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 13,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 3.52,
+                    "away": 1.54
+                },
+                "possession": {
+                    "home": 48,
+                    "away": 52
+                },
+                "fouls": {
+                    "home": 5,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 2
+                }
+            }
+        },
+        {
             "home": "SC Freiburg",
             "away": "Werder Brema",
             "score": "4:1",
-            "datetime": "Koniec",
+            "datetime": "30.08. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -49,58 +101,6 @@
                 "offsides": {
                     "home": 0,
                     "away": 1
-                }
-            }
-        },
-        {
-            "home": "FC Augsburg",
-            "away": "FC Schalke 04",
-            "score": "3:0",
-            "datetime": "Koniec",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_AgoC3xvq",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/schalke-0Ija0Ej9/?mid=AgoC3xvq",
-            "match_stats": {
-                "corners": {
-                    "home": 11,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 0
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 24,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 13,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 3.52,
-                    "away": 1.54
-                },
-                "possession": {
-                    "home": 47,
-                    "away": 53
-                },
-                "fouls": {
-                    "home": 5,
-                    "away": 6
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 2
                 }
             }
         },
@@ -469,10 +469,114 @@
             }
         },
         {
+            "home": "Celta Vigo",
+            "away": "Ath. Bilbao",
+            "score": "0:2",
+            "datetime": "30.08. 19:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_h2vk6tjT",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/celta-vigo-8pvUZFhf/?mid=h2vk6tjT",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 17
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 7
+                },
+                "xg": {
+                    "home": 0.57,
+                    "away": 2.64
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 17
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 0
+                }
+            }
+        },
+        {
+            "home": "A Coruna",
+            "away": "Valencia",
+            "score": "3:1",
+            "datetime": "30.08. 17:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_OpVK0KDj",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/valencia-CQeaytrD/?mid=OpVK0KDj",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 1
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 4,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.42,
+                    "away": 1.33
+                },
+                "possession": {
+                    "home": 44,
+                    "away": 56
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 5
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 3
+                }
+            }
+        },
+        {
             "home": "Real Madryt",
             "away": "Malaga",
             "score": "4:0",
-            "datetime": "Koniec",
+            "datetime": "30.08. 15:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -503,12 +607,12 @@
                     "away": 1
                 },
                 "xg": {
-                    "home": 2.4,
-                    "away": 0.72
+                    "home": 2.62,
+                    "away": 0.7
                 },
                 "possession": {
-                    "home": 57,
-                    "away": 43
+                    "home": 56,
+                    "away": 44
                 },
                 "fouls": {
                     "home": 6,
@@ -1157,44 +1261,7 @@
             "stage": "Koniec",
             "match_id": "g_1_dYc1ePyB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/racing-santander-nVpEwOrl/?mid=dYc1ePyB",
-            "match_stats": {
-                "corners": {
-                    "home": 8,
-                    "away": 6
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 12,
-                    "away": 6
-                },
-                "shots_on_target": {
-                    "home": 1,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 1.24,
-                    "away": 1.3
-                },
-                "possession": {
-                    "home": 43,
-                    "away": 57
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 17
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Atl. Madryt",
@@ -1209,44 +1276,7 @@
             "stage": "Koniec",
             "match_id": "g_1_ImSSgC06",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/villarreal-lUatW5jE/?mid=ImSSgC06",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 2
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 19,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 6
-                },
-                "xg": {
-                    "home": 0.78,
-                    "away": 3.6
-                },
-                "possession": {
-                    "home": 52,
-                    "away": 48
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Espanyol",
@@ -1414,5 +1444,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-30 18:33"
+    "updated": "2026-08-31 00:34"
 }
