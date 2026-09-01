@@ -469,62 +469,10 @@
             }
         },
         {
-            "home": "Osasuna",
-            "away": "Getafe",
-            "score": "1:0",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_GCwMKu5M",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/osasuna-ETdxjU8a/?mid=GCwMKu5M",
-            "match_stats": {
-                "corners": {
-                    "home": 1,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 5,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 10,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 1
-                },
-                "xg": {
-                    "home": 1.67,
-                    "away": 0.65
-                },
-                "possession": {
-                    "home": 45,
-                    "away": 55
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
-        },
-        {
             "home": "Barcelona",
             "away": "Vallecano",
             "score": "5:2",
-            "datetime": "Koniec",
+            "datetime": "31.08. 19:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -555,12 +503,12 @@
                     "away": 5
                 },
                 "xg": {
-                    "home": 2.83,
-                    "away": 1.09
+                    "home": 3.04,
+                    "away": 1.21
                 },
                 "possession": {
-                    "home": 69,
-                    "away": 31
+                    "home": 68,
+                    "away": 32
                 },
                 "fouls": {
                     "home": 4,
@@ -569,6 +517,58 @@
                 "offsides": {
                     "home": 3,
                     "away": 4
+                }
+            }
+        },
+        {
+            "home": "Osasuna",
+            "away": "Getafe",
+            "score": "1:0",
+            "datetime": "31.08. 17:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_GCwMKu5M",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/osasuna-ETdxjU8a/?mid=GCwMKu5M",
+            "match_stats": {
+                "corners": {
+                    "home": 1,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 5,
+                    "away": 4
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 1.68,
+                    "away": 0.69
+                },
+                "possession": {
+                    "home": 45,
+                    "away": 55
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
                 }
             }
         },
@@ -1474,5 +1474,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-08-31 23:04"
+    "updated": "2026-09-01 04:41"
 }
