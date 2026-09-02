@@ -1664,7 +1664,52 @@
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
-            "home_stats": {},
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 80,
+                "over25_pct": 67,
+                "over35_pct": 53,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 2.13,
+                "avg_corners": 5.4,
+                "avg_yellow": 2.6,
+                "avg_red": 0.5,
+                "avg_shots": 11.6,
+                "avg_shots_on_target": 3.2,
+                "avg_xg": 0,
+                "avg_fouls": 13.8,
+                "avg_offsides": 1.8,
+                "form": [
+                    "W",
+                    "W",
+                    "L",
+                    "D",
+                    "D"
+                ],
+                "corners_per_match": [
+                    3,
+                    7,
+                    4,
+                    7,
+                    6
+                ],
+                "yellow_per_match": [
+                    5,
+                    2,
+                    3,
+                    2,
+                    1
+                ],
+                "shots_per_match": [
+                    11,
+                    14,
+                    10,
+                    18,
+                    5
+                ],
+                "xg_per_match": []
+            },
             "away_stats": {
                 "total_matches": 15,
                 "btts_pct": 80,
@@ -2536,5 +2581,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-09-01 20:55"
+    "updated": "2026-09-02 03:49"
 }
