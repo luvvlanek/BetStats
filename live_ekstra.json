@@ -1260,6 +1260,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Raków Częstochowa_Górnik Zabrze": {
+            "home": "Raków Częstochowa",
+            "away": "Górnik Zabrze",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "4",
+            "datetime": "4",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_ImUnOVfR",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/rakow-czestochowa-SQOrbYim/?mid=ImUnOVfR"
+        },
         "Chrobry Głogów_Ruch Chorzów": {
             "home": "Chrobry Głogów",
             "away": "Ruch Chorzów",
@@ -2626,5 +2640,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-09-03 11:04:35"
+    "updated": "2026-09-03 16:13:53"
 }
