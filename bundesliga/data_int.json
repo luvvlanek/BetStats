@@ -118,9 +118,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.52,
-                "draw": 5,
-                "away": 5.25
+                "home": 1.45,
+                "draw": 4.9,
+                "away": 5.8
             }
         },
         {
@@ -241,9 +241,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.86,
-                "draw": 3.8,
-                "away": 4
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -356,9 +356,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.41,
-                "draw": 5,
-                "away": 6
+                "home": 1.37,
+                "draw": 4.8,
+                "away": 6.5
             }
         },
         {
@@ -477,9 +477,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.4,
-                "draw": 3.6,
-                "away": 2.1
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -598,9 +598,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.9,
-                "draw": 3.8,
-                "away": 2.25
+                "home": 2.85,
+                "draw": 3.9,
+                "away": 2.15
             }
         },
         {
@@ -720,9 +720,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 4.1,
+                "home": 4,
                 "draw": 4.1,
-                "away": 1.74
+                "away": 1.71
             }
         },
         {
@@ -842,9 +842,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 13,
-                "draw": 9,
-                "away": 1.15
+                "home": 12,
+                "draw": 8,
+                "away": 1.13
             }
         },
         {
@@ -961,7 +961,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.85,
+                "home": 2.75,
                 "draw": 3.6,
                 "away": 2.35
             }
@@ -1083,8 +1083,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.95,
-                "draw": 4,
+                "home": 1.83,
+                "draw": 4.1,
                 "away": 3.4
             }
         },
@@ -1198,131 +1198,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.1,
-                "draw": 3.6,
-                "away": 3.2
-            }
-        },
-        {
-            "home": "Real Sociedad",
-            "away": "Celta Vigo",
-            "datetime": "19:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "GzrJ32nL",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/real-sociedad-jNvak2f3/?mid=GzrJ32nL",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 80,
-                "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 1.6,
-                "avg_corners": 4.6,
-                "avg_yellow": 2.8,
-                "avg_red": 0,
-                "avg_shots": 14.4,
-                "avg_shots_on_target": 6.4,
-                "avg_xg": 1.74,
-                "avg_fouls": 14.2,
-                "avg_offsides": 1.6,
-                "form": [
-                    "W",
-                    "W",
-                    "L",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [
-                    7,
-                    4,
-                    5,
-                    2,
-                    5
-                ],
-                "yellow_per_match": [
-                    2,
-                    3,
-                    3,
-                    3
-                ],
-                "shots_per_match": [
-                    17,
-                    20,
-                    9,
-                    17,
-                    9
-                ],
-                "xg_per_match": [
-                    1.82,
-                    3.18,
-                    1.36,
-                    0.96,
-                    1.4
-                ]
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 67,
-                "over25_pct": 47,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.2,
-                "avg_corners": 3.0,
-                "avg_yellow": 1.2,
-                "avg_red": 1.0,
-                "avg_shots": 6.8,
-                "avg_shots_on_target": 2.4,
-                "avg_xg": 0.65,
-                "avg_fouls": 10.8,
-                "avg_offsides": 2.4,
-                "form": [
-                    "L",
-                    "L",
-                    "D",
-                    "D",
-                    "W"
-                ],
-                "corners_per_match": [
-                    4,
-                    5,
-                    2,
-                    4,
-                    0
-                ],
-                "yellow_per_match": [
-                    0,
-                    0,
-                    3,
-                    1,
-                    2
-                ],
-                "shots_per_match": [
-                    8,
-                    4,
-                    7,
-                    12,
-                    3
-                ],
-                "xg_per_match": [
-                    0.75,
-                    0.13,
-                    0.62,
-                    1.6,
-                    0.15
-                ]
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.8,
-                "draw": 3.8,
-                "away": 4.3
+                "home": 2.05,
+                "draw": 3.9,
+                "away": 3.1
             }
         },
         {
@@ -1444,8 +1322,8 @@
             "h2h": [],
             "odds": {
                 "home": 7,
-                "draw": 5.25,
-                "away": 1.4
+                "draw": 5.2,
+                "away": 1.38
             }
         },
         {
@@ -1558,9 +1436,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.1,
-                "draw": 3.4,
-                "away": 2.3
+                "home": 3.2,
+                "draw": 3.3,
+                "away": 2.25
             }
         },
         {
@@ -1681,7 +1559,7 @@
             "h2h": [],
             "odds": {
                 "home": 2.25,
-                "draw": 3.4,
+                "draw": 3.3,
                 "away": 3.2
             }
         },
@@ -1803,9 +1681,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.47,
-                "draw": 4.75,
-                "away": 6
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -1923,8 +1801,8 @@
             "h2h": [],
             "odds": {
                 "home": 9,
-                "draw": 5.75,
-                "away": 1.28
+                "draw": 6,
+                "away": 1.24
             }
         },
         {
@@ -1999,14 +1877,14 @@
                 "over35_pct": 7,
                 "avg_goals_scored": 1.2,
                 "avg_goals_conceded": 1.27,
-                "avg_corners": 5.2,
-                "avg_yellow": 2.2,
+                "avg_corners": 6.2,
+                "avg_yellow": 3.2,
                 "avg_red": 0.0,
-                "avg_shots": 14.0,
+                "avg_shots": 16.0,
                 "avg_shots_on_target": 5.4,
-                "avg_xg": 1.44,
-                "avg_fouls": 14.4,
-                "avg_offsides": 2.6,
+                "avg_xg": 1.38,
+                "avg_fouls": 14.2,
+                "avg_offsides": 1.8,
                 "form": [
                     "W",
                     "W",
@@ -2016,36 +1894,36 @@
                 ],
                 "corners_per_match": [
                     1,
-                    3,
                     9,
                     4,
-                    9
+                    9,
+                    8
                 ],
                 "yellow_per_match": [
                     5,
+                    2,
+                    2,
                     1,
-                    2,
-                    2,
-                    1
+                    6
                 ],
                 "shots_per_match": [
                     10,
-                    13,
                     12,
                     11,
-                    24
+                    24,
+                    23
                 ],
                 "xg_per_match": [
                     1.68,
-                    2.61,
                     0.7,
                     0.51,
-                    1.72
+                    1.72,
+                    2.3
                 ]
             },
             "h2h": [],
             "odds": {
-                "home": 2.3,
+                "home": 2.2,
                 "draw": 3.1,
                 "away": 3.4
             }
@@ -2168,9 +2046,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.45,
-                "draw": 3.2,
-                "away": 3
+                "home": null,
+                "draw": null,
+                "away": null
             }
         },
         {
@@ -2291,9 +2169,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.3,
-                "draw": 3.2,
-                "away": 3.2
+                "home": 2.2,
+                "draw": 3.1,
+                "away": 3.4
             }
         },
         {
@@ -2367,56 +2245,178 @@
                 "over25_pct": 47,
                 "over35_pct": 33,
                 "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.2,
-                "avg_corners": 3.0,
-                "avg_yellow": 1.2,
+                "avg_goals_conceded": 1.13,
+                "avg_corners": 3.6,
+                "avg_yellow": 1.4,
                 "avg_red": 1.0,
-                "avg_shots": 6.8,
+                "avg_shots": 7.6,
                 "avg_shots_on_target": 2.4,
-                "avg_xg": 0.65,
+                "avg_xg": 0.69,
                 "avg_fouls": 10.8,
-                "avg_offsides": 2.4,
+                "avg_offsides": 1.8,
                 "form": [
+                    "D",
                     "L",
                     "L",
                     "D",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [
+                    3,
                     4,
                     5,
                     2,
-                    4,
-                    0
+                    4
                 ],
                 "yellow_per_match": [
+                    3,
                     0,
                     0,
                     3,
-                    1,
-                    2
+                    1
                 ],
                 "shots_per_match": [
+                    7,
                     8,
                     4,
                     7,
-                    12,
-                    3
+                    12
                 ],
                 "xg_per_match": [
+                    0.36,
                     0.75,
                     0.13,
                     0.62,
-                    1.6,
-                    0.15
+                    1.6
                 ]
             },
             "h2h": [],
             "odds": {
-                "home": 2.5,
+                "home": 2.35,
                 "draw": 2.85,
-                "away": 3.3
+                "away": 3.5
+            }
+        },
+        {
+            "home": "Elche",
+            "away": "Real Sociedad",
+            "datetime": "07.09. 19:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "xnbRmvZ8",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/real-sociedad-jNvak2f3/?mid=xnbRmvZ8",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 87,
+                "over25_pct": 67,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.6,
+                "avg_corners": 4.8,
+                "avg_yellow": 2.2,
+                "avg_red": 0.0,
+                "avg_shots": 9.8,
+                "avg_shots_on_target": 3.8,
+                "avg_xg": 0.76,
+                "avg_fouls": 16.4,
+                "avg_offsides": 1.6,
+                "form": [
+                    "L",
+                    "L",
+                    "D",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [
+                    10,
+                    3,
+                    6,
+                    1,
+                    4
+                ],
+                "yellow_per_match": [
+                    1,
+                    1,
+                    2,
+                    4,
+                    3
+                ],
+                "shots_per_match": [
+                    18,
+                    7,
+                    11,
+                    3,
+                    10
+                ],
+                "xg_per_match": [
+                    1.04,
+                    0.7,
+                    1.23,
+                    0.18,
+                    0.66
+                ]
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 80,
+                "over15_pct": 80,
+                "over25_pct": 60,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.53,
+                "avg_corners": 5.8,
+                "avg_yellow": 2.5,
+                "avg_red": 0,
+                "avg_shots": 15.8,
+                "avg_shots_on_target": 6.6,
+                "avg_xg": 1.66,
+                "avg_fouls": 13.8,
+                "avg_offsides": 1.6,
+                "form": [
+                    "D",
+                    "W",
+                    "W",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [
+                    11,
+                    7,
+                    4,
+                    5,
+                    2
+                ],
+                "yellow_per_match": [
+                    2,
+                    2,
+                    3,
+                    3
+                ],
+                "shots_per_match": [
+                    16,
+                    17,
+                    20,
+                    9,
+                    17
+                ],
+                "xg_per_match": [
+                    0.97,
+                    1.82,
+                    3.18,
+                    1.36,
+                    0.96
+                ]
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.85,
+                "draw": 3.3,
+                "away": 2.4
             }
         }
     ],
@@ -2618,24 +2618,24 @@
             "league_id": "laliga"
         },
         {
+            "team": "Real Sociedad",
+            "points": "4",
+            "rank": 11,
+            "url": "https://www.flashscore.pl/druzyna/real-sociedad/jNvak2f3/",
+            "league_id": "laliga"
+        },
+        {
             "team": "Espanyol",
             "points": "3",
-            "rank": 11,
+            "rank": 12,
             "url": "https://www.flashscore.pl/druzyna/espanyol/QFfPdh1J/",
             "league_id": "laliga"
         },
         {
             "team": "Ath. Bilbao",
             "points": "3",
-            "rank": 12,
-            "url": "https://www.flashscore.pl/druzyna/ath-bilbao/IP5zl0cJ/",
-            "league_id": "laliga"
-        },
-        {
-            "team": "Real Sociedad",
-            "points": "3",
             "rank": 13,
-            "url": "https://www.flashscore.pl/druzyna/real-sociedad/jNvak2f3/",
+            "url": "https://www.flashscore.pl/druzyna/ath-bilbao/IP5zl0cJ/",
             "league_id": "laliga"
         },
         {
@@ -2654,7 +2654,7 @@
         },
         {
             "team": "Celta Vigo",
-            "points": "1",
+            "points": "2",
             "rank": 16,
             "url": "https://www.flashscore.pl/druzyna/celta-vigo/8pvUZFhf/",
             "league_id": "laliga"
@@ -2700,5 +2700,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-09-03 16:28"
+    "updated": "2026-09-03 21:07"
 }

@@ -468,6 +468,58 @@
                 }
             }
         },
+        "Real Sociedad_Celta Vigo": {
+            "home": "Real Sociedad",
+            "away": "Celta Vigo",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_GzrJ32nL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/real-sociedad-jNvak2f3/?mid=GzrJ32nL",
+            "match_stats": {
+                "corners": {
+                    "home": 11,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 7
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 2
+                },
+                "xg": {
+                    "home": 0.97,
+                    "away": 0.36
+                },
+                "possession": {
+                    "home": 51,
+                    "away": 49
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 11
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
+                }
+            }
+        },
         "Barcelona_Vallecano": {
             "home": "Barcelona",
             "away": "Vallecano",
@@ -1209,44 +1261,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_2V09g36N",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/malaga-25tIqYiJ/?mid=2V09g36N",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 13,
-                    "away": 6
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 1.95,
-                    "away": 1.12
-                },
-                "possession": {
-                    "home": 55,
-                    "away": 45
-                },
-                "fouls": {
-                    "home": 12,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         "Osasuna_Levante": {
             "home": "Osasuna",
@@ -1474,5 +1489,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-09-03 16:28:45"
+    "updated": "2026-09-03 21:07:33"
 }
