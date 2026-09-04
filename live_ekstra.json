@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Piast Gliwice_GKS Katowice": {
+            "home": "Piast Gliwice",
+            "away": "GKS Katowice",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_vssjtPX9",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/piast-gliwice-ve2oT9ck/?mid=vssjtPX9",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 6
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 21
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 0.87,
+                    "away": 1.55
+                },
+                "possession": {
+                    "home": 56,
+                    "away": 44
+                },
+                "fouls": {
+                    "home": 4,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
+        },
         "Lech Poznań_Jagiellonia Białystok": {
             "home": "Lech Poznań",
             "away": "Jagiellonia Białystok",
@@ -741,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_MqJQGmm1",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/slask-wroclaw-E1Oxemse/widzew-lodz-rNOIW3uC/?mid=MqJQGmm1",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 0
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 3
-                },
-                "red": {
-                    "home": 0,
-                    "away": 1
-                },
-                "shots": {
-                    "home": 18,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 7
-                },
-                "xg": {
-                    "home": 1.88,
-                    "away": 1.3
-                },
-                "possession": {
-                    "home": 69,
-                    "away": 31
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 7
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         "Piast Gliwice_Legia Warszawa": {
             "home": "Piast Gliwice",
@@ -1289,6 +1304,58 @@
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
+        },
+        "Pogoń Grodzisk Mazowiecki_Warta Poznań": {
+            "home": "Pogoń Grodzisk Mazowiecki",
+            "away": "Warta Poznań",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_KIeBuvAl",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/warta-poznan-CrVUWAl8/?mid=KIeBuvAl",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 15,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 57,
+                    "away": 43
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 2
+                }
+            }
         },
         "Chrobry Głogów_Ruch Chorzów": {
             "home": "Chrobry Głogów",
@@ -2031,44 +2098,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_SQHb9FTh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/podbeskidzie-b-b-zBPYeTRl/?mid=SQHb9FTh",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 9,
-                    "away": 5
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 3
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 71,
-                    "away": 29
-                },
-                "fouls": {
-                    "home": 7,
-                    "away": 32
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Polonia Bytom_Pogoń Grodzisk Mazowiecki": {
             "home": "Polonia Bytom",
@@ -2655,20 +2685,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
         },
-        "Pogoń Grodzisk Mazowiecki_Warta Poznań": {
-            "home": "Pogoń Grodzisk Mazowiecki",
-            "away": "Warta Poznań",
+        "Bruk-Bet T._Lechia Gdańsk": {
+            "home": "Bruk-Bet T.",
+            "away": "Lechia Gdańsk",
             "is_live": true,
             "is_finished": false,
-            "score": "0:0",
-            "stage": "4",
-            "datetime": "4",
+            "score": "1:0",
+            "stage": "78",
+            "datetime": "78",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_KIeBuvAl",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/warta-poznan-CrVUWAl8/?mid=KIeBuvAl"
+            "match_id": "g_1_SraJwIv1",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/nieciecza-YNkK4khO/?mid=SraJwIv1"
         }
     },
-    "updated": "2026-09-04 16:10:30"
+    "updated": "2026-09-04 20:40:07"
 }
