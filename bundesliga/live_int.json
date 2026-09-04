@@ -1,5 +1,57 @@
 {
     "matches": {
+        "VfB Stuttgart_1. FC Koeln": {
+            "home": "VfB Stuttgart",
+            "away": "1. FC Koeln",
+            "is_live": false,
+            "is_finished": true,
+            "score": "4:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_zJPxkg9a",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/koln-WG9pOTse/stuttgart-nJQmYp1B/?mid=zJPxkg9a",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 18
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 3.04,
+                    "away": 2.57
+                },
+                "possession": {
+                    "home": 58,
+                    "away": 42
+                },
+                "fouls": {
+                    "home": 5,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
         "FC Augsburg_FC Schalke 04": {
             "home": "FC Augsburg",
             "away": "FC Schalke 04",
@@ -1487,7 +1539,21 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
+        },
+        "Betis_Real Madryt": {
+            "home": "Betis",
+            "away": "Real Madryt",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "81",
+            "datetime": "81",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_Au6uQzs2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/real-madryt-W8mj7MDD/?mid=Au6uQzs2"
         }
     },
-    "updated": "2026-09-04 16:25:42"
+    "updated": "2026-09-04 20:55:08"
 }

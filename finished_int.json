@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "VfB Stuttgart",
+            "away": "1. FC Koeln",
+            "score": "4:1",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_zJPxkg9a",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/koln-WG9pOTse/stuttgart-nJQmYp1B/?mid=zJPxkg9a",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 8
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 18
+                },
+                "shots_on_target": {
+                    "home": 8,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 3.04,
+                    "away": 2.57
+                },
+                "possession": {
+                    "home": 58,
+                    "away": 42
+                },
+                "fouls": {
+                    "home": 5,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
+        {
             "home": "FC Augsburg",
             "away": "FC Schalke 04",
             "score": "3:0",
@@ -1489,5 +1541,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-04 16:25"
+    "updated": "2026-09-04 20:55"
 }
