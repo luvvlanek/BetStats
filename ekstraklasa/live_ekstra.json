@@ -1,57 +1,5 @@
 {
     "matches": {
-        "Raków Częstochowa_Górnik Zabrze": {
-            "home": "Raków Częstochowa",
-            "away": "Górnik Zabrze",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:2",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_ImUnOVfR",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/rakow-czestochowa-SQOrbYim/?mid=ImUnOVfR",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 1
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 12,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 0.84,
-                    "away": 2.22
-                },
-                "possession": {
-                    "home": 63,
-                    "away": 37
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
-        },
         "Lech Poznań_Jagiellonia Białystok": {
             "home": "Lech Poznań",
             "away": "Jagiellonia Białystok",
@@ -59,7 +7,7 @@
             "is_finished": true,
             "score": "2:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "03.09. 18:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -101,6 +49,58 @@
                 "offsides": {
                     "home": 1,
                     "away": 3
+                }
+            }
+        },
+        "Raków Częstochowa_Górnik Zabrze": {
+            "home": "Raków Częstochowa",
+            "away": "Górnik Zabrze",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "03.09. 16:00",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_ImUnOVfR",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/rakow-czestochowa-SQOrbYim/?mid=ImUnOVfR",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 1
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 10
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 0.84,
+                    "away": 2.22
+                },
+                "possession": {
+                    "home": 63,
+                    "away": 37
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
                 }
             }
         },
@@ -2656,5 +2656,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-09-03 20:53:17"
+    "updated": "2026-09-04 03:49:59"
 }
