@@ -1,6 +1,318 @@
 {
     "matches": [
         {
+            "home": "B. Moenchengladbach",
+            "away": "Elversberg",
+            "score": "3:4",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_x64A3hOh",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/elversberg-6in2Eknb/?mid=x64A3hOh",
+            "match_stats": {
+                "corners": {
+                    "home": 13,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 25,
+                    "away": 14
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 10
+                },
+                "xg": {
+                    "home": 2.37,
+                    "away": 2.31
+                },
+                "possession": {
+                    "home": 51,
+                    "away": 49
+                },
+                "fouls": {
+                    "home": 18,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 5,
+                    "away": 0
+                }
+            }
+        },
+        {
+            "home": "Bayer Leverkusen",
+            "away": "Union Berlin",
+            "score": "4:0",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_GdRhoB8O",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/leverkusen-4jcj2zMd/union-berlin-pzHW4oaE/?mid=GdRhoB8O",
+            "match_stats": {
+                "corners": {
+                    "home": 11,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 21,
+                    "away": 5
+                },
+                "shots_on_target": {
+                    "home": 10,
+                    "away": 0
+                },
+                "xg": {
+                    "home": 2.85,
+                    "away": 0.43
+                },
+                "possession": {
+                    "home": 64,
+                    "away": 36
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 3
+                }
+            }
+        },
+        {
+            "home": "Paderborn",
+            "away": "SC Freiburg",
+            "score": "0:1",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_fPqrIiwn",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/freiburg-fiEQZ7C7/paderborn-G2Op923t/?mid=fPqrIiwn",
+            "match_stats": {
+                "corners": {
+                    "home": 5,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 14,
+                    "away": 16
+                },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.72,
+                    "away": 1.29
+                },
+                "possession": {
+                    "home": 59,
+                    "away": 41
+                },
+                "fouls": {
+                    "home": 16,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "TSG Hoffenheim",
+            "away": "Borussia Dortmund",
+            "score": "2:3",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_8WNpmXwC",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dortmund-nP1i5US1/hoffenheim-hQAtP9Sl/?mid=8WNpmXwC",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 18,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.18,
+                    "away": 2.02
+                },
+                "possession": {
+                    "home": 60,
+                    "away": 40
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 7
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
+        },
+        {
+            "home": "Werder Brema",
+            "away": "RB Lipsk",
+            "score": "3:1",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_hdBQaANH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/rb-leipzig-KbS1suSm/?mid=hdBQaANH",
+            "match_stats": {
+                "corners": {
+                    "home": 2,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 0
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 19
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.95,
+                    "away": 1.5
+                },
+                "possession": {
+                    "home": 29,
+                    "away": 71
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 8
+                },
+                "offsides": {
+                    "home": 4,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "FC Schalke 04",
+            "away": "Bayern Monachium",
+            "score": "0:0",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_Q99YclhU",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/schalke-0Ija0Ej9/?mid=Q99YclhU",
+            "match_stats": {
+                "corners": {
+                    "home": 0,
+                    "away": 11
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 4,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.21,
+                    "away": 2.1
+                },
+                "possession": {
+                    "home": 17,
+                    "away": 83
+                },
+                "fouls": {
+                    "home": 5,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "VfB Stuttgart",
             "away": "1. FC Koeln",
             "score": "4:1",
@@ -481,42 +793,109 @@
             "stage": "Koniec",
             "match_id": "g_1_xrtCcyAe",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
+            "match_stats": null
+        },
+        {
+            "home": "Ath. Bilbao",
+            "away": "Atl. Madryt",
+            "score": "3:0",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_xS7XRdCk",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/atl-madryt-jaarqpLQ/?mid=xS7XRdCk",
             "match_stats": {
                 "corners": {
-                    "home": 9,
-                    "away": 3
+                    "home": 3,
+                    "away": 8
                 },
                 "yellow": {
-                    "home": 1,
-                    "away": 3
+                    "home": 0,
+                    "away": 1
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": 21,
-                    "away": 11
+                    "home": 11,
+                    "away": 15
                 },
                 "shots_on_target": {
+                    "home": 4,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 1.41,
+                    "away": 1.03
+                },
+                "possession": {
+                    "home": 38,
+                    "away": 62
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 2
+                }
+            }
+        },
+        {
+            "home": "Vallecano",
+            "away": "Racing Santander",
+            "score": "3:2",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_ULUMPRnJ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/vallecano-8bcjFy6O/?mid=ULUMPRnJ",
+            "match_stats": {
+                "corners": {
                     "home": 9,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": 2,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 10,
                     "away": 4
                 },
                 "xg": {
-                    "home": 4.06,
-                    "away": 0.78
+                    "home": 1.5,
+                    "away": 0.54
                 },
                 "possession": {
-                    "home": 59,
-                    "away": 41
+                    "home": 49,
+                    "away": 51
                 },
                 "fouls": {
-                    "home": 10,
-                    "away": 17
+                    "home": 15,
+                    "away": 12
                 },
                 "offsides": {
-                    "home": 3,
-                    "away": 1
+                    "home": 1,
+                    "away": 2
                 }
             }
         },
@@ -1209,44 +1588,7 @@
             "stage": "Koniec",
             "match_id": "g_1_fo75jev8",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/osasuna-ETdxjU8a/?mid=fo75jev8",
-            "match_stats": {
-                "corners": {
-                    "home": 5,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 1
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 4,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 0.13,
-                    "away": 2.61
-                },
-                "possession": {
-                    "home": 52,
-                    "away": 48
-                },
-                "fouls": {
-                    "home": 7,
-                    "away": 16
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 4
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Real Madryt",
@@ -1261,44 +1603,7 @@
             "stage": "Koniec",
             "match_id": "g_1_EXneuDoD",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/real-sociedad-jNvak2f3/?mid=EXneuDoD",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 7
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 20,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 11,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 3.18,
-                    "away": 0.66
-                },
-                "possession": {
-                    "home": 51,
-                    "away": 49
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 8
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Valencia",
@@ -1556,5 +1861,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-05 15:16"
+    "updated": "2026-09-05 20:32"
 }
