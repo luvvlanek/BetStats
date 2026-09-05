@@ -4,7 +4,7 @@
             "home": "VfB Stuttgart",
             "away": "1. FC Koeln",
             "score": "4:1",
-            "datetime": "Koniec",
+            "datetime": "04.09. 18:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -35,8 +35,8 @@
                     "away": 5
                 },
                 "xg": {
-                    "home": 3.04,
-                    "away": 2.57
+                    "home": 3.47,
+                    "away": 2.86
                 },
                 "possession": {
                     "home": 58,
@@ -517,6 +517,58 @@
                 "offsides": {
                     "home": 3,
                     "away": 1
+                }
+            }
+        },
+        {
+            "home": "Betis",
+            "away": "Real Madryt",
+            "score": "1:0",
+            "datetime": "04.09. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_Au6uQzs2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/real-madryt-W8mj7MDD/?mid=Au6uQzs2",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 10
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 5
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 20
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 8
+                },
+                "xg": {
+                    "home": 0.93,
+                    "away": 3.46
+                },
+                "possession": {
+                    "home": 41,
+                    "away": 59
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
                 }
             }
         },
@@ -1261,44 +1313,7 @@
             "stage": "Koniec",
             "match_id": "g_1_xAQCcf1s",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/valencia-CQeaytrD/?mid=xAQCcf1s",
-            "match_stats": {
-                "corners": {
-                    "home": 8,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 16,
-                    "away": 15
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 1.12,
-                    "away": 0.71
-                },
-                "possession": {
-                    "home": 42,
-                    "away": 58
-                },
-                "fouls": {
-                    "home": 10,
-                    "away": 11
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Malaga",
@@ -1541,5 +1556,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-04 20:55"
+    "updated": "2026-09-05 04:05"
 }
