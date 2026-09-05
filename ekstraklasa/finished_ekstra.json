@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Widzew Łódź",
+            "away": "Radomiak Radom",
+            "score": "0:0",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_WGwrro3c",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/widzew-lodz-rNOIW3uC/?mid=WGwrro3c",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 15,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.59,
+                    "away": 1.7
+                },
+                "possession": {
+                    "home": 60,
+                    "away": 40
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 17
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 4
+                }
+            }
+        },
+        {
             "home": "Piast Gliwice",
             "away": "GKS Katowice",
             "score": "3:0",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_4Qwg2lY7",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/zaglebie-lubin-tlYOere0/?mid=4Qwg2lY7",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 18,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 2
-                },
-                "xg": {
-                    "home": 0.78,
-                    "away": 1.26
-                },
-                "possession": {
-                    "home": 60,
-                    "away": 40
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Śląsk Wrocław",
@@ -2701,5 +2716,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-05 10:23"
+    "updated": "2026-09-05 15:00"
 }
