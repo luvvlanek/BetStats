@@ -4,7 +4,7 @@
             "home": "Piast Gliwice",
             "away": "GKS Katowice",
             "score": "3:0",
-            "datetime": "Koniec",
+            "datetime": "04.09. 18:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -1306,10 +1306,62 @@
             "match_stats": null
         },
         {
+            "home": "Bruk-Bet T.",
+            "away": "Lechia Gdańsk",
+            "score": "2:1",
+            "datetime": "04.09. 19:00",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_SraJwIv1",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/nieciecza-YNkK4khO/?mid=SraJwIv1",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 0,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 14,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 3
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 42,
+                    "away": 58
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 3
+                }
+            }
+        },
+        {
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Warta Poznań",
             "score": "1:0",
-            "datetime": "Koniec",
+            "datetime": "04.09. 16:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2046,44 +2098,7 @@
             "stage": "Koniec",
             "match_id": "g_1_G4uJ1ORq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/polonia-warszawa-ADZjR3us/?mid=G4uJ1ORq",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 18,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 7
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 55,
-                    "away": 45
-                },
-                "fouls": {
-                    "home": 16,
-                    "away": 5
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 5
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Podbeskidzie B-B",
@@ -2686,5 +2701,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-04 20:40"
+    "updated": "2026-09-05 03:49"
 }

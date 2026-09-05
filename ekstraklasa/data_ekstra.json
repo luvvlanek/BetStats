@@ -3,7 +3,7 @@
         {
             "home": "Widzew Łódź",
             "away": "Radomiak Radom",
-            "datetime": "05.09. 12:45",
+            "datetime": "12:45",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -124,7 +124,7 @@
         {
             "home": "Korona Kielce",
             "away": "Wisła Kraków",
-            "datetime": "05.09. 15:30",
+            "datetime": "15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -245,7 +245,7 @@
         {
             "home": "Motor Lublin",
             "away": "Legia Warszawa",
-            "datetime": "05.09. 18:15",
+            "datetime": "18:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1208,7 +1208,7 @@
         {
             "home": "Miedź Legnica",
             "away": "Chrobry Głogów",
-            "datetime": "05.09. 13:30",
+            "datetime": "13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1319,7 +1319,7 @@
         {
             "home": "Stal Mielec",
             "away": "Odra Opole",
-            "datetime": "05.09. 13:30",
+            "datetime": "13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1427,7 +1427,7 @@
         {
             "home": "Stal Rzeszów",
             "away": "Polonia Warszawa",
-            "datetime": "05.09. 13:30",
+            "datetime": "13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -2307,116 +2307,6 @@
                 "draw": null,
                 "away": null
             }
-        },
-        {
-            "home": "Bruk-Bet T.",
-            "away": "Lechia Gdańsk",
-            "datetime": "78",
-            "status": "live",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "SraJwIv1",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/nieciecza-YNkK4khO/?mid=SraJwIv1",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 100,
-                "over25_pct": 73,
-                "over35_pct": 40,
-                "avg_goals_scored": 2.4,
-                "avg_goals_conceded": 1.13,
-                "avg_corners": 5.2,
-                "avg_yellow": 2.0,
-                "avg_red": 0,
-                "avg_shots": 12.8,
-                "avg_shots_on_target": 4.6,
-                "avg_xg": 0,
-                "avg_fouls": 13.0,
-                "avg_offsides": 1.2,
-                "form": [
-                    "W",
-                    "D",
-                    "L",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [
-                    6,
-                    4,
-                    4,
-                    8,
-                    4
-                ],
-                "yellow_per_match": [
-                    3,
-                    2,
-                    2,
-                    1
-                ],
-                "shots_per_match": [
-                    14,
-                    11,
-                    18,
-                    13,
-                    8
-                ],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 87,
-                "over25_pct": 87,
-                "over35_pct": 53,
-                "avg_goals_scored": 1.2,
-                "avg_goals_conceded": 2.33,
-                "avg_corners": 4.0,
-                "avg_yellow": 1.4,
-                "avg_red": 0.0,
-                "avg_shots": 15.6,
-                "avg_shots_on_target": 7.6,
-                "avg_xg": 0,
-                "avg_fouls": 12.8,
-                "avg_offsides": 0.6,
-                "form": [
-                    "W",
-                    "W",
-                    "W",
-                    "L",
-                    "D"
-                ],
-                "corners_per_match": [
-                    5,
-                    3,
-                    6,
-                    4,
-                    2
-                ],
-                "yellow_per_match": [
-                    3,
-                    1,
-                    2,
-                    1,
-                    0
-                ],
-                "shots_per_match": [
-                    11,
-                    12,
-                    27,
-                    11,
-                    17
-                ],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
         }
     ],
     "standings": [
@@ -2685,5 +2575,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-09-04 20:40"
+    "updated": "2026-09-05 03:49"
 }
