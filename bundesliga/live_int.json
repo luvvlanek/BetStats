@@ -520,6 +520,76 @@
                 }
             }
         },
+        "B. Moenchengladbach_Elversberg": {
+            "home": "B. Moenchengladbach",
+            "away": "Elversberg",
+            "is_live": true,
+            "is_finished": false,
+            "score": "3:2",
+            "stage": "72",
+            "datetime": "72",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_x64A3hOh",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/elversberg-6in2Eknb/?mid=x64A3hOh"
+        },
+        "Bayer Leverkusen_Union Berlin": {
+            "home": "Bayer Leverkusen",
+            "away": "Union Berlin",
+            "is_live": true,
+            "is_finished": false,
+            "score": "4:0",
+            "stage": "74",
+            "datetime": "74",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_GdRhoB8O",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/leverkusen-4jcj2zMd/union-berlin-pzHW4oaE/?mid=GdRhoB8O"
+        },
+        "Paderborn_SC Freiburg": {
+            "home": "Paderborn",
+            "away": "SC Freiburg",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:1",
+            "stage": "74",
+            "datetime": "74",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_fPqrIiwn",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/freiburg-fiEQZ7C7/paderborn-G2Op923t/?mid=fPqrIiwn"
+        },
+        "TSG Hoffenheim_Borussia Dortmund": {
+            "home": "TSG Hoffenheim",
+            "away": "Borussia Dortmund",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:2",
+            "stage": "72",
+            "datetime": "72",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_8WNpmXwC",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dortmund-nP1i5US1/hoffenheim-hQAtP9Sl/?mid=8WNpmXwC"
+        },
+        "Werder Brema_RB Lipsk": {
+            "home": "Werder Brema",
+            "away": "RB Lipsk",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:0",
+            "stage": "70",
+            "datetime": "70",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_hdBQaANH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/rb-leipzig-KbS1suSm/?mid=hdBQaANH"
+        },
         "Betis_Real Madryt": {
             "home": "Betis",
             "away": "Real Madryt",
@@ -1554,7 +1624,21 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
+        },
+        "Ath. Bilbao_Atl. Madryt": {
+            "home": "Ath. Bilbao",
+            "away": "Atl. Madryt",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "Przerwa",
+            "datetime": "Przerwa",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_xS7XRdCk",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/atl-madryt-jaarqpLQ/?mid=xS7XRdCk"
         }
     },
-    "updated": "2026-09-05 10:38:38"
+    "updated": "2026-09-05 15:16:37"
 }
