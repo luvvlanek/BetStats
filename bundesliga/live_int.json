@@ -795,6 +795,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "Hamburger SV_1. FSV Mainz 05": {
+            "home": "Hamburger SV",
+            "away": "1. FSV Mainz 05",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:5",
+            "stage": "90+2",
+            "datetime": "90+2",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_pW7I1Wh5",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hamburger-v9k3aY5F/mainz-EuakNmc1/?mid=pW7I1Wh5"
+        },
         "Villarreal_A Coruna": {
             "home": "Villarreal",
             "away": "A Coruna",
@@ -1874,7 +1888,21 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
+        },
+        "Valencia_Barcelona": {
+            "home": "Valencia",
+            "away": "Barcelona",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:2",
+            "stage": "47",
+            "datetime": "47",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_MFH8mVvQ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/valencia-CQeaytrD/?mid=MFH8mVvQ"
         }
     },
-    "updated": "2026-09-06 11:00:00"
+    "updated": "2026-09-06 15:36:22"
 }
