@@ -53,6 +53,58 @@
             }
         },
         {
+            "home": "Lech Poznań",
+            "away": "Raków Częstochowa",
+            "score": "1:0",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_SKpTYtQq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/rakow-czestochowa-SQOrbYim/?mid=SKpTYtQq",
+            "match_stats": {
+                "corners": {
+                    "home": 8,
+                    "away": 2
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 27,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 1
+                },
+                "xg": {
+                    "home": 2.85,
+                    "away": 0.39
+                },
+                "possession": {
+                    "home": 52,
+                    "away": 48
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 10
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 0
+                }
+            }
+        },
+        {
             "home": "Motor Lublin",
             "away": "Legia Warszawa",
             "score": "2:3",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_6i1BBDSI",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/slask-wroclaw-E1Oxemse/?mid=6i1BBDSI",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 22,
-                    "away": 13
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 1.82,
-                    "away": 1.76
-                },
-                "possession": {
-                    "home": 62,
-                    "away": 38
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Wisła Płock",
@@ -1414,6 +1429,58 @@
                 "offsides": {
                     "home": 2,
                     "away": 2
+                }
+            }
+        },
+        {
+            "home": "Polonia Bytom",
+            "away": "Podbeskidzie B-B",
+            "score": "0:0",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_0dcRyd9D",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/podbeskidzie-b-b-zBPYeTRl/polonia-bytom-vRn3UqXP/?mid=0dcRyd9D",
+            "match_stats": {
+                "corners": {
+                    "home": 2,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 1
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 7,
+                    "away": 2
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 0
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 41,
+                    "away": 59
+                },
+                "fouls": {
+                    "home": 25,
+                    "away": 17
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 0
                 }
             }
         },
@@ -2054,44 +2121,7 @@
             "stage": "Koniec",
             "match_id": "g_1_6yJbE1Bk",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=6yJbE1Bk",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 4
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 11,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 6
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 62,
-                    "away": 38
-                },
-                "fouls": {
-                    "home": 5,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Unia Skierniewice",
@@ -2106,44 +2136,7 @@
             "stage": "Koniec",
             "match_id": "g_1_GOVCN5l3",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/stal-rzeszow-IkpY1q92/unia-skierniewice-l42F3w54/?mid=GOVCN5l3",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 7
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 12,
-                    "away": 14
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 4
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 50,
-                    "away": 50
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 16
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 3
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Stal Rzeszów",
@@ -2821,5 +2814,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-06 15:19"
+    "updated": "2026-09-06 20:20"
 }
