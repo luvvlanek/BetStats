@@ -1,10 +1,62 @@
 {
     "matches": [
         {
+            "home": "FC Schalke 04",
+            "away": "Bayern Monachium",
+            "score": "0:0",
+            "datetime": "05.09. 16:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_Q99YclhU",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/schalke-0Ija0Ej9/?mid=Q99YclhU",
+            "match_stats": {
+                "corners": {
+                    "home": 0,
+                    "away": 11
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 4,
+                    "away": 15
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 5
+                },
+                "xg": {
+                    "home": 0.21,
+                    "away": 1.94
+                },
+                "possession": {
+                    "home": 17,
+                    "away": 83
+                },
+                "fouls": {
+                    "home": 5,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "B. Moenchengladbach",
             "away": "Elversberg",
             "score": "3:4",
-            "datetime": "Koniec",
+            "datetime": "05.09. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -56,7 +108,7 @@
             "home": "Bayer Leverkusen",
             "away": "Union Berlin",
             "score": "4:0",
-            "datetime": "Koniec",
+            "datetime": "05.09. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -87,8 +139,8 @@
                     "away": 0
                 },
                 "xg": {
-                    "home": 2.85,
-                    "away": 0.43
+                    "home": 3.11,
+                    "away": 0.4
                 },
                 "possession": {
                     "home": 64,
@@ -108,7 +160,7 @@
             "home": "Paderborn",
             "away": "SC Freiburg",
             "score": "0:1",
-            "datetime": "Koniec",
+            "datetime": "05.09. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -139,8 +191,8 @@
                     "away": 5
                 },
                 "xg": {
-                    "home": 0.72,
-                    "away": 1.29
+                    "home": 0.77,
+                    "away": 1.24
                 },
                 "possession": {
                     "home": 59,
@@ -160,7 +212,7 @@
             "home": "TSG Hoffenheim",
             "away": "Borussia Dortmund",
             "score": "2:3",
-            "datetime": "Koniec",
+            "datetime": "05.09. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -212,7 +264,7 @@
             "home": "Werder Brema",
             "away": "RB Lipsk",
             "score": "3:1",
-            "datetime": "Koniec",
+            "datetime": "05.09. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -256,58 +308,6 @@
                 },
                 "offsides": {
                     "home": 4,
-                    "away": 1
-                }
-            }
-        },
-        {
-            "home": "FC Schalke 04",
-            "away": "Bayern Monachium",
-            "score": "0:0",
-            "datetime": "Koniec",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_Q99YclhU",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/schalke-0Ija0Ej9/?mid=Q99YclhU",
-            "match_stats": {
-                "corners": {
-                    "home": 0,
-                    "away": 11
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 4,
-                    "away": 15
-                },
-                "shots_on_target": {
-                    "home": 1,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 0.21,
-                    "away": 2.1
-                },
-                "possession": {
-                    "home": 17,
-                    "away": 83
-                },
-                "fouls": {
-                    "home": 5,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 0,
                     "away": 1
                 }
             }
@@ -796,10 +796,114 @@
             "match_stats": null
         },
         {
+            "home": "Villarreal",
+            "away": "A Coruna",
+            "score": "2:3",
+            "datetime": "05.09. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_IaIwr92m",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/villarreal-lUatW5jE/?mid=IaIwr92m",
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 1
+                },
+                "yellow": {
+                    "home": 2,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 17,
+                    "away": 8
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.14,
+                    "away": 0.79
+                },
+                "possession": {
+                    "home": 62,
+                    "away": 38
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
+                }
+            }
+        },
+        {
+            "home": "Vallecano",
+            "away": "Racing Santander",
+            "score": "3:2",
+            "datetime": "05.09. 16:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_ULUMPRnJ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/vallecano-8bcjFy6O/?mid=ULUMPRnJ",
+            "match_stats": {
+                "corners": {
+                    "home": 9,
+                    "away": 6
+                },
+                "yellow": {
+                    "home": 3,
+                    "away": 2
+                },
+                "red": {
+                    "home": 2,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 16,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 10,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.61,
+                    "away": 0.48
+                },
+                "possession": {
+                    "home": 49,
+                    "away": 51
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 12
+                },
+                "offsides": {
+                    "home": 1,
+                    "away": 2
+                }
+            }
+        },
+        {
             "home": "Ath. Bilbao",
             "away": "Atl. Madryt",
             "score": "3:0",
-            "datetime": "Koniec",
+            "datetime": "05.09. 14:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -843,58 +947,6 @@
                 },
                 "offsides": {
                     "home": 0,
-                    "away": 2
-                }
-            }
-        },
-        {
-            "home": "Vallecano",
-            "away": "Racing Santander",
-            "score": "3:2",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_ULUMPRnJ",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/vallecano-8bcjFy6O/?mid=ULUMPRnJ",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 6
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 2
-                },
-                "red": {
-                    "home": 2,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 16,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 10,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 1.5,
-                    "away": 0.54
-                },
-                "possession": {
-                    "home": 49,
-                    "away": 51
-                },
-                "fouls": {
-                    "home": 15,
-                    "away": 12
-                },
-                "offsides": {
-                    "home": 1,
                     "away": 2
                 }
             }
@@ -1536,44 +1588,7 @@
             "stage": "Koniec",
             "match_id": "g_1_0Atuqenl",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/barcelona-SKbpVP5K/?mid=0Atuqenl",
-            "match_stats": {
-                "corners": {
-                    "home": 12,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 22,
-                    "away": 5
-                },
-                "shots_on_target": {
-                    "home": 10,
-                    "away": 0
-                },
-                "xg": {
-                    "home": 4.23,
-                    "away": 0.25
-                },
-                "possession": {
-                    "home": 70,
-                    "away": 30
-                },
-                "fouls": {
-                    "home": 13,
-                    "away": 6
-                },
-                "offsides": {
-                    "home": 8,
-                    "away": 5
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Celta Vigo",
@@ -1861,5 +1876,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-05 20:32"
+    "updated": "2026-09-06 04:06"
 }
