@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Cracovia",
+            "away": "Górnik Zabrze",
+            "score": "0:1",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_8v0QP3mT",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/gornik-zabrze-2LH3Ywq4/?mid=8v0QP3mT",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 7,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 6
+                },
+                "xg": {
+                    "home": 0.45,
+                    "away": 1.45
+                },
+                "possession": {
+                    "home": 54,
+                    "away": 46
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "Motor Lublin",
             "away": "Legia Warszawa",
             "score": "2:3",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_Ew8G74Rp",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/wisla-plock-QoZYVU3E/?mid=Ew8G74Rp",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 0
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 0
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 18,
-                    "away": 10
-                },
-                "shots_on_target": {
-                    "home": 4,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 2.24,
-                    "away": 0.91
-                },
-                "possession": {
-                    "home": 57,
-                    "away": 43
-                },
-                "fouls": {
-                    "home": 17,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Pogoń Szczecin",
@@ -1349,6 +1364,58 @@
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
+        },
+        {
+            "home": "Arka Gdynia",
+            "away": "ŁKS Łódź",
+            "score": "1:1",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_dIuqfwPs",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/lks-lodz-ShUKWHDG/?mid=dIuqfwPs",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 19
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 2
+                }
+            }
         },
         {
             "home": "Miedź Legnica",
@@ -2091,44 +2158,7 @@
             "stage": "Koniec",
             "match_id": "g_1_48AwMhDb",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ruch-chorzow-S4zygtuJ/stal-rzeszow-IkpY1q92/?mid=48AwMhDb",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 1
-                },
-                "yellow": {
-                    "home": 3,
-                    "away": 5
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 10,
-                    "away": 4
-                },
-                "shots_on_target": {
-                    "home": 3,
-                    "away": 1
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 52,
-                    "away": 48
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 18
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "ŁKS Łódź",
@@ -2791,5 +2821,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-06 10:43"
+    "updated": "2026-09-06 15:19"
 }
