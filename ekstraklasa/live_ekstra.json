@@ -1395,6 +1395,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Wieczysta Kraków_Zagłębie Lubin": {
+            "home": "Wieczysta Kraków",
+            "away": "Zagłębie Lubin",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "83",
+            "datetime": "83",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_MN1IRPIG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/zaglebie-lubin-tlYOere0/?mid=MN1IRPIG"
+        },
         "Polonia Bytom_Podbeskidzie B-B": {
             "home": "Polonia Bytom",
             "away": "Podbeskidzie B-B",
@@ -2864,7 +2878,21 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
+        },
+        "Ruch Chorzów_Unia Skierniewice": {
+            "home": "Ruch Chorzów",
+            "away": "Unia Skierniewice",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:0",
+            "stage": "Przerwa",
+            "datetime": "Przerwa",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_S2kDaa1K",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ruch-chorzow-S4zygtuJ/unia-skierniewice-l42F3w54/?mid=S2kDaa1K"
         }
     },
-    "updated": "2026-09-07 12:08:08"
+    "updated": "2026-09-07 17:52:00"
 }
