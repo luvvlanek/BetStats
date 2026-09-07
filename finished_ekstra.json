@@ -1,54 +1,54 @@
 {
     "matches": [
         {
-            "home": "Cracovia",
-            "away": "Górnik Zabrze",
-            "score": "0:1",
-            "datetime": "Koniec",
+            "home": "Jagiellonia Białystok",
+            "away": "Śląsk Wrocław",
+            "score": "2:1",
+            "datetime": "06.09. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_8v0QP3mT",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/gornik-zabrze-2LH3Ywq4/?mid=8v0QP3mT",
+            "match_id": "g_1_Wlacv32M",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/slask-wroclaw-E1Oxemse/?mid=Wlacv32M",
             "match_stats": {
                 "corners": {
                     "home": 4,
-                    "away": 3
+                    "away": 7
                 },
                 "yellow": {
                     "home": 1,
-                    "away": 3
+                    "away": 1
                 },
                 "red": {
                     "home": null,
                     "away": null
                 },
                 "shots": {
-                    "home": 7,
-                    "away": 11
+                    "home": 11,
+                    "away": 13
                 },
                 "shots_on_target": {
                     "home": 2,
-                    "away": 6
+                    "away": 5
                 },
                 "xg": {
-                    "home": 0.45,
-                    "away": 1.45
+                    "home": 1.39,
+                    "away": 1.86
                 },
                 "possession": {
-                    "home": 54,
-                    "away": 46
+                    "home": 49,
+                    "away": 51
                 },
                 "fouls": {
-                    "home": 15,
-                    "away": 14
+                    "home": 10,
+                    "away": 6
                 },
                 "offsides": {
-                    "home": 2,
-                    "away": 1
+                    "home": 4,
+                    "away": 0
                 }
             }
         },
@@ -56,7 +56,7 @@
             "home": "Lech Poznań",
             "away": "Raków Częstochowa",
             "score": "1:0",
-            "datetime": "Koniec",
+            "datetime": "06.09. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -101,6 +101,58 @@
                 "offsides": {
                     "home": 1,
                     "away": 0
+                }
+            }
+        },
+        {
+            "home": "Cracovia",
+            "away": "Górnik Zabrze",
+            "score": "0:1",
+            "datetime": "06.09. 12:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_8v0QP3mT",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/gornik-zabrze-2LH3Ywq4/?mid=8v0QP3mT",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 7,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 6
+                },
+                "xg": {
+                    "home": 0.45,
+                    "away": 1.45
+                },
+                "possession": {
+                    "home": 54,
+                    "away": 46
+                },
+                "fouls": {
+                    "home": 15,
+                    "away": 14
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
                 }
             }
         },
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_YPm4DZc6",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/radomiak-radom-zD5nYhAT/?mid=YPm4DZc6",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 10
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 20,
-                    "away": 19
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 7
-                },
-                "xg": {
-                    "home": 1.89,
-                    "away": 2.02
-                },
-                "possession": {
-                    "home": 55,
-                    "away": 45
-                },
-                "fouls": {
-                    "home": 9,
-                    "away": 20
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 2
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Legia Warszawa",
@@ -1381,62 +1396,10 @@
             "match_stats": null
         },
         {
-            "home": "Arka Gdynia",
-            "away": "ŁKS Łódź",
-            "score": "1:1",
-            "datetime": "Koniec",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_dIuqfwPs",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/lks-lodz-ShUKWHDG/?mid=dIuqfwPs",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 7
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 1
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 12,
-                    "away": 9
-                },
-                "shots_on_target": {
-                    "home": 6,
-                    "away": 4
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": 53,
-                    "away": 47
-                },
-                "fouls": {
-                    "home": 11,
-                    "away": 19
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 2
-                }
-            }
-        },
-        {
             "home": "Polonia Bytom",
             "away": "Podbeskidzie B-B",
             "score": "0:0",
-            "datetime": "Koniec",
+            "datetime": "06.09. 15:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1481,6 +1444,58 @@
                 "offsides": {
                     "home": 0,
                     "away": 0
+                }
+            }
+        },
+        {
+            "home": "Arka Gdynia",
+            "away": "ŁKS Łódź",
+            "score": "1:1",
+            "datetime": "06.09. 12:30",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_dIuqfwPs",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/lks-lodz-ShUKWHDG/?mid=dIuqfwPs",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 1
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 12,
+                    "away": 9
+                },
+                "shots_on_target": {
+                    "home": 6,
+                    "away": 4
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 53,
+                    "away": 47
+                },
+                "fouls": {
+                    "home": 11,
+                    "away": 19
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 2
                 }
             }
         },
@@ -2121,7 +2136,44 @@
             "stage": "Koniec",
             "match_id": "g_1_6yJbE1Bk",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=6yJbE1Bk",
-            "match_stats": null
+            "match_stats": {
+                "corners": {
+                    "home": 7,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 11,
+                    "away": 11
+                },
+                "shots_on_target": {
+                    "home": 5,
+                    "away": 6
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": 62,
+                    "away": 38
+                },
+                "fouls": {
+                    "home": 5,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 2
+                }
+            }
         },
         {
             "home": "Unia Skierniewice",
@@ -2814,5 +2866,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-06 20:20"
+    "updated": "2026-09-07 03:50"
 }
