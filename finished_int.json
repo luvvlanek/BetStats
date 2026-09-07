@@ -826,6 +826,110 @@
             "match_stats": null
         },
         {
+            "home": "Getafe",
+            "away": "Celta Vigo",
+            "score": "1:1",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_EVN6T9mf",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/getafe-dboeiWOt/?mid=EVN6T9mf",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 2
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 16
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 0.81,
+                    "away": 0.96
+                },
+                "possession": {
+                    "home": 30,
+                    "away": 70
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 3
+                }
+            }
+        },
+        {
+            "home": "Elche",
+            "away": "Real Sociedad",
+            "score": "2:3",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_xnbRmvZ8",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/real-sociedad-jNvak2f3/?mid=xnbRmvZ8",
+            "match_stats": {
+                "corners": {
+                    "home": 6,
+                    "away": 7
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 1
+                },
+                "red": {
+                    "home": 0,
+                    "away": 1
+                },
+                "shots": {
+                    "home": 20,
+                    "away": 13
+                },
+                "shots_on_target": {
+                    "home": 10,
+                    "away": 6
+                },
+                "xg": {
+                    "home": 2.47,
+                    "away": 0.58
+                },
+                "possession": {
+                    "home": 58,
+                    "away": 42
+                },
+                "fouls": {
+                    "home": 9,
+                    "away": 8
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
+                }
+            }
+        },
+        {
             "home": "Espanyol",
             "away": "Sevilla",
             "score": "1:1",
@@ -1514,44 +1618,7 @@
             "stage": "Koniec",
             "match_id": "g_1_K8SaDccd",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/real-madryt-W8mj7MDD/?mid=K8SaDccd",
-            "match_stats": {
-                "corners": {
-                    "home": 9,
-                    "away": 6
-                },
-                "yellow": {
-                    "home": 0,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 19,
-                    "away": 14
-                },
-                "shots_on_target": {
-                    "home": 8,
-                    "away": 1
-                },
-                "xg": {
-                    "home": 2.62,
-                    "away": 0.7
-                },
-                "possession": {
-                    "home": 56,
-                    "away": 44
-                },
-                "fouls": {
-                    "home": 6,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Sevilla",
@@ -1566,44 +1633,7 @@
             "stage": "Koniec",
             "match_id": "g_1_KSIgZvKF",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/sevilla-h8oAv4Ts/?mid=KSIgZvKF",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 2
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 20,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 5,
-                    "away": 5
-                },
-                "xg": {
-                    "home": 0.89,
-                    "away": 0.93
-                },
-                "possession": {
-                    "home": 42,
-                    "away": 58
-                },
-                "fouls": {
-                    "home": 20,
-                    "away": 16
-                },
-                "offsides": {
-                    "home": 1,
-                    "away": 1
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Real Sociedad",
@@ -1966,5 +1996,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-07 18:07"
+    "updated": "2026-09-07 21:42"
 }
