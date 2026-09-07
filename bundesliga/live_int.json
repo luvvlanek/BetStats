@@ -1,57 +1,5 @@
 {
     "matches": {
-        "Hamburger SV_1. FSV Mainz 05": {
-            "home": "Hamburger SV",
-            "away": "1. FSV Mainz 05",
-            "is_live": false,
-            "is_finished": true,
-            "score": "0:5",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "match_id": "g_1_pW7I1Wh5",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hamburger-v9k3aY5F/mainz-EuakNmc1/?mid=pW7I1Wh5",
-            "match_stats": {
-                "corners": {
-                    "home": 4,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 3
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 8,
-                    "away": 17
-                },
-                "shots_on_target": {
-                    "home": 1,
-                    "away": 8
-                },
-                "xg": {
-                    "home": 0.19,
-                    "away": 2.91
-                },
-                "possession": {
-                    "home": 55,
-                    "away": 45
-                },
-                "fouls": {
-                    "home": 14,
-                    "away": 19
-                },
-                "offsides": {
-                    "home": 2,
-                    "away": 1
-                }
-            }
-        },
         "Eintracht Frankfurt_FC Augsburg": {
             "home": "Eintracht Frankfurt",
             "away": "FC Augsburg",
@@ -59,7 +7,7 @@
             "is_finished": true,
             "score": "1:4",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "06.09. 15:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -87,8 +35,8 @@
                     "away": 7
                 },
                 "xg": {
-                    "home": 1.87,
-                    "away": 1.3
+                    "home": 2.22,
+                    "away": 1.13
                 },
                 "possession": {
                     "home": 60,
@@ -101,6 +49,58 @@
                 "offsides": {
                     "home": 3,
                     "away": 0
+                }
+            }
+        },
+        "Hamburger SV_1. FSV Mainz 05": {
+            "home": "Hamburger SV",
+            "away": "1. FSV Mainz 05",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:5",
+            "stage": "Koniec",
+            "datetime": "06.09. 13:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_pW7I1Wh5",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hamburger-v9k3aY5F/mainz-EuakNmc1/?mid=pW7I1Wh5",
+            "match_stats": {
+                "corners": {
+                    "home": 4,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 8,
+                    "away": 17
+                },
+                "shots_on_target": {
+                    "home": 1,
+                    "away": 8
+                },
+                "xg": {
+                    "home": 0.32,
+                    "away": 2.78
+                },
+                "possession": {
+                    "home": 55,
+                    "away": 45
+                },
+                "fouls": {
+                    "home": 14,
+                    "away": 19
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 1
                 }
             }
         },
@@ -825,55 +825,55 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
-        "Valencia_Barcelona": {
-            "home": "Valencia",
-            "away": "Barcelona",
+        "Espanyol_Sevilla": {
+            "home": "Espanyol",
+            "away": "Sevilla",
             "is_live": false,
             "is_finished": true,
-            "score": "0:5",
+            "score": "1:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "06.09. 19:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_MFH8mVvQ",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/valencia-CQeaytrD/?mid=MFH8mVvQ",
+            "match_id": "g_1_tIPbVVIs",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/sevilla-h8oAv4Ts/?mid=tIPbVVIs",
             "match_stats": {
                 "corners": {
-                    "home": 1,
+                    "home": 0,
                     "away": 4
                 },
                 "yellow": {
-                    "home": 1,
+                    "home": 2,
                     "away": 3
                 },
                 "red": {
-                    "home": null,
-                    "away": null
+                    "home": 0,
+                    "away": 1
                 },
                 "shots": {
-                    "home": 3,
-                    "away": 25
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 10
-                },
-                "xg": {
-                    "home": 0.67,
-                    "away": 4.05
-                },
-                "possession": {
-                    "home": 26,
-                    "away": 74
-                },
-                "fouls": {
-                    "home": 7,
+                    "home": 12,
                     "away": 6
                 },
+                "shots_on_target": {
+                    "home": 3,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 1.2,
+                    "away": 0.46
+                },
+                "possession": {
+                    "home": 56,
+                    "away": 44
+                },
+                "fouls": {
+                    "home": 17,
+                    "away": 13
+                },
                 "offsides": {
-                    "home": 2,
-                    "away": 4
+                    "home": 5,
+                    "away": 2
                 }
             }
         },
@@ -884,7 +884,7 @@
             "is_finished": true,
             "score": "5:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "06.09. 16:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -912,8 +912,8 @@
                     "away": 5
                 },
                 "xg": {
-                    "home": 1.41,
-                    "away": 1.82
+                    "home": 1.19,
+                    "away": 1.63
                 },
                 "possession": {
                     "home": 50,
@@ -936,7 +936,7 @@
             "is_finished": true,
             "score": "0:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "06.09. 16:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -978,6 +978,58 @@
                 "offsides": {
                     "home": 3,
                     "away": 0
+                }
+            }
+        },
+        "Valencia_Barcelona": {
+            "home": "Valencia",
+            "away": "Barcelona",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:5",
+            "stage": "Koniec",
+            "datetime": "06.09. 14:15",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_MFH8mVvQ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/valencia-CQeaytrD/?mid=MFH8mVvQ",
+            "match_stats": {
+                "corners": {
+                    "home": 1,
+                    "away": 4
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 3
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 3,
+                    "away": 25
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 10
+                },
+                "xg": {
+                    "home": 0.66,
+                    "away": 4.08
+                },
+                "possession": {
+                    "home": 26,
+                    "away": 74
+                },
+                "fouls": {
+                    "home": 7,
+                    "away": 6
+                },
+                "offsides": {
+                    "home": 2,
+                    "away": 4
                 }
             }
         },
@@ -1157,7 +1209,7 @@
                 },
                 "yellow": {
                     "home": 3,
-                    "away": 5
+                    "away": 4
                 },
                 "red": {
                     "home": null,
@@ -1566,44 +1618,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_nFKoy1k3",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/real-sociedad-jNvak2f3/?mid=nFKoy1k3",
-            "match_stats": {
-                "corners": {
-                    "home": 7,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 2,
-                    "away": 4
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 17,
-                    "away": 11
-                },
-                "shots_on_target": {
-                    "home": 10,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 1.82,
-                    "away": 0.77
-                },
-                "possession": {
-                    "home": 51,
-                    "away": 49
-                },
-                "fouls": {
-                    "home": 19,
-                    "away": 14
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 0
-                }
-            }
+            "match_stats": null
         },
         "Levante_Betis": {
             "home": "Levante",
@@ -1949,21 +1964,7 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
-        },
-        "Espanyol_Sevilla": {
-            "home": "Espanyol",
-            "away": "Sevilla",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "68",
-            "datetime": "68",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_tIPbVVIs",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/sevilla-h8oAv4Ts/?mid=tIPbVVIs"
         }
     },
-    "updated": "2026-09-06 20:34:48"
+    "updated": "2026-09-07 04:04:56"
 }
