@@ -1,57 +1,5 @@
 {
     "matches": {
-        "Wieczysta Kraków_Zagłębie Lubin": {
-            "home": "Wieczysta Kraków",
-            "away": "Zagłębie Lubin",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:1",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_MN1IRPIG",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/zaglebie-lubin-tlYOere0/?mid=MN1IRPIG",
-            "match_stats": {
-                "corners": {
-                    "home": 10,
-                    "away": 3
-                },
-                "yellow": {
-                    "home": 1,
-                    "away": 2
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": 22,
-                    "away": 12
-                },
-                "shots_on_target": {
-                    "home": 7,
-                    "away": 4
-                },
-                "xg": {
-                    "home": 1.02,
-                    "away": 1.47
-                },
-                "possession": {
-                    "home": 74,
-                    "away": 26
-                },
-                "fouls": {
-                    "home": 13,
-                    "away": 13
-                },
-                "offsides": {
-                    "home": 3,
-                    "away": 2
-                }
-            }
-        },
         "Pogoń Szczecin_Wisła Płock": {
             "home": "Pogoń Szczecin",
             "away": "Wisła Płock",
@@ -59,7 +7,7 @@
             "is_finished": true,
             "score": "1:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "07.09. 18:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -101,6 +49,58 @@
                 "offsides": {
                     "home": 3,
                     "away": 1
+                }
+            }
+        },
+        "Wieczysta Kraków_Zagłębie Lubin": {
+            "home": "Wieczysta Kraków",
+            "away": "Zagłębie Lubin",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:1",
+            "stage": "Koniec",
+            "datetime": "07.09. 16:00",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_MN1IRPIG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/zaglebie-lubin-tlYOere0/?mid=MN1IRPIG",
+            "match_stats": {
+                "corners": {
+                    "home": 10,
+                    "away": 3
+                },
+                "yellow": {
+                    "home": 1,
+                    "away": 2
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": 22,
+                    "away": 12
+                },
+                "shots_on_target": {
+                    "home": 7,
+                    "away": 4
+                },
+                "xg": {
+                    "home": 1.02,
+                    "away": 1.47
+                },
+                "possession": {
+                    "home": 74,
+                    "away": 26
+                },
+                "fouls": {
+                    "home": 13,
+                    "away": 13
+                },
+                "offsides": {
+                    "home": 3,
+                    "away": 2
                 }
             }
         },
@@ -1432,7 +1432,7 @@
             "is_finished": true,
             "score": "3:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "07.09. 17:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2911,5 +2911,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-09-07 21:27:59"
+    "updated": "2026-09-08 03:55:02"
 }
