@@ -826,62 +826,10 @@
             "match_stats": null
         },
         {
-            "home": "Getafe",
-            "away": "Celta Vigo",
-            "score": "1:1",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_EVN6T9mf",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/getafe-dboeiWOt/?mid=EVN6T9mf",
-            "match_stats": {
-                "corners": {
-                    "home": 3,
-                    "away": 5
-                },
-                "yellow": {
-                    "home": 4,
-                    "away": 2
-                },
-                "red": {
-                    "home": 1,
-                    "away": 0
-                },
-                "shots": {
-                    "home": 10,
-                    "away": 16
-                },
-                "shots_on_target": {
-                    "home": 2,
-                    "away": 3
-                },
-                "xg": {
-                    "home": 0.81,
-                    "away": 0.96
-                },
-                "possession": {
-                    "home": 30,
-                    "away": 70
-                },
-                "fouls": {
-                    "home": 8,
-                    "away": 9
-                },
-                "offsides": {
-                    "home": 0,
-                    "away": 3
-                }
-            }
-        },
-        {
             "home": "Elche",
             "away": "Real Sociedad",
             "score": "2:3",
-            "datetime": "Koniec",
+            "datetime": "07.09. 19:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -926,6 +874,58 @@
                 "offsides": {
                     "home": 2,
                     "away": 1
+                }
+            }
+        },
+        {
+            "home": "Getafe",
+            "away": "Celta Vigo",
+            "score": "1:1",
+            "datetime": "07.09. 17:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_EVN6T9mf",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/getafe-dboeiWOt/?mid=EVN6T9mf",
+            "match_stats": {
+                "corners": {
+                    "home": 3,
+                    "away": 5
+                },
+                "yellow": {
+                    "home": 4,
+                    "away": 2
+                },
+                "red": {
+                    "home": 1,
+                    "away": 0
+                },
+                "shots": {
+                    "home": 10,
+                    "away": 16
+                },
+                "shots_on_target": {
+                    "home": 2,
+                    "away": 3
+                },
+                "xg": {
+                    "home": 0.65,
+                    "away": 1.03
+                },
+                "possession": {
+                    "home": 30,
+                    "away": 70
+                },
+                "fouls": {
+                    "home": 8,
+                    "away": 9
+                },
+                "offsides": {
+                    "home": 0,
+                    "away": 3
                 }
             }
         },
@@ -1996,5 +1996,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-07 21:42"
+    "updated": "2026-09-08 04:10"
 }
