@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Śląsk Wrocław",
-            "away": "Korona Kielce",
-            "datetime": "12:45",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "QHRGqbv2",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/slask-wroclaw-E1Oxemse/?mid=QHRGqbv2",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 73,
-                "over35_pct": 40,
-                "avg_goals_scored": 2.53,
-                "avg_goals_conceded": 1.0,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "D",
-                    "D",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 33,
-                "over15_pct": 60,
-                "over25_pct": 13,
-                "over35_pct": 7,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 0.67,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "W",
-                    "W",
-                    "D",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Górnik Zabrze",
             "away": "Lech Poznań",
             "datetime": "15:30",
@@ -614,12 +539,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 33,
+                "btts_pct": 40,
                 "over15_pct": 60,
-                "over25_pct": 13,
+                "over25_pct": 20,
                 "over35_pct": 7,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 0.67,
+                "avg_goals_scored": 1.13,
+                "avg_goals_conceded": 0.6,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -629,11 +554,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "D",
                     "W",
                     "W",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -751,25 +676,25 @@
             }
         },
         {
-            "home": "Chrobry Głogów",
-            "away": "Pogoń Siedlce",
-            "datetime": "13:30",
+            "home": "Wisła Kraków",
+            "away": "Śląsk Wrocław",
+            "datetime": "18.09. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "pMp7lZhJ",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/pogon-siedlce-d6IVB42i/?mid=pMp7lZhJ",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
+            "match_id": "xhwp7hxQ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/slask-wroclaw-E1Oxemse/wisla-krakow-rob20Q2Q/?mid=xhwp7hxQ",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 27,
+                "btts_pct": 47,
+                "over15_pct": 87,
+                "over25_pct": 67,
+                "over35_pct": 33,
                 "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.4,
+                "avg_goals_conceded": 1.47,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -781,9 +706,9 @@
                 "form": [
                     "D",
                     "W",
-                    "W",
                     "L",
-                    "D"
+                    "L",
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -792,58 +717,11 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 87,
-                "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.67,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "L",
-                    "W",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
-            "home": "Ruch Chorzów",
-            "away": "Podbeskidzie B-B",
-            "datetime": "13:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "UVwihHgf",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/podbeskidzie-b-b-zBPYeTRl/ruch-chorzow-S4zygtuJ/?mid=UVwihHgf",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 33,
+                "btts_pct": 67,
                 "over15_pct": 80,
-                "over25_pct": 40,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.6,
+                "over25_pct": 73,
+                "over35_pct": 33,
+                "avg_goals_scored": 2.4,
                 "avg_goals_conceded": 1.07,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -854,114 +732,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "W",
-                    "W",
-                    "L",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 87,
-                "over25_pct": 47,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.4,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
                     "L",
                     "L",
+                    "W",
                     "D",
                     "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
-            "home": "Warta Poznań",
-            "away": "Arka Gdynia",
-            "datetime": "13:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "zkdIej0n",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/warta-poznan-CrVUWAl8/?mid=zkdIej0n",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 73,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 1.93,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "W",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 27,
-                "over15_pct": 87,
-                "over25_pct": 40,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.2,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "W",
-                    "D",
-                    "L",
-                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1017,12 +792,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 87,
-                "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.67,
+                "btts_pct": 53,
+                "over15_pct": 67,
+                "over25_pct": 47,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.13,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1033,9 +808,9 @@
                 "avg_offsides": 0,
                 "form": [
                     "W",
-                    "W",
                     "L",
-                    "W",
+                    "D",
+                    "D",
                     "D"
                 ],
                 "corners_per_match": [],
@@ -1499,6 +1274,306 @@
                 "draw": null,
                 "away": null
             }
+        },
+        {
+            "home": "Bruk-Bet T.",
+            "away": "Odra Opole",
+            "datetime": "19.09. 13:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "xGJz5Ffc",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/odra-opole-C8Kg1k4R/?mid=xGJz5Ffc",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 100,
+                "over25_pct": 73,
+                "over35_pct": 33,
+                "avg_goals_scored": 2.2,
+                "avg_goals_conceded": 1.2,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "W",
+                    "D",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 67,
+                "over25_pct": 40,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.07,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "D",
+                    "D",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Pogoń Grodzisk Mazowiecki",
+            "away": "ŁKS Łódź",
+            "datetime": "19.09. 13:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "ptNr3gP9",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=ptNr3gP9",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 67,
+                "over25_pct": 47,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.13,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "D",
+                    "D",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 64,
+                "over15_pct": 86,
+                "over25_pct": 71,
+                "over35_pct": 29,
+                "avg_goals_scored": 1.43,
+                "avg_goals_conceded": 1.36,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "D",
+                    "L",
+                    "D",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Polonia Warszawa",
+            "away": "Chrobry Głogów",
+            "datetime": "19.09. 13:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "YJbL2PDT",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/polonia-warszawa-ADZjR3us/?mid=YJbL2PDT",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 60,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 1.6,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "L",
+                    "W",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 60,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.4,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "W",
+                    "L",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Chrobry Głogów",
+            "away": "Pogoń Siedlce",
+            "datetime": "90+5",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "pMp7lZhJ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/pogon-siedlce-d6IVB42i/?mid=pMp7lZhJ",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 60,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.4,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "W",
+                    "L",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 67,
+                "over25_pct": 47,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.13,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "D",
+                    "D",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
         }
     ],
     "standings": [
@@ -1531,38 +1606,38 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Jagiellonia Białystok",
+            "team": "Korona Kielce",
             "points": "12",
             "rank": 5,
+            "url": "https://www.flashscore.pl/druzyna/korona-kielce/pp78XcbA/",
+            "league_id": "ekstraklasa"
+        },
+        {
+            "team": "Jagiellonia Białystok",
+            "points": "12",
+            "rank": 6,
             "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "Piast Gliwice",
             "points": "10",
-            "rank": 6,
+            "rank": 7,
             "url": "https://www.flashscore.pl/druzyna/piast-gliwice/ve2oT9ck/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "GKS Katowice",
             "points": "9",
-            "rank": 7,
+            "rank": 8,
             "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "Pogoń Szczecin",
             "points": "9",
-            "rank": 8,
-            "url": "https://www.flashscore.pl/druzyna/pogon-szczecin/Um9YwPQ0/",
-            "league_id": "ekstraklasa"
-        },
-        {
-            "team": "Korona Kielce",
-            "points": "9",
             "rank": 9,
-            "url": "https://www.flashscore.pl/druzyna/korona-kielce/pp78XcbA/",
+            "url": "https://www.flashscore.pl/druzyna/pogon-szczecin/Um9YwPQ0/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1651,16 +1726,16 @@
         },
         {
             "team": "Chrobry Głogów",
-            "points": "11",
+            "points": "12",
             "rank": 4,
             "url": "https://www.flashscore.pl/druzyna/chrobry-glogow/vo6umLPj/",
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Arka Gdynia",
-            "points": "11",
+            "team": "Warta Poznań",
+            "points": "12",
             "rank": 5,
-            "url": "https://www.flashscore.pl/druzyna/arka-gdynia/feEez0Ei/",
+            "url": "https://www.flashscore.pl/druzyna/warta-poznan/CrVUWAl8/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1671,45 +1746,45 @@
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Bruk-Bet T.",
-            "points": "10",
+            "team": "Arka Gdynia",
+            "points": "11",
             "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/nieciecza/YNkK4khO/",
+            "url": "https://www.flashscore.pl/druzyna/arka-gdynia/feEez0Ei/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Ruch Chorzów",
-            "points": "10",
+            "points": "11",
             "rank": 8,
             "url": "https://www.flashscore.pl/druzyna/ruch-chorzow/S4zygtuJ/",
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Warta Poznań",
-            "points": "9",
+            "team": "Bruk-Bet T.",
+            "points": "10",
             "rank": 9,
-            "url": "https://www.flashscore.pl/druzyna/warta-poznan/CrVUWAl8/",
+            "url": "https://www.flashscore.pl/druzyna/nieciecza/YNkK4khO/",
+            "league_id": "betclic-1-liga"
+        },
+        {
+            "team": "Pogoń Siedlce",
+            "points": "9",
+            "rank": 10,
+            "url": "https://www.flashscore.pl/druzyna/pogon-siedlce/d6IVB42i/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Odra Opole",
             "points": "9",
-            "rank": 10,
+            "rank": 11,
             "url": "https://www.flashscore.pl/druzyna/odra-opole/C8Kg1k4R/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Stal Mielec",
             "points": "9",
-            "rank": 11,
-            "url": "https://www.flashscore.pl/druzyna/stal-mielec/pxXiDZkQ/",
-            "league_id": "betclic-1-liga"
-        },
-        {
-            "team": "Pogoń Siedlce",
-            "points": "8",
             "rank": 12,
-            "url": "https://www.flashscore.pl/druzyna/pogon-siedlce/d6IVB42i/",
+            "url": "https://www.flashscore.pl/druzyna/stal-mielec/pxXiDZkQ/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1727,17 +1802,17 @@
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Lechia Gdańsk",
+            "team": "Podbeskidzie B-B",
             "points": "7",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/lechia-gdansk/GGLmkiK8/",
+            "url": "https://www.flashscore.pl/druzyna/podbeskidzie-b-b/zBPYeTRl/",
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Podbeskidzie B-B",
-            "points": "6",
+            "team": "Lechia Gdańsk",
+            "points": "7",
             "rank": 16,
-            "url": "https://www.flashscore.pl/druzyna/podbeskidzie-b-b/zBPYeTRl/",
+            "url": "https://www.flashscore.pl/druzyna/lechia-gdansk/GGLmkiK8/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1767,5 +1842,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-09-12 10:36"
+    "updated": "2026-09-12 15:32"
 }
