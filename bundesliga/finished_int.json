@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "RB Lipsk",
+            "away": "Hamburger SV",
+            "score": "5:0",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_z3obE9xB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hamburger-v9k3aY5F/rb-leipzig-KbS1suSm/?mid=z3obE9xB",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "1. FC Koeln",
             "away": "Werder Brema",
             "score": "1:1",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_hdBQaANH",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/rb-leipzig-KbS1suSm/?mid=hdBQaANH",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "VfB Stuttgart",
@@ -929,6 +944,58 @@
             "match_id": "g_1_xrtCcyAe",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
+        },
+        {
+            "home": "Celta Vigo",
+            "away": "Malaga",
+            "score": "1:1",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_bwKgvR1C",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/malaga-25tIqYiJ/?mid=bwKgvR1C",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
         },
         {
             "home": "Real Madryt",
@@ -1671,44 +1738,7 @@
             "stage": "Koniec",
             "match_id": "g_1_Au6uQzs2",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/real-madryt-W8mj7MDD/?mid=Au6uQzs2",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Real Sociedad",
@@ -2176,5 +2206,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-13 11:54"
+    "updated": "2026-09-13 16:24"
 }
