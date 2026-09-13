@@ -1,18 +1,18 @@
 {
     "matches": [
         {
-            "home": "Śląsk Wrocław",
-            "away": "Korona Kielce",
-            "score": "1:2",
-            "datetime": "Koniec",
+            "home": "Zagłębie Lubin",
+            "away": "GKS Katowice",
+            "score": "2:1",
+            "datetime": "12.09. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_QHRGqbv2",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/slask-wroclaw-E1Oxemse/?mid=QHRGqbv2",
+            "match_id": "g_1_dfozkgGs",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/zaglebie-lubin-tlYOere0/?mid=dfozkgGs",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -56,7 +56,7 @@
             "home": "Górnik Zabrze",
             "away": "Lech Poznań",
             "score": "2:1",
-            "datetime": "Koniec",
+            "datetime": "12.09. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -105,18 +105,18 @@
             }
         },
         {
-            "home": "Zagłębie Lubin",
-            "away": "GKS Katowice",
-            "score": "2:1",
-            "datetime": "Koniec",
+            "home": "Śląsk Wrocław",
+            "away": "Korona Kielce",
+            "score": "1:2",
+            "datetime": "12.09. 12:45",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_dfozkgGs",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/zaglebie-lubin-tlYOere0/?mid=dfozkgGs",
+            "match_id": "g_1_QHRGqbv2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/slask-wroclaw-E1Oxemse/?mid=QHRGqbv2",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1504,7 +1504,7 @@
             "home": "Chrobry Głogów",
             "away": "Pogoń Siedlce",
             "score": "0:0",
-            "datetime": "Koniec",
+            "datetime": "12.09. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1556,7 +1556,7 @@
             "home": "Ruch Chorzów",
             "away": "Podbeskidzie B-B",
             "score": "3:3",
-            "datetime": "Koniec",
+            "datetime": "12.09. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -1608,7 +1608,7 @@
             "home": "Warta Poznań",
             "away": "Arka Gdynia",
             "score": "3:0",
-            "datetime": "Koniec",
+            "datetime": "12.09. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -3061,5 +3061,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-12 20:36"
+    "updated": "2026-09-13 04:13"
 }
