@@ -960,6 +960,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "Villarreal_Betis": {
+            "home": "Villarreal",
+            "away": "Betis",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_hdqa7PVb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/villarreal-lUatW5jE/?mid=hdqa7PVb",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Real Sociedad_Atl. Madryt": {
             "home": "Real Sociedad",
             "away": "Atl. Madryt",
@@ -1701,44 +1753,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_MFH8mVvQ",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/valencia-CQeaytrD/?mid=MFH8mVvQ",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Villarreal_A Coruna": {
             "home": "Villarreal",
@@ -2266,5 +2281,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-09-14 12:46:23"
+    "updated": "2026-09-14 22:11:26"
 }

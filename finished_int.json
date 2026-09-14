@@ -961,6 +961,58 @@
             "match_stats": null
         },
         {
+            "home": "Villarreal",
+            "away": "Betis",
+            "score": "1:2",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_hdqa7PVb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/villarreal-lUatW5jE/?mid=hdqa7PVb",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Real Sociedad",
             "away": "Atl. Madryt",
             "score": "0:3",
@@ -1701,44 +1753,7 @@
             "stage": "Koniec",
             "match_id": "g_1_MFH8mVvQ",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/valencia-CQeaytrD/?mid=MFH8mVvQ",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Villarreal",
@@ -2266,5 +2281,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-14 12:46"
+    "updated": "2026-09-14 22:11"
 }
