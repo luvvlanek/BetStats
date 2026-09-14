@@ -70,9 +70,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.09,
+                "home": 1.07,
                 "draw": 10,
-                "away": 16
+                "away": 23
             }
         },
         {
@@ -753,7 +753,7 @@
         {
             "home": "Villarreal",
             "away": "Betis",
-            "datetime": "14.09. 19:00",
+            "datetime": "19:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -820,8 +820,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.91,
-                "draw": 3.9,
+                "home": 1.95,
+                "draw": 3.8,
                 "away": 3.6
             }
         },
@@ -897,7 +897,7 @@
             "odds": {
                 "home": 2.15,
                 "draw": 3.3,
-                "away": 3.5
+                "away": 3.3
             }
         },
         {
@@ -970,9 +970,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.91,
-                "draw": 3.2,
-                "away": 4.6
+                "home": 1.87,
+                "draw": 3.3,
+                "away": 4.8
             }
         },
         {
@@ -1047,7 +1047,7 @@
             "odds": {
                 "home": 11,
                 "draw": 6,
-                "away": 1.24
+                "away": 1.25
             }
         },
         {
@@ -1141,9 +1141,9 @@
                 "total_matches": 15,
                 "btts_pct": 60,
                 "over15_pct": 80,
-                "over25_pct": 67,
+                "over25_pct": 73,
                 "over35_pct": 33,
-                "avg_goals_scored": 1.47,
+                "avg_goals_scored": 1.53,
                 "avg_goals_conceded": 1.53,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -1154,11 +1154,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "L",
                     "W",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1195,8 +1195,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.4,
-                "draw": 4.4,
+                "home": 1.37,
+                "draw": 4.7,
                 "away": 7
             }
         },
@@ -1270,9 +1270,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.07,
-                "draw": 18,
-                "away": 14
+                "home": 1.05,
+                "draw": 17,
+                "away": 23
             }
         },
         {
@@ -1345,9 +1345,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3,
-                "draw": 3.5,
-                "away": 2.2
+                "home": 3.4,
+                "draw": 3.4,
+                "away": 2.1
             }
         },
         {
@@ -1495,84 +1495,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.4,
+                "home": 3.5,
                 "draw": 3.8,
-                "away": 2
-            }
-        },
-        {
-            "home": "Real Sociedad",
-            "away": "Atl. Madryt",
-            "datetime": "90+5",
-            "status": "live",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "GG5skrGU",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/real-sociedad-jNvak2f3/?mid=GG5skrGU",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 80,
-                "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.6,
-                "avg_goals_conceded": 1.53,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "D",
-                    "W",
-                    "W",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 80,
-                "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.53,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "W",
-                    "D",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 3.4,
-                "draw": 3.6,
-                "away": 2.1
+                "away": 1.95
             }
         }
     ],
@@ -1856,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-09-13 21:03"
+    "updated": "2026-09-14 04:37"
 }
