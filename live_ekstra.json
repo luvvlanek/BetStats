@@ -1,5 +1,109 @@
 {
     "matches": {
+        "Raków Częstochowa_Zagłębie Lubin": {
+            "home": "Raków Częstochowa",
+            "away": "Zagłębie Lubin",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:3",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_2JhLr3yI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/zaglebie-lubin-tlYOere0/?mid=2JhLr3yI",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Korona Kielce_Górnik Zabrze": {
+            "home": "Korona Kielce",
+            "away": "Górnik Zabrze",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_MsGpNU8s",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/korona-kielce-pp78XcbA/?mid=MsGpNU8s",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Radomiak Radom_Piast Gliwice": {
             "home": "Radomiak Radom",
             "away": "Piast Gliwice",
@@ -689,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_8v0QP3mT",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/gornik-zabrze-2LH3Ywq4/?mid=8v0QP3mT",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Motor Lublin_Legia Warszawa": {
             "home": "Motor Lublin",
@@ -741,44 +808,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_tp02V7Ji",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/motor-lublin-IoLk2VlL/?mid=tp02V7Ji",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Korona Kielce_Wisła Kraków": {
             "home": "Korona Kielce",
@@ -1559,20 +1589,6 @@
             "match_id": "g_1_ARE8CveM",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
-        },
-        "Raków Częstochowa_Zagłębie Lubin": {
-            "home": "Raków Częstochowa",
-            "away": "Zagłębie Lubin",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "32",
-            "datetime": "32",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_2JhLr3yI",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/zaglebie-lubin-tlYOere0/?mid=2JhLr3yI"
         },
         "Stal Mielec_Bruk-Bet T.": {
             "home": "Stal Mielec",
@@ -3195,5 +3211,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-09-15 16:49:47"
+    "updated": "2026-09-15 21:16:13"
 }
