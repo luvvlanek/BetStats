@@ -960,6 +960,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "Barcelona_Racing Santander": {
+            "home": "Barcelona",
+            "away": "Racing Santander",
+            "is_live": false,
+            "is_finished": true,
+            "score": "7:2",
+            "stage": "Koniec",
+            "datetime": "16.09. 19:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_bDWq2kBG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/racing-santander-nVpEwOrl/?mid=bDWq2kBG",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "A Coruna_Sevilla": {
             "home": "A Coruna",
             "away": "Sevilla",
@@ -967,7 +1019,7 @@
             "is_finished": true,
             "score": "0:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "16.09. 17:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1019,7 +1071,7 @@
             "is_finished": true,
             "score": "4:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "16.09. 17:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -2317,21 +2369,7 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
-        },
-        "Barcelona_Racing Santander": {
-            "home": "Barcelona",
-            "away": "Racing Santander",
-            "is_live": true,
-            "is_finished": false,
-            "score": "6:2",
-            "stage": "89",
-            "datetime": "89",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_bDWq2kBG",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/racing-santander-nVpEwOrl/?mid=bDWq2kBG"
         }
     },
-    "updated": "2026-09-16 21:35:08"
+    "updated": "2026-09-17 04:41:05"
 }

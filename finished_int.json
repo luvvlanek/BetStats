@@ -961,10 +961,62 @@
             "match_stats": null
         },
         {
+            "home": "Barcelona",
+            "away": "Racing Santander",
+            "score": "7:2",
+            "datetime": "16.09. 19:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_bDWq2kBG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/racing-santander-nVpEwOrl/?mid=bDWq2kBG",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "A Coruna",
             "away": "Sevilla",
             "score": "0:1",
-            "datetime": "Koniec",
+            "datetime": "16.09. 17:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1016,7 +1068,7 @@
             "home": "Atl. Madryt",
             "away": "Osasuna",
             "score": "4:0",
-            "datetime": "Koniec",
+            "datetime": "16.09. 17:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -2319,5 +2371,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-16 21:35"
+    "updated": "2026-09-17 04:41"
 }

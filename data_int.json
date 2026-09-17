@@ -72,7 +72,7 @@
             "odds": {
                 "home": 1.05,
                 "draw": 14,
-                "away": 21
+                "away": 23
             }
         },
         {
@@ -753,7 +753,7 @@
         {
             "home": "Betis",
             "away": "Getafe",
-            "datetime": "17.09. 17:00",
+            "datetime": "17:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -820,15 +820,15 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.65,
-                "draw": 3.6,
-                "away": 5.9
+                "home": 1.63,
+                "draw": 3.7,
+                "away": 6
             }
         },
         {
             "home": "Malaga",
             "away": "Villarreal",
-            "datetime": "17.09. 19:30",
+            "datetime": "19:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1120,9 +1120,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.63,
-                "draw": 3.7,
-                "away": 5.3
+                "home": 1.59,
+                "draw": 3.6,
+                "away": 6
             }
         },
         {
@@ -1170,9 +1170,9 @@
                 "btts_pct": 71,
                 "over15_pct": 93,
                 "over25_pct": 71,
-                "over35_pct": 43,
+                "over35_pct": 50,
                 "avg_goals_scored": 1.79,
-                "avg_goals_conceded": 1.64,
+                "avg_goals_conceded": 2.07,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1182,11 +1182,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "W",
                     "L",
                     "W",
                     "L",
-                    "D"
+                    "W",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1195,9 +1195,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.91,
-                "draw": 3.6,
-                "away": 3.8
+                "home": 1.77,
+                "draw": 3.9,
+                "away": 4.1
             }
         },
         {
@@ -1242,12 +1242,12 @@
             },
             "away_stats": {
                 "total_matches": 14,
-                "btts_pct": 57,
-                "over15_pct": 79,
-                "over25_pct": 71,
-                "over35_pct": 64,
-                "avg_goals_scored": 3.0,
-                "avg_goals_conceded": 1.07,
+                "btts_pct": 64,
+                "over15_pct": 86,
+                "over25_pct": 79,
+                "over35_pct": 71,
+                "avg_goals_scored": 3.5,
+                "avg_goals_conceded": 1.14,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1270,8 +1270,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 12,
-                "draw": 7,
+                "home": 13,
+                "draw": 7.5,
                 "away": 1.15
             }
         },
@@ -1422,7 +1422,7 @@
             "odds": {
                 "home": 3.6,
                 "draw": 3.7,
-                "away": 1.95
+                "away": 1.91
             }
         },
         {
@@ -1498,81 +1498,6 @@
                 "home": 2.95,
                 "draw": 3.4,
                 "away": 2.3
-            }
-        },
-        {
-            "home": "Barcelona",
-            "away": "Racing Santander",
-            "datetime": "89",
-            "status": "live",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "bDWq2kBG",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/racing-santander-nVpEwOrl/?mid=bDWq2kBG",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 14,
-                "btts_pct": 57,
-                "over15_pct": 79,
-                "over25_pct": 71,
-                "over35_pct": 64,
-                "avg_goals_scored": 3.0,
-                "avg_goals_conceded": 1.07,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "W",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 71,
-                "over15_pct": 93,
-                "over25_pct": 71,
-                "over35_pct": 43,
-                "avg_goals_scored": 1.79,
-                "avg_goals_conceded": 1.64,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "W",
-                    "L",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.05,
-                "draw": 15,
-                "away": 31
             }
         }
     ],
@@ -1856,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-09-16 21:35"
+    "updated": "2026-09-17 04:41"
 }
