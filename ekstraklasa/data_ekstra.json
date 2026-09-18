@@ -3,7 +3,7 @@
         {
             "home": "Widzew Łódź",
             "away": "Wieczysta Kraków",
-            "datetime": "16:00",
+            "datetime": "16:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -751,81 +751,6 @@
             }
         },
         {
-            "home": "Warta Poznań",
-            "away": "Puszcza Niepołomice",
-            "datetime": "16:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "tpUTgknd",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/puszcza-dtqx13O8/warta-poznan-CrVUWAl8/?mid=tpUTgknd",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 80,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.6,
-                "avg_goals_conceded": 1.93,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "L",
-                    "W",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 27,
-                "over15_pct": 80,
-                "over25_pct": 53,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.13,
-                "avg_goals_conceded": 1.47,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "W",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Polonia Bytom",
             "away": "Ruch Chorzów",
             "datetime": "18:45",
@@ -1499,6 +1424,156 @@
                 "draw": null,
                 "away": null
             }
+        },
+        {
+            "home": "Arka Gdynia",
+            "away": "Polonia Warszawa",
+            "datetime": "10.10. 13:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "t4KNFW8F",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/polonia-warszawa-ADZjR3us/?mid=t4KNFW8F",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 27,
+                "over15_pct": 93,
+                "over25_pct": 47,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.4,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "D",
+                    "W",
+                    "D",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 80,
+                "over15_pct": 87,
+                "over25_pct": 80,
+                "over35_pct": 67,
+                "avg_goals_scored": 1.87,
+                "avg_goals_conceded": 1.93,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "D",
+                    "D",
+                    "D",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Warta Poznań",
+            "away": "Puszcza Niepołomice",
+            "datetime": "13",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "tpUTgknd",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/puszcza-dtqx13O8/warta-poznan-CrVUWAl8/?mid=tpUTgknd",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 80,
+                "over35_pct": 47,
+                "avg_goals_scored": 1.6,
+                "avg_goals_conceded": 1.93,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "L",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 27,
+                "over15_pct": 80,
+                "over25_pct": 53,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.13,
+                "avg_goals_conceded": 1.47,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "W",
+                    "W",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
         }
     ],
     "standings": [
@@ -1650,24 +1725,24 @@
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Bruk-Bet T.",
+            "team": "Warta Poznań",
             "points": "13",
             "rank": 4,
+            "url": "https://www.flashscore.pl/druzyna/warta-poznan/CrVUWAl8/",
+            "league_id": "betclic-1-liga"
+        },
+        {
+            "team": "Bruk-Bet T.",
+            "points": "13",
+            "rank": 5,
             "url": "https://www.flashscore.pl/druzyna/nieciecza/YNkK4khO/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Chrobry Głogów",
             "points": "12",
-            "rank": 5,
-            "url": "https://www.flashscore.pl/druzyna/chrobry-glogow/vo6umLPj/",
-            "league_id": "betclic-1-liga"
-        },
-        {
-            "team": "Warta Poznań",
-            "points": "12",
             "rank": 6,
-            "url": "https://www.flashscore.pl/druzyna/warta-poznan/CrVUWAl8/",
+            "url": "https://www.flashscore.pl/druzyna/chrobry-glogow/vo6umLPj/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1749,7 +1824,7 @@
         },
         {
             "team": "Puszcza Niepołomice",
-            "points": "6",
+            "points": "7",
             "rank": 18,
             "url": "https://www.flashscore.pl/druzyna/puszcza/dtqx13O8/",
             "league_id": "betclic-1-liga"
@@ -1767,5 +1842,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-09-18 11:04"
+    "updated": "2026-09-18 16:20"
 }
