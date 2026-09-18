@@ -960,19 +960,19 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
-        "Betis_Getafe": {
-            "home": "Betis",
-            "away": "Getafe",
+        "Malaga_Villarreal": {
+            "home": "Malaga",
+            "away": "Villarreal",
             "is_live": false,
             "is_finished": true,
-            "score": "1:0",
+            "score": "1:3",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.09. 19:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_l0jpbLho",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/getafe-dboeiWOt/?mid=l0jpbLho",
+            "match_id": "g_1_GGiPsLP1",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/villarreal-lUatW5jE/?mid=GGiPsLP1",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1012,19 +1012,19 @@
                 }
             }
         },
-        "Malaga_Villarreal": {
-            "home": "Malaga",
-            "away": "Villarreal",
+        "Betis_Getafe": {
+            "home": "Betis",
+            "away": "Getafe",
             "is_live": false,
             "is_finished": true,
-            "score": "1:3",
+            "score": "1:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.09. 17:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_GGiPsLP1",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/villarreal-lUatW5jE/?mid=GGiPsLP1",
+            "match_id": "g_1_l0jpbLho",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/getafe-dboeiWOt/?mid=l0jpbLho",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2401,5 +2401,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-09-17 21:38:32"
+    "updated": "2026-09-18 04:26:29"
 }
