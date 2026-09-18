@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Bayern Monachium_Union Berlin": {
+            "home": "Bayern Monachium",
+            "away": "Union Berlin",
+            "is_live": false,
+            "is_finished": true,
+            "score": "7:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_jm14ULS8",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/union-berlin-pzHW4oaE/?mid=jm14ULS8",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Elversberg_Bayern Monachium": {
             "home": "Elversberg",
             "away": "Bayern Monachium",
@@ -741,44 +793,7 @@
             "league_flag": "🇩🇪",
             "match_id": "g_1_fPqrIiwn",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/freiburg-fiEQZ7C7/paderborn-G2Op923t/?mid=fPqrIiwn",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "TSG Hoffenheim_Borussia Dortmund": {
             "home": "TSG Hoffenheim",
@@ -959,6 +974,58 @@
             "match_id": "g_1_xrtCcyAe",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
+        },
+        "Espanyol_Elche": {
+            "home": "Espanyol",
+            "away": "Elche",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:3",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_00VbGuWQ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/espanyol-QFfPdh1J/?mid=00VbGuWQ",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
         },
         "Malaga_Villarreal": {
             "home": "Malaga",
@@ -1701,44 +1768,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_QPLotmXa",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/elche-4jl02tPF/?mid=QPLotmXa",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Osasuna_Espanyol": {
             "home": "Osasuna",
@@ -2401,5 +2431,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-09-18 16:37:23"
+    "updated": "2026-09-18 21:10:56"
 }
