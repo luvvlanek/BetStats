@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Motor Lublin",
-            "away": "Górnik Zabrze",
-            "datetime": "18:15",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "xYnjoBF6",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/motor-lublin-IoLk2VlL/?mid=xYnjoBF6",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 93,
-                "over25_pct": 73,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.67,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "W",
-                    "L",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.47,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "W",
-                    "W",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Piast Gliwice",
             "away": "Pogoń Szczecin",
             "datetime": "20.09. 10:15",
@@ -492,12 +417,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 87,
-                "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 1.33,
+                "btts_pct": 67,
+                "over15_pct": 93,
+                "over25_pct": 73,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.87,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -507,11 +432,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "L",
                     "W",
-                    "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -543,7 +468,7 @@
                 "over15_pct": 71,
                 "over25_pct": 50,
                 "over35_pct": 29,
-                "avg_goals_scored": 1.29,
+                "avg_goals_scored": 1.21,
                 "avg_goals_conceded": 1.29,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -557,7 +482,7 @@
                     "L",
                     "L",
                     "L",
-                    "W",
+                    "L",
                     "W"
                 ],
                 "corners_per_match": [],
@@ -751,25 +676,25 @@
             }
         },
         {
-            "home": "GKS Katowice",
-            "away": "Cracovia",
-            "datetime": "8",
-            "status": "live",
+            "home": "Piast Gliwice",
+            "away": "Widzew Łódź",
+            "datetime": "11.10. 12:45",
+            "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "YyvF1Wam",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/gks-katowice-K4AgRmS1/?mid=YyvF1Wam",
+            "match_id": "4xCLHrjo",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/widzew-lodz-rNOIW3uC/?mid=4xCLHrjo",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
+                "btts_pct": 33,
                 "over15_pct": 87,
-                "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 1.33,
+                "over25_pct": 47,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -779,11 +704,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "L",
-                    "L",
                     "W",
                     "W",
-                    "L"
+                    "W",
+                    "W",
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -791,59 +716,12 @@
                 "xg_per_match": []
             },
             "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 57,
-                "over15_pct": 71,
-                "over25_pct": 50,
-                "over35_pct": 29,
-                "avg_goals_scored": 1.29,
-                "avg_goals_conceded": 1.29,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "L",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
-            "home": "Miedź Legnica",
-            "away": "Stal Rzeszów",
-            "datetime": "17:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "QgeD4oqH",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/stal-rzeszow-IkpY1q92/?mid=QgeD4oqH",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 80,
+                "btts_pct": 47,
+                "over15_pct": 73,
                 "over25_pct": 47,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.4,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.67,
                 "avg_goals_conceded": 1.13,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -854,38 +732,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "L",
+                    "D",
+                    "D",
                     "D",
                     "L",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 73,
-                "over25_pct": 60,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.8,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "W",
-                    "W",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -1574,12 +1424,87 @@
                 "draw": null,
                 "away": null
             }
+        },
+        {
+            "home": "Odra Opole",
+            "away": "Miedź Legnica",
+            "datetime": "11.10. 18:15",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "WG796SV1",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/odra-opole-C8Kg1k4R/?mid=WG796SV1",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 40,
+                "over15_pct": 53,
+                "over25_pct": 33,
+                "over35_pct": 20,
+                "avg_goals_scored": 0.87,
+                "avg_goals_conceded": 1.2,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "D",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 80,
+                "over25_pct": 53,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.2,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "D",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
         }
     ],
     "standings": [
         {
             "team": "Górnik Zabrze",
-            "points": "21",
+            "points": "22",
             "rank": 1,
             "url": "https://www.flashscore.pl/druzyna/gornik-zabrze/2LH3Ywq4/",
             "league_id": "ekstraklasa"
@@ -1634,17 +1559,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Jagiellonia Białystok",
+            "team": "GKS Katowice",
             "points": "12",
             "rank": 9,
-            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
+            "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "GKS Katowice",
-            "points": "10",
+            "team": "Jagiellonia Białystok",
+            "points": "12",
             "rank": 10,
-            "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
+            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1656,7 +1581,7 @@
         },
         {
             "team": "Cracovia",
-            "points": "9",
+            "points": "8",
             "rank": 12,
             "url": "https://www.flashscore.pl/druzyna/cracovia/KvXSf2A6/",
             "league_id": "ekstraklasa"
@@ -1683,17 +1608,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Wieczysta Kraków",
-            "points": "5",
+            "team": "Motor Lublin",
+            "points": "6",
             "rank": 16,
-            "url": "https://www.flashscore.pl/druzyna/ks-wieczysta-krakow/ImhQf1z6/",
+            "url": "https://www.flashscore.pl/druzyna/motor-lublin/IoLk2VlL/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Motor Lublin",
+            "team": "Wieczysta Kraków",
             "points": "5",
             "rank": 17,
-            "url": "https://www.flashscore.pl/druzyna/motor-lublin/IoLk2VlL/",
+            "url": "https://www.flashscore.pl/druzyna/ks-wieczysta-krakow/ImhQf1z6/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1746,38 +1671,38 @@
             "league_id": "betclic-1-liga"
         },
         {
+            "team": "Stal Rzeszów",
+            "points": "14",
+            "rank": 7,
+            "url": "https://www.flashscore.pl/druzyna/stal-rzeszow/IkpY1q92/",
+            "league_id": "betclic-1-liga"
+        },
+        {
             "team": "Lechia Gdańsk",
             "points": "13",
-            "rank": 7,
+            "rank": 8,
             "url": "https://www.flashscore.pl/druzyna/lechia-gdansk/GGLmkiK8/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Chrobry Głogów",
             "points": "12",
-            "rank": 8,
+            "rank": 9,
             "url": "https://www.flashscore.pl/druzyna/chrobry-glogow/vo6umLPj/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Ruch Chorzów",
             "points": "12",
-            "rank": 9,
+            "rank": 10,
             "url": "https://www.flashscore.pl/druzyna/ruch-chorzow/S4zygtuJ/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Arka Gdynia",
             "points": "11",
-            "rank": 10,
-            "url": "https://www.flashscore.pl/druzyna/arka-gdynia/feEez0Ei/",
-            "league_id": "betclic-1-liga"
-        },
-        {
-            "team": "Stal Rzeszów",
-            "points": "11",
             "rank": 11,
-            "url": "https://www.flashscore.pl/druzyna/stal-rzeszow/IkpY1q92/",
+            "url": "https://www.flashscore.pl/druzyna/arka-gdynia/feEez0Ei/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1842,5 +1767,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-09-19 15:52"
+    "updated": "2026-09-19 20:31"
 }
