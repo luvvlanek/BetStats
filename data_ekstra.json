@@ -751,81 +751,6 @@
             }
         },
         {
-            "home": "Lechia Gdańsk",
-            "away": "Stal Mielec",
-            "datetime": "10:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "lxCMeBHq",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/stal-mielec-pxXiDZkQ/?mid=lxCMeBHq",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 87,
-                "over25_pct": 87,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 2.2,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "W",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 79,
-                "over15_pct": 93,
-                "over25_pct": 71,
-                "over35_pct": 57,
-                "avg_goals_scored": 1.79,
-                "avg_goals_conceded": 2.29,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "D",
-                    "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Bruk-Bet T.",
             "away": "Odra Opole",
             "datetime": "13:30",
@@ -914,12 +839,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 80,
-                "over25_pct": 60,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 53,
                 "over35_pct": 33,
-                "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 1.53,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -929,11 +854,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
-                    "W",
+                    "L",
                     "W",
                     "L",
-                    "W"
+                    "D",
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1139,12 +1064,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 80,
-                "over25_pct": 60,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 53,
                 "over35_pct": 33,
-                "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 1.53,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1154,11 +1079,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
-                    "W",
+                    "L",
                     "W",
                     "L",
-                    "W"
+                    "D",
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1317,12 +1242,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 80,
-                "over25_pct": 60,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 53,
                 "over35_pct": 33,
-                "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 1.53,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1332,11 +1257,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
-                    "W",
+                    "L",
                     "W",
                     "L",
-                    "W"
+                    "D",
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1467,12 +1392,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 80,
-                "over25_pct": 60,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 53,
                 "over35_pct": 33,
-                "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 1.53,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1482,9 +1407,159 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "L",
+                    "W",
+                    "L",
                     "D",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Unia Skierniewice",
+            "away": "Bruk-Bet T.",
+            "datetime": "10.10. 13:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "YwHFHhv3",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/unia-skierniewice-l42F3w54/?mid=YwHFHhv3",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 14,
+                "btts_pct": 43,
+                "over15_pct": 71,
+                "over25_pct": 64,
+                "over35_pct": 36,
+                "avg_goals_scored": 1.36,
+                "avg_goals_conceded": 1.36,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "L",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 100,
+                "over25_pct": 73,
+                "over35_pct": 27,
+                "avg_goals_scored": 2.07,
+                "avg_goals_conceded": 1.07,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
                     "W",
                     "W",
+                    "W",
+                    "D",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Lechia Gdańsk",
+            "away": "Stal Mielec",
+            "datetime": "11",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "lxCMeBHq",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/stal-mielec-pxXiDZkQ/?mid=lxCMeBHq",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 87,
+                "over25_pct": 87,
+                "over35_pct": 47,
+                "avg_goals_scored": 1.27,
+                "avg_goals_conceded": 2.2,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "W",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 79,
+                "over15_pct": 93,
+                "over25_pct": 71,
+                "over35_pct": 57,
+                "avg_goals_scored": 1.79,
+                "avg_goals_conceded": 2.29,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "D",
+                    "L",
                     "L",
                     "W"
                 ],
@@ -1692,45 +1767,45 @@
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Stal Rzeszów",
+            "team": "Lechia Gdańsk",
             "points": "11",
             "rank": 10,
+            "url": "https://www.flashscore.pl/druzyna/lechia-gdansk/GGLmkiK8/",
+            "league_id": "betclic-1-liga"
+        },
+        {
+            "team": "Stal Rzeszów",
+            "points": "11",
+            "rank": 11,
             "url": "https://www.flashscore.pl/druzyna/stal-rzeszow/IkpY1q92/",
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Lechia Gdańsk",
+            "team": "Stal Mielec",
             "points": "10",
-            "rank": 11,
-            "url": "https://www.flashscore.pl/druzyna/lechia-gdansk/GGLmkiK8/",
+            "rank": 12,
+            "url": "https://www.flashscore.pl/druzyna/stal-mielec/pxXiDZkQ/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Pogoń Siedlce",
             "points": "9",
-            "rank": 12,
+            "rank": 13,
             "url": "https://www.flashscore.pl/druzyna/pogon-siedlce/d6IVB42i/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Odra Opole",
             "points": "9",
-            "rank": 13,
+            "rank": 14,
             "url": "https://www.flashscore.pl/druzyna/odra-opole/C8Kg1k4R/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Polonia Bytom",
             "points": "9",
-            "rank": 14,
-            "url": "https://www.flashscore.pl/druzyna/polonia-bytom/vRn3UqXP/",
-            "league_id": "betclic-1-liga"
-        },
-        {
-            "team": "Stal Mielec",
-            "points": "9",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/stal-mielec/pxXiDZkQ/",
+            "url": "https://www.flashscore.pl/druzyna/polonia-bytom/vRn3UqXP/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1767,5 +1842,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-09-19 04:06"
+    "updated": "2026-09-19 10:48"
 }
