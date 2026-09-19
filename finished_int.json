@@ -1,6 +1,214 @@
 {
     "matches": [
         {
+            "home": "B. Moenchengladbach",
+            "away": "1. FSV Mainz 05",
+            "score": "3:4",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_YgibJeK7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/mainz-EuakNmc1/?mid=YgibJeK7",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Eintracht Frankfurt",
+            "away": "SC Freiburg",
+            "score": "2:2",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_0tgjLHke",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/frankfurt-8vndvXTk/freiburg-fiEQZ7C7/?mid=0tgjLHke",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Hamburger SV",
+            "away": "1. FC Koeln",
+            "score": "2:1",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_00qpsaCE",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hamburger-v9k3aY5F/koln-WG9pOTse/?mid=00qpsaCE",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Werder Brema",
+            "away": "FC Augsburg",
+            "score": "3:2",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_8QnhuwsR",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/bremen-Ig1f1fy3/?mid=8QnhuwsR",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Bayern Monachium",
             "away": "Union Berlin",
             "score": "7:0",
@@ -585,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_pW7I1Wh5",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hamburger-v9k3aY5F/mainz-EuakNmc1/?mid=pW7I1Wh5",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "FC Schalke 04",
@@ -637,44 +808,7 @@
             "stage": "Koniec",
             "match_id": "g_1_Q99YclhU",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/schalke-0Ija0Ej9/?mid=Q99YclhU",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "B. Moenchengladbach",
@@ -689,44 +823,7 @@
             "stage": "Koniec",
             "match_id": "g_1_x64A3hOh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/elversberg-6in2Eknb/?mid=x64A3hOh",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Bayer Leverkusen",
@@ -741,44 +838,7 @@
             "stage": "Koniec",
             "match_id": "g_1_GdRhoB8O",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/leverkusen-4jcj2zMd/union-berlin-pzHW4oaE/?mid=GdRhoB8O",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Paderborn",
@@ -974,6 +1034,58 @@
             "match_id": "g_1_xrtCcyAe",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
+        },
+        {
+            "home": "Osasuna",
+            "away": "Vallecano",
+            "score": "1:1",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_UcUy9cO0",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/osasuna-ETdxjU8a/vallecano-8bcjFy6O/?mid=UcUy9cO0",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
         },
         {
             "home": "Espanyol",
@@ -1716,44 +1828,7 @@
             "stage": "Koniec",
             "match_id": "g_1_r37Zj4oI",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/vallecano-8bcjFy6O/?mid=r37Zj4oI",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Ath. Bilbao",
@@ -2431,5 +2506,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-19 11:05"
+    "updated": "2026-09-19 16:09"
 }
