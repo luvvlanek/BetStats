@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Lech Poznań",
-            "away": "Radomiak Radom",
-            "datetime": "18:15",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "rkMfE9qg",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/radomiak-radom-zD5nYhAT/?mid=rkMfE9qg",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 14,
-                "btts_pct": 50,
-                "over15_pct": 79,
-                "over25_pct": 79,
-                "over35_pct": 50,
-                "avg_goals_scored": 2.43,
-                "avg_goals_conceded": 1.0,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "W",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 67,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.07,
-                "avg_goals_conceded": 1.93,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "D",
-                    "W",
-                    "W",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Wieczysta Kraków",
             "away": "Wisła Płock",
             "datetime": "09.10. 16:00",
@@ -117,12 +42,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 80,
-                "over25_pct": 53,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 1.13,
+                "btts_pct": 53,
+                "over15_pct": 93,
+                "over25_pct": 67,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.8,
+                "avg_goals_conceded": 1.2,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -135,8 +60,8 @@
                     "W",
                     "W",
                     "D",
-                    "L",
-                    "W"
+                    "W",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -346,7 +271,7 @@
                 "over15_pct": 79,
                 "over25_pct": 79,
                 "over35_pct": 50,
-                "avg_goals_scored": 2.43,
+                "avg_goals_scored": 2.57,
                 "avg_goals_conceded": 1.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -357,9 +282,9 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "L",
-                    "L",
                     "W",
+                    "L",
+                    "L",
                     "W",
                     "W"
                 ],
@@ -389,12 +314,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 13,
+                "btts_pct": 67,
+                "over15_pct": 87,
+                "over25_pct": 67,
+                "over35_pct": 20,
                 "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 1.07,
+                "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -406,9 +331,9 @@
                 "form": [
                     "L",
                     "L",
-                    "W",
                     "L",
-                    "W"
+                    "W",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -629,10 +554,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "D",
                     "W",
                     "L",
-                    "D",
                     "D"
                 ],
                 "corners_per_match": [],
@@ -642,12 +567,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 80,
-                "over25_pct": 53,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 1.13,
+                "btts_pct": 53,
+                "over15_pct": 93,
+                "over25_pct": 67,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.8,
+                "avg_goals_conceded": 1.2,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -660,8 +585,8 @@
                     "W",
                     "W",
                     "D",
-                    "L",
-                    "W"
+                    "W",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -693,8 +618,8 @@
                 "over15_pct": 80,
                 "over25_pct": 67,
                 "over35_pct": 40,
-                "avg_goals_scored": 1.07,
-                "avg_goals_conceded": 1.93,
+                "avg_goals_scored": 1.0,
+                "avg_goals_conceded": 2.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -705,10 +630,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
+                    "L",
                     "D",
                     "W",
-                    "W",
-                    "D"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -751,25 +676,25 @@
             }
         },
         {
-            "home": "Jagiellonia Białystok",
-            "away": "Legia Warszawa",
-            "datetime": "13",
-            "status": "live",
+            "home": "GKS Katowice",
+            "away": "Wieczysta Kraków",
+            "datetime": "12.10. 18:30",
+            "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "MuqwdSTO",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/legia-warszawa-K6kUepBs/?mid=MuqwdSTO",
+            "match_id": "zXjTts6U",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/ks-wieczysta-krakow-ImhQf1z6/?mid=zXjTts6U",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 13,
-                "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 1.07,
+                "btts_pct": 67,
+                "over15_pct": 93,
+                "over25_pct": 73,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.87,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -779,10 +704,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "L",
                     "W",
-                    "L",
                     "W"
                 ],
                 "corners_per_match": [],
@@ -792,12 +717,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 87,
-                "over25_pct": 47,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.07,
+                "btts_pct": 73,
+                "over15_pct": 93,
+                "over25_pct": 67,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 2.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -808,10 +733,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "D",
-                    "W",
                     "L",
                     "D",
-                    "D"
+                    "L",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -841,9 +766,9 @@
                 "total_matches": 15,
                 "btts_pct": 67,
                 "over15_pct": 87,
-                "over25_pct": 47,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.47,
+                "over25_pct": 40,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.33,
                 "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -856,9 +781,9 @@
                 "form": [
                     "D",
                     "D",
+                    "D",
                     "L",
-                    "L",
-                    "D"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1066,10 +991,10 @@
                 "total_matches": 14,
                 "btts_pct": 43,
                 "over15_pct": 71,
-                "over25_pct": 64,
+                "over25_pct": 57,
                 "over35_pct": 36,
                 "avg_goals_scored": 1.36,
-                "avg_goals_conceded": 1.36,
+                "avg_goals_conceded": 1.29,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1079,11 +1004,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "D",
                     "W",
                     "L",
                     "L",
-                    "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1574,81 +1499,6 @@
                 "draw": null,
                 "away": null
             }
-        },
-        {
-            "home": "Podbeskidzie B-B",
-            "away": "Unia Skierniewice",
-            "datetime": "19",
-            "status": "live",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "ITi567E4",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/podbeskidzie-b-b-zBPYeTRl/unia-skierniewice-l42F3w54/?mid=ITi567E4",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 87,
-                "over25_pct": 47,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.4,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "D",
-                    "L",
-                    "L",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 43,
-                "over15_pct": 71,
-                "over25_pct": 64,
-                "over35_pct": 36,
-                "avg_goals_scored": 1.36,
-                "avg_goals_conceded": 1.36,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "L",
-                    "W",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
         }
     ],
     "standings": [
@@ -1661,23 +1511,23 @@
         },
         {
             "team": "Legia Warszawa",
-            "points": "17",
+            "points": "19",
             "rank": 2,
             "url": "https://www.flashscore.pl/druzyna/legia-warszawa/K6kUepBs/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Wisła Kraków",
-            "points": "17",
+            "team": "Lech Poznań",
+            "points": "19",
             "rank": 3,
-            "url": "https://www.flashscore.pl/druzyna/wisla-krakow/rob20Q2Q/",
+            "url": "https://www.flashscore.pl/druzyna/lech-poznan/OpNH7Ouf/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Lech Poznań",
-            "points": "16",
+            "team": "Wisła Kraków",
+            "points": "17",
             "rank": 4,
-            "url": "https://www.flashscore.pl/druzyna/lech-poznan/OpNH7Ouf/",
+            "url": "https://www.flashscore.pl/druzyna/wisla-krakow/rob20Q2Q/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1709,17 +1559,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Jagiellonia Białystok",
-            "points": "13",
+            "team": "GKS Katowice",
+            "points": "12",
             "rank": 9,
-            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
+            "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "GKS Katowice",
+            "team": "Jagiellonia Białystok",
             "points": "12",
             "rank": 10,
-            "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
+            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1917,5 +1767,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-09-20 15:58"
+    "updated": "2026-09-20 20:47"
 }
