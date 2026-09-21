@@ -1,18 +1,18 @@
 {
     "matches": [
         {
-            "home": "Bayer Leverkusen",
-            "away": "RB Lipsk",
-            "score": "2:0",
-            "datetime": "Koniec",
+            "home": "Paderborn",
+            "away": "TSG Hoffenheim",
+            "score": "3:1",
+            "datetime": "20.09. 17:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_fqjrNwLr",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/leverkusen-4jcj2zMd/rb-leipzig-KbS1suSm/?mid=fqjrNwLr",
+            "match_id": "g_1_xOoVXfZ0",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hoffenheim-hQAtP9Sl/paderborn-G2Op923t/?mid=xOoVXfZ0",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -56,7 +56,7 @@
             "home": "FC Schalke 04",
             "away": "Elversberg",
             "score": "0:0",
-            "datetime": "Koniec",
+            "datetime": "20.09. 15:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -105,18 +105,18 @@
             }
         },
         {
-            "home": "Paderborn",
-            "away": "TSG Hoffenheim",
-            "score": "3:1",
-            "datetime": "Koniec",
+            "home": "Bayer Leverkusen",
+            "away": "RB Lipsk",
+            "score": "2:0",
+            "datetime": "20.09. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_xOoVXfZ0",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hoffenheim-hQAtP9Sl/paderborn-G2Op923t/?mid=xOoVXfZ0",
+            "match_id": "g_1_fqjrNwLr",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/leverkusen-4jcj2zMd/rb-leipzig-KbS1suSm/?mid=fqjrNwLr",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1096,70 +1096,18 @@
             "match_stats": null
         },
         {
-            "home": "Getafe",
-            "away": "Malaga",
-            "score": "1:0",
-            "datetime": "Koniec",
+            "home": "Valencia",
+            "away": "Real Sociedad",
+            "score": "2:3",
+            "datetime": "20.09. 19:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_dWGUAJgl",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/malaga-25tIqYiJ/?mid=dWGUAJgl",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "Atl. Madryt",
-            "away": "Real Madryt",
-            "score": "2:1",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_hGycdKve",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/real-madryt-W8mj7MDD/?mid=hGycdKve",
+            "match_id": "g_1_UHKVUvoK",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-sociedad-jNvak2f3/valencia-CQeaytrD/?mid=UHKVUvoK",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1203,7 +1151,7 @@
             "home": "A Coruna",
             "away": "Betis",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "20.09. 16:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1255,7 +1203,7 @@
             "home": "Villarreal",
             "away": "Levante",
             "score": "3:1",
-            "datetime": "Koniec",
+            "datetime": "20.09. 16:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1264,6 +1212,110 @@
             "stage": "Koniec",
             "match_id": "g_1_00B1PI8s",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/villarreal-lUatW5jE/?mid=00B1PI8s",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Atl. Madryt",
+            "away": "Real Madryt",
+            "score": "2:1",
+            "datetime": "20.09. 14:15",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_hGycdKve",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/real-madryt-W8mj7MDD/?mid=hGycdKve",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Getafe",
+            "away": "Malaga",
+            "score": "1:0",
+            "datetime": "20.09. 12:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_dWGUAJgl",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/malaga-25tIqYiJ/?mid=dWGUAJgl",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1836,44 +1888,7 @@
             "stage": "Koniec",
             "match_id": "g_1_jmTy4Bt4",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/real-madryt-W8mj7MDD/?mid=jmTy4Bt4",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Alaves",
@@ -2671,5 +2686,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-09-20 21:04"
+    "updated": "2026-09-21 04:37"
 }

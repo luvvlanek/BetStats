@@ -1216,10 +1216,10 @@
                 "total_matches": 15,
                 "btts_pct": 73,
                 "over15_pct": 80,
-                "over25_pct": 67,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.4,
-                "avg_goals_conceded": 1.53,
+                "over25_pct": 73,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.6,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1229,11 +1229,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "L",
                     "W",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1270,9 +1270,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.9,
+                "home": 1.83,
                 "draw": 3.5,
-                "away": 3.75
+                "away": 3.9
             }
         },
         {
@@ -1498,81 +1498,6 @@
                 "home": 2.63,
                 "draw": 3.25,
                 "away": 2.63
-            }
-        },
-        {
-            "home": "Valencia",
-            "away": "Real Sociedad",
-            "datetime": "90+7",
-            "status": "live",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "UHKVUvoK",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-sociedad-jNvak2f3/valencia-CQeaytrD/?mid=UHKVUvoK",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 67,
-                "over25_pct": 53,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 1.53,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "L",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 80,
-                "over25_pct": 67,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.4,
-                "avg_goals_conceded": 1.53,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "W",
-                    "D",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 3,
-                "draw": 3.3,
-                "away": 2.45
             }
         }
     ],
@@ -1856,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-09-20 21:04"
+    "updated": "2026-09-21 04:37"
 }
