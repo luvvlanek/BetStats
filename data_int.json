@@ -568,10 +568,10 @@
             "away_stats": {
                 "total_matches": 15,
                 "btts_pct": 47,
-                "over15_pct": 87,
-                "over25_pct": 87,
+                "over15_pct": 93,
+                "over25_pct": 93,
                 "over35_pct": 67,
-                "avg_goals_scored": 2.93,
+                "avg_goals_scored": 3.13,
                 "avg_goals_conceded": 1.6,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -582,11 +582,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "L",
                     "L",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -642,12 +642,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 33,
-                "over15_pct": 73,
-                "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 1.33,
+                "btts_pct": 40,
+                "over15_pct": 80,
+                "over25_pct": 73,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.93,
+                "avg_goals_conceded": 1.47,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -657,11 +657,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "D",
                     "W",
                     "D",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1420,8 +1420,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.95,
-                "draw": 3.8,
+                "home": 2.05,
+                "draw": 3.6,
                 "away": 3.4
             }
         },
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-09-24 17:19"
+    "updated": "2026-09-24 21:51"
 }
