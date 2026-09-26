@@ -71,8 +71,8 @@
             "h2h": [],
             "odds": {
                 "home": 1.31,
-                "draw": 5.5,
-                "away": 7
+                "draw": 5.7,
+                "away": 8
             }
         },
         {
@@ -390,10 +390,10 @@
             "home_stats": {
                 "total_matches": 15,
                 "btts_pct": 73,
-                "over15_pct": 100,
-                "over25_pct": 80,
-                "over35_pct": 67,
-                "avg_goals_scored": 2.33,
+                "over15_pct": 93,
+                "over25_pct": 73,
+                "over35_pct": 60,
+                "avg_goals_scored": 2.13,
                 "avg_goals_conceded": 2.47,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -404,11 +404,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "L",
                     "L",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-09-26 16:36"
+    "updated": "2026-09-26 21:21"
 }
