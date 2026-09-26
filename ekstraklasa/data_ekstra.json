@@ -417,12 +417,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
+                "btts_pct": 53,
                 "over15_pct": 73,
                 "over25_pct": 47,
                 "over35_pct": 40,
-                "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 1.13,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -435,7 +435,7 @@
                     "D",
                     "D",
                     "D",
-                    "L",
+                    "D",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -539,12 +539,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 87,
-                "over25_pct": 47,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.07,
+                "btts_pct": 73,
+                "over15_pct": 93,
+                "over25_pct": 53,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.93,
+                "avg_goals_conceded": 1.2,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -555,10 +555,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "W",
+                    "W",
                     "D",
                     "W",
-                    "L",
-                    "D"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1767,5 +1767,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-09-26 11:18"
+    "updated": "2026-09-26 16:19"
 }
