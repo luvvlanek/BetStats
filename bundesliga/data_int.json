@@ -239,12 +239,12 @@
             "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 80,
+                "btts_pct": 53,
+                "over15_pct": 73,
                 "over25_pct": 60,
                 "over35_pct": 47,
                 "avg_goals_scored": 1.6,
-                "avg_goals_conceded": 1.47,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -255,10 +255,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "W",
+                    "W",
                     "L",
                     "L",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-09-30 22:32"
+    "updated": "2026-10-01 05:29"
 }
