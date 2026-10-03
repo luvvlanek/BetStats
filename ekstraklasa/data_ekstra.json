@@ -166,10 +166,10 @@
                 "total_matches": 14,
                 "btts_pct": 57,
                 "over15_pct": 71,
-                "over25_pct": 50,
-                "over35_pct": 29,
-                "avg_goals_scored": 1.21,
-                "avg_goals_conceded": 1.29,
+                "over25_pct": 57,
+                "over35_pct": 36,
+                "avg_goals_scored": 1.29,
+                "avg_goals_conceded": 1.43,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -183,7 +183,7 @@
                     "L",
                     "L",
                     "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -271,8 +271,8 @@
                 "over15_pct": 79,
                 "over25_pct": 79,
                 "over35_pct": 50,
-                "avg_goals_scored": 2.57,
-                "avg_goals_conceded": 1.0,
+                "avg_goals_scored": 2.43,
+                "avg_goals_conceded": 1.07,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -282,10 +282,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "D",
                     "W",
                     "L",
                     "L",
-                    "W",
                     "W"
                 ],
                 "corners_per_match": [],
@@ -314,12 +314,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 87,
-                "over25_pct": 67,
+                "btts_pct": 67,
+                "over15_pct": 93,
+                "over25_pct": 73,
                 "over35_pct": 27,
                 "avg_goals_scored": 1.87,
-                "avg_goals_conceded": 1.2,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -329,11 +329,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "L",
                     "W",
                     "L",
                     "L",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -492,12 +492,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 40,
+                "btts_pct": 47,
                 "over15_pct": 67,
                 "over25_pct": 27,
                 "over35_pct": 13,
-                "avg_goals_scored": 1.2,
-                "avg_goals_conceded": 0.8,
+                "avg_goals_scored": 1.0,
+                "avg_goals_conceded": 1.13,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -507,11 +507,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "L",
                     "W",
                     "L",
                     "W",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -543,7 +543,7 @@
                 "over15_pct": 93,
                 "over25_pct": 53,
                 "over35_pct": 40,
-                "avg_goals_scored": 1.93,
+                "avg_goals_scored": 2.07,
                 "avg_goals_conceded": 1.2,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -556,9 +556,9 @@
                 "form": [
                     "W",
                     "W",
-                    "D",
                     "W",
-                    "L"
+                    "D",
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -919,7 +919,7 @@
                 "over25_pct": 47,
                 "over35_pct": 20,
                 "avg_goals_scored": 1.2,
-                "avg_goals_conceded": 1.33,
+                "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -930,9 +930,9 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
+                    "L",
                     "D",
                     "D",
-                    "W",
                     "W"
                 ],
                 "corners_per_match": [],
@@ -1017,12 +1017,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 73,
+                "btts_pct": 80,
                 "over15_pct": 93,
                 "over25_pct": 67,
-                "over35_pct": 20,
+                "over35_pct": 27,
                 "avg_goals_scored": 1.87,
-                "avg_goals_conceded": 1.07,
+                "avg_goals_conceded": 1.2,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1036,7 +1036,7 @@
                     "W",
                     "W",
                     "W",
-                    "D"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1096,8 +1096,8 @@
                 "over15_pct": 80,
                 "over25_pct": 80,
                 "over35_pct": 47,
-                "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 1.93,
+                "avg_goals_scored": 1.73,
+                "avg_goals_conceded": 1.87,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1109,9 +1109,9 @@
                 "form": [
                     "W",
                     "W",
+                    "W",
                     "L",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1171,7 +1171,7 @@
                 "over15_pct": 73,
                 "over25_pct": 33,
                 "over35_pct": 27,
-                "avg_goals_scored": 1.4,
+                "avg_goals_scored": 1.33,
                 "avg_goals_conceded": 1.2,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -1182,11 +1182,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "L",
                     "D",
                     "D",
                     "W",
-                    "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1395,9 +1395,9 @@
                 "btts_pct": 67,
                 "over15_pct": 87,
                 "over25_pct": 87,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 2.07,
+                "over35_pct": 53,
+                "avg_goals_scored": 1.8,
+                "avg_goals_conceded": 2.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1409,8 +1409,8 @@
                 "form": [
                     "W",
                     "W",
-                    "L",
                     "W",
+                    "L",
                     "W"
                 ],
                 "corners_per_match": [],
@@ -1767,5 +1767,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-10-03 11:34"
+    "updated": "2026-10-03 16:12"
 }
