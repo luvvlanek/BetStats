@@ -342,12 +342,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 73,
+                "btts_pct": 67,
                 "over15_pct": 100,
-                "over25_pct": 87,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 2.07,
+                "over25_pct": 80,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.6,
+                "avg_goals_conceded": 1.87,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -358,10 +358,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "W",
+                    "W",
                     "L",
                     "L",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -820,9 +820,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.65,
-                "draw": 3.4,
-                "away": 2.6
+                "home": 2.75,
+                "draw": 3.1,
+                "away": 2.65
             }
         },
         {
@@ -1046,8 +1046,8 @@
             "h2h": [],
             "odds": {
                 "home": 1.05,
-                "draw": 16,
-                "away": 19
+                "draw": 15,
+                "away": 20
             }
         },
         {
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-10-04 12:31"
+    "updated": "2026-10-04 17:20"
 }
