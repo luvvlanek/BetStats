@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Borussia Dortmund",
-            "away": "Werder Brema",
-            "datetime": "18:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "plkwWY3D",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/dortmund-nP1i5US1/?mid=plkwWY3D",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 80,
-                "over25_pct": 67,
-                "over35_pct": 47,
-                "avg_goals_scored": 2.2,
-                "avg_goals_conceded": 1.07,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "W",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 87,
-                "over25_pct": 60,
-                "over35_pct": 53,
-                "avg_goals_scored": 1.87,
-                "avg_goals_conceded": 1.87,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "D",
-                    "W",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.33,
-                "draw": 5.5,
-                "away": 8
-            }
-        },
-        {
             "home": "1. FSV Mainz 05",
             "away": "Bayer Leverkusen",
             "datetime": "10.10. 13:30",
@@ -220,9 +145,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 11,
+                "home": 12,
                 "draw": 8.5,
-                "away": 1.18
+                "away": 1.17
             }
         },
         {
@@ -297,7 +222,7 @@
             "odds": {
                 "home": 5,
                 "draw": 4.5,
-                "away": 1.57
+                "away": 1.55
             }
         },
         {
@@ -595,9 +520,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2,
-                "draw": 3.9,
-                "away": 3.3
+                "home": 2.05,
+                "draw": 3.8,
+                "away": 3.2
             }
         },
         {
@@ -751,25 +676,25 @@
             }
         },
         {
-            "home": "Malaga",
-            "away": "Espanyol",
-            "datetime": "19:00",
+            "home": "Elversberg",
+            "away": "FC Augsburg",
+            "datetime": "17.10. 13:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "dUikzzNa",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/malaga-25tIqYiJ/?mid=dUikzzNa",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
+            "match_id": "hhNdDNhA",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/elversberg-6in2Eknb/?mid=hhNdDNhA",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 53,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.2,
-                "avg_goals_conceded": 1.67,
+                "btts_pct": 73,
+                "over15_pct": 87,
+                "over25_pct": 73,
+                "over35_pct": 47,
+                "avg_goals_scored": 2.27,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -780,10 +705,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
+                    "D",
                     "L",
-                    "D",
-                    "D",
-                    "L"
+                    "W",
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -792,12 +717,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 73,
+                "btts_pct": 67,
                 "over15_pct": 100,
-                "over25_pct": 73,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.4,
+                "over25_pct": 80,
+                "over35_pct": 73,
+                "avg_goals_scored": 2.87,
+                "avg_goals_conceded": 1.8,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -807,11 +732,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "L",
-                    "L",
-                    "W",
                     "D",
-                    "L"
+                    "L",
+                    "D",
+                    "W",
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -820,8 +745,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.9,
-                "draw": 3.2,
+                "home": 2.45,
+                "draw": 3.75,
                 "away": 2.55
             }
         },
@@ -1497,14 +1422,89 @@
             "odds": {
                 "home": 2.75,
                 "draw": 3.25,
-                "away": 2.63
+                "away": 2.7
+            }
+        },
+        {
+            "home": "A Coruna",
+            "away": "Levante",
+            "datetime": "16.10. 19:00",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "6HK9SrLj",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/levante-G8FL0ShI/?mid=6HK9SrLj",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 67,
+                "over25_pct": 33,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.13,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "D",
+                    "D",
+                    "L",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 67,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.47,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "D",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.1,
+                "draw": 3.4,
+                "away": 3.4
             }
         }
     ],
     "standings": [
         {
             "team": "Borussia Dortmund",
-            "points": "12",
+            "points": "13",
             "rank": 1,
             "url": "https://www.flashscore.pl/druzyna/dortmund/nP1i5US1/",
             "league_id": "bundesliga"
@@ -1524,38 +1524,38 @@
             "league_id": "bundesliga"
         },
         {
+            "team": "Werder Brema",
+            "points": "8",
+            "rank": 4,
+            "url": "https://www.flashscore.pl/druzyna/bremen/Ig1f1fy3/",
+            "league_id": "bundesliga"
+        },
+        {
             "team": "FC Augsburg",
             "points": "7",
-            "rank": 4,
+            "rank": 5,
             "url": "https://www.flashscore.pl/druzyna/augsburg/fTVNku3I/",
             "league_id": "bundesliga"
         },
         {
             "team": "Bayer Leverkusen",
             "points": "7",
-            "rank": 5,
+            "rank": 6,
             "url": "https://www.flashscore.pl/druzyna/leverkusen/4jcj2zMd/",
             "league_id": "bundesliga"
         },
         {
             "team": "1. FSV Mainz 05",
             "points": "7",
-            "rank": 6,
+            "rank": 7,
             "url": "https://www.flashscore.pl/druzyna/mainz/EuakNmc1/",
             "league_id": "bundesliga"
         },
         {
             "team": "Elversberg",
             "points": "7",
-            "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/elversberg/6in2Eknb/",
-            "league_id": "bundesliga"
-        },
-        {
-            "team": "Werder Brema",
-            "points": "7",
             "rank": 8,
-            "url": "https://www.flashscore.pl/druzyna/bremen/Ig1f1fy3/",
+            "url": "https://www.flashscore.pl/druzyna/elversberg/6in2Eknb/",
             "league_id": "bundesliga"
         },
         {
@@ -1699,38 +1699,38 @@
             "league_id": "laliga"
         },
         {
-            "team": "Getafe",
+            "team": "Espanyol",
             "points": "8",
             "rank": 11,
+            "url": "https://www.flashscore.pl/druzyna/espanyol/QFfPdh1J/",
+            "league_id": "laliga"
+        },
+        {
+            "team": "Getafe",
+            "points": "8",
+            "rank": 12,
             "url": "https://www.flashscore.pl/druzyna/getafe/dboeiWOt/",
             "league_id": "laliga"
         },
         {
             "team": "Vallecano",
             "points": "8",
-            "rank": 12,
+            "rank": 13,
             "url": "https://www.flashscore.pl/druzyna/vallecano/8bcjFy6O/",
             "league_id": "laliga"
         },
         {
             "team": "Osasuna",
             "points": "8",
-            "rank": 13,
+            "rank": 14,
             "url": "https://www.flashscore.pl/druzyna/osasuna/ETdxjU8a/",
             "league_id": "laliga"
         },
         {
             "team": "Celta Vigo",
             "points": "7",
-            "rank": 14,
-            "url": "https://www.flashscore.pl/druzyna/celta-vigo/8pvUZFhf/",
-            "league_id": "laliga"
-        },
-        {
-            "team": "Espanyol",
-            "points": "7",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/espanyol/QFfPdh1J/",
+            "url": "https://www.flashscore.pl/druzyna/celta-vigo/8pvUZFhf/",
             "league_id": "laliga"
         },
         {
@@ -1755,17 +1755,17 @@
             "league_id": "laliga"
         },
         {
-            "team": "Valencia",
+            "team": "Malaga",
             "points": "4",
             "rank": 19,
-            "url": "https://www.flashscore.pl/druzyna/valencia/CQeaytrD/",
+            "url": "https://www.flashscore.pl/druzyna/malaga/25tIqYiJ/",
             "league_id": "laliga"
         },
         {
-            "team": "Malaga",
-            "points": "3",
+            "team": "Valencia",
+            "points": "4",
             "rank": 20,
-            "url": "https://www.flashscore.pl/druzyna/malaga/25tIqYiJ/",
+            "url": "https://www.flashscore.pl/druzyna/valencia/CQeaytrD/",
             "league_id": "laliga"
         }
     ],
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-10-09 13:24"
+    "updated": "2026-10-09 22:59"
 }

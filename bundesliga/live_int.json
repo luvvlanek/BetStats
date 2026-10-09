@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Borussia Dortmund_Werder Brema": {
+            "home": "Borussia Dortmund",
+            "away": "Werder Brema",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_plkwWY3D",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/dortmund-nP1i5US1/?mid=plkwWY3D",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Paderborn_TSG Hoffenheim": {
             "home": "Paderborn",
             "away": "TSG Hoffenheim",
@@ -741,44 +793,7 @@
             "league_flag": "🇩🇪",
             "match_id": "g_1_Q3IOHrq3",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/leverkusen-4jcj2zMd/?mid=Q3IOHrq3",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "SC Freiburg_B. Moenchengladbach": {
             "home": "SC Freiburg",
@@ -1094,6 +1109,58 @@
             "match_id": "g_1_xrtCcyAe",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
+        },
+        "Malaga_Espanyol": {
+            "home": "Malaga",
+            "away": "Espanyol",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_dUikzzNa",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/malaga-25tIqYiJ/?mid=dUikzzNa",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
         },
         "Valencia_Real Sociedad": {
             "home": "Valencia",
@@ -1836,44 +1903,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_YZpF3sVN",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/osasuna-ETdxjU8a/?mid=YZpF3sVN",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Elche_Real Madryt": {
             "home": "Elche",
@@ -2686,5 +2716,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-09 13:24:15"
+    "updated": "2026-10-09 22:59:35"
 }
