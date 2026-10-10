@@ -1,18 +1,18 @@
 {
     "matches": {
-        "Wieczysta Kraków_Wisła Płock": {
-            "home": "Wieczysta Kraków",
-            "away": "Wisła Płock",
+        "Raków Częstochowa_GKS Katowice": {
+            "home": "Raków Częstochowa",
+            "away": "GKS Katowice",
             "is_live": false,
             "is_finished": true,
-            "score": "3:0",
+            "score": "1:4",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "09.10. 18:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_jFP2CmE5",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/wisla-plock-QoZYVU3E/?mid=jFP2CmE5",
+            "match_id": "g_1_tn3rPQcB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/rakow-czestochowa-SQOrbYim/?mid=tn3rPQcB",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -52,19 +52,19 @@
                 }
             }
         },
-        "Raków Częstochowa_GKS Katowice": {
-            "home": "Raków Częstochowa",
-            "away": "GKS Katowice",
+        "Wieczysta Kraków_Wisła Płock": {
+            "home": "Wieczysta Kraków",
+            "away": "Wisła Płock",
             "is_live": false,
             "is_finished": true,
-            "score": "1:4",
+            "score": "3:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "09.10. 16:00",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_tn3rPQcB",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/rakow-czestochowa-SQOrbYim/?mid=tn3rPQcB",
+            "match_id": "g_1_jFP2CmE5",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/wisla-plock-QoZYVU3E/?mid=jFP2CmE5",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1762,7 +1762,7 @@
             "is_finished": true,
             "score": "1:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "09.10. 18:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -3526,5 +3526,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-09 22:41:12"
+    "updated": "2026-10-10 05:17:59"
 }
