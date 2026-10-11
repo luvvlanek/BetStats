@@ -1,5 +1,57 @@
 {
     "matches": {
+        "RB Lipsk_Eintracht Frankfurt": {
+            "home": "RB Lipsk",
+            "away": "Eintracht Frankfurt",
+            "is_live": false,
+            "is_finished": true,
+            "score": "6:0",
+            "stage": "Koniec",
+            "datetime": "10.10. 16:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_xrxPgxdK",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/frankfurt-8vndvXTk/rb-leipzig-KbS1suSm/?mid=xrxPgxdK",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "1. FSV Mainz 05_Bayer Leverkusen": {
             "home": "1. FSV Mainz 05",
             "away": "Bayer Leverkusen",
@@ -7,7 +59,7 @@
             "is_finished": true,
             "score": "3:4",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "10.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -59,7 +111,7 @@
             "is_finished": true,
             "score": "2:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "10.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -111,7 +163,7 @@
             "is_finished": true,
             "score": "0:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "10.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -163,7 +215,7 @@
             "is_finished": true,
             "score": "2:3",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "10.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -215,64 +267,12 @@
             "is_finished": true,
             "score": "1:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "10.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "match_id": "g_1_KtlUkTfn",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elversberg-6in2Eknb/union-berlin-pzHW4oaE/?mid=KtlUkTfn",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        "RB Lipsk_Eintracht Frankfurt": {
-            "home": "RB Lipsk",
-            "away": "Eintracht Frankfurt",
-            "is_live": false,
-            "is_finished": true,
-            "score": "6:0",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "match_id": "g_1_xrxPgxdK",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/frankfurt-8vndvXTk/rb-leipzig-KbS1suSm/?mid=xrxPgxdK",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1200,71 +1200,19 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
-        "Vallecano_Ath. Bilbao": {
-            "home": "Vallecano",
-            "away": "Ath. Bilbao",
+        "Real Madryt_Villarreal": {
+            "home": "Real Madryt",
+            "away": "Villarreal",
             "is_live": false,
             "is_finished": true,
-            "score": "0:0",
+            "score": "1:0",
             "stage": "Koniec",
-            "datetime": "Anulowane",
+            "datetime": "10.10. 19:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_zsIUF5yo",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/vallecano-8bcjFy6O/?mid=zsIUF5yo",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        "Alaves_Atl. Madryt": {
-            "home": "Alaves",
-            "away": "Atl. Madryt",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:2",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_6cE9Ndwf",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/atl-madryt-jaarqpLQ/?mid=6cE9Ndwf",
+            "match_id": "g_1_2mAGw9Ti",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/villarreal-lUatW5jE/?mid=2mAGw9Ti",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1311,7 +1259,7 @@
             "is_finished": true,
             "score": "3:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "10.10. 16:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1356,19 +1304,71 @@
                 }
             }
         },
-        "Real Madryt_Villarreal": {
-            "home": "Real Madryt",
-            "away": "Villarreal",
+        "Alaves_Atl. Madryt": {
+            "home": "Alaves",
+            "away": "Atl. Madryt",
             "is_live": false,
             "is_finished": true,
-            "score": "1:0",
+            "score": "1:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "10.10. 14:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_2mAGw9Ti",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/villarreal-lUatW5jE/?mid=2mAGw9Ti",
+            "match_id": "g_1_6cE9Ndwf",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/atl-madryt-jaarqpLQ/?mid=6cE9Ndwf",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Vallecano_Ath. Bilbao": {
+            "home": "Vallecano",
+            "away": "Ath. Bilbao",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "10.10. 12:00\nAnulowane",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_zsIUF5yo",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/vallecano-8bcjFy6O/?mid=zsIUF5yo",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2866,5 +2866,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-10 21:53:50"
+    "updated": "2026-10-11 05:25:05"
 }
