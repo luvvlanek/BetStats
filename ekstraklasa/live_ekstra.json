@@ -1800,6 +1800,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Stal Mielec_Warta Poznań": {
+            "home": "Stal Mielec",
+            "away": "Warta Poznań",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_rXSr8u76",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/stal-mielec-pxXiDZkQ/warta-poznan-CrVUWAl8/?mid=rXSr8u76",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Arka Gdynia_Polonia Warszawa": {
             "home": "Arka Gdynia",
             "away": "Polonia Warszawa",
@@ -2541,44 +2593,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_pGgc8Tqh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/stal-rzeszow-IkpY1q92/?mid=pGgc8Tqh",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Lechia Gdańsk_Miedź Legnica": {
             "home": "Lechia Gdańsk",
@@ -3616,5 +3631,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-11 05:07:09"
+    "updated": "2026-10-11 12:38:15"
 }

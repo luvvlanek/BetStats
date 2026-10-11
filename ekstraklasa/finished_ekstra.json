@@ -1801,6 +1801,58 @@
             "match_stats": null
         },
         {
+            "home": "Stal Mielec",
+            "away": "Warta Poznań",
+            "score": "2:1",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_rXSr8u76",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/stal-mielec-pxXiDZkQ/warta-poznan-CrVUWAl8/?mid=rXSr8u76",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Arka Gdynia",
             "away": "Polonia Warszawa",
             "score": "1:2",
@@ -2541,44 +2593,7 @@
             "stage": "Koniec",
             "match_id": "g_1_pGgc8Tqh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/stal-rzeszow-IkpY1q92/?mid=pGgc8Tqh",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Lechia Gdańsk",
@@ -3616,5 +3631,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-11 05:07"
+    "updated": "2026-10-11 12:38"
 }
