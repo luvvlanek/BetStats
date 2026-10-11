@@ -1,156 +1,6 @@
 {
     "matches": [
         {
-            "home": "1. FC Koeln",
-            "away": "B. Moenchengladbach",
-            "datetime": "13:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "hfnxl7Pb",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/koln-WG9pOTse/?mid=hfnxl7Pb",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 93,
-                "over15_pct": 100,
-                "over25_pct": 87,
-                "over35_pct": 60,
-                "avg_goals_scored": 2.07,
-                "avg_goals_conceded": 1.93,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "L",
-                    "D",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 100,
-                "over25_pct": 93,
-                "over35_pct": 67,
-                "avg_goals_scored": 3.13,
-                "avg_goals_conceded": 1.67,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "W",
-                    "L",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.95,
-                "draw": 3.7,
-                "away": 3.5
-            }
-        },
-        {
-            "home": "SC Freiburg",
-            "away": "FC Schalke 04",
-            "datetime": "15:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "ENV2nflf",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/freiburg-fiEQZ7C7/schalke-0Ija0Ej9/?mid=ENV2nflf",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 93,
-                "over25_pct": 80,
-                "over35_pct": 60,
-                "avg_goals_scored": 2.8,
-                "avg_goals_conceded": 1.07,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "D",
-                    "W",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 40,
-                "over15_pct": 73,
-                "over25_pct": 67,
-                "over35_pct": 40,
-                "avg_goals_scored": 2.0,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "D",
-                    "W",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.67,
-                "draw": 3.9,
-                "away": 4.9
-            }
-        },
-        {
             "home": "Eintracht Frankfurt",
             "away": "1. FC Koeln",
             "datetime": "16.10. 18:30",
@@ -195,8 +45,8 @@
                 "btts_pct": 93,
                 "over15_pct": 100,
                 "over25_pct": 87,
-                "over35_pct": 60,
-                "avg_goals_scored": 2.07,
+                "over35_pct": 53,
+                "avg_goals_scored": 2.0,
                 "avg_goals_conceded": 1.93,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -207,11 +57,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "D",
                     "L",
                     "D",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -314,12 +164,12 @@
             "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 40,
-                "over15_pct": 73,
-                "over25_pct": 67,
+                "btts_pct": 47,
+                "over15_pct": 80,
+                "over25_pct": 73,
                 "over35_pct": 40,
                 "avg_goals_scored": 2.0,
-                "avg_goals_conceded": 1.27,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -329,11 +179,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "L",
                     "W",
                     "W",
                     "D",
-                    "W",
-                    "D"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -446,7 +296,7 @@
             "h2h": [],
             "odds": {
                 "home": 3.6,
-                "draw": 4.2,
+                "draw": 4.3,
                 "away": 1.77
             }
         },
@@ -720,8 +570,8 @@
                 "btts_pct": 53,
                 "over15_pct": 93,
                 "over25_pct": 80,
-                "over35_pct": 60,
-                "avg_goals_scored": 2.8,
+                "over35_pct": 53,
+                "avg_goals_scored": 2.67,
                 "avg_goals_conceded": 1.07,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -733,8 +583,8 @@
                 "avg_offsides": 0,
                 "form": [
                     "W",
-                    "D",
                     "W",
+                    "D",
                     "W",
                     "W"
                 ],
@@ -751,24 +601,24 @@
             }
         },
         {
-            "home": "Real Sociedad",
-            "away": "A Coruna",
-            "datetime": "14:15",
+            "home": "B. Moenchengladbach",
+            "away": "TSG Hoffenheim",
+            "datetime": "18.10. 15:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "feSNymb4",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/real-sociedad-jNvak2f3/?mid=feSNymb4",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
+            "match_id": "zZsPbOwH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/hoffenheim-hQAtP9Sl/?mid=zZsPbOwH",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 80,
-                "over25_pct": 73,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.53,
+                "btts_pct": 53,
+                "over15_pct": 100,
+                "over25_pct": 93,
+                "over35_pct": 60,
+                "avg_goals_scored": 3.13,
                 "avg_goals_conceded": 1.6,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -780,85 +630,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
-                    "W",
-                    "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 67,
-                "over25_pct": 33,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.2,
-                "avg_goals_conceded": 1.13,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "D",
-                    "D",
-                    "L",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.61,
-                "draw": 4,
-                "away": 5.6
-            }
-        },
-        {
-            "home": "Betis",
-            "away": "Osasuna",
-            "datetime": "16:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "vBCHLz86",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/osasuna-ETdxjU8a/?mid=vBCHLz86",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 40,
-                "over15_pct": 47,
-                "over25_pct": 40,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 0.93,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
                     "D",
                     "W",
-                    "W",
-                    "W",
-                    "W"
+                    "L",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -868,11 +643,11 @@
             "away_stats": {
                 "total_matches": 15,
                 "btts_pct": 53,
-                "over15_pct": 80,
-                "over25_pct": 47,
-                "over35_pct": 13,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 1.53,
+                "over15_pct": 93,
+                "over25_pct": 87,
+                "over35_pct": 60,
+                "avg_goals_scored": 1.87,
+                "avg_goals_conceded": 1.87,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -882,11 +657,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
                     "L",
                     "L",
                     "L",
-                    "W"
+                    "W",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -895,31 +670,31 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.48,
-                "draw": 4.5,
-                "away": 6.5
+                "home": 3.3,
+                "draw": 4.2,
+                "away": 1.95
             }
         },
         {
-            "home": "Racing Santander",
-            "away": "Valencia",
-            "datetime": "19:00",
+            "home": "VfB Stuttgart",
+            "away": "B. Moenchengladbach",
+            "datetime": "23.10. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "4fecYDiC",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/valencia-CQeaytrD/?mid=4fecYDiC",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
+            "match_id": "4EFr4JFd",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/stuttgart-nJQmYp1B/?mid=4EFr4JFd",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
             "home_stats": {
-                "total_matches": 14,
-                "btts_pct": 64,
-                "over15_pct": 93,
-                "over25_pct": 71,
-                "over35_pct": 50,
-                "avg_goals_scored": 1.5,
-                "avg_goals_conceded": 2.36,
+                "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 87,
+                "over25_pct": 80,
+                "over35_pct": 67,
+                "avg_goals_scored": 3.2,
+                "avg_goals_conceded": 1.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -929,11 +704,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "L",
-                    "L",
+                    "W",
+                    "W",
                     "W",
                     "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -942,12 +717,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 67,
-                "over25_pct": 53,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 1.53,
+                "btts_pct": 53,
+                "over15_pct": 100,
+                "over25_pct": 93,
+                "over35_pct": 60,
+                "avg_goals_scored": 3.13,
+                "avg_goals_conceded": 1.6,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -958,8 +733,8 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
+                    "D",
                     "W",
-                    "L",
                     "L",
                     "L"
                 ],
@@ -970,9 +745,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.2,
-                "draw": 3.5,
-                "away": 3.1
+                "home": 1.4,
+                "draw": 5,
+                "away": 6.5
             }
         },
         {
@@ -1045,9 +820,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.7,
-                "draw": 3.4,
-                "away": 2.55
+                "home": 2.65,
+                "draw": 3.1,
+                "away": 2.75
             }
         },
         {
@@ -1064,12 +839,12 @@
             "league_flag": "🇪🇸",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 67,
-                "over25_pct": 33,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.2,
-                "avg_goals_conceded": 1.13,
+                "btts_pct": 73,
+                "over15_pct": 73,
+                "over25_pct": 40,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1080,10 +855,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
-                    "D",
-                    "D",
                     "L",
-                    "D"
+                    "D",
+                    "D",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1242,12 +1017,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 87,
-                "over25_pct": 67,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 60,
                 "over35_pct": 47,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 1.67,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.53,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1257,10 +1032,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "D",
                     "W",
                     "L",
                     "D",
-                    "L",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -1289,12 +1064,12 @@
             "league_flag": "🇪🇸",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 40,
-                "over15_pct": 47,
-                "over25_pct": 40,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 0.93,
+                "btts_pct": 47,
+                "over15_pct": 53,
+                "over25_pct": 47,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.8,
+                "avg_goals_conceded": 1.07,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1304,8 +1079,8 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
                     "W",
+                    "D",
                     "W",
                     "W",
                     "W"
@@ -1346,8 +1121,8 @@
             "h2h": [],
             "odds": {
                 "home": 6,
-                "draw": 6,
-                "away": 1.34
+                "draw": 5.7,
+                "away": 1.37
             }
         },
         {
@@ -1368,8 +1143,8 @@
                 "over15_pct": 67,
                 "over25_pct": 53,
                 "over35_pct": 27,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 1.53,
+                "avg_goals_scored": 1.07,
+                "avg_goals_conceded": 1.47,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1379,9 +1154,9 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "D",
                     "L",
                     "W",
-                    "L",
                     "L",
                     "L"
                 ],
@@ -1420,9 +1195,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.4,
+                "home": 3.5,
                 "draw": 3.4,
-                "away": 2.1
+                "away": 2.05
             }
         },
         {
@@ -1442,9 +1217,37 @@
                 "btts_pct": 53,
                 "over15_pct": 80,
                 "over25_pct": 47,
-                "over35_pct": 13,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 1.53,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.07,
+                "avg_goals_conceded": 1.73,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "D",
+                    "L",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 64,
+                "over15_pct": 93,
+                "over25_pct": 79,
+                "over35_pct": 57,
+                "avg_goals_scored": 1.57,
+                "avg_goals_conceded": 2.43,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1457,36 +1260,8 @@
                     "D",
                     "L",
                     "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 64,
-                "over15_pct": 93,
-                "over25_pct": 71,
-                "over35_pct": 50,
-                "avg_goals_scored": 1.5,
-                "avg_goals_conceded": 2.36,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
                     "W",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1501,24 +1276,127 @@
             }
         },
         {
-            "home": "Elche",
-            "away": "Celta Vigo",
-            "datetime": "45",
-            "status": "live",
+            "home": "Celta Vigo",
+            "away": "Alaves",
+            "datetime": "18.10. 14:15",
+            "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "nyGPJExJ",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/elche-4jl02tPF/?mid=nyGPJExJ",
+            "match_id": "zZTwY4cT",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/celta-vigo-8pvUZFhf/?mid=zZTwY4cT",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "home_stats": {
                 "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 60,
+                "over25_pct": 33,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.27,
+                "avg_goals_conceded": 0.87,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "L",
+                    "D",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 43,
+                "over15_pct": 57,
+                "over25_pct": 43,
+                "over35_pct": 7,
+                "avg_goals_scored": 1.43,
+                "avg_goals_conceded": 0.79,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "D",
+                    "L",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2,
+                "draw": 3.4,
+                "away": 3.7
+            }
+        },
+        {
+            "home": "Malaga",
+            "away": "Real Sociedad",
+            "datetime": "18.10. 16:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "hh9Bn4CM",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/real-sociedad-jNvak2f3/?mid=hh9Bn4CM",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 53,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.67,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "L",
+                    "L",
+                    "D",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
                 "btts_pct": 73,
-                "over15_pct": 87,
-                "over25_pct": 67,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.53,
+                "over15_pct": 80,
+                "over25_pct": 80,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.67,
                 "avg_goals_conceded": 1.67,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -1531,7 +1409,7 @@
                 "form": [
                     "W",
                     "L",
-                    "D",
+                    "W",
                     "L",
                     "L"
                 ],
@@ -1540,14 +1418,33 @@
                 "shots_per_match": [],
                 "xg_per_match": []
             },
-            "away_stats": {
+            "h2h": [],
+            "odds": {
+                "home": 3.1,
+                "draw": 3.6,
+                "away": 2.1
+            }
+        },
+        {
+            "home": "Real Madryt",
+            "away": "Sevilla",
+            "datetime": "18.10. 19:00",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "dlbkuM4d",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/sevilla-h8oAv4Ts/?mid=dlbkuM4d",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 67,
-                "over25_pct": 33,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 0.93,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 80,
+                "over35_pct": 47,
+                "avg_goals_scored": 2.47,
+                "avg_goals_conceded": 1.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1559,8 +1456,36 @@
                 "form": [
                     "W",
                     "L",
-                    "D",
-                    "D",
+                    "W",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 64,
+                "over15_pct": 64,
+                "over25_pct": 57,
+                "over35_pct": 29,
+                "avg_goals_scored": 1.29,
+                "avg_goals_conceded": 1.21,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "W",
+                    "W",
                     "D"
                 ],
                 "corners_per_match": [],
@@ -1570,32 +1495,32 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.1,
-                "draw": 3.2,
-                "away": 2.35
+                "home": 1.21,
+                "draw": 6.5,
+                "away": 9
             }
         }
     ],
     "standings": [
         {
-            "team": "Borussia Dortmund",
+            "team": "SC Freiburg",
             "points": "13",
             "rank": 1,
+            "url": "https://www.flashscore.pl/druzyna/freiburg/fiEQZ7C7/",
+            "league_id": "bundesliga"
+        },
+        {
+            "team": "Borussia Dortmund",
+            "points": "13",
+            "rank": 2,
             "url": "https://www.flashscore.pl/druzyna/dortmund/nP1i5US1/",
             "league_id": "bundesliga"
         },
         {
             "team": "Bayern Monachium",
             "points": "11",
-            "rank": 2,
-            "url": "https://www.flashscore.pl/druzyna/bayern/nVp0wiqd/",
-            "league_id": "bundesliga"
-        },
-        {
-            "team": "SC Freiburg",
-            "points": "10",
             "rank": 3,
-            "url": "https://www.flashscore.pl/druzyna/freiburg/fiEQZ7C7/",
+            "url": "https://www.flashscore.pl/druzyna/bayern/nVp0wiqd/",
             "league_id": "bundesliga"
         },
         {
@@ -1641,38 +1566,38 @@
             "league_id": "bundesliga"
         },
         {
+            "team": "1. FC Koeln",
+            "points": "7",
+            "rank": 10,
+            "url": "https://www.flashscore.pl/druzyna/koln/WG9pOTse/",
+            "league_id": "bundesliga"
+        },
+        {
             "team": "VfB Stuttgart",
             "points": "6",
-            "rank": 10,
+            "rank": 11,
             "url": "https://www.flashscore.pl/druzyna/stuttgart/nJQmYp1B/",
             "league_id": "bundesliga"
         },
         {
             "team": "Hamburger SV",
             "points": "6",
-            "rank": 11,
+            "rank": 12,
             "url": "https://www.flashscore.pl/druzyna/hamburger/v9k3aY5F/",
             "league_id": "bundesliga"
         },
         {
             "team": "FC Schalke 04",
             "points": "5",
-            "rank": 12,
+            "rank": 13,
             "url": "https://www.flashscore.pl/druzyna/schalke/0Ija0Ej9/",
             "league_id": "bundesliga"
         },
         {
             "team": "Eintracht Frankfurt",
             "points": "5",
-            "rank": 13,
-            "url": "https://www.flashscore.pl/druzyna/frankfurt/8vndvXTk/",
-            "league_id": "bundesliga"
-        },
-        {
-            "team": "1. FC Koeln",
-            "points": "4",
             "rank": 14,
-            "url": "https://www.flashscore.pl/druzyna/koln/WG9pOTse/",
+            "url": "https://www.flashscore.pl/druzyna/frankfurt/8vndvXTk/",
             "league_id": "bundesliga"
         },
         {
@@ -1718,17 +1643,17 @@
             "league_id": "laliga"
         },
         {
-            "team": "Real Madryt",
-            "points": "18",
+            "team": "Betis",
+            "points": "19",
             "rank": 3,
-            "url": "https://www.flashscore.pl/druzyna/real-madryt/W8mj7MDD/",
+            "url": "https://www.flashscore.pl/druzyna/betis/vJbTeCGP/",
             "league_id": "laliga"
         },
         {
-            "team": "Betis",
-            "points": "16",
+            "team": "Real Madryt",
+            "points": "18",
             "rank": 4,
-            "url": "https://www.flashscore.pl/druzyna/betis/vJbTeCGP/",
+            "url": "https://www.flashscore.pl/druzyna/real-madryt/W8mj7MDD/",
             "league_id": "laliga"
         },
         {
@@ -1739,24 +1664,24 @@
             "league_id": "laliga"
         },
         {
+            "team": "Real Sociedad",
+            "points": "13",
+            "rank": 6,
+            "url": "https://www.flashscore.pl/druzyna/real-sociedad/jNvak2f3/",
+            "league_id": "laliga"
+        },
+        {
             "team": "Alaves",
             "points": "11",
-            "rank": 6,
+            "rank": 7,
             "url": "https://www.flashscore.pl/druzyna/alaves/hxt57t2q/",
             "league_id": "laliga"
         },
         {
             "team": "A Coruna",
             "points": "10",
-            "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/a-coruna/Q51ZzMS6/",
-            "league_id": "laliga"
-        },
-        {
-            "team": "Real Sociedad",
-            "points": "10",
             "rank": 8,
-            "url": "https://www.flashscore.pl/druzyna/real-sociedad/jNvak2f3/",
+            "url": "https://www.flashscore.pl/druzyna/a-coruna/Q51ZzMS6/",
             "league_id": "laliga"
         },
         {
@@ -1802,17 +1727,17 @@
             "league_id": "laliga"
         },
         {
-            "team": "Osasuna",
+            "team": "Racing Santander",
             "points": "8",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/osasuna/ETdxjU8a/",
+            "url": "https://www.flashscore.pl/druzyna/racing-santander/nVpEwOrl/",
             "league_id": "laliga"
         },
         {
-            "team": "Racing Santander",
-            "points": "7",
+            "team": "Osasuna",
+            "points": "8",
             "rank": 16,
-            "url": "https://www.flashscore.pl/druzyna/racing-santander/nVpEwOrl/",
+            "url": "https://www.flashscore.pl/druzyna/osasuna/ETdxjU8a/",
             "league_id": "laliga"
         },
         {
@@ -1830,17 +1755,17 @@
             "league_id": "laliga"
         },
         {
-            "team": "Malaga",
-            "points": "4",
+            "team": "Valencia",
+            "points": "5",
             "rank": 19,
-            "url": "https://www.flashscore.pl/druzyna/malaga/25tIqYiJ/",
+            "url": "https://www.flashscore.pl/druzyna/valencia/CQeaytrD/",
             "league_id": "laliga"
         },
         {
-            "team": "Valencia",
+            "team": "Malaga",
             "points": "4",
             "rank": 20,
-            "url": "https://www.flashscore.pl/druzyna/valencia/CQeaytrD/",
+            "url": "https://www.flashscore.pl/druzyna/malaga/25tIqYiJ/",
             "league_id": "laliga"
         }
     ],
@@ -1856,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-10-11 12:55"
+    "updated": "2026-10-11 22:12"
 }
