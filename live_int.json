@@ -1,18 +1,18 @@
 {
     "matches": {
-        "1. FC Koeln_B. Moenchengladbach": {
-            "home": "1. FC Koeln",
-            "away": "B. Moenchengladbach",
+        "SC Freiburg_FC Schalke 04": {
+            "home": "SC Freiburg",
+            "away": "FC Schalke 04",
             "is_live": false,
             "is_finished": true,
             "score": "2:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "11.10. 15:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
-            "match_id": "g_1_hfnxl7Pb",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/koln-WG9pOTse/?mid=hfnxl7Pb",
+            "match_id": "g_1_ENV2nflf",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/freiburg-fiEQZ7C7/schalke-0Ija0Ej9/?mid=ENV2nflf",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -52,19 +52,19 @@
                 }
             }
         },
-        "SC Freiburg_FC Schalke 04": {
-            "home": "SC Freiburg",
-            "away": "FC Schalke 04",
+        "1. FC Koeln_B. Moenchengladbach": {
+            "home": "1. FC Koeln",
+            "away": "B. Moenchengladbach",
             "is_live": false,
             "is_finished": true,
             "score": "2:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "11.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
-            "match_id": "g_1_ENV2nflf",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/freiburg-fiEQZ7C7/schalke-0Ija0Ej9/?mid=ENV2nflf",
+            "match_id": "g_1_hfnxl7Pb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/koln-WG9pOTse/?mid=hfnxl7Pb",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1230,71 +1230,19 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
-        "Elche_Celta Vigo": {
-            "home": "Elche",
-            "away": "Celta Vigo",
+        "Racing Santander_Valencia": {
+            "home": "Racing Santander",
+            "away": "Valencia",
             "is_live": false,
             "is_finished": true,
-            "score": "0:0",
+            "score": "2:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "11.10. 19:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_nyGPJExJ",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/elche-4jl02tPF/?mid=nyGPJExJ",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        "Real Sociedad_A Coruna": {
-            "home": "Real Sociedad",
-            "away": "A Coruna",
-            "is_live": false,
-            "is_finished": true,
-            "score": "3:2",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_feSNymb4",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/real-sociedad-jNvak2f3/?mid=feSNymb4",
+            "match_id": "g_1_4fecYDiC",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/valencia-CQeaytrD/?mid=4fecYDiC",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1341,7 +1289,7 @@
             "is_finished": true,
             "score": "5:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "11.10. 16:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1386,19 +1334,71 @@
                 }
             }
         },
-        "Racing Santander_Valencia": {
-            "home": "Racing Santander",
-            "away": "Valencia",
+        "Real Sociedad_A Coruna": {
+            "home": "Real Sociedad",
+            "away": "A Coruna",
             "is_live": false,
             "is_finished": true,
-            "score": "2:2",
+            "score": "3:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "11.10. 14:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_4fecYDiC",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/valencia-CQeaytrD/?mid=4fecYDiC",
+            "match_id": "g_1_feSNymb4",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/real-sociedad-jNvak2f3/?mid=feSNymb4",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Elche_Celta Vigo": {
+            "home": "Elche",
+            "away": "Celta Vigo",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "11.10. 12:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_nyGPJExJ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/elche-4jl02tPF/?mid=nyGPJExJ",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2956,5 +2956,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-11 22:12:56"
+    "updated": "2026-10-12 05:38:42"
 }
