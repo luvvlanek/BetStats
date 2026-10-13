@@ -71,8 +71,8 @@
             "h2h": [],
             "odds": {
                 "home": 1.95,
-                "draw": 4,
-                "away": 3.4
+                "draw": 4.3,
+                "away": 3.2
             }
         },
         {
@@ -145,8 +145,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.45,
-                "draw": 3.75,
+                "home": 2.4,
+                "draw": 3.9,
                 "away": 2.55
             }
         },
@@ -220,9 +220,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.9,
-                "draw": 3.6,
-                "away": 2.15
+                "home": 2.8,
+                "draw": 3.7,
+                "away": 2.25
             }
         },
         {
@@ -295,9 +295,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.7,
-                "draw": 4.1,
-                "away": 1.8
+                "home": 3.8,
+                "draw": 4.2,
+                "away": 1.77
             }
         },
         {
@@ -370,9 +370,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 4.75,
-                "draw": 4,
-                "away": 1.65
+                "home": 4.7,
+                "draw": 4.3,
+                "away": 1.59
             }
         },
         {
@@ -445,9 +445,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.75,
-                "draw": 3.75,
-                "away": 4.2
+                "home": 1.71,
+                "draw": 4.1,
+                "away": 4
             }
         },
         {
@@ -464,12 +464,12 @@
             "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
+                "btts_pct": 73,
                 "over15_pct": 93,
                 "over25_pct": 93,
-                "over35_pct": 53,
+                "over35_pct": 60,
                 "avg_goals_scored": 3.8,
-                "avg_goals_conceded": 0.87,
+                "avg_goals_conceded": 1.07,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -480,10 +480,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "D",
+                    "D",
                     "W",
                     "W",
-                    "W",
-                    "D"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -492,12 +492,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 93,
-                "over25_pct": 80,
+                "btts_pct": 40,
+                "over15_pct": 87,
+                "over25_pct": 73,
                 "over35_pct": 60,
-                "avg_goals_scored": 2.27,
-                "avg_goals_conceded": 1.53,
+                "avg_goals_scored": 2.2,
+                "avg_goals_conceded": 1.47,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -508,9 +508,9 @@
                 "avg_offsides": 0,
                 "form": [
                     "W",
-                    "L",
                     "W",
                     "L",
+                    "W",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -520,8 +520,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.22,
-                "draw": 7,
+                "home": 1.18,
+                "draw": 7.5,
                 "away": 9.5
             }
         },
@@ -595,9 +595,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.73,
-                "draw": 4.1,
-                "away": 4.2
+                "home": 1.71,
+                "draw": 3.9,
+                "away": 4.3
             }
         },
         {
@@ -670,9 +670,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.2,
-                "draw": 3.9,
-                "away": 2
+                "home": 3,
+                "draw": 4.2,
+                "away": 2.05
             }
         },
         {
@@ -820,9 +820,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.1,
-                "draw": 3.4,
-                "away": 3.4
+                "home": 2.05,
+                "draw": 3.5,
+                "away": 3.5
             }
         },
         {
@@ -868,10 +868,10 @@
             "away_stats": {
                 "total_matches": 15,
                 "btts_pct": 67,
-                "over15_pct": 93,
+                "over15_pct": 100,
                 "over25_pct": 87,
                 "over35_pct": 40,
-                "avg_goals_scored": 1.93,
+                "avg_goals_scored": 2.0,
                 "avg_goals_conceded": 1.47,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -886,7 +886,7 @@
                     "W",
                     "W",
                     "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -895,9 +895,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 4.5,
-                "draw": 3.7,
-                "away": 1.75
+                "home": 4.3,
+                "draw": 3.8,
+                "away": 1.71
             }
         },
         {
@@ -929,10 +929,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "W",
                     "W",
-                    "L",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -970,9 +970,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.48,
-                "draw": 4.33,
-                "away": 6.25
+                "home": 1.38,
+                "draw": 4.8,
+                "away": 6.5
             }
         },
         {
@@ -1046,8 +1046,8 @@
             "h2h": [],
             "odds": {
                 "home": 6,
-                "draw": 5.75,
-                "away": 1.4
+                "draw": 5.5,
+                "away": 1.38
             }
         },
         {
@@ -1120,7 +1120,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.4,
+                "home": 3.3,
                 "draw": 3.4,
                 "away": 2.1
             }
@@ -1195,9 +1195,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.95,
-                "draw": 3.6,
-                "away": 3.7
+                "home": 2,
+                "draw": 3.5,
+                "away": 3.6
             }
         },
         {
@@ -1270,9 +1270,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.05,
-                "draw": 3.4,
-                "away": 3.7
+                "home": 2.1,
+                "draw": 3.3,
+                "away": 3.6
             }
         },
         {
@@ -1345,9 +1345,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.2,
-                "draw": 3.5,
-                "away": 2.15
+                "home": 3.1,
+                "draw": 3.6,
+                "away": 2.1
             }
         },
         {
@@ -1420,8 +1420,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.25,
-                "draw": 7,
+                "home": 1.21,
+                "draw": 6.5,
                 "away": 9
             }
         },
@@ -1495,9 +1495,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.88,
-                "draw": 3.1,
-                "away": 2.6
+                "home": 2.9,
+                "draw": 2.9,
+                "away": 2.7
             }
         }
     ],
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-10-13 14:23"
+    "updated": "2026-10-13 22:58"
 }
