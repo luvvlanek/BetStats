@@ -1230,6 +1230,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "Levante_Sevilla": {
+            "home": "Levante",
+            "away": "Sevilla",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:3",
+            "stage": "Koniec",
+            "datetime": "12.10. 19:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_ADgsxdhm",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/sevilla-h8oAv4Ts/?mid=ADgsxdhm",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Racing Santander_Valencia": {
             "home": "Racing Santander",
             "away": "Valencia",
@@ -1971,44 +2023,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_xOXq7ygD",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/sevilla-h8oAv4Ts/?mid=xOXq7ygD",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Celta Vigo_Racing Santander": {
             "home": "Celta Vigo",
@@ -2956,5 +2971,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-12 15:23:24"
+    "updated": "2026-10-13 00:53:54"
 }
