@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Wieczysta Kraków",
-            "away": "Raków Częstochowa",
-            "datetime": "16:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "CM5Ny4sH",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/rakow-czestochowa-SQOrbYim/?mid=CM5Ny4sH",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 93,
-                "over25_pct": 67,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.6,
-                "avg_goals_conceded": 1.87,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "W",
-                    "D",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 80,
-                "over25_pct": 80,
-                "over35_pct": 53,
-                "avg_goals_scored": 1.67,
-                "avg_goals_conceded": 1.93,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Widzew Łódź",
             "away": "Wisła Kraków",
             "datetime": "18:30",
@@ -751,25 +676,100 @@
             }
         },
         {
-            "home": "Warta Poznań",
-            "away": "Unia Skierniewice",
-            "datetime": "16:00",
+            "home": "Widzew Łódź",
+            "away": "Górnik Zabrze",
+            "datetime": "23.10. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "jH2myvyg",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/unia-skierniewice-l42F3w54/warta-poznan-CrVUWAl8/?mid=jH2myvyg",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
+            "match_id": "GxXxqt6s",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/widzew-lodz-rNOIW3uC/?mid=GxXxqt6s",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 80,
+                "over25_pct": 53,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.6,
+                "avg_goals_conceded": 1.4,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "D",
+                    "D",
+                    "D",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 53,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "D",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Wieczysta Kraków",
+            "away": "Raków Częstochowa",
+            "datetime": "20",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "CM5Ny4sH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/rakow-czestochowa-SQOrbYim/?mid=CM5Ny4sH",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
                 "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 80,
+                "over15_pct": 93,
+                "over25_pct": 67,
                 "over35_pct": 40,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.73,
+                "avg_goals_scored": 1.6,
+                "avg_goals_conceded": 1.87,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -782,7 +782,7 @@
                     "L",
                     "W",
                     "W",
-                    "W",
+                    "D",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -791,13 +791,13 @@
                 "xg_per_match": []
             },
             "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 57,
-                "over15_pct": 79,
-                "over25_pct": 64,
-                "over35_pct": 50,
-                "avg_goals_scored": 1.36,
-                "avg_goals_conceded": 1.57,
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 80,
+                "over25_pct": 80,
+                "over35_pct": 53,
+                "avg_goals_scored": 1.67,
+                "avg_goals_conceded": 1.93,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -807,11 +807,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
                     "L",
-                    "D",
                     "W",
-                    "L"
+                    "L",
+                    "L",
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1499,6 +1499,156 @@
                 "draw": null,
                 "away": null
             }
+        },
+        {
+            "home": "Arka Gdynia",
+            "away": "Bruk-Bet T.",
+            "datetime": "24.10. 13:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "noqynekB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/nieciecza-YNkK4khO/?mid=noqynekB",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 40,
+                "over15_pct": 93,
+                "over25_pct": 53,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.67,
+                "avg_goals_conceded": 1.27,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "W",
+                    "L",
+                    "L",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 80,
+                "over15_pct": 93,
+                "over25_pct": 67,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.87,
+                "avg_goals_conceded": 1.27,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "W",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Warta Poznań",
+            "away": "Unia Skierniewice",
+            "datetime": "28",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "jH2myvyg",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/unia-skierniewice-l42F3w54/warta-poznan-CrVUWAl8/?mid=jH2myvyg",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 80,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.73,
+                "avg_goals_conceded": 1.73,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "W",
+                    "W",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 57,
+                "over15_pct": 79,
+                "over25_pct": 64,
+                "over35_pct": 50,
+                "avg_goals_scored": 1.36,
+                "avg_goals_conceded": 1.57,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "L",
+                    "D",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
         }
     ],
     "standings": [
@@ -1594,17 +1744,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Motor Lublin",
+            "team": "Wieczysta Kraków",
             "points": "9",
             "rank": 14,
-            "url": "https://www.flashscore.pl/druzyna/motor-lublin/IoLk2VlL/",
+            "url": "https://www.flashscore.pl/druzyna/ks-wieczysta-krakow/ImhQf1z6/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Wieczysta Kraków",
-            "points": "8",
+            "team": "Motor Lublin",
+            "points": "9",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/ks-wieczysta-krakow/ImhQf1z6/",
+            "url": "https://www.flashscore.pl/druzyna/motor-lublin/IoLk2VlL/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1623,7 +1773,7 @@
         },
         {
             "team": "Raków Częstochowa",
-            "points": "3",
+            "points": "4",
             "rank": 18,
             "url": "https://www.flashscore.pl/druzyna/rakow-czestochowa/SQOrbYim/",
             "league_id": "ekstraklasa"
@@ -1636,31 +1786,31 @@
             "league_id": "betclic-1-liga"
         },
         {
+            "team": "Warta Poznań",
+            "points": "18",
+            "rank": 2,
+            "url": "https://www.flashscore.pl/druzyna/warta-poznan/CrVUWAl8/",
+            "league_id": "betclic-1-liga"
+        },
+        {
             "team": "Polonia Warszawa",
             "points": "17",
-            "rank": 2,
+            "rank": 3,
             "url": "https://www.flashscore.pl/druzyna/polonia-warszawa/ADZjR3us/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Bruk-Bet T.",
             "points": "17",
-            "rank": 3,
+            "rank": 4,
             "url": "https://www.flashscore.pl/druzyna/nieciecza/YNkK4khO/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Lechia Gdańsk",
             "points": "16",
-            "rank": 4,
-            "url": "https://www.flashscore.pl/druzyna/lechia-gdansk/GGLmkiK8/",
-            "league_id": "betclic-1-liga"
-        },
-        {
-            "team": "Warta Poznań",
-            "points": "15",
             "rank": 5,
-            "url": "https://www.flashscore.pl/druzyna/warta-poznan/CrVUWAl8/",
+            "url": "https://www.flashscore.pl/druzyna/lechia-gdansk/GGLmkiK8/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1767,5 +1917,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-10-16 11:15"
+    "updated": "2026-10-16 16:35"
 }
