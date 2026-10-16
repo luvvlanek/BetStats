@@ -1,5 +1,109 @@
 {
     "matches": {
+        "Wieczysta Kraków_Raków Częstochowa": {
+            "home": "Wieczysta Kraków",
+            "away": "Raków Częstochowa",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_CM5Ny4sH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/rakow-czestochowa-SQOrbYim/?mid=CM5Ny4sH",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Widzew Łódź_Wisła Kraków": {
+            "home": "Widzew Łódź",
+            "away": "Wisła Kraków",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_ba5nPoF8",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/widzew-lodz-rNOIW3uC/wisla-krakow-rob20Q2Q/?mid=ba5nPoF8",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "GKS Katowice_Wieczysta Kraków": {
             "home": "GKS Katowice",
             "away": "Wieczysta Kraków",
@@ -689,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_EFuVclaC",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/pogon-szczecin-Um9YwPQ0/?mid=EFuVclaC",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Motor Lublin_Górnik Zabrze": {
             "home": "Motor Lublin",
@@ -741,44 +808,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_xYnjoBF6",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/motor-lublin-IoLk2VlL/?mid=xYnjoBF6",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "GKS Katowice_Cracovia": {
             "home": "GKS Katowice",
@@ -1875,19 +1905,109 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
-        "Wieczysta Kraków_Raków Częstochowa": {
-            "home": "Wieczysta Kraków",
-            "away": "Raków Częstochowa",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "20",
-            "datetime": "20",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
+        "Warta Poznań_Unia Skierniewice": {
+            "home": "Warta Poznań",
+            "away": "Unia Skierniewice",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_CM5Ny4sH",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/rakow-czestochowa-SQOrbYim/?mid=CM5Ny4sH"
+            "match_id": "g_1_jH2myvyg",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/unia-skierniewice-l42F3w54/warta-poznan-CrVUWAl8/?mid=jH2myvyg",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Ruch Chorzów_Odra Opole": {
+            "home": "Ruch Chorzów",
+            "away": "Odra Opole",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_riJxUMTP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/ruch-chorzow-S4zygtuJ/?mid=riJxUMTP",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
         },
         "Pogoń Siedlce_Puszcza Niepołomice": {
             "home": "Pogoń Siedlce",
@@ -2578,44 +2698,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_xGJz5Ffc",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/odra-opole-C8Kg1k4R/?mid=xGJz5Ffc",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Pogoń Grodzisk Mazowiecki_ŁKS Łódź": {
             "home": "Pogoń Grodzisk Mazowiecki",
@@ -2630,44 +2713,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_ptNr3gP9",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=ptNr3gP9",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Polonia Warszawa_Chrobry Głogów": {
             "home": "Polonia Warszawa",
@@ -3793,21 +3839,7 @@
             "match_id": "g_1_hjSrQqhB",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/warta-poznan-CrVUWAl8/?mid=hjSrQqhB",
             "match_stats": null
-        },
-        "Warta Poznań_Unia Skierniewice": {
-            "home": "Warta Poznań",
-            "away": "Unia Skierniewice",
-            "is_live": true,
-            "is_finished": false,
-            "score": "1:0",
-            "stage": "28",
-            "datetime": "28",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_jH2myvyg",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/unia-skierniewice-l42F3w54/warta-poznan-CrVUWAl8/?mid=jH2myvyg"
         }
     },
-    "updated": "2026-10-16 16:35:41"
+    "updated": "2026-10-16 20:57:20"
 }
