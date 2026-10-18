@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Górnik Zabrze",
-            "away": "Piast Gliwice",
-            "datetime": "10:15",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "WC3fNPqL",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/piast-gliwice-ve2oT9ck/?mid=WC3fNPqL",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 53,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.33,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "D",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 93,
-                "over25_pct": 60,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.6,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "L",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Zagłębie Lubin",
             "away": "Jagiellonia Białystok",
             "datetime": "12:45",
@@ -737,6 +662,156 @@
                     "W",
                     "L",
                     "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Śląsk Wrocław",
+            "away": "Wieczysta Kraków",
+            "datetime": "25.10. 11:15",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "pft7l2rK",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/slask-wroclaw-E1Oxemse/?mid=pft7l2rK",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 80,
+                "over15_pct": 87,
+                "over25_pct": 80,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.27,
+                "avg_goals_conceded": 1.8,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "L",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 93,
+                "over25_pct": 67,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.87,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "W",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Górnik Zabrze",
+            "away": "Piast Gliwice",
+            "datetime": "22",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "WC3fNPqL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/piast-gliwice-ve2oT9ck/?mid=WC3fNPqL",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 53,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "D",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 93,
+                "over25_pct": 60,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.8,
+                "avg_goals_conceded": 1.6,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "L",
+                    "W",
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1504,7 +1579,7 @@
     "standings": [
         {
             "team": "Górnik Zabrze",
-            "points": "25",
+            "points": "26",
             "rank": 1,
             "url": "https://www.flashscore.pl/druzyna/gornik-zabrze/2LH3Ywq4/",
             "league_id": "ekstraklasa"
@@ -1546,7 +1621,7 @@
         },
         {
             "team": "Piast Gliwice",
-            "points": "16",
+            "points": "17",
             "rank": 7,
             "url": "https://www.flashscore.pl/druzyna/piast-gliwice/ve2oT9ck/",
             "league_id": "ekstraklasa"
@@ -1767,5 +1842,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-10-18 03:59"
+    "updated": "2026-10-18 10:53"
 }

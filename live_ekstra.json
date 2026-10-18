@@ -1950,6 +1950,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Górnik Zabrze_Piast Gliwice": {
+            "home": "Górnik Zabrze",
+            "away": "Piast Gliwice",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:1",
+            "stage": "22",
+            "datetime": "22",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_WC3fNPqL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/piast-gliwice-ve2oT9ck/?mid=WC3fNPqL"
+        },
         "Miedź Legnica_Stal Mielec": {
             "home": "Miedź Legnica",
             "away": "Stal Mielec",
@@ -3931,5 +3945,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-18 03:59:17"
+    "updated": "2026-10-18 10:53:48"
 }
