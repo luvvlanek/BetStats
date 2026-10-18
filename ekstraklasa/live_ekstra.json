@@ -1,18 +1,18 @@
 {
     "matches": {
-        "Motor Lublin_Śląsk Wrocław": {
-            "home": "Motor Lublin",
-            "away": "Śląsk Wrocław",
+        "Cracovia_Legia Warszawa": {
+            "home": "Cracovia",
+            "away": "Legia Warszawa",
             "is_live": false,
             "is_finished": true,
-            "score": "3:2",
+            "score": "1:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_4d2FwQC4",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/motor-lublin-IoLk2VlL/slask-wroclaw-E1Oxemse/?mid=4d2FwQC4",
+            "match_id": "g_1_r9SfJeRk",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/legia-warszawa-K6kUepBs/?mid=r9SfJeRk",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -59,7 +59,7 @@
             "is_finished": true,
             "score": "0:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -104,19 +104,19 @@
                 }
             }
         },
-        "Cracovia_Legia Warszawa": {
-            "home": "Cracovia",
-            "away": "Legia Warszawa",
+        "Motor Lublin_Śląsk Wrocław": {
+            "home": "Motor Lublin",
+            "away": "Śląsk Wrocław",
             "is_live": false,
             "is_finished": true,
-            "score": "1:1",
+            "score": "3:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 12:45",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_r9SfJeRk",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/legia-warszawa-K6kUepBs/?mid=r9SfJeRk",
+            "match_id": "g_1_4d2FwQC4",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/motor-lublin-IoLk2VlL/slask-wroclaw-E1Oxemse/?mid=4d2FwQC4",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1957,7 +1957,7 @@
             "is_finished": true,
             "score": "3:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2009,13 +2009,50 @@
             "is_finished": true,
             "score": "0:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
             "match_id": "g_1_dE5eZH55",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/polonia-warszawa-ADZjR3us/?mid=dE5eZH55",
-            "match_stats": null
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
         },
         "Polonia Bytom_Chrobry Głogów": {
             "home": "Polonia Bytom",
@@ -2024,7 +2061,7 @@
             "is_finished": true,
             "score": "3:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -3894,5 +3931,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-17 20:35:25"
+    "updated": "2026-10-18 03:59:17"
 }
