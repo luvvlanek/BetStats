@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Bayern Monachium_RB Lipsk": {
+            "home": "Bayern Monachium",
+            "away": "RB Lipsk",
+            "is_live": false,
+            "is_finished": true,
+            "score": "6:1",
+            "stage": "Koniec",
+            "datetime": "17.10. 16:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_nylhpPON",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/rb-leipzig-KbS1suSm/?mid=nylhpPON",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Elversberg_FC Augsburg": {
             "home": "Elversberg",
             "away": "FC Augsburg",
@@ -7,7 +59,7 @@
             "is_finished": true,
             "score": "4:3",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -59,7 +111,7 @@
             "is_finished": true,
             "score": "0:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -111,7 +163,7 @@
             "is_finished": true,
             "score": "1:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -163,7 +215,7 @@
             "is_finished": true,
             "score": "0:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -215,64 +267,12 @@
             "is_finished": true,
             "score": "2:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "match_id": "g_1_Esx3itWj",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/paderborn-G2Op923t/?mid=Esx3itWj",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        "Bayern Monachium_RB Lipsk": {
-            "home": "Bayern Monachium",
-            "away": "RB Lipsk",
-            "is_live": false,
-            "is_finished": true,
-            "score": "6:1",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "match_id": "g_1_nylhpPON",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/rb-leipzig-KbS1suSm/?mid=nylhpPON",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1335,71 +1335,19 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
-        "Espanyol_Atl. Madryt": {
-            "home": "Espanyol",
-            "away": "Atl. Madryt",
-            "is_live": false,
-            "is_finished": true,
-            "score": "0:1",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_bB7ejnDc",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/espanyol-QFfPdh1J/?mid=bB7ejnDc",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        "Villarreal_Elche": {
-            "home": "Villarreal",
-            "away": "Elche",
+        "Valencia_Ath. Bilbao": {
+            "home": "Valencia",
+            "away": "Ath. Bilbao",
             "is_live": false,
             "is_finished": true,
             "score": "0:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 19:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_fulq13RF",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/villarreal-lUatW5jE/?mid=fulq13RF",
+            "match_id": "g_1_MRky3Pd3",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/valencia-CQeaytrD/?mid=MRky3Pd3",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1446,12 +1394,116 @@
             "is_finished": true,
             "score": "2:5",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "17.10. 16:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "match_id": "g_1_S8QVZQSG",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/betis-vJbTeCGP/?mid=S8QVZQSG",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Villarreal_Elche": {
+            "home": "Villarreal",
+            "away": "Elche",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "17.10. 14:15",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_fulq13RF",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/villarreal-lUatW5jE/?mid=fulq13RF",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Espanyol_Atl. Madryt": {
+            "home": "Espanyol",
+            "away": "Atl. Madryt",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:1",
+            "stage": "Koniec",
+            "datetime": "17.10. 12:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_bB7ejnDc",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/espanyol-QFfPdh1J/?mid=bB7ejnDc",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2076,44 +2128,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_UHKVUvoK",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-sociedad-jNvak2f3/valencia-CQeaytrD/?mid=UHKVUvoK",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "A Coruna_Betis": {
             "home": "A Coruna",
@@ -3134,21 +3149,7 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
-        },
-        "Valencia_Ath. Bilbao": {
-            "home": "Valencia",
-            "away": "Ath. Bilbao",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "85",
-            "datetime": "85",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_MRky3Pd3",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/valencia-CQeaytrD/?mid=MRky3Pd3"
         }
     },
-    "updated": "2026-10-17 20:52:58"
+    "updated": "2026-10-18 04:16:51"
 }
