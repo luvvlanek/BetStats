@@ -1,18 +1,18 @@
 {
     "matches": [
         {
-            "home": "Bayer Leverkusen",
-            "away": "SC Freiburg",
-            "score": "2:1",
-            "datetime": "Koniec",
+            "home": "B. Moenchengladbach",
+            "away": "TSG Hoffenheim",
+            "score": "1:2",
+            "datetime": "18.10. 15:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_r7ZNv3no",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/freiburg-fiEQZ7C7/leverkusen-4jcj2zMd/?mid=r7ZNv3no",
+            "match_id": "g_1_zZsPbOwH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/hoffenheim-hQAtP9Sl/?mid=zZsPbOwH",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -53,18 +53,18 @@
             }
         },
         {
-            "home": "B. Moenchengladbach",
-            "away": "TSG Hoffenheim",
-            "score": "1:2",
-            "datetime": "Koniec",
+            "home": "Bayer Leverkusen",
+            "away": "SC Freiburg",
+            "score": "2:1",
+            "datetime": "18.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_zZsPbOwH",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/hoffenheim-hQAtP9Sl/?mid=zZsPbOwH",
+            "match_id": "g_1_r7ZNv3no",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/freiburg-fiEQZ7C7/leverkusen-4jcj2zMd/?mid=r7ZNv3no",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1366,18 +1366,70 @@
             "match_stats": null
         },
         {
-            "home": "Osasuna",
-            "away": "Racing Santander",
-            "score": "2:0",
-            "datetime": "Koniec",
+            "home": "Real Madryt",
+            "away": "Sevilla",
+            "score": "4:1",
+            "datetime": "18.10. 19:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_lOfssrzp",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/osasuna-ETdxjU8a/racing-santander-nVpEwOrl/?mid=lOfssrzp",
+            "match_id": "g_1_dlbkuM4d",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/sevilla-h8oAv4Ts/?mid=dlbkuM4d",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Malaga",
+            "away": "Real Sociedad",
+            "score": "2:5",
+            "datetime": "18.10. 16:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_hh9Bn4CM",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/real-sociedad-jNvak2f3/?mid=hh9Bn4CM",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1421,7 +1473,7 @@
             "home": "Celta Vigo",
             "away": "Alaves",
             "score": "2:1",
-            "datetime": "Koniec",
+            "datetime": "18.10. 14:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1470,18 +1522,18 @@
             }
         },
         {
-            "home": "Malaga",
-            "away": "Real Sociedad",
-            "score": "2:5",
-            "datetime": "Koniec",
+            "home": "Osasuna",
+            "away": "Racing Santander",
+            "score": "2:0",
+            "datetime": "18.10. 12:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_hh9Bn4CM",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/real-sociedad-jNvak2f3/?mid=hh9Bn4CM",
+            "match_id": "g_1_lOfssrzp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/osasuna-ETdxjU8a/racing-santander-nVpEwOrl/?mid=lOfssrzp",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2106,44 +2158,7 @@
             "stage": "Koniec",
             "match_id": "g_1_Es8BsIUP",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/getafe-dboeiWOt/?mid=Es8BsIUP",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Alaves",
@@ -3226,5 +3241,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-18 20:52"
+    "updated": "2026-10-19 04:26"
 }
