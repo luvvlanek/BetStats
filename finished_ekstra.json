@@ -1,18 +1,18 @@
 {
     "matches": [
         {
-            "home": "Górnik Zabrze",
-            "away": "Piast Gliwice",
-            "score": "1:1",
-            "datetime": "Koniec",
+            "home": "Lech Poznań",
+            "away": "Korona Kielce",
+            "score": "6:1",
+            "datetime": "18.10. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_WC3fNPqL",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/piast-gliwice-ve2oT9ck/?mid=WC3fNPqL",
+            "match_id": "g_1_t6etEL67",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/lech-poznan-OpNH7Ouf/?mid=t6etEL67",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -56,7 +56,7 @@
             "home": "Zagłębie Lubin",
             "away": "Jagiellonia Białystok",
             "score": "1:0",
-            "datetime": "Koniec",
+            "datetime": "18.10. 12:45",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -105,18 +105,18 @@
             }
         },
         {
-            "home": "Lech Poznań",
-            "away": "Korona Kielce",
-            "score": "6:1",
-            "datetime": "Koniec",
+            "home": "Górnik Zabrze",
+            "away": "Piast Gliwice",
+            "score": "1:1",
+            "datetime": "18.10. 10:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_t6etEL67",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/lech-poznan-OpNH7Ouf/?mid=t6etEL67",
+            "match_id": "g_1_WC3fNPqL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/piast-gliwice-ve2oT9ck/?mid=WC3fNPqL",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1996,18 +1996,18 @@
             "match_stats": null
         },
         {
-            "home": "ŁKS Łódź",
-            "away": "Podbeskidzie B-B",
-            "score": "1:0",
-            "datetime": "Koniec",
+            "home": "Lechia Gdańsk",
+            "away": "Arka Gdynia",
+            "score": "2:1",
+            "datetime": "18.10. 18:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_EZ98O0im",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/podbeskidzie-b-b-zBPYeTRl/?mid=EZ98O0im",
+            "match_id": "g_1_GpRj6JyJ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/lechia-gdansk-GGLmkiK8/?mid=GpRj6JyJ",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2051,7 +2051,7 @@
             "home": "Pogoń Siedlce",
             "away": "Stal Rzeszów",
             "score": "3:4",
-            "datetime": "Koniec",
+            "datetime": "18.10. 15:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2060,6 +2060,58 @@
             "stage": "Koniec",
             "match_id": "g_1_KELNKIjC",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/stal-rzeszow-IkpY1q92/?mid=KELNKIjC",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "ŁKS Łódź",
+            "away": "Podbeskidzie B-B",
+            "score": "1:0",
+            "datetime": "18.10. 12:30",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_EZ98O0im",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/podbeskidzie-b-b-zBPYeTRl/?mid=EZ98O0im",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2736,44 +2788,7 @@
             "stage": "Koniec",
             "match_id": "g_1_U9MSBN7s",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=U9MSBN7s",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Unia Skierniewice",
@@ -4006,5 +4021,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-18 20:34"
+    "updated": "2026-10-19 04:09"
 }
