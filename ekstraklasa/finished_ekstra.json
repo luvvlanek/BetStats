@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Wisła Płock",
+            "away": "Radomiak Radom",
+            "score": "1:0",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_8hcYFsxe",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/wisla-plock-QoZYVU3E/?mid=8hcYFsxe",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Lech Poznań",
             "away": "Korona Kielce",
             "score": "6:1",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_lC6jN4SN",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/slask-wroclaw-E1Oxemse/?mid=lC6jN4SN",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Cracovia",
@@ -1996,6 +2011,58 @@
             "match_stats": null
         },
         {
+            "home": "Bruk-Bet T.",
+            "away": "Puszcza Niepołomice",
+            "score": "2:0",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_riauw06t",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/puszcza-dtqx13O8/?mid=riauw06t",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Lechia Gdańsk",
             "away": "Arka Gdynia",
             "score": "2:1",
@@ -2736,44 +2803,7 @@
             "stage": "Koniec",
             "match_id": "g_1_t4KNFW8F",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/polonia-warszawa-ADZjR3us/?mid=t4KNFW8F",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Chrobry Głogów",
@@ -4021,5 +4051,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-19 12:50"
+    "updated": "2026-10-19 22:23"
 }

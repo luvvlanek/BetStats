@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Wisła Płock_Radomiak Radom": {
+            "home": "Wisła Płock",
+            "away": "Radomiak Radom",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_8hcYFsxe",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/wisla-plock-QoZYVU3E/?mid=8hcYFsxe",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Lech Poznań_Korona Kielce": {
             "home": "Lech Poznań",
             "away": "Korona Kielce",
@@ -741,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_lC6jN4SN",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/slask-wroclaw-E1Oxemse/?mid=lC6jN4SN",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Cracovia_Zagłębie Lubin": {
             "home": "Cracovia",
@@ -1995,6 +2010,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/radomiak-radom-zD5nYhAT/?mid=ARE8CveM",
             "match_stats": null
         },
+        "Bruk-Bet T._Puszcza Niepołomice": {
+            "home": "Bruk-Bet T.",
+            "away": "Puszcza Niepołomice",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_riauw06t",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/puszcza-dtqx13O8/?mid=riauw06t",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Lechia Gdańsk_Arka Gdynia": {
             "home": "Lechia Gdańsk",
             "away": "Arka Gdynia",
@@ -2736,44 +2803,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_t4KNFW8F",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/polonia-warszawa-ADZjR3us/?mid=t4KNFW8F",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Chrobry Głogów_Pogoń Grodzisk Mazowiecki": {
             "home": "Chrobry Głogów",
@@ -4021,5 +4051,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-19 12:50:46"
+    "updated": "2026-10-19 22:23:17"
 }

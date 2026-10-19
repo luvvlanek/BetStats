@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Wisła Płock",
-            "away": "Radomiak Radom",
-            "datetime": "17:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "8hcYFsxe",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/wisla-plock-QoZYVU3E/?mid=8hcYFsxe",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 87,
-                "over25_pct": 60,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "L",
-                    "W",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 67,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.4,
-                "avg_goals_conceded": 2.07,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "L",
-                    "L",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Motor Lublin",
             "away": "Zagłębie Lubin",
             "datetime": "23.10. 16:00",
@@ -417,12 +342,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 67,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 60,
                 "over35_pct": 47,
-                "avg_goals_scored": 1.4,
-                "avg_goals_conceded": 2.07,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 2.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -433,10 +358,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
+                    "L",
                     "W",
                     "L",
-                    "L",
-                    "D"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -751,25 +676,25 @@
             }
         },
         {
-            "home": "Bruk-Bet T.",
-            "away": "Puszcza Niepołomice",
-            "datetime": "16:00",
+            "home": "Cracovia",
+            "away": "Motor Lublin",
+            "datetime": "30.10. 17:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "riauw06t",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/puszcza-dtqx13O8/?mid=riauw06t",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
+            "match_id": "UJTn1uSP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/motor-lublin-IoLk2VlL/?mid=UJTn1uSP",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 80,
-                "over15_pct": 93,
-                "over25_pct": 67,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.87,
-                "avg_goals_conceded": 1.27,
+                "total_matches": 14,
+                "btts_pct": 57,
+                "over15_pct": 71,
+                "over25_pct": 50,
+                "over35_pct": 36,
+                "avg_goals_scored": 1.29,
+                "avg_goals_conceded": 1.36,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -781,9 +706,9 @@
                 "form": [
                     "D",
                     "W",
-                    "W",
-                    "W",
-                    "W"
+                    "L",
+                    "L",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -792,12 +717,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 73,
-                "over25_pct": 53,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.47,
+                "btts_pct": 67,
+                "over15_pct": 87,
+                "over25_pct": 67,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.73,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -808,8 +733,8 @@
                 "avg_offsides": 0,
                 "form": [
                     "W",
-                    "L",
-                    "L",
+                    "W",
+                    "D",
                     "L",
                     "L"
                 ],
@@ -957,8 +882,8 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
                     "W",
+                    "D",
                     "W",
                     "W",
                     "W"
@@ -1139,12 +1064,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
+                "btts_pct": 40,
                 "over15_pct": 73,
-                "over25_pct": 53,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.47,
+                "over25_pct": 47,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.53,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1154,8 +1079,8 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "W",
                     "L",
+                    "W",
                     "L",
                     "L",
                     "L"
@@ -1499,6 +1424,81 @@
                 "draw": null,
                 "away": null
             }
+        },
+        {
+            "home": "Pogoń Grodzisk Mazowiecki",
+            "away": "Stal Mielec",
+            "datetime": "30.10. 19:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "vunTh32e",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/stal-mielec-pxXiDZkQ/?mid=vunTh32e",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 60,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "L",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 79,
+                "over15_pct": 100,
+                "over25_pct": 79,
+                "over35_pct": 50,
+                "avg_goals_scored": 1.57,
+                "avg_goals_conceded": 2.64,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "W",
+                    "L",
+                    "L",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
         }
     ],
     "standings": [
@@ -1566,31 +1566,31 @@
             "league_id": "ekstraklasa"
         },
         {
+            "team": "Wisła Płock",
+            "points": "14",
+            "rank": 10,
+            "url": "https://www.flashscore.pl/druzyna/wisla-plock/QoZYVU3E/",
+            "league_id": "ekstraklasa"
+        },
+        {
             "team": "Cracovia",
             "points": "12",
-            "rank": 10,
+            "rank": 11,
             "url": "https://www.flashscore.pl/druzyna/cracovia/KvXSf2A6/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "Motor Lublin",
             "points": "12",
-            "rank": 11,
+            "rank": 12,
             "url": "https://www.flashscore.pl/druzyna/motor-lublin/IoLk2VlL/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "Jagiellonia Białystok",
             "points": "12",
-            "rank": 12,
-            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
-            "league_id": "ekstraklasa"
-        },
-        {
-            "team": "Wisła Płock",
-            "points": "11",
             "rank": 13,
-            "url": "https://www.flashscore.pl/druzyna/wisla-plock/QoZYVU3E/",
+            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1643,45 +1643,45 @@
             "league_id": "betclic-1-liga"
         },
         {
+            "team": "Bruk-Bet T.",
+            "points": "20",
+            "rank": 3,
+            "url": "https://www.flashscore.pl/druzyna/nieciecza/YNkK4khO/",
+            "league_id": "betclic-1-liga"
+        },
+        {
             "team": "Lechia Gdańsk",
             "points": "19",
-            "rank": 3,
+            "rank": 4,
             "url": "https://www.flashscore.pl/druzyna/lechia-gdansk/GGLmkiK8/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Warta Poznań",
             "points": "18",
-            "rank": 4,
+            "rank": 5,
             "url": "https://www.flashscore.pl/druzyna/warta-poznan/CrVUWAl8/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "ŁKS Łódź",
             "points": "18",
-            "rank": 5,
+            "rank": 6,
             "url": "https://www.flashscore.pl/druzyna/lks-lodz/ShUKWHDG/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Ruch Chorzów",
             "points": "18",
-            "rank": 6,
+            "rank": 7,
             "url": "https://www.flashscore.pl/druzyna/ruch-chorzow/S4zygtuJ/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Miedź Legnica",
             "points": "17",
-            "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/miedz-legnica/lnY5n2Xe/",
-            "league_id": "betclic-1-liga"
-        },
-        {
-            "team": "Bruk-Bet T.",
-            "points": "17",
             "rank": 8,
-            "url": "https://www.flashscore.pl/druzyna/nieciecza/YNkK4khO/",
+            "url": "https://www.flashscore.pl/druzyna/miedz-legnica/lnY5n2Xe/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1767,5 +1767,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-10-19 12:50"
+    "updated": "2026-10-19 22:23"
 }
