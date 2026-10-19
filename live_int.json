@@ -1365,6 +1365,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "Getafe_Vallecano": {
+            "home": "Getafe",
+            "away": "Vallecano",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_pS53lQsA",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/vallecano-8bcjFy6O/?mid=pS53lQsA",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Real Madryt_Sevilla": {
             "home": "Real Madryt",
             "away": "Sevilla",
@@ -2106,44 +2158,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_2mAGw9Ti",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/villarreal-lUatW5jE/?mid=2mAGw9Ti",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Barcelona_Getafe": {
             "home": "Barcelona",
@@ -3241,5 +3256,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-10-19 13:08:24"
+    "updated": "2026-10-19 22:41:30"
 }

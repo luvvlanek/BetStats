@@ -751,81 +751,6 @@
             }
         },
         {
-            "home": "Getafe",
-            "away": "Vallecano",
-            "datetime": "19:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "pS53lQsA",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/vallecano-8bcjFy6O/?mid=pS53lQsA",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 60,
-                "over25_pct": 33,
-                "over35_pct": 13,
-                "avg_goals_scored": 0.73,
-                "avg_goals_conceded": 1.33,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "L",
-                    "W",
-                    "L",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 87,
-                "over25_pct": 67,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.8,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "D",
-                    "W",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 3,
-                "draw": 2.9,
-                "away": 2.6
-            }
-        },
-        {
             "home": "Levante",
             "away": "Ath. Bilbao",
             "datetime": "21.10. 18:00",
@@ -989,12 +914,12 @@
             "league_flag": "🇪🇸",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 73,
+                "btts_pct": 80,
                 "over15_pct": 87,
                 "over25_pct": 67,
                 "over35_pct": 27,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.8,
+                "avg_goals_scored": 1.27,
+                "avg_goals_conceded": 1.87,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1006,9 +931,9 @@
                 "form": [
                     "D",
                     "D",
+                    "D",
                     "W",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1317,12 +1242,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 60,
+                "btts_pct": 53,
+                "over15_pct": 67,
                 "over25_pct": 33,
                 "over35_pct": 13,
-                "avg_goals_scored": 0.73,
-                "avg_goals_conceded": 1.33,
+                "avg_goals_scored": 0.8,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1333,10 +1258,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "D",
+                    "D",
                     "L",
                     "W",
-                    "L",
-                    "D"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1498,6 +1423,81 @@
                 "home": 1.74,
                 "draw": 4.1,
                 "away": 4.3
+            }
+        },
+        {
+            "home": "Barcelona",
+            "away": "Real Madryt",
+            "datetime": "25.10. 20:00",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "6ZoODtBL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/real-madryt-W8mj7MDD/?mid=6ZoODtBL",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 87,
+                "over25_pct": 80,
+                "over35_pct": 67,
+                "avg_goals_scored": 3.73,
+                "avg_goals_conceded": 1.0,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "W",
+                    "W",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 80,
+                "over25_pct": 80,
+                "over35_pct": 47,
+                "avg_goals_scored": 2.47,
+                "avg_goals_conceded": 1.07,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "W",
+                    "W",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 1.55,
+                "draw": 5.05,
+                "away": 4.75
             }
         }
     ],
@@ -1713,24 +1713,24 @@
             "league_id": "laliga"
         },
         {
-            "team": "Espanyol",
-            "points": "8",
-            "rank": 13,
-            "url": "https://www.flashscore.pl/druzyna/espanyol/QFfPdh1J/",
-            "league_id": "laliga"
-        },
-        {
             "team": "Vallecano",
-            "points": "8",
-            "rank": 14,
+            "points": "9",
+            "rank": 13,
             "url": "https://www.flashscore.pl/druzyna/vallecano/8bcjFy6O/",
             "league_id": "laliga"
         },
         {
             "team": "Getafe",
+            "points": "9",
+            "rank": 14,
+            "url": "https://www.flashscore.pl/druzyna/getafe/dboeiWOt/",
+            "league_id": "laliga"
+        },
+        {
+            "team": "Espanyol",
             "points": "8",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/getafe/dboeiWOt/",
+            "url": "https://www.flashscore.pl/druzyna/espanyol/QFfPdh1J/",
             "league_id": "laliga"
         },
         {
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-10-19 13:08"
+    "updated": "2026-10-19 22:41"
 }
