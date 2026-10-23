@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Motor Lublin",
-            "away": "Zagłębie Lubin",
-            "datetime": "16:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "8CmSyPbE",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/motor-lublin-IoLk2VlL/zaglebie-lubin-tlYOere0/?mid=8CmSyPbE",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 87,
-                "over25_pct": 67,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.73,
-                "avg_goals_conceded": 1.4,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "D",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 73,
-                "over25_pct": 47,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 1.2,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "W",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Widzew Łódź",
             "away": "Górnik Zabrze",
             "datetime": "18:30",
@@ -389,11 +314,11 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
+                "btts_pct": 47,
                 "over15_pct": 87,
                 "over25_pct": 60,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.8,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.6,
                 "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -404,7 +329,7 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
+                    "W",
                     "L",
                     "W",
                     "W",
@@ -567,11 +492,11 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
+                "btts_pct": 47,
                 "over15_pct": 87,
                 "over25_pct": 60,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.8,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.6,
                 "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -582,7 +507,7 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
+                    "W",
                     "L",
                     "W",
                     "W",
@@ -751,25 +676,100 @@
             }
         },
         {
-            "home": "Polonia Warszawa",
-            "away": "Miedź Legnica",
-            "datetime": "16:00",
+            "home": "Górnik Zabrze",
+            "away": "Legia Warszawa",
+            "datetime": "30.10. 19:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "xh7BVZ4U",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/polonia-warszawa-ADZjR3us/?mid=xh7BVZ4U",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
+            "match_id": "jJw6ZSYp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/legia-warszawa-K6kUepBs/?mid=jJw6ZSYp",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 73,
+                "btts_pct": 67,
+                "over15_pct": 80,
                 "over25_pct": 53,
                 "over35_pct": 33,
-                "avg_goals_scored": 1.6,
-                "avg_goals_conceded": 1.2,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "L",
+                    "D",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 93,
+                "over25_pct": 47,
+                "over35_pct": 40,
+                "avg_goals_scored": 2.13,
+                "avg_goals_conceded": 1.07,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "W",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Motor Lublin",
+            "away": "Zagłębie Lubin",
+            "datetime": "44",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "8CmSyPbE",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/motor-lublin-IoLk2VlL/zaglebie-lubin-tlYOere0/?mid=8CmSyPbE",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 87,
+                "over25_pct": 67,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.73,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -781,9 +781,9 @@
                 "form": [
                     "W",
                     "W",
-                    "W",
-                    "W",
-                    "D"
+                    "D",
+                    "L",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -795,9 +795,9 @@
                 "btts_pct": 47,
                 "over15_pct": 73,
                 "over25_pct": 47,
-                "over35_pct": 13,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.0,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.27,
+                "avg_goals_conceded": 1.2,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -809,9 +809,9 @@
                 "form": [
                     "W",
                     "L",
+                    "W",
                     "L",
-                    "L",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1499,6 +1499,156 @@
                 "draw": null,
                 "away": null
             }
+        },
+        {
+            "home": "Lechia Gdańsk",
+            "away": "Unia Skierniewice",
+            "datetime": "31.10. 14:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "CrsNEpPE",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/unia-skierniewice-l42F3w54/?mid=CrsNEpPE",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 87,
+                "over25_pct": 87,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.93,
+                "avg_goals_conceded": 1.6,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "W",
+                    "W",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 50,
+                "over15_pct": 71,
+                "over25_pct": 57,
+                "over35_pct": 43,
+                "avg_goals_scored": 1.21,
+                "avg_goals_conceded": 1.5,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "D",
+                    "L",
+                    "D",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Polonia Warszawa",
+            "away": "Miedź Legnica",
+            "datetime": "Przerwa",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "xh7BVZ4U",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/polonia-warszawa-ADZjR3us/?mid=xh7BVZ4U",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 53,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.6,
+                "avg_goals_conceded": 1.2,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "W",
+                    "W",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 73,
+                "over25_pct": 47,
+                "over35_pct": 13,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 1.0,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "L",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
         }
     ],
     "standings": [
@@ -1531,24 +1681,24 @@
             "league_id": "ekstraklasa"
         },
         {
+            "team": "Zagłębie Lubin",
+            "points": "19",
+            "rank": 5,
+            "url": "https://www.flashscore.pl/druzyna/zaglebie-lubin/tlYOere0/",
+            "league_id": "ekstraklasa"
+        },
+        {
             "team": "GKS Katowice",
             "points": "18",
-            "rank": 5,
+            "rank": 6,
             "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "Wisła Kraków",
             "points": "18",
-            "rank": 6,
-            "url": "https://www.flashscore.pl/druzyna/wisla-krakow/rob20Q2Q/",
-            "league_id": "ekstraklasa"
-        },
-        {
-            "team": "Zagłębie Lubin",
-            "points": "18",
             "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/zaglebie-lubin/tlYOere0/",
+            "url": "https://www.flashscore.pl/druzyna/wisla-krakow/rob20Q2Q/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1573,17 +1723,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Cracovia",
-            "points": "12",
+            "team": "Motor Lublin",
+            "points": "13",
             "rank": 11,
-            "url": "https://www.flashscore.pl/druzyna/cracovia/KvXSf2A6/",
+            "url": "https://www.flashscore.pl/druzyna/motor-lublin/IoLk2VlL/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Motor Lublin",
+            "team": "Cracovia",
             "points": "12",
             "rank": 12,
-            "url": "https://www.flashscore.pl/druzyna/motor-lublin/IoLk2VlL/",
+            "url": "https://www.flashscore.pl/druzyna/cracovia/KvXSf2A6/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1637,7 +1787,7 @@
         },
         {
             "team": "Polonia Warszawa",
-            "points": "20",
+            "points": "21",
             "rank": 2,
             "url": "https://www.flashscore.pl/druzyna/polonia-warszawa/ADZjR3us/",
             "league_id": "betclic-1-liga"
@@ -1657,31 +1807,31 @@
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Warta Poznań",
+            "team": "Miedź Legnica",
             "points": "18",
             "rank": 5,
+            "url": "https://www.flashscore.pl/druzyna/miedz-legnica/lnY5n2Xe/",
+            "league_id": "betclic-1-liga"
+        },
+        {
+            "team": "Warta Poznań",
+            "points": "18",
+            "rank": 6,
             "url": "https://www.flashscore.pl/druzyna/warta-poznan/CrVUWAl8/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "ŁKS Łódź",
             "points": "18",
-            "rank": 6,
+            "rank": 7,
             "url": "https://www.flashscore.pl/druzyna/lks-lodz/ShUKWHDG/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Ruch Chorzów",
             "points": "18",
-            "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/ruch-chorzow/S4zygtuJ/",
-            "league_id": "betclic-1-liga"
-        },
-        {
-            "team": "Miedź Legnica",
-            "points": "17",
             "rank": 8,
-            "url": "https://www.flashscore.pl/druzyna/miedz-legnica/lnY5n2Xe/",
+            "url": "https://www.flashscore.pl/druzyna/ruch-chorzow/S4zygtuJ/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1767,5 +1917,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-10-23 11:29"
+    "updated": "2026-10-23 16:58"
 }
