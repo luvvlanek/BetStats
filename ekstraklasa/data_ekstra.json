@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Piast Gliwice",
-            "away": "Cracovia",
-            "datetime": "10:15",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "MZZpsKzf",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/piast-gliwice-ve2oT9ck/?mid=MZZpsKzf",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 100,
-                "over25_pct": 60,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.67,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "W",
-                    "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 57,
-                "over15_pct": 71,
-                "over25_pct": 50,
-                "over35_pct": 36,
-                "avg_goals_scored": 1.29,
-                "avg_goals_conceded": 1.36,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "W",
-                    "L",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Korona Kielce",
             "away": "GKS Katowice",
             "datetime": "12:45",
@@ -239,11 +164,11 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
+                "btts_pct": 60,
                 "over15_pct": 87,
                 "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.6,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.8,
                 "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -254,7 +179,7 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "W",
+                    "D",
                     "L",
                     "W",
                     "W",
@@ -417,11 +342,11 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
+                "btts_pct": 60,
                 "over15_pct": 87,
                 "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.6,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.8,
                 "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -432,7 +357,7 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "W",
+                    "D",
                     "L",
                     "W",
                     "W",
@@ -689,11 +614,11 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
+                "btts_pct": 60,
                 "over15_pct": 87,
                 "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.6,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.8,
                 "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -704,7 +629,7 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "W",
+                    "D",
                     "L",
                     "W",
                     "W",
@@ -737,6 +662,156 @@
                     "L",
                     "L",
                     "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Wieczysta Kraków",
+            "away": "Jagiellonia Białystok",
+            "datetime": "31.10. 13:45",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "2Dy1wxzJ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/ks-wieczysta-krakow-ImhQf1z6/?mid=2Dy1wxzJ",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 93,
+                "over25_pct": 67,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.87,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "W",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 67,
+                "over15_pct": 93,
+                "over25_pct": 80,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.8,
+                "avg_goals_conceded": 1.6,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "W",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Piast Gliwice",
+            "away": "Cracovia",
+            "datetime": "20",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "MZZpsKzf",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/piast-gliwice-ve2oT9ck/?mid=MZZpsKzf",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 100,
+                "over25_pct": 60,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.8,
+                "avg_goals_conceded": 1.67,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "L",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 57,
+                "over15_pct": 71,
+                "over25_pct": 50,
+                "over35_pct": 36,
+                "avg_goals_scored": 1.29,
+                "avg_goals_conceded": 1.36,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "L",
+                    "L",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1531,31 +1606,31 @@
             "league_id": "ekstraklasa"
         },
         {
+            "team": "Piast Gliwice",
+            "points": "20",
+            "rank": 5,
+            "url": "https://www.flashscore.pl/druzyna/piast-gliwice/ve2oT9ck/",
+            "league_id": "ekstraklasa"
+        },
+        {
             "team": "Zagłębie Lubin",
             "points": "19",
-            "rank": 5,
+            "rank": 6,
             "url": "https://www.flashscore.pl/druzyna/zaglebie-lubin/tlYOere0/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "GKS Katowice",
             "points": "18",
-            "rank": 6,
+            "rank": 7,
             "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
             "league_id": "ekstraklasa"
         },
         {
             "team": "Wisła Kraków",
             "points": "18",
-            "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/wisla-krakow/rob20Q2Q/",
-            "league_id": "ekstraklasa"
-        },
-        {
-            "team": "Piast Gliwice",
-            "points": "17",
             "rank": 8,
-            "url": "https://www.flashscore.pl/druzyna/piast-gliwice/ve2oT9ck/",
+            "url": "https://www.flashscore.pl/druzyna/wisla-krakow/rob20Q2Q/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1580,17 +1655,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Cracovia",
+            "team": "Jagiellonia Białystok",
             "points": "12",
             "rank": 12,
-            "url": "https://www.flashscore.pl/druzyna/cracovia/KvXSf2A6/",
+            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Jagiellonia Białystok",
+            "team": "Cracovia",
             "points": "12",
             "rank": 13,
-            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
+            "url": "https://www.flashscore.pl/druzyna/cracovia/KvXSf2A6/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1767,5 +1842,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-10-24 04:08"
+    "updated": "2026-10-24 10:48"
 }
