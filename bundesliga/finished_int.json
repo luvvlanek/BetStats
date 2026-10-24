@@ -261,6 +261,58 @@
             }
         },
         {
+            "home": "Borussia Dortmund",
+            "away": "Eintracht Frankfurt",
+            "score": "1:0",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_0IQ4B1NM",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dortmund-nP1i5US1/frankfurt-8vndvXTk/?mid=0IQ4B1NM",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "VfB Stuttgart",
             "away": "B. Moenchengladbach",
             "score": "2:3",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_ADR926vh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/frankfurt-8vndvXTk/koln-WG9pOTse/?mid=ADR926vh",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "SC Freiburg",
@@ -1508,6 +1523,110 @@
             }
         },
         {
+            "home": "Racing Santander",
+            "away": "Espanyol",
+            "score": "2:1",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_25Xg8KYr",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/racing-santander-nVpEwOrl/?mid=25Xg8KYr",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Valencia",
+            "away": "Villarreal",
+            "score": "1:2",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_ELhT9X9m",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/valencia-CQeaytrD/villarreal-lUatW5jE/?mid=ELhT9X9m",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Alaves",
             "away": "Malaga",
             "score": "1:1",
@@ -2144,44 +2263,7 @@
             "stage": "Koniec",
             "match_id": "g_1_ADgsxdhm",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/sevilla-h8oAv4Ts/?mid=ADgsxdhm",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Racing Santander",
@@ -2196,44 +2278,7 @@
             "stage": "Koniec",
             "match_id": "g_1_4fecYDiC",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/valencia-CQeaytrD/?mid=4fecYDiC",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Betis",
@@ -3391,5 +3436,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-24 16:10"
+    "updated": "2026-10-24 21:00"
 }
