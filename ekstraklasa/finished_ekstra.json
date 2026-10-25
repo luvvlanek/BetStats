@@ -1,70 +1,18 @@
 {
     "matches": [
         {
-            "home": "Piast Gliwice",
-            "away": "Cracovia",
-            "score": "3:1",
-            "datetime": "Koniec",
+            "home": "Wisła Kraków",
+            "away": "Raków Częstochowa",
+            "score": "2:1",
+            "datetime": "24.10. 18:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_MZZpsKzf",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/piast-gliwice-ve2oT9ck/?mid=MZZpsKzf",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "Korona Kielce",
-            "away": "GKS Katowice",
-            "score": "1:0",
-            "datetime": "Koniec",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_Gxizz3TQ",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/korona-kielce-pp78XcbA/?mid=Gxizz3TQ",
+            "match_id": "g_1_C8x6Util",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/wisla-krakow-rob20Q2Q/?mid=C8x6Util",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -108,7 +56,7 @@
             "home": "Pogoń Szczecin",
             "away": "Radomiak Radom",
             "score": "4:3",
-            "datetime": "Koniec",
+            "datetime": "24.10. 15:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -157,18 +105,70 @@
             }
         },
         {
-            "home": "Wisła Kraków",
-            "away": "Raków Częstochowa",
-            "score": "2:1",
-            "datetime": "Koniec",
+            "home": "Korona Kielce",
+            "away": "GKS Katowice",
+            "score": "1:0",
+            "datetime": "24.10. 12:45",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_C8x6Util",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/wisla-krakow-rob20Q2Q/?mid=C8x6Util",
+            "match_id": "g_1_Gxizz3TQ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/korona-kielce-pp78XcbA/?mid=Gxizz3TQ",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Piast Gliwice",
+            "away": "Cracovia",
+            "score": "3:1",
+            "datetime": "24.10. 10:15",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_MZZpsKzf",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/piast-gliwice-ve2oT9ck/?mid=MZZpsKzf",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2101,10 +2101,62 @@
             "match_stats": null
         },
         {
+            "home": "Puszcza Niepołomice",
+            "away": "Lechia Gdańsk",
+            "score": "2:1",
+            "datetime": "24.10. 15:45",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_UR33XezI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/puszcza-dtqx13O8/?mid=UR33XezI",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Arka Gdynia",
             "away": "Bruk-Bet T.",
             "score": "3:1",
-            "datetime": "Koniec",
+            "datetime": "24.10. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2156,7 +2208,7 @@
             "home": "Stal Mielec",
             "away": "Chrobry Głogów",
             "score": "0:0",
-            "datetime": "Koniec",
+            "datetime": "24.10. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2208,7 +2260,7 @@
             "home": "Unia Skierniewice",
             "away": "Polonia Bytom",
             "score": "1:2",
-            "datetime": "Koniec",
+            "datetime": "24.10. 13:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2217,58 +2269,6 @@
             "stage": "Koniec",
             "match_id": "g_1_SGnLkwjn",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-bytom-vRn3UqXP/unia-skierniewice-l42F3w54/?mid=SGnLkwjn",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "Puszcza Niepołomice",
-            "away": "Lechia Gdańsk",
-            "score": "2:1",
-            "datetime": "Koniec",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_UR33XezI",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/puszcza-dtqx13O8/?mid=UR33XezI",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -4216,5 +4216,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-24 20:43"
+    "updated": "2026-10-25 04:07"
 }
