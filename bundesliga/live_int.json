@@ -1470,6 +1470,72 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "TSG Hoffenheim_Bayer Leverkusen": {
+            "home": "TSG Hoffenheim",
+            "away": "Bayer Leverkusen",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "73",
+            "datetime": "73",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_WKgSBVY2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hoffenheim-hQAtP9Sl/leverkusen-4jcj2zMd/?mid=WKgSBVY2"
+        },
+        "Ath. Bilbao_Getafe": {
+            "home": "Ath. Bilbao",
+            "away": "Getafe",
+            "is_live": false,
+            "is_finished": true,
+            "score": "4:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_YmrNgLJk",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/getafe-dboeiWOt/?mid=YmrNgLJk",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Atl. Madryt_A Coruna": {
             "home": "Atl. Madryt",
             "away": "A Coruna",
@@ -2211,44 +2277,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_bB7ejnDc",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/espanyol-QFfPdh1J/?mid=bB7ejnDc",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "A Coruna_Levante": {
             "home": "A Coruna",
@@ -3449,7 +3478,21 @@
             "match_id": "g_1_E75kfwuq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/getafe-dboeiWOt/?mid=E75kfwuq",
             "match_stats": null
+        },
+        "Celta Vigo_Betis": {
+            "home": "Celta Vigo",
+            "away": "Betis",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "Przerwa",
+            "datetime": "Przerwa",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_b9rGF2t9",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/celta-vigo-8pvUZFhf/?mid=b9rGF2t9"
         }
     },
-    "updated": "2026-10-25 11:31:57"
+    "updated": "2026-10-25 16:20:34"
 }
