@@ -1,10 +1,62 @@
 {
     "matches": [
         {
+            "home": "Borussia Dortmund",
+            "away": "Eintracht Frankfurt",
+            "score": "1:0",
+            "datetime": "24.10. 16:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_0IQ4B1NM",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dortmund-nP1i5US1/frankfurt-8vndvXTk/?mid=0IQ4B1NM",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "1. FC Koeln",
             "away": "FC Schalke 04",
             "score": "0:0",
-            "datetime": "Koniec",
+            "datetime": "24.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -56,7 +108,7 @@
             "home": "1. FSV Mainz 05",
             "away": "Werder Brema",
             "score": "2:3",
-            "datetime": "Koniec",
+            "datetime": "24.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -108,7 +160,7 @@
             "home": "FC Augsburg",
             "away": "Union Berlin",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "24.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -160,7 +212,7 @@
             "home": "Paderborn",
             "away": "Hamburger SV",
             "score": "1:0",
-            "datetime": "Koniec",
+            "datetime": "24.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -212,7 +264,7 @@
             "home": "RB Lipsk",
             "away": "Elversberg",
             "score": "4:0",
-            "datetime": "Koniec",
+            "datetime": "24.10. 13:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -221,58 +273,6 @@
             "stage": "Koniec",
             "match_id": "g_1_dlCz6uop",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elversberg-6in2Eknb/rb-leipzig-KbS1suSm/?mid=dlCz6uop",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "Borussia Dortmund",
-            "away": "Eintracht Frankfurt",
-            "score": "1:0",
-            "datetime": "Koniec",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_0IQ4B1NM",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dortmund-nP1i5US1/frankfurt-8vndvXTk/?mid=0IQ4B1NM",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1471,18 +1471,70 @@
             "match_stats": null
         },
         {
-            "home": "Vallecano",
-            "away": "Elche",
-            "score": "0:3",
-            "datetime": "Koniec",
+            "home": "Atl. Madryt",
+            "away": "A Coruna",
+            "score": "1:0",
+            "datetime": "24.10. 19:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_AVz26b3e",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/vallecano-8bcjFy6O/?mid=AVz26b3e",
+            "match_id": "g_1_61tVial2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/atl-madryt-jaarqpLQ/?mid=61tVial2",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Valencia",
+            "away": "Villarreal",
+            "score": "1:2",
+            "datetime": "24.10. 16:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_ELhT9X9m",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/valencia-CQeaytrD/villarreal-lUatW5jE/?mid=ELhT9X9m",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1526,7 +1578,7 @@
             "home": "Racing Santander",
             "away": "Espanyol",
             "score": "2:1",
-            "datetime": "Koniec",
+            "datetime": "24.10. 14:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1575,18 +1627,18 @@
             }
         },
         {
-            "home": "Valencia",
-            "away": "Villarreal",
-            "score": "1:2",
-            "datetime": "Koniec",
+            "home": "Vallecano",
+            "away": "Elche",
+            "score": "0:3",
+            "datetime": "24.10. 12:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_ELhT9X9m",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/valencia-CQeaytrD/villarreal-lUatW5jE/?mid=ELhT9X9m",
+            "match_id": "g_1_AVz26b3e",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/vallecano-8bcjFy6O/?mid=AVz26b3e",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2211,44 +2263,7 @@
             "stage": "Koniec",
             "match_id": "g_1_6HK9SrLj",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/levante-G8FL0ShI/?mid=6HK9SrLj",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Levante",
@@ -3436,5 +3451,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-24 21:00"
+    "updated": "2026-10-25 04:24"
 }

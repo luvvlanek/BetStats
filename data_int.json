@@ -3,7 +3,7 @@
         {
             "home": "TSG Hoffenheim",
             "away": "Bayer Leverkusen",
-            "datetime": "25.10. 14:30",
+            "datetime": "14:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -70,15 +70,15 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.85,
-                "draw": 3.9,
-                "away": 2.2
+                "home": 2.9,
+                "draw": 3.75,
+                "away": 2.25
             }
         },
         {
             "home": "SC Freiburg",
             "away": "Bayern Monachium",
-            "datetime": "25.10. 16:30",
+            "datetime": "16:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -145,9 +145,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 6,
-                "draw": 5.3,
-                "away": 1.38
+                "home": 6.25,
+                "draw": 5.5,
+                "away": 1.4
             }
         },
         {
@@ -753,7 +753,7 @@
         {
             "home": "Ath. Bilbao",
             "away": "Getafe",
-            "datetime": "25.10. 13:00",
+            "datetime": "13:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -822,13 +822,13 @@
             "odds": {
                 "home": 1.57,
                 "draw": 3.9,
-                "away": 6
+                "away": 6.25
             }
         },
         {
             "home": "Celta Vigo",
             "away": "Betis",
-            "datetime": "25.10. 15:15",
+            "datetime": "15:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -903,7 +903,7 @@
         {
             "home": "Real Sociedad",
             "away": "Levante",
-            "datetime": "25.10. 17:30",
+            "datetime": "17:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -970,15 +970,15 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.57,
-                "draw": 4.4,
-                "away": 5.4
+                "home": 1.6,
+                "draw": 4.5,
+                "away": 4.75
             }
         },
         {
             "home": "Barcelona",
             "away": "Real Madryt",
-            "datetime": "25.10. 20:00",
+            "datetime": "20:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1045,9 +1045,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.65,
-                "draw": 5.9,
-                "away": 3.6
+                "home": 1.62,
+                "draw": 5.75,
+                "away": 3.7
             }
         },
         {
@@ -1120,8 +1120,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.87,
-                "draw": 3.4,
+                "home": 1.9,
+                "draw": 3.3,
                 "away": 4.5
             }
         },
@@ -1242,12 +1242,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 93,
-                "over25_pct": 73,
+                "btts_pct": 53,
+                "over15_pct": 87,
+                "over25_pct": 67,
                 "over35_pct": 27,
                 "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.13,
+                "avg_goals_conceded": 1.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1257,8 +1257,8 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
                     "W",
+                    "D",
                     "W",
                     "W",
                     "W"
@@ -1270,9 +1270,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 5,
+                "home": 4.75,
                 "draw": 4.1,
-                "away": 1.57
+                "away": 1.6
             }
         },
         {
@@ -1420,8 +1420,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.32,
-                "draw": 5.3,
+                "home": 1.38,
+                "draw": 4.75,
                 "away": 7
             }
         },
@@ -1495,84 +1495,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.1,
+                "home": 1.11,
                 "draw": 8.5,
-                "away": 17
-            }
-        },
-        {
-            "home": "Atl. Madryt",
-            "away": "A Coruna",
-            "datetime": "90+2",
-            "status": "live",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "61tVial2",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/atl-madryt-jaarqpLQ/?mid=61tVial2",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 93,
-                "over25_pct": 73,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.13,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "W",
-                    "W",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 80,
-                "over15_pct": 80,
-                "over25_pct": 40,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.4,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "L",
-                    "L",
-                    "D",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.22,
-                "draw": 6.5,
-                "away": 11
+                "away": 15
             }
         }
     ],
@@ -1856,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-10-24 21:00"
+    "updated": "2026-10-25 04:24"
 }
