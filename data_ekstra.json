@@ -751,81 +751,6 @@
             }
         },
         {
-            "home": "Odra Opole",
-            "away": "Pogoń Siedlce",
-            "datetime": "11:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "0UpTmHKb",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/pogon-siedlce-d6IVB42i/?mid=0UpTmHKb",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 33,
-                "over15_pct": 60,
-                "over25_pct": 33,
-                "over35_pct": 13,
-                "avg_goals_scored": 0.93,
-                "avg_goals_conceded": 1.07,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "W",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 73,
-                "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 1.33,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "L",
-                    "W",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Ruch Chorzów",
             "away": "Pogoń Grodzisk Mazowiecki",
             "datetime": "13:30",
@@ -1499,6 +1424,156 @@
                 "draw": null,
                 "away": null
             }
+        },
+        {
+            "home": "Stal Rzeszów",
+            "away": "Puszcza Niepołomice",
+            "datetime": "02.11. 19:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "r9tGbYYG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/puszcza-dtqx13O8/stal-rzeszow-IkpY1q92/?mid=r9tGbYYG",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 53,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 1.53,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "D",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 73,
+                "over25_pct": 53,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 1.47,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "W",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Odra Opole",
+            "away": "Pogoń Siedlce",
+            "datetime": "6",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "0UpTmHKb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/pogon-siedlce-d6IVB42i/?mid=0UpTmHKb",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 33,
+                "over15_pct": 60,
+                "over25_pct": 33,
+                "over35_pct": 13,
+                "avg_goals_scored": 0.93,
+                "avg_goals_conceded": 1.07,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "W",
+                    "W",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 60,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "L",
+                    "W",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
         }
     ],
     "standings": [
@@ -1713,31 +1788,31 @@
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Stal Mielec",
+            "team": "Pogoń Siedlce",
             "points": "13",
             "rank": 13,
-            "url": "https://www.flashscore.pl/druzyna/stal-mielec/pxXiDZkQ/",
+            "url": "https://www.flashscore.pl/druzyna/pogon-siedlce/d6IVB42i/",
             "league_id": "betclic-1-liga"
         },
         {
-            "team": "Pogoń Siedlce",
-            "points": "12",
+            "team": "Odra Opole",
+            "points": "13",
             "rank": 14,
-            "url": "https://www.flashscore.pl/druzyna/pogon-siedlce/d6IVB42i/",
+            "url": "https://www.flashscore.pl/druzyna/odra-opole/C8Kg1k4R/",
+            "league_id": "betclic-1-liga"
+        },
+        {
+            "team": "Stal Mielec",
+            "points": "13",
+            "rank": 15,
+            "url": "https://www.flashscore.pl/druzyna/stal-mielec/pxXiDZkQ/",
             "league_id": "betclic-1-liga"
         },
         {
             "team": "Puszcza Niepołomice",
             "points": "12",
-            "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/puszcza/dtqx13O8/",
-            "league_id": "betclic-1-liga"
-        },
-        {
-            "team": "Odra Opole",
-            "points": "12",
             "rank": 16,
-            "url": "https://www.flashscore.pl/druzyna/odra-opole/C8Kg1k4R/",
+            "url": "https://www.flashscore.pl/druzyna/puszcza/dtqx13O8/",
             "league_id": "betclic-1-liga"
         },
         {
@@ -1767,5 +1842,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-10-25 04:07"
+    "updated": "2026-10-25 11:14"
 }
