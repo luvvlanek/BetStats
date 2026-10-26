@@ -1501,6 +1501,58 @@
             "match_stats": null
         },
         {
+            "home": "Sevilla",
+            "away": "Osasuna",
+            "score": "2:0",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_8MQeSuQE",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/osasuna-ETdxjU8a/sevilla-h8oAv4Ts/?mid=8MQeSuQE",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Barcelona",
             "away": "Real Madryt",
             "score": "1:2",
@@ -2241,44 +2293,7 @@
             "stage": "Koniec",
             "match_id": "g_1_lOfssrzp",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/osasuna-ETdxjU8a/racing-santander-nVpEwOrl/?mid=lOfssrzp",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Valencia",
@@ -3541,5 +3556,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-26 13:03"
+    "updated": "2026-10-26 22:58"
 }

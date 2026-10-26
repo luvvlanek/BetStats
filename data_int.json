@@ -751,81 +751,6 @@
             }
         },
         {
-            "home": "Sevilla",
-            "away": "Osasuna",
-            "datetime": "20:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "8MQeSuQE",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/osasuna-ETdxjU8a/sevilla-h8oAv4Ts/?mid=8MQeSuQE",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 14,
-                "btts_pct": 79,
-                "over15_pct": 79,
-                "over25_pct": 71,
-                "over35_pct": 43,
-                "avg_goals_scored": 1.5,
-                "avg_goals_conceded": 1.64,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "D",
-                    "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 87,
-                "over25_pct": 47,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.2,
-                "avg_goals_conceded": 1.67,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "D",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.83,
-                "draw": 3.4,
-                "away": 4.8
-            }
-        },
-        {
             "home": "Villarreal",
             "away": "Espanyol",
             "datetime": "30.10. 20:00",
@@ -895,9 +820,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.42,
+                "home": 1.38,
                 "draw": 4.8,
-                "away": 6
+                "away": 6.5
             }
         },
         {
@@ -970,9 +895,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 5.1,
+                "home": 4.8,
                 "draw": 4.4,
-                "away": 1.53
+                "away": 1.59
             }
         },
         {
@@ -1120,9 +1045,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.37,
+                "home": 1.32,
                 "draw": 5.1,
-                "away": 7
+                "away": 7.5
             }
         },
         {
@@ -1241,13 +1166,13 @@
                 "xg_per_match": []
             },
             "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 79,
-                "over15_pct": 79,
-                "over25_pct": 71,
-                "over35_pct": 43,
-                "avg_goals_scored": 1.5,
-                "avg_goals_conceded": 1.64,
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 80,
+                "over25_pct": 67,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 1.53,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1257,11 +1182,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "D",
                     "L",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1345,9 +1270,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 9.5,
-                "draw": 6.5,
-                "away": 1.21
+                "home": 9,
+                "draw": 7.5,
+                "away": 1.2
             }
         },
         {
@@ -1421,8 +1346,8 @@
             "h2h": [],
             "odds": {
                 "home": 2.4,
-                "draw": 3.4,
-                "away": 2.8
+                "draw": 3.2,
+                "away": 2.95
             }
         },
         {
@@ -1498,6 +1423,81 @@
                 "home": 2.1,
                 "draw": 3.5,
                 "away": 3.3
+            }
+        },
+        {
+            "home": "A Coruna",
+            "away": "Osasuna",
+            "datetime": "02.11. 20:00",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "tGhi4TwP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/osasuna-ETdxjU8a/?mid=tGhi4TwP",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 73,
+                "over25_pct": 33,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "D",
+                    "L",
+                    "L",
+                    "D"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 87,
+                "over25_pct": 47,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.07,
+                "avg_goals_conceded": 1.8,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "W",
+                    "L",
+                    "D",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.1,
+                "draw": 3.3,
+                "away": 3.4
             }
         }
     ],
@@ -1665,7 +1665,7 @@
         },
         {
             "team": "Sevilla",
-            "points": "14",
+            "points": "17",
             "rank": 6,
             "url": "https://www.flashscore.pl/druzyna/sevilla/h8oAv4Ts/",
             "league_id": "laliga"
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-10-26 13:03"
+    "updated": "2026-10-26 22:58"
 }
