@@ -745,15 +745,15 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.5,
+                "home": 2.4,
                 "draw": 3.75,
-                "away": 2.5
+                "away": 2.55
             }
         },
         {
             "home": "Sevilla",
             "away": "Osasuna",
-            "datetime": "26.10. 20:00",
+            "datetime": "20:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -820,9 +820,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.91,
-                "draw": 3.3,
-                "away": 4.5
+                "home": 1.9,
+                "draw": 3.4,
+                "away": 4.33
             }
         },
         {
@@ -1120,8 +1120,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.37,
-                "draw": 5.1,
+                "home": 1.38,
+                "draw": 4.75,
                 "away": 7
             }
         },
@@ -1139,12 +1139,12 @@
             "league_flag": "🇪🇸",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 93,
-                "over25_pct": 87,
+                "btts_pct": 73,
+                "over15_pct": 100,
+                "over25_pct": 93,
                 "over35_pct": 73,
-                "avg_goals_scored": 3.8,
-                "avg_goals_conceded": 1.27,
+                "avg_goals_scored": 3.87,
+                "avg_goals_conceded": 1.33,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1155,7 +1155,7 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
-                    "W",
+                    "L",
                     "W",
                     "W",
                     "W"
@@ -1195,9 +1195,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.1,
-                "draw": 8,
-                "away": 31
+                "home": 1.08,
+                "draw": 10,
+                "away": 17
             }
         },
         {
@@ -1270,9 +1270,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.95,
+                "home": 2.9,
                 "draw": 3,
-                "away": 2.55
+                "away": 2.5
             }
         },
         {
@@ -1336,7 +1336,7 @@
                     "W",
                     "W",
                     "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1345,9 +1345,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 8.5,
-                "draw": 6.5,
-                "away": 1.24
+                "home": 9,
+                "draw": 6.25,
+                "away": 1.25
             }
         },
         {
@@ -1420,9 +1420,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.4,
-                "draw": 3.4,
-                "away": 2.8
+                "home": 2.5,
+                "draw": 3.3,
+                "away": 2.7
             }
         },
         {
@@ -1495,84 +1495,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.05,
-                "draw": 3.5,
+                "home": 2,
+                "draw": 3.6,
                 "away": 3.4
-            }
-        },
-        {
-            "home": "Barcelona",
-            "away": "Real Madryt",
-            "datetime": "Przerwa",
-            "status": "live",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "6ZoODtBL",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/real-madryt-W8mj7MDD/?mid=6ZoODtBL",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 93,
-                "over25_pct": 87,
-                "over35_pct": 73,
-                "avg_goals_scored": 3.8,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "W",
-                    "W",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 80,
-                "over35_pct": 47,
-                "avg_goals_scored": 2.6,
-                "avg_goals_conceded": 1.0,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "W",
-                    "W",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.59,
-                "draw": 6,
-                "away": 3.9
             }
         }
     ],
@@ -1856,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-10-25 21:08"
+    "updated": "2026-10-26 04:30"
 }

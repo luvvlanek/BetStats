@@ -1,18 +1,18 @@
 {
     "matches": [
         {
-            "home": "TSG Hoffenheim",
-            "away": "Bayer Leverkusen",
-            "score": "3:0",
-            "datetime": "Koniec",
+            "home": "SC Freiburg",
+            "away": "Bayern Monachium",
+            "score": "1:3",
+            "datetime": "25.10. 16:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_WKgSBVY2",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hoffenheim-hQAtP9Sl/leverkusen-4jcj2zMd/?mid=WKgSBVY2",
+            "match_id": "g_1_4YizA93F",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/freiburg-fiEQZ7C7/?mid=4YizA93F",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -53,18 +53,18 @@
             }
         },
         {
-            "home": "SC Freiburg",
-            "away": "Bayern Monachium",
-            "score": "1:3",
-            "datetime": "Koniec",
+            "home": "TSG Hoffenheim",
+            "away": "Bayer Leverkusen",
+            "score": "3:0",
+            "datetime": "25.10. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_4YizA93F",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/freiburg-fiEQZ7C7/?mid=4YizA93F",
+            "match_id": "g_1_WKgSBVY2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hoffenheim-hQAtP9Sl/leverkusen-4jcj2zMd/?mid=WKgSBVY2",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1501,18 +1501,70 @@
             "match_stats": null
         },
         {
-            "home": "Ath. Bilbao",
-            "away": "Getafe",
-            "score": "4:0",
-            "datetime": "Koniec",
+            "home": "Barcelona",
+            "away": "Real Madryt",
+            "score": "1:2",
+            "datetime": "25.10. 20:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_YmrNgLJk",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/getafe-dboeiWOt/?mid=YmrNgLJk",
+            "match_id": "g_1_6ZoODtBL",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/real-madryt-W8mj7MDD/?mid=6ZoODtBL",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Real Sociedad",
+            "away": "Levante",
+            "score": "2:1",
+            "datetime": "25.10. 17:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_GSwA4xY7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/real-sociedad-jNvak2f3/?mid=GSwA4xY7",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1556,7 +1608,7 @@
             "home": "Celta Vigo",
             "away": "Betis",
             "score": "0:0",
-            "datetime": "Koniec",
+            "datetime": "25.10. 15:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1605,18 +1657,18 @@
             }
         },
         {
-            "home": "Real Sociedad",
-            "away": "Levante",
-            "score": "2:1",
-            "datetime": "Koniec",
+            "home": "Ath. Bilbao",
+            "away": "Getafe",
+            "score": "4:0",
+            "datetime": "25.10. 13:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_GSwA4xY7",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/real-sociedad-jNvak2f3/?mid=GSwA4xY7",
+            "match_id": "g_1_YmrNgLJk",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/getafe-dboeiWOt/?mid=YmrNgLJk",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2241,44 +2293,7 @@
             "stage": "Koniec",
             "match_id": "g_1_MRky3Pd3",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/valencia-CQeaytrD/?mid=MRky3Pd3",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Betis",
@@ -3526,5 +3541,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-25 21:08"
+    "updated": "2026-10-26 04:30"
 }
