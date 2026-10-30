@@ -1,5 +1,109 @@
 {
     "matches": {
+        "Cracovia_Motor Lublin": {
+            "home": "Cracovia",
+            "away": "Motor Lublin",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_UJTn1uSP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/motor-lublin-IoLk2VlL/?mid=UJTn1uSP",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Górnik Zabrze_Legia Warszawa": {
+            "home": "Górnik Zabrze",
+            "away": "Legia Warszawa",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_jJw6ZSYp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/legia-warszawa-K6kUepBs/?mid=jJw6ZSYp",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Legia Warszawa_Lech Poznań": {
             "home": "Legia Warszawa",
             "away": "Lech Poznań",
@@ -689,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_r9SfJeRk",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/legia-warszawa-K6kUepBs/?mid=r9SfJeRk",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "GKS Katowice_Pogoń Szczecin": {
             "home": "GKS Katowice",
@@ -741,44 +808,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_UPQ2HZe2",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/pogon-szczecin-Um9YwPQ0/?mid=UPQ2HZe2",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Motor Lublin_Śląsk Wrocław": {
             "home": "Motor Lublin",
@@ -2115,6 +2145,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/korona-kielce-pp78XcbA/?mid=hYltRwAF",
             "match_stats": null
         },
+        "Pogoń Grodzisk Mazowiecki_Stal Mielec": {
+            "home": "Pogoń Grodzisk Mazowiecki",
+            "away": "Stal Mielec",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_vunTh32e",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/stal-mielec-pxXiDZkQ/?mid=vunTh32e",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Warta Poznań_ŁKS Łódź": {
             "home": "Warta Poznań",
             "away": "ŁKS Łódź",
@@ -2856,44 +2938,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_dE5eZH55",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/polonia-warszawa-ADZjR3us/?mid=dE5eZH55",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Polonia Bytom_Chrobry Głogów": {
             "home": "Polonia Bytom",
@@ -4214,52 +4259,7 @@
             "match_id": "g_1_dMoeFSwg",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/ruch-chorzow-S4zygtuJ/?mid=dMoeFSwg",
             "match_stats": null
-        },
-        "Lechia Gdańsk_Pogoń Grodzisk Mazowiecki": {
-            "home": "Lechia Gdańsk",
-            "away": "Pogoń Grodzisk Mazowiecki",
-            "is_live": false,
-            "is_finished": true,
-            "score": "0:3",
-            "stage": "Koniec",
-            "datetime": "25.07. 13:30",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_GjrBBpwI",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/pogon-grodzisk-mazowiecki-4nBQsDq2/?mid=GjrBBpwI",
-            "match_stats": null
-        },
-        "Pogoń Siedlce_ŁKS Łódź": {
-            "home": "Pogoń Siedlce",
-            "away": "ŁKS Łódź",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:1",
-            "stage": "Koniec",
-            "datetime": "25.07. 13:30",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_OGRyAX1D",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/pogon-siedlce-d6IVB42i/?mid=OGRyAX1D",
-            "match_stats": null
-        },
-        "Stal Rzeszów_Chrobry Głogów": {
-            "home": "Stal Rzeszów",
-            "away": "Chrobry Głogów",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:5",
-            "stage": "Koniec",
-            "datetime": "25.07. 13:30",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_ldrmHl9t",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/stal-rzeszow-IkpY1q92/?mid=ldrmHl9t",
-            "match_stats": null
         }
     },
-    "updated": "2026-10-30 12:40:22"
+    "updated": "2026-10-30 22:18:37"
 }
