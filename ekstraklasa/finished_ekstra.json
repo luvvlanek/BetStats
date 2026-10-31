@@ -1,18 +1,18 @@
 {
     "matches": [
         {
-            "home": "Cracovia",
-            "away": "Motor Lublin",
-            "score": "1:2",
-            "datetime": "Koniec",
+            "home": "Górnik Zabrze",
+            "away": "Legia Warszawa",
+            "score": "0:0",
+            "datetime": "30.10. 19:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_UJTn1uSP",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/motor-lublin-IoLk2VlL/?mid=UJTn1uSP",
+            "match_id": "g_1_jJw6ZSYp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/legia-warszawa-K6kUepBs/?mid=jJw6ZSYp",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -53,18 +53,18 @@
             }
         },
         {
-            "home": "Górnik Zabrze",
-            "away": "Legia Warszawa",
-            "score": "0:0",
-            "datetime": "Koniec",
+            "home": "Cracovia",
+            "away": "Motor Lublin",
+            "score": "1:2",
+            "datetime": "30.10. 17:00",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_jJw6ZSYp",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/legia-warszawa-K6kUepBs/?mid=jJw6ZSYp",
+            "match_id": "g_1_UJTn1uSP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/motor-lublin-IoLk2VlL/?mid=UJTn1uSP",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2149,7 +2149,7 @@
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Stal Mielec",
             "score": "0:1",
-            "datetime": "Koniec",
+            "datetime": "30.10. 19:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -4261,5 +4261,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-30 22:18"
+    "updated": "2026-10-31 04:59"
 }
