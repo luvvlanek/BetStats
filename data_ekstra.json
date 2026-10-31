@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "GKS Katowice",
-            "away": "Widzew Łódź",
-            "datetime": "19:15",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "KWGYiykC",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/widzew-lodz-rNOIW3uC/?mid=KWGYiykC",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 73,
-                "over25_pct": 60,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.6,
-                "avg_goals_conceded": 1.33,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "L",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 73,
-                "over25_pct": 47,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 1.27,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "D",
-                    "D",
-                    "L",
-                    "D",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Radomiak Radom",
             "away": "Śląsk Wrocław",
             "datetime": "02.11. 17:00",
@@ -689,12 +614,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
+                "btts_pct": 67,
                 "over15_pct": 73,
-                "over25_pct": 47,
-                "over35_pct": 33,
+                "over25_pct": 53,
+                "over35_pct": 40,
                 "avg_goals_scored": 1.27,
-                "avg_goals_conceded": 1.27,
+                "avg_goals_conceded": 1.47,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -704,10 +629,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "L",
                     "D",
                     "D",
                     "L",
-                    "D",
                     "D"
                 ],
                 "corners_per_match": [],
@@ -751,24 +676,24 @@
             }
         },
         {
-            "home": "Lech Poznań",
-            "away": "Wisła Kraków",
-            "datetime": "31",
-            "status": "live",
+            "home": "Jagiellonia Białystok",
+            "away": "GKS Katowice",
+            "datetime": "08.11. 13:45",
+            "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "ron7glQG",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/wisla-krakow-rob20Q2Q/?mid=ron7glQG",
+            "match_id": "CQJQbq2d",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/jagiellonia-bialystok-lIDaZJTc/?mid=CQJQbq2d",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
+                "btts_pct": 60,
                 "over15_pct": 87,
                 "over25_pct": 80,
-                "over35_pct": 60,
-                "avg_goals_scored": 2.4,
+                "over35_pct": 47,
+                "avg_goals_scored": 2.0,
                 "avg_goals_conceded": 1.53,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -779,10 +704,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
+                    "W",
+                    "W",
                     "L",
-                    "W",
-                    "D",
-                    "W",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -793,10 +718,10 @@
             "away_stats": {
                 "total_matches": 15,
                 "btts_pct": 53,
-                "over15_pct": 80,
+                "over15_pct": 73,
                 "over25_pct": 60,
                 "over35_pct": 33,
-                "avg_goals_scored": 1.4,
+                "avg_goals_scored": 1.6,
                 "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -807,11 +732,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
                     "W",
                     "L",
-                    "W",
-                    "L"
+                    "L",
+                    "L",
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1579,7 +1504,7 @@
     "standings": [
         {
             "team": "Lech Poznań",
-            "points": "29",
+            "points": "31",
             "rank": 1,
             "url": "https://www.flashscore.pl/druzyna/lech-poznan/OpNH7Ouf/",
             "league_id": "ekstraklasa"
@@ -1606,10 +1531,10 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Wisła Kraków",
-            "points": "22",
+            "team": "GKS Katowice",
+            "points": "21",
             "rank": 5,
-            "url": "https://www.flashscore.pl/druzyna/wisla-krakow/rob20Q2Q/",
+            "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1620,17 +1545,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Zagłębie Lubin",
-            "points": "19",
+            "team": "Wisła Kraków",
+            "points": "21",
             "rank": 7,
-            "url": "https://www.flashscore.pl/druzyna/zaglebie-lubin/tlYOere0/",
+            "url": "https://www.flashscore.pl/druzyna/wisla-krakow/rob20Q2Q/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "GKS Katowice",
-            "points": "18",
+            "team": "Zagłębie Lubin",
+            "points": "19",
             "rank": 8,
-            "url": "https://www.flashscore.pl/druzyna/gks-katowice/K4AgRmS1/",
+            "url": "https://www.flashscore.pl/druzyna/zaglebie-lubin/tlYOere0/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1842,5 +1767,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-10-31 17:16"
+    "updated": "2026-10-31 21:29"
 }
