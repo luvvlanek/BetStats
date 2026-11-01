@@ -1,70 +1,18 @@
 {
     "matches": [
         {
-            "home": "Wisła Płock",
-            "away": "Piast Gliwice",
-            "score": "2:2",
-            "datetime": "Koniec",
+            "home": "GKS Katowice",
+            "away": "Widzew Łódź",
+            "score": "3:2",
+            "datetime": "31.10. 19:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_AXmaeAe4",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/wisla-plock-QoZYVU3E/?mid=AXmaeAe4",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "Wieczysta Kraków",
-            "away": "Jagiellonia Białystok",
-            "score": "1:3",
-            "datetime": "Koniec",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_2Dy1wxzJ",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/ks-wieczysta-krakow-ImhQf1z6/?mid=2Dy1wxzJ",
+            "match_id": "g_1_KWGYiykC",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/widzew-lodz-rNOIW3uC/?mid=KWGYiykC",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -108,7 +56,7 @@
             "home": "Lech Poznań",
             "away": "Wisła Kraków",
             "score": "3:1",
-            "datetime": "Koniec",
+            "datetime": "31.10. 16:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -157,18 +105,70 @@
             }
         },
         {
-            "home": "GKS Katowice",
-            "away": "Widzew Łódź",
-            "score": "3:2",
-            "datetime": "Koniec",
+            "home": "Wieczysta Kraków",
+            "away": "Jagiellonia Białystok",
+            "score": "1:3",
+            "datetime": "31.10. 13:45",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_KWGYiykC",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/widzew-lodz-rNOIW3uC/?mid=KWGYiykC",
+            "match_id": "g_1_2Dy1wxzJ",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/ks-wieczysta-krakow-ImhQf1z6/?mid=2Dy1wxzJ",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Wisła Płock",
+            "away": "Piast Gliwice",
+            "score": "2:2",
+            "datetime": "31.10. 11:15",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_AXmaeAe4",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/wisla-plock-QoZYVU3E/?mid=AXmaeAe4",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2101,70 +2101,10 @@
             "match_stats": null
         },
         {
-            "home": "Zagłębie Lubin",
-            "away": "Piast Gliwice",
-            "score": "2:0",
-            "datetime": "27.07. 17:00",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_juZK69O0",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/zaglebie-lubin-tlYOere0/?mid=juZK69O0",
-            "match_stats": null
-        },
-        {
-            "home": "Wisła Kraków",
-            "away": "GKS Katowice",
-            "score": "2:1",
-            "datetime": "26.07. 18:15",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_21B0E0Q9",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/wisla-krakow-rob20Q2Q/?mid=21B0E0Q9",
-            "match_stats": null
-        },
-        {
-            "home": "Widzew Łódź",
-            "away": "Motor Lublin",
-            "score": "2:2",
-            "datetime": "26.07. 15:30",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_KKjYSau3",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/motor-lublin-IoLk2VlL/widzew-lodz-rNOIW3uC/?mid=KKjYSau3",
-            "match_stats": null
-        },
-        {
-            "home": "Raków Częstochowa",
-            "away": "Wisła Płock",
-            "score": "1:2",
-            "datetime": "26.07. 12:45",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_hEbn5dmd",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/wisla-plock-QoZYVU3E/?mid=hEbn5dmd",
-            "match_stats": null
-        },
-        {
             "home": "Lechia Gdańsk",
             "away": "Unia Skierniewice",
             "score": "3:2",
-            "datetime": "Koniec",
+            "datetime": "31.10. 14:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2216,7 +2156,7 @@
             "home": "Miedź Legnica",
             "away": "Bruk-Bet T.",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "31.10. 14:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2268,7 +2208,7 @@
             "home": "Podbeskidzie B-B",
             "away": "Warta Poznań",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "31.10. 14:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -4261,5 +4201,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-31 21:29"
+    "updated": "2026-11-01 05:22"
 }
