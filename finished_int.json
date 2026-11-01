@@ -1,10 +1,62 @@
 {
     "matches": [
         {
+            "home": "Bayern Monachium",
+            "away": "Borussia Dortmund",
+            "score": "2:2",
+            "datetime": "31.10. 17:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_E1Ev602s",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/dortmund-nP1i5US1/?mid=E1Ev602s",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "B. Moenchengladbach",
             "away": "Paderborn",
             "score": "0:0",
-            "datetime": "Koniec",
+            "datetime": "31.10. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -56,7 +108,7 @@
             "home": "Bayer Leverkusen",
             "away": "VfB Stuttgart",
             "score": "2:4",
-            "datetime": "Koniec",
+            "datetime": "31.10. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -108,7 +160,7 @@
             "home": "FC Augsburg",
             "away": "SC Freiburg",
             "score": "1:2",
-            "datetime": "Koniec",
+            "datetime": "31.10. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -160,7 +212,7 @@
             "home": "FC Schalke 04",
             "away": "RB Lipsk",
             "score": "0:2",
-            "datetime": "Koniec",
+            "datetime": "31.10. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -212,7 +264,7 @@
             "home": "Werder Brema",
             "away": "TSG Hoffenheim",
             "score": "2:0",
-            "datetime": "Koniec",
+            "datetime": "31.10. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -221,58 +273,6 @@
             "stage": "Koniec",
             "match_id": "g_1_Wv0SGHGa",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/hoffenheim-hQAtP9Sl/?mid=Wv0SGHGa",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "Bayern Monachium",
-            "away": "Borussia Dortmund",
-            "score": "2:2",
-            "datetime": "Koniec",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_E1Ev602s",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/dortmund-nP1i5US1/?mid=E1Ev602s",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1606,18 +1606,70 @@
             "match_stats": null
         },
         {
-            "home": "Levante",
-            "away": "Atl. Madryt",
-            "score": "0:2",
-            "datetime": "Koniec",
+            "home": "Barcelona",
+            "away": "Alaves",
+            "score": "6:1",
+            "datetime": "31.10. 20:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_6gvM2yKH",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/levante-G8FL0ShI/?mid=6gvM2yKH",
+            "match_id": "g_1_6LI66JKh",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/barcelona-SKbpVP5K/?mid=6LI66JKh",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Betis",
+            "away": "Malaga",
+            "score": "2:1",
+            "datetime": "31.10. 17:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_fafq6k9C",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/malaga-25tIqYiJ/?mid=fafq6k9C",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1661,7 +1713,7 @@
             "home": "Vallecano",
             "away": "Celta Vigo",
             "score": "3:0",
-            "datetime": "Koniec",
+            "datetime": "31.10. 15:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1710,18 +1762,18 @@
             }
         },
         {
-            "home": "Betis",
-            "away": "Malaga",
-            "score": "2:1",
-            "datetime": "Koniec",
+            "home": "Levante",
+            "away": "Atl. Madryt",
+            "score": "0:2",
+            "datetime": "31.10. 13:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_fafq6k9C",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/malaga-25tIqYiJ/?mid=fafq6k9C",
+            "match_id": "g_1_6gvM2yKH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/levante-G8FL0ShI/?mid=6gvM2yKH",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2346,44 +2398,7 @@
             "stage": "Koniec",
             "match_id": "g_1_UagHqsek",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/levante-G8FL0ShI/?mid=UagHqsek",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Getafe",
@@ -3706,5 +3721,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-10-31 21:46"
+    "updated": "2026-11-01 05:40"
 }
