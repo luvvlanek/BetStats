@@ -1,18 +1,18 @@
 {
     "matches": [
         {
-            "home": "Union Berlin",
-            "away": "1. FC Koeln",
-            "score": "1:1",
-            "datetime": "Koniec",
+            "home": "Eintracht Frankfurt",
+            "away": "Hamburger SV",
+            "score": "3:1",
+            "datetime": "01.11. 16:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_hW5lOaOP",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/koln-WG9pOTse/union-berlin-pzHW4oaE/?mid=hW5lOaOP",
+            "match_id": "g_1_fuGf2I16",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/frankfurt-8vndvXTk/hamburger-v9k3aY5F/?mid=fuGf2I16",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -53,18 +53,18 @@
             }
         },
         {
-            "home": "Eintracht Frankfurt",
-            "away": "Hamburger SV",
-            "score": "3:1",
-            "datetime": "Koniec",
+            "home": "Union Berlin",
+            "away": "1. FC Koeln",
+            "score": "1:1",
+            "datetime": "01.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_fuGf2I16",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/frankfurt-8vndvXTk/hamburger-v9k3aY5F/?mid=fuGf2I16",
+            "match_id": "g_1_hW5lOaOP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/koln-WG9pOTse/union-berlin-pzHW4oaE/?mid=hW5lOaOP",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1636,70 +1636,18 @@
             "match_stats": null
         },
         {
-            "home": "Getafe",
-            "away": "Sevilla",
-            "score": "3:1",
-            "datetime": "Koniec",
+            "home": "Ath. Bilbao",
+            "away": "Real Sociedad",
+            "score": "2:1",
+            "datetime": "01.11. 20:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_EoME4ck5",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/sevilla-h8oAv4Ts/?mid=EoME4ck5",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "Racing Santander",
-            "away": "Real Madryt",
-            "score": "0:3",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_v7xU0FlU",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/real-madryt-W8mj7MDD/?mid=v7xU0FlU",
+            "match_id": "g_1_Mody8Bv0",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/real-sociedad-jNvak2f3/?mid=Mody8Bv0",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1743,7 +1691,7 @@
             "home": "Elche",
             "away": "Valencia",
             "score": "0:1",
-            "datetime": "Koniec",
+            "datetime": "01.11. 17:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1792,18 +1740,70 @@
             }
         },
         {
-            "home": "Ath. Bilbao",
-            "away": "Real Sociedad",
-            "score": "2:1",
-            "datetime": "Koniec",
+            "home": "Racing Santander",
+            "away": "Real Madryt",
+            "score": "0:3",
+            "datetime": "01.11. 15:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_Mody8Bv0",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/real-sociedad-jNvak2f3/?mid=Mody8Bv0",
+            "match_id": "g_1_v7xU0FlU",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/real-madryt-W8mj7MDD/?mid=v7xU0FlU",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Getafe",
+            "away": "Sevilla",
+            "score": "3:1",
+            "datetime": "01.11. 13:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_EoME4ck5",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/sevilla-h8oAv4Ts/?mid=EoME4ck5",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -3736,5 +3736,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-11-01 22:23"
+    "updated": "2026-11-02 05:40"
 }
