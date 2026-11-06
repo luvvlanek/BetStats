@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Hamburger SV_B. Moenchengladbach": {
+            "home": "Hamburger SV",
+            "away": "B. Moenchengladbach",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_pMxurfFb",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/hamburger-v9k3aY5F/?mid=pMxurfFb",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Eintracht Frankfurt_Hamburger SV": {
             "home": "Eintracht Frankfurt",
             "away": "Hamburger SV",
@@ -741,44 +793,7 @@
             "league_flag": "🇩🇪",
             "match_id": "g_1_Cber8mYR",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/union-berlin-pzHW4oaE/?mid=Cber8mYR",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Paderborn_Hamburger SV": {
             "home": "Paderborn",
@@ -1635,6 +1650,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "Sevilla_Alaves": {
+            "home": "Sevilla",
+            "away": "Alaves",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_xMjDMVAj",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/sevilla-h8oAv4Ts/?mid=xMjDMVAj",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "A Coruna_Osasuna": {
             "home": "A Coruna",
             "away": "Osasuna",
@@ -2376,44 +2443,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_YmrNgLJk",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/getafe-dboeiWOt/?mid=YmrNgLJk",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Atl. Madryt_A Coruna": {
             "home": "Atl. Madryt",
@@ -3736,5 +3766,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-11-06 14:28:35"
+    "updated": "2026-11-06 23:23:48"
 }
