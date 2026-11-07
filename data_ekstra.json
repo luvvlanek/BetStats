@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Korona Kielce",
-            "away": "Radomiak Radom",
-            "datetime": "11:15",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "Mgton6Ij",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/radomiak-radom-zD5nYhAT/?mid=Mgton6Ij",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 80,
-                "over25_pct": 40,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.13,
-                "avg_goals_conceded": 1.67,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "W",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 73,
-                "over25_pct": 60,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 2.0,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "L",
-                    "L",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Śląsk Wrocław",
             "away": "Piast Gliwice",
             "datetime": "13:45",
@@ -736,6 +661,156 @@
                     "W",
                     "W",
                     "W",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Zagłębie Lubin",
+            "away": "Górnik Zabrze",
+            "datetime": "21.11. 16:30",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "W4aoOaV7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/zaglebie-lubin-tlYOere0/?mid=W4aoOaV7",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 67,
+                "over25_pct": 47,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.27,
+                "avg_goals_conceded": 1.2,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "D",
+                    "W",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 64,
+                "over15_pct": 79,
+                "over25_pct": 50,
+                "over35_pct": 29,
+                "avg_goals_scored": 1.36,
+                "avg_goals_conceded": 1.29,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "D",
+                    "D",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
+        },
+        {
+            "home": "Korona Kielce",
+            "away": "Radomiak Radom",
+            "datetime": "65",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "Mgton6Ij",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/radomiak-radom-zD5nYhAT/?mid=Mgton6Ij",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 80,
+                "over25_pct": 40,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.13,
+                "avg_goals_conceded": 1.67,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "W",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 60,
+                "over35_pct": 47,
+                "avg_goals_scored": 1.47,
+                "avg_goals_conceded": 2.0,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "L",
+                    "L",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -1566,17 +1641,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Jagiellonia Białystok",
-            "points": "18",
+            "team": "Korona Kielce",
+            "points": "19",
             "rank": 10,
-            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
+            "url": "https://www.flashscore.pl/druzyna/korona-kielce/pp78XcbA/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Korona Kielce",
+            "team": "Jagiellonia Białystok",
             "points": "18",
             "rank": 11,
-            "url": "https://www.flashscore.pl/druzyna/korona-kielce/pp78XcbA/",
+            "url": "https://www.flashscore.pl/druzyna/jagiellonia-bialystok/lIDaZJTc/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1594,17 +1669,17 @@
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Widzew Łódź",
-            "points": "11",
+            "team": "Radomiak Radom",
+            "points": "12",
             "rank": 14,
-            "url": "https://www.flashscore.pl/druzyna/widzew-lodz/rNOIW3uC/",
+            "url": "https://www.flashscore.pl/druzyna/radomiak-radom/zD5nYhAT/",
             "league_id": "ekstraklasa"
         },
         {
-            "team": "Radomiak Radom",
+            "team": "Widzew Łódź",
             "points": "11",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/radomiak-radom/zD5nYhAT/",
+            "url": "https://www.flashscore.pl/druzyna/widzew-lodz/rNOIW3uC/",
             "league_id": "ekstraklasa"
         },
         {
@@ -1767,5 +1842,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-11-07 05:31"
+    "updated": "2026-11-07 12:55"
 }
