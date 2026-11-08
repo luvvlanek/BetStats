@@ -1,10 +1,62 @@
 {
     "matches": [
         {
+            "home": "VfB Stuttgart",
+            "away": "Werder Brema",
+            "score": "1:0",
+            "datetime": "07.11. 17:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_MBw8Tf05",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/stuttgart-nJQmYp1B/?mid=MBw8Tf05",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "1. FSV Mainz 05",
             "away": "Bayern Monachium",
             "score": "1:2",
-            "datetime": "Koniec",
+            "datetime": "07.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -56,7 +108,7 @@
             "home": "Borussia Dortmund",
             "away": "Elversberg",
             "score": "2:1",
-            "datetime": "Koniec",
+            "datetime": "07.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -108,7 +160,7 @@
             "home": "Paderborn",
             "away": "Eintracht Frankfurt",
             "score": "2:2",
-            "datetime": "Koniec",
+            "datetime": "07.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -160,7 +212,7 @@
             "home": "RB Lipsk",
             "away": "FC Augsburg",
             "score": "5:2",
-            "datetime": "Koniec",
+            "datetime": "07.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -169,58 +221,6 @@
             "stage": "Koniec",
             "match_id": "g_1_Eoz0VGVh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/rb-leipzig-KbS1suSm/?mid=Eoz0VGVh",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "VfB Stuttgart",
-            "away": "Werder Brema",
-            "score": "1:0",
-            "datetime": "Koniec",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_MBw8Tf05",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/stuttgart-nJQmYp1B/?mid=MBw8Tf05",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1726,70 +1726,18 @@
             "match_stats": null
         },
         {
-            "home": "Malaga",
-            "away": "Racing Santander",
-            "score": "1:2",
-            "datetime": "Koniec",
+            "home": "Valencia",
+            "away": "Real Madryt",
+            "score": "0:3",
+            "datetime": "07.11. 20:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_SSbRVZm4",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/racing-santander-nVpEwOrl/?mid=SSbRVZm4",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        {
-            "home": "Espanyol",
-            "away": "A Coruna",
-            "score": "0:0",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_K2eJXeJi",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/espanyol-QFfPdh1J/?mid=K2eJXeJi",
+            "match_id": "g_1_4SrapZ2c",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/valencia-CQeaytrD/?mid=4SrapZ2c",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1833,7 +1781,7 @@
             "home": "Osasuna",
             "away": "Ath. Bilbao",
             "score": "1:1",
-            "datetime": "Koniec",
+            "datetime": "07.11. 17:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1882,18 +1830,70 @@
             }
         },
         {
-            "home": "Valencia",
-            "away": "Real Madryt",
-            "score": "0:3",
-            "datetime": "Koniec",
+            "home": "Espanyol",
+            "away": "A Coruna",
+            "score": "0:0",
+            "datetime": "07.11. 15:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_4SrapZ2c",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-madryt-W8mj7MDD/valencia-CQeaytrD/?mid=4SrapZ2c",
+            "match_id": "g_1_K2eJXeJi",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/espanyol-QFfPdh1J/?mid=K2eJXeJi",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Malaga",
+            "away": "Racing Santander",
+            "score": "1:2",
+            "datetime": "07.11. 13:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_SSbRVZm4",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/racing-santander-nVpEwOrl/?mid=SSbRVZm4",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -3871,5 +3871,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-11-07 22:09"
+    "updated": "2026-11-08 05:45"
 }
