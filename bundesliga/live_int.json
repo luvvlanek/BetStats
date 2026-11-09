@@ -1,18 +1,18 @@
 {
     "matches": {
-        "1. FC Koeln_Bayer Leverkusen": {
-            "home": "1. FC Koeln",
-            "away": "Bayer Leverkusen",
+        "TSG Hoffenheim_FC Schalke 04": {
+            "home": "TSG Hoffenheim",
+            "away": "FC Schalke 04",
             "is_live": false,
             "is_finished": true,
-            "score": "1:2",
+            "score": "2:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "08.11. 18:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
-            "match_id": "g_1_IZzmtYqB",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/koln-WG9pOTse/leverkusen-4jcj2zMd/?mid=IZzmtYqB",
+            "match_id": "g_1_EJeFRYUH",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hoffenheim-hQAtP9Sl/schalke-0Ija0Ej9/?mid=EJeFRYUH",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -59,7 +59,7 @@
             "is_finished": true,
             "score": "2:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "08.11. 16:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -104,19 +104,19 @@
                 }
             }
         },
-        "TSG Hoffenheim_FC Schalke 04": {
-            "home": "TSG Hoffenheim",
-            "away": "FC Schalke 04",
+        "1. FC Koeln_Bayer Leverkusen": {
+            "home": "1. FC Koeln",
+            "away": "Bayer Leverkusen",
             "is_live": false,
             "is_finished": true,
-            "score": "2:1",
+            "score": "1:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "08.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
-            "match_id": "g_1_EJeFRYUH",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/hoffenheim-hQAtP9Sl/schalke-0Ija0Ej9/?mid=EJeFRYUH",
+            "match_id": "g_1_IZzmtYqB",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/koln-WG9pOTse/leverkusen-4jcj2zMd/?mid=IZzmtYqB",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1770,71 +1770,19 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
-        "Elche_Betis": {
-            "home": "Elche",
-            "away": "Betis",
+        "Atl. Madryt_Barcelona": {
+            "home": "Atl. Madryt",
+            "away": "Barcelona",
             "is_live": false,
             "is_finished": true,
-            "score": "0:2",
+            "score": "1:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "08.11. 20:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_S88X9hRp",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/elche-4jl02tPF/?mid=S88X9hRp",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        "Real Sociedad_Vallecano": {
-            "home": "Real Sociedad",
-            "away": "Vallecano",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:0",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_6w0sSimT",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-sociedad-jNvak2f3/vallecano-8bcjFy6O/?mid=6w0sSimT",
+            "match_id": "g_1_A9JgHzZA",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/barcelona-SKbpVP5K/?mid=A9JgHzZA",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1881,7 +1829,7 @@
             "is_finished": true,
             "score": "0:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "08.11. 17:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1933,7 +1881,7 @@
             "is_finished": true,
             "score": "2:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "08.11. 17:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1978,19 +1926,71 @@
                 }
             }
         },
-        "Atl. Madryt_Barcelona": {
-            "home": "Atl. Madryt",
-            "away": "Barcelona",
+        "Real Sociedad_Vallecano": {
+            "home": "Real Sociedad",
+            "away": "Vallecano",
             "is_live": false,
             "is_finished": true,
-            "score": "1:2",
+            "score": "1:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "08.11. 15:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_A9JgHzZA",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/barcelona-SKbpVP5K/?mid=A9JgHzZA",
+            "match_id": "g_1_6w0sSimT",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/real-sociedad-jNvak2f3/vallecano-8bcjFy6O/?mid=6w0sSimT",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Elche_Betis": {
+            "home": "Elche",
+            "away": "Betis",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:2",
+            "stage": "Koniec",
+            "datetime": "08.11. 13:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_S88X9hRp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/elche-4jl02tPF/?mid=S88X9hRp",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -3871,5 +3871,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-11-08 22:23:38"
+    "updated": "2026-11-09 05:55:54"
 }
