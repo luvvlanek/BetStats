@@ -371,7 +371,7 @@
             "h2h": [],
             "odds": {
                 "home": 3.3,
-                "draw": 3.8,
+                "draw": 3.7,
                 "away": 2
             }
         },
@@ -389,11 +389,11 @@
             "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
+                "btts_pct": 47,
                 "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 60,
-                "avg_goals_scored": 1.27,
+                "over25_pct": 53,
+                "over35_pct": 53,
+                "avg_goals_scored": 1.13,
                 "avg_goals_conceded": 2.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -405,9 +405,9 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
-                    "D",
                     "L",
                     "D",
+                    "L",
                     "D"
                 ],
                 "corners_per_match": [],
@@ -1017,12 +1017,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 67,
-                "over25_pct": 53,
-                "over35_pct": 33,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.4,
+                "btts_pct": 67,
+                "over15_pct": 73,
+                "over25_pct": 60,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.93,
+                "avg_goals_conceded": 1.53,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1033,10 +1033,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "W",
+                    "W",
                     "L",
                     "W",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1195,9 +1195,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.17,
-                "draw": 8,
-                "away": 9.5
+                "home": 1.18,
+                "draw": 7.5,
+                "away": 9
             }
         },
         {
@@ -1454,11 +1454,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "D",
                     "L",
                     "L",
-                    "W",
-                    "D"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-11-12 15:23"
+    "updated": "2026-11-12 23:52"
 }
