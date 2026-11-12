@@ -90,10 +90,10 @@
             "home_stats": {
                 "total_matches": 15,
                 "btts_pct": 53,
-                "over15_pct": 93,
-                "over25_pct": 80,
-                "over35_pct": 47,
-                "avg_goals_scored": 2.2,
+                "over15_pct": 87,
+                "over25_pct": 73,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.73,
                 "avg_goals_conceded": 1.8,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -104,11 +104,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "D",
                     "W",
-                    "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -417,12 +417,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
+                "btts_pct": 53,
                 "over15_pct": 93,
                 "over25_pct": 80,
                 "over35_pct": 67,
-                "avg_goals_scored": 2.67,
-                "avg_goals_conceded": 1.67,
+                "avg_goals_scored": 2.53,
+                "avg_goals_conceded": 2.0,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -432,9 +432,9 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "W",
                     "L",
                     "W",
+                    "L",
                     "W",
                     "W"
                 ],
@@ -670,9 +670,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.69,
-                "draw": 4.1,
-                "away": 4.3
+                "home": 1.63,
+                "draw": 4.2,
+                "away": 4.4
             }
         },
         {
@@ -718,10 +718,10 @@
             "away_stats": {
                 "total_matches": 15,
                 "btts_pct": 53,
-                "over15_pct": 93,
-                "over25_pct": 80,
-                "over35_pct": 47,
-                "avg_goals_scored": 2.2,
+                "over15_pct": 87,
+                "over25_pct": 73,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.73,
                 "avg_goals_conceded": 1.8,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -732,11 +732,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "D",
                     "W",
-                    "W",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -970,9 +970,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.91,
-                "draw": 3.4,
-                "away": 4
+                "home": 1.83,
+                "draw": 3.5,
+                "away": 3.9
             }
         },
         {
@@ -1195,9 +1195,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.21,
-                "draw": 7,
-                "away": 9
+                "home": 1.17,
+                "draw": 8,
+                "away": 9.5
             }
         },
         {
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-11-12 00:47"
+    "updated": "2026-11-12 15:23"
 }
