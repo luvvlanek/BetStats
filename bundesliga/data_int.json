@@ -295,9 +295,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.35,
+                "home": 2.3,
                 "draw": 3.9,
-                "away": 2.6
+                "away": 2.7
             }
         },
         {
@@ -745,9 +745,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.75,
-                "draw": 4,
-                "away": 3.9
+                "home": 1.71,
+                "draw": 4.2,
+                "away": 4
             }
         },
         {
@@ -970,7 +970,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.87,
+                "home": 1.91,
                 "draw": 3.4,
                 "away": 4
             }
@@ -1092,12 +1092,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
+                "btts_pct": 40,
                 "over15_pct": 67,
                 "over25_pct": 47,
-                "over35_pct": 7,
-                "avg_goals_scored": 0.93,
-                "avg_goals_conceded": 1.07,
+                "over35_pct": 13,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 0.93,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1107,11 +1107,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "D",
                     "L",
                     "L",
-                    "D",
-                    "W"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1196,8 +1196,8 @@
             "h2h": [],
             "odds": {
                 "home": 1.17,
-                "draw": 8,
-                "away": 9
+                "draw": 7.5,
+                "away": 9.5
             }
         },
         {
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-11-13 14:45"
+    "updated": "2026-11-13 23:55"
 }
