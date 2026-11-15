@@ -644,10 +644,10 @@
                 "total_matches": 15,
                 "btts_pct": 53,
                 "over15_pct": 87,
-                "over25_pct": 73,
+                "over25_pct": 67,
                 "over35_pct": 47,
                 "avg_goals_scored": 1.4,
-                "avg_goals_conceded": 1.87,
+                "avg_goals_conceded": 1.8,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -657,11 +657,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "D",
                     "W",
                     "L",
                     "L",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1195,9 +1195,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.17,
-                "draw": 7.5,
-                "away": 10
+                "home": 1.15,
+                "draw": 8,
+                "away": 10.5
             }
         },
         {
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-11-15 14:12"
+    "updated": "2026-11-15 23:09"
 }
