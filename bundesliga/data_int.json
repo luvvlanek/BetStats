@@ -1,84 +1,9 @@
 {
     "matches": [
         {
-            "home": "Bayern Monachium",
-            "away": "1. FC Koeln",
-            "datetime": "19:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "zZPQYkxo",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/koln-WG9pOTse/?mid=zZPQYkxo",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 93,
-                "over25_pct": 87,
-                "over35_pct": 73,
-                "avg_goals_scored": 3.4,
-                "avg_goals_conceded": 1.07,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "D",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 87,
-                "over25_pct": 73,
-                "over35_pct": 40,
-                "avg_goals_scored": 2.07,
-                "avg_goals_conceded": 1.33,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "D",
-                    "W",
-                    "D",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 1.08,
-                "draw": 11,
-                "away": 21
-            }
-        },
-        {
             "home": "B. Moenchengladbach",
             "away": "Borussia Dortmund",
-            "datetime": "21.11. 14:30",
+            "datetime": "14:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -145,7 +70,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 5.3,
+                "home": 5.2,
                 "draw": 4.4,
                 "away": 1.54
             }
@@ -153,7 +78,7 @@
         {
             "home": "Bayer Leverkusen",
             "away": "Paderborn",
-            "datetime": "21.11. 14:30",
+            "datetime": "14:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -220,15 +145,15 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.24,
+                "home": 1.21,
                 "draw": 6.5,
-                "away": 8
+                "away": 8.5
             }
         },
         {
             "home": "Eintracht Frankfurt",
             "away": "TSG Hoffenheim",
-            "datetime": "21.11. 14:30",
+            "datetime": "14:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -297,13 +222,13 @@
             "odds": {
                 "home": 2.4,
                 "draw": 3.9,
-                "away": 2.6
+                "away": 2.55
             }
         },
         {
             "home": "Elversberg",
             "away": "SC Freiburg",
-            "datetime": "21.11. 14:30",
+            "datetime": "14:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -378,7 +303,7 @@
         {
             "home": "Union Berlin",
             "away": "RB Lipsk",
-            "datetime": "21.11. 14:30",
+            "datetime": "14:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -453,7 +378,7 @@
         {
             "home": "FC Schalke 04",
             "away": "VfB Stuttgart",
-            "datetime": "21.11. 17:30",
+            "datetime": "17:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -520,9 +445,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.9,
-                "draw": 4,
-                "away": 1.74
+                "home": 4,
+                "draw": 3.9,
+                "away": 1.77
             }
         },
         {
@@ -596,8 +521,8 @@
             "h2h": [],
             "odds": {
                 "home": 2.65,
-                "draw": 3.9,
-                "away": 2.35
+                "draw": 3.8,
+                "away": 2.4
             }
         },
         {
@@ -751,25 +676,25 @@
             }
         },
         {
-            "home": "Ath. Bilbao",
-            "away": "Espanyol",
-            "datetime": "20:00",
+            "home": "1. FC Koeln",
+            "away": "Elversberg",
+            "datetime": "28.11. 14:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "G6MoOrne",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/espanyol-QFfPdh1J/?mid=G6MoOrne",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
+            "match_id": "tAPSccBD",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elversberg-6in2Eknb/koln-WG9pOTse/?mid=tAPSccBD",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 47,
-                "over15_pct": 73,
-                "over25_pct": 47,
+                "btts_pct": 80,
+                "over15_pct": 87,
+                "over25_pct": 67,
                 "over35_pct": 33,
-                "avg_goals_scored": 1.53,
-                "avg_goals_conceded": 1.07,
+                "avg_goals_scored": 1.6,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -780,10 +705,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "D",
+                    "L",
+                    "D",
                     "W",
-                    "W",
-                    "W",
-                    "L"
+                    "D"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -792,12 +717,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 27,
-                "avg_goals_scored": 1.33,
-                "avg_goals_conceded": 1.6,
+                "btts_pct": 73,
+                "over15_pct": 87,
+                "over25_pct": 73,
+                "over35_pct": 53,
+                "avg_goals_scored": 2.07,
+                "avg_goals_conceded": 1.8,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -807,11 +732,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
+                    "L",
                     "W",
                     "L",
                     "L",
-                    "L"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -820,15 +745,15 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.45,
-                "draw": 4.5,
-                "away": 6.5
+                "home": 1.95,
+                "draw": 3.9,
+                "away": 3.4
             }
         },
         {
             "home": "Alaves",
             "away": "A Coruna",
-            "datetime": "21.11. 13:00",
+            "datetime": "13:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -895,15 +820,15 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.2,
+                "home": 2.3,
                 "draw": 3.3,
-                "away": 3.5
+                "away": 3.2
             }
         },
         {
             "home": "Vallecano",
             "away": "Valencia",
-            "datetime": "21.11. 15:15",
+            "datetime": "15:15",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -972,13 +897,13 @@
             "odds": {
                 "home": 1.87,
                 "draw": 3.5,
-                "away": 4.1
+                "away": 4.3
             }
         },
         {
             "home": "Sevilla",
             "away": "Betis",
-            "datetime": "21.11. 17:30",
+            "datetime": "17:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1045,15 +970,15 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.95,
-                "draw": 3.4,
+                "home": 3,
+                "draw": 3.3,
                 "away": 2.4
             }
         },
         {
             "home": "Real Madryt",
             "away": "Celta Vigo",
-            "datetime": "21.11. 20:00",
+            "datetime": "20:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -1120,8 +1045,8 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.14,
-                "draw": 8.5,
+                "home": 1.15,
+                "draw": 7.5,
                 "away": 16
             }
         },
@@ -1197,7 +1122,7 @@
             "odds": {
                 "home": 1.18,
                 "draw": 7.5,
-                "away": 13
+                "away": 12
             }
         },
         {
@@ -1345,9 +1270,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.77,
-                "draw": 3.6,
-                "away": 4.4
+                "home": 1.8,
+                "draw": 3.7,
+                "away": 4.5
             }
         },
         {
@@ -1420,9 +1345,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 6,
-                "draw": 3.9,
-                "away": 1.51
+                "home": 6.5,
+                "draw": 4,
+                "away": 1.53
             }
         },
         {
@@ -1499,12 +1424,87 @@
                 "draw": 3.5,
                 "away": 3.2
             }
+        },
+        {
+            "home": "Levante",
+            "away": "Racing Santander",
+            "datetime": "27.11. 20:00",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "v1sv2bUa",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/racing-santander-nVpEwOrl/?mid=v1sv2bUa",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 60,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 1.6,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "D",
+                    "L",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 14,
+                "btts_pct": 64,
+                "over15_pct": 93,
+                "over25_pct": 79,
+                "over35_pct": 50,
+                "avg_goals_scored": 1.64,
+                "avg_goals_conceded": 2.21,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "W",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.05,
+                "draw": 3.9,
+                "away": 3.1
+            }
         }
     ],
     "standings": [
         {
             "team": "Bayern Monachium",
-            "points": "21",
+            "points": "22",
             "rank": 1,
             "url": "https://www.flashscore.pl/druzyna/bayern/nVp0wiqd/",
             "league_id": "bundesliga"
@@ -1594,17 +1594,17 @@
             "league_id": "bundesliga"
         },
         {
-            "team": "FC Augsburg",
-            "points": "9",
+            "team": "1. FC Koeln",
+            "points": "10",
             "rank": 14,
-            "url": "https://www.flashscore.pl/druzyna/augsburg/fTVNku3I/",
+            "url": "https://www.flashscore.pl/druzyna/koln/WG9pOTse/",
             "league_id": "bundesliga"
         },
         {
-            "team": "1. FC Koeln",
+            "team": "FC Augsburg",
             "points": "9",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/koln/WG9pOTse/",
+            "url": "https://www.flashscore.pl/druzyna/augsburg/fTVNku3I/",
             "league_id": "bundesliga"
         },
         {
@@ -1692,31 +1692,31 @@
             "league_id": "laliga"
         },
         {
+            "team": "Espanyol",
+            "points": "15",
+            "rank": 10,
+            "url": "https://www.flashscore.pl/druzyna/espanyol/QFfPdh1J/",
+            "league_id": "laliga"
+        },
+        {
             "team": "Racing Santander",
             "points": "14",
-            "rank": 10,
+            "rank": 11,
             "url": "https://www.flashscore.pl/druzyna/racing-santander/nVpEwOrl/",
             "league_id": "laliga"
         },
         {
             "team": "Celta Vigo",
             "points": "13",
-            "rank": 11,
+            "rank": 12,
             "url": "https://www.flashscore.pl/druzyna/celta-vigo/8pvUZFhf/",
             "league_id": "laliga"
         },
         {
             "team": "Alaves",
             "points": "13",
-            "rank": 12,
-            "url": "https://www.flashscore.pl/druzyna/alaves/hxt57t2q/",
-            "league_id": "laliga"
-        },
-        {
-            "team": "Espanyol",
-            "points": "12",
             "rank": 13,
-            "url": "https://www.flashscore.pl/druzyna/espanyol/QFfPdh1J/",
+            "url": "https://www.flashscore.pl/druzyna/alaves/hxt57t2q/",
             "league_id": "laliga"
         },
         {
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-11-20 15:36"
+    "updated": "2026-11-21 00:19"
 }

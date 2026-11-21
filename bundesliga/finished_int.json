@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Bayern Monachium",
+            "away": "1. FC Koeln",
+            "score": "1:1",
+            "datetime": "20.11. 19:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_zZPQYkxo",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/koln-WG9pOTse/?mid=zZPQYkxo",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "TSG Hoffenheim",
             "away": "FC Schalke 04",
             "score": "2:1",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_0xJ20dWI",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/freiburg-fiEQZ7C7/?mid=0xJ20dWI",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "FC Schalke 04",
@@ -1771,6 +1786,58 @@
             "match_stats": null
         },
         {
+            "home": "Ath. Bilbao",
+            "away": "Espanyol",
+            "score": "0:1",
+            "datetime": "20.11. 20:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_G6MoOrne",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/espanyol-QFfPdh1J/?mid=G6MoOrne",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Atl. Madryt",
             "away": "Barcelona",
             "score": "1:2",
@@ -2511,44 +2578,7 @@
             "stage": "Koniec",
             "match_id": "g_1_EoME4ck5",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/getafe-dboeiWOt/sevilla-h8oAv4Ts/?mid=EoME4ck5",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Barcelona",
@@ -3871,5 +3901,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-11-20 15:36"
+    "updated": "2026-11-21 00:19"
 }
