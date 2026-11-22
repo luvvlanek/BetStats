@@ -1,18 +1,18 @@
 {
     "matches": {
-        "Cracovia_Jagiellonia Białystok": {
-            "home": "Cracovia",
-            "away": "Jagiellonia Białystok",
+        "Radomiak Radom_Wisła Kraków": {
+            "home": "Radomiak Radom",
+            "away": "Wisła Kraków",
             "is_live": false,
             "is_finished": true,
-            "score": "3:1",
+            "score": "0:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "21.11. 19:15",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_lQ3bDrHk",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/jagiellonia-bialystok-lIDaZJTc/?mid=lQ3bDrHk",
+            "match_id": "g_1_Mw26BMo2",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/wisla-krakow-rob20Q2Q/?mid=Mw26BMo2",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -59,12 +59,64 @@
             "is_finished": true,
             "score": "2:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "21.11. 16:30",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "match_id": "g_1_W4aoOaV7",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/zaglebie-lubin-tlYOere0/?mid=W4aoOaV7",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Cracovia_Jagiellonia Białystok": {
+            "home": "Cracovia",
+            "away": "Jagiellonia Białystok",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:1",
+            "stage": "Koniec",
+            "datetime": "21.11. 13:45",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_lQ3bDrHk",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/jagiellonia-bialystok-lIDaZJTc/?mid=lQ3bDrHk",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -741,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_QkFIeJkm",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/radomiak-radom-zD5nYhAT/slask-wroclaw-E1Oxemse/?mid=QkFIeJkm",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Zagłębie Lubin_Korona Kielce": {
             "home": "Zagłębie Lubin",
@@ -2100,66 +2115,6 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/slask-wroclaw-E1Oxemse/zaglebie-lubin-tlYOere0/?mid=KjmaDEt9",
             "match_stats": null
         },
-        "Legia Warszawa_Radomiak Radom": {
-            "home": "Legia Warszawa",
-            "away": "Radomiak Radom",
-            "is_live": false,
-            "is_finished": true,
-            "score": "5:0",
-            "stage": "Koniec",
-            "datetime": "14.08. 18:30",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_APkK0yc3",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/legia-warszawa-K6kUepBs/radomiak-radom-zD5nYhAT/?mid=APkK0yc3",
-            "match_stats": null
-        },
-        "Jagiellonia Białystok_Widzew Łódź": {
-            "home": "Jagiellonia Białystok",
-            "away": "Widzew Łódź",
-            "is_live": false,
-            "is_finished": true,
-            "score": "0:2",
-            "stage": "Koniec",
-            "datetime": "09.08. 18:15",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_WhZpaOLb",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/jagiellonia-bialystok-lIDaZJTc/widzew-lodz-rNOIW3uC/?mid=WhZpaOLb",
-            "match_stats": null
-        },
-        "Lech Poznań_Piast Gliwice": {
-            "home": "Lech Poznań",
-            "away": "Piast Gliwice",
-            "is_live": false,
-            "is_finished": true,
-            "score": "3:0",
-            "stage": "Koniec",
-            "datetime": "09.08. 15:30",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_46Xhc2jB",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lech-poznan-OpNH7Ouf/piast-gliwice-ve2oT9ck/?mid=46Xhc2jB",
-            "match_stats": null
-        },
-        "Śląsk Wrocław_Cracovia": {
-            "home": "Śląsk Wrocław",
-            "away": "Cracovia",
-            "is_live": false,
-            "is_finished": true,
-            "score": "0:0",
-            "stage": "Koniec",
-            "datetime": "09.08. 12:45",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_QeWx1pin",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/cracovia-KvXSf2A6/slask-wroclaw-E1Oxemse/?mid=QeWx1pin",
-            "match_stats": null
-        },
         "Pogoń Grodzisk Mazowiecki_Arka Gdynia": {
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Arka Gdynia",
@@ -2167,7 +2122,7 @@
             "is_finished": true,
             "score": "2:3",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "21.11. 14:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2219,7 +2174,7 @@
             "is_finished": true,
             "score": "1:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "21.11. 14:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2271,7 +2226,7 @@
             "is_finished": true,
             "score": "1:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "21.11. 14:30",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -4276,5 +4231,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-11-21 19:07:27"
+    "updated": "2026-11-22 06:03:34"
 }
