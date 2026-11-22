@@ -1875,6 +1875,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "FC Augsburg_1. FSV Mainz 05": {
+            "home": "FC Augsburg",
+            "away": "1. FSV Mainz 05",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "4",
+            "datetime": "4",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_tjJShBTG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/mainz-EuakNmc1/?mid=tjJShBTG"
+        },
         "Real Madryt_Celta Vigo": {
             "home": "Real Madryt",
             "away": "Celta Vigo",
@@ -3989,7 +4003,21 @@
             "match_id": "g_1_CrPiFJSq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/racing-santander-nVpEwOrl/?mid=CrPiFJSq",
             "match_stats": null
+        },
+        "Barcelona_Villarreal": {
+            "home": "Barcelona",
+            "away": "Villarreal",
+            "is_live": true,
+            "is_finished": false,
+            "score": "3:2",
+            "stage": "78",
+            "datetime": "78",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_lKKgMMG7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/villarreal-lUatW5jE/?mid=lKKgMMG7"
         }
     },
-    "updated": "2026-11-22 06:20:39"
+    "updated": "2026-11-22 14:50:14"
 }

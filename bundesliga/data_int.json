@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "FC Augsburg",
-            "away": "1. FSV Mainz 05",
-            "datetime": "14:30",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "tjJShBTG",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/mainz-EuakNmc1/?mid=tjJShBTG",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 100,
-                "over25_pct": 87,
-                "over35_pct": 73,
-                "avg_goals_scored": 3.07,
-                "avg_goals_conceded": 2.0,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "W",
-                    "D",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 87,
-                "over25_pct": 80,
-                "over35_pct": 60,
-                "avg_goals_scored": 2.6,
-                "avg_goals_conceded": 1.67,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 2.65,
-                "draw": 3.8,
-                "away": 2.35
-            }
-        },
-        {
             "home": "Werder Brema",
             "away": "Hamburger SV",
             "datetime": "16:30",
@@ -146,8 +71,8 @@
             "h2h": [],
             "odds": {
                 "home": 1.54,
-                "draw": 4.3,
-                "away": 5.2
+                "draw": 4.2,
+                "away": 5.5
             }
         },
         {
@@ -751,25 +676,25 @@
             }
         },
         {
-            "home": "Barcelona",
-            "away": "Villarreal",
-            "datetime": "13:00",
+            "home": "Borussia Dortmund",
+            "away": "Bayer Leverkusen",
+            "datetime": "29.11. 18:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "lKKgMMG7",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/villarreal-lUatW5jE/?mid=lKKgMMG7",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
+            "match_id": "OWwumtce",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/dortmund-nP1i5US1/leverkusen-4jcj2zMd/?mid=OWwumtce",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 100,
-                "over25_pct": 93,
-                "over35_pct": 67,
-                "avg_goals_scored": 3.8,
-                "avg_goals_conceded": 1.27,
+                "btts_pct": 53,
+                "over15_pct": 67,
+                "over25_pct": 67,
+                "over35_pct": 40,
+                "avg_goals_scored": 2.0,
+                "avg_goals_conceded": 0.93,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -782,7 +707,82 @@
                     "W",
                     "W",
                     "W",
+                    "D",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 93,
+                "over25_pct": 73,
+                "over35_pct": 53,
+                "avg_goals_scored": 2.47,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "W",
                     "L",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.1,
+                "draw": 3.9,
+                "away": 3
+            }
+        },
+        {
+            "home": "FC Augsburg",
+            "away": "1. FSV Mainz 05",
+            "datetime": "4",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "tjJShBTG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/mainz-EuakNmc1/?mid=tjJShBTG",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 100,
+                "over25_pct": 87,
+                "over35_pct": 73,
+                "avg_goals_scored": 3.07,
+                "avg_goals_conceded": 2.0,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "W",
+                    "D",
                     "L"
                 ],
                 "corners_per_match": [],
@@ -793,10 +793,10 @@
             "away_stats": {
                 "total_matches": 15,
                 "btts_pct": 53,
-                "over15_pct": 73,
-                "over25_pct": 67,
-                "over35_pct": 53,
-                "avg_goals_scored": 1.73,
+                "over15_pct": 87,
+                "over25_pct": 80,
+                "over35_pct": 60,
+                "avg_goals_scored": 2.6,
                 "avg_goals_conceded": 1.67,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -807,10 +807,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "W",
                     "L",
                     "L",
-                    "W",
+                    "L",
+                    "L",
                     "W"
                 ],
                 "corners_per_match": [],
@@ -820,9 +820,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.17,
-                "draw": 7.5,
-                "away": 14
+                "home": 2.95,
+                "draw": 3.8,
+                "away": 2.2
             }
         },
         {
@@ -895,9 +895,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 3.2,
-                "draw": 4,
-                "away": 2
+                "home": 3.3,
+                "draw": 3.9,
+                "away": 2.05
             }
         },
         {
@@ -1046,8 +1046,8 @@
             "h2h": [],
             "odds": {
                 "home": 7,
-                "draw": 4,
-                "away": 1.51
+                "draw": 3.9,
+                "away": 1.54
             }
         },
         {
@@ -1270,9 +1270,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.48,
-                "draw": 4.6,
-                "away": 5.5
+                "home": 1.53,
+                "draw": 4.4,
+                "away": 5.4
             }
         },
         {
@@ -1499,6 +1499,156 @@
                 "draw": 8,
                 "away": 13
             }
+        },
+        {
+            "home": "Valencia",
+            "away": "Osasuna",
+            "datetime": "29.11. 13:00",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "dKMBGcqg",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/osasuna-ETdxjU8a/valencia-CQeaytrD/?mid=dKMBGcqg",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 27,
+                "over15_pct": 53,
+                "over25_pct": 47,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.13,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "W",
+                    "L",
+                    "W",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 87,
+                "over25_pct": 40,
+                "over35_pct": 27,
+                "avg_goals_scored": 1.27,
+                "avg_goals_conceded": 1.73,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "L",
+                    "W",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.1,
+                "draw": 3.3,
+                "away": 3.5
+            }
+        },
+        {
+            "home": "Barcelona",
+            "away": "Villarreal",
+            "datetime": "78",
+            "status": "live",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "lKKgMMG7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/villarreal-lUatW5jE/?mid=lKKgMMG7",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 73,
+                "over15_pct": 100,
+                "over25_pct": 93,
+                "over35_pct": 67,
+                "avg_goals_scored": 3.8,
+                "avg_goals_conceded": 1.27,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "W",
+                    "W",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 73,
+                "over25_pct": 67,
+                "over35_pct": 53,
+                "avg_goals_scored": 1.73,
+                "avg_goals_conceded": 1.67,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "L",
+                    "L",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 1.15,
+                "draw": 9,
+                "away": 14
+            }
         }
     ],
     "standings": [
@@ -1581,30 +1731,30 @@
         },
         {
             "team": "1. FSV Mainz 05",
-            "points": "10",
+            "points": "11",
             "rank": 12,
             "url": "https://www.flashscore.pl/druzyna/mainz/EuakNmc1/",
             "league_id": "bundesliga"
         },
         {
-            "team": "1. FC Koeln",
+            "team": "FC Augsburg",
             "points": "10",
             "rank": 13,
+            "url": "https://www.flashscore.pl/druzyna/augsburg/fTVNku3I/",
+            "league_id": "bundesliga"
+        },
+        {
+            "team": "1. FC Koeln",
+            "points": "10",
+            "rank": 14,
             "url": "https://www.flashscore.pl/druzyna/koln/WG9pOTse/",
             "league_id": "bundesliga"
         },
         {
             "team": "Paderborn",
             "points": "10",
-            "rank": 14,
-            "url": "https://www.flashscore.pl/druzyna/paderborn/G2Op923t/",
-            "league_id": "bundesliga"
-        },
-        {
-            "team": "FC Augsburg",
-            "points": "9",
             "rank": 15,
-            "url": "https://www.flashscore.pl/druzyna/augsburg/fTVNku3I/",
+            "url": "https://www.flashscore.pl/druzyna/paderborn/G2Op923t/",
             "league_id": "bundesliga"
         },
         {
@@ -1630,7 +1780,7 @@
         },
         {
             "team": "Barcelona",
-            "points": "33",
+            "points": "36",
             "rank": 1,
             "url": "https://www.flashscore.pl/druzyna/barcelona/SKbpVP5K/",
             "league_id": "laliga"
@@ -1781,5 +1931,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-11-22 06:20"
+    "updated": "2026-11-22 14:50"
 }
