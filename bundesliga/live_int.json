@@ -1,5 +1,109 @@
 {
     "matches": {
+        "FC Augsburg_1. FSV Mainz 05": {
+            "home": "FC Augsburg",
+            "away": "1. FSV Mainz 05",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_tjJShBTG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/mainz-EuakNmc1/?mid=tjJShBTG",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Werder Brema_Hamburger SV": {
+            "home": "Werder Brema",
+            "away": "Hamburger SV",
+            "is_live": false,
+            "is_finished": true,
+            "score": "4:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_n9yfdpz9",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/hamburger-v9k3aY5F/?mid=n9yfdpz9",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "FC Schalke 04_VfB Stuttgart": {
             "home": "FC Schalke 04",
             "away": "VfB Stuttgart",
@@ -689,44 +793,7 @@
             "league_flag": "🇩🇪",
             "match_id": "g_1_4jZfvCEN",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/frankfurt-8vndvXTk/paderborn-G2Op923t/?mid=4jZfvCEN",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "RB Lipsk_FC Augsburg": {
             "home": "RB Lipsk",
@@ -741,44 +808,7 @@
             "league_flag": "🇩🇪",
             "match_id": "g_1_Eoz0VGVh",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/rb-leipzig-KbS1suSm/?mid=Eoz0VGVh",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Hamburger SV_B. Moenchengladbach": {
             "home": "Hamburger SV",
@@ -1875,19 +1905,213 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
-        "FC Augsburg_1. FSV Mainz 05": {
-            "home": "FC Augsburg",
-            "away": "1. FSV Mainz 05",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:0",
-            "stage": "4",
-            "datetime": "4",
-            "league_id": "bundesliga",
-            "league_name": "Bundesliga",
-            "league_flag": "🇩🇪",
-            "match_id": "g_1_tjJShBTG",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/mainz-EuakNmc1/?mid=tjJShBTG"
+        "Barcelona_Villarreal": {
+            "home": "Barcelona",
+            "away": "Villarreal",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_lKKgMMG7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/villarreal-lUatW5jE/?mid=lKKgMMG7",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Racing Santander_Real Sociedad": {
+            "home": "Racing Santander",
+            "away": "Real Sociedad",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_QJ4RzMV0",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/real-sociedad-jNvak2f3/?mid=QJ4RzMV0",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Osasuna_Malaga": {
+            "home": "Osasuna",
+            "away": "Malaga",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_Ig1Jxr1l",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/osasuna-ETdxjU8a/?mid=Ig1Jxr1l",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Getafe_Atl. Madryt": {
+            "home": "Getafe",
+            "away": "Atl. Madryt",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:3",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_GQCupQ8E",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/getafe-dboeiWOt/?mid=GQCupQ8E",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
         },
         "Real Madryt_Celta Vigo": {
             "home": "Real Madryt",
@@ -2474,44 +2698,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_YP1ZTDIG",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/osasuna-ETdxjU8a/?mid=YP1ZTDIG",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Espanyol_A Coruna": {
             "home": "Espanyol",
@@ -2526,44 +2713,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_K2eJXeJi",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/espanyol-QFfPdh1J/?mid=K2eJXeJi",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Malaga_Racing Santander": {
             "home": "Malaga",
@@ -2578,44 +2728,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_SSbRVZm4",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/racing-santander-nVpEwOrl/?mid=SSbRVZm4",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Sevilla_Alaves": {
             "home": "Sevilla",
@@ -2630,44 +2743,7 @@
             "league_flag": "🇪🇸",
             "match_id": "g_1_xMjDMVAj",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/sevilla-h8oAv4Ts/?mid=xMjDMVAj",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "A Coruna_Osasuna": {
             "home": "A Coruna",
@@ -3973,51 +4049,7 @@
             "match_id": "g_1_O4LEM1zA",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/levante-G8FL0ShI/?mid=O4LEM1zA",
             "match_stats": null
-        },
-        "Alaves_Villarreal": {
-            "home": "Alaves",
-            "away": "Villarreal",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:0",
-            "stage": "Koniec",
-            "datetime": "28.08. 19:30",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_6ots82LG",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/alaves-hxt57t2q/villarreal-lUatW5jE/?mid=6ots82LG",
-            "match_stats": null
-        },
-        "Racing Santander_Elche": {
-            "home": "Racing Santander",
-            "away": "Elche",
-            "is_live": false,
-            "is_finished": true,
-            "score": "3:2",
-            "stage": "Koniec",
-            "datetime": "28.08. 17:00",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_CrPiFJSq",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/racing-santander-nVpEwOrl/?mid=CrPiFJSq",
-            "match_stats": null
-        },
-        "Barcelona_Villarreal": {
-            "home": "Barcelona",
-            "away": "Villarreal",
-            "is_live": true,
-            "is_finished": false,
-            "score": "3:2",
-            "stage": "78",
-            "datetime": "78",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_lKKgMMG7",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/villarreal-lUatW5jE/?mid=lKKgMMG7"
         }
     },
-    "updated": "2026-11-22 14:50:14"
+    "updated": "2026-11-22 23:56:57"
 }
