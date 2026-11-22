@@ -1,10 +1,62 @@
 {
     "matches": [
         {
+            "home": "FC Schalke 04",
+            "away": "VfB Stuttgart",
+            "score": "0:0",
+            "datetime": "21.11. 17:30",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_KMZ1fO4L",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/schalke-0Ija0Ej9/stuttgart-nJQmYp1B/?mid=KMZ1fO4L",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "B. Moenchengladbach",
             "away": "Borussia Dortmund",
             "score": "0:1",
-            "datetime": "Koniec",
+            "datetime": "21.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -56,7 +108,7 @@
             "home": "Bayer Leverkusen",
             "away": "Paderborn",
             "score": "4:0",
-            "datetime": "Koniec",
+            "datetime": "21.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -108,7 +160,7 @@
             "home": "Eintracht Frankfurt",
             "away": "TSG Hoffenheim",
             "score": "1:0",
-            "datetime": "Koniec",
+            "datetime": "21.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -160,7 +212,7 @@
             "home": "Elversberg",
             "away": "SC Freiburg",
             "score": "0:1",
-            "datetime": "Koniec",
+            "datetime": "21.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -212,7 +264,7 @@
             "home": "Union Berlin",
             "away": "RB Lipsk",
             "score": "1:5",
-            "datetime": "Koniec",
+            "datetime": "21.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_pMxurfFb",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/hamburger-v9k3aY5F/?mid=pMxurfFb",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Eintracht Frankfurt",
@@ -1861,18 +1876,70 @@
             "match_stats": null
         },
         {
-            "home": "Alaves",
-            "away": "A Coruna",
-            "score": "3:1",
-            "datetime": "Koniec",
+            "home": "Real Madryt",
+            "away": "Celta Vigo",
+            "score": "2:1",
+            "datetime": "21.11. 20:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
             "is_finished": true,
             "is_live": false,
             "stage": "Koniec",
-            "match_id": "g_1_8tJwQ4Hr",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/alaves-hxt57t2q/?mid=8tJwQ4Hr",
+            "match_id": "g_1_QweLd3hK",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/real-madryt-W8mj7MDD/?mid=QweLd3hK",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Sevilla",
+            "away": "Betis",
+            "score": "1:1",
+            "datetime": "21.11. 17:30",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_zDtiisGs",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/betis-vJbTeCGP/sevilla-h8oAv4Ts/?mid=zDtiisGs",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1916,7 +1983,7 @@
             "home": "Vallecano",
             "away": "Valencia",
             "score": "0:1",
-            "datetime": "Koniec",
+            "datetime": "21.11. 15:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -1925,6 +1992,58 @@
             "stage": "Koniec",
             "match_id": "g_1_Yq8ZYa0D",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/valencia-CQeaytrD/vallecano-8bcjFy6O/?mid=Yq8ZYa0D",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
+            "home": "Alaves",
+            "away": "A Coruna",
+            "score": "3:1",
+            "datetime": "21.11. 13:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_8tJwQ4Hr",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/alaves-hxt57t2q/?mid=8tJwQ4Hr",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2549,44 +2668,7 @@
             "stage": "Koniec",
             "match_id": "g_1_tGhi4TwP",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/a-coruna-Q51ZzMS6/osasuna-ETdxjU8a/?mid=tGhi4TwP",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Ath. Bilbao",
@@ -2601,44 +2683,7 @@
             "stage": "Koniec",
             "match_id": "g_1_Mody8Bv0",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/real-sociedad-jNvak2f3/?mid=Mody8Bv0",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Elche",
@@ -3944,37 +3989,7 @@
             "match_id": "g_1_CrPiFJSq",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/racing-santander-nVpEwOrl/?mid=CrPiFJSq",
             "match_stats": null
-        },
-        {
-            "home": "Barcelona",
-            "away": "Ath. Bilbao",
-            "score": "2:0",
-            "datetime": "27.08. 19:00",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_0Atuqenl",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ath-bilbao-IP5zl0cJ/barcelona-SKbpVP5K/?mid=0Atuqenl",
-            "match_stats": null
-        },
-        {
-            "home": "Celta Vigo",
-            "away": "Osasuna",
-            "score": "1:2",
-            "datetime": "27.08. 18:30",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "is_finished": true,
-            "is_live": false,
-            "stage": "Koniec",
-            "match_id": "g_1_fo75jev8",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/celta-vigo-8pvUZFhf/osasuna-ETdxjU8a/?mid=fo75jev8",
-            "match_stats": null
         }
     ],
-    "updated": "2026-11-21 19:24"
+    "updated": "2026-11-22 06:20"
 }
