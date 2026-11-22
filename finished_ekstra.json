@@ -1,6 +1,58 @@
 {
     "matches": [
         {
+            "home": "Raków Częstochowa",
+            "away": "Widzew Łódź",
+            "score": "3:1",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_MB7aX38L",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/widzew-lodz-rNOIW3uC/?mid=MB7aX38L",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Radomiak Radom",
             "away": "Wisła Kraków",
             "score": "0:0",
@@ -741,44 +793,7 @@
             "stage": "Koniec",
             "match_id": "g_1_C6DQgcKa",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-szczecin-Um9YwPQ0/rakow-czestochowa-SQOrbYim/?mid=C6DQgcKa",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Radomiak Radom",
@@ -2116,6 +2131,58 @@
             "match_stats": null
         },
         {
+            "home": "Unia Skierniewice",
+            "away": "Pogoń Siedlce",
+            "score": "0:0",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "is_finished": true,
+            "is_live": false,
+            "stage": "Koniec",
+            "match_id": "g_1_42D0GIHG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/unia-skierniewice-l42F3w54/?mid=42D0GIHG",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        {
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Arka Gdynia",
             "score": "2:3",
@@ -2856,44 +2923,7 @@
             "stage": "Koniec",
             "match_id": "g_1_l88mtQIk",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/chrobry-glogow-vo6umLPj/?mid=l88mtQIk",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         {
             "home": "Pogoń Siedlce",
@@ -4231,5 +4261,5 @@
             "match_stats": null
         }
     ],
-    "updated": "2026-11-22 06:03"
+    "updated": "2026-11-22 14:33"
 }

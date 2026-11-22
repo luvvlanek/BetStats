@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Raków Częstochowa_Widzew Łódź": {
+            "home": "Raków Częstochowa",
+            "away": "Widzew Łódź",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_MB7aX38L",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/rakow-czestochowa-SQOrbYim/widzew-lodz-rNOIW3uC/?mid=MB7aX38L",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Radomiak Radom_Wisła Kraków": {
             "home": "Radomiak Radom",
             "away": "Wisła Kraków",
@@ -741,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_C6DQgcKa",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-szczecin-Um9YwPQ0/rakow-czestochowa-SQOrbYim/?mid=C6DQgcKa",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Radomiak Radom_Śląsk Wrocław": {
             "home": "Radomiak Radom",
@@ -2115,6 +2130,72 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/slask-wroclaw-E1Oxemse/zaglebie-lubin-tlYOere0/?mid=KjmaDEt9",
             "match_stats": null
         },
+        "GKS Katowice_Lech Poznań": {
+            "home": "GKS Katowice",
+            "away": "Lech Poznań",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:0",
+            "stage": "32",
+            "datetime": "32",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_IsgVRsWr",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/lech-poznan-OpNH7Ouf/?mid=IsgVRsWr"
+        },
+        "Unia Skierniewice_Pogoń Siedlce": {
+            "home": "Unia Skierniewice",
+            "away": "Pogoń Siedlce",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_42D0GIHG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/unia-skierniewice-l42F3w54/?mid=42D0GIHG",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Pogoń Grodzisk Mazowiecki_Arka Gdynia": {
             "home": "Pogoń Grodzisk Mazowiecki",
             "away": "Arka Gdynia",
@@ -2856,44 +2937,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_l88mtQIk",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/chrobry-glogow-vo6umLPj/?mid=l88mtQIk",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Pogoń Siedlce_Ruch Chorzów": {
             "home": "Pogoń Siedlce",
@@ -4229,7 +4273,21 @@
             "match_id": "g_1_8KcgtHa6",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-grodzisk-mazowiecki-4nBQsDq2/stal-rzeszow-IkpY1q92/?mid=8KcgtHa6",
             "match_stats": null
+        },
+        "Lechia Gdańsk_Odra Opole": {
+            "home": "Lechia Gdańsk",
+            "away": "Odra Opole",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:1",
+            "stage": "Przerwa",
+            "datetime": "Przerwa",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_dxAhIvm4",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lechia-gdansk-GGLmkiK8/odra-opole-C8Kg1k4R/?mid=dxAhIvm4"
         }
     },
-    "updated": "2026-11-22 06:03:34"
+    "updated": "2026-11-22 14:33:20"
 }
