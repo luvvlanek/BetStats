@@ -1,18 +1,18 @@
 {
     "matches": {
-        "FC Augsburg_1. FSV Mainz 05": {
-            "home": "FC Augsburg",
-            "away": "1. FSV Mainz 05",
+        "Werder Brema_Hamburger SV": {
+            "home": "Werder Brema",
+            "away": "Hamburger SV",
             "is_live": false,
             "is_finished": true,
-            "score": "3:1",
+            "score": "4:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "22.11. 16:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
-            "match_id": "g_1_tjJShBTG",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/mainz-EuakNmc1/?mid=tjJShBTG",
+            "match_id": "g_1_n9yfdpz9",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/hamburger-v9k3aY5F/?mid=n9yfdpz9",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -52,19 +52,19 @@
                 }
             }
         },
-        "Werder Brema_Hamburger SV": {
-            "home": "Werder Brema",
-            "away": "Hamburger SV",
+        "FC Augsburg_1. FSV Mainz 05": {
+            "home": "FC Augsburg",
+            "away": "1. FSV Mainz 05",
             "is_live": false,
             "is_finished": true,
-            "score": "4:0",
+            "score": "3:1",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "22.11. 14:30",
             "league_id": "bundesliga",
             "league_name": "Bundesliga",
             "league_flag": "🇩🇪",
-            "match_id": "g_1_n9yfdpz9",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bremen-Ig1f1fy3/hamburger-v9k3aY5F/?mid=n9yfdpz9",
+            "match_id": "g_1_tjJShBTG",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/augsburg-fTVNku3I/mainz-EuakNmc1/?mid=tjJShBTG",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -1905,71 +1905,19 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
-        "Barcelona_Villarreal": {
-            "home": "Barcelona",
-            "away": "Villarreal",
+        "Getafe_Atl. Madryt": {
+            "home": "Getafe",
+            "away": "Atl. Madryt",
             "is_live": false,
             "is_finished": true,
-            "score": "3:2",
+            "score": "0:3",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "22.11. 20:00",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_lKKgMMG7",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/villarreal-lUatW5jE/?mid=lKKgMMG7",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
-        },
-        "Racing Santander_Real Sociedad": {
-            "home": "Racing Santander",
-            "away": "Real Sociedad",
-            "is_live": false,
-            "is_finished": true,
-            "score": "3:2",
-            "stage": "Koniec",
-            "datetime": "Koniec",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "match_id": "g_1_QJ4RzMV0",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/real-sociedad-jNvak2f3/?mid=QJ4RzMV0",
+            "match_id": "g_1_GQCupQ8E",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/getafe-dboeiWOt/?mid=GQCupQ8E",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -2016,7 +1964,7 @@
             "is_finished": true,
             "score": "1:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "22.11. 17:30",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
@@ -2061,19 +2009,71 @@
                 }
             }
         },
-        "Getafe_Atl. Madryt": {
-            "home": "Getafe",
-            "away": "Atl. Madryt",
+        "Racing Santander_Real Sociedad": {
+            "home": "Racing Santander",
+            "away": "Real Sociedad",
             "is_live": false,
             "is_finished": true,
-            "score": "0:3",
+            "score": "3:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "22.11. 15:15",
             "league_id": "laliga",
             "league_name": "La Liga",
             "league_flag": "🇪🇸",
-            "match_id": "g_1_GQCupQ8E",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/atl-madryt-jaarqpLQ/getafe-dboeiWOt/?mid=GQCupQ8E",
+            "match_id": "g_1_QJ4RzMV0",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/racing-santander-nVpEwOrl/real-sociedad-jNvak2f3/?mid=QJ4RzMV0",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
+        "Barcelona_Villarreal": {
+            "home": "Barcelona",
+            "away": "Villarreal",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:2",
+            "stage": "Koniec",
+            "datetime": "22.11. 13:00",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_lKKgMMG7",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/barcelona-SKbpVP5K/villarreal-lUatW5jE/?mid=lKKgMMG7",
             "match_stats": {
                 "corners": {
                     "home": null,
@@ -4051,5 +4051,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-11-22 23:56:57"
+    "updated": "2026-11-23 07:06:54"
 }
