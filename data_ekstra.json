@@ -1,81 +1,6 @@
 {
     "matches": [
         {
-            "home": "Wieczysta Kraków",
-            "away": "Motor Lublin",
-            "datetime": "18:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "IsDSI4gS",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/motor-lublin-IoLk2VlL/?mid=IsDSI4gS",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
-            "league_flag": "🇵🇱",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 73,
-                "over15_pct": 100,
-                "over25_pct": 73,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 2.13,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "L",
-                    "L",
-                    "L"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 14,
-                "btts_pct": 71,
-                "over15_pct": 86,
-                "over25_pct": 71,
-                "over35_pct": 43,
-                "avg_goals_scored": 1.64,
-                "avg_goals_conceded": 1.57,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "W",
-                    "D",
-                    "W",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": null,
-                "draw": null,
-                "away": null
-            }
-        },
-        {
             "home": "Raków Częstochowa",
             "away": "Piast Gliwice",
             "datetime": "27.11. 17:00",
@@ -432,10 +357,10 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "L",
                     "W",
                     "W",
                     "D",
-                    "W",
                     "W"
                 ],
                 "corners_per_match": [],
@@ -571,8 +496,8 @@
                 "over15_pct": 100,
                 "over25_pct": 73,
                 "over35_pct": 40,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 2.13,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 2.07,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -582,7 +507,7 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "L",
+                    "W",
                     "L",
                     "L",
                     "L",
@@ -751,25 +676,25 @@
             }
         },
         {
-            "home": "Podbeskidzie B-B",
-            "away": "Bruk-Bet T.",
-            "datetime": "17:00",
+            "home": "Wieczysta Kraków",
+            "away": "Korona Kielce",
+            "datetime": "04.12. 17:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
-            "match_id": "dIJbdcQp",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/podbeskidzie-b-b-zBPYeTRl/?mid=dIJbdcQp",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
+            "match_id": "hYtNxK1b",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/ks-wieczysta-krakow-ImhQf1z6/?mid=hYtNxK1b",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 80,
-                "over25_pct": 40,
-                "over35_pct": 20,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 1.47,
+                "btts_pct": 73,
+                "over15_pct": 100,
+                "over25_pct": 73,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.53,
+                "avg_goals_conceded": 2.07,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -779,11 +704,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "L",
-                    "D",
                     "W",
                     "L",
-                    "W"
+                    "L",
+                    "L",
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -792,12 +717,12 @@
             },
             "away_stats": {
                 "total_matches": 15,
-                "btts_pct": 80,
-                "over15_pct": 87,
-                "over25_pct": 73,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.47,
+                "btts_pct": 47,
+                "over15_pct": 80,
+                "over25_pct": 33,
+                "over35_pct": 20,
+                "avg_goals_scored": 0.93,
+                "avg_goals_conceded": 1.8,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -807,9 +732,9 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
-                    "D",
-                    "D",
-                    "W",
+                    "L",
+                    "L",
+                    "L",
                     "L",
                     "W"
                 ],
@@ -991,10 +916,10 @@
                 "total_matches": 15,
                 "btts_pct": 80,
                 "over15_pct": 87,
-                "over25_pct": 73,
+                "over25_pct": 67,
                 "over35_pct": 47,
                 "avg_goals_scored": 1.8,
-                "avg_goals_conceded": 1.47,
+                "avg_goals_conceded": 1.4,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1006,9 +931,9 @@
                 "form": [
                     "D",
                     "D",
+                    "D",
                     "W",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1139,12 +1064,12 @@
             "league_flag": "🇵🇱",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 53,
+                "btts_pct": 60,
                 "over15_pct": 80,
                 "over25_pct": 40,
                 "over35_pct": 20,
-                "avg_goals_scored": 1.0,
-                "avg_goals_conceded": 1.47,
+                "avg_goals_scored": 0.93,
+                "avg_goals_conceded": 1.53,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1154,11 +1079,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "D",
                     "L",
                     "D",
                     "W",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1499,6 +1424,81 @@
                 "draw": null,
                 "away": null
             }
+        },
+        {
+            "home": "Pogoń Siedlce",
+            "away": "Miedź Legnica",
+            "datetime": "04.12. 17:00",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "fqzodfV8",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/miedz-legnica-lnY5n2Xe/pogon-siedlce-d6IVB42i/?mid=fqzodfV8",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 60,
+                "over25_pct": 47,
+                "over35_pct": 33,
+                "avg_goals_scored": 1.33,
+                "avg_goals_conceded": 1.33,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "W",
+                    "D",
+                    "L",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 53,
+                "over15_pct": 73,
+                "over25_pct": 33,
+                "over35_pct": 7,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.0,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "D",
+                    "D",
+                    "D",
+                    "D",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": null,
+                "draw": null,
+                "away": null
+            }
         }
     ],
     "standings": [
@@ -1623,7 +1623,7 @@
         },
         {
             "team": "Wieczysta Kraków",
-            "points": "8",
+            "points": "11",
             "rank": 18,
             "url": "https://www.flashscore.pl/druzyna/ks-wieczysta-krakow/ImhQf1z6/",
             "league_id": "ekstraklasa"
@@ -1658,7 +1658,7 @@
         },
         {
             "team": "Bruk-Bet T.",
-            "points": "22",
+            "points": "23",
             "rank": 5,
             "url": "https://www.flashscore.pl/druzyna/nieciecza/YNkK4khO/",
             "league_id": "betclic-1-liga"
@@ -1728,7 +1728,7 @@
         },
         {
             "team": "Podbeskidzie B-B",
-            "points": "15",
+            "points": "16",
             "rank": 15,
             "url": "https://www.flashscore.pl/druzyna/podbeskidzie-b-b/zBPYeTRl/",
             "league_id": "betclic-1-liga"
@@ -1767,5 +1767,5 @@
             "flag": "🇵🇱"
         }
     ],
-    "updated": "2026-11-23 06:50"
+    "updated": "2026-11-23 23:51"
 }

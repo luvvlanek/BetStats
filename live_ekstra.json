@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Wieczysta Kraków_Motor Lublin": {
+            "home": "Wieczysta Kraków",
+            "away": "Motor Lublin",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_IsDSI4gS",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/ks-wieczysta-krakow-ImhQf1z6/motor-lublin-IoLk2VlL/?mid=IsDSI4gS",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Wisła Płock_Legia Warszawa": {
             "home": "Wisła Płock",
             "away": "Legia Warszawa",
@@ -741,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_Mgton6Ij",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/korona-kielce-pp78XcbA/radomiak-radom-zD5nYhAT/?mid=Mgton6Ij",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Wisła Kraków_Cracovia": {
             "home": "Wisła Kraków",
@@ -2115,6 +2130,58 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/motor-lublin-IoLk2VlL/?mid=A5aQvfzp",
             "match_stats": null
         },
+        "Podbeskidzie B-B_Bruk-Bet T.": {
+            "home": "Podbeskidzie B-B",
+            "away": "Bruk-Bet T.",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:1",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_dIJbdcQp",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/nieciecza-YNkK4khO/podbeskidzie-b-b-zBPYeTRl/?mid=dIJbdcQp",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Stal Rzeszów_Polonia Bytom": {
             "home": "Stal Rzeszów",
             "away": "Polonia Bytom",
@@ -2856,44 +2923,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_pduVCOgR",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/polonia-warszawa-ADZjR3us/warta-poznan-CrVUWAl8/?mid=pduVCOgR",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Odra Opole_Unia Skierniewice": {
             "home": "Odra Opole",
@@ -4246,5 +4276,5 @@
             "match_stats": null
         }
     },
-    "updated": "2026-11-23 06:50:30"
+    "updated": "2026-11-23 23:51:12"
 }
