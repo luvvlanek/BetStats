@@ -70,9 +70,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.71,
-                "draw": 4.2,
-                "away": 4
+                "home": 1.69,
+                "draw": 4.3,
+                "away": 4.1
             }
         },
         {
@@ -145,7 +145,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2,
+                "home": 1.95,
                 "draw": 3.8,
                 "away": 3.4
             }
@@ -520,9 +520,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.55,
+                "home": 2.65,
                 "draw": 3.8,
-                "away": 2.4
+                "away": 2.35
             }
         },
         {
@@ -752,81 +752,6 @@
         },
         {
             "home": "Levante",
-            "away": "Elche",
-            "datetime": "20:00",
-            "status": "scheduled",
-            "live_score": null,
-            "live_minute": null,
-            "match_id": "MNFmr4wR",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/elche-4jl02tPF/levante-G8FL0ShI/?mid=MNFmr4wR",
-            "league_id": "laliga",
-            "league_name": "La Liga",
-            "league_flag": "🇪🇸",
-            "home_stats": {
-                "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 73,
-                "over25_pct": 60,
-                "over35_pct": 40,
-                "avg_goals_scored": 1.4,
-                "avg_goals_conceded": 1.6,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "W",
-                    "D",
-                    "L",
-                    "L",
-                    "W"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "away_stats": {
-                "total_matches": 15,
-                "btts_pct": 53,
-                "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.53,
-                "avg_corners": 0,
-                "avg_yellow": 0,
-                "avg_red": 0,
-                "avg_shots": 0,
-                "avg_shots_on_target": 0,
-                "avg_xg": 0,
-                "avg_fouls": 0,
-                "avg_offsides": 0,
-                "form": [
-                    "L",
-                    "L",
-                    "W",
-                    "W",
-                    "D"
-                ],
-                "corners_per_match": [],
-                "yellow_per_match": [],
-                "shots_per_match": [],
-                "xg_per_match": []
-            },
-            "h2h": [],
-            "odds": {
-                "home": 2.15,
-                "draw": 3.5,
-                "away": 3.3
-            }
-        },
-        {
-            "home": "Levante",
             "away": "Racing Santander",
             "datetime": "27.11. 20:00",
             "status": "scheduled",
@@ -839,11 +764,11 @@
             "league_flag": "🇪🇸",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 60,
-                "over15_pct": 73,
+                "btts_pct": 67,
+                "over15_pct": 80,
                 "over25_pct": 60,
                 "over35_pct": 40,
-                "avg_goals_scored": 1.4,
+                "avg_goals_scored": 1.47,
                 "avg_goals_conceded": 1.6,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -854,11 +779,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "D",
                     "W",
                     "D",
                     "L",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -970,9 +895,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.53,
+                "home": 1.54,
                 "draw": 4.4,
-                "away": 5.4
+                "away": 5.1
             }
         },
         {
@@ -1045,7 +970,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 4.4,
+                "home": 4.6,
                 "draw": 3.7,
                 "away": 1.71
             }
@@ -1066,10 +991,10 @@
                 "total_matches": 15,
                 "btts_pct": 53,
                 "over15_pct": 80,
-                "over25_pct": 60,
-                "over35_pct": 47,
-                "avg_goals_scored": 1.47,
-                "avg_goals_conceded": 1.53,
+                "over25_pct": 53,
+                "over35_pct": 40,
+                "avg_goals_scored": 1.4,
+                "avg_goals_conceded": 1.47,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1079,11 +1004,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "D",
                     "L",
                     "L",
                     "W",
-                    "W",
-                    "D"
+                    "W"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1120,9 +1045,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 5.2,
-                "draw": 4.4,
-                "away": 1.54
+                "home": 6,
+                "draw": 4.7,
+                "away": 1.43
             }
         },
         {
@@ -1271,7 +1196,7 @@
             "h2h": [],
             "odds": {
                 "home": 2.1,
-                "draw": 3.3,
+                "draw": 3.2,
                 "away": 3.6
             }
         },
@@ -1345,7 +1270,7 @@
             },
             "h2h": [],
             "odds": {
-                "home": 8,
+                "home": 9,
                 "draw": 7,
                 "away": 1.21
             }
@@ -1420,9 +1345,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.6,
+                "home": 2.7,
                 "draw": 3.5,
-                "away": 2.5
+                "away": 2.45
             }
         },
         {
@@ -1495,9 +1420,84 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.05,
+                "home": 2.1,
                 "draw": 3.6,
-                "away": 3.2
+                "away": 3.1
+            }
+        },
+        {
+            "home": "Espanyol",
+            "away": "Getafe",
+            "datetime": "30.11. 20:00",
+            "status": "scheduled",
+            "live_score": null,
+            "live_minute": null,
+            "match_id": "WzvW3Kam",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/espanyol-QFfPdh1J/getafe-dboeiWOt/?mid=WzvW3Kam",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "home_stats": {
+                "total_matches": 15,
+                "btts_pct": 60,
+                "over15_pct": 73,
+                "over25_pct": 53,
+                "over35_pct": 20,
+                "avg_goals_scored": 1.2,
+                "avg_goals_conceded": 1.4,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "W",
+                    "D",
+                    "W",
+                    "L",
+                    "L"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "away_stats": {
+                "total_matches": 15,
+                "btts_pct": 47,
+                "over15_pct": 73,
+                "over25_pct": 40,
+                "over35_pct": 27,
+                "avg_goals_scored": 0.87,
+                "avg_goals_conceded": 1.8,
+                "avg_corners": 0,
+                "avg_yellow": 0,
+                "avg_red": 0,
+                "avg_shots": 0,
+                "avg_shots_on_target": 0,
+                "avg_xg": 0,
+                "avg_fouls": 0,
+                "avg_offsides": 0,
+                "form": [
+                    "L",
+                    "L",
+                    "L",
+                    "W",
+                    "W"
+                ],
+                "corners_per_match": [],
+                "yellow_per_match": [],
+                "shots_per_match": [],
+                "xg_per_match": []
+            },
+            "h2h": [],
+            "odds": {
+                "home": 2.05,
+                "draw": 3.1,
+                "away": 3.9
             }
         }
     ],
@@ -1727,36 +1727,36 @@
             "league_id": "laliga"
         },
         {
-            "team": "Vallecano",
+            "team": "Levante",
             "points": "12",
             "rank": 15,
+            "url": "https://www.flashscore.pl/druzyna/levante/G8FL0ShI/",
+            "league_id": "laliga"
+        },
+        {
+            "team": "Vallecano",
+            "points": "12",
+            "rank": 16,
             "url": "https://www.flashscore.pl/druzyna/vallecano/8bcjFy6O/",
             "league_id": "laliga"
         },
         {
             "team": "Valencia",
             "points": "12",
-            "rank": 16,
+            "rank": 17,
             "url": "https://www.flashscore.pl/druzyna/valencia/CQeaytrD/",
             "league_id": "laliga"
         },
         {
             "team": "Getafe",
             "points": "12",
-            "rank": 17,
+            "rank": 18,
             "url": "https://www.flashscore.pl/druzyna/getafe/dboeiWOt/",
             "league_id": "laliga"
         },
         {
-            "team": "Levante",
-            "points": "11",
-            "rank": 18,
-            "url": "https://www.flashscore.pl/druzyna/levante/G8FL0ShI/",
-            "league_id": "laliga"
-        },
-        {
             "team": "Elche",
-            "points": "10",
+            "points": "11",
             "rank": 19,
             "url": "https://www.flashscore.pl/druzyna/elche/4jl02tPF/",
             "league_id": "laliga"
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-11-23 07:06"
+    "updated": "2026-11-24 00:07"
 }
