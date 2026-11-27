@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Raków Częstochowa_Piast Gliwice": {
+            "home": "Raków Częstochowa",
+            "away": "Piast Gliwice",
+            "is_live": false,
+            "is_finished": true,
+            "score": "1:2",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_dhESNjyP",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/rakow-czestochowa-SQOrbYim/?mid=dhESNjyP",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Wieczysta Kraków_Motor Lublin": {
             "home": "Wieczysta Kraków",
             "away": "Motor Lublin",
@@ -741,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_8UUn6R9M",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/piast-gliwice-ve2oT9ck/slask-wroclaw-E1Oxemse/?mid=8UUn6R9M",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Korona Kielce_Radomiak Radom": {
             "home": "Korona Kielce",
@@ -2130,6 +2145,72 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/motor-lublin-IoLk2VlL/?mid=A5aQvfzp",
             "match_stats": null
         },
+        "Górnik Zabrze_Wisła Płock": {
+            "home": "Górnik Zabrze",
+            "away": "Wisła Płock",
+            "is_live": true,
+            "is_finished": false,
+            "score": "2:1",
+            "stage": "63",
+            "datetime": "63",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_K2DaxjjI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/wisla-plock-QoZYVU3E/?mid=K2DaxjjI"
+        },
+        "Warta Poznań_Pogoń Siedlce": {
+            "home": "Warta Poznań",
+            "away": "Pogoń Siedlce",
+            "is_live": false,
+            "is_finished": true,
+            "score": "2:0",
+            "stage": "Koniec",
+            "datetime": "Koniec",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_0QAuTe1M",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/warta-poznan-CrVUWAl8/?mid=0QAuTe1M",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Podbeskidzie B-B_Bruk-Bet T.": {
             "home": "Podbeskidzie B-B",
             "away": "Bruk-Bet T.",
@@ -2871,44 +2952,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_GvW072Hl",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/nieciecza-YNkK4khO/?mid=GvW072Hl",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Warta Poznań_Polonia Warszawa": {
             "home": "Warta Poznań",
@@ -4230,51 +4274,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/nieciecza-YNkK4khO/?mid=tYe1veUI",
             "match_stats": null
         },
-        "Chrobry Głogów_Podbeskidzie B-B": {
+        "Chrobry Głogów_Unia Skierniewice": {
             "home": "Chrobry Głogów",
-            "away": "Podbeskidzie B-B",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:1",
-            "stage": "Koniec",
-            "datetime": "15.08. 13:30",
+            "away": "Unia Skierniewice",
+            "is_live": true,
+            "is_finished": false,
+            "score": "0:1",
+            "stage": "71",
+            "datetime": "71",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_jRXQfGEa",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/podbeskidzie-b-b-zBPYeTRl/?mid=jRXQfGEa",
-            "match_stats": null
-        },
-        "Odra Opole_Warta Poznań": {
-            "home": "Odra Opole",
-            "away": "Warta Poznań",
-            "is_live": false,
-            "is_finished": true,
-            "score": "3:1",
-            "stage": "Koniec",
-            "datetime": "15.08. 13:30",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_4lvsiYDO",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/odra-opole-C8Kg1k4R/warta-poznan-CrVUWAl8/?mid=4lvsiYDO",
-            "match_stats": null
-        },
-        "Pogoń Siedlce_Polonia Warszawa": {
-            "home": "Pogoń Siedlce",
-            "away": "Polonia Warszawa",
-            "is_live": false,
-            "is_finished": true,
-            "score": "1:0",
-            "stage": "Koniec",
-            "datetime": "15.08. 13:30",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_hUjwpa0s",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/pogon-siedlce-d6IVB42i/polonia-warszawa-ADZjR3us/?mid=hUjwpa0s",
-            "match_stats": null
+            "match_id": "g_1_Kn9PWw2c",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/unia-skierniewice-l42F3w54/?mid=Kn9PWw2c"
         }
     },
-    "updated": "2026-11-27 07:43:36"
+    "updated": "2026-11-27 21:07:54"
 }
