@@ -1905,6 +1905,20 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/bayern-nVp0wiqd/stuttgart-nJQmYp1B/?mid=xrtCcyAe",
             "match_stats": null
         },
+        "Werder Brema_B. Moenchengladbach": {
+            "home": "Werder Brema",
+            "away": "B. Moenchengladbach",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:2",
+            "stage": "78",
+            "datetime": "78",
+            "league_id": "bundesliga",
+            "league_name": "Bundesliga",
+            "league_flag": "🇩🇪",
+            "match_id": "g_1_Y3CEL03K",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/b-monchengladbach-88HSzjDr/bremen-Ig1f1fy3/?mid=Y3CEL03K"
+        },
         "Levante_Elche": {
             "home": "Levante",
             "away": "Elche",
@@ -4019,7 +4033,21 @@
             "match_id": "g_1_K8SaDccd",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/malaga-25tIqYiJ/real-madryt-W8mj7MDD/?mid=K8SaDccd",
             "match_stats": null
+        },
+        "Levante_Racing Santander": {
+            "home": "Levante",
+            "away": "Racing Santander",
+            "is_live": true,
+            "is_finished": false,
+            "score": "1:0",
+            "stage": "59",
+            "datetime": "59",
+            "league_id": "laliga",
+            "league_name": "La Liga",
+            "league_flag": "🇪🇸",
+            "match_id": "g_1_v1sv2bUa",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/levante-G8FL0ShI/racing-santander-nVpEwOrl/?mid=v1sv2bUa"
         }
     },
-    "updated": "2026-11-27 08:01:30"
+    "updated": "2026-11-27 21:25:54"
 }
