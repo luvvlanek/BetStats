@@ -3,7 +3,7 @@
         {
             "home": "Werder Brema",
             "away": "B. Moenchengladbach",
-            "datetime": "27.11. 19:30",
+            "datetime": "19:30",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -70,9 +70,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.7,
+                "home": 1.67,
                 "draw": 4.2,
-                "away": 4.33
+                "away": 4.5
             }
         },
         {
@@ -370,9 +370,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.5,
+                "home": 2.6,
                 "draw": 3.3,
-                "away": 2.88
+                "away": 2.75
             }
         },
         {
@@ -445,9 +445,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.73,
-                "draw": 4.33,
-                "away": 4
+                "home": 1.83,
+                "draw": 4.5,
+                "away": 3.7
             }
         },
         {
@@ -467,8 +467,8 @@
                 "btts_pct": 60,
                 "over15_pct": 80,
                 "over25_pct": 73,
-                "over35_pct": 47,
-                "avg_goals_scored": 2.13,
+                "over35_pct": 40,
+                "avg_goals_scored": 2.0,
                 "avg_goals_conceded": 1.27,
                 "avg_corners": 0,
                 "avg_yellow": 0,
@@ -543,8 +543,8 @@
                 "over15_pct": 93,
                 "over25_pct": 71,
                 "over35_pct": 36,
-                "avg_goals_scored": 1.57,
-                "avg_goals_conceded": 1.71,
+                "avg_goals_scored": 1.64,
+                "avg_goals_conceded": 1.57,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -554,11 +554,11 @@
                 "avg_fouls": 0,
                 "avg_offsides": 0,
                 "form": [
+                    "W",
                     "L",
                     "W",
                     "D",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -670,9 +670,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.05,
+                "home": 2.1,
                 "draw": 4,
-                "away": 3.1
+                "away": 3
             }
         },
         {
@@ -753,7 +753,7 @@
         {
             "home": "Levante",
             "away": "Racing Santander",
-            "datetime": "27.11. 20:00",
+            "datetime": "20:00",
             "status": "scheduled",
             "live_score": null,
             "live_minute": null,
@@ -822,7 +822,7 @@
             "odds": {
                 "home": 2,
                 "draw": 3.8,
-                "away": 3.4
+                "away": 3.3
             }
         },
         {
@@ -895,9 +895,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 1.62,
-                "draw": 4.1,
-                "away": 4.5
+                "home": 1.55,
+                "draw": 4.2,
+                "away": 5
             }
         },
         {
@@ -1045,9 +1045,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 6,
+                "home": 6.5,
                 "draw": 4.75,
-                "away": 1.4
+                "away": 1.45
             }
         },
         {
@@ -1364,12 +1364,12 @@
             "league_flag": "🇪🇸",
             "home_stats": {
                 "total_matches": 15,
-                "btts_pct": 67,
-                "over15_pct": 80,
-                "over25_pct": 67,
+                "btts_pct": 73,
+                "over15_pct": 87,
+                "over25_pct": 73,
                 "over35_pct": 40,
-                "avg_goals_scored": 1.93,
-                "avg_goals_conceded": 1.47,
+                "avg_goals_scored": 2.0,
+                "avg_goals_conceded": 1.6,
                 "avg_corners": 0,
                 "avg_yellow": 0,
                 "avg_red": 0,
@@ -1380,10 +1380,10 @@
                 "avg_offsides": 0,
                 "form": [
                     "L",
+                    "L",
                     "W",
                     "D",
-                    "L",
-                    "W"
+                    "L"
                 ],
                 "corners_per_match": [],
                 "yellow_per_match": [],
@@ -1420,9 +1420,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2.05,
+                "home": 2.1,
                 "draw": 3.5,
-                "away": 3.5
+                "away": 3.25
             }
         },
         {
@@ -1495,9 +1495,9 @@
             },
             "h2h": [],
             "odds": {
-                "home": 2,
-                "draw": 3.25,
-                "away": 4.1
+                "home": 2.05,
+                "draw": 3.2,
+                "away": 4
             }
         }
     ],
@@ -1781,5 +1781,5 @@
             "flag": "🇪🇸"
         }
     ],
-    "updated": "2026-11-26 21:41"
+    "updated": "2026-11-27 08:01"
 }
