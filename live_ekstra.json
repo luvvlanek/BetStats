@@ -1,5 +1,57 @@
 {
     "matches": {
+        "Górnik Zabrze_Wisła Płock": {
+            "home": "Górnik Zabrze",
+            "away": "Wisła Płock",
+            "is_live": false,
+            "is_finished": true,
+            "score": "3:2",
+            "stage": "Koniec",
+            "datetime": "27.11. 19:30",
+            "league_id": "ekstraklasa",
+            "league_name": "PKO BP Ekstraklasa",
+            "league_flag": "🇵🇱",
+            "match_id": "g_1_K2DaxjjI",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/wisla-plock-QoZYVU3E/?mid=K2DaxjjI",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
+        },
         "Raków Częstochowa_Piast Gliwice": {
             "home": "Raków Częstochowa",
             "away": "Piast Gliwice",
@@ -7,7 +59,7 @@
             "is_finished": true,
             "score": "1:2",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "27.11. 17:00",
             "league_id": "ekstraklasa",
             "league_name": "PKO BP Ekstraklasa",
             "league_flag": "🇵🇱",
@@ -741,44 +793,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_x4BCMnf3",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/ks-wieczysta-krakow-ImhQf1z6/?mid=x4BCMnf3",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Śląsk Wrocław_Piast Gliwice": {
             "home": "Śląsk Wrocław",
@@ -2145,19 +2160,57 @@
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gks-katowice-K4AgRmS1/motor-lublin-IoLk2VlL/?mid=A5aQvfzp",
             "match_stats": null
         },
-        "Górnik Zabrze_Wisła Płock": {
-            "home": "Górnik Zabrze",
-            "away": "Wisła Płock",
-            "is_live": true,
-            "is_finished": false,
-            "score": "2:1",
-            "stage": "63",
-            "datetime": "63",
-            "league_id": "ekstraklasa",
-            "league_name": "PKO BP Ekstraklasa",
+        "Chrobry Głogów_Unia Skierniewice": {
+            "home": "Chrobry Głogów",
+            "away": "Unia Skierniewice",
+            "is_live": false,
+            "is_finished": true,
+            "score": "0:2",
+            "stage": "Koniec",
+            "datetime": "27.11. 19:30",
+            "league_id": "betclic-1-liga",
+            "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
-            "match_id": "g_1_K2DaxjjI",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/gornik-zabrze-2LH3Ywq4/wisla-plock-QoZYVU3E/?mid=K2DaxjjI"
+            "match_id": "g_1_Kn9PWw2c",
+            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/unia-skierniewice-l42F3w54/?mid=Kn9PWw2c",
+            "match_stats": {
+                "corners": {
+                    "home": null,
+                    "away": null
+                },
+                "yellow": {
+                    "home": null,
+                    "away": null
+                },
+                "red": {
+                    "home": null,
+                    "away": null
+                },
+                "shots": {
+                    "home": null,
+                    "away": null
+                },
+                "shots_on_target": {
+                    "home": null,
+                    "away": null
+                },
+                "xg": {
+                    "home": null,
+                    "away": null
+                },
+                "possession": {
+                    "home": null,
+                    "away": null
+                },
+                "fouls": {
+                    "home": null,
+                    "away": null
+                },
+                "offsides": {
+                    "home": null,
+                    "away": null
+                }
+            }
         },
         "Warta Poznań_Pogoń Siedlce": {
             "home": "Warta Poznań",
@@ -2166,7 +2219,7 @@
             "is_finished": true,
             "score": "2:0",
             "stage": "Koniec",
-            "datetime": "Koniec",
+            "datetime": "27.11. 17:00",
             "league_id": "betclic-1-liga",
             "league_name": "Betclic 1. Liga",
             "league_flag": "🇵🇱",
@@ -2900,44 +2953,7 @@
             "league_flag": "🇵🇱",
             "match_id": "g_1_O4Z85tn1",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/arka-gdynia-feEez0Ei/podbeskidzie-b-b-zBPYeTRl/?mid=O4Z85tn1",
-            "match_stats": {
-                "corners": {
-                    "home": null,
-                    "away": null
-                },
-                "yellow": {
-                    "home": null,
-                    "away": null
-                },
-                "red": {
-                    "home": null,
-                    "away": null
-                },
-                "shots": {
-                    "home": null,
-                    "away": null
-                },
-                "shots_on_target": {
-                    "home": null,
-                    "away": null
-                },
-                "xg": {
-                    "home": null,
-                    "away": null
-                },
-                "possession": {
-                    "home": null,
-                    "away": null
-                },
-                "fouls": {
-                    "home": null,
-                    "away": null
-                },
-                "offsides": {
-                    "home": null,
-                    "away": null
-                }
-            }
+            "match_stats": null
         },
         "Bruk-Bet T._Chrobry Głogów": {
             "home": "Bruk-Bet T.",
@@ -4273,21 +4289,7 @@
             "match_id": "g_1_tYe1veUI",
             "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/lks-lodz-ShUKWHDG/nieciecza-YNkK4khO/?mid=tYe1veUI",
             "match_stats": null
-        },
-        "Chrobry Głogów_Unia Skierniewice": {
-            "home": "Chrobry Głogów",
-            "away": "Unia Skierniewice",
-            "is_live": true,
-            "is_finished": false,
-            "score": "0:1",
-            "stage": "71",
-            "datetime": "71",
-            "league_id": "betclic-1-liga",
-            "league_name": "Betclic 1. Liga",
-            "league_flag": "🇵🇱",
-            "match_id": "g_1_Kn9PWw2c",
-            "match_url": "https://www.flashscore.pl/mecz/pilka-nozna/chrobry-glogow-vo6umLPj/unia-skierniewice-l42F3w54/?mid=Kn9PWw2c"
         }
     },
-    "updated": "2026-11-27 21:07:54"
+    "updated": "2026-11-28 07:13:12"
 }
